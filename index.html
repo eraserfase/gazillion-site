@@ -78,6 +78,17 @@ main{position:relative; z-index:1; max-width:660px; margin:0 auto;
      color:var(--field-deep); background:var(--chalk); border-radius:999px;
      display:block; transition:transform .18s ease, box-shadow .18s ease}
 .cta:focus-visible{outline:3px solid var(--chalk); outline-offset:4px}
+
+/* Gumroad's overlay script injects its own stylesheet at run time - after this
+   one - and styles .gumroad-button. Every property it sets has to be reclaimed
+   here at a specificity its single-class rules cannot reach, or the buttons turn
+   into Gumroad's pink ones the moment the script lands. */
+a.cta.gumroad-button{
+  font-family:"Archivo Black",Impact,"Arial Black",sans-serif !important;
+  color:var(--field-deep) !important; background:var(--chalk) !important;
+  border:0 !important; border-radius:999px !important;
+  text-transform:none !important; letter-spacing:.02em !important;
+  height:auto !important; line-height:normal !important}
 .cta:hover{transform:translateY(-2px)}
 
 /* One banner, pinned to the top. It is the only ask on the page, so it carries
@@ -226,7 +237,14 @@ main{position:relative; z-index:1; max-width:660px; margin:0 auto;
 }
 </style>
 
-<!-- CHECKOUT LINKS ARE TEST MODE. The page itself works for everyone -
+<!-- Gumroad's overlay opens the checkout over this page instead of sending
+     people to gumroad.com. It is progressive enhancement on an ordinary link:
+     if gumroad.js does not load - a blocker, a strict content policy, the
+     artifact preview - the href still goes straight to a working checkout. That
+     is why the link is a real URL rather than a javascript: handler.
+
+     OLD NOTE, kept until the Gumroad flow is confirmed end to end:
+     CHECKOUT LINKS ARE TEST MODE. The page itself works for everyone -
      product, price and card form all render - but it carries Lemon Squeezy's
      orange "Test mode is currently enabled" banner and accepts test cards only,
      so a real card is declined and no money moves.
@@ -240,7 +258,7 @@ main{position:relative; z-index:1; max-width:660px; margin:0 auto;
      id, so only the uuid below needs swapping. All three hrefs are the same
      string: one find and replace. -->
 <div class="banner banner--top">
-  <a class="cta" href="https://checkout.gazillionindustries.com/checkout/buy/e565efbe-6ecb-4c47-ae3e-e24453aff62b">Buy DRUGS now</a>
+  <a class="cta gumroad-button" href="https://gazillionindustries.gumroad.com/l/drugs">Buy DRUGS now</a>
   <p class="terms">pay what you want &nbsp;&middot;&nbsp; $5 minimum</p>
 </div>
 
@@ -274,7 +292,7 @@ main{position:relative; z-index:1; max-width:660px; margin:0 auto;
   </div>
 
   <div class="buy-mid">
-    <a class="cta cta--small" href="https://checkout.gazillionindustries.com/checkout/buy/e565efbe-6ecb-4c47-ae3e-e24453aff62b">Buy DRUGS now</a>
+    <a class="cta cta--small gumroad-button" href="https://gazillionindustries.gumroad.com/l/drugs">Buy DRUGS now</a>
   </div>
 
   <div class="copy">
@@ -295,7 +313,7 @@ main{position:relative; z-index:1; max-width:660px; margin:0 auto;
   </div>
 
   <div class="buy-end">
-    <a class="cta" href="https://checkout.gazillionindustries.com/checkout/buy/e565efbe-6ecb-4c47-ae3e-e24453aff62b">Buy DRUGS now</a>
+    <a class="cta gumroad-button" href="https://gazillionindustries.gumroad.com/l/drugs">Buy DRUGS now</a>
     <p class="terms">pay what you want &nbsp;&middot;&nbsp; $5 minimum</p>
   </div>
 
@@ -496,3 +514,5 @@ main{position:relative; z-index:1; max-width:660px; margin:0 auto;
   if(v && src) v.src = src.textContent.trim();
 })();
 </script>
+
+<script src="https://gumroad.com/js/gumroad.js" defer></script>
