@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://eraserfase.github.io/gazillion-site/sitemap.xml
