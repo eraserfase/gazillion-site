@@ -347,6 +347,13 @@ main{position:relative; z-index:1; max-width:660px; margin:0 auto;
   // being armed once, so pausing and resuming the video is handled for free.
   var AUTO_MS = 5000;
   var timer = null;
+  // The demo leads the carousel and is the one thing here that shows what the
+  // plug-in does rather than describing it, so nothing pulls it away from
+  // someone who has not asked to move on. The timer starts at the first real
+  // interaction - a tap, a click, a key - and behaves as before from then on.
+  // Hovering and tab-switching deliberately do not count: neither says the
+  // reader is done with the first slide.
+  var engaged = false;
   var ytPlaying = false;
   var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
@@ -396,14 +403,17 @@ main{position:relative; z-index:1; max-width:660px; margin:0 auto;
   }
   function restart(){
     if(timer) clearInterval(timer);
-    if(!reduced) timer = setInterval(tick, AUTO_MS);
+    if(engaged && !reduced) timer = setInterval(tick, AUTO_MS);
   }
   function stop(){ if(timer){ clearInterval(timer); timer = null; } }
 
   // Manual input resets the clock rather than fighting it, and hovering holds
   // the slide you are looking at.
   ["click","keydown","touchstart"].forEach(function(ev){
-    document.querySelector(".carousel").addEventListener(ev, restart, { passive: true });
+    document.querySelector(".carousel").addEventListener(ev, function(){
+      engaged = true;
+      restart();
+    }, { passive: true });
   });
   var car = document.querySelector(".carousel");
   car.addEventListener("mouseenter", stop);
