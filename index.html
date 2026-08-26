@@ -152,17 +152,16 @@ main{position:relative; z-index:1; max-width:660px; margin:0 auto; padding:196px
 
 /* The ask, small and early: it arrives while the mark is still the loudest
    thing on screen, so it reads as an invitation rather than a second banner. */
-.buy-mid{margin:36px 0 0; display:flex; flex-direction:column; align-items:center; gap:9px}
+.buy-mid{margin:36px 0 0; display:flex; justify-content:center}
 .cta--small{font-size:14px; padding:13px 30px; width:auto; max-width:none;
             letter-spacing:.04em; animation:none;
             box-shadow:0 10px 26px -12px rgba(0,0,0,.9)}
 .cta--small:hover{box-shadow:0 14px 30px -12px rgba(0,0,0,.9)}
-.buy-mid .terms{font-size:11px}
 
 /* Holds the tagline tight under MAKE EVERYTHING BETTER instead of letting the
    copy block's own 24px gap push it away into a separate paragraph. */
 .lede{display:flex; flex-direction:column; gap:11px}
-.lead-sub{margin:0; font-size:12.5px; font-weight:600; letter-spacing:.28em;
+.copy .lead-sub{margin:0; font-size:12.5px; font-weight:600; letter-spacing:.28em;
           text-transform:uppercase; color:var(--ink-soft)}
 
 /* Second video, sitting between the tagline and the line under it. Same 16:9
@@ -170,7 +169,7 @@ main{position:relative; z-index:1; max-width:660px; margin:0 auto; padding:196px
 .testimonial{margin:56px 0 0; width:100%; display:flex; justify-content:center}
 .testimonial .slot{max-width:560px}
 
-.copy{margin:56px 0 0; max-width:34em; text-align:center;
+.copy{margin:44px 0 0; max-width:34em; text-align:center;
       display:flex; flex-direction:column; gap:24px}
 .copy .lead{font-family:"Archivo Black",Impact,"Arial Black",sans-serif;
             font-size:clamp(17px,4.4vw,22px); letter-spacing:.04em;
@@ -196,7 +195,7 @@ main{position:relative; z-index:1; max-width:660px; margin:0 auto; padding:196px
      inflate the small in-page button back to banner size on phones. */
   .cta:not(.cta--small){padding:19px 28px}
   /* Wide tracking pushed the tagline to a second line, orphaning one word. */
-  .lead-sub{font-size:11px; letter-spacing:.19em}
+  .copy .lead-sub{font-size:11px; letter-spacing:.19em}
 }
 @media (prefers-reduced-motion:reduce){
   .track{scroll-behavior:auto}
@@ -245,7 +244,6 @@ main{position:relative; z-index:1; max-width:660px; margin:0 auto; padding:196px
   <div class="buy-mid">
     <!-- Replace href with the Lemon Squeezy checkout URL once the store is live. -->
     <a class="cta cta--small" href="#">Buy DRUGS now</a>
-    <p class="terms">pay what you want &nbsp;&middot;&nbsp; $5 minimum</p>
   </div>
 
   <div class="copy">
