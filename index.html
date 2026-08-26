@@ -140,15 +140,30 @@ main{position:relative; z-index:1; max-width:660px; margin:0 auto; padding:196px
 /* ---- wordmark ------------------------------------------------------------ */
 .mark{font-family:"Archivo Black",Impact,"Arial Black",sans-serif;
       font-size:clamp(64px,16vw,124px); line-height:.92; letter-spacing:-.03em;
-      margin:60px 0 0; color:var(--chalk); text-wrap:balance}
-.sub{font-size:12px; font-weight:600; letter-spacing:.3em; text-transform:uppercase;
-     color:var(--ink-soft); margin:14px 0 0; text-align:center}
-/* Was the faintest thing on the page and unreadable at a glance. It is the one
-   line that says what the product actually IS, so it gets size, weight and
-   contrast - and less tracking, because wide tracking is what was costing it
-   legibility in the first place. */
-.sub--quiet{font-size:14.5px; font-weight:600; color:var(--chalk);
-            letter-spacing:.2em; margin:12px 0 0}
+      margin:0; color:var(--chalk); text-wrap:balance}
+.mark-block{margin:60px 0 0; display:flex; flex-direction:column; align-items:center}
+/* The one line that says what the product actually IS, so it keeps the size,
+   weight and contrast it was given - and is now tracked out at run time to sit
+   exactly as wide as DRUGS above it, the way the plug-in panel sets these same
+   two words. Sized as a fraction of the mark so the pairing survives the clamp. */
+.mark-sub{margin:12px 0 0; font-size:clamp(10px,2.6vw,20px); font-weight:700;
+          letter-spacing:.2em; text-transform:uppercase; white-space:nowrap;
+          color:var(--chalk); text-align:center}
+
+/* The ask, small and early: it arrives while the mark is still the loudest
+   thing on screen, so it reads as an invitation rather than a second banner. */
+.buy-mid{margin:36px 0 0; display:flex; flex-direction:column; align-items:center; gap:9px}
+.cta--small{font-size:14px; padding:13px 30px; width:auto; max-width:none;
+            letter-spacing:.04em; animation:none;
+            box-shadow:0 10px 26px -12px rgba(0,0,0,.9)}
+.cta--small:hover{box-shadow:0 14px 30px -12px rgba(0,0,0,.9)}
+.buy-mid .terms{font-size:11px}
+
+/* Holds the tagline tight under MAKE EVERYTHING BETTER instead of letting the
+   copy block's own 24px gap push it away into a separate paragraph. */
+.lede{display:flex; flex-direction:column; gap:11px}
+.lead-sub{margin:0; font-size:12.5px; font-weight:600; letter-spacing:.28em;
+          text-transform:uppercase; color:var(--ink-soft)}
 
 /* Second video, sitting between the tagline and the line under it. Same 16:9
    slot the carousel uses, so whatever goes in one goes in the other unchanged. */
@@ -177,7 +192,11 @@ main{position:relative; z-index:1; max-width:660px; margin:0 auto; padding:196px
   .slide:last-child{margin-right:14%}
   .nav{width:34px; height:34px; font-size:17px}
   .nav--prev{left:-8px} .nav--next{right:-8px}
-  .cta{padding:19px 28px}
+  /* Equal specificity and later in source, so without the :not() this would
+     inflate the small in-page button back to banner size on phones. */
+  .cta:not(.cta--small){padding:19px 28px}
+  /* Wide tracking pushed the tagline to a second line, orphaning one word. */
+  .lead-sub{font-size:11px; letter-spacing:.19em}
 }
 @media (prefers-reduced-motion:reduce){
   .track{scroll-behavior:auto}
@@ -218,12 +237,22 @@ main{position:relative; z-index:1; max-width:660px; margin:0 auto; padding:196px
     <div class="dots" id="dots"></div>
   </div>
 
-  <h1 class="mark">DRUGS</h1>
-  <p class="sub">one knob, impossible sauce.</p>
-  <p class="sub sub--quiet">bus compressor</p>
+  <div class="mark-block">
+    <h1 class="mark">DRUGS</h1>
+    <p class="mark-sub">bus compressor</p>
+  </div>
+
+  <div class="buy-mid">
+    <!-- Replace href with the Lemon Squeezy checkout URL once the store is live. -->
+    <a class="cta cta--small" href="#">Buy DRUGS now</a>
+    <p class="terms">pay what you want &nbsp;&middot;&nbsp; $5 minimum</p>
+  </div>
 
   <div class="copy">
-    <p class="lead">MAKE EVERYTHING BETTER</p>
+    <div class="lede">
+      <p class="lead">MAKE EVERYTHING BETTER</p>
+      <p class="lead-sub">one knob, impossible sauce.</p>
+    </div>
     <p>if you know the sound, then you already know. if you dont, run a break through it and turn it up</p>
     <p class="spec">AU &nbsp;&middot;&nbsp; VST &nbsp;&middot;&nbsp; Standalone &nbsp;&middot;&nbsp; macOS</p>
   </div>
@@ -377,5 +406,32 @@ main{position:relative; z-index:1; max-width:660px; margin:0 auto; padding:196px
   restart();
 
   sync();
+})();
+</script>
+
+<script>
+// Sets "bus compressor" exactly as wide as DRUGS above it. Letter-spacing adds a
+// gap after every character including the last, so the glyphs span natural plus
+// step x gaps while the box measures one step wider - the negative margin takes
+// that trailing step back off, which keeps both the width and the centring true.
+(function matchMark(){
+  var mark = document.querySelector(".mark"),
+      sub  = document.querySelector(".mark-sub");
+  if(!mark || !sub) return;
+  function fit(){
+    sub.style.letterSpacing = "0px";
+    sub.style.marginRight   = "0px";
+    var gaps = sub.textContent.trim().length - 1;
+    if(gaps < 1) return;
+    var extra = mark.getBoundingClientRect().width - sub.getBoundingClientRect().width;
+    if(extra <= 0) return;                    // already wider than the mark: leave it
+    var step = extra / gaps;
+    sub.style.letterSpacing = step.toFixed(3) + "px";
+    sub.style.marginRight   = (-step).toFixed(3) + "px";
+  }
+  fit();
+  addEventListener("resize", fit);
+  // Archivo Black lands after first paint and is wider than the fallback face.
+  if(document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
 })();
 </script>
