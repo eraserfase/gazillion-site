@@ -217,14 +217,18 @@ main{position:relative; z-index:1; max-width:660px; margin:0 auto;
 }
 </style>
 
-<!-- CHECKOUT LINKS ARE TEST MODE. The store application is still in review and
-     Lemon Squeezy locks the account to test mode until it clears, so this is the
-     only URL that exists. Test mode takes Stripe test cards only - a real buyer
-     cannot pay through it. On approval the product is copied to live mode, which
-     mints a new variant id, so every href below has to be re-pointed at that one.
-     All three are the same string, so it is a single find and replace. -->
+<!-- CHECKOUT LINKS ARE TEST MODE AND 404 FOR EVERY VISITOR BUT THE OWNER.
+     Lemon Squeezy locks the account to test mode until the store application
+     clears review, and it serves test checkouts only to a logged-in store owner
+     - anonymous requests get a 404, verified against both this host and the
+     lemonsqueezy.com one. So these buttons are dead for the public right now.
+
+     The host is already the masked custom domain and does not change. On
+     approval the product is copied to live mode, which mints a new variant id,
+     so only the uuid below needs swapping. All three hrefs are the same string:
+     one find and replace. -->
 <div class="banner banner--top">
-  <a class="cta" href="https://gazillion-industries.lemonsqueezy.com/checkout/buy/e565efbe-6ecb-4c47-ae3e-e24453aff62b">Buy DRUGS now</a>
+  <a class="cta" href="https://checkout.gazillionindustries.com/checkout/buy/e565efbe-6ecb-4c47-ae3e-e24453aff62b">Buy DRUGS now</a>
   <p class="terms">pay what you want &nbsp;&middot;&nbsp; $5 minimum</p>
 </div>
 
@@ -258,7 +262,7 @@ main{position:relative; z-index:1; max-width:660px; margin:0 auto;
   </div>
 
   <div class="buy-mid">
-    <a class="cta cta--small" href="https://gazillion-industries.lemonsqueezy.com/checkout/buy/e565efbe-6ecb-4c47-ae3e-e24453aff62b">Buy DRUGS now</a>
+    <a class="cta cta--small" href="https://checkout.gazillionindustries.com/checkout/buy/e565efbe-6ecb-4c47-ae3e-e24453aff62b">Buy DRUGS now</a>
   </div>
 
   <div class="copy">
@@ -279,7 +283,7 @@ main{position:relative; z-index:1; max-width:660px; margin:0 auto;
   </div>
 
   <div class="buy-end">
-    <a class="cta" href="https://gazillion-industries.lemonsqueezy.com/checkout/buy/e565efbe-6ecb-4c47-ae3e-e24453aff62b">Buy DRUGS now</a>
+    <a class="cta" href="https://checkout.gazillionindustries.com/checkout/buy/e565efbe-6ecb-4c47-ae3e-e24453aff62b">Buy DRUGS now</a>
     <p class="terms">pay what you want &nbsp;&middot;&nbsp; $5 minimum</p>
   </div>
 
