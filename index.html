@@ -89,6 +89,10 @@ a.cta.gumroad-button{
   border:0 !important; border-radius:999px !important;
   text-transform:none !important; letter-spacing:.02em !important;
   height:auto !important; line-height:normal !important}
+/* Their script appends <span class="logo-full"> inside every button it claims -
+   the Gumroad wordmark. The button says what it does; whose rails it runs on is
+   not the buyer's problem, and it is stated at the checkout anyway. */
+a.cta.gumroad-button .logo-full{display:none !important}
 .cta:hover{transform:translateY(-2px)}
 
 /* One banner, pinned to the top. It is the only ask on the page, so it carries
