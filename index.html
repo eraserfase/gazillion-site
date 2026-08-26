@@ -179,18 +179,6 @@ main{position:relative; z-index:1; max-width:660px; margin:0 auto; padding:0 24p
 .dl:hover{transform:translateY(-1px)}
 .dl:focus-visible{outline:2px solid var(--ink); outline-offset:3px}
 
-/* ---- the long-form section ---------------------------------------------- */
-.about{margin:120px 0 0; max-width:62ch; width:100%;
-       display:flex; flex-direction:column; gap:18px}
-.about h2{font-family:"Archivo Black",Impact,"Arial Black",sans-serif;
-          font-size:15px; letter-spacing:.06em; color:var(--chalk);
-          margin:26px 0 0; text-wrap:balance}
-.about h2:first-child{margin:0}
-.about p{margin:0; font-size:15px; line-height:1.75; color:var(--ink-soft)}
-.about ul{margin:0; padding-left:20px; display:flex; flex-direction:column; gap:12px}
-.about li{font-size:15px; line-height:1.7; color:var(--ink-soft)}
-.about strong{color:var(--ink); font-weight:600}
-
 @media (prefers-reduced-motion:reduce){
   .panel{animation:none}
   .buy a,.pill,.dl{transition:none}
@@ -237,55 +225,6 @@ main{position:relative; z-index:1; max-width:660px; margin:0 auto; padding:0 24p
   </div>
 
 
-  <section class="about">
-    <h2>What it is for</h2>
-    <p>
-      Boom bap. Beat tapes. Chopped breaks and swung hats. The kind of drum bus
-      that has to sound like a record rather than like a computer &mdash; dusty,
-      dense, a little broken, with the low end pushing forward instead of sitting
-      politely behind everything.
-    </p>
-    <p>
-      That sound has a long history: Detroit in the nineties, the Los Angeles
-      beat scene that grew up around Low End Theory, and every beat tape made on
-      a sampler with one good effect on it. What those records share is not a
-      piece of gear, it is a behaviour &mdash; drums that get denser as they get
-      louder, and a room that swells up in the gaps between the hits.
-    </p>
-    <p>
-      DRUGS does that with one control. DOSE moves the transfer curve, the knee,
-      the attack and the release together, the way a single hardware macro would.
-      There is no threshold and no ratio because there is no threshold in the
-      model; the gain law is a table, so the ratio changes continuously with
-      level. Release is adaptive and reacts to the transient in front of it, so a
-      hit recovers inside the gap where pump is audible while sustained material
-      is left to hold still.
-    </p>
-
-    <h2>It is not an emulation of anything</h2>
-    <p>
-      Worth saying plainly, because most plugins in this territory claim
-      otherwise. Nothing here was measured from hardware. It was voiced by ear,
-      on real material, against one person&rsquo;s memory of a machine, until it
-      did the thing. Every constant that shapes the sound is recorded, and marked
-      by where it came from.
-    </p>
-    <p>
-      So it is not a model of a specific box, and it does not pretend to be. It
-      is a compressor that gets you to that place, built by someone who wanted it
-      and could not buy it.
-    </p>
-
-    <h2>The details</h2>
-    <ul>
-      <li><strong>DOSE</strong> &mdash; the whole compressor on one knob. Roughly 2:1 at the bottom of the range, far past that at full crank.</li>
-      <li><strong>MIX</strong> &mdash; dry/wet. There is no latency anywhere in the path, so the dry signal is sample-aligned with the wet one and parallel compression does not comb-filter at any setting.</li>
-      <li><strong>LIMIT</strong> &mdash; a zero-latency soft ceiling at &minus;0.3&nbsp;dBFS on the output, with a clip indicator. Attenuation only, and transparent below about &minus;0.9&nbsp;dBFS.</li>
-      <li><strong>The display</strong> &mdash; input, output, and the gain reduction crossing over the top of them. You can watch the release let go between hits, which is normally something you take on faith.</li>
-      <li><strong>Formats</strong> &mdash; Audio Unit, VST3 and a standalone app. Logic, Ableton Live, Reaper, Cubase, Studio One, Bitwig, GarageBand.</li>
-      <li><strong>Requirements</strong> &mdash; macOS 10.13 or later, universal binary for Apple Silicon and Intel. Signed and notarised by Apple, so it installs without warnings. No internet connection, ever.</li>
-    </ul>
-  </section>
 
   <p class="foot">
     Gazillion Industries LLC
