@@ -44,24 +44,44 @@ body::before{
   content:""; position:fixed; inset:0; pointer-events:none; z-index:0; opacity:.5;
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='.055'/%3E%3C/svg%3E");
 }
-main{position:relative; z-index:1; max-width:660px; margin:0 auto; padding:0 24px 120px;
+main{position:relative; z-index:1; max-width:660px; margin:0 auto; padding:92px 24px 190px;
      display:flex; flex-direction:column; align-items:center}
 
-/* ---- sticky bar ---------------------------------------------------------- */
-.bar{position:sticky; top:0; z-index:5; width:100%;
-     display:flex; justify-content:space-between; align-items:center;
-     padding:16px 0; gap:12px;
-     background:color-mix(in srgb, var(--field) 82%, transparent);
-     -webkit-backdrop-filter:blur(14px); backdrop-filter:blur(14px)}
-.house{font-size:11px; font-weight:600; letter-spacing:.34em; color:var(--ink-soft);
-       text-transform:uppercase}
-.dl{font-family:"Archivo Black",Impact,"Arial Black",sans-serif; font-size:12px;
-    letter-spacing:.04em; text-decoration:none; color:var(--field-deep);
-    background:var(--chalk); border-radius:999px; padding:12px 22px;
-    white-space:nowrap; transition:transform .18s ease, box-shadow .18s ease;
-    box-shadow:0 8px 22px -10px rgba(0,0,0,.7)}
-.dl:hover{transform:translateY(-1px); box-shadow:0 12px 26px -10px rgba(0,0,0,.8)}
-.dl:focus-visible{outline:2px solid var(--chalk); outline-offset:3px}
+/* ---- the two banners ----------------------------------------------------- */
+/* Full-bleed and pinned, one at each end, so the ask is on screen at every
+   scroll position without the page having to repeat itself. Nothing else lives
+   in them: a banner with a second thing in it is a navigation bar, and people
+   read past navigation. */
+.banner{position:fixed; left:0; right:0; z-index:20;
+        display:flex; flex-direction:column; align-items:center; gap:8px;
+        padding:14px 20px;
+        background:color-mix(in srgb, var(--field-deep) 88%, transparent);
+        -webkit-backdrop-filter:blur(16px); backdrop-filter:blur(16px)}
+.banner--top{top:0; border-bottom:1px solid var(--pill-line)}
+.banner--bottom{bottom:0; border-top:1px solid var(--pill-line); padding:16px 20px 18px}
+
+.cta{font-family:"Archivo Black",Impact,"Arial Black",sans-serif;
+     letter-spacing:.02em; text-decoration:none; text-align:center;
+     color:var(--field-deep); background:var(--chalk); border-radius:999px;
+     display:block; transition:transform .18s ease, box-shadow .18s ease}
+.cta:focus-visible{outline:3px solid var(--chalk); outline-offset:4px}
+.cta:hover{transform:translateY(-2px)}
+
+.banner--top .cta{font-size:clamp(15px,4vw,18px); padding:15px 40px;
+                  width:100%; max-width:340px;
+                  box-shadow:0 10px 26px -12px rgba(0,0,0,.9)}
+.banner--bottom .cta{font-size:clamp(18px,5vw,23px); padding:22px 48px;
+                     width:100%; max-width:440px;
+                     box-shadow:0 0 0 0 rgba(242,233,235,.28), 0 16px 40px -14px rgba(0,0,0,.9);
+                     animation:halo 3.4s ease-in-out infinite}
+.banner--bottom .cta:hover{animation:none;
+     box-shadow:0 0 0 12px rgba(242,233,235,.10), 0 22px 48px -14px rgba(0,0,0,.9)}
+@keyframes halo{
+  0%,100%{box-shadow:0 0 0 0 rgba(242,233,235,.26), 0 16px 40px -14px rgba(0,0,0,.9)}
+  50%    {box-shadow:0 0 0 14px rgba(242,233,235,0), 0 16px 40px -14px rgba(0,0,0,.9)}
+}
+.terms{margin:0; font-size:12px; letter-spacing:.14em; text-transform:uppercase;
+       color:var(--ink-soft)}
 
 /* ---- carousel ------------------------------------------------------------ */
 /* Scroll-snap rather than a library: it is native, it takes a trackpad swipe and
@@ -71,10 +91,18 @@ main{position:relative; z-index:1; max-width:660px; margin:0 auto; padding:0 24p
    cropped or stretched. */
 .carousel{position:relative; width:100%; margin:52px 0 0}
 .track{display:flex; overflow-x:auto; scroll-snap-type:x mandatory;
-       scroll-behavior:smooth; scrollbar-width:none; -ms-overflow-style:none}
+       scroll-behavior:smooth; scrollbar-width:none; -ms-overflow-style:none;
+       /* Side padding equal to half the leftover width, so the first and last
+          slides can still sit dead centre. */
+       padding-inline:11%}
 .track::-webkit-scrollbar{display:none}
-.slide{flex:0 0 100%; scroll-snap-align:center;
-       display:flex; align-items:center; justify-content:center; height:460px}
+.slide{flex:0 0 78%; scroll-snap-align:center;
+       display:flex; align-items:center; justify-content:center; height:460px;
+       /* The neighbours stay visible but recede, so it is obvious there is more
+          without them competing with the slide you are looking at. */
+       opacity:.34; transform:scale(.93);
+       transition:opacity .3s ease, transform .3s ease}
+.slide.is-active{opacity:1; transform:none}
 .slide img{max-height:100%; width:auto; border-radius:10px; display:block;
            box-shadow:0 26px 60px -22px var(--shadow)}
 .slot{width:100%; max-width:540px; aspect-ratio:16/9; border-radius:10px;
@@ -107,6 +135,9 @@ main{position:relative; z-index:1; max-width:660px; margin:0 auto; padding:0 24p
       margin:60px 0 0; color:var(--chalk); text-wrap:balance}
 .sub{font-size:12px; font-weight:600; letter-spacing:.3em; text-transform:uppercase;
      color:var(--ink-soft); margin:14px 0 0; text-align:center}
+/* Quieter than the line above it: the panel puts BUS COMPRESSOR last and
+   faintest, and the page should agree with the product. */
+.sub--quiet{color:var(--ink-faint); letter-spacing:.34em; margin:9px 0 0}
 
 .copy{margin:60px 0 0; max-width:34em; text-align:center;
       display:flex; flex-direction:column; gap:24px}
@@ -121,48 +152,31 @@ main{position:relative; z-index:1; max-width:660px; margin:0 auto; padding:0 24p
 /* Deliberately the largest and brightest object on the page after the wordmark.
    On a dark ground a solid chalk fill is the highest contrast available, and the
    halo pulls the eye without adding a colour the palette does not have. */
-.buy{margin:74px 0 0; width:100%; display:flex; flex-direction:column;
-     align-items:center; gap:18px}
-.buy a{font-family:"Archivo Black",Impact,"Arial Black",sans-serif;
-       font-size:clamp(19px,5.2vw,24px); letter-spacing:.02em; text-decoration:none;
-       color:var(--field-deep); background:var(--chalk); border-radius:999px;
-       padding:26px 64px; width:100%; max-width:420px; text-align:center;
-       box-shadow:0 0 0 0 rgba(242,233,235,.30), 0 20px 44px -16px rgba(0,0,0,.8);
-       animation:halo 3.4s ease-in-out infinite;
-       transition:transform .18s ease}
-.buy a:hover{transform:translateY(-3px); animation:none;
-             box-shadow:0 0 0 12px rgba(242,233,235,.10), 0 26px 54px -16px rgba(0,0,0,.85)}
-.buy a:focus-visible{outline:3px solid var(--chalk); outline-offset:5px}
-@keyframes halo{
-  0%,100%{box-shadow:0 0 0 0 rgba(242,233,235,.26), 0 20px 44px -16px rgba(0,0,0,.8)}
-  50%    {box-shadow:0 0 0 14px rgba(242,233,235,0), 0 20px 44px -16px rgba(0,0,0,.8)}
-}
-.buy .terms{font-size:13px; letter-spacing:.14em; text-transform:uppercase;
-            color:var(--ink-soft)}
-
 .foot{margin:104px 0 0; font-size:11px; letter-spacing:.22em; text-transform:uppercase;
       color:var(--ink-faint); text-align:center; line-height:2}
 
 @media (max-width:560px){
-  .slide{height:380px}
+  .slide{flex:0 0 82%; height:380px}
+  .track{padding-inline:9%}
   .nav{width:34px; height:34px; font-size:17px}
   .nav--prev{left:-8px} .nav--next{right:-8px}
-  .buy a{padding:22px 32px}
+  .banner--bottom .cta{padding:19px 28px}
 }
 @media (prefers-reduced-motion:reduce){
   .track{scroll-behavior:auto}
-  .buy a{animation:none}
-  .buy a:hover,.dl:hover{transform:none}
-  .dl,.buy a,.nav,.dot{transition:none}
+  .slide{transition:none}
+  .cta{animation:none !important}
+  .cta:hover{transform:none}
+  .cta,.nav,.dot{transition:none}
 }
 </style>
 
-<main>
-  <div class="bar">
-    <span class="house">Gazillion Industries</span>
-    <a class="dl" href="#get">Buy DRUGS now</a>
-  </div>
+<div class="banner banner--top">
+  <!-- Replace href with the Lemon Squeezy checkout URL once the store is live. -->
+  <a class="cta" href="#">Buy DRUGS now</a>
+</div>
 
+<main>
   <div class="carousel">
     <div class="track" id="track">
       <div class="slide">
@@ -188,6 +202,7 @@ main{position:relative; z-index:1; max-width:660px; margin:0 auto; padding:0 24p
 
   <h1 class="mark">DRUGS</h1>
   <p class="sub">one knob, impossible sauce.</p>
+  <p class="sub sub--quiet">bus compressor</p>
 
   <div class="copy">
     <p class="lead">MAKE EVERYTHING BETTER</p>
@@ -195,14 +210,14 @@ main{position:relative; z-index:1; max-width:660px; margin:0 auto; padding:0 24p
     <p class="spec">AU &nbsp;&middot;&nbsp; VST &nbsp;&middot;&nbsp; Standalone &nbsp;&middot;&nbsp; macOS</p>
   </div>
 
-  <div class="buy" id="get">
-    <!-- Replace href with the Lemon Squeezy checkout URL once the store is live. -->
-    <a href="#">Buy DRUGS now</a>
-    <p class="terms">pay what you want &nbsp;&middot;&nbsp; $5 minimum</p>
-  </div>
-
   <p class="foot">Gazillion Industries LLC</p>
 </main>
+
+<div class="banner banner--bottom">
+  <!-- Replace href with the Lemon Squeezy checkout URL once the store is live. -->
+  <a class="cta" href="#">Buy DRUGS now</a>
+  <p class="terms">pay what you want &nbsp;&middot;&nbsp; $5 minimum</p>
+</div>
 
 <script>
 (function(){
@@ -222,14 +237,28 @@ main{position:relative; z-index:1; max-width:660px; margin:0 auto; padding:0 24p
   });
   var dots = Array.prototype.slice.call(dotsEl.children);
 
-  function index(){ return Math.round(track.scrollLeft / track.clientWidth); }
+  // Slides are narrower than the track now, so neither position nor the active
+  // slide can be derived from clientWidth any more. Both come from geometry.
+  function centreOf(el){ return el.offsetLeft + el.offsetWidth / 2; }
+  function index(){
+    var mid = track.scrollLeft + track.clientWidth / 2 + track.offsetLeft;
+    var best = 0, bestDist = Infinity;
+    slides.forEach(function(s, i){
+      var d = Math.abs(centreOf(s) - mid);
+      if(d < bestDist){ bestDist = d; best = i; }
+    });
+    return best;
+  }
   function go(i){
     var n = Math.max(0, Math.min(slides.length - 1, i));
-    track.scrollTo({ left: n * track.clientWidth, behavior: "smooth" });
+    var left = slides[n].offsetLeft - track.offsetLeft
+                 - (track.clientWidth - slides[n].offsetWidth) / 2;
+    track.scrollTo({ left: left, behavior: "smooth" });
   }
   function sync(){
     var n = index();
     dots.forEach(function(d, i){ d.setAttribute("aria-current", i === n ? "true" : "false"); });
+    slides.forEach(function(s, i){ s.classList.toggle("is-active", i === n); });
   }
 
   document.querySelector(".nav--prev").addEventListener("click", function(){ go(index() - 1); });
