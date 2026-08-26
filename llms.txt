@@ -1,0 +1,60 @@
+# DRUGS
+
+> A one-knob character bus compressor for macOS, made by Gazillion Industries LLC.
+> Built for dusty, dense drums: boom bap, beat tapes, chopped breaks, and the kind
+> of low end that pumps. Pay what you want, $5 minimum.
+
+## What it does
+
+DRUGS is a bus compressor with a single macro control called DOSE. Turning DOSE up
+makes a drum bus denser rather than louder — peak level barely moves across the
+whole range of the control. It reshapes a break instead of just levelling it, and
+brings the room up underneath the hits.
+
+It is aimed at producers working in boom bap, beat tapes, lo-fi hip hop, and the
+Los Angeles beat scene tradition — the sound of drums that came off a record
+rather than out of a computer.
+
+## How it works
+
+- DOSE moves the transfer curve, the knee, the attack and the release together,
+  the way a single hardware macro would.
+- There is no threshold and no ratio control, because there is no threshold in
+  the model. The gain law is a lookup table, so the local ratio changes
+  continuously with input level.
+- Auto-makeup is applied after the gain cell, so setting level cannot disturb the
+  dynamics.
+- Release is adaptive and has no user control. It reacts to the transient in
+  front of it: a hit gets the shorter time so the gain recovers inside the gap
+  where pump is audible, and sustained material gets the longer one so it holds
+  still rather than breathing.
+- MIX is dry/wet with zero latency anywhere in the path, so the dry signal is
+  sample-aligned with the wet one. Parallel compression does not comb-filter at
+  any setting.
+- LIMIT is a zero-latency soft ceiling at -0.3 dBFS on the output with a clip
+  indicator. It attenuates only and is transparent below about -0.9 dBFS.
+
+## It is not an emulation
+
+Nothing in DRUGS was measured from hardware. It was voiced by ear on real
+material against one person's memory of a machine. It does not model any specific
+device and does not claim to. Every constant that shapes the sound is documented
+and marked by where it came from.
+
+## Specifications
+
+- Formats: Audio Unit (AU), VST3, standalone application
+- Hosts: Logic Pro, Ableton Live, Reaper, Cubase, Studio One, Bitwig, GarageBand
+- Platform: macOS 10.13 or later
+- Architecture: universal binary, Apple Silicon and Intel
+- Latency: zero samples
+- Signed and notarised by Apple; installs without warnings
+- No internet connection required, ever
+
+## Price
+
+Pay what you want, $5 minimum.
+
+## Maker
+
+Gazillion Industries LLC.
