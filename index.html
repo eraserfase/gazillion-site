@@ -27,6 +27,13 @@
 "author":{"@type":"Organization","name":"Gazillion Industries LLC"},
 "offers":{"@type":"Offer","price":"5.00","priceCurrency":"USD","availability":"https://schema.org/InStock"}}
 </script>
+<!-- ANALYTICS: paste the provider's own script tag on the line below and nothing
+     else changes. The track() helper further down calls whichever global is
+     present, so the choice is reversible without touching a single call site.
+     Recommended: Plausible (one tag, custom events, no cookie banner needed).
+       <script defer data-domain="gazillionindustries.com"
+               src="https://plausible.io/js/script.js"></script>
+     Until a tag is here the page still works and every track() call is a no-op. -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Archivo+Black&display=swap">
@@ -42,6 +49,11 @@
   --shadow:rgba(0,0,0,.5);
 }
 *{box-sizing:border-box}
+/* The UA stylesheet gives [hidden] display:none, and any author display rule
+   beats it - .testimonial sets display:flex, so marking it hidden did nothing
+   and the empty slot kept rendering. This is the normalize rule that makes the
+   attribute mean what it says, everywhere on the page rather than case by case. */
+[hidden]{display:none !important}
 body{
   margin:0; background:var(--field); color:var(--ink);
   font-family:Archivo,-apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif;
@@ -114,6 +126,29 @@ a.cta.gumroad-button .logo-full{display:none !important}
 
 .terms{margin:0; font-size:12px; letter-spacing:.14em; text-transform:uppercase;
        color:var(--ink-soft)}
+
+/* ---- the list ------------------------------------------------------------ */
+/* Sits after the last buy button, never before it. Anyone who reaches this has
+   already walked past the ask twice without taking it, so the list is the
+   second-best outcome rather than a competitor to the first - which is why it is
+   quiet, small, and carries no discount. A bribe here would teach people to wait
+   for the next one instead of buying this one. */
+.list{margin:64px 0 0; width:100%; max-width:440px; text-align:center}
+.list p{margin:0 0 12px; font-size:12px; letter-spacing:.14em;
+        text-transform:uppercase; color:var(--ink-soft)}
+.list form{display:flex; gap:8px}
+.list input{flex:1 1 auto; min-width:0; font-family:inherit; font-size:15px;
+            color:var(--ink); background:var(--field-deep);
+            border:1px solid var(--pill-line); border-radius:999px;
+            padding:12px 18px; -webkit-appearance:none}
+.list input::placeholder{color:var(--ink-faint)}
+.list input:focus{outline:none; border-color:var(--ink-soft)}
+.list button{flex:0 0 auto; font-family:inherit; font-size:12px; font-weight:600;
+             letter-spacing:.1em; text-transform:uppercase; cursor:pointer;
+             color:var(--field-deep); background:var(--chalk); border:0;
+             border-radius:999px; padding:12px 22px}
+.list.is-done form{display:none}
+.list.is-done p{color:var(--ink)}
 
 /* ---- carousel ------------------------------------------------------------ */
 /* Scroll-snap rather than a library: it is native, it takes a trackpad swipe and
@@ -287,10 +322,14 @@ a.cta.gumroad-button .logo-full{display:none !important}
 
      The host is the masked custom domain and does not change. Once the store is
      approved the product gets copied to live mode, which mints a new variant
-     id, so only the uuid below needs swapping. All three hrefs are the same
-     string: one find and replace. -->
+     id, so only the uuid below needs swapping.
+
+     The three hrefs are no longer identical: each carries its own utm_content so
+     the checkout can say which button was paid from, and a data-pos so the click
+     is counted here even when it is not. Changing the destination is now three
+     edits, not one - that is the cost of knowing which of the three is working. -->
 <div class="banner banner--top">
-  <a class="cta gumroad-button" href="https://gazillionindustries.gumroad.com/l/drugs">Buy DRUGS now</a>
+  <a class="cta gumroad-button" data-pos="banner_top" href="https://gazillionindustries.gumroad.com/l/drugs?utm_source=gazillionindustries.com&amp;utm_medium=cta&amp;utm_content=banner_top">Buy DRUGS now</a>
   <p class="terms">pay what you want &nbsp;&middot;&nbsp; $5 minimum</p>
 </div>
 
@@ -334,7 +373,7 @@ a.cta.gumroad-button .logo-full{display:none !important}
   </div>
 
   <div class="buy-mid">
-    <a class="cta cta--small gumroad-button" href="https://gazillionindustries.gumroad.com/l/drugs">Buy DRUGS now</a>
+    <a class="cta cta--small gumroad-button" data-pos="hero_mid" href="https://gazillionindustries.gumroad.com/l/drugs?utm_source=gazillionindustries.com&amp;utm_medium=cta&amp;utm_content=hero_mid">Buy DRUGS now</a>
   </div>
 
   <div class="copy">
@@ -346,7 +385,11 @@ a.cta.gumroad-button .logo-full{display:none !important}
     <p class="spec">AU &nbsp;&middot;&nbsp; VST &nbsp;&middot;&nbsp; Standalone &nbsp;&middot;&nbsp; macOS</p>
   </div>
 
-  <div class="testimonial">
+  <!-- Hidden until there is something real to put in it. An empty box reading
+       "testimonials go here" was shipping to buyers, which reads as unfinished
+       in the one place the page is asking to be trusted. Drop the hidden
+       attribute the moment the first creator video exists. -->
+  <div class="testimonial" hidden>
     <!-- Swap this slot's contents for the embed:
          <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="What people are saying"
                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope"
@@ -355,8 +398,30 @@ a.cta.gumroad-button .logo-full{display:none !important}
   </div>
 
   <div class="buy-end">
-    <a class="cta gumroad-button" href="https://gazillionindustries.gumroad.com/l/drugs">Buy DRUGS now</a>
+    <a class="cta gumroad-button" data-pos="page_end" href="https://gazillionindustries.gumroad.com/l/drugs?utm_source=gazillionindustries.com&amp;utm_medium=cta&amp;utm_content=page_end">Buy DRUGS now</a>
     <p class="terms">pay what you want &nbsp;&middot;&nbsp; $5 minimum</p>
+  </div>
+
+  <!-- The list is the only asset on this page that survives a change of
+       storefront. The buttons, the checkout and the receipt all belong to
+       whoever is processing payments this month, and that has already changed
+       once. It is also how the second plug-in gets an audience on day one
+       instead of starting from nothing.
+
+       WIRE IT UP: replace PASTE_FORM_ENDPOINT_HERE with the provider's form
+       action. Until then the block hides itself rather than shipping a field
+       that silently swallows addresses.
+         Kit (recommended, free to 10k subscribers): app.kit.com -> Grow ->
+         Landing Pages & Forms -> new form -> Embed -> HTML, and copy the URL out
+         of its <form action>. Kit's field name is email_address, which is what
+         is used below; Buttondown wants "email", Mailchimp wants "EMAIL". -->
+  <div class="list" id="list">
+    <p id="list-msg">there will be more of these</p>
+    <form action="PASTE_FORM_ENDPOINT_HERE" method="post">
+      <input type="email" name="email_address" placeholder="email" required
+             autocomplete="email" aria-label="Email address">
+      <button type="submit">tell me</button>
+    </form>
   </div>
 
   <p class="foot">Gazillion Industries LLC</p>
@@ -567,6 +632,65 @@ a.cta.gumroad-button .logo-full{display:none !important}
     player.classList.remove("is-started");
     v.controls = false;
     try { v.currentTime = 0; } catch(e){}
+  });
+})();
+</script>
+
+<script>
+// Provider-agnostic by design. Plausible, GoatCounter and Umami each expose a
+// different global; this calls whichever one is actually present and does
+// nothing at all when none is. Changing analytics later is then one script tag
+// in the head rather than an edit at every call site, and the page never depends
+// on that tag being there.
+function track(name, props){
+  try{
+    if(window.plausible)
+      return window.plausible(name, props ? {props:props} : undefined);
+    if(window.goatcounter && window.goatcounter.count)
+      return window.goatcounter.count({path:name, title:name, event:true});
+    if(window.umami && window.umami.track)
+      return window.umami.track(name, props);
+  }catch(e){}
+}
+
+// Every buy button reports which of the three it was. The utm_content on the
+// hrefs answers the same question at the checkout end, but only for the people
+// who actually pay. This counts the ones who clicked and then did not - which is
+// what separates "the page is not convincing" from "the price is not the
+// problem", and there is no way to see it from the checkout side.
+(function buyClicks(){
+  var links = document.querySelectorAll("a.cta");
+  for(var i = 0; i < links.length; i++){
+    (function(a){
+      a.addEventListener("click", function(){
+        track("buy_click", {position: a.getAttribute("data-pos") || "unknown"});
+      });
+    })(links[i]);
+  }
+})();
+
+(function list(){
+  var box = document.getElementById("list");
+  if(!box) return;
+  var form = box.querySelector("form"),
+      msg  = document.getElementById("list-msg");
+  // Not wired to a provider yet, so hide it. A form posting nowhere still looks
+  // like it worked and loses every address typed into it, which is worse than
+  // not asking.
+  if(!form || form.getAttribute("action").indexOf("PASTE_") === 0){
+    box.hidden = true;
+    return;
+  }
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+    // no-cors so the cross-origin post is allowed at all; the trade is that the
+    // response cannot be read, so success here is optimistic by necessity. What
+    // that hides is a provider outage. The alternative is showing a CORS error
+    // to somebody who did nothing wrong and cannot fix it either.
+    fetch(form.action, {method:"POST", mode:"no-cors", body:new FormData(form)});
+    box.classList.add("is-done");
+    msg.textContent = "ok. you will hear from us.";
+    track("list_signup");
   });
 })();
 </script>
