@@ -2,7 +2,8 @@
 
 > A one-knob character bus compressor for macOS, made by Gazillion Industries LLC.
 > Built for dusty, dense drums: boom bap, beat tapes, chopped breaks, and the kind
-> of low end that pumps. Pay what you want, $5 minimum.
+> of low end that pumps. Vinyl sim style squash on the drum bus, with one control.
+> Pay what you want, $5 minimum.
 
 ## What it does
 
@@ -33,6 +34,13 @@ rather than out of a computer.
   any setting.
 - LIMIT is a zero-latency soft ceiling at -0.3 dBFS on the output with a clip
   indicator. It attenuates only and is transparent below about -0.9 dBFS.
+
+## The vinyl sim sound
+
+Vinyl sim is shorthand for a particular kind of squash: dense, slightly crushed
+drums with the room pushed up under the hits, the way a break sounds once it has
+been through a sampler. DRUGS goes at that sound directly, on the drum bus, with
+one knob and no setup.
 
 ## It is not an emulation
 

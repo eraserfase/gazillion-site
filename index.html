@@ -1,5 +1,5 @@
-<title>DRUGS Bus Compressor</title>
-<meta name="description" content="A one-knob bus compressor for dusty, dense drums. Run a break through it and turn it up. AU, VST3 and standalone for macOS. Pay what you want, $5 minimum.">
+<title>DRUGS - one-knob bus compressor for drums (AU, VST3, macOS)</title>
+<meta name="description" content="A one-knob bus compressor for dusty, dense drums. Vinyl sim squash for breaks and the drum bus. AU, VST3 and standalone for macOS. Pay what you want, $5 minimum.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="canonical" href="https://gazillionindustries.com/">
 <meta property="og:type" content="website">
@@ -20,12 +20,7 @@
 <meta name="twitter:title" content="DRUGS - one knob, impossible sauce">
 <meta name="twitter:description" content="A one-knob bus compressor for dusty, dense drums. Run a break through it and turn it up.">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"SoftwareApplication","name":"DRUGS",
-"applicationCategory":"MultimediaApplication","applicationSubCategory":"Audio plug-in",
-"operatingSystem":"macOS 10.13 or later","softwareVersion":"1.0.0","url":"https://gazillionindustries.com/",
-"description":"A one-knob character bus compressor for macOS. AU, VST3 and standalone.",
-"author":{"@type":"Organization","name":"Gazillion Industries LLC"},
-"offers":{"@type":"Offer","price":"5.00","priceCurrency":"USD","availability":"https://schema.org/InStock"}}
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"DRUGS","alternateName":"DRUGS Bus Compressor","applicationCategory":"MultimediaApplication","applicationSubCategory":"Audio plug-in","operatingSystem":"macOS 10.13 or later","softwareVersion":"1.0.0","url":"https://gazillionindustries.com/","image":"https://gazillionindustries.com/og.jpg","description":"A one-knob bus compressor for macOS, built for dusty, dense drums. One macro control, called DOSE, moves the curve, knee, attack and release together, for vinyl sim style squash on breaks and the drum bus. AU, VST3 and standalone.","featureList":["Single macro control (DOSE)","Adaptive release with no user control","Zero-latency dry/wet MIX for parallel compression","Zero-latency soft ceiling (LIMIT) at -0.3 dBFS","Auto-makeup after the gain cell","Universal binary, Apple Silicon and Intel","Signed and notarised by Apple","Works offline"],"keywords":"bus compressor, drum bus compressor, one knob compressor, vinyl sim, VST compressor, AU compressor, VST3, macOS audio plugin, boom bap, lo-fi hip hop","softwareRequirements":"macOS 10.13 or later; a host supporting AU or VST3, or none for the standalone","author":{"@type":"Organization","name":"Gazillion Industries LLC","url":"https://gazillionindustries.com/"},"offers":{"@type":"Offer","priceCurrency":"USD","price":"5.00","priceSpecification":{"@type":"PriceSpecification","priceCurrency":"USD","minPrice":"5.00","description":"Pay what you want, $5 minimum."},"availability":"https://schema.org/InStock"}}
 </script>
 <!-- Umami: free tier, custom events, no cookie banner and so no consent
      dialog to put in front of somebody who came to hear a compressor. The
@@ -302,6 +297,40 @@ a.cta.gumroad-button .logo-full{display:none !important}
   .cta,.nav,.dot{transition:none}
   .play-badge .disc{transition:none}
 }
+
+/* ---- the h1 now wraps the mark ------------------------------------------- */
+/* .mark-block was a div; as an h1 it inherits the UA 2em font-size, which would
+   scale nothing here (every size below is px or vw) but would scale anything
+   added later. Pinned rather than left as a trap. */
+h1.mark-block{font-size:inherit; font-weight:400}
+.mark{display:block}
+
+/* ---- the long copy ------------------------------------------------------- */
+/* It sits below the last buy button on purpose. Someone who came to hear a
+   compressor should not have to read 700 words to reach the ask; someone who
+   wants the detail - or a crawler deciding what this page is about - scrolls.
+   Serving both this way costs neither of them anything. */
+.about{margin:96px 0 0; width:100%; max-width:34em; text-align:left;
+       border-top:1px solid var(--pill-line); padding-top:44px}
+.about h2{margin:38px 0 14px; font-size:12px; font-weight:600; letter-spacing:.2em;
+          text-transform:uppercase; color:var(--chalk)}
+.about h2:first-of-type{margin-top:0}
+.about p{margin:0 0 14px; font-size:15.5px; line-height:1.7; color:var(--ink-soft)}
+.about ul{margin:0; padding:0 0 0 18px; list-style:none}
+.about li{margin:0 0 12px; font-size:15.5px; line-height:1.7; color:var(--ink-soft);
+          position:relative}
+.about li::before{content:"\2014"; position:absolute; left:-18px; color:var(--ink-faint)}
+.about strong{color:var(--ink); font-weight:600}
+.about em{color:var(--ink)}
+
+/* "one-knob bus compressor" is nine characters longer than the "bus compressor"
+   it replaced, and .mark-sub is nowrap. At .2em tracking that pushed the line
+   past a 320px viewport and put a horizontal scrollbar on the narrowest phones.
+   Tracking comes in first because it is the cheapest 23px on the line; the wrap
+   is the backstop below the width where even that is not enough. The line is
+   centred, so where it does break it reads the same as one line. */
+@media (max-width:420px){ .mark-sub{letter-spacing:.1em} }
+@media (max-width:352px){ .mark-sub{white-space:normal} }
 </style>
 
 <!-- Gumroad's overlay opens the checkout over this page instead of sending
@@ -367,10 +396,15 @@ a.cta.gumroad-button .logo-full{display:none !important}
 
   <p class="credit">Demo video loops &mdash; drums and melody &mdash; by THE KOUNT</p>
 
-  <div class="mark-block">
-    <h1 class="mark">DRUGS</h1>
-    <p class="mark-sub">bus compressor</p>
-  </div>
+  <!-- The h1 was the word DRUGS on its own. That is the strongest single
+       signal on the page about what the page is, and on that name alone it
+       points at pharmacology rather than at audio software. The mark still
+       renders exactly as before - the heading now wraps both lines instead of
+       sitting on the first one, so the category travels with the name. -->
+  <h1 class="mark-block">
+    <span class="mark">DRUGS</span>
+    <span class="mark-sub">one-knob bus compressor</span>
+  </h1>
 
   <div class="buy-mid">
     <a class="cta cta--small gumroad-button" data-pos="hero_mid" href="https://gazillionindustries.gumroad.com/l/drugs?utm_source=gazillionindustries.com&amp;utm_medium=cta&amp;utm_content=hero_mid">Buy DRUGS now</a>
@@ -430,6 +464,60 @@ a.cta.gumroad-button .logo-full{display:none !important}
     <p class="terms">pay what you want &nbsp;&middot;&nbsp; $5 minimum</p>
   </div>
 
+
+
+  <section class="about">
+    <h2>What DRUGS is</h2>
+    <p>DRUGS is a bus compressor with one macro control, called DOSE. Turning DOSE up
+    makes a drum bus <em>denser</em> rather than louder &mdash; peak level barely moves
+    across the whole range of the knob. It reshapes a break instead of levelling it, and
+    brings the room up underneath the hits.</p>
+    <p>It was voiced for boom bap, beat tapes, chopped breaks and lo-fi hip hop: drums
+    that are supposed to sound like they came off a record rather than out of a computer.
+    It will sit on anything, but that is what it was built on.</p>
+
+    <h2>The vinyl sim sound</h2>
+    <p>Vinyl sim is shorthand for a particular kind of squash &mdash; dense, slightly
+    crushed drums with the room pushed up under the hits, the way a break sounds once it
+    has been through a sampler. DRUGS goes at that sound directly, on the drum bus, with
+    one knob and no setup.</p>
+    <p>It is not a model of any sampler. Nothing in DRUGS was measured from hardware and
+    it does not emulate a specific device. It was voiced by ear, on real breaks, until it
+    did the thing. Every constant that shapes the sound is documented and marked by where
+    it came from.</p>
+
+    <h2>How it works</h2>
+    <ul>
+      <li><strong>DOSE</strong> moves the transfer curve, the knee, the attack and the
+      release together, the way a single hardware macro would.</li>
+      <li>There is <strong>no threshold and no ratio</strong>, because there is no
+      threshold in the model. The gain law is a lookup table, so the local ratio changes
+      continuously with input level.</li>
+      <li><strong>Release is adaptive</strong> and has no user control. It reacts to the
+      transient in front of it: a hit gets the shorter time, so gain recovers inside the
+      gap where pump is audible, and sustained material gets the longer one, so it holds
+      still rather than breathing.</li>
+      <li><strong>Auto-makeup</strong> is applied after the gain cell, so setting level
+      cannot disturb the dynamics.</li>
+      <li><strong>MIX</strong> is dry/wet with zero latency anywhere in the path, so the
+      dry signal stays sample-aligned with the wet one. Parallel compression does not
+      comb-filter at any setting.</li>
+      <li><strong>LIMIT</strong> is a zero-latency soft ceiling at &minus;0.3&nbsp;dBFS
+      on the output, with a clip indicator. It attenuates only, and is transparent below
+      about &minus;0.9&nbsp;dBFS.</li>
+    </ul>
+
+    <h2>Formats and compatibility</h2>
+    <p>DRUGS installs as an Audio Unit (AU) and a VST plug-in (VST3), plus a standalone
+    application. It runs in Logic Pro, Ableton Live, Reaper, Cubase, Studio One, Bitwig
+    and GarageBand.</p>
+    <p>macOS 10.13 or later, universal binary for both Apple Silicon and Intel. Zero
+    samples of latency. Signed and notarised by Apple, so it installs without warnings.
+    No internet connection required, ever.</p>
+
+    <h2>Price</h2>
+    <p>Pay what you want, $5 minimum.</p>
+  </section>
 
   <p class="foot">Gazillion Industries LLC</p>
 </main>
