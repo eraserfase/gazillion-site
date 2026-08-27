@@ -311,7 +311,27 @@ h1.mark-block{font-size:inherit; font-weight:400}
    wants the detail - or a crawler deciding what this page is about - scrolls.
    Serving both this way costs neither of them anything. */
 .about{margin:96px 0 0; width:100%; max-width:34em; text-align:left;
-       border-top:1px solid var(--pill-line); padding-top:44px}
+       border-top:1px solid var(--pill-line); padding-top:28px}
+
+/* The copy is a disclosure rather than a section. It stays in the document at
+   all times - <details> hides it with CSS, it is never injected on click - so a
+   crawler still reads every word of it while the page stays as short as it was
+   for somebody who only came to hear the thing. */
+.about > summary{
+  list-style:none; cursor:pointer; display:block; text-align:center;
+  font-size:11px; font-weight:600; letter-spacing:.22em; text-transform:uppercase;
+  color:var(--ink-faint); padding:6px 0; transition:color .18s ease}
+/* Two ways to kill the disclosure triangle, because the one that works depends
+   on the engine: display:block on the summary covers modern Safari and Chrome,
+   the pseudo-element covers what is left. */
+.about > summary::-webkit-details-marker{display:none}
+.about > summary::after{content:"+"; margin-left:.7em; font-weight:400;
+       display:inline-block; transform:translateY(-.02em)}
+.about[open] > summary::after{content:"\2013"}
+.about > summary:hover{color:var(--ink-soft)}
+.about > summary:focus-visible{outline:2px solid var(--ink-soft);
+       outline-offset:6px; border-radius:3px}
+.about-body{margin-top:36px}
 .about h2{margin:38px 0 14px; font-size:12px; font-weight:600; letter-spacing:.2em;
           text-transform:uppercase; color:var(--chalk)}
 .about h2:first-of-type{margin-top:0}
@@ -415,7 +435,7 @@ h1.mark-block{font-size:inherit; font-weight:400}
       <p class="lead">MAKE EVERYTHING BETTER</p>
       <p class="lead-sub">one knob, impossible sauce.</p>
     </div>
-    <p>if you know the sound, then you already know. if you dont, run a break through it and turn it up</p>
+    <p>you already know the sound. run a break through it and turn it up. instant gratification.</p>
     <p class="spec">AU &nbsp;&middot;&nbsp; VST &nbsp;&middot;&nbsp; Standalone &nbsp;&middot;&nbsp; macOS</p>
   </div>
 
@@ -466,7 +486,9 @@ h1.mark-block{font-size:inherit; font-weight:400}
 
 
 
-  <section class="about">
+  <details class="about">
+    <summary>more info</summary>
+    <div class="about-body">
     <h2>What DRUGS is</h2>
     <p>DRUGS is a bus compressor with one macro control, called DOSE. Turning DOSE up
     makes a drum bus <em>denser</em> rather than louder &mdash; peak level barely moves
@@ -517,7 +539,8 @@ h1.mark-block{font-size:inherit; font-weight:400}
 
     <h2>Price</h2>
     <p>Pay what you want, $5 minimum.</p>
-  </section>
+    </div>
+  </details>
 
   <p class="foot">Gazillion Industries LLC</p>
 </main>
