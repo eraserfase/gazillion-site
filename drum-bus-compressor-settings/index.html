@@ -80,6 +80,23 @@ em{color:var(--ink)}
   .card dd{margin:0 0 12px}
 }
 
+/* Inline links inside body copy. Underlined rather than coloured, because a
+   coloured link in a dark editorial page reads as an advert and this one is
+   meant to read as a sentence. */
+a.inline{color:var(--ink); text-decoration:underline;
+         text-underline-offset:3px; text-decoration-thickness:1px;
+         text-decoration-color:var(--ink-faint); transition:text-decoration-color .18s ease}
+a.inline:hover{text-decoration-color:var(--chalk)}
+
+/* The mid-article aside. A rule and a line of small type - deliberately not a
+   card, not a button and not a box, because an interstitial in the middle of a
+   teaching page is an advert no matter what it says. */
+.aside{margin:34px 0; padding:18px 0 0; border-top:1px solid var(--pill-line);
+       font-size:15px; line-height:1.6; color:var(--ink-faint)}
+.aside a{color:var(--ink-soft); text-decoration:underline;
+         text-underline-offset:3px; text-decoration-color:var(--ink-faint)}
+.aside a:hover{color:var(--chalk)}
+
 .end{margin:64px 0 0; padding:28px 24px; border:1px solid var(--pill-line); border-radius:14px;
      text-align:center; background:rgba(242,233,235,.03)}
 .end p{margin:0 0 18px; color:var(--ink-soft)}
@@ -100,7 +117,8 @@ em{color:var(--ink)}
   <h1>Drum bus compressor settings</h1>
   <p class="standfirst">Every control on a drum bus compressor, what it actually
   changes, and a starting point that works on most material. Written by the
-  people who then built a compressor with none of them.</p>
+  people who then built <a class="inline" href="/?from=settings-top">a compressor
+  with none of them</a>.</p>
 
   <h2>The short version</h2>
   <div class="card">
@@ -154,6 +172,10 @@ em{color:var(--ink)}
   <p>If the needle is pinned and never returns, you are limiting, not
   compressing.</p>
 
+  <p class="aside">Or don't watch the meter.
+  <a href="/?from=settings-mid">DRUGS</a> has no threshold to set, and there is a
+  twenty-second demo on the page.</p>
+
   <h2>Knee</h2>
   <p>A soft knee eases compression in gradually as the signal approaches the
   threshold; a hard knee applies it all at once. Soft is more forgiving on drums
@@ -196,10 +218,11 @@ em{color:var(--ink)}
 
   <div class="end">
     <p>DRUGS &mdash; one-knob bus compressor for macOS. VST, AU and standalone.
-    Pay what you want, $5 minimum.</p>
-    <a class="cta" href="/">Get DRUGS</a>
+    There is a twenty-second demo of the sweep described above, which is the
+    fastest way to know whether any of this is for you.</p>
+    <a class="cta" href="/?from=settings-end">Hear it &mdash; $5+, pay what you want</a>
   </div>
 
-  <p class="foot"><a href="/">Gazillion Industries LLC</a></p>
+  <p class="foot"><a href="/?from=settings-foot">Gazillion Industries LLC</a></p>
 </main>
 </html>
