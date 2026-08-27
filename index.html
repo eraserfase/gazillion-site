@@ -669,6 +669,28 @@ function track(name, props){
   }
 })();
 
+// Carry an inbound campaign through to the checkout. Each buy button already
+// carries its own utm_content saying which of the three it is, and its own
+// utm_source saying "the site" - which is true and useless the moment somebody
+// arrives from somewhere else, because it overwrites where they actually came
+// from. So an inbound utm_source wins on source/medium/campaign, and the
+// button keeps content. A sale then reads kit / email / wave1 / banner_top
+// rather than losing three quarters of that.
+(function carryCampaign(){
+  var inbound = new URLSearchParams(location.search);
+  if(!inbound.get("utm_source")) return;
+  var links = document.querySelectorAll("a.cta");
+  for(var i = 0; i < links.length; i++){
+    var a = links[i], u;
+    try { u = new URL(a.href); } catch(e) { continue; }
+    ["utm_source","utm_medium","utm_campaign","utm_term"].forEach(function(k){
+      var v = inbound.get(k);
+      if(v) u.searchParams.set(k, v);
+    });
+    a.href = u.toString();
+  }
+})();
+
 (function list(){
   var box = document.getElementById("list");
   if(!box) return;
