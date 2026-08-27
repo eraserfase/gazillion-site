@@ -121,7 +121,7 @@ a.cta.gumroad-button .logo-full{display:none !important}
 /* The same ask again at the end of the scroll, but in the flow rather than
    pinned - so it arrives when someone has finished reading instead of sitting
    over the page the whole way down. */
-.buy-end{margin:100px 0 0; width:100%; display:flex; flex-direction:column;
+.buy-end{margin:56px 0 0; width:100%; display:flex; flex-direction:column;
          align-items:center; gap:10px}
 
 .terms{margin:0; font-size:12px; letter-spacing:.14em; text-transform:uppercase;
@@ -133,7 +133,7 @@ a.cta.gumroad-button .logo-full{display:none !important}
    second-best outcome rather than a competitor to the first - which is why it is
    quiet, small, and carries no discount. A bribe here would teach people to wait
    for the next one instead of buying this one. */
-.list{margin:64px 0 0; width:100%; max-width:440px; text-align:center}
+.list{margin:92px 0 0; width:100%; max-width:440px; text-align:center}
 .list p{margin:0 0 12px; font-size:12px; letter-spacing:.14em;
         text-transform:uppercase; color:var(--ink-soft)}
 .list form{display:flex; gap:8px}
@@ -397,16 +397,16 @@ a.cta.gumroad-button .logo-full{display:none !important}
     <div class="slot"><span>testimonials go here</span></div>
   </div>
 
-  <div class="buy-end">
-    <a class="cta gumroad-button" data-pos="page_end" href="https://gazillionindustries.gumroad.com/l/drugs?utm_source=gazillionindustries.com&amp;utm_medium=cta&amp;utm_content=page_end">Buy DRUGS now</a>
-    <p class="terms">pay what you want &nbsp;&middot;&nbsp; $5 minimum</p>
-  </div>
-
   <!-- The list is the only asset on this page that survives a change of
        storefront. The buttons, the checkout and the receipt all belong to
        whoever is processing payments this month, and that has already changed
        once. It is also how the second plug-in gets an audience on day one
        instead of starting from nothing.
+
+       It sits above the last buy button rather than below it: the page should
+       close on the ask, not on the consolation prize. There are already two
+       buttons further up, so anyone reaching this has passed the ask twice -
+       the list catches them, and then the ask gets the last word anyway.
 
        Posts to Kit form 9851450 (uid ecc45cdf40). The field name email_address
        is Kit's, read off the live form rather than assumed - a post that
@@ -424,6 +424,12 @@ a.cta.gumroad-button .logo-full{display:none !important}
       <button type="submit">tell me</button>
     </form>
   </div>
+
+  <div class="buy-end">
+    <a class="cta gumroad-button" data-pos="page_end" href="https://gazillionindustries.gumroad.com/l/drugs?utm_source=gazillionindustries.com&amp;utm_medium=cta&amp;utm_content=page_end">Buy DRUGS now</a>
+    <p class="terms">pay what you want &nbsp;&middot;&nbsp; $5 minimum</p>
+  </div>
+
 
   <p class="foot">Gazillion Industries LLC</p>
 </main>
