@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Drum bus compressor settings: attack, release, ratio, threshold</title>
+<meta name="description" content="Attack, release, ratio and threshold on a drum bus, what each one actually changes, and a starting point that works. Plus glue, mix bus and master bus settings.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="https://gazillionindustries.com/drum-bus-compressor-settings/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Gazillion Industries">
+<meta property="og:title" content="Drum bus compressor settings">
+<meta property="og:description" content="What attack, release, ratio and threshold actually change on a drum bus, and a starting point that works.">
+<meta property="og:url" content="https://gazillionindustries.com/drum-bus-compressor-settings/">
+<meta property="og:image" content="https://gazillionindustries.com/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://gazillionindustries.com/og.jpg">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"TechArticle","@id":"https://gazillionindustries.com/drum-bus-compressor-settings/#article",
+"headline":"Drum bus compressor settings: attack, release, ratio, threshold",
+"description":"What attack, release, ratio and threshold actually change on a drum bus, a starting point that works, and how glue, mix bus and master bus settings differ.",
+"inLanguage":"en","datePublished":"2026-08-27","dateModified":"2026-08-27",
+"url":"https://gazillionindustries.com/drum-bus-compressor-settings/",
+"author":{"@id":"https://gazillionindustries.com/#tony"},
+"publisher":{"@id":"https://gazillionindustries.com/#gazillion"},
+"about":{"@id":"https://gazillionindustries.com/#drugs"},
+"isPartOf":{"@id":"https://gazillionindustries.com/#website"}},
+{"@type":"Organization","@id":"https://gazillionindustries.com/#gazillion",
+"name":"Gazillion Industries LLC","alternateName":"Gazillion Industries",
+"url":"https://gazillionindustries.com/"},
+{"@type":"Person","@id":"https://gazillionindustries.com/#tony","name":"Tony Barko",
+"sameAs":["https://apps.apple.com/us/developer/anthony-greg-barko/id1866031805"]}
+]}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Archivo+Black&display=swap">
+<style>
+/* Same tokens as the landing page, so the two read as one site. The display
+   stack is Archivo Black falling back to Arial Black and nothing else: the
+   usual third option is condensed where Arial Black is wide, and a fallback
+   that changes the shape of the brand is worse than no fallback at all. */
+:root{
+  --field:#2b2225; --field-lit:#3d3134; --field-deep:#1b1517;
+  --chalk:#f2e9eb;
+  --ink:#f2e9eb; --ink-soft:rgba(242,233,235,.66); --ink-faint:rgba(242,233,235,.34);
+  --pill-line:rgba(242,233,235,.20);
+}
+*{box-sizing:border-box}
+body{margin:0; background:var(--field); color:var(--ink);
+  font-family:Archivo,-apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif;
+  -webkit-font-smoothing:antialiased;
+  background-image:linear-gradient(180deg,var(--field-lit) 0%,var(--field) 38%,var(--field-deep) 100%);
+  background-attachment:fixed; min-height:100vh}
+body::before{content:""; position:fixed; inset:0; pointer-events:none; z-index:0; opacity:.5;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='.055'/%3E%3C/svg%3E")}
+main{position:relative; z-index:1; max-width:36em; margin:0 auto; padding:64px 24px 96px}
+
+.crumb{font-size:11px; letter-spacing:.2em; text-transform:uppercase; margin:0 0 40px}
+.crumb a{color:var(--ink-faint); text-decoration:none}
+.crumb a:hover{color:var(--ink-soft)}
+
+h1{font-family:"Archivo Black","Arial Black",sans-serif;
+   font-size:clamp(30px,6.4vw,46px); line-height:1.05; letter-spacing:-.02em;
+   margin:0 0 10px; color:var(--chalk); text-wrap:balance}
+.standfirst{margin:0 0 52px; font-size:17px; line-height:1.65; color:var(--ink-soft)}
+
+h2{margin:52px 0 16px; font-size:12px; font-weight:600; letter-spacing:.2em;
+   text-transform:uppercase; color:var(--chalk)}
+p{margin:0 0 16px; font-size:16.5px; line-height:1.72; color:var(--ink-soft)}
+strong{color:var(--ink); font-weight:600}
+em{color:var(--ink)}
+
+.card{border:1px solid var(--pill-line); border-radius:14px; padding:22px 24px; margin:0 0 8px;
+      background:rgba(242,233,235,.03)}
+.card dl{margin:0; display:grid; grid-template-columns:auto 1fr; gap:10px 18px}
+.card dt{font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-faint);
+         white-space:nowrap; align-self:baseline}
+.card dd{margin:0; font-size:16px; line-height:1.5; color:var(--ink)}
+@media (max-width:460px){
+  .card dl{grid-template-columns:1fr; gap:2px 0}
+  .card dd{margin:0 0 12px}
+}
+
+.end{margin:64px 0 0; padding:28px 24px; border:1px solid var(--pill-line); border-radius:14px;
+     text-align:center; background:rgba(242,233,235,.03)}
+.end p{margin:0 0 18px; color:var(--ink-soft)}
+.cta{font-family:"Archivo Black","Arial Black",sans-serif; font-size:16px; letter-spacing:.02em;
+     text-decoration:none; color:var(--field-deep); background:var(--chalk);
+     border-radius:999px; padding:15px 30px; display:inline-block;
+     transition:transform .18s ease}
+.cta:hover{transform:translateY(-2px)}
+.cta:focus-visible{outline:3px solid var(--chalk); outline-offset:4px}
+.foot{margin:88px 0 0; font-size:11px; letter-spacing:.22em; text-transform:uppercase;
+      color:var(--ink-faint); text-align:center}
+.foot a{color:var(--ink-faint)}
+</style>
+
+<main>
+  <p class="crumb"><a href="/">&larr; Gazillion Industries</a></p>
+
+  <h1>Drum bus compressor settings</h1>
+  <p class="standfirst">Every control on a drum bus compressor, what it actually
+  changes, and a starting point that works on most material. Written by the
+  people who then built a compressor with none of them.</p>
+
+  <h2>The short version</h2>
+  <div class="card">
+    <dl>
+      <dt>Ratio</dt><dd>4:1</dd>
+      <dt>Attack</dt><dd>10&ndash;30 ms</dd>
+      <dt>Release</dt><dd>100&ndash;300 ms, or auto</dd>
+      <dt>Threshold</dt><dd>set for 2&ndash;4 dB of gain reduction on the loudest hits</dd>
+      <dt>Knee</dt><dd>soft</dd>
+      <dt>Make-up</dt><dd>matched, so bypass and engaged are the same loudness</dd>
+    </dl>
+  </div>
+  <p>That will glue a drum bus without hurting it. Everything below is why, and
+  when to leave it.</p>
+
+  <h2>Attack decides whether drums punch</h2>
+  <p>Attack is how long the compressor waits before it clamps down. A fast
+  attack &mdash; under about 3&nbsp;ms &mdash; catches the transient itself and
+  flattens the stick. A slower one, 10 to 30&nbsp;ms, lets the transient through
+  and compresses the body behind it.</p>
+  <p>That second behaviour is why a compressed drum bus can sound
+  <em>bigger</em> rather than smaller: the hit stays sharp and everything under
+  it comes up. <strong>If your drums got weaker when you compressed them, attack
+  is almost always the reason.</strong></p>
+
+  <h2>Release decides whether it breathes</h2>
+  <p>Release is how fast the gain comes back. Short, 50 to 100&nbsp;ms, recovers
+  inside the gap between hits &mdash; that recovery is what people hear as pump.
+  Long, past about 300&nbsp;ms, holds still and glues instead.</p>
+  <p>The trap is a release near the tempo of the track. Land on it and the
+  compressor breathes in time and sounds musical; land slightly off and the
+  whole bus sounds seasick. Auto-release exists because that edge is hard to
+  find by hand and moves whenever the material does.</p>
+
+  <h2>Ratio matters less than people think</h2>
+  <p>On a drum bus, 2:1 to 4:1 covers nearly everything. A higher ratio does not
+  really mean "more compressed" &mdash; it changes character more than amount,
+  and it interacts with threshold. 4:1 with a high threshold does less than 2:1
+  with a low one, so the two are only meaningful together.</p>
+
+  <h2>Set threshold by the meter, not the number</h2>
+  <p>The threshold value on its own tells you nothing, because it depends
+  entirely on how hot the bus is running. Watch gain reduction instead:</p>
+  <div class="card">
+    <dl>
+      <dt>2&ndash;4 dB</dt><dd>glue &mdash; you feel it more than hear it</dd>
+      <dt>4&ndash;6 dB</dt><dd>obvious, still musical on drums</dd>
+      <dt>6 dB+</dt><dd>an effect; commit to it or back off</dd>
+    </dl>
+  </div>
+  <p>If the needle is pinned and never returns, you are limiting, not
+  compressing.</p>
+
+  <h2>Knee</h2>
+  <p>A soft knee eases compression in gradually as the signal approaches the
+  threshold; a hard knee applies it all at once. Soft is more forgiving on drums
+  and harder to hear. Hard is the right choice when you <em>want</em> to hear the
+  compressor working.</p>
+
+  <h2>Make-up gain, and the only honest A/B</h2>
+  <p>Compression costs level, make-up gain gives it back, and louder always
+  sounds better for the first few seconds. <strong>Match the bypassed and
+  engaged loudness before you judge anything.</strong> A large share of "this
+  plugin sounds incredible" moments are an unmatched level and nothing else.</p>
+
+  <h2>Glue, specifically</h2>
+  <p>Glue is what people call it when separate hits stop sounding like separate
+  hits and start sounding like one performance in one room. Mechanically there
+  is nothing mystical about it: the compressor is reacting to the whole bus at
+  once, so every loud element ducks everything else fractionally, and the room
+  and the quieter hits rise relative to the peaks.</p>
+  <p>It comes from a slower attack, a release long enough not to pump, and less
+  gain reduction than you think &mdash; 2 to 4&nbsp;dB. Reaching for more usually
+  produces density, not glue.</p>
+
+  <h2>Mix bus and master bus</h2>
+  <p>Same controls, less of everything. A drum bus will take obvious
+  compression and often sounds better for it; a full mix will not. Start around
+  1 to 2&nbsp;dB of gain reduction, a gentler ratio, and a slower attack so the
+  transients that carry the whole arrangement survive.</p>
+  <p>The other difference is that mistakes compound. Everything already
+  compressed on the way in gets compressed again, so the mix bus is the wrong
+  place to fix a problem that belongs further back.</p>
+
+  <h2>What DRUGS does instead</h2>
+  <p>Having written all of that: <strong>DRUGS has none of it.</strong> One
+  control, called DOSE.</p>
+  <p>DOSE moves the transfer curve, the knee, the attack and the release
+  together, the way a single hardware macro would. There is no threshold and no
+  ratio, because there is no threshold in the model &mdash; the gain law is a
+  lookup table, so the local ratio changes continuously with input level.
+  Release is adaptive and has no user control: a hit gets the shorter time so
+  gain recovers inside the gap, sustained material gets the longer one. Auto
+  make-up is applied after the gain cell, so setting level cannot disturb the
+  dynamics, and the bypass comparison is level-matched for you.</p>
+  <p>Which means there are no settings on this page to get right. Turn it up
+  until it sounds good.</p>
+
+  <div class="end">
+    <p>DRUGS &mdash; one-knob bus compressor for macOS. VST, AU and standalone.
+    Pay what you want, $5 minimum.</p>
+    <a class="cta" href="/">Get DRUGS</a>
+  </div>
+
+  <p class="foot"><a href="/">Gazillion Industries LLC</a></p>
+</main>
+</html>
