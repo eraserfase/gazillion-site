@@ -408,16 +408,17 @@ a.cta.gumroad-button .logo-full{display:none !important}
        once. It is also how the second plug-in gets an audience on day one
        instead of starting from nothing.
 
-       WIRE IT UP: replace PASTE_FORM_ENDPOINT_HERE with the provider's form
-       action. Until then the block hides itself rather than shipping a field
-       that silently swallows addresses.
-         Kit (recommended, free to 10k subscribers): app.kit.com -> Grow ->
-         Landing Pages & Forms -> new form -> Embed -> HTML, and copy the URL out
-         of its <form action>. Kit's field name is email_address, which is what
-         is used below; Buttondown wants "email", Mailchimp wants "EMAIL". -->
+       Posts to Kit form 9851450 (uid ecc45cdf40). The field name email_address
+       is Kit's, read off the live form rather than assumed - a post that
+       reaches the right host with the wrong field name still returns 200, so
+       guessing it wrong looks exactly like guessing it right and loses every
+       address until somebody happens to check the subscriber count.
+
+       Reset the action to a PASTE_ placeholder and the block hides itself
+       again rather than shipping a field that swallows addresses. -->
   <div class="list" id="list">
     <p id="list-msg">there will be more of these</p>
-    <form action="PASTE_FORM_ENDPOINT_HERE" method="post">
+    <form action="https://app.kit.com/forms/9851450/subscriptions" method="post">
       <input type="email" name="email_address" placeholder="email" required
              autocomplete="email" aria-label="Email address">
       <button type="submit">tell me</button>
