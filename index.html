@@ -1,3 +1,10 @@
+<!DOCTYPE html>
+<!-- No doctype meant the browser fell back to quirks mode - document.compatMode
+     read "BackCompat" on the live site. Everything happened to look right, but
+     it was working by luck: quirks changes the box model and legacy inheritance
+     rules, so any future CSS was one edit away from behaving strangely for no
+     visible reason. The lang attribute is the other half of the same omission. -->
+<html lang="en">
 <title>DRUGS - one-knob bus compressor for drums (AU, VST3, macOS)</title>
 <meta name="description" content="A one-knob bus compressor for dusty, dense drums. Vinyl sim squash for breaks and the drum bus. AU, VST3 and standalone for macOS. Pay what you want, $5 minimum.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,7 +27,7 @@
 <meta name="twitter:title" content="DRUGS - one knob, impossible sauce">
 <meta name="twitter:description" content="A one-knob bus compressor for dusty, dense drums. Run a break through it and turn it up.">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"SoftwareApplication","name":"DRUGS","alternateName":"DRUGS Bus Compressor","applicationCategory":"MultimediaApplication","applicationSubCategory":"Audio plug-in","operatingSystem":"macOS 10.13 or later","softwareVersion":"1.0.0","url":"https://gazillionindustries.com/","image":"https://gazillionindustries.com/og.jpg","description":"A one-knob bus compressor for macOS, built for dusty, dense drums. One macro control, called DOSE, moves the curve, knee, attack and release together, for vinyl sim style squash on breaks and the drum bus. AU, VST3 and standalone.","featureList":["Single macro control (DOSE)","Adaptive release with no user control","Zero-latency dry/wet MIX for parallel compression","Zero-latency soft ceiling (LIMIT) at -0.3 dBFS","Auto-makeup after the gain cell","Universal binary, Apple Silicon and Intel","Signed and notarised by Apple","Works offline"],"keywords":"bus compressor, drum bus compressor, one knob compressor, vinyl sim, VST compressor, AU compressor, VST3, macOS audio plugin, boom bap, lo-fi hip hop","softwareRequirements":"macOS 10.13 or later; a host supporting AU or VST3, or none for the standalone","author":{"@type":"Organization","name":"Gazillion Industries LLC","url":"https://gazillionindustries.com/"},"offers":{"@type":"Offer","priceCurrency":"USD","price":"5.00","priceSpecification":{"@type":"PriceSpecification","priceCurrency":"USD","minPrice":"5.00","description":"Pay what you want, $5 minimum."},"availability":"https://schema.org/InStock"}}
+{"@context":"https://schema.org","@graph":[{"@type":"SoftwareApplication","name":"DRUGS","alternateName":"DRUGS Bus Compressor","applicationCategory":"MultimediaApplication","applicationSubCategory":"Audio plug-in","operatingSystem":"macOS 10.13 or later","softwareVersion":"1.0.0","url":"https://gazillionindustries.com/","image":"https://gazillionindustries.com/og.jpg","description":"A one-knob bus compressor for macOS, built for dusty, dense drums. One macro control, called DOSE, moves the curve, knee, attack and release together, for vinyl sim style squash on breaks and the drum bus. AU, VST3 and standalone.","featureList":["Single macro control (DOSE)","Adaptive release with no user control","Zero-latency dry/wet MIX for parallel compression","Zero-latency soft ceiling (LIMIT) at -0.3 dBFS","Auto-makeup after the gain cell","Universal binary, Apple Silicon and Intel","Signed and notarised by Apple","Works offline"],"keywords":"bus compressor, drum bus compressor, one knob compressor, vinyl sim, VST compressor, AU compressor, VST3, macOS audio plugin, boom bap, lo-fi hip hop","softwareRequirements":"macOS 10.13 or later; a host supporting AU or VST3, or none for the standalone","@id":"https://gazillionindustries.com/#drugs","author":{"@id":"https://gazillionindustries.com/#gazillion"},"publisher":{"@id":"https://gazillionindustries.com/#gazillion"},"creator":{"@id":"https://gazillionindustries.com/#tony"},"screenshot":"https://gazillionindustries.com/demo-poster.jpg","video":{"@id":"https://gazillionindustries.com/#demo"},"installUrl":"https://gazillionindustries.com/","datePublished":"2026-08-26","inLanguage":"en","offers":{"@type":"Offer","priceCurrency":"USD","price":"5.00","priceSpecification":{"@type":"PriceSpecification","priceCurrency":"USD","minPrice":"5.00","description":"Pay what you want, $5 minimum."},"availability":"https://schema.org/InStock"}},{"@type":"Organization","@id":"https://gazillionindustries.com/#gazillion","name":"Gazillion Industries LLC","alternateName":"Gazillion Industries","url":"https://gazillionindustries.com/","email":"tony@gazillionindustries.com","founder":{"@id":"https://gazillionindustries.com/#tony"},"makesOffer":{"@type":"Offer","itemOffered":{"@id":"https://gazillionindustries.com/#drugs"}}},{"@type":"Person","@id":"https://gazillionindustries.com/#tony","name":"Tony Barko","alternateName":"Anthony Greg Barko","jobTitle":"Founder","worksFor":{"@id":"https://gazillionindustries.com/#gazillion"},"sameAs":["https://apps.apple.com/us/developer/anthony-greg-barko/id1866031805"]},{"@type":"VideoObject","@id":"https://gazillionindustries.com/#demo","name":"DRUGS: DOSE swept from 0 to 100 over a drum break","description":"The DRUGS bus compressor with its DOSE control swept from 0 to 100 over a drum break. The gain reduction trace goes from flat to a deep ducking contour while peak level stays close to constant.","thumbnailUrl":"https://gazillionindustries.com/demo-poster.jpg","contentUrl":"https://gazillionindustries.com/demo.mp4","uploadDate":"2026-08-27","duration":"PT20S","width":334,"height":654,"inLanguage":"en","isPartOf":{"@id":"https://gazillionindustries.com/#drugs"}},{"@type":"WebSite","@id":"https://gazillionindustries.com/#website","url":"https://gazillionindustries.com/","name":"Gazillion Industries","inLanguage":"en","publisher":{"@id":"https://gazillionindustries.com/#gazillion"}}]}
 </script>
 <!-- Umami: free tier, custom events, no cookie banner and so no consent
      dialog to put in front of somebody who came to hear a compressor. The
@@ -80,7 +87,7 @@ main{position:relative; z-index:1; max-width:660px; margin:0 auto;
         -webkit-backdrop-filter:blur(16px); backdrop-filter:blur(16px)}
 .banner--top{top:0; border-bottom:1px solid var(--pill-line); padding:16px 20px 18px}
 
-.cta{font-family:"Archivo Black",Impact,"Arial Black",sans-serif;
+.cta{font-family:"Archivo Black","Arial Black",sans-serif;
      letter-spacing:.02em; text-decoration:none; text-align:center;
      color:var(--field-deep); background:var(--chalk); border-radius:999px;
      display:block; transition:transform .18s ease, box-shadow .18s ease}
@@ -91,7 +98,7 @@ main{position:relative; z-index:1; max-width:660px; margin:0 auto;
    here at a specificity its single-class rules cannot reach, or the buttons turn
    into Gumroad's pink ones the moment the script lands. */
 a.cta.gumroad-button{
-  font-family:"Archivo Black",Impact,"Arial Black",sans-serif !important;
+  font-family:"Archivo Black","Arial Black",sans-serif !important;
   color:var(--field-deep) !important; background:var(--chalk) !important;
   border:0 !important; border-radius:999px !important;
   text-transform:none !important; letter-spacing:.02em !important;
@@ -131,7 +138,11 @@ a.cta.gumroad-button .logo-full{display:none !important}
 .list{margin:92px 0 0; width:100%; max-width:440px; text-align:center}
 .list p{margin:0 0 12px; font-size:12px; letter-spacing:.14em;
         text-transform:uppercase; color:var(--ink-soft)}
-.list form{display:flex; gap:8px}
+/* The 16px was Chrome's quirks stylesheet, not a decision - a UA margin-bottom
+   on <form> that vanished the moment the doctype put the page in standards
+   mode, pulling the last buy button 16px up the page. Restated here so the
+   spacing survives on its own terms rather than on a parser fallback. */
+.list form{display:flex; gap:8px; margin-bottom:16px}
 .list input{flex:1 1 auto; min-width:0; font-family:inherit; font-size:15px;
             color:var(--ink); background:var(--field-deep);
             border:1px solid var(--pill-line); border-radius:999px;
@@ -227,7 +238,7 @@ a.cta.gumroad-button .logo-full{display:none !important}
 .dot:focus-visible{outline:2px solid var(--chalk); outline-offset:3px}
 
 /* ---- wordmark ------------------------------------------------------------ */
-.mark{font-family:"Archivo Black",Impact,"Arial Black",sans-serif;
+.mark{font-family:"Archivo Black","Arial Black",sans-serif;
       font-size:clamp(64px,16vw,124px); line-height:.92; letter-spacing:-.03em;
       margin:0; color:var(--chalk); text-wrap:balance}
 .credit{margin:22px 0 0; font-size:10.5px; letter-spacing:.18em;
@@ -263,7 +274,7 @@ a.cta.gumroad-button .logo-full{display:none !important}
 
 .copy{margin:44px 0 0; max-width:34em; text-align:center;
       display:flex; flex-direction:column; gap:24px}
-.copy .lead{font-family:"Archivo Black",Impact,"Arial Black",sans-serif;
+.copy .lead{font-family:"Archivo Black","Arial Black",sans-serif;
             font-size:clamp(17px,4.4vw,22px); letter-spacing:.04em;
             color:var(--chalk); text-wrap:balance}
 .copy p{margin:0; font-size:17px; line-height:1.65; color:var(--ink-soft)}
@@ -302,7 +313,12 @@ a.cta.gumroad-button .logo-full{display:none !important}
 /* .mark-block was a div; as an h1 it inherits the UA 2em font-size, which would
    scale nothing here (every size below is px or vw) but would scale anything
    added later. Pinned rather than left as a trap. */
-h1.mark-block{font-size:inherit; font-weight:400}
+/* font-size only. The weight is deliberately left alone: .mark declares none,
+   so as an <h1> it took the UA's bold, and Archivo Black ships from Google as a
+   single 400 face - meaning the wordmark has always been synthetically
+   emboldened. Pinning 400 here quietly removed that and took 13% of the ink out
+   of it. The h1 keeps its bold so the mark renders as it always has. */
+h1.mark-block{font-size:inherit}
 .mark{display:block}
 
 /* ---- the long copy ------------------------------------------------------- */
@@ -829,3 +845,4 @@ function track(name, props){
 </script>
 
 <script src="https://gumroad.com/js/gumroad.js" defer></script>
+</html>
