@@ -56,7 +56,6 @@ and marked by where it came from.
 - Platform: macOS 10.13 or later
 - Architecture: universal binary, Apple Silicon and Intel
 - Latency: zero samples
-- Signed and notarised by Apple; installs without warnings
 - No internet connection required, ever
 
 ## Price
