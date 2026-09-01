@@ -825,8 +825,13 @@ function track(name, props){
   for(var i = 0; i < links.length; i++){
     (function(a){
       a.addEventListener("click", function(){
+        // Stays "buy_click" deliberately - this is the original series and the
+        // board has 189 of them. F12 uses buy_click_f12; see the note on that
+        // page for why the event NAME is the only split available.
         track("buy_click", {position: a.getAttribute("data-pos") || "unknown"});
-        if (window.fbq) fbq("track", "InitiateCheckout");
+        if (window.fbq) fbq("track", "InitiateCheckout", {
+          content_name: "DRUGS", content_ids: ["drugs"],
+          content_type: "product", value: 5.00, currency: "USD"});
       });
     })(links[i]);
   }
