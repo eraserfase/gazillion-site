@@ -401,8 +401,10 @@ h1.mark-block{font-size:inherit}
    680x1800, and a portrait image in a fixed-height slot is sized by its height -
    so at 500 it came out 189px wide against the sibling's 258 and read as a
    thumbnail rather than the product. Height is the only lever that widens it. */
-.slide{height:620px}
-@media (max-width:560px){ .slide{height:470px} }
+/* Sized down from 620/470: the panel is 680x1800 and at the old height it
+   dominated the fold on a laptop, pushing the copy under it out of view. */
+.slide{height:560px}
+@media (max-width:560px){ .slide{height:430px} }
 
 /* ---- the mark's parenthetical ------------------------------------------- */
 /* The panel sets the name as F(ilter)12: a full-size F and 12 with the gloss
@@ -418,19 +420,32 @@ h1.mark-block{font-size:inherit}
 </div>
 
 <main>
-  <!-- Two slides, not three. The sibling leads with its demo video; there is no
-       F12 capture yet, and a slide holding an empty player is worse than one
-       fewer slide. When the video exists it goes in front of these two and the
-       player markup and script come across from the sibling unchanged. -->
+  <!-- Three slides: AURA on, MAX AURA, AURA off. The product's whole pitch is
+       what that switch does, so the carousel is the A/B - the first two show the
+       stage working and the third shows the same panel with it off, where the
+       display keeps the filter curve and the background goes inert. All shot
+       with a real backing track running, not the synthetic test signal: the
+       built-in kick/snare is a few sine partials, so the analyser drew two
+       narrow spikes near the floor and the aura field had nothing to have an
+       opinion about.
+
+       The sibling leads with its demo video; there is no F12 capture yet, and a
+       slide holding an empty player is worse than one fewer slide. When the
+       video exists it goes in front of these and the player markup and script
+       come across from the sibling unchanged. -->
   <div class="carousel">
     <div class="track" id="track">
       <div class="slide">
         <img src="f12/f12-dark.jpg" width="680" height="1800"
-             alt="The F(ilter)12 plug-in panel in its dark theme: SAMPLE RATE and BIT dials, a large filter POSITION dial reading 80, rows of filter and resonance shapes, and a display showing the filter curve over the AURA field.">
+             alt="The F(ilter)12 plug-in panel in its dark theme with AURA on: SAMPLE RATE and BIT dials, a large filter POSITION dial reading 88, rows of filter and resonance shapes, and a display showing the filter curve over the AURA field, green where the stage is adding and red where it is taking away.">
       </div>
       <div class="slide">
         <img src="f12/f12-light.jpg" width="680" height="1800"
-             alt="The F(ilter)12 panel in its light theme, showing the same controls on a bright violet field.">
+             alt="The F(ilter)12 panel in its light theme with MAX AURA engaged, showing the same controls on a bright violet field and a fuller AURA field in the display.">
+      </div>
+      <div class="slide">
+        <img src="f12/f12-off.jpg" width="680" height="1800" loading="lazy"
+             alt="The F(ilter)12 panel with AURA off: the display keeps the filter curve and the audio spectrum, the AURA field is gone, and the reactive background is still.">
       </div>
     </div>
     <button class="nav nav--prev" type="button" aria-label="Previous">&lsaquo;</button>
