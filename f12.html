@@ -794,8 +794,19 @@ function track(name, props){
   for(var i = 0; i < links.length; i++){
     (function(a){
       a.addEventListener("click", function(){
-        track("buy_click", {position: a.getAttribute("data-pos") || "unknown"});
-        if (window.fbq) fbq("track", "InitiateCheckout");
+        // buy_click_f12, NOT buy_click. Umami's share token - which is all the
+        // board has, API keys being a paid plan - returns event metrics by NAME
+        // and silently ignores a url filter, so the event name is the only way
+        // a product's clicks can be told apart. DRUGS keeps the bare
+        // "buy_click" so its history stays one continuous series.
+        track("buy_click_f12", {position: a.getAttribute("data-pos") || "unknown"});
+        // Standard event name kept standard so the ad sets can still optimise
+        // for InitiateCheckout across the business; the product is carried in
+        // the parameters instead. value/currency also give Meta the amount,
+        // which is what a value-based lookalike is built from later.
+        if (window.fbq) fbq("track", "InitiateCheckout", {
+          content_name: "F(ilter)12", content_ids: ["f12"],
+          content_type: "product", value: 49.00, currency: "USD"});
       });
     })(links[i]);
   }
