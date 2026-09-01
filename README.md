@@ -1,4 +1,4 @@
-# gazillion-site
+# website
 
 The landing page for DRUGS, and nothing else.
 
