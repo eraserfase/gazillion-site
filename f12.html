@@ -411,6 +411,17 @@ h1.mark-block{font-size:inherit}
    dropped to roughly two fifths and sitting on the same baseline. Sized in em
    so it tracks the clamp on .mark rather than needing its own. */
 .mark-paren{font-size:.42em; letter-spacing:-.005em}
+
+/* ---- the buy button under the wordmark has to be inside the first screen -- */
+/* Measured on a 375x812 viewport: everything below the slide is fixed cost -
+   231px above it, 163px of wordmark and tagline, 41px of button = 435 - so the
+   slide had to give back about 40px or the button's bottom sat 23px under the
+   fold. A fixed pixel height only fixes the phone it was tuned on, so this is
+   viewport-relative and capped: tall phones keep the full 430, short ones give
+   the button its room instead. Last rule in the sheet, so it wins on order. */
+@media (max-width:560px){
+  .slide{height:min(430px, calc(100vh - 455px))}
+}
 </style>
 
 <div class="banner banner--top">

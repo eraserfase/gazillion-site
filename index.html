@@ -389,6 +389,17 @@ h1.mark-block{font-size:inherit}
    centred, so where it does break it reads the same as one line. */
 @media (max-width:420px){ .mark-sub{letter-spacing:.1em} }
 @media (max-width:352px){ .mark-sub{white-space:normal} }
+
+/* ---- the buy button under the wordmark has to be inside the first screen -- */
+/* Measured on a 375x812 viewport: everything below the slide is fixed cost -
+   the banner and padding above it, the wordmark, BUS COMPRESSOR, and the button
+   itself = 438px - so at a 400px slide the button's bottom landed at 838, 26px
+   under the fold. A fixed pixel height only fixes the phone it was tuned on, so
+   this is viewport-relative and capped: tall phones keep the full 400, short
+   ones give the button its room instead. Last rule in the sheet, so it wins. */
+@media (max-width:560px){
+  .slide{height:min(400px, calc(100vh - 455px))}
+}
 </style>
 
 <!-- Gumroad's overlay opens the checkout over this page instead of sending
