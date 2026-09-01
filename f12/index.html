@@ -45,12 +45,20 @@ fbq('track', 'PageView');
    theme stamps, so every colour is painted explicitly and the page holds on
    whatever ground the host puts behind it. */
 :root{
-  /* F(ilter)12's own dark theme, taken from f12ui in PluginEditor.cpp:
-     slime / slimeLight / slimeDeep, ink, chalk. Same five roles the sibling
-     uses, different hues - each plugin gets its own colourway, the roles are
-     what carry across. */
-  --field:#140e1c; --field-lit:#241a30; --field-deep:#07050b;
-  --rouge:#c6b2ec; --chalk:#f4efff;
+  /* Same five roles the sibling's page uses, in this plugin's hues - the roles
+     carry across, the colours do not.
+
+     The ground is NOT a straight copy of f12ui's dark tokens, and taking them
+     literally is what made this page read as black. The sibling's ground sits
+     at luminance 22-52 across its gradient: a near-black that is visibly warm
+     and pink. f12ui's slime trio is 14-25, which no eye reads as a colour.
+
+     So the ROLE is matched instead of the token: f12ui::ink (#1d0838) anchors
+     the foot at the sibling's exact luminance, and the gradient steps up from
+     it in the same ratios the sibling uses. Purple all the way up, never
+     black. Same fix as the store header - see f12/promo/cover.html. */
+  --field:#2a0f52; --field-lit:#3a1470; --field-deep:#1d0838;
+  --rouge:#a653f0; --chalk:#f4efff;
   --ink:#f4efff; --ink-soft:rgba(244,239,255,.60); --ink-faint:rgba(244,239,255,.32);
   --pill-line:rgba(244,239,255,.20);
   --shadow:rgba(0,0,0,.6);
@@ -243,9 +251,16 @@ a.cta.gumroad-button .logo-full{display:none !important}
 .dot:focus-visible{outline:2px solid var(--chalk); outline-offset:3px}
 
 /* ---- wordmark ------------------------------------------------------------ */
-.mark{font-family:"Archivo Black","Arial Black",sans-serif;
-      font-size:clamp(64px,16vw,124px); line-height:.92; letter-spacing:-.03em;
-      margin:0; color:var(--chalk); text-wrap:balance}
+/* The mark is the plug-in's own outlines, not type. It was set here in Archivo
+   Black with the gloss at .42em, which is a different logo wearing a similar
+   typeface: the panel builds it from three runs at -2 and -0.5 tracking with
+   two overlap tucks, so "(ilter)" sits in the pocket under the F's bars and the
+   1's flag overhangs the closing paren. None of that survives being re-set, and
+   the panel is the brand - `uishot <out.svg> --marksvg` dumps exactly what it
+   draws. Sized by width because the width is what the layout and .mark-sub were
+   built around; currentColor keeps it on --chalk. */
+.mark{width:clamp(202px,50vw,390px); height:auto; display:block;
+      fill:currentColor; color:var(--chalk)}
 .credit{margin:22px 0 0; font-size:10.5px; letter-spacing:.18em;
         text-transform:uppercase; color:var(--ink-faint); text-align:center}
 
@@ -423,7 +438,7 @@ h1.mark-block{font-size:inherit}
   </div>
 
   <h1 class="mark-block">
-    <span class="mark">F<span class="mark-paren">(ilter)</span>12</span>
+    <svg class="mark" role="img" aria-label="F(ilter)12" viewBox="0 0 103.866 36.0263"><path fill="currentColor" fill-rule="nonzero" d="M0 0.554016 L24.8199 0.554016 L24.8199 7.53463 L10.0831 7.53463 L10.0831 13.2078 L22.6704 13.2078 L22.6704 19.7673 L10.0831 19.7673 L10.0831 33.0415 L0 33.0415 L0 0.554016 Z M18.6694 22.7161 L20.4284 22.7161 Q19.5212 24.7244 19.1195 26.428 Q18.7802 27.8753 18.7802 29.5166 Q18.7802 32.6814 20.4284 36.0263 L18.6694 36.0263 Q17.3259 34.1219 16.7823 32.581 Q16.2387 31.0402 16.2387 29.3504 Q16.2387 27.5983 16.81 26.0194 Q17.3813 24.4404 18.6694 22.7161 Z M21.4381 22.8892 L24.2567 22.8892 L24.2567 24.8075 L21.4381 24.8075 L21.4381 22.8892 Z M21.4381 25.687 L24.2567 25.687 L24.2567 33.0415 L21.4381 33.0415 L21.4381 25.687 Z M25.6541 22.8892 L28.4796 22.8892 L28.4796 33.0415 L25.6541 33.0415 L25.6541 22.8892 Z M33.1804 22.8892 L33.1804 25.687 L34.7317 25.687 L34.7317 27.7438 L33.1804 27.7438 L33.1804 30.3546 Q33.1804 30.8255 33.2705 30.9778 Q33.409 31.2133 33.7552 31.2133 Q34.0669 31.2133 34.6278 31.0332 L34.8356 32.9792 Q33.7899 33.2078 32.8827 33.2078 Q31.83 33.2078 31.3314 32.9377 Q30.8328 32.6676 30.5939 32.117 Q30.355 31.5665 30.355 30.3338 L30.355 27.7438 L29.3162 27.7438 L29.3162 25.687 L30.355 25.687 L30.355 24.3366 L33.1804 22.8892 Z M43.74 30.0637 L38.089 30.0637 Q38.1652 30.7424 38.4561 31.0748 Q38.8646 31.5526 39.5225 31.5526 Q39.938 31.5526 40.312 31.3449 Q40.5405 31.2133 40.8037 30.8809 L43.5807 31.1371 Q42.9436 32.2452 42.0433 32.7265 Q41.143 33.2078 39.4602 33.2078 Q37.999 33.2078 37.161 32.7957 Q36.3231 32.3837 35.7725 31.4868 Q35.222 30.59 35.222 29.3781 Q35.222 27.6537 36.3265 26.5873 Q37.4311 25.5208 39.3771 25.5208 Q40.9561 25.5208 41.8702 25.9986 Q42.7843 26.4765 43.2621 27.3837 Q43.74 28.2909 43.74 29.7452 L43.74 30.0637 Z M40.873 28.7133 Q40.7898 27.8961 40.4332 27.5429 Q40.0765 27.1897 39.4948 27.1897 Q38.8231 27.1897 38.4214 27.723 Q38.1652 28.0554 38.0959 28.7133 L40.873 28.7133 Z M44.5627 25.687 L47.2012 25.687 L47.2012 26.892 Q47.5821 26.1094 47.9872 25.8151 Q48.3923 25.5208 48.9879 25.5208 Q49.6112 25.5208 50.3522 25.9086 L49.4796 27.9169 Q48.981 27.7091 48.6901 27.7091 Q48.1361 27.7091 47.8314 28.1662 Q47.3951 28.8102 47.3951 30.5762 L47.3951 33.0415 L44.5627 33.0415 L44.5627 25.687 Z M51.7912 22.7161 L50.0322 22.7161 Q50.9394 24.7244 51.3411 26.428 Q51.6804 27.8753 51.6804 29.5166 Q51.6804 32.6814 50.0322 36.0263 L51.7912 36.0263 Q53.1347 34.1219 53.6783 32.581 Q54.222 31.0402 54.222 29.3504 Q54.222 27.5983 53.6506 26.0194 Q53.0793 24.4404 51.7912 22.7161 Z M69.6333 0 L69.6333 33.0415 L60.5032 33.0415 L60.5032 11.3906 Q58.2871 13.0748 56.2151 14.1163 Q54.1431 15.1579 51.0184 16.1108 L51.0184 8.70914 Q55.6278 7.22438 58.1763 5.14127 Q60.7248 3.05817 62.1652 0 L69.6333 0 Z M103.866 33.0415 L76.7857 33.0415 Q77.2511 29.0305 79.6112 25.4958 Q81.9713 21.9612 88.4644 17.1524 Q92.4311 14.205 93.5392 12.6759 Q94.6472 11.1468 94.6472 9.77285 Q94.6472 8.28809 93.5502 7.23546 Q92.4533 6.18283 90.7912 6.18283 Q89.0627 6.18283 87.9658 7.2687 Q86.8688 8.35457 86.4921 11.1025 L77.4505 10.3712 Q77.9824 6.55956 79.4007 4.42105 Q80.8189 2.28255 83.4007 1.14127 Q85.9824 0 90.5475 0 Q95.312 0 97.9602 1.08587 Q100.608 2.17175 102.126 4.42105 Q103.644 6.67036 103.644 9.4626 Q103.644 12.4321 101.905 15.1357 Q100.165 17.8393 95.5779 21.0748 Q92.8522 22.9584 91.9325 23.7119 Q91.0128 24.4654 89.7718 25.6842 L103.866 25.6842 L103.866 33.0415 Z"/></svg>
     <span class="mark-sub">12 bit sauce filter</span>
   </h1>
 
