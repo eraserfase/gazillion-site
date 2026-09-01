@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>F(ilter)12 - 12 bit sauce filter for drums and samples (VST3, AU, Mac and Windows)</title>
+<meta name="description" content="A 12 bit sauce filter for Mac and Windows. AURA sits a record better without sounding like anything was done to it. Sample rate and bit crush, five filter shapes, eight resonance shapes. AU and VST3. $49, and DRUGS comes with it.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="https://gazillionindustries.com/f12/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Gazillion Industries">
+<meta property="og:title" content="F(ilter)12 - aura enhancement">
+<meta property="og:description" content="Turn on AURA and experience magic. A 12 bit sauce filter. Includes DRUGS free.">
+<meta property="og:url" content="https://gazillionindustries.com/f12/">
+<meta property="og:image" content="https://gazillionindustries.com/f12/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The F(ilter)12 plug-in panel: SAMPLE RATE and BIT dials beside a large filter POSITION dial, over a display showing the filter curve and the AURA field.">
+<meta name="twitter:image" content="https://gazillionindustries.com/f12/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="F(ilter)12 - aura enhancement">
+<meta name="twitter:description" content="Turn on AURA and experience magic. A 12 bit sauce filter. Includes DRUGS free.">
+<!-- No og:video tags yet, deliberately. The sibling carries them because it has
+     a demo; pointing these at a file that does not exist would give every shared
+     link a broken player instead of the image card. They go in with the video. -->
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"SoftwareApplication","name":"F(ilter)12","alternateName":"F12","applicationCategory":"MultimediaApplication","applicationSubCategory":"Audio plug-in","operatingSystem":"macOS 10.13 or later, Windows 10 or later","softwareVersion":"1.0.0","url":"https://gazillionindustries.com/f12/","image":"https://gazillionindustries.com/f12/og.jpg","description":"A 12 bit sauce filter for macOS and Windows. AURA is an adaptive correction that moves with the source and sits a record better without sounding processed. Sample rate and bit reduction, five filter shapes, eight resonance shapes, a slope that feeds its own distortion back through itself, auto filter and sidechain. AU, VST3 and standalone.","featureList":["AURA adaptive enhancement, and MAX AURA","Sample rate and bit depth reduction","Five filter shapes: low-pass, high-pass, band-pass, notch and morph","Eight resonance shapes that travel with the filter","Slope that feeds its own distortion back through itself","Auto filter driven by a clock, with swing","Sidechain that follows another signal","Zero latency","Universal binary, Apple Silicon and Intel","Works offline"],"keywords":"lofi plugin, 12 bit, bitcrusher, sample rate reduction, filter plugin, resonant filter VST, auto filter, sidechain filter, lo-fi hip hop, boom bap, sampler sound, AU plugin, VST3, macOS audio plugin, character filter","softwareRequirements":"macOS 10.13 or later, or Windows 10 or later 64-bit; a host supporting AU or VST3, or none for the standalone","@id":"https://gazillionindustries.com/f12/#f12","author":{"@id":"https://gazillionindustries.com/#tony"},"publisher":{"@id":"https://gazillionindustries.com/#gazillion"},"creator":{"@id":"https://gazillionindustries.com/#tony"},"installUrl":"https://gazillionindustries.com/f12/","datePublished":"2026-09-01","inLanguage":"en","offers":{"@type":"Offer","priceCurrency":"USD","price":"49.00","availability":"https://schema.org/InStock","description":"Includes DRUGS, a bus compressor, at no extra cost."}},{"@type":"Organization","@id":"https://gazillionindustries.com/#gazillion","name":"Gazillion Industries LLC","alternateName":"Gazillion Industries","url":"https://gazillionindustries.com/","email":"tony@gazillionindustries.com","founder":{"@id":"https://gazillionindustries.com/#tony"}},{"@type":"Person","@id":"https://gazillionindustries.com/#tony","name":"Tony Barko","alternateName":"Anthony Greg Barko","jobTitle":"Founder","worksFor":{"@id":"https://gazillionindustries.com/#gazillion"},"sameAs":["https://apps.apple.com/us/developer/anthony-greg-barko/id1866031805"]},{"@type":"WebSite","@id":"https://gazillionindustries.com/#website","url":"https://gazillionindustries.com/","name":"Gazillion Industries","inLanguage":"en","publisher":{"@id":"https://gazillionindustries.com/#gazillion"}}]}</script>
+<!-- Same Umami site and same Meta pixel as the sibling page: one business, one
+     property. Keeping them identical is what lets the two pages be compared. -->
+<script defer src="https://cloud.umami.is/script.js"
+        data-website-id="ed71399d-1069-4354-abbf-73dc311e5bc3"></script>
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1164684366890206');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" alt=""
+  src="https://www.facebook.com/tr?id=1164684366890206&amp;ev=PageView&amp;noscript=1"/></noscript>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Archivo+Black&display=swap">
+<style>
+
+/* Committed to one visual world: the panel's dark theme. No media query and no
+   theme stamps, so every colour is painted explicitly and the page holds on
+   whatever ground the host puts behind it. */
+:root{
+  /* F(ilter)12's own dark theme, taken from f12ui in PluginEditor.cpp:
+     slime / slimeLight / slimeDeep, ink, chalk. Same five roles the sibling
+     uses, different hues - each plugin gets its own colourway, the roles are
+     what carry across. */
+  --field:#140e1c; --field-lit:#241a30; --field-deep:#07050b;
+  --rouge:#c6b2ec; --chalk:#f4efff;
+  --ink:#f4efff; --ink-soft:rgba(244,239,255,.60); --ink-faint:rgba(244,239,255,.32);
+  --pill-line:rgba(244,239,255,.20);
+  --shadow:rgba(0,0,0,.6);
+}
+*{box-sizing:border-box}
+/* The UA stylesheet gives [hidden] display:none, and any author display rule
+   beats it - .testimonial sets display:flex, so marking it hidden did nothing
+   and the empty slot kept rendering. This is the normalize rule that makes the
+   attribute mean what it says, everywhere on the page rather than case by case. */
+[hidden]{display:none !important}
+body{
+  margin:0; background:var(--field); color:var(--ink);
+  font-family:Archivo,-apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif;
+  -webkit-font-smoothing:antialiased;
+  background-image:linear-gradient(180deg,var(--field-lit) 0%,var(--field) 38%,var(--field-deep) 100%);
+  background-attachment:fixed; min-height:100vh;
+}
+body::before{
+  content:""; position:fixed; inset:0; pointer-events:none; z-index:0; opacity:.5;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='.055'/%3E%3C/svg%3E");
+}
+/* Top padding clears the fixed banner. The banner's height moves with the
+   viewport because its button's type is clamped, so it is measured into
+   --banner-h rather than reserved at a worst case that would strand dead
+   space at every width but one. The fallback covers the widest banner. */
+main{position:relative; z-index:1; max-width:660px; margin:0 auto;
+     padding:calc(var(--banner-h, 135px) + 18px) 24px 96px;
+     display:flex; flex-direction:column; align-items:center}
+
+/* ---- the two banners ----------------------------------------------------- */
+/* Full-bleed and pinned, one at each end, so the ask is on screen at every
+   scroll position without the page having to repeat itself. Nothing else lives
+   in them: a banner with a second thing in it is a navigation bar, and people
+   read past navigation. */
+.banner{position:fixed; left:0; right:0; z-index:20;
+        display:flex; flex-direction:column; align-items:center; gap:8px;
+        padding:14px 20px;
+        background:color-mix(in srgb, var(--field-deep) 88%, transparent);
+        -webkit-backdrop-filter:blur(16px); backdrop-filter:blur(16px)}
+.banner--top{top:0; border-bottom:1px solid var(--pill-line); padding:16px 20px 18px}
+
+.cta{font-family:"Archivo Black","Arial Black",sans-serif;
+     letter-spacing:.02em; text-decoration:none; text-align:center;
+     color:var(--field-deep); background:var(--chalk); border-radius:999px;
+     display:block; transition:transform .18s ease, box-shadow .18s ease}
+.cta:focus-visible{outline:3px solid var(--chalk); outline-offset:4px}
+
+/* Gumroad's overlay script injects its own stylesheet at run time - after this
+   one - and styles .gumroad-button. Every property it sets has to be reclaimed
+   here at a specificity its single-class rules cannot reach, or the buttons turn
+   into Gumroad's pink ones the moment the script lands. */
+a.cta.gumroad-button{
+  font-family:"Archivo Black","Arial Black",sans-serif !important;
+  color:var(--field-deep) !important; background:var(--chalk) !important;
+  border:0 !important; border-radius:999px !important;
+  text-transform:none !important; letter-spacing:.02em !important;
+  height:auto !important; line-height:normal !important}
+/* Their script appends <span class="logo-full"> inside every button it claims -
+   the Gumroad wordmark. The button says what it does; whose rails it runs on is
+   not the buyer's problem, and it is stated at the checkout anyway. */
+a.cta.gumroad-button .logo-full{display:none !important}
+.cta:hover{transform:translateY(-2px)}
+
+/* One banner, pinned to the top. It is the only ask on the page, so it carries
+   the full treatment rather than a reduced one. */
+.cta{font-size:clamp(18px,5vw,23px); padding:22px 48px; width:100%; max-width:440px;
+     box-shadow:0 0 0 0 rgba(242,233,235,.28), 0 16px 40px -14px rgba(0,0,0,.9);
+     animation:halo 3.4s ease-in-out infinite}
+.cta:hover{animation:none;
+     box-shadow:0 0 0 12px rgba(242,233,235,.10), 0 22px 48px -14px rgba(0,0,0,.9)}
+@keyframes halo{
+  0%,100%{box-shadow:0 0 0 0 rgba(242,233,235,.26), 0 16px 40px -14px rgba(0,0,0,.9)}
+  50%    {box-shadow:0 0 0 14px rgba(242,233,235,0), 0 16px 40px -14px rgba(0,0,0,.9)}
+}
+/* The same ask again at the end of the scroll, but in the flow rather than
+   pinned - so it arrives when someone has finished reading instead of sitting
+   over the page the whole way down. */
+.buy-end{margin:56px 0 0; width:100%; display:flex; flex-direction:column;
+         align-items:center; gap:10px}
+
+.terms{margin:0; font-size:12px; letter-spacing:.14em; text-transform:uppercase;
+       color:var(--ink-soft)}
+
+/* ---- the list ------------------------------------------------------------ */
+/* Sits after the last buy button, never before it. Anyone who reaches this has
+   already walked past the ask twice without taking it, so the list is the
+   second-best outcome rather than a competitor to the first - which is why it is
+   quiet, small, and carries no discount. A bribe here would teach people to wait
+   for the next one instead of buying this one. */
+.list{margin:92px 0 0; width:100%; max-width:440px; text-align:center}
+.list p{margin:0 0 12px; font-size:12px; letter-spacing:.14em;
+        text-transform:uppercase; color:var(--ink-soft)}
+/* The 16px was Chrome's quirks stylesheet, not a decision - a UA margin-bottom
+   on <form> that vanished the moment the doctype put the page in standards
+   mode, pulling the last buy button 16px up the page. Restated here so the
+   spacing survives on its own terms rather than on a parser fallback. */
+.list form{display:flex; gap:8px; margin-bottom:16px}
+.list input{flex:1 1 auto; min-width:0; font-family:inherit; font-size:15px;
+            color:var(--ink); background:var(--field-deep);
+            border:1px solid var(--pill-line); border-radius:999px;
+            padding:12px 18px; -webkit-appearance:none}
+.list input::placeholder{color:var(--ink-faint)}
+.list input:focus{outline:none; border-color:var(--ink-soft)}
+.list button{flex:0 0 auto; font-family:inherit; font-size:12px; font-weight:600;
+             letter-spacing:.1em; text-transform:uppercase; cursor:pointer;
+             color:var(--field-deep); background:var(--chalk); border:0;
+             border-radius:999px; padding:12px 22px}
+.list.is-done form{display:none}
+.list.is-done p{color:var(--ink)}
+
+/* ---- carousel ------------------------------------------------------------ */
+/* Scroll-snap rather than a library: it is native, it takes a trackpad swipe and
+   a phone flick for free, and it degrades to a plain scroller if the script
+   never runs. Slides are a fixed height and centre their contents, so a portrait
+   screenshot and a 16:9 video can sit in the same track without either being
+   cropped or stretched. */
+.carousel{position:relative; width:100%; margin:10px 0 0}
+.track{display:flex; overflow-x:auto; scroll-snap-type:x mandatory;
+       scroll-behavior:smooth; scrollbar-width:none; -ms-overflow-style:none;
+}
+.track::-webkit-scrollbar{display:none}
+/* The end slides are centred with margins, not track padding. A percentage
+   padding on the track shrinks its content box, and flex-basis then resolves
+   against that smaller box - so the slides came out narrower than the padding
+   assumed and the first and last sat 53px off centre. Margins resolve against
+   the same box the basis does, so the arithmetic closes: 11% + 78% + 11%. */
+.slide:first-child{margin-left:19%}
+.slide:last-child{margin-right:19%}
+.slide{flex:0 0 62%; scroll-snap-align:center;
+       display:flex; align-items:center; justify-content:center; height:500px;
+       /* The neighbours stay visible but recede, so it is obvious there is more
+          without them competing with the slide you are looking at. */
+       opacity:.34; transform:scale(.93);
+       transition:opacity .3s ease, transform .3s ease}
+.slide.is-active{opacity:1; transform:none}
+.slide img{max-height:100%; width:auto; border-radius:10px; display:block;
+           box-shadow:0 26px 60px -22px var(--shadow)}
+/* The demo is a capture of the panel, so it is the same portrait shape as the
+   screenshots either side of it and is sized like them rather than like the
+   16:9 slot the testimonial still uses. */
+.slide video{max-height:100%; width:auto; border-radius:10px; display:block;
+             background:var(--field-deep);
+             box-shadow:0 26px 60px -22px var(--shadow)}
+/* The badge covers the video, so anywhere on the poster starts it. It is hidden
+   until the script reveals it: without one the native controls are still there
+   and still work, and a dead button over them would be worse than none. */
+.player{position:relative; display:flex; align-items:center; height:100%}
+.play-badge{display:none; position:absolute; inset:0; z-index:2;
+            border:0; padding:0; margin:0; cursor:pointer; background:transparent;
+            border-radius:10px; flex-direction:column; align-items:center;
+            justify-content:center; gap:14px}
+.player.is-ready .play-badge{display:flex}
+.player.is-started .play-badge{display:none}
+.play-badge .disc{width:64px; height:64px; border-radius:999px;
+                  background:color-mix(in srgb, var(--field-deep) 68%, transparent);
+                  border:1px solid var(--pill-line);
+                  -webkit-backdrop-filter:blur(8px); backdrop-filter:blur(8px);
+                  display:flex; align-items:center; justify-content:center;
+                  transition:background .18s ease, transform .18s ease}
+/* A triangle carries its mass left of centre, so nudge it back into the disc. */
+.play-badge .disc::before{content:""; margin-left:5px; border-style:solid;
+                          border-width:11px 0 11px 18px;
+                          border-color:transparent transparent transparent var(--ink)}
+.play-badge .say{font-size:11px; letter-spacing:.24em; text-transform:uppercase;
+                 color:var(--ink-soft)}
+.play-badge:hover .disc{background:var(--field-deep); transform:scale(1.06)}
+.play-badge:focus-visible{outline:2px solid var(--chalk); outline-offset:2px}
+.slot{width:100%; max-width:540px; aspect-ratio:16/9; border-radius:10px;
+      background:var(--field-deep); border:1px solid var(--pill-line);
+      display:flex; align-items:center; justify-content:center; overflow:hidden}
+.slot iframe{width:100%; height:100%; border:0; display:block}
+.slot span{font-size:11px; letter-spacing:.24em; text-transform:uppercase;
+           color:var(--ink-faint); text-align:center; padding:0 20px}
+
+.nav{position:absolute; top:50%; transform:translateY(-50%); z-index:2;
+     width:40px; height:40px; border-radius:999px; cursor:pointer;
+     background:color-mix(in srgb, var(--field-deep) 70%, transparent);
+     border:1px solid var(--pill-line); color:var(--ink);
+     font-size:20px; line-height:1; display:flex; align-items:center;
+     justify-content:center; -webkit-backdrop-filter:blur(8px); backdrop-filter:blur(8px);
+     transition:background .18s ease}
+.nav:hover{background:var(--field-deep)}
+.nav:focus-visible{outline:2px solid var(--chalk); outline-offset:2px}
+.nav--prev{left:-4px} .nav--next{right:-4px}
+
+.dots{display:flex; justify-content:center; gap:9px; margin:20px 0 0}
+.dot{width:7px; height:7px; border-radius:999px; padding:0; cursor:pointer;
+     border:0; background:var(--ink-faint); transition:background .2s ease, transform .2s ease}
+.dot[aria-current="true"]{background:var(--chalk); transform:scale(1.35)}
+.dot:focus-visible{outline:2px solid var(--chalk); outline-offset:3px}
+
+/* ---- wordmark ------------------------------------------------------------ */
+.mark{font-family:"Archivo Black","Arial Black",sans-serif;
+      font-size:clamp(64px,16vw,124px); line-height:.92; letter-spacing:-.03em;
+      margin:0; color:var(--chalk); text-wrap:balance}
+.credit{margin:22px 0 0; font-size:10.5px; letter-spacing:.18em;
+        text-transform:uppercase; color:var(--ink-faint); text-align:center}
+
+.mark-block{margin:34px 0 0; display:flex; flex-direction:column; align-items:center}
+/* The one line that says what the product actually IS, so it keeps the size,
+   weight and contrast it was given - and is now tracked out at run time to sit
+   exactly as wide as DRUGS above it, the way the plug-in panel sets these same
+   two words. Sized as a fraction of the mark so the pairing survives the clamp. */
+.mark-sub{margin:12px 0 0; font-size:clamp(10px,2.6vw,20px); font-weight:700;
+          letter-spacing:.2em; text-transform:uppercase; white-space:nowrap;
+          color:var(--chalk); text-align:center}
+
+/* The ask, small and early: it arrives while the mark is still the loudest
+   thing on screen, so it reads as an invitation rather than a second banner. */
+.buy-mid{margin:36px 0 0; display:flex; justify-content:center}
+.cta--small{font-size:14px; padding:13px 30px; width:auto; max-width:none;
+            letter-spacing:.04em; animation:none;
+            box-shadow:0 10px 26px -12px rgba(0,0,0,.9)}
+.cta--small:hover{box-shadow:0 14px 30px -12px rgba(0,0,0,.9)}
+
+/* Holds the tagline tight under MAKE EVERYTHING BETTER instead of letting the
+   copy block's own 24px gap push it away into a separate paragraph. */
+.lede{display:flex; flex-direction:column; gap:11px}
+.copy .lead-sub{margin:0; font-size:12.5px; font-weight:600; letter-spacing:.28em;
+          text-transform:uppercase; color:var(--ink-soft)}
+
+/* Second video, sitting between the tagline and the line under it. Same 16:9
+   slot the carousel uses, so whatever goes in one goes in the other unchanged. */
+.testimonial{margin:56px 0 0; width:100%; display:flex; justify-content:center}
+.testimonial .slot{max-width:560px}
+
+.copy{margin:44px 0 0; max-width:34em; text-align:center;
+      display:flex; flex-direction:column; gap:24px}
+.copy .lead{font-family:"Archivo Black","Arial Black",sans-serif;
+            font-size:clamp(17px,4.4vw,22px); letter-spacing:.04em;
+            color:var(--chalk); text-wrap:balance}
+.copy p{margin:0; font-size:17px; line-height:1.65; color:var(--ink-soft)}
+.copy .spec{font-size:12.5px; letter-spacing:.16em; text-transform:uppercase;
+            color:var(--ink-faint)}
+
+/* ---- the ask ------------------------------------------------------------- */
+/* Deliberately the largest and brightest object on the page after the wordmark.
+   On a dark ground a solid chalk fill is the highest contrast available, and the
+   halo pulls the eye without adding a colour the palette does not have. */
+.foot{margin:104px 0 0; font-size:11px; letter-spacing:.22em; text-transform:uppercase;
+      color:var(--ink-faint); text-align:center; line-height:2}
+
+@media (max-width:560px){
+  .slide{flex:0 0 72%; height:400px}
+  .slide:first-child{margin-left:14%}
+  .slide:last-child{margin-right:14%}
+  .nav{width:34px; height:34px; font-size:17px}
+  .nav--prev{left:-8px} .nav--next{right:-8px}
+  /* Equal specificity and later in source, so without the :not() this would
+     inflate the small in-page button back to banner size on phones. */
+  .cta:not(.cta--small){padding:19px 28px}
+  /* Wide tracking pushed the tagline to a second line, orphaning one word. */
+  .copy .lead-sub{font-size:11px; letter-spacing:.19em}
+}
+@media (prefers-reduced-motion:reduce){
+  .track{scroll-behavior:auto}
+  .slide{transition:none}
+  .cta{animation:none !important}
+  .cta:hover{transform:none}
+  .cta,.nav,.dot{transition:none}
+  .play-badge .disc{transition:none}
+}
+
+/* ---- the h1 now wraps the mark ------------------------------------------- */
+/* .mark-block was a div; as an h1 it inherits the UA 2em font-size, which would
+   scale nothing here (every size below is px or vw) but would scale anything
+   added later. Pinned rather than left as a trap. */
+/* font-size only. The weight is deliberately left alone: .mark declares none,
+   so as an <h1> it took the UA's bold, and Archivo Black ships from Google as a
+   single 400 face - meaning the wordmark has always been synthetically
+   emboldened. Pinning 400 here quietly removed that and took 13% of the ink out
+   of it. The h1 keeps its bold so the mark renders as it always has. */
+h1.mark-block{font-size:inherit}
+.mark{display:block}
+
+/* ---- the long copy ------------------------------------------------------- */
+/* It sits below the last buy button on purpose. Someone who came to hear a
+   compressor should not have to read 700 words to reach the ask; someone who
+   wants the detail - or a crawler deciding what this page is about - scrolls.
+   Serving both this way costs neither of them anything. */
+.about{margin:96px 0 0; width:100%; max-width:34em; text-align:left;
+       border-top:1px solid var(--pill-line); padding-top:28px}
+
+/* The copy is a disclosure rather than a section. It stays in the document at
+   all times - <details> hides it with CSS, it is never injected on click - so a
+   crawler still reads every word of it while the page stays as short as it was
+   for somebody who only came to hear the thing. */
+.about > summary{
+  list-style:none; cursor:pointer; display:block; text-align:center;
+  font-size:11px; font-weight:600; letter-spacing:.22em; text-transform:uppercase;
+  color:var(--ink-faint); padding:6px 0; transition:color .18s ease}
+/* Two ways to kill the disclosure triangle, because the one that works depends
+   on the engine: display:block on the summary covers modern Safari and Chrome,
+   the pseudo-element covers what is left. */
+.about > summary::-webkit-details-marker{display:none}
+.about > summary::after{content:"+"; margin-left:.7em; font-weight:400;
+       display:inline-block; transform:translateY(-.02em)}
+.about[open] > summary::after{content:"\2013"}
+.about > summary:hover{color:var(--ink-soft)}
+.about > summary:focus-visible{outline:2px solid var(--ink-soft);
+       outline-offset:6px; border-radius:3px}
+.about-body{margin-top:36px}
+.about h2{margin:38px 0 14px; font-size:12px; font-weight:600; letter-spacing:.2em;
+          text-transform:uppercase; color:var(--chalk)}
+.about h2:first-of-type{margin-top:0}
+.about p{margin:0 0 14px; font-size:15.5px; line-height:1.7; color:var(--ink-soft)}
+.about ul{margin:0; padding:0 0 0 18px; list-style:none}
+.about li{margin:0 0 12px; font-size:15.5px; line-height:1.7; color:var(--ink-soft);
+          position:relative}
+.about li::before{content:"\2014"; position:absolute; left:-18px; color:var(--ink-faint)}
+.about strong{color:var(--ink); font-weight:600}
+.about em{color:var(--ink)}
+
+/* "one-knob bus compressor" is nine characters longer than the "bus compressor"
+   it replaced, and .mark-sub is nowrap. At .2em tracking that pushed the line
+   past a 320px viewport and put a horizontal scrollbar on the narrowest phones.
+   Tracking comes in first because it is the cheapest 23px on the line; the wrap
+   is the backstop below the width where even that is not enough. The line is
+   centred, so where it does break it reads the same as one line. */
+@media (max-width:420px){ .mark-sub{letter-spacing:.1em} }
+@media (max-width:352px){ .mark-sub{white-space:normal} }
+
+/* ---- slide height, retuned for a taller panel ---------------------------- */
+/* The sibling's slides are 500px because its panel is 680x1320. This one is
+   680x1800, and a portrait image in a fixed-height slot is sized by its height -
+   so at 500 it came out 189px wide against the sibling's 258 and read as a
+   thumbnail rather than the product. Height is the only lever that widens it. */
+.slide{height:620px}
+@media (max-width:560px){ .slide{height:470px} }
+
+/* ---- the mark's parenthetical ------------------------------------------- */
+/* The panel sets the name as F(ilter)12: a full-size F and 12 with the gloss
+   dropped to roughly two fifths and sitting on the same baseline. Sized in em
+   so it tracks the clamp on .mark rather than needing its own. */
+.mark-paren{font-size:.42em; letter-spacing:-.005em}
+</style>
+
+<div class="banner banner--top">
+  <a class="cta gumroad-button" data-pos="banner_top" href="https://gazillionindustries.gumroad.com/l/f12?utm_source=gazillionindustries.com&amp;utm_medium=cta&amp;utm_content=banner_top">Buy F(ilter)12 now</a>
+  <p class="terms">$49 &nbsp;&middot;&nbsp; includes DRUGS free</p>
+</div>
+
+<main>
+  <!-- Two slides, not three. The sibling leads with its demo video; there is no
+       F12 capture yet, and a slide holding an empty player is worse than one
+       fewer slide. When the video exists it goes in front of these two and the
+       player markup and script come across from the sibling unchanged. -->
+  <div class="carousel">
+    <div class="track" id="track">
+      <div class="slide">
+        <img src="f12-dark.jpg" width="680" height="1800"
+             alt="The F(ilter)12 plug-in panel in its dark theme: SAMPLE RATE and BIT dials, a large filter POSITION dial reading 80, rows of filter and resonance shapes, and a display showing the filter curve over the AURA field.">
+      </div>
+      <div class="slide">
+        <img src="f12-light.jpg" width="680" height="1800"
+             alt="The F(ilter)12 panel in its light theme, showing the same controls on a bright violet field.">
+      </div>
+    </div>
+    <button class="nav nav--prev" type="button" aria-label="Previous">&lsaquo;</button>
+    <button class="nav nav--next" type="button" aria-label="Next">&rsaquo;</button>
+    <div class="dots" id="dots"></div>
+  </div>
+
+  <h1 class="mark-block">
+    <span class="mark">F<span class="mark-paren">(ilter)</span>12</span>
+    <span class="mark-sub">12 bit sauce filter</span>
+  </h1>
+
+  <div class="buy-mid">
+    <a class="cta cta--small gumroad-button" data-pos="hero_mid" href="https://gazillionindustries.gumroad.com/l/f12?utm_source=gazillionindustries.com&amp;utm_medium=cta&amp;utm_content=hero_mid">Buy F(ilter)12 now</a>
+  </div>
+
+  <div class="copy">
+    <div class="lede">
+      <p class="lead">AURA ENHANCEMENT</p>
+      <p class="lead-sub">turn on aura and experience magic.</p>
+    </div>
+    <p>turn on max aura and experience maximum magic.<br>invisible butter, air and lift.</p>
+    <p>super wavy vintage analog filter full of feel with unique character and warmth</p>
+    <p>lo-fi section with sample rate and bit reduction controls.<br>auto filters and sidechain inputs</p>
+    <p>an incredible array of options with which to color your sound.</p>
+    <!-- Same one-line strip as the sibling page. The per-platform detail -
+         that Windows is VST3 only, with no standalone until the installer is
+         signed - is carried in the disclosure below rather than on the surface,
+         which is where this page puts every other qualification too. -->
+    <p class="spec">AU &nbsp;&middot;&nbsp; VST3 &nbsp;&middot;&nbsp; Standalone &nbsp;&middot;&nbsp; macOS &nbsp;&middot;&nbsp; Windows</p>
+  </div>
+
+  <div class="testimonial" hidden>
+    <div class="slot"><span>testimonials go here</span></div>
+  </div>
+
+  <div class="list" id="list">
+    <p id="list-msg">there will be more of these</p>
+    <form action="https://app.kit.com/forms/9851450/subscriptions" method="post">
+      <input type="email" name="email_address" placeholder="email" required
+             autocomplete="email" aria-label="Email address">
+      <button type="submit">tell me</button>
+    </form>
+  </div>
+
+  <div class="buy-end">
+    <a class="cta gumroad-button" data-pos="page_end" href="https://gazillionindustries.gumroad.com/l/f12?utm_source=gazillionindustries.com&amp;utm_medium=cta&amp;utm_content=page_end">Buy F(ilter)12 now</a>
+    <p class="terms">$49 &nbsp;&middot;&nbsp; includes DRUGS free</p>
+  </div>
+
+  <details class="about">
+    <summary>more info</summary>
+    <div class="about-body">
+    <h2>What F(ilter)12 is</h2>
+    <p>A filter with a lo-fi section in front of it and an adaptive correction
+    sitting on top. The correction is called AURA. Things sit better with it on:
+    what was crowding gets out of the way, what was hiding comes forward, and the
+    record breathes without sounding like anything was done to it.</p>
+    <p>We are not going to tell you how. Turn it off and on over a mix you know
+    well &mdash; that is the only explanation that has ever landed. MAX AURA is
+    the same thing turned all the way up.</p>
+
+    <h2>The lo-fi section</h2>
+    <p>SAMPLE RATE and BIT are the crush pair. SAMPLE RATE slows the rate the
+    audio is sampled at, so the top goes and what was up there folds back down as
+    new content. BIT coarsens the steps it is measured in, so quiet detail rounds
+    off and what is left picks up a hard edge. Twelve bits is as clean as this
+    gets. It only goes down from there.</p>
+
+    <h2>The filter</h2>
+    <ul>
+      <li><strong>POSITION</strong> sets where in the spectrum the filter sits.
+      The further it works the more it drives and the more it sings &mdash; built
+      in, not something to dial in.</li>
+      <li><strong>Five shapes</strong>: low-pass, high-pass, band-pass, notch,
+      and a morph that runs from a closing low-pass, through untouched in the
+      middle, to an opening high-pass.</li>
+      <li><strong>SLOPE</strong> is how steeply it falls away past the corner,
+      and whether the circuit feeds its own distortion back through itself.</li>
+      <li><strong>Eight resonance shapes</strong> &mdash; a wah, a vowel, a comb,
+      a scoop, a hollow, twin peaks, a stack of notches, and flat. They sit at
+      fixed distances from wherever the filter is, so the whole shape travels
+      with the knob.</li>
+      <li><strong>DRIVE, RESO, Q and MIX.</strong> RESO decides how much
+      resonance; Q decides how narrow.</li>
+    </ul>
+
+    <h2>Moving the filter</h2>
+    <p>Two ways, one at a time &mdash; engaging either releases the other,
+    because both driving the same cutoff means neither knob does what it says.</p>
+    <p><strong>AUTO FILTER</strong> hands it to a clock: a shape, a division, a
+    grid, and SWING to push it off the grid the way an MPC did.
+    <strong>SIDECHAIN</strong> hands it to a signal instead &mdash; what it
+    follows, what it hears, which way it travels, how far, and how eagerly it
+    makes up its mind.</p>
+
+    <h2>The display</h2>
+    <p>The heavy line is the filter. Behind it is what is going in and what is
+    coming out. The field of pixels is AURA, drawn honestly: green where it is
+    adding, red where it is taking away, nothing where it has no opinion.</p>
+
+    <h2>Formats and compatibility</h2>
+    <p>On macOS, F(ilter)12 installs as an Audio Unit (AU) and a VST3 plug-in,
+    plus a standalone application. macOS 10.13 or later, universal binary for
+    both Apple Silicon and Intel.</p>
+    <p>On Windows it is a VST3. Windows 10 or later, 64-bit. It arrives as a zip
+    you drop into your VST3 folder; there is no installer yet, and the standalone
+    joins the Windows drop when the installer is signed.</p>
+    <p>Zero samples of latency. Any sample rate your session runs at. No internet
+    connection required after activation.</p>
+
+    <h2>Price</h2>
+    <p>$49, and DRUGS &mdash; a one-knob bus compressor, sold on its own
+    <a href="https://gazillionindustries.com/">here</a> &mdash; comes with it at
+    no extra cost.</p>
+    </div>
+  </details>
+
+  <p class="foot">Gazillion Industries LLC</p>
+</main>
+
+<script>
+(function(){
+  var track = document.getElementById("track");
+  var dotsEl = document.getElementById("dots");
+  if(!track || !dotsEl) return;
+  var slides = Array.prototype.slice.call(track.children);
+  if(slides.length < 2){ dotsEl.remove(); return; }
+
+  slides.forEach(function(_, i){
+    var b = document.createElement("button");
+    b.className = "dot";
+    b.type = "button";
+    b.setAttribute("aria-label", "Go to slide " + (i+1));
+    b.addEventListener("click", function(){ go(i); });
+    dotsEl.appendChild(b);
+  });
+  var dots = Array.prototype.slice.call(dotsEl.children);
+
+  // Slides are narrower than the track now, so neither position nor the active
+  // slide can be derived from clientWidth any more. Both come from geometry.
+  function centreOf(el){ return el.offsetLeft + el.offsetWidth / 2; }
+  function index(){
+    var mid = track.scrollLeft + track.clientWidth / 2 + track.offsetLeft;
+    var best = 0, bestDist = Infinity;
+    slides.forEach(function(s, i){
+      var d = Math.abs(centreOf(s) - mid);
+      if(d < bestDist){ bestDist = d; best = i; }
+    });
+    return best;
+  }
+  function go(i){
+    var n = Math.max(0, Math.min(slides.length - 1, i));
+    var left = slides[n].offsetLeft - track.offsetLeft
+                 - (track.clientWidth - slides[n].offsetWidth) / 2;
+    track.scrollTo({ left: left, behavior: "smooth" });
+  }
+  function sync(){
+    var n = index();
+    dots.forEach(function(d, i){ d.setAttribute("aria-current", i === n ? "true" : "false"); });
+    slides.forEach(function(s, i){ s.classList.toggle("is-active", i === n); });
+  }
+
+  document.querySelector(".nav--prev").addEventListener("click", function(){ go(index() - 1); });
+  document.querySelector(".nav--next").addEventListener("click", function(){ go(index() + 1); });
+
+  var t;
+  track.addEventListener("scroll", function(){
+    clearTimeout(t); t = setTimeout(sync, 60);
+  });
+  window.addEventListener("resize", sync);
+
+  track.setAttribute("tabindex", "0");
+  track.addEventListener("keydown", function(e){
+    if(e.key === "ArrowLeft"){ e.preventDefault(); go(index() - 1); }
+    if(e.key === "ArrowRight"){ e.preventDefault(); go(index() + 1); }
+  });
+
+  // ---- auto-advance ------------------------------------------------------
+  // Every five seconds, except that a slide holding a playing video keeps the
+  // floor until the video is done. The check runs at each tick rather than
+  // being armed once, so pausing and resuming the video is handled for free.
+  var AUTO_MS = 5000;
+  var timer = null;
+  // The demo leads the carousel and is the one thing here that shows what the
+  // plug-in does rather than describing it, so nothing pulls it away from
+  // someone who has not asked to move on. The timer starts at the first real
+  // interaction - a tap, a click, a key - and behaves as before from then on.
+  // Hovering and tab-switching deliberately do not count: neither says the
+  // reader is done with the first slide.
+  var engaged = false;
+  var ytPlaying = false;
+  var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  // A YouTube iframe will only report its state if the embed URL asks it to, so
+  // add the parameter rather than requiring whoever pastes the embed to know
+  // that. Talking to it by postMessage avoids loading YouTube's API script,
+  // which a strict content policy would block anyway.
+  slides.forEach(function(sl){
+    var f = sl.querySelector('iframe[src*="youtube.com"], iframe[src*="youtube-nocookie.com"]');
+    if(f && f.src.indexOf("enablejsapi=1") === -1){
+      f.src += (f.src.indexOf("?") === -1 ? "?" : "&") + "enablejsapi=1";
+    }
+  });
+
+  window.addEventListener("message", function(e){
+    if(String(e.origin).indexOf("youtube") === -1) return;
+    var d;
+    try { d = typeof e.data === "string" ? JSON.parse(e.data) : e.data; } catch(err){ return; }
+    if(!d) return;
+    var state = d.event === "onStateChange" ? d.info
+              : (d.info && typeof d.info.playerState === "number" ? d.info.playerState : null);
+    if(state === null) return;
+    ytPlaying = (state === 1);          // 1 playing, 0 ended, 2 paused
+    if(!ytPlaying) restart();           // ended or paused: let the timer run again
+  });
+
+  function subscribe(){
+    slides.forEach(function(sl){
+      var f = sl.querySelector("iframe");
+      if(f && f.contentWindow) f.contentWindow.postMessage('{"event":"listening"}', "*");
+    });
+  }
+  window.addEventListener("load", subscribe);
+  setTimeout(subscribe, 1200);
+
+  function holding(){
+    var el = slides[index()].querySelector("iframe, video");
+    if(!el) return false;                                  // a placeholder holds nothing
+    if(el.tagName === "VIDEO") return !el.paused && !el.ended;
+    return ytPlaying;
+  }
+
+  function tick(){
+    if(document.hidden) return;   // do not race while nobody is looking
+    if(holding()) return;
+    go((index() + 1) % slides.length);
+  }
+  function restart(){
+    if(timer) clearInterval(timer);
+    if(engaged && !reduced) timer = setInterval(tick, AUTO_MS);
+  }
+  function stop(){ if(timer){ clearInterval(timer); timer = null; } }
+
+  // Manual input resets the clock rather than fighting it, and hovering holds
+  // the slide you are looking at.
+  ["click","keydown","touchstart"].forEach(function(ev){
+    document.querySelector(".carousel").addEventListener(ev, function(){
+      engaged = true;
+      restart();
+    }, { passive: true });
+  });
+  var car = document.querySelector(".carousel");
+  car.addEventListener("mouseenter", stop);
+  car.addEventListener("mouseleave", restart);
+  document.addEventListener("visibilitychange", function(){
+    if(document.hidden) stop(); else restart();
+  });
+
+  restart();
+
+  sync();
+})();
+</script>
+<script>
+// Sets "bus compressor" exactly as wide as DRUGS above it. Letter-spacing adds a
+// gap after every character including the last, so the glyphs span natural plus
+// step x gaps while the box measures one step wider - the negative margin takes
+// that trailing step back off, which keeps both the width and the centring true.
+(function fitBanner(){
+  var b = document.querySelector(".banner--top");
+  if(!b) return;
+  function set(){
+    document.documentElement.style.setProperty(
+      "--banner-h", b.getBoundingClientRect().height + "px");
+  }
+  set();
+  addEventListener("resize", set);
+  if(document.fonts && document.fonts.ready) document.fonts.ready.then(set);
+})();
+
+(function matchMark(){
+  var mark = document.querySelector(".mark"),
+      sub  = document.querySelector(".mark-sub");
+  if(!mark || !sub) return;
+  function fit(){
+    sub.style.letterSpacing = "0px";
+    sub.style.marginRight   = "0px";
+    var gaps = sub.textContent.trim().length - 1;
+    if(gaps < 1) return;
+    var extra = mark.getBoundingClientRect().width - sub.getBoundingClientRect().width;
+    if(extra <= 0) return;                    // already wider than the mark: leave it
+    var step = extra / gaps;
+    sub.style.letterSpacing = step.toFixed(3) + "px";
+    sub.style.marginRight   = (-step).toFixed(3) + "px";
+  }
+  fit();
+  addEventListener("resize", fit);
+  // Archivo Black lands after first paint and is wider than the fallback face.
+  if(document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
+})();
+</script>
+<script>
+// Provider-agnostic by design. Plausible, GoatCounter and Umami each expose a
+// different global; this calls whichever one is actually present and does
+// nothing at all when none is. Changing analytics later is then one script tag
+// in the head rather than an edit at every call site, and the page never depends
+// on that tag being there.
+function track(name, props){
+  try{
+    if(window.plausible)
+      return window.plausible(name, props ? {props:props} : undefined);
+    if(window.goatcounter && window.goatcounter.count)
+      return window.goatcounter.count({path:name, title:name, event:true});
+    if(window.umami && window.umami.track)
+      return window.umami.track(name, props);
+  }catch(e){}
+}
+
+// Every buy button reports which of the three it was. The utm_content on the
+// hrefs answers the same question at the checkout end, but only for the people
+// who actually pay. This counts the ones who clicked and then did not - which is
+// what separates "the page is not convincing" from "the price is not the
+// problem", and there is no way to see it from the checkout side.
+(function buyClicks(){
+  var links = document.querySelectorAll("a.cta");
+  for(var i = 0; i < links.length; i++){
+    (function(a){
+      a.addEventListener("click", function(){
+        track("buy_click", {position: a.getAttribute("data-pos") || "unknown"});
+        if (window.fbq) fbq("track", "InitiateCheckout");
+      });
+    })(links[i]);
+  }
+})();
+
+// Carry an inbound campaign through to the checkout. Each buy button already
+// carries its own utm_content saying which of the three it is, and its own
+// utm_source saying "the site" - which is true and useless the moment somebody
+// arrives from somewhere else, because it overwrites where they actually came
+// from. So an inbound utm_source wins on source/medium/campaign, and the
+// button keeps content. A sale then reads kit / email / wave1 / banner_top
+// rather than losing three quarters of that.
+(function carryCampaign(){
+  var inbound = new URLSearchParams(location.search);
+  if(!inbound.get("utm_source")) return;
+  var links = document.querySelectorAll("a.cta");
+  for(var i = 0; i < links.length; i++){
+    var a = links[i], u;
+    try { u = new URL(a.href); } catch(e) { continue; }
+    ["utm_source","utm_medium","utm_campaign","utm_term"].forEach(function(k){
+      var v = inbound.get(k);
+      if(v) u.searchParams.set(k, v);
+    });
+    a.href = u.toString();
+  }
+})();
+
+(function list(){
+  var box = document.getElementById("list");
+  if(!box) return;
+  var form = box.querySelector("form"),
+      msg  = document.getElementById("list-msg");
+  // Not wired to a provider yet, so hide it. A form posting nowhere still looks
+  // like it worked and loses every address typed into it, which is worse than
+  // not asking.
+  if(!form || form.getAttribute("action").indexOf("PASTE_") === 0){
+    box.hidden = true;
+    return;
+  }
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+    // no-cors so the cross-origin post is allowed at all; the trade is that the
+    // response cannot be read, so success here is optimistic by necessity. What
+    // that hides is a provider outage. The alternative is showing a CORS error
+    // to somebody who did nothing wrong and cannot fix it either.
+    fetch(form.action, {method:"POST", mode:"no-cors", body:new FormData(form)});
+    box.classList.add("is-done");
+    msg.textContent = "ok. you will hear from us.";
+    track("list_signup");
+  });
+})();
+</script>
+<script src="https://gumroad.com/js/gumroad.js" defer></script>
+</html>
