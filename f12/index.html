@@ -373,6 +373,14 @@ h1.mark-block{font-size:inherit}
 @media (max-width:420px){ .mark-sub{letter-spacing:.1em} }
 @media (max-width:352px){ .mark-sub{white-space:normal} }
 
+/* One line set in the page's small-caps voice rather than as body copy, so it
+   reads as a claim about the sound instead of another sentence about it. Sized
+   between .lead-sub and body: louder than the tagline pair above it, quieter
+   than the mark. */
+.copy .caps{margin:0; font-size:13.5px; font-weight:600; letter-spacing:.22em;
+            text-transform:uppercase; color:var(--ink-soft)}
+@media (max-width:560px){ .copy .caps{font-size:12px; letter-spacing:.16em} }
+
 /* ---- slide height, retuned for a taller panel ---------------------------- */
 /* The sibling's slides are 500px because its panel is 680x1320. This one is
    680x1800, and a portrait image in a fixed-height slot is sized by its height -
@@ -424,12 +432,13 @@ h1.mark-block{font-size:inherit}
   </div>
 
   <div class="copy">
+    <p>super wavy vintage analog filter full of feel with unique character and warmth</p>
     <div class="lede">
       <p class="lead">AURA ENHANCEMENT</p>
       <p class="lead-sub">turn on aura and experience magic.</p>
+      <p class="lead-sub">turn on max aura and experience maximum magic.</p>
     </div>
-    <p>turn on max aura and experience maximum magic.<br>invisible butter, air and lift.</p>
-    <p>super wavy vintage analog filter full of feel with unique character and warmth</p>
+    <p class="caps">invisible butter, air and lift.</p>
     <p>lo-fi section with sample rate and bit reduction controls.<br>auto filters and sidechain inputs</p>
     <p>an incredible array of options with which to color your sound.</p>
     <!-- Same one-line strip as the sibling page. The per-platform detail -
