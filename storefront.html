@@ -13,178 +13,735 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://gazillionindustries.com/og.jpg">
 
+<!-- Same Umami site and same Meta pixel as the product pages: one business,
+     one property. This page shipped without either on 1 Sep 2026, so it was
+     invisible to the board and to the pixel while being live - and it is the
+     page meant to become the homepage. A storefront that cannot be measured
+     cannot be judged against the product pages it feeds. -->
+<script defer src="https://cloud.umami.is/script.js"
+        data-website-id="ed71399d-1069-4354-abbf-73dc311e5bc3"></script>
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1164684366890206');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" alt=""
+  src="https://www.facebook.com/tr?id=1164684366890206&amp;ev=PageView&amp;noscript=1"/></noscript>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Archivo+Black&display=swap" rel="stylesheet">
+<!-- 300 is not optional: it is the weight INDUSTRIES is set in, and the lockup's
+     whole contrast is a light wide line under a heavy tight one. Without it the
+     browser synthesises 300 from 400 and the second line goes muddy. -->
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&family=Archivo+Black&display=swap" rel="stylesheet">
 
 <style>
-/* The shell gets its own colourway, deliberately.
-
-   Every plug-in here has one - that is house policy - and the storefront cannot
-   borrow either of them without reading as that product's page. So the ground is
-   a true neutral: dark, faintly cool, carrying no product's hue. Each card then
-   brings its own accent and its own panel, and the two sit next to each other
-   without either winning.
-
-   Same five roles the product pages use, so the type, weight and alignment all
-   transfer unchanged. */
+/* The SHELL is painted in the house colours - the Gazillion sky, black, white -
+   because this is the one page in the business selling the house rather than a
+   product. Each PRODUCT then keeps its own accent inside the display, on the
+   line that names what it does. So gold always means Gazillion and never means
+   a plug-in, and violet and rouge always mean which plug-in and never mean the
+   shop. */
 :root{
-  --field:#1a191e; --field-lit:#232128; --field-deep:#111014;
-  --ink:#f0eef2; --ink-soft:rgba(240,238,242,.62); --ink-faint:rgba(240,238,242,.34);
-  --line:rgba(240,238,242,.14);
-  --shadow:rgba(0,0,0,.55);
+  /* The sky, exactly as social/brand.sh mixes it. Two approved marks come out
+     of it - black type on the sky, and the sky as type on near-black - and the
+     masthead is the first one. */
+  --gold-0:#ffe14d; --gold-1:#ffbe1a; --gold-2:#e07800;
+  --sky:linear-gradient(135deg,var(--gold-0) 0%,var(--gold-1) 38%,var(--gold-2) 100%);
+  --gold:#ffbe1a;
 
-  /* Per-product accents and grounds, taken from each plug-in's own colourway.
-     These are the FIELD tones, not the deep ones: each product's deepest tone
-     sits at roughly this shell's own luminance, so a card painted in it
-     disappeared into the page instead of sitting on it. */
-  --f12-accent:#a653f0; --f12-ground:#2a0f52;
-  --drugs-accent:#e0919f; --drugs-ground:#2b2225;
+  --ground:#0d0d0d; --ground-lit:#151210; --ground-deep:#050505;
+  --card:#131313;
+
+  --chalk:#ffffff;
+  --chalk-soft:rgba(255,255,255,.64);
+  /* .48 rather than the .32 the product pages use for the same role. The lines
+     it paints here are the formats strip and the half of the price line that
+     says what the price means - information, not decoration - and at .44 on
+     this card that lands at 4.4:1, just under AA. */
+  --chalk-faint:rgba(255,255,255,.48);
+  --line:rgba(255,255,255,.13);
+  --shadow:rgba(0,0,0,.6);
+
+  /* The masthead measure. The lockup is justified to it and so is the line
+     under it, so the two stack as one block the way the identity kit's third
+     grid tile does. */
+  --measure-house:clamp(232px,52vw,512px);
+
+  --display:"Archivo Black","Arial Black",sans-serif;
+  --body:Archivo,system-ui,-apple-system,BlinkMacSystemFont,sans-serif;
 }
 
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
 body{
-  margin:0; background:var(--field); color:var(--ink);
-  background-image:linear-gradient(180deg,var(--field-lit) 0%,var(--field) 40%,var(--field-deep) 100%);
-  background-attachment:fixed;
-  font-family:Archivo,system-ui,-apple-system,sans-serif;
-  -webkit-font-smoothing:antialiased;
+  margin:0; background:var(--ground); color:var(--chalk);
+  background-image:linear-gradient(180deg,var(--ground-lit) 0%,var(--ground) 34%,var(--ground-deep) 100%);
+  background-attachment:fixed; min-height:100vh;
+  font-family:var(--body); -webkit-font-smoothing:antialiased;
 }
-img,svg{max-width:100%; display:block}
-
-.wrap{max-width:1080px; margin:0 auto; padding:0 20px}
-
-/* ---- masthead ------------------------------------------------------------ */
-/* The company name is set small and tracked wide - the plug-in marks are the
-   loud objects on this page and the shop is not competing with them. It is the
-   same relationship the panel has with its own GAZILLION INDUSTRIES line. */
-.masthead{padding:46px 0 12px; text-align:center}
-.house{font-size:clamp(10px,2.4vw,13px); font-weight:600; letter-spacing:.42em;
-        text-transform:uppercase; color:var(--ink-soft); margin:0}
-.house-line{margin:22px auto 0; max-width:20ch;
-             font-family:"Archivo Black","Arial Black",sans-serif;
-             font-size:clamp(26px,7vw,44px); line-height:1.08; letter-spacing:-.01em;
-             text-wrap:balance}
-.house-sub{margin:16px auto 0; max-width:44ch; font-size:clamp(14px,3.4vw,17px);
-            line-height:1.5; color:var(--ink-soft); text-wrap:balance}
-
-/* ---- the shelf ----------------------------------------------------------- */
-/* One column on a phone, which is where three quarters of the traffic is and
-   what these portrait panels are shaped for. Two side by side once there is
-   room for both without shrinking the panels into thumbnails. */
-.shelf{display:grid; gap:20px; padding:40px 0 8px}
-@media (min-width:860px){ .shelf{grid-template-columns:1fr 1fr; gap:24px} }
-
-.card{position:relative; border:1px solid var(--line); border-radius:18px;
-       padding:30px 24px 26px; overflow:hidden;
-       display:flex; flex-direction:column; align-items:center; text-align:center;
-       background:var(--card-ground);
-       /* The product's own ground, held back far enough that the shell still
-          reads as the shell. Full strength here and the page becomes two
-          product pages glued together. */
-       background-image:linear-gradient(180deg,
-           color-mix(in srgb, var(--card-ground) 92%, #fff 8%) 0%,
-           var(--card-ground) 62%);
+/* The same fractal-noise film both product pages carry, at the same strength.
+   It sits under the content, so it reads on the ground and on nothing else. */
+body::before{
+  content:""; position:fixed; inset:0; pointer-events:none; z-index:0; opacity:.5;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='.055'/%3E%3C/svg%3E");
 }
-.card--f12{--card-ground:var(--f12-ground); --card-accent:var(--f12-accent)}
-.card--drugs{--card-ground:var(--drugs-ground); --card-accent:var(--drugs-accent)}
+img,svg,video{max-width:100%; display:block}
+.wrap{max-width:1080px; margin:0 auto; padding:0 20px; position:relative; z-index:1}
 
-.card .panel{width:auto; height:min(42vh,300px); border-radius:10px;
-              box-shadow:0 18px 44px -14px var(--shadow)}
+/* ---- the sign ------------------------------------------------------------ */
+/* Full-bleed sky with the lockup in black on it - the x-header composition,
+   unchanged, because that is the mark people will have already seen on the
+   socials and a storefront is the wrong place to introduce a variant. It
+   carries the lockup and nothing else. */
+.sign{position:relative; z-index:1; background-image:var(--sky);
+      padding:clamp(38px,7vw,62px) 0 clamp(40px,7.4vw,66px)}
+/* Grain over the sky, for the same reason the ground has it and one more: a
+   gold ramp this wide bands visibly on an 8-bit display, and noise is what
+   breaks the bands up. */
+.sign::after{
+  content:""; position:absolute; inset:0; pointer-events:none; opacity:.42;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='.055'/%3E%3C/svg%3E");
+}
+/* ---- the lockup ---------------------------------------------------------- */
+/* GAZILLION INDUSTRIES, set live rather than shipped as an image, and NOT
+   re-derived: every number below is the settled lockup from social/brand.sh
+   expressed as a fraction of one measure --T, so the whole thing scales off a
+   single clamp and stays identical at every width.
 
-/* The marks are each plug-in's own outlines, dumped straight out of the panel
-   by `uishot <out.svg> --marksvg`. Never re-set in a font: F12's lockup is three
-   runs with two overlap tucks and DRUGS' is Arial Black at -1.5, and a webfont
-   reproduces neither. This is the one page where both appear together, so any
-   drift would be visible side by side. */
-.pmark{fill:currentColor; height:auto; margin:26px 0 0}
-.pmark--f12{width:min(74%,260px)}
-.pmark--drugs{width:min(80%,290px)}
+   The three constants that were expensive to find are in here:
 
-.cat{margin:14px 0 0; font-size:clamp(10px,2.6vw,12px); font-weight:700;
-      letter-spacing:.22em; text-transform:uppercase; color:var(--card-accent)}
-.pitch{margin:16px auto 0; max-width:32ch; font-size:clamp(14px,3.4vw,16px);
-        line-height:1.5; color:var(--ink-soft)}
-.formats{margin:18px 0 0; font-size:clamp(9px,2.2vw,11px); font-weight:600;
-          letter-spacing:.16em; text-transform:uppercase; color:var(--ink-faint)}
+   - the edges justify on INK, not advance width. Archivo Black gives G a left
+     bearing where Archivo Light gives I almost none, so lines whose boxes
+     measure identically still read as indented. text-indent pulls each line's
+     ink onto its box edge, and GAZILLION then hangs left by 1.44% so the round
+     G clears the flat I.
+   - INDUSTRIES sits 1.8% inside GAZILLION. Flush, the I reads as jammed against
+     the G and the S hangs past the N.
+   - size, tracking and weight only. Never a transform - a stretched Archivo
+     Black shows on the round shoulders before anywhere else.
 
-/* Pushed to the bottom of the card so the two buttons share a baseline. The
-   panels are different shapes and the copy is different lengths, so without
-   this the shorter card's CTA floats mid-air next to the other's. */
-.buy{margin-top:auto; padding-top:22px; display:flex; flex-direction:column; align-items:center; gap:9px}
-.cta{font-family:"Archivo Black","Arial Black",sans-serif;
-      font-size:clamp(14px,3.6vw,16px); letter-spacing:.01em;
-      color:var(--card-ground); background:var(--ink); border-radius:999px;
-      padding:14px 30px; text-decoration:none; display:inline-block;
-      transition:transform .12s ease}
-.cta:hover{transform:translateY(-1px)}
-.cta:focus-visible{outline:3px solid var(--ink); outline-offset:4px}
-.price{font-size:12.5px; letter-spacing:.14em; text-transform:uppercase;
-        color:var(--ink-faint)}
+   The sizes are NOT the canvas-measured ones. Canvas ink metrics and the DOM's
+   own layout disagree by ~6% on Archivo Black, so these were fitted by
+   rendering headless and measuring the ink against social/brand/avatar-black.png
+   until GAZILLION's ink came out 986/972 of the measure, INDUSTRIES' 968/972,
+   the two centres 14/972 apart and the gap 13/972 - which is what that file
+   measures. Same correction the renderer's own akx/bkx factors make.
+   Do not "clean up" these decimals. */
+.lock{--T:var(--measure-house);
+      width:var(--T); margin:0 auto; display:flex; flex-direction:column;
+      align-items:center; color:#0d0d0d}
+.lock span{display:block; white-space:nowrap; line-height:1; font-weight:400}
+.lock-a{font-family:var(--display); letter-spacing:-.055em;
+        font-size:calc(var(--T)*.182602); width:calc(var(--T)*1.0144);
+        text-indent:calc(var(--T)*-.0049449);
+        position:relative; left:calc(var(--T)*-.017487)}
+.lock-b{font-family:var(--body); font-weight:300; letter-spacing:.31em;
+        font-size:calc(var(--T)*.113911); width:calc(var(--T)*.9961408);
+        text-indent:calc(var(--T)*-.009595); margin-top:calc(var(--T)*-.028807)}
+
+
+/* ---- the line ------------------------------------------------------------ */
+/* AUDIO SOFTWARE is not a new tagline written for this page - it is the third
+   tile of the opening Instagram grid, where brand.sh sets those two words in
+   the lockup's own justified stack. Reusing it is the reason there is no line
+   here that has to be argued about. */
+main{position:relative; z-index:1; display:block}
+/* Justified to the same measure as the lockup, so it reads as the third line of
+   the mark rather than as a caption under it. The size is a starting point; the
+   justifier tracks it out to the measure. */
+.lede{width:var(--measure-house); margin:0 auto;
+      padding:clamp(34px,5.5vw,50px) 0 0}
+.lede h1{font-family:var(--display); font-weight:400;
+         font-size:clamp(13px,3.1vw,20px); line-height:1.1;
+         --fit-min:.9; --fit-max:1.5}
+
+/* ---- the display --------------------------------------------------------- */
+/* ONE case, and the products rotate through it - rather than two cards side by
+   side. Two at once splits the attention of a page whose whole job is to get
+   one of them clicked, and it halves the size of the only thing on the page
+   that moves. Whichever plug-in is up gets the full width, a panel big enough
+   to read, and its own button.
+   
+   The case is the frame - border, gold stripe, ground - and it never moves. The
+   product inside it does. */
+.show{position:relative; overflow:hidden; margin:clamp(30px,5vw,46px) 0 0;
+      background:var(--card); border:1px solid var(--line); border-radius:18px;
+      box-shadow:0 24px 60px -30px var(--shadow)}
+/* The one piece of sky below the sign. It runs the full width like a batch
+   stripe on a case, which is the whole posture the name is doing. */
+.show::before{content:""; display:block; height:4px; background-image:var(--sky)}
+
+.track{display:flex; align-items:stretch;
+       overflow-x:auto; scroll-snap-type:x mandatory; scroll-behavior:smooth;
+       scrollbar-width:none; -ms-overflow-style:none}
+.track::-webkit-scrollbar{display:none}
+.track:focus-visible{outline:2px solid var(--chalk); outline-offset:-6px}
+
+/* FLEX, not grid, and that is not a preference. The stage has to be allowed to
+   shrink: Chordea is a 4:3 iPad shot where the other two are portrait panels, so
+   at full height it wants 872px and the case does not have that after the copy
+   column. A grid track sized minmax(0,auto) does NOT shrink below its
+   max-content - grid distributes free space, it does not take it back - so the
+   copy ran off the right edge and got clipped by the case. A flex item with
+   flex-shrink and min-width:0 gives it back. */
+.prod{flex:0 0 100%; scroll-snap-align:center;
+      display:flex; flex-direction:column;
+      align-items:center; justify-content:center; text-align:center;
+      gap:clamp(20px,3.6vw,58px);
+      padding:clamp(26px,3.6vw,44px) clamp(18px,3vw,44px) clamp(30px,4vw,46px)}
+/* Panel beside the copy once there is room, so the panel can be big without
+   pushing the button off the screen. These panels are portrait and narrow -
+   680x1800 and 334x654 - so stacked they leave most of the width empty and put
+   the ask below the fold. */
+@media (min-width:820px){
+  /* Side by side once there is room, sized to content and centred as one object
+     rather than spread across the case - the copy caps at the measure, so a
+     column that ate the remaining width just left a third of the case empty. */
+  .prod{flex-direction:row; text-align:left}
+  .say{flex:0 0 360px}
+  .stage{flex:0 1 auto}
+}
+/* Each product's own accent, on the line that names what it does and nowhere
+   else. F12's is lifted from its page's #a653f0 to #c07dff: that token was
+   picked against a bright violet ground and lands at 4.5:1 on this black card,
+   which is AA by a hair at 11px. Same move the F12 page itself documents -
+   match the ROLE, not the token, when the ground changes. DRUGS' rouge already
+   reads 7.7:1 here and is used exactly as shipped. */
+.prod--f12{--accent:#c07dff}
+.prod--drugs{--accent:#e0919f}
+/* Chordea's own dark-mode orange, sampled off its App Store shot. Its other
+   accent there is #ffd966, which is four percent off the Gazillion sky and would
+   have quietly made gold mean two things on the one slide where it must not. */
+.prod--chordea{--accent:#f28c40}
+
+/* THE STAGE. The WHOLE panel, not a crop of it.
+   
+   An earlier pass cropped both panels to a shared square from the top. That
+   threw away the display - which is the thing that moves, the thing that shows
+   the plug-in doing the work, and the thing anyone clicks for. A picture of a
+   knob is a picture of the least interesting part.
+   
+   Fitted to a shared HEIGHT rather than a shared width, because that is the
+   only thing that holds two panels of different proportion as a set. The dark
+   either side of the narrow one is the cost of showing all of it. */
+/* 654 is the DRUGS capture's own pixel height, so at full desktop size that
+   clip plays at 1:1 and is never upscaled - which matters more here than
+   anywhere, because it is a 334x654 screen capture and the only footage there
+   is. F12's still is 680x1800 and is downscaled into the same height, so it
+   stays sharp too. */
+/* Height-led, and free to be squeezed by width. The two plug-in panels are
+   portrait and fit by height; Chordea is a 4:3 iPad shot that would come out
+   872px wide at the same height, which is more than the case has left after the
+   copy column. A fixed px cap fixes that at exactly one viewport width and
+   overflows at every other, so the stage carries no cap at all - its grid track
+   is minmax(0,auto), which sizes to the image when there is room and shrinks it
+   when there is not. */
+.stage{display:flex; align-items:center; justify-content:center;
+       height:clamp(400px,56vw,654px); max-width:100%; min-width:0}
+/* Dark themes throughout, and that is not a preference: these sit on a black
+   case, and the light panels are a bright violet and a bright pink that blow a
+   hole in it. The dark themes are also the ones whose displays read - the aura
+   field and the gain-reduction curve are both drawn light on dark. */
+.stage img,.stage video{max-height:100%; max-width:100%; width:auto; height:auto;
+       object-fit:contain;
+       border-radius:10px; background:#000; display:block;
+       box-shadow:0 30px 70px -24px rgba(0,0,0,.95)}
+
+.nav{position:absolute; top:50%; transform:translateY(-50%); z-index:3;
+     width:38px; height:38px; border-radius:999px; cursor:pointer;
+     background:rgba(0,0,0,.46); border:1px solid rgba(255,255,255,.22);
+     color:var(--chalk); font-size:19px; line-height:1;
+     display:flex; align-items:center; justify-content:center;
+     -webkit-backdrop-filter:blur(8px); backdrop-filter:blur(8px);
+     opacity:0; transition:opacity .18s ease, background .18s ease}
+.show:hover .nav,.nav:focus-visible{opacity:1}
+.nav:hover{background:rgba(0,0,0,.76)}
+.nav:focus-visible{outline:2px solid var(--chalk); outline-offset:2px}
+.nav--prev{left:10px} .nav--next{right:10px}
+/* Nothing to hover on a phone, so the arrows would never appear and would only
+   ever be two dead targets over the panel. The flick and the dots do the whole
+   job there. */
+@media (hover:none){ .nav{display:none} }
+
+.dots{display:flex; justify-content:center; gap:9px; margin:20px 0 0}
+.dot{width:7px; height:7px; border-radius:999px; padding:0; cursor:pointer;
+     border:0; background:rgba(255,255,255,.30);
+     transition:background .2s ease, transform .2s ease}
+.dot[aria-current="true"]{background:var(--chalk); transform:scale(1.4)}
+.dot:focus-visible{outline:2px solid var(--chalk); outline-offset:3px}
+
+/* ---- what it says ------------------------------------------------------- */
+/* THE JUSTIFIED BLOCK. House rule, and it applies to every block of type in
+   Gazillion work, not only this page: lines set as a block are justified to one
+   measure, edges flush both sides, uppercase.
+   
+   THE ONLY TWO LEVERS ARE SCALE AND KERNING. Never stretch, never skew, never
+   condense - a transformed face shows on Archivo Black's round shoulders before
+   anywhere else, and it is the one thing this identity has never done. Size and
+   tracking together are how the wordmark itself is built; distortion is not.
+   
+   It is what the plug-in panels already do - AURA ENHANCEMENT and 12 BIT SAUCE
+   FILTER are tracked to the width of the mark above them, and BUS COMPRESSOR is
+   tracked to DRUGS - and it is what the wordmark itself is. So the shop should
+   not be the one surface that sets ragged type.
+   
+   Consequence worth stating: a short line ends up widely tracked and a long one
+   barely tracked, and that is correct rather than a bug to even out. The measure
+   is the constant; the tracking is what varies.
+   
+   The MARKS ARE EXCLUDED. They are dumps of each panel's own outlines - F12's
+   lockup is three runs with two overlap tucks - and re-fitting them would be
+   re-kerning a logo. DRUGS' mark happens to equal the measure because the
+   measure is derived from it; F12's is narrower and stays that way. */
+/* width:100% + max-width, never min(100%,360px). In an auto-sized grid column a
+   percentage width resolves against a column whose size depends on the content,
+   which is circular - it settled at 245px and took the whole block down with it.
+   The desktop column is given the measure explicitly instead. */
+.say{width:100%; max-width:360px; margin:0 auto;
+     display:flex; flex-direction:column}
+
+/* THE MARK IS PART OF THE BLOCK. It spans the measure like every other line,
+   which is the whole point of the rule - the header is GAZILLION over
+   INDUSTRIES justified to one measure, and the size difference between those two
+   words is not a decision, it is what falls out of the fit.
+   
+   So the two marks come out at different cap heights: F12's viewBox is
+   103.866x36.0263 against DRUGS' 189.532x37.8199, so at a shared width F12's
+   caps are the taller ones by a long way. That is correct here in the way it
+   would not have been when both products were on screen at once - they are never
+   side by side now, and each block is justified to itself.
+   
+   SCALED, NOT RE-KERNED. These are dumps of each panel's own outlines - F12's
+   lockup is three runs with two overlap tucks, so "(ilter)" sits in the pocket
+   under the F's bars - and a uniform scale is the one operation that leaves all
+   of that intact. Never a non-uniform transform on these. */
+.pmark{fill:currentColor; color:var(--chalk); height:auto; width:100%}
+
+/* Every line below is set by the justifier at run time. The font-size here is
+   the DESIGN size - what the line wants to be - and --fit-min/--fit-max are how
+   far it may scale from it to keep its tracking in a sane band. Furniture is
+   held near its size and takes the wide tracking, because that is what the
+   panels do to BUS COMPRESSOR. The lines carrying the claim are allowed to grow
+   instead, because 1em of tracking on Archivo Black stops reading as a word. */
+.jt{margin:0; width:100%; text-align:left; text-transform:uppercase;
+    white-space:nowrap; --fit-min:.88; --fit-max:1.35; --fit-aim:.26}
+/* Chordea has no lockup to dump - it is an iPad app, not a Gazillion panel - so
+   its name is set as type. --fit-aim:-.015 tells the justifier to hold the
+   tracking near DRUGS' own -1.5 and let SIZE do the fitting, which is what a
+   wordmark wants; the furniture below it does the opposite. */
+.wordmark{font-family:var(--display); font-weight:400; font-size:48px;
+          line-height:1; color:var(--chalk);
+          --fit-min:.4; --fit-max:3; --fit-aim:-.015}
+.sub,.formats,.price{--fit-min:.94; --fit-max:1.10}
+.cat,.pitch{--fit-min:.85; --fit-max:1.55}
+.sub{margin-top:16px; font-size:13px; font-weight:700; color:var(--chalk)}
+/* What it claims, in the product's colour. */
+.cat{margin-top:16px; font-family:var(--display); font-weight:400;
+     font-size:16px; color:var(--accent)}
+/* And what you do with it. Both lines lifted verbatim off the product's own
+   page - this page does not get to write copy for a plug-in it is only
+   pointing at. */
+.pitch{margin-top:14px; font-size:15px; font-weight:500; color:var(--chalk-soft)}
+.formats{margin-top:18px; font-size:11px; font-weight:600; color:var(--chalk-faint)}
+
+.buy{margin-top:24px; width:100%; display:flex; flex-direction:column; gap:12px}
+/* Full measure, so the button closes the block rather than floating inside it. */
+.cta{display:block; width:100%; text-align:center;
+     font-family:var(--display); font-weight:400;
+     font-size:clamp(15px,3.8vw,17px); letter-spacing:.01em;
+     color:#0d0d0d; background:var(--chalk); border-radius:999px;
+     padding:17px 20px; text-decoration:none;
+     box-shadow:0 12px 30px -14px rgba(0,0,0,.9);
+     transition:transform .16s ease, box-shadow .16s ease}
+.cta:hover{transform:translateY(-2px); box-shadow:0 18px 36px -14px rgba(0,0,0,.9)}
+.cta:focus-visible{outline:3px solid var(--chalk); outline-offset:4px}
+/* The price is not furniture - it is the second thing anyone looks for after
+   the picture - so the number is white and only the qualification is dimmed. */
+.price{font-size:12px; font-weight:600; color:var(--chalk-faint)}
+.price b{color:var(--chalk); font-weight:700}
+
+/* ---- the list ------------------------------------------------------------ */
+/* Sits after the display, never before it, and carries no discount - the same
+   rule the product pages state. Anyone who reaches this has already walked past
+   the ask, so the list is the second-best outcome rather than a competitor to
+   the first. Posts to Kit form 9851450, the same list both product pages feed;
+   the field name email_address is Kit's, read off the live form - a post that
+   reaches the right host with the wrong field name still returns 200, so
+   guessing it wrong looks exactly like guessing it right. */
+.list{margin:clamp(48px,7vw,72px) auto 0; width:100%; max-width:440px;
+      text-align:center}
+.list p{margin:0 0 12px; font-size:12px; letter-spacing:.14em;
+        text-transform:uppercase; color:var(--chalk-soft)}
+.list form{display:flex; gap:8px}
+.list input{flex:1 1 auto; min-width:0; font-family:inherit; font-size:15px;
+            color:var(--chalk); background:var(--ground-deep);
+            border:1px solid var(--line); border-radius:999px;
+            padding:12px 18px; -webkit-appearance:none}
+.list input::placeholder{color:var(--chalk-faint)}
+.list input:focus{outline:none; border-color:var(--chalk-soft)}
+.list button{flex:0 0 auto; font-family:inherit; font-size:12px; font-weight:600;
+             letter-spacing:.1em; text-transform:uppercase; cursor:pointer;
+             color:#0d0d0d; background:var(--chalk); border:0;
+             border-radius:999px; padding:12px 22px}
+.list button:focus-visible{outline:2px solid var(--chalk); outline-offset:3px}
+.list.is-done form{display:none}
+.list.is-done p{color:var(--chalk)}
 
 /* ---- foot ---------------------------------------------------------------- */
-.more{margin:52px 0 0; text-align:center}
-.more p{margin:0; font-size:clamp(11px,2.6vw,13px); letter-spacing:.2em;
-         text-transform:uppercase; color:var(--ink-faint)}
-.foot{margin:38px 0 0; padding:26px 0 40px; border-top:1px solid var(--line);
-       text-align:center; font-size:12px; color:var(--ink-faint)}
-.foot a{color:var(--ink-soft); text-decoration:none}
-.foot a:hover{text-decoration:underline}
+.foot{position:relative; z-index:1; margin:clamp(44px,7vw,68px) 0 0;
+      border-top:1px solid var(--line)}
+.foot p{margin:0; padding:26px 0 44px; text-align:center;
+        font-size:11px; letter-spacing:.22em; text-transform:uppercase;
+        color:var(--chalk-faint)}
+
+@media (prefers-reduced-motion:reduce){
+  .cta,.nav,.dot{transition:none}
+  .cta:hover{transform:none}
+  .track{scroll-behavior:auto}
+}
 </style>
 
-<div class="wrap">
+<header class="sign">
+  <!-- role=img so the mark is announced once, as a name, instead of read out as
+       two lines of wide-tracked capitals. The words stay in the source. -->
+  <p class="lock" role="img" aria-label="Gazillion Industries">
+    <span class="lock-a">GAZILLION</span><span class="lock-b">INDUSTRIES</span>
+  </p>
+</header>
 
-  <header class="masthead">
-    <p class="house">Gazillion Industries</p>
-    <h1 class="house-line">One thing, really well.</h1>
-    <p class="house-sub">Plug-ins for macOS and Windows. No manual, no menu diving,
-       nothing to dial in wrong.</p>
-  </header>
+<main>
+  <div class="wrap">
 
-  <!-- F12 first: it is the new one and the one the launch is pointed at. -->
-  <div class="shelf">
+    <div class="lede"><h1 class="jt">VST's and audio software</h1></div>
 
-    <section class="card card--f12">
-      <!-- The light panel, not the dark one the product page leads with: both
-           cards show a light panel on the product's own dark ground, which is
-           the pairing the store headers use and the only way these two read as
-           a set rather than as two unrelated tiles. -->
-      <img class="panel" src="f12/f12-light.jpg" width="680" height="1800" loading="lazy"
-           alt="The F(ilter)12 panel: SAMPLE RATE and BIT dials beside a large filter POSITION dial, over a display showing the filter curve and the AURA field.">
-      <svg class="pmark pmark--f12" role="img" aria-label="F(ilter)12" viewBox="0 0 103.866 36.0263"><path fill="currentColor" fill-rule="nonzero" d="M0 0.554016 L24.8199 0.554016 L24.8199 7.53463 L10.0831 7.53463 L10.0831 13.2078 L22.6704 13.2078 L22.6704 19.7673 L10.0831 19.7673 L10.0831 33.0415 L0 33.0415 L0 0.554016 Z M18.6694 22.7161 L20.4284 22.7161 Q19.5212 24.7244 19.1195 26.428 Q18.7802 27.8753 18.7802 29.5166 Q18.7802 32.6814 20.4284 36.0263 L18.6694 36.0263 Q17.3259 34.1219 16.7823 32.581 Q16.2387 31.0402 16.2387 29.3504 Q16.2387 27.5983 16.81 26.0194 Q17.3813 24.4404 18.6694 22.7161 Z M21.4381 22.8892 L24.2567 22.8892 L24.2567 24.8075 L21.4381 24.8075 L21.4381 22.8892 Z M21.4381 25.687 L24.2567 25.687 L24.2567 33.0415 L21.4381 33.0415 L21.4381 25.687 Z M25.6541 22.8892 L28.4796 22.8892 L28.4796 33.0415 L25.6541 33.0415 L25.6541 22.8892 Z M33.1804 22.8892 L33.1804 25.687 L34.7317 25.687 L34.7317 27.7438 L33.1804 27.7438 L33.1804 30.3546 Q33.1804 30.8255 33.2705 30.9778 Q33.409 31.2133 33.7552 31.2133 Q34.0669 31.2133 34.6278 31.0332 L34.8356 32.9792 Q33.7899 33.2078 32.8827 33.2078 Q31.83 33.2078 31.3314 32.9377 Q30.8328 32.6676 30.5939 32.117 Q30.355 31.5665 30.355 30.3338 L30.355 27.7438 L29.3162 27.7438 L29.3162 25.687 L30.355 25.687 L30.355 24.3366 L33.1804 22.8892 Z M43.74 30.0637 L38.089 30.0637 Q38.1652 30.7424 38.4561 31.0748 Q38.8646 31.5526 39.5225 31.5526 Q39.938 31.5526 40.312 31.3449 Q40.5405 31.2133 40.8037 30.8809 L43.5807 31.1371 Q42.9436 32.2452 42.0433 32.7265 Q41.143 33.2078 39.4602 33.2078 Q37.999 33.2078 37.161 32.7957 Q36.3231 32.3837 35.7725 31.4868 Q35.222 30.59 35.222 29.3781 Q35.222 27.6537 36.3265 26.5873 Q37.4311 25.5208 39.3771 25.5208 Q40.9561 25.5208 41.8702 25.9986 Q42.7843 26.4765 43.2621 27.3837 Q43.74 28.2909 43.74 29.7452 L43.74 30.0637 Z M40.873 28.7133 Q40.7898 27.8961 40.4332 27.5429 Q40.0765 27.1897 39.4948 27.1897 Q38.8231 27.1897 38.4214 27.723 Q38.1652 28.0554 38.0959 28.7133 L40.873 28.7133 Z M44.5627 25.687 L47.2012 25.687 L47.2012 26.892 Q47.5821 26.1094 47.9872 25.8151 Q48.3923 25.5208 48.9879 25.5208 Q49.6112 25.5208 50.3522 25.9086 L49.4796 27.9169 Q48.981 27.7091 48.6901 27.7091 Q48.1361 27.7091 47.8314 28.1662 Q47.3951 28.8102 47.3951 30.5762 L47.3951 33.0415 L44.5627 33.0415 L44.5627 25.687 Z M51.7912 22.7161 L50.0322 22.7161 Q50.9394 24.7244 51.3411 26.428 Q51.6804 27.8753 51.6804 29.5166 Q51.6804 32.6814 50.0322 36.0263 L51.7912 36.0263 Q53.1347 34.1219 53.6783 32.581 Q54.222 31.0402 54.222 29.3504 Q54.222 27.5983 53.6506 26.0194 Q53.0793 24.4404 51.7912 22.7161 Z M69.6333 0 L69.6333 33.0415 L60.5032 33.0415 L60.5032 11.3906 Q58.2871 13.0748 56.2151 14.1163 Q54.1431 15.1579 51.0184 16.1108 L51.0184 8.70914 Q55.6278 7.22438 58.1763 5.14127 Q60.7248 3.05817 62.1652 0 L69.6333 0 Z M103.866 33.0415 L76.7857 33.0415 Q77.2511 29.0305 79.6112 25.4958 Q81.9713 21.9612 88.4644 17.1524 Q92.4311 14.205 93.5392 12.6759 Q94.6472 11.1468 94.6472 9.77285 Q94.6472 8.28809 93.5502 7.23546 Q92.4533 6.18283 90.7912 6.18283 Q89.0627 6.18283 87.9658 7.2687 Q86.8688 8.35457 86.4921 11.1025 L77.4505 10.3712 Q77.9824 6.55956 79.4007 4.42105 Q80.8189 2.28255 83.4007 1.14127 Q85.9824 0 90.5475 0 Q95.312 0 97.9602 1.08587 Q100.608 2.17175 102.126 4.42105 Q103.644 6.67036 103.644 9.4626 Q103.644 12.4321 101.905 15.1357 Q100.165 17.8393 95.5779 21.0748 Q92.8522 22.9584 91.9325 23.7119 Q91.0128 24.4654 89.7718 25.6842 L103.866 25.6842 L103.866 33.0415 Z"/></svg>
-      <p class="cat">Aura enhancement</p>
-      <p class="pitch">Turn it on over a mix you know well, then turn it off. That is
-         the whole pitch - things sit better and nothing sounds processed.</p>
-      <p class="formats">AU &middot; VST3 &middot; Standalone &middot; macOS &middot; Windows</p>
-      <div class="buy">
-        <a class="cta" href="/f12.html">See F(ilter)12</a>
-        <span class="price">$49 &nbsp;&middot;&nbsp; includes DRUGS free</span>
+    <div class="show">
+      <div class="track" id="track">
+
+        <!-- F12 first: it is the new one and the one the launch is pointed at. -->
+        <article class="prod prod--f12">
+          <div class="stage">
+            <img src="f12/f12-dark.jpg" width="680" height="1800"
+                 alt="The F(ilter)12 panel with AURA on: SAMPLE RATE and BIT dials, a large filter POSITION dial, rows of filter and resonance shapes, and a display showing the filter curve over the AURA field - green where the stage is adding and red where it is taking away.">
+          </div>
+          <div class="say">
+            <svg class="pmark pmark--f12" role="img" aria-label="F(ilter)12" viewBox="0 0 103.866 36.0263"><path fill="currentColor" fill-rule="nonzero" d="M0 0.554016 L24.8199 0.554016 L24.8199 7.53463 L10.0831 7.53463 L10.0831 13.2078 L22.6704 13.2078 L22.6704 19.7673 L10.0831 19.7673 L10.0831 33.0415 L0 33.0415 L0 0.554016 Z M18.6694 22.7161 L20.4284 22.7161 Q19.5212 24.7244 19.1195 26.428 Q18.7802 27.8753 18.7802 29.5166 Q18.7802 32.6814 20.4284 36.0263 L18.6694 36.0263 Q17.3259 34.1219 16.7823 32.581 Q16.2387 31.0402 16.2387 29.3504 Q16.2387 27.5983 16.81 26.0194 Q17.3813 24.4404 18.6694 22.7161 Z M21.4381 22.8892 L24.2567 22.8892 L24.2567 24.8075 L21.4381 24.8075 L21.4381 22.8892 Z M21.4381 25.687 L24.2567 25.687 L24.2567 33.0415 L21.4381 33.0415 L21.4381 25.687 Z M25.6541 22.8892 L28.4796 22.8892 L28.4796 33.0415 L25.6541 33.0415 L25.6541 22.8892 Z M33.1804 22.8892 L33.1804 25.687 L34.7317 25.687 L34.7317 27.7438 L33.1804 27.7438 L33.1804 30.3546 Q33.1804 30.8255 33.2705 30.9778 Q33.409 31.2133 33.7552 31.2133 Q34.0669 31.2133 34.6278 31.0332 L34.8356 32.9792 Q33.7899 33.2078 32.8827 33.2078 Q31.83 33.2078 31.3314 32.9377 Q30.8328 32.6676 30.5939 32.117 Q30.355 31.5665 30.355 30.3338 L30.355 27.7438 L29.3162 27.7438 L29.3162 25.687 L30.355 25.687 L30.355 24.3366 L33.1804 22.8892 Z M43.74 30.0637 L38.089 30.0637 Q38.1652 30.7424 38.4561 31.0748 Q38.8646 31.5526 39.5225 31.5526 Q39.938 31.5526 40.312 31.3449 Q40.5405 31.2133 40.8037 30.8809 L43.5807 31.1371 Q42.9436 32.2452 42.0433 32.7265 Q41.143 33.2078 39.4602 33.2078 Q37.999 33.2078 37.161 32.7957 Q36.3231 32.3837 35.7725 31.4868 Q35.222 30.59 35.222 29.3781 Q35.222 27.6537 36.3265 26.5873 Q37.4311 25.5208 39.3771 25.5208 Q40.9561 25.5208 41.8702 25.9986 Q42.7843 26.4765 43.2621 27.3837 Q43.74 28.2909 43.74 29.7452 L43.74 30.0637 Z M40.873 28.7133 Q40.7898 27.8961 40.4332 27.5429 Q40.0765 27.1897 39.4948 27.1897 Q38.8231 27.1897 38.4214 27.723 Q38.1652 28.0554 38.0959 28.7133 L40.873 28.7133 Z M44.5627 25.687 L47.2012 25.687 L47.2012 26.892 Q47.5821 26.1094 47.9872 25.8151 Q48.3923 25.5208 48.9879 25.5208 Q49.6112 25.5208 50.3522 25.9086 L49.4796 27.9169 Q48.981 27.7091 48.6901 27.7091 Q48.1361 27.7091 47.8314 28.1662 Q47.3951 28.8102 47.3951 30.5762 L47.3951 33.0415 L44.5627 33.0415 L44.5627 25.687 Z M51.7912 22.7161 L50.0322 22.7161 Q50.9394 24.7244 51.3411 26.428 Q51.6804 27.8753 51.6804 29.5166 Q51.6804 32.6814 50.0322 36.0263 L51.7912 36.0263 Q53.1347 34.1219 53.6783 32.581 Q54.222 31.0402 54.222 29.3504 Q54.222 27.5983 53.6506 26.0194 Q53.0793 24.4404 51.7912 22.7161 Z M69.6333 0 L69.6333 33.0415 L60.5032 33.0415 L60.5032 11.3906 Q58.2871 13.0748 56.2151 14.1163 Q54.1431 15.1579 51.0184 16.1108 L51.0184 8.70914 Q55.6278 7.22438 58.1763 5.14127 Q60.7248 3.05817 62.1652 0 L69.6333 0 Z M103.866 33.0415 L76.7857 33.0415 Q77.2511 29.0305 79.6112 25.4958 Q81.9713 21.9612 88.4644 17.1524 Q92.4311 14.205 93.5392 12.6759 Q94.6472 11.1468 94.6472 9.77285 Q94.6472 8.28809 93.5502 7.23546 Q92.4533 6.18283 90.7912 6.18283 Q89.0627 6.18283 87.9658 7.2687 Q86.8688 8.35457 86.4921 11.1025 L77.4505 10.3712 Q77.9824 6.55956 79.4007 4.42105 Q80.8189 2.28255 83.4007 1.14127 Q85.9824 0 90.5475 0 Q95.312 0 97.9602 1.08587 Q100.608 2.17175 102.126 4.42105 Q103.644 6.67036 103.644 9.4626 Q103.644 12.4321 101.905 15.1357 Q100.165 17.8393 95.5779 21.0748 Q92.8522 22.9584 91.9325 23.7119 Q91.0128 24.4654 89.7718 25.6842 L103.866 25.6842 L103.866 33.0415 Z"/></svg>
+            <p class="jt sub">12 bit sauce filter</p>
+            <p class="jt cat">Aura enhancement</p>
+            <p class="jt pitch">turn on aura and experience magic.</p>
+            <p class="jt formats">AU &middot; VST3 &middot; Standalone &middot; macOS &middot; Windows</p>
+            <div class="buy">
+              <a class="cta" href="/f12.html">See F(ilter)12</a>
+              <p class="jt price"><b>$49</b> &nbsp;&middot;&nbsp; includes DRUGS free</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="prod prod--drugs">
+          <div class="stage">
+            <!-- The same demo.mp4 the DRUGS landing page carries, and the same
+                 poster - one capture, one place to re-record it. Muted, looped
+                 and inline: a storefront that makes a noise is a storefront
+                 people close, and muted+playsinline is also the only way it
+                 starts on iOS at all.
+                 
+                 334x654 is the capture's own size, which is why the stage caps
+                 at 654px - at full desktop width it plays 1:1 and is never
+                 asked to upscale. -->
+            <video src="demo.mp4" poster="demo-poster.jpg"
+                   width="334" height="654" autoplay muted loop playsinline
+                   preload="metadata" disablepictureinpicture
+                   aria-label="The DRUGS panel running: DOSE swept from 0 to 100 with the gain-reduction curve carving into the level history below."></video>
+          </div>
+          <div class="say">
+            <svg class="pmark pmark--drugs" role="img" aria-label="DRUGS" viewBox="0 0 189.532 37.8199"><path fill="currentColor" fill-rule="nonzero" d="M0 0.623268 L16.7784 0.623268 Q21.7396 0.623268 24.7936 1.96953 Q27.8476 3.31579 29.8421 5.8338 Q31.8366 8.3518 32.7341 11.6925 Q33.6316 15.0332 33.6316 18.7729 Q33.6316 24.6316 32.2978 27.8601 Q30.964 31.0886 28.5956 33.2701 Q26.2271 35.4515 23.5097 36.1745 Q19.795 37.1717 16.7784 37.1717 L0 37.1717 L0 0.623268 Z M11.2936 8.90028 L11.2936 28.8698 L14.0609 28.8698 Q17.6011 28.8698 19.097 28.0845 Q20.5928 27.2992 21.4404 25.3421 Q22.2881 23.385 22.2881 18.9972 Q22.2881 13.1884 20.3934 11.0443 Q18.4986 8.90028 14.1108 8.90028 L11.2936 8.90028 Z M38.2147 37.1717 L38.2147 0.623268 L57.0374 0.623268 Q62.2728 0.623268 65.0402 1.52078 Q67.8075 2.41829 69.5028 4.84903 Q71.1981 7.27978 71.1981 10.7701 Q71.1981 13.8116 69.9016 16.018 Q68.6053 18.2244 66.3366 19.5956 Q64.8906 20.4681 62.3726 21.0416 Q64.392 21.7147 65.3144 22.3878 Q65.9377 22.8366 67.1219 24.3075 Q68.3061 25.7784 68.705 26.5762 L74.1648 37.1717 L61.4003 37.1717 L55.367 26.0028 Q54.2202 23.8338 53.3227 23.1856 Q52.1011 22.338 50.5554 22.338 L49.5582 22.338 L49.5582 37.1717 L38.2147 37.1717 Z M49.5582 15.4321 L54.3199 15.4321 Q55.0928 15.4321 57.3116 14.9335 Q58.4335 14.7091 59.144 13.7867 Q59.8546 12.8643 59.8546 11.6676 Q59.8546 9.89751 58.7327 8.95014 Q57.6108 8.00277 54.5194 8.00277 L49.5582 8.00277 L49.5582 15.4321 Z M100.064 0.623268 L111.332 0.623268 L111.332 22.4127 Q111.332 25.6537 110.323 28.5332 Q109.313 31.4127 107.156 33.5693 Q105 35.7258 102.632 36.5983 Q99.3407 37.8199 94.7285 37.8199 Q92.0609 37.8199 88.9072 37.446 Q85.7534 37.072 83.6343 35.9626 Q81.5152 34.8532 79.7576 32.8089 Q78 30.7645 77.3518 28.5956 Q76.3047 25.1053 76.3047 22.4127 L76.3047 0.623268 L87.5734 0.623268 L87.5734 22.9363 Q87.5734 25.928 89.2313 27.6108 Q90.8892 29.2936 93.831 29.2936 Q96.7479 29.2936 98.4058 27.6357 Q100.064 25.9778 100.064 22.9363 L100.064 0.623268 Z M135.686 23.9335 L135.686 16.3296 L153.137 16.3296 L153.137 31.9114 Q148.126 35.3269 144.274 36.5609 Q140.422 37.795 135.137 37.795 Q128.63 37.795 124.529 35.5762 Q120.428 33.3573 118.172 28.9695 Q115.915 24.5817 115.915 18.8975 Q115.915 12.9141 118.384 8.48892 Q120.852 4.06371 125.614 1.77008 Q129.328 0 135.611 0 Q141.669 0 144.673 1.09695 Q147.677 2.19391 149.659 4.5 Q151.641 6.8061 152.638 10.3463 L141.744 12.2909 Q141.071 10.2216 139.463 9.12465 Q137.855 8.0277 135.361 8.0277 Q131.647 8.0277 129.44 10.608 Q127.234 13.1884 127.234 18.7729 Q127.234 24.7064 129.465 27.2493 Q131.697 29.7922 135.686 29.7922 Q137.58 29.7922 139.301 29.2438 Q141.021 28.6953 143.24 27.374 L143.24 23.9335 L135.686 23.9335 Z M156.374 25.0803 L167.119 24.4072 Q167.468 27.0249 168.54 28.3961 Q170.285 30.615 173.526 30.615 Q175.945 30.615 177.253 29.4806 Q178.562 28.3463 178.562 26.8504 Q178.562 25.4294 177.316 24.3075 Q176.069 23.1856 171.532 22.1884 Q164.102 20.518 160.936 17.7507 Q157.745 14.9834 157.745 10.6953 Q157.745 7.87812 159.378 5.37258 Q161.011 2.86704 164.289 1.43352 Q167.568 0 173.277 0 Q180.283 0 183.96 2.60526 Q187.637 5.21053 188.335 10.8947 L177.69 11.518 Q177.266 9.04986 175.907 7.92798 Q174.548 6.8061 172.155 6.8061 Q170.186 6.8061 169.188 7.64128 Q168.191 8.47646 168.191 9.67313 Q168.191 10.5457 169.014 11.2438 Q169.812 11.9668 172.803 12.59 Q180.208 14.1856 183.411 15.8186 Q186.615 17.4515 188.073 19.8698 Q189.532 22.2881 189.532 25.2798 Q189.532 28.795 187.587 31.7618 Q185.643 34.7285 182.152 36.2618 Q178.662 37.795 173.352 37.795 Q164.028 37.795 160.438 34.205 Q156.848 30.615 156.374 25.0803 Z"/></svg>
+            <p class="jt sub">bus compressor</p>
+            <p class="jt cat">Make everything better</p>
+            <p class="jt pitch">one knob, impossible sauce.</p>
+            <p class="jt formats">AU &middot; VST3 &middot; Standalone &middot; macOS &middot; Windows</p>
+            <div class="buy">
+              <a class="cta" href="/drugs.html">See DRUGS</a>
+              <p class="jt price"><b>Pay what you want</b> &nbsp;&middot;&nbsp; $5 minimum</p>
+            </div>
+          </div>
+        </article>
+
+
+        <!-- Chordea is a release by the PERSON, not by the company - its App
+             Store seller is ANTHONY GREG BARKO, the same individual Apple
+             enrolment that signs the plug-ins. It sits on this shelf because
+             Tony asked for it there; nothing on the page claims the LLC
+             published it, and nothing should start to. -->
+        <article class="prod prod--chordea">
+          <div class="stage">
+            <!-- The full chord grid, which is the product: 22 chord types across
+                 all twelve roots, the suggestion highlights lit, the strum plate
+                 down the right edge and the controls down the left. Its dark
+                 theme is the one that would sit better on this ground, but every
+                 dark shot in the listing is a sequence or suggestion view with
+                 most of the grid empty - and the grid is the thing worth seeing. -->
+            <img src="chordea/chordea.jpg" width="1400" height="1050" loading="lazy"
+                 alt="Chordea running on iPad: the full chord grid, 22 chord types across all twelve roots with the suggested next chords outlined, the strum plate down the right edge, and volume, waveform, strum and voicing controls down the left.">
+          </div>
+          <div class="say">
+            <p class="jt wordmark">Chordea</p>
+            <p class="jt sub">midi chord controller</p>
+            <p class="jt cat">The idea machine</p>
+            <p class="jt pitch">touch some chords. get some ideas.</p>
+            <p class="jt formats">iPad &middot; iPadOS 16 &middot; USB MIDI</p>
+            <div class="buy">
+              <a class="cta" href="https://apps.apple.com/us/app/chordea/id6757318321">See CHORDEA</a>
+              <p class="jt price"><b>$9.99</b> &nbsp;&middot;&nbsp; app store</p>
+            </div>
+          </div>
+        </article>
+
       </div>
-    </section>
+      <button class="nav nav--prev" type="button" aria-label="Previous">&lsaquo;</button>
+      <button class="nav nav--next" type="button" aria-label="Next">&rsaquo;</button>
+    </div>
+    <div class="dots" id="dots"></div>
 
-    <section class="card card--drugs">
-      <img class="panel" src="drugs/drugs-light.jpg" width="600" height="1165" loading="lazy"
-           alt="The DRUGS panel: a single large DOSE dial reading 72 with a small MIX dial beside it, over a scrolling level display.">
-      <svg class="pmark pmark--drugs" role="img" aria-label="DRUGS" viewBox="0 0 189.532 37.8199"><path fill="currentColor" fill-rule="nonzero" d="M0 0.623268 L16.7784 0.623268 Q21.7396 0.623268 24.7936 1.96953 Q27.8476 3.31579 29.8421 5.8338 Q31.8366 8.3518 32.7341 11.6925 Q33.6316 15.0332 33.6316 18.7729 Q33.6316 24.6316 32.2978 27.8601 Q30.964 31.0886 28.5956 33.2701 Q26.2271 35.4515 23.5097 36.1745 Q19.795 37.1717 16.7784 37.1717 L0 37.1717 L0 0.623268 Z M11.2936 8.90028 L11.2936 28.8698 L14.0609 28.8698 Q17.6011 28.8698 19.097 28.0845 Q20.5928 27.2992 21.4404 25.3421 Q22.2881 23.385 22.2881 18.9972 Q22.2881 13.1884 20.3934 11.0443 Q18.4986 8.90028 14.1108 8.90028 L11.2936 8.90028 Z M38.2147 37.1717 L38.2147 0.623268 L57.0374 0.623268 Q62.2728 0.623268 65.0402 1.52078 Q67.8075 2.41829 69.5028 4.84903 Q71.1981 7.27978 71.1981 10.7701 Q71.1981 13.8116 69.9016 16.018 Q68.6053 18.2244 66.3366 19.5956 Q64.8906 20.4681 62.3726 21.0416 Q64.392 21.7147 65.3144 22.3878 Q65.9377 22.8366 67.1219 24.3075 Q68.3061 25.7784 68.705 26.5762 L74.1648 37.1717 L61.4003 37.1717 L55.367 26.0028 Q54.2202 23.8338 53.3227 23.1856 Q52.1011 22.338 50.5554 22.338 L49.5582 22.338 L49.5582 37.1717 L38.2147 37.1717 Z M49.5582 15.4321 L54.3199 15.4321 Q55.0928 15.4321 57.3116 14.9335 Q58.4335 14.7091 59.144 13.7867 Q59.8546 12.8643 59.8546 11.6676 Q59.8546 9.89751 58.7327 8.95014 Q57.6108 8.00277 54.5194 8.00277 L49.5582 8.00277 L49.5582 15.4321 Z M100.064 0.623268 L111.332 0.623268 L111.332 22.4127 Q111.332 25.6537 110.323 28.5332 Q109.313 31.4127 107.156 33.5693 Q105 35.7258 102.632 36.5983 Q99.3407 37.8199 94.7285 37.8199 Q92.0609 37.8199 88.9072 37.446 Q85.7534 37.072 83.6343 35.9626 Q81.5152 34.8532 79.7576 32.8089 Q78 30.7645 77.3518 28.5956 Q76.3047 25.1053 76.3047 22.4127 L76.3047 0.623268 L87.5734 0.623268 L87.5734 22.9363 Q87.5734 25.928 89.2313 27.6108 Q90.8892 29.2936 93.831 29.2936 Q96.7479 29.2936 98.4058 27.6357 Q100.064 25.9778 100.064 22.9363 L100.064 0.623268 Z M135.686 23.9335 L135.686 16.3296 L153.137 16.3296 L153.137 31.9114 Q148.126 35.3269 144.274 36.5609 Q140.422 37.795 135.137 37.795 Q128.63 37.795 124.529 35.5762 Q120.428 33.3573 118.172 28.9695 Q115.915 24.5817 115.915 18.8975 Q115.915 12.9141 118.384 8.48892 Q120.852 4.06371 125.614 1.77008 Q129.328 0 135.611 0 Q141.669 0 144.673 1.09695 Q147.677 2.19391 149.659 4.5 Q151.641 6.8061 152.638 10.3463 L141.744 12.2909 Q141.071 10.2216 139.463 9.12465 Q137.855 8.0277 135.361 8.0277 Q131.647 8.0277 129.44 10.608 Q127.234 13.1884 127.234 18.7729 Q127.234 24.7064 129.465 27.2493 Q131.697 29.7922 135.686 29.7922 Q137.58 29.7922 139.301 29.2438 Q141.021 28.6953 143.24 27.374 L143.24 23.9335 L135.686 23.9335 Z M156.374 25.0803 L167.119 24.4072 Q167.468 27.0249 168.54 28.3961 Q170.285 30.615 173.526 30.615 Q175.945 30.615 177.253 29.4806 Q178.562 28.3463 178.562 26.8504 Q178.562 25.4294 177.316 24.3075 Q176.069 23.1856 171.532 22.1884 Q164.102 20.518 160.936 17.7507 Q157.745 14.9834 157.745 10.6953 Q157.745 7.87812 159.378 5.37258 Q161.011 2.86704 164.289 1.43352 Q167.568 0 173.277 0 Q180.283 0 183.96 2.60526 Q187.637 5.21053 188.335 10.8947 L177.69 11.518 Q177.266 9.04986 175.907 7.92798 Q174.548 6.8061 172.155 6.8061 Q170.186 6.8061 169.188 7.64128 Q168.191 8.47646 168.191 9.67313 Q168.191 10.5457 169.014 11.2438 Q169.812 11.9668 172.803 12.59 Q180.208 14.1856 183.411 15.8186 Q186.615 17.4515 188.073 19.8698 Q189.532 22.2881 189.532 25.2798 Q189.532 28.795 187.587 31.7618 Q185.643 34.7285 182.152 36.2618 Q178.662 37.795 173.352 37.795 Q164.028 37.795 160.438 34.205 Q156.848 30.615 156.374 25.0803 Z"/></svg>
-      <p class="cat">Bus compressor</p>
-      <p class="pitch">Put it on the drum bus and turn up DOSE. Denser, not louder -
-         the peak level barely moves.</p>
-      <p class="formats">AU &middot; VST3 &middot; Standalone &middot; macOS &middot; Windows</p>
-      <div class="buy">
-        <a class="cta" href="/drugs.html">See DRUGS</a>
-        <span class="price">Pay what you want &nbsp;&middot;&nbsp; $5 minimum</span>
-      </div>
-    </section>
+    <div class="list" id="list">
+      <p id="list-msg">there will be more of these</p>
+      <form action="https://app.kit.com/forms/9851450/subscriptions" method="post">
+        <input type="email" name="email_address" placeholder="email" required
+               autocomplete="email" aria-label="Email address">
+        <button type="submit">tell me</button>
+      </form>
+    </div>
 
   </div>
+</main>
 
-  <div class="more"><p>There will be more of these</p></div>
+<footer class="foot">
+  <div class="wrap"><p>Gazillion Industries LLC</p></div>
+</footer>
 
-  <footer class="foot">
-    <p>&copy; 2026 Gazillion Industries LLC &nbsp;&middot;&nbsp;
-       <a href="mailto:tony@gazillionindustries.com">tony@gazillionindustries.com</a></p>
-  </footer>
+<script>
+(function(){
+  var track = document.getElementById("track"),
+      dotsEl = document.getElementById("dots"),
+      slides = [].slice.call(track.children),
+      reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if(slides.length < 2){ dotsEl.remove(); return; }
 
-</div>
+  slides.forEach(function(_, i){
+    var b = document.createElement("button");
+    b.className = "dot"; b.type = "button";
+    b.setAttribute("aria-label", "Show item " + (i + 1));
+    b.addEventListener("click", function(){ go(i); restart(); });
+    dotsEl.appendChild(b);
+  });
+  var dots = [].slice.call(dotsEl.children);
+
+  // `cur` is the source of truth, NOT the scroll position. Deriving the current
+  // slide from scrollLeft every time looked tidier and is a trap: a smooth
+  // scroll is still in flight when the next timer fires, so index() answers with
+  // the slide being left rather than the one being arrived at, and the rotation
+  // advances to the same slide again - forever. The scroll position is read
+  // back only to resync after somebody flicks the track themselves.
+  var cur = 0;
+  function index(){
+    var mid = track.scrollLeft + track.clientWidth / 2, best = 0, bd = Infinity;
+    slides.forEach(function(s, i){
+      var d = Math.abs(s.offsetLeft - track.offsetLeft + s.offsetWidth / 2 - mid);
+      if(d < bd){ bd = d; best = i; }
+    });
+    return best;
+  }
+  function go(i){
+    cur = (i + slides.length) % slides.length;
+    track.scrollTo({ left: slides[cur].offsetLeft - track.offsetLeft, behavior: "smooth" });
+    sync();
+  }
+  function sync(){
+    var n = cur;
+    dots.forEach(function(d, i){ d.setAttribute("aria-current", i === n ? "true" : "false"); });
+    // Kept RUNNING, not paused off-screen. Pausing the one that is not showing
+    // is the cheaper thing to do and it is wrong here: the slide then arrives on
+    // a frozen frame and stays frozen for however long the browser takes to
+    // resume, which is the one moment the page has to look alive. It is a single
+    // small muted clip; letting it run costs less than that.
+    slides.forEach(function(s){
+      var v = s.querySelector("video");
+      if(!v || reduced) return;
+      if(v.paused){ var p = v.play(); if(p && p.catch) p.catch(function(){}); }
+    });
+  }
+
+  document.querySelector(".nav--prev").addEventListener("click", function(){ go(cur - 1); restart(); });
+  document.querySelector(".nav--next").addEventListener("click", function(){ go(cur + 1); restart(); });
+
+  var t;
+  track.addEventListener("scroll", function(){
+    clearTimeout(t);
+    t = setTimeout(function(){ cur = index(); sync(); }, 90);
+  });
+  addEventListener("resize", sync);
+
+  track.setAttribute("tabindex", "0");
+  track.addEventListener("keydown", function(e){
+    if(e.key === "ArrowLeft"){ e.preventDefault(); go(cur - 1); restart(); }
+    if(e.key === "ArrowRight"){ e.preventDefault(); go(cur + 1); restart(); }
+  });
+
+  // Rotates on its own from load. It holds while the pointer is on the case,
+  // while the tab is hidden, and entirely under prefers-reduced-motion.
+  //
+  // A plug-in whose stage is playing gets nearly twice the dwell: the capture is
+  // the one thing on this page that shows a plug-in working rather than
+  // describing it, and six seconds is not long enough to watch a compressor
+  // breathe.
+  var timer = null;
+  function dwell(){ return slides[cur].querySelector("video") ? 11000 : 6500; }
+  function step(){ if(!document.hidden) go(cur + 1); restart(); }
+  function restart(){ stop(); if(!reduced) timer = setTimeout(step, dwell()); }
+  function stop(){ if(timer){ clearTimeout(timer); timer = null; } }
+
+  var show = document.querySelector(".show");
+  show.addEventListener("mouseenter", stop);
+  show.addEventListener("mouseleave", restart);
+  show.addEventListener("touchstart", stop, { passive: true });
+  document.addEventListener("visibilitychange", function(){
+    if(document.hidden) stop(); else restart();
+  });
+
+  sync();
+  restart();
+
+  // Autoplay can be refused before the first interaction on some setups even
+  // when muted. Retry on the events that count as one, and on the metadata
+  // landing, so the clip is moving by the time its slide comes round.
+  [].forEach.call(document.querySelectorAll(".stage video"), function(v){
+    if(reduced) return;
+    var kick = function(){ if(v.paused){ var p = v.play(); if(p && p.catch) p.catch(function(){}); } };
+    v.addEventListener("loadeddata", kick);
+    ["pointerdown","keydown","touchstart"].forEach(function(ev){
+      addEventListener(ev, kick, { once: false, passive: true });
+    });
+    kick();
+  });
+})();
+
+// ---- JUSTIFIED TYPE BLOCKS -------------------------------------------------
+// House rule: a block of type is justified to one measure, edges flush, using
+// SCALE AND KERNING ONLY. Never stretch, never skew, never condense. It is what
+// the wordmark is - GAZILLION heavy and tight over INDUSTRIES light and wide,
+// both justified to one measure, the size difference falling out of the fit -
+// and what every plug-in panel does under its own mark. So it is what every
+// block of type in Gazillion work does.
+//
+// Done at run time rather than hand-set because the measure is fluid and the
+// copy changes: a hard-coded letter-spacing is right at one width for one string
+// and silently wrong everywhere else.
+//
+// The two levers are used in that order. Size moves FIRST, only as far as the
+// line's own --fit-min/--fit-max allow, to bring the tracking near AIM; tracking
+// then closes the remaining gap exactly. Tracking alone would put 1em between
+// the letters of a short line like BUS COMPRESSOR, at which point it stops
+// reading as a word.
+//
+// Two measuring passes, not one. The rendered advance is not exactly
+// `natural + n x step` once hinting and fractional widths are involved, so the
+// first pass gets close and the second corrects against what actually drew -
+// the same reason the wordmark's sizes were fitted against a render rather than
+// trusted from canvas metrics.
+(function justify(){
+  var range = document.createRange();
+  function ink(el){ range.selectNodeContents(el); return range.getBoundingClientRect().width; }
+  function num(cs, prop, dflt){ var v = parseFloat(cs.getPropertyValue(prop)); return isNaN(v) ? dflt : v; }
+
+  function fit(el){
+    var target = el.parentNode.clientWidth,
+        n = (el.textContent || "").trim().length;
+    if(!target || n < 2) return;
+    var gaps = n - 1, cs = getComputedStyle(el),
+        AIM = num(cs, "--fit-aim", 0.26);   // the tracking this line wants
+
+    // The design size is remembered on first run: re-fitting on resize has to
+    // start from what the CSS asked for, not from whatever the last fit left
+    // behind, or every resize compounds the previous one.
+    var base = parseFloat(el.dataset.base || cs.fontSize);
+    el.dataset.base = base;
+
+    el.style.letterSpacing = "0px";
+    el.style.marginRight = "0px";
+    el.style.fontSize = base + "px";
+    var natural = ink(el);
+    if(!(natural > 0)) return;
+
+    // width(size, track) = natural*(size/base) + gaps*track*size, and with
+    // track = AIM*size that is size * (natural/base + gaps*AIM). Solve for the
+    // size that lands on the measure at the tracking we actually want, then keep
+    // it inside the band this line is allowed to move in.
+    var want = target / (natural / base + gaps * AIM);
+    var size = Math.min(base * num(cs, "--fit-max", 1.35),
+               Math.max(base * num(cs, "--fit-min", 0.88), want));
+    el.style.fontSize = size + "px";
+
+    var step = (target - ink(el)) / gaps;
+    el.style.letterSpacing = step + "px";
+    // letter-spacing adds a gap after the LAST glyph too, so the drawn extent is
+    // one step wider than the ink. Subtract it before correcting, and carry the
+    // same step back as a negative right margin so the box measures the measure.
+    var drawn = ink(el) - step;
+    step += (target - drawn) / gaps;
+    el.style.letterSpacing = step + "px";
+    el.style.marginRight = (-step) + "px";
+  }
+
+  function all(){ [].forEach.call(document.querySelectorAll(".jt"), fit); }
+
+  all();
+  addEventListener("resize", all);
+  // Archivo and Archivo Black land after first paint and are wider than the
+  // fallback faces, so every measurement taken before they arrive is of the
+  // wrong type.
+  if(document.fonts && document.fonts.ready) document.fonts.ready.then(all);
+})();
+
+// Provider-agnostic by design, and lifted unchanged from the product pages:
+// Plausible, GoatCounter and Umami each expose a different global, this calls
+// whichever is present and does nothing when none is.
+function track(name, props){
+  try{
+    if(window.plausible)
+      return window.plausible(name, props ? {props:props} : undefined);
+    if(window.goatcounter && window.goatcounter.count)
+      return window.goatcounter.count({path:name, title:name, event:true});
+    if(window.umami && window.umami.track)
+      return window.umami.track(name, props);
+  }catch(e){}
+}
+
+(function list(){
+  var box = document.getElementById("list");
+  if(!box) return;
+  var form = box.querySelector("form"),
+      msg  = document.getElementById("list-msg");
+  // Not wired to a provider yet, so hide it. A form posting nowhere still looks
+  // like it worked and loses every address typed into it, which is worse than
+  // not asking.
+  if(!form || form.getAttribute("action").indexOf("PASTE_") === 0){
+    box.hidden = true;
+    return;
+  }
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+    // no-cors so the cross-origin post is allowed at all; the trade is that the
+    // response cannot be read, so success here is optimistic by necessity.
+    fetch(form.action, {method:"POST", mode:"no-cors", body:new FormData(form)});
+    box.classList.add("is-done");
+    msg.textContent = "ok. you will hear from us.";
+    // Same event name the product pages fire, so the list stays one series
+    // rather than splitting the moment this page goes to the root.
+    track("list_signup");
+  });
+})();
+</script>
 </html>
