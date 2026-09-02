@@ -648,10 +648,20 @@ main{position:relative; z-index:1; display:block}
   function restart(){ stop(); if(!reduced) timer = setTimeout(step, AUTO_MS); }
   function stop(){ if(timer){ clearTimeout(timer); timer = null; } }
 
-  var show = document.querySelector(".show");
-  show.addEventListener("mouseenter", stop);
-  show.addEventListener("mouseleave", restart);
-  show.addEventListener("touchstart", stop, { passive: true });
+  // NOTHING pauses this but a hidden tab and prefers-reduced-motion. It used to
+  // stop on mouseenter and on touchstart, and both were wrong here:
+  //
+  //   - the case spans nearly the full width of the page, so a pointer simply
+  //     resting over it - which is where it rests while you are watching the
+  //     thing - stopped the rotation indefinitely. Read as "the first slide
+  //     waits for the video to finish", because that is roughly how long it took
+  //     to move the mouse again.
+  //   - touchstart called stop() with NO counterpart. mouseleave never fires on
+  //     a phone, so one tap anywhere on the case killed the rotation for good.
+  //     Three quarters of the traffic is mobile.
+  //
+  // Deliberate input still calls restart(), so using the arrows or the dots
+  // gives that slide a full fresh dwell rather than whatever was left of one.
   document.addEventListener("visibilitychange", function(){
     if(document.hidden) stop(); else restart();
   });
