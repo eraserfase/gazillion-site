@@ -61,8 +61,25 @@ fbq('track', 'PageView');
   --sky:linear-gradient(135deg,var(--gold-0) 0%,var(--gold-1) 38%,var(--gold-2) 100%);
   --gold:#ffbe1a;
 
-  --ground:#0d0d0d; --ground-lit:#151210; --ground-deep:#050505;
-  --card:#131313;
+  /* INK, not black. The ground was a true near-black and it read as an absence
+     rather than a colour - the gold had nothing to sit against.
+     
+     Plum. It is the coolest, most desaturated of the inks that were tried, and
+     that is what makes it work here: it is close enough to the house ground the
+     DRUGS page has always used (#2b2225, a dark plum-brown) that this reads as
+     the same building, but it is pulled cool and grey so it never becomes a
+     PRODUCT colour. That distinction is the rule the rest of the page runs on -
+     gold means the house, a hue means one plug-in. F12's violet and DRUGS'
+     rouge both still register against it; neither is it.
+     
+     Nowhere near rudetony.com's electric blue either. That palette stays
+     separate and this one does not go looking for it. */
+  --ground:#150f1c; --ground-lit:#2b2038; --ground-deep:#070510;
+  --card:#281e33;
+  /* The deepest ink, for type sitting ON something light - the lockup on the
+     sky, and the label on the white pill. Nothing on this page is pure black
+     any more, which is the whole point. */
+  --ink:#080610;
 
   --chalk:#ffffff;
   --chalk-soft:rgba(255,255,255,.64);
@@ -87,7 +104,16 @@ fbq('track', 'PageView');
 html{-webkit-text-size-adjust:100%}
 body{
   margin:0; background:var(--ground); color:var(--chalk);
-  background-image:linear-gradient(180deg,var(--ground-lit) 0%,var(--ground) 34%,var(--ground-deep) 100%);
+  /* Three layers, bottom up: the ink ramp, a warm spill off the sign so the
+     gold does not stop dead at the band's edge, and a plum bloom centred behind
+     the case so it sits in a pool of light rather than on a flat field. The
+     ramp alone read as one dark tone at every scroll position. */
+  background-image:
+    radial-gradient(115% 62% at 50% 34%,
+      rgba(138,84,190,.16) 0%, rgba(138,84,190,.053) 44%, rgba(138,84,190,0) 72%),
+    radial-gradient(140% 38% at 50% -4%,
+      rgba(255,190,26,.07) 0%, rgba(255,190,26,0) 62%),
+    linear-gradient(180deg,var(--ground-lit) 0%,var(--ground) 42%,var(--ground-deep) 100%);
   background-attachment:fixed; min-height:100vh;
   font-family:var(--body); -webkit-font-smoothing:antialiased;
 }
@@ -141,7 +167,7 @@ img,svg,video{max-width:100%; display:block}
    Do not "clean up" these decimals. */
 .lock{--T:var(--measure-house);
       width:var(--T); margin:0 auto; display:flex; flex-direction:column;
-      align-items:center; color:#0d0d0d}
+      align-items:center; color:var(--ink)}
 .lock span{display:block; white-space:nowrap; line-height:1; font-weight:400}
 .lock-a{font-family:var(--display); letter-spacing:-.055em;
         font-size:calc(var(--T)*.182602); width:calc(var(--T)*1.0144);
@@ -364,7 +390,7 @@ main{position:relative; z-index:1; display:block}
 .cta{display:block; width:100%; text-align:center;
      font-family:var(--display); font-weight:400;
      font-size:clamp(15px,3.8vw,17px); letter-spacing:.01em;
-     color:#0d0d0d; background:var(--chalk); border-radius:999px;
+     color:var(--ink); background:var(--chalk); border-radius:999px;
      padding:17px 20px; text-decoration:none;
      box-shadow:0 12px 30px -14px rgba(0,0,0,.9);
      transition:transform .16s ease, box-shadow .16s ease}
@@ -396,7 +422,7 @@ main{position:relative; z-index:1; display:block}
 .list input:focus{outline:none; border-color:var(--chalk-soft)}
 .list button{flex:0 0 auto; font-family:inherit; font-size:12px; font-weight:600;
              letter-spacing:.1em; text-transform:uppercase; cursor:pointer;
-             color:#0d0d0d; background:var(--chalk); border:0;
+             color:var(--ink); background:var(--chalk); border:0;
              border-radius:999px; padding:12px 22px}
 .list button:focus-visible{outline:2px solid var(--chalk); outline-offset:3px}
 .list.is-done form{display:none}
