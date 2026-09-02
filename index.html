@@ -75,7 +75,11 @@ fbq('track', 'PageView');
      Nowhere near rudetony.com's electric blue either. That palette stays
      separate and this one does not go looking for it. */
   --ground:#150f1c; --ground-lit:#2b2038; --ground-deep:#070510;
-  --card:#281e33;
+  /* The case, and it has to be clearly BELOW the ground's lit end. At #281e33 it
+     was within a few points of --ground-lit (#2b2038), so the case dissolved
+     into the top of the gradient exactly where it sits and stopped reading as an
+     object on a field. Darker also lifts every contrast ratio on it. */
+  --card:#17101f;
   /* The deepest ink, for type sitting ON something light - the lockup on the
      sky, and the label on the white pill. Nothing on this page is pure black
      any more, which is the whole point. */
@@ -338,7 +342,12 @@ main{position:relative; z-index:1; display:block}
    percentage width resolves against a column whose size depends on the content,
    which is circular - it settled at 245px and took the whole block down with it.
    The desktop column is given the measure explicitly instead. */
-.say{width:100%; max-width:360px; margin:0 auto;
+/* NO auto margin. An auto margin on a flex item absorbs the entire free line
+   before justify-content is consulted, so `margin:0 auto` here silently beat the
+   centring at desktop width: the panel-and-copy pair sat flush left with all the
+   slack dumped into the gap between them. Stacked, align-items:center on .prod
+   already centres this column, so the margin was never doing work it needed to. */
+.say{width:100%; max-width:360px;
      display:flex; flex-direction:column}
 
 /* THE MARK IS PART OF THE BLOCK. It spans the measure like every other line,
@@ -520,7 +529,7 @@ main{position:relative; z-index:1; display:block}
                  theme is the one that would sit better on this ground, but every
                  dark shot in the listing is a sequence or suggestion view with
                  most of the grid empty - and the grid is the thing worth seeing. -->
-            <img src="chordea/chordea.jpg" width="1400" height="1050" loading="lazy"
+            <img src="chordea/chordea.jpg" width="1400" height="1050"
                  alt="Chordea running on iPad: the full chord grid, 22 chord types across all twelve roots with the suggested next chords outlined, the strum plate down the right edge, and volume, waveform, strum and voicing controls down the left.">
           </div>
           <div class="say">
