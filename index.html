@@ -968,6 +968,21 @@ function track(name, props){
 // product page, and firing it here would dilute the signal both product pages
 // send from their actual buy buttons - which is what the ad sets optimise on.
 // ViewContent is the honest one: this person looked at this product.
+/* A LIVE ARRIVAL SIGNAL for the storefront, alongside its pageview.
+   Same reason the product pages carry one: Umami aggregates PAGEVIEW metrics by
+   the hour, so a window starting mid-hour returns nothing, and the launch
+   board's live tree asks exactly that mid-hour question - the storefront node
+   sat at zero with people on the shelf. Event metrics are not bucketed and come
+   back within seconds. The pageview still feeds every 24h/7d/30d figure; this
+   is only so "who is here right now" can be answered.
+   The tag is deferred, so wait for it rather than calling into nothing. */
+(function viewPing(){
+  var n = 0, iv = setInterval(function(){
+    if(window.umami && window.umami.track){ clearInterval(iv); track("view_store"); }
+    else if(++n > 40) clearInterval(iv);      // ~6s, then give up quietly
+  }, 150);
+})();
+
 (function shelfClicks(){
   [].forEach.call(document.querySelectorAll("a[data-product]"), function(a){
     a.addEventListener("click", function(){
