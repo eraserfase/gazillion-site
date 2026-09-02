@@ -111,20 +111,11 @@ main{position:relative; z-index:1; max-width:660px; margin:0 auto;
      display:block; transition:transform .18s ease, box-shadow .18s ease}
 .cta:focus-visible{outline:3px solid var(--chalk); outline-offset:4px}
 
-/* Gumroad's overlay script injects its own stylesheet at run time - after this
-   one - and styles .gumroad-button. Every property it sets has to be reclaimed
-   here at a specificity its single-class rules cannot reach, or the buttons turn
-   into Gumroad's pink ones the moment the script lands. */
-a.cta.gumroad-button{
-  font-family:"Archivo Black","Arial Black",sans-serif !important;
-  color:var(--field-deep) !important; background:var(--chalk) !important;
-  border:0 !important; border-radius:999px !important;
-  text-transform:none !important; letter-spacing:.02em !important;
-  height:auto !important; line-height:normal !important}
-/* Their script appends <span class="logo-full"> inside every button it claims -
-   the Gumroad wordmark. The button says what it does; whose rails it runs on is
-   not the buyer's problem, and it is stated at the checkout anyway. */
-a.cta.gumroad-button .logo-full{display:none !important}
+/* The gumroad-button overrides that used to live here are gone with the overlay
+   script. They existed only to reclaim properties Gumroad's run-time stylesheet
+   set on .gumroad-button, and to hide the wordmark <span> it injected. Base .cta
+   already carries every one of those properties, so there is nothing to reclaim
+   from a script that no longer loads. */
 .cta:hover{transform:translateY(-2px)}
 
 /* One banner, pinned to the top. It is the only ask on the page, so it carries
@@ -443,7 +434,7 @@ h1.mark-block{font-size:inherit}
 
 <div class="banner banner--top">
   <p class="terms">vst3 &nbsp;&middot;&nbsp; au &nbsp;&middot;&nbsp; macos standalone &nbsp;&middot;&nbsp; windows</p>
-  <a class="cta gumroad-button" data-pos="banner_top" href="https://gazillionindustries.gumroad.com/l/f12?utm_source=gazillionindustries.com&amp;utm_medium=cta&amp;utm_content=banner_top">Buy F(ilter)12 now</a>
+  <a class="cta" data-pos="banner_top" href="https://gazillionindustries.gumroad.com/l/f12?wanted=true&amp;utm_source=gazillionindustries.com&amp;utm_medium=cta&amp;utm_content=banner_top">Buy F(ilter)12 now</a>
   <p class="terms"><span class="price">$49</span> &nbsp;&middot;&nbsp; includes DRUGS free</p>
 </div>
 
@@ -506,7 +497,7 @@ h1.mark-block{font-size:inherit}
   </h1>
 
   <div class="buy-mid">
-    <a class="cta cta--small gumroad-button" data-pos="hero_mid" href="https://gazillionindustries.gumroad.com/l/f12?utm_source=gazillionindustries.com&amp;utm_medium=cta&amp;utm_content=hero_mid">Buy F(ilter)12 now</a>
+    <a class="cta cta--small" data-pos="hero_mid" href="https://gazillionindustries.gumroad.com/l/f12?wanted=true&amp;utm_source=gazillionindustries.com&amp;utm_medium=cta&amp;utm_content=hero_mid">Buy F(ilter)12 now</a>
   </div>
 
   <div class="copy">
@@ -540,7 +531,7 @@ h1.mark-block{font-size:inherit}
   </div>
 
   <div class="buy-end">
-    <a class="cta gumroad-button" data-pos="page_end" href="https://gazillionindustries.gumroad.com/l/f12?utm_source=gazillionindustries.com&amp;utm_medium=cta&amp;utm_content=page_end">Buy F(ilter)12 now</a>
+    <a class="cta" data-pos="page_end" href="https://gazillionindustries.gumroad.com/l/f12?wanted=true&amp;utm_source=gazillionindustries.com&amp;utm_medium=cta&amp;utm_content=page_end">Buy F(ilter)12 now</a>
     <p class="terms"><span class="price">$49</span> &nbsp;&middot;&nbsp; includes DRUGS free</p>
   </div>
 
@@ -940,5 +931,4 @@ function track(name, props){
   v.addEventListener("ended", preview);
 })();
 </script>
-<script src="https://gumroad.com/js/gumroad.js" defer></script>
 </html>

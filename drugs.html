@@ -115,20 +115,11 @@ main{position:relative; z-index:1; max-width:660px; margin:0 auto;
      display:block; transition:transform .18s ease, box-shadow .18s ease}
 .cta:focus-visible{outline:3px solid var(--chalk); outline-offset:4px}
 
-/* Gumroad's overlay script injects its own stylesheet at run time - after this
-   one - and styles .gumroad-button. Every property it sets has to be reclaimed
-   here at a specificity its single-class rules cannot reach, or the buttons turn
-   into Gumroad's pink ones the moment the script lands. */
-a.cta.gumroad-button{
-  font-family:"Archivo Black","Arial Black",sans-serif !important;
-  color:var(--field-deep) !important; background:var(--chalk) !important;
-  border:0 !important; border-radius:999px !important;
-  text-transform:none !important; letter-spacing:.02em !important;
-  height:auto !important; line-height:normal !important}
-/* Their script appends <span class="logo-full"> inside every button it claims -
-   the Gumroad wordmark. The button says what it does; whose rails it runs on is
-   not the buyer's problem, and it is stated at the checkout anyway. */
-a.cta.gumroad-button .logo-full{display:none !important}
+/* The gumroad-button overrides that used to live here are gone with the overlay
+   script. They existed only to reclaim properties Gumroad's run-time stylesheet
+   set on .gumroad-button, and to hide the wordmark <span> it injected. Base .cta
+   already carries every one of those properties, so there is nothing to reclaim
+   from a script that no longer loads. */
 .cta:hover{transform:translateY(-2px)}
 
 /* One banner, pinned to the top. It is the only ask on the page, so it carries
@@ -408,25 +399,20 @@ h1.mark-block{font-size:inherit}
 
 </style>
 
-<!-- Gumroad's overlay opens the checkout over this page instead of sending
-     people to gumroad.com. It is progressive enhancement on an ordinary link:
-     if gumroad.js does not load - a blocker, a strict content policy, the
-     artifact preview - the href still goes straight to a working checkout. That
-     is why the link is a real URL rather than a javascript: handler.
+<!-- NO OVERLAY. The buttons are ordinary links to Gumroad's own checkout, and
+     ?wanted=true is what makes them land ON the checkout rather than on the
+     product page - one step fewer than the overlay ever was, and one fewer
+     third-party script on the page. Verified end to end: a path discount code
+     survives the redirect and is applied at the total, not just displayed.
 
-     OLD NOTE, kept until the Gumroad flow is confirmed end to end:
-     CHECKOUT LINKS ARE TEST MODE. The page itself works for everyone -
-     product, price and card form all render - but it carries Lemon Squeezy's
-     orange "Test mode is currently enabled" banner and accepts test cards only,
-     so a real card is declined and no money moves.
+     Gumroad's API cannot settle a payment - v2 is read-only for commerce, with
+     no create-charge endpoint - so a hand-built checkout is not available at any
+     price. The two real options are their overlay and their hosted checkout;
+     this is the faster of the two.
 
      (Scripted requests to this URL come back 404: their bot filter rejects
      anything without real browser headers. That is not what a visitor sees, so
      check it in a browser rather than with curl.)
-
-     The host is the masked custom domain and does not change. Once the store is
-     approved the product gets copied to live mode, which mints a new variant
-     id, so only the uuid below needs swapping.
 
      The three hrefs are no longer identical: each carries its own utm_content so
      the checkout can say which button was paid from, and a data-pos so the click
@@ -434,7 +420,7 @@ h1.mark-block{font-size:inherit}
      edits, not one - that is the cost of knowing which of the three is working. -->
 <div class="banner banner--top">
   <p class="terms">vst3 &nbsp;&middot;&nbsp; au &nbsp;&middot;&nbsp; macos standalone &nbsp;&middot;&nbsp; windows</p>
-  <a class="cta gumroad-button" data-pos="banner_top" href="https://gazillionindustries.gumroad.com/l/drugs?utm_source=gazillionindustries.com&amp;utm_medium=cta&amp;utm_content=banner_top">Buy DRUGS now</a>
+  <a class="cta" data-pos="banner_top" href="https://gazillionindustries.gumroad.com/l/drugs?wanted=true&amp;utm_source=gazillionindustries.com&amp;utm_medium=cta&amp;utm_content=banner_top">Buy DRUGS now</a>
   <p class="terms">pay what you want &nbsp;&middot;&nbsp; $5 minimum</p>
 </div>
 
@@ -484,7 +470,7 @@ h1.mark-block{font-size:inherit}
   </h1>
 
   <div class="buy-mid">
-    <a class="cta cta--small gumroad-button" data-pos="hero_mid" href="https://gazillionindustries.gumroad.com/l/drugs?utm_source=gazillionindustries.com&amp;utm_medium=cta&amp;utm_content=hero_mid">Buy DRUGS now</a>
+    <a class="cta cta--small" data-pos="hero_mid" href="https://gazillionindustries.gumroad.com/l/drugs?wanted=true&amp;utm_source=gazillionindustries.com&amp;utm_medium=cta&amp;utm_content=hero_mid">Buy DRUGS now</a>
   </div>
 
   <div class="copy">
@@ -537,7 +523,7 @@ h1.mark-block{font-size:inherit}
   </div>
 
   <div class="buy-end">
-    <a class="cta gumroad-button" data-pos="page_end" href="https://gazillionindustries.gumroad.com/l/drugs?utm_source=gazillionindustries.com&amp;utm_medium=cta&amp;utm_content=page_end">Buy DRUGS now</a>
+    <a class="cta" data-pos="page_end" href="https://gazillionindustries.gumroad.com/l/drugs?wanted=true&amp;utm_source=gazillionindustries.com&amp;utm_medium=cta&amp;utm_content=page_end">Buy DRUGS now</a>
     <p class="terms">pay what you want &nbsp;&middot;&nbsp; $5 minimum</p>
   </div>
 
@@ -919,5 +905,4 @@ function track(name, props){
 })();
 </script>
 
-<script src="https://gumroad.com/js/gumroad.js" defer></script>
 </html>
