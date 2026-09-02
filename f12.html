@@ -425,7 +425,12 @@ h1.mark-block{font-size:inherit}
    viewport-relative and capped: tall phones keep the full 430, short ones give
    the button its room instead. Last rule in the sheet, so it wins on order. */
 @media (max-width:560px){
-  .slide{height:min(430px, calc(100vh - 455px))}
+  /* 455px was far more than the page actually spends below the slide: the mark
+     and the buy button under it come to 162px measured, so the old number gave
+     away nearly 300px of an 812 screen and left the demo tiny - and the demo is
+     the hook. It also had NO FLOOR, so on a short viewport calc() resolved to
+     single digits and the carousel vanished, images and all. clamp fixes both. */
+  .slide{height:clamp(260px, calc(100vh - 185px), 660px)}
 }
 
 /* ---- the price is the number people decide on, so it carries weight ------- */
@@ -464,8 +469,9 @@ h1.mark-block{font-size:inherit}
       <div class="slide">
         <div class="player">
           <video id="demo" playsinline controls preload="metadata"
-                 src="f12/f12-demo-annotated.mp4" poster="f12/f12-annotated-poster.jpg"
-                 width="340" height="980" muted loop autoplay disablepictureinpicture
+                 src="f12-demo.mp4" data-full="f12/f12-demo-annotated.mp4"
+                 poster="f12-demo-poster.jpg"
+                 width="340" height="900" muted loop autoplay disablepictureinpicture
                  aria-label="The F(ilter)12 demo: a drum loop dry, then AURA switched on, then MAX AURA, with the display filling with the green and red AURA contour and the filter swept at the end."></video>
           <!-- The badge is the offer of SOUND, not of play - the clip is already
                moving. Without script the native controls are still there and
@@ -897,22 +903,33 @@ function track(name, props){
 
   function nudge(){ var p = v.play(); if(p && p.catch) p.catch(function(){}); }
 
+  // TWO FILES, one player. The resting loop is a short uncaptioned cut - it is
+  // the better thing to have moving on the page - and the full captioned demo is
+  // what a click asks for. data-full is optional: without it both are the same
+  // file and this behaves exactly as it did.
+  var PREVIEW = v.getAttribute("src"), FULL = v.getAttribute("data-full") || PREVIEW;
+  function source(url){
+    if(v.getAttribute("src") !== url){ v.setAttribute("src", url); v.load(); }
+  }
+
   // The resting state is a SILENT LOOP, not a poster. The panel is a thing that
   // moves and a still of it undersells it, so the slide plays by itself and the
   // badge offers the one thing it is not doing - sound.
   function preview(){
     player.classList.remove("is-started");
     v.controls = false; v.muted = true; v.loop = true;
+    source(PREVIEW);
     try { v.currentTime = 0; } catch(e){}
     if(!reduced) nudge();
   }
   preview();
 
-  // Sound means FROM THE TOP. Unmuting wherever the silent loop happened to be
-  // would drop you into the middle of the demo, which is the one place the
-  // before-and-after it is built around does not exist.
+  // Sound means FROM THE TOP, and from the full cut. Unmuting wherever the
+  // silent loop happened to be would drop you into the middle of a demo built
+  // entirely around a before and an after.
   badge.addEventListener("click", function(){
     v.muted = false; v.loop = false; v.controls = true;
+    source(FULL);
     try { v.currentTime = 0; } catch(e){}
     player.classList.add("is-started");
     nudge();
