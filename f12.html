@@ -809,6 +809,21 @@ function track(name, props){
 // who actually pay. This counts the ones who clicked and then did not - which is
 // what separates "the page is not convincing" from "the price is not the
 // problem", and there is no way to see it from the checkout side.
+/* A LIVE ARRIVAL SIGNAL, alongside the pageview rather than instead of it.
+   Umami aggregates PAGEVIEW metrics by the hour, so a window that starts
+   mid-hour returns nothing at all - measured 2 Sep 2026, 23:32 UTC: the same
+   traffic gave 21 pageviews "since the top of the hour" and 0 "in the last 15
+   minutes". The launch board's live tree asks exactly that mid-hour question,
+   which is why ON PAGE sat at zero with people plainly on the page. EVENT
+   metrics are not bucketed and come back immediately, so this fires one.
+   The tag is deferred, hence the short wait for it rather than a bare call. */
+(function viewPing(){
+  var n = 0, iv = setInterval(function(){
+    if(window.umami && window.umami.track){ clearInterval(iv); track("view_f12"); }
+    else if(++n > 40) clearInterval(iv);      // ~6s, then give up quietly
+  }, 150);
+})();
+
 (function buyClicks(){
   var links = document.querySelectorAll("a.cta");
   for(var i = 0; i < links.length; i++){
