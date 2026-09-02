@@ -103,7 +103,12 @@ fbq('track', 'PageView');
      whole scroll. Band height is .2257 of this measure plus the 40px of ink
      padding, so 380px lands it near 126px and keeps the lockup and the line
      under it on ONE measure, which is the reason this token exists. */
-  --measure-house:clamp(232px,52vw,380px);
+  --measure-house:clamp(196px,52vw,380px);
+  /* Floor was 232px. On a phone the sign is pure overhead against the thing
+     people came to look at, and 52vw governs below ~377px wide once the floor
+     drops - which takes the band from 92px to 84px at 375 and 77px at 320.
+     The 20px ink padding is untouched; this is the lockup giving, not the
+     spacing. GAZILLION still sets at 36px at the floor. */
 
   --display:"Archivo Black","Arial Black",sans-serif;
   --body:Archivo,system-ui,-apple-system,BlinkMacSystemFont,sans-serif;
@@ -261,8 +266,10 @@ main{position:relative; z-index:1; display:block}
 .prod{flex:0 0 100%; min-width:0; scroll-snap-align:center;
       display:flex; flex-direction:column;
       align-items:center; justify-content:center; text-align:center;
-      gap:clamp(20px,3.6vw,58px);
-      padding:clamp(26px,3.6vw,44px) clamp(18px,3vw,44px) clamp(30px,4vw,46px)}
+      gap:calc(clamp(20px,3.6vw,58px) * var(--copy-scale,1));
+      padding:calc(clamp(26px,3.6vw,44px) * var(--copy-scale,1))
+              clamp(18px,3vw,44px)
+              calc(clamp(30px,4vw,46px) * var(--copy-scale,1))}
 /* Panel beside the copy once there is room, so the panel can be big without
    pushing the button off the screen. These panels are portrait and narrow -
    680x1800 and 334x654 - so stacked they leave most of the width empty and put
@@ -310,14 +317,15 @@ main{position:relative; z-index:1; display:block}
    overflows at every other, so the stage carries no cap at all - its grid track
    is minmax(0,auto), which sizes to the image when there is room and shrinks it
    when there is not. */
-/* The panel GIVES BACK HEIGHT so the button stays on screen, the way the product
-   pages do it. --stage-fit is what is left of the viewport once the sticky sign,
-   the copy, the dots and the case's own chrome are paid for; the script measures
-   it, and only sets it while the slide is stacked. The 150px floor is the part
-   the product pages get wrong - their calc() has no floor, so on a short
-   viewport it resolves to single digits and the case vanishes entirely. */
+/* THE PANEL IS THE HOOK, so it is paid first. Two scales, not one: the copy
+   gives up its height to keep the panel big, and only once the copy is at its
+   readable floor does the panel start shrinking too. A single shared scale is
+   wrong in both directions - scale the panel alone and you get giant type over a
+   postage stamp, scale both together and the thing people came to look at ends
+   up as small as the small print. The justifier sizes the copy from the MEASURE,
+   which is why --copy-scale moves the measure rather than a font-size. */
 .stage{display:flex; align-items:center; justify-content:center;
-       height:max(150px, min(clamp(400px,56vw,654px), var(--stage-fit,654px)));
+       height:calc(clamp(400px,56vw,654px) * var(--panel-scale,1));
        max-width:100%; min-width:0}
 /* Dark themes throughout, and that is not a preference: these sit on a black
    case, and the light panels are a bright violet and a bright pink that blow a
@@ -386,7 +394,7 @@ main{position:relative; z-index:1; display:block}
    centring at desktop width: the panel-and-copy pair sat flush left with all the
    slack dumped into the gap between them. Stacked, align-items:center on .prod
    already centres this column, so the margin was never doing work it needed to. */
-.say{width:100%; max-width:360px;
+.say{width:100%; max-width:calc(360px * var(--copy-scale,1));
      display:flex; flex-direction:column}
 
 /* THE MARK IS PART OF THE BLOCK. It spans the measure like every other line,
@@ -406,14 +414,20 @@ main{position:relative; z-index:1; display:block}
    of that intact. Never a non-uniform transform on these. */
 .pmark{fill:currentColor; color:var(--chalk); height:auto; width:100%}
 
-/* Every line below is set by the justifier at run time. The font-size here is
+/* ONE BLOCK, like the lockup. line-height:1 and the gaps below in em: the lines
+   sit together as a block rather than as a stack of separate captions, which is
+   what the mark at the top of the page does and what the plug-in panels do. em
+   because the justifier decides each line's size at run time, so a px gap reads
+   tight at full size and loose once --copy-scale has been applied.
+   
+   Every line below is set by the justifier at run time. The font-size here is
    the DESIGN size - what the line wants to be - and --fit-min/--fit-max are how
    far it may scale from it to keep its tracking in a sane band. Furniture is
    held near its size and takes the wide tracking, because that is what the
    panels do to BUS COMPRESSOR. The lines carrying the claim are allowed to grow
    instead, because 1em of tracking on Archivo Black stops reading as a word. */
 .jt{margin:0; width:100%; text-align:left; text-transform:uppercase;
-    white-space:nowrap; --fit-min:.88; --fit-max:1.35; --fit-aim:.26}
+    line-height:1; white-space:nowrap; --fit-min:.88; --fit-max:1.35; --fit-aim:.26}
 /* Chordea has no lockup to dump - it is an iPad app, not a Gazillion panel - so
    its name is set as type. --fit-aim:-.015 tells the justifier to hold the
    tracking near DRUGS' own -1.5 and let SIZE do the fitting, which is what a
@@ -423,17 +437,17 @@ main{position:relative; z-index:1; display:block}
           --fit-min:.4; --fit-max:3; --fit-aim:-.015}
 .sub,.formats,.price{--fit-min:.94; --fit-max:1.10}
 .cat,.pitch{--fit-min:.85; --fit-max:1.55}
-.sub{margin-top:16px; font-size:13px; font-weight:700; color:var(--chalk)}
+.sub{margin-top:.62em; font-size:13px; font-weight:700; color:var(--chalk)}
 /* What it claims, in the product's colour. */
-.cat{margin-top:16px; font-family:var(--display); font-weight:400;
+.cat{margin-top:.28em; font-family:var(--display); font-weight:400;
      font-size:16px; color:var(--accent)}
 /* And what you do with it. Both lines lifted verbatim off the product's own
    page - this page does not get to write copy for a plug-in it is only
    pointing at. */
-.pitch{margin-top:14px; font-size:15px; font-weight:500; color:var(--chalk-soft)}
-.formats{margin-top:18px; font-size:11px; font-weight:600; color:var(--chalk-faint)}
+.pitch{margin-top:.34em; font-size:15px; font-weight:500; color:var(--chalk-soft)}
+.formats{margin-top:.85em; font-size:11px; font-weight:600; color:var(--chalk-faint)}
 
-.buy{margin-top:24px; width:100%; display:flex; flex-direction:column; gap:12px}
+.buy{margin-top:calc(22px * var(--copy-scale,1)); width:100%; display:flex; flex-direction:column; gap:12px}
 /* Full measure, so the button closes the block rather than floating inside it. */
 .cta{display:block; width:100%; text-align:center;
      font-family:var(--display); font-weight:400;
@@ -808,6 +822,13 @@ main{position:relative; z-index:1; display:block}
     var want = target / (natural / base + gaps * AIM);
     var size = Math.min(base * num(cs, "--fit-max", 1.35),
                Math.max(base * num(cs, "--fit-min", 0.88), want));
+    // A line that still overruns the measure at its smallest allowed size has to
+    // get SMALLER, not tighter. The tracking below would go negative and close
+    // the WORD SPACES first - which is condensing, and this identity does not
+    // condense. `flat` is the size at which the ink alone fills the measure, so
+    // clamping to it keeps the correction on the one lever the rule allows.
+    var flat = target / (natural / base);
+    if(size > flat) size = flat;
     el.style.fontSize = size + "px";
 
     var step = (target - ink(el)) / gaps;
@@ -821,46 +842,101 @@ main{position:relative; z-index:1; display:block}
     el.style.marginRight = (-step) + "px";
   }
 
-  function all(){ [].forEach.call(document.querySelectorAll(".jt"), fit); budget(); }
+  function all(){ [].forEach.call(document.querySelectorAll(".jt"), fit); }
 
-  // How much height the panel may have. NOT a constant to write into the CSS:
-  // the justifier sets the copy's type from the measure, so the block runs 384px
-  // at 320 wide and 438px at 768, and the sticky sign is 92px or 126px over the
-  // same range. Any single number is right at one width and wrong at the rest.
-  // Measured against the TALLEST copy block, because one stage height serves
-  // every slide and the button that falls off is the one under the longest copy.
-  function budget(){
+  // HOW BIG THE SLIDE MAY BE. One number, not a panel-only cap: shrinking the
+  // panel while the copy keeps its size is what leaves giant type over a
+  // postage stamp. The justifier sizes the copy from the MEASURE, so the measure
+  // has to move for the type to, and --slide-scale moves both at once along with
+  // the gap and the padding.
+  //
+  // Measured, never a calc() constant in the CSS: the copy block runs 384px at
+  // 320 wide and 438px at 768, and the sticky sign is 92px or 126px over the
+  // same range, so any single number is right at one width and wrong elsewhere.
+  var root = document.documentElement;
+
+  function room(){
     var show = document.querySelector(".show"),
         sign = document.querySelector(".sign"),
-        prod = show && show.querySelector(".prod");
-    if(!prod) return;
-    var cs = getComputedStyle(prod);
-    if(cs.flexDirection !== "column"){
-      // Side by side, the copy is beside the panel, not under it - the button is
-      // already on screen and the panel should keep its full size.
-      document.documentElement.style.removeProperty("--stage-fit");
-      return;
-    }
-    var says = document.querySelectorAll(".prod .say"), tallest = 0;
-    [].forEach.call(says, function(el){
-      tallest = Math.max(tallest, el.getBoundingClientRect().height);
-    });
-    var dots = document.getElementById("dots"),
-        chrome = show.getBoundingClientRect().height - prod.getBoundingClientRect().height,
-        pad = parseFloat(cs.paddingTop) + parseFloat(cs.paddingBottom),
-        room = innerHeight
-             - sign.getBoundingClientRect().height
-             - (dots ? dots.getBoundingClientRect().height + 20 : 0)
-             - chrome - pad - tallest - parseFloat(cs.rowGap);
-    document.documentElement.style.setProperty("--stage-fit", Math.round(room) + "px");
+        dots = document.getElementById("dots"),
+        track = document.getElementById("track");
+    if(!show || !sign || !track) return null;
+    var chrome = show.getBoundingClientRect().height - track.getBoundingClientRect().height;
+    return innerHeight
+         - sign.getBoundingClientRect().height
+         - (dots ? dots.getBoundingClientRect().height + 20 : 0)
+         - chrome;
   }
 
-  all();
-  addEventListener("resize", all);
+  // The tallest slide wins: one height serves all three, and the button that
+  // falls off the bottom is the one under the longest copy.
+  function need(){
+    var t = 0;
+    [].forEach.call(document.querySelectorAll(".prod"), function(p){
+      t = Math.max(t, p.getBoundingClientRect().height);
+    });
+    return t;
+  }
+
+  function layout(){
+    var prod = document.querySelector(".prod"), stage, say;
+    if(!prod) return;
+    root.style.setProperty("--panel-scale","1");
+    root.style.setProperty("--copy-scale","1");
+    all();
+    if(getComputedStyle(prod).flexDirection !== "column"){
+      // Side by side the copy sits beside the panel, so nothing is stacked under
+      // it to push off screen and the slide keeps its full size.
+      root.style.removeProperty("--panel-scale");
+      root.style.removeProperty("--copy-scale");
+      all();
+      return;
+    }
+    var have = room();
+    if(have == null) return;
+
+    var panelN = document.querySelector(".stage").getBoundingClientRect().height;
+    if(!panelN) return;
+
+    // What the copy costs at a given scale, taken from the TALLEST slide: one
+    // height serves all three, and the button that falls off the bottom is the
+    // one under the longest copy.
+    function cost(){
+      var worst = 0;
+      [].forEach.call(document.querySelectorAll(".prod"), function(p){
+        var say = p.querySelector(".say").getBoundingClientRect().height,
+            st  = p.querySelector(".stage").getBoundingClientRect().height,
+            c   = p.getBoundingClientRect().height - st;   // copy + gap + padding
+        if(c > worst) worst = c;
+      });
+      return worst;
+    }
+
+    // SOLVED BY MEASUREMENT, not by prediction. The copy does not shrink in
+    // proportion to its scale - the button keeps its padding and the fit bands
+    // clamp - so every guess at what a scale will save comes out optimistic.
+    // Walk the copy down until the panel can have its full height, and only if
+    // the copy reaches its readable floor does the panel take the shortfall.
+    var FLOOR = 0.62, cs = 1, ps = 1, seated = false;
+    for(var i = 0; i < 8; i++){
+      root.style.setProperty("--copy-scale", cs.toFixed(4));
+      root.style.setProperty("--panel-scale", "1");
+      all();
+      if(have - cost() >= panelN){ seated = true; break; }
+      if(cs <= FLOOR) break;
+      cs = Math.max(FLOOR, cs - 0.06);
+    }
+    if(!seated) ps = Math.max(0.5, (have - cost()) / panelN);
+    root.style.setProperty("--panel-scale", ps.toFixed(4));
+    all();
+  }
+
+  layout();
+  addEventListener("resize", layout);
   // Archivo and Archivo Black land after first paint and are wider than the
   // fallback faces, so every measurement taken before they arrive is of the
   // wrong type.
-  if(document.fonts && document.fonts.ready) document.fonts.ready.then(all);
+  if(document.fonts && document.fonts.ready) document.fonts.ready.then(layout);
 })();
 
 // Provider-agnostic by design, and lifted unchanged from the product pages:
