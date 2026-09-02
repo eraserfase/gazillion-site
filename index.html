@@ -1,17 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<title>Gazillion Industries - plug-ins that do one thing really well</title>
-<meta name="description" content="Audio plug-ins for macOS and Windows. F(ilter)12, a 12 bit sauce filter. DRUGS, a one-knob bus compressor. AU, VST3 and standalone.">
+<title>Gazillion Industries - VST's and audio software for macOS, Windows and iPad</title>
+<meta name="description" content="F(ilter)12, a 12 bit sauce filter. DRUGS, a one-knob bus compressor. Chordea, a MIDI chord controller for iPad. AU, VST3 and standalone.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="canonical" href="https://gazillionindustries.com/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Gazillion Industries">
 <meta property="og:title" content="Gazillion Industries">
-<meta property="og:description" content="Plug-ins that do one thing really well. F(ilter)12 and DRUGS, for macOS and Windows.">
+<meta property="og:description" content="F(ilter)12, a 12 bit sauce filter. DRUGS, a one-knob bus compressor. Chordea, a MIDI chord controller for iPad.">
 <meta property="og:url" content="https://gazillionindustries.com/">
-<meta property="og:image" content="https://gazillionindustries.com/og.jpg">
+<!-- Its own card, not og.jpg. That one is the DRUGS product card - three DRUGS
+     panels and MAKE EVERYTHING BETTER - and it went on shipping with this page
+     after the swap, so every link to the homepage of a three-product shop
+     advertised one compressor. og-home.jpg is the masthead over all three. -->
+<meta property="og:image" content="https://gazillionindustries.com/og-home.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The Gazillion Industries wordmark on the gold sky, over the F(ilter)12, DRUGS and Chordea panels.">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://gazillionindustries.com/og.jpg">
+<meta name="twitter:image" content="https://gazillionindustries.com/og-home.jpg">
 
 <!-- Same Umami site and same Meta pixel as the product pages: one business,
      one property. This page shipped without either on 1 Sep 2026, so it was
@@ -252,27 +259,30 @@ main{position:relative; z-index:1; display:block}
        border-radius:10px; background:#000; display:block;
        box-shadow:0 30px 70px -24px rgba(0,0,0,.95)}
 
+/* Always visible, like the product pages' own carousels. They were revealed on
+   hover, which made the shelf look like a static hero to anyone who did not
+   happen to mouse over it - and showed nothing at all on a phone, which is
+   three quarters of the traffic. If the page rotates by itself it has to look
+   like something you can steer. */
 .nav{position:absolute; top:50%; transform:translateY(-50%); z-index:3;
-     width:38px; height:38px; border-radius:999px; cursor:pointer;
-     background:rgba(0,0,0,.46); border:1px solid rgba(255,255,255,.22);
-     color:var(--chalk); font-size:19px; line-height:1;
+     width:40px; height:40px; border-radius:999px; cursor:pointer;
+     background:rgba(0,0,0,.52); border:1px solid rgba(255,255,255,.24);
+     color:var(--chalk); font-size:20px; line-height:1;
      display:flex; align-items:center; justify-content:center;
      -webkit-backdrop-filter:blur(8px); backdrop-filter:blur(8px);
-     opacity:0; transition:opacity .18s ease, background .18s ease}
-.show:hover .nav,.nav:focus-visible{opacity:1}
-.nav:hover{background:rgba(0,0,0,.76)}
+     transition:background .18s ease, border-color .18s ease}
+.nav:hover{background:rgba(0,0,0,.8); border-color:rgba(255,255,255,.44)}
 .nav:focus-visible{outline:2px solid var(--chalk); outline-offset:2px}
-.nav--prev{left:10px} .nav--next{right:10px}
-/* Nothing to hover on a phone, so the arrows would never appear and would only
-   ever be two dead targets over the panel. The flick and the dots do the whole
-   job there. */
-@media (hover:none){ .nav{display:none} }
+.nav--prev{left:12px} .nav--next{right:12px}
+@media (max-width:560px){ .nav{width:34px; height:34px; font-size:17px}
+  .nav--prev{left:6px} .nav--next{right:6px} }
 
-.dots{display:flex; justify-content:center; gap:9px; margin:20px 0 0}
-.dot{width:7px; height:7px; border-radius:999px; padding:0; cursor:pointer;
-     border:0; background:rgba(255,255,255,.30);
+.dots{display:flex; justify-content:center; gap:10px; margin:20px 0 0}
+.dot{width:9px; height:9px; border-radius:999px; padding:0; cursor:pointer;
+     border:0; background:rgba(255,255,255,.32);
      transition:background .2s ease, transform .2s ease}
-.dot[aria-current="true"]{background:var(--chalk); transform:scale(1.4)}
+.dot[aria-current="true"]{background:var(--chalk); transform:scale(1.35)}
+.dot:hover{background:rgba(255,255,255,.6)}
 .dot:focus-visible{outline:2px solid var(--chalk); outline-offset:3px}
 
 /* ---- what it says ------------------------------------------------------- */
@@ -592,14 +602,15 @@ main{position:relative; z-index:1; display:block}
   // Rotates on its own from load. It holds while the pointer is on the case,
   // while the tab is hidden, and entirely under prefers-reduced-motion.
   //
-  // A plug-in whose stage is playing gets nearly twice the dwell: the capture is
-  // the one thing on this page that shows a plug-in working rather than
-  // describing it, and six seconds is not long enough to watch a compressor
-  // breathe.
+  // ONE dwell for every slide. The video slide used to get 11s against 6.5s for
+  // the rest, on the theory that a capture deserves longer than a still - and
+  // once DRUGS led, that put the long pause FIRST. The page opened, sat there,
+  // and then flicked through the other two, which reads as broken rather than as
+  // considered. An even beat is what makes it legible as a rotation.
+  var AUTO_MS = 6000;
   var timer = null;
-  function dwell(){ return slides[cur].querySelector("video") ? 11000 : 6500; }
   function step(){ if(!document.hidden) go(cur + 1); restart(); }
-  function restart(){ stop(); if(!reduced) timer = setTimeout(step, dwell()); }
+  function restart(){ stop(); if(!reduced) timer = setTimeout(step, AUTO_MS); }
   function stop(){ if(timer){ clearTimeout(timer); timer = null; } }
 
   var show = document.querySelector(".show");

@@ -1,11 +1,59 @@
-# DRUGS
+# Gazillion Industries
 
-> A one-knob character bus compressor for macOS, made by Gazillion Industries LLC.
-> Built for dusty, dense drums: boom bap, beat tapes, chopped breaks, and the kind
-> of low end that pumps. Vinyl sim style squash on the drum bus, with one control.
-> Pay what you want, $5 minimum.
+> Gazillion Industries LLC makes audio software: plug-ins for macOS and Windows,
+> and one iPad app. Each product does one job, opens with the control you came
+> for already on screen, and needs no manual. Three are out.
 
-## What it does
+## Products
+
+- [F(ilter)12](https://gazillionindustries.com/f12.html) — a 12 bit sauce
+  filter. $49, and DRUGS is included with it.
+- [DRUGS](https://gazillionindustries.com/drugs.html) — a one-knob character bus
+  compressor. Pay what you want, $5 minimum.
+- [Chordea](https://apps.apple.com/us/app/chordea/id6757318321) — a MIDI chord
+  controller for iPad. $9.99 on the App Store.
+
+## F(ilter)12
+
+A 12 bit sauce filter for macOS and Windows. AURA is an adaptive correction that
+moves with the source and sits a record better without sounding processed. Sample
+rate and bit reduction, five filter shapes, eight resonance shapes, a slope that
+feeds its own distortion back through itself, auto filter and sidechain.
+
+- AURA adaptive enhancement, and MAX AURA
+- Sample rate and bit depth reduction
+- Five filter shapes: low-pass, high-pass, band-pass, notch and morph
+- Eight resonance shapes that travel with the filter
+- Slope that feeds its own distortion back through itself
+- Auto filter driven by a clock, with swing
+- Sidechain that follows another signal
+- Zero latency
+- Universal binary, Apple Silicon and Intel
+- Works offline
+
+Formats: AU, VST3, standalone. Platform: macOS 10.13 or later, Windows 10 or
+later. Price: $49, and DRUGS comes with it at no extra cost.
+
+## Chordea
+
+A MIDI chord controller for iPad. 22 chord types across all twelve roots, from
+basic triads to advanced jazz voicings, with the next chord suggested as you
+play. A strum plate spans four octaves and takes multi-touch; auto strum runs
+forward, backward or ping-pong, from instant to arpeggio. Full USB MIDI out to
+hardware synths, DAWs and other iOS apps.
+
+Platform: iPad, iPadOS 16 or later. Price: $9.99 on the App Store. Sold under the
+individual Apple developer account, Anthony Greg Barko, rather than under
+Gazillion Industries LLC.
+
+## DRUGS
+
+A one-knob character bus compressor for macOS and Windows. Built for dusty, dense
+drums: boom bap, beat tapes, chopped breaks, and the kind of low end that pumps.
+Vinyl sim style squash on the drum bus, with one control. Pay what you want, $5
+minimum.
+
+### What it does
 
 DRUGS is a bus compressor with a single macro control called DOSE. Turning DOSE up
 makes a drum bus denser rather than louder — peak level barely moves across the
@@ -16,7 +64,7 @@ It is aimed at producers working in boom bap, beat tapes, lo-fi hip hop, and the
 Los Angeles beat scene tradition — the sound of drums that came off a record
 rather than out of a computer.
 
-## How it works
+### How it works
 
 - DOSE moves the transfer curve, the knee, the attack and the release together,
   the way a single hardware macro would.
@@ -35,33 +83,29 @@ rather than out of a computer.
 - LIMIT is a zero-latency soft ceiling at -0.3 dBFS on the output with a clip
   indicator. It attenuates only and is transparent below about -0.9 dBFS.
 
-## The vinyl sim sound
+### The vinyl sim sound
 
 Vinyl sim is shorthand for a particular kind of squash: dense, slightly crushed
 drums with the room pushed up under the hits, the way a break sounds once it has
 been through a sampler. DRUGS goes at that sound directly, on the drum bus, with
 one knob and no setup.
 
-## It is not an emulation
+### It is not an emulation
 
 Nothing in DRUGS was measured from hardware. It was voiced by ear on real
 material against one person's memory of a machine. It does not model any specific
 device and does not claim to. Every constant that shapes the sound is documented
 and marked by where it came from.
 
-## Specifications
+### Specifications
 
 - Formats: Audio Unit (AU), VST3, standalone application
 - Hosts: Logic Pro, Ableton Live, Reaper, Cubase, Studio One, Bitwig, GarageBand
-- Platform: macOS 10.13 or later
+- Platform: macOS 10.13 or later, Windows 10 or later 64-bit
 - Architecture: universal binary, Apple Silicon and Intel
 - Latency: zero samples
 - No internet connection required, ever
 
-## Price
-
-Pay what you want, $5 minimum.
-
 ## Maker
 
-Gazillion Industries LLC.
+Gazillion Industries LLC. Contact: tony@gazillionindustries.com
