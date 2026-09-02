@@ -310,8 +310,15 @@ main{position:relative; z-index:1; display:block}
    overflows at every other, so the stage carries no cap at all - its grid track
    is minmax(0,auto), which sizes to the image when there is room and shrinks it
    when there is not. */
+/* The panel GIVES BACK HEIGHT so the button stays on screen, the way the product
+   pages do it. --stage-fit is what is left of the viewport once the sticky sign,
+   the copy, the dots and the case's own chrome are paid for; the script measures
+   it, and only sets it while the slide is stacked. The 150px floor is the part
+   the product pages get wrong - their calc() has no floor, so on a short
+   viewport it resolves to single digits and the case vanishes entirely. */
 .stage{display:flex; align-items:center; justify-content:center;
-       height:clamp(400px,56vw,654px); max-width:100%; min-width:0}
+       height:max(150px, min(clamp(400px,56vw,654px), var(--stage-fit,654px)));
+       max-width:100%; min-width:0}
 /* Dark themes throughout, and that is not a preference: these sit on a black
    case, and the light panels are a bright violet and a bright pink that blow a
    hole in it. The dark themes are also the ones whose displays read - the aura
@@ -814,7 +821,39 @@ main{position:relative; z-index:1; display:block}
     el.style.marginRight = (-step) + "px";
   }
 
-  function all(){ [].forEach.call(document.querySelectorAll(".jt"), fit); }
+  function all(){ [].forEach.call(document.querySelectorAll(".jt"), fit); budget(); }
+
+  // How much height the panel may have. NOT a constant to write into the CSS:
+  // the justifier sets the copy's type from the measure, so the block runs 384px
+  // at 320 wide and 438px at 768, and the sticky sign is 92px or 126px over the
+  // same range. Any single number is right at one width and wrong at the rest.
+  // Measured against the TALLEST copy block, because one stage height serves
+  // every slide and the button that falls off is the one under the longest copy.
+  function budget(){
+    var show = document.querySelector(".show"),
+        sign = document.querySelector(".sign"),
+        prod = show && show.querySelector(".prod");
+    if(!prod) return;
+    var cs = getComputedStyle(prod);
+    if(cs.flexDirection !== "column"){
+      // Side by side, the copy is beside the panel, not under it - the button is
+      // already on screen and the panel should keep its full size.
+      document.documentElement.style.removeProperty("--stage-fit");
+      return;
+    }
+    var says = document.querySelectorAll(".prod .say"), tallest = 0;
+    [].forEach.call(says, function(el){
+      tallest = Math.max(tallest, el.getBoundingClientRect().height);
+    });
+    var dots = document.getElementById("dots"),
+        chrome = show.getBoundingClientRect().height - prod.getBoundingClientRect().height,
+        pad = parseFloat(cs.paddingTop) + parseFloat(cs.paddingBottom),
+        room = innerHeight
+             - sign.getBoundingClientRect().height
+             - (dots ? dots.getBoundingClientRect().height + 20 : 0)
+             - chrome - pad - tallest - parseFloat(cs.rowGap);
+    document.documentElement.style.setProperty("--stage-fit", Math.round(room) + "px");
+  }
 
   all();
   addEventListener("resize", all);
