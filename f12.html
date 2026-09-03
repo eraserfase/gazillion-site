@@ -854,8 +854,13 @@ var GZ_AD = (function(){
   function start(){
     if(timer) return;
     ping();
+    /* SKIP a beat while hidden - never kill the timer. Clearing it meant the
+       heartbeat could only ever restart from a visibilitychange event, and in a
+       tracking iframe that event never comes: it stopped after two beats and
+       the node stayed full forever. Skipping costs one no-op every 30s and
+       recovers on its own. */
     timer = setInterval(function(){
-      if(document.visibilityState === "visible") ping(); else stop();
+      if(document.visibilityState !== "hidden") ping();
     }, BEAT);
   }
   function stop(){ if(timer){ clearInterval(timer); timer = null; } }
@@ -864,7 +869,7 @@ var GZ_AD = (function(){
     else if(++n > 40) clearInterval(wait);      // ~6s, then give up quietly
   }, 150);
   document.addEventListener("visibilitychange", function(){
-    if(document.visibilityState === "visible") start(); else stop();
+    if(document.visibilityState === "visible") start();   // never stop(): see above
   });
 })();
 
