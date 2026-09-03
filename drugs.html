@@ -146,10 +146,23 @@ main{position:relative; z-index:1; max-width:660px; margin:0 auto;
    sits in the fixed top banner because an ad click lands there and nowhere
    else is guaranteed to be seen. Tighter tracking than .terms so the extra row
    costs as little height as possible on a phone. */
-.terms.cross{margin-top:5px; letter-spacing:.1em; color:var(--ink-faint)}
-.terms.cross a{color:var(--rouge); text-decoration:none;
-               border-bottom:1px solid transparent}
-.terms.cross a:hover,.terms.cross a:focus-visible{border-bottom-color:var(--rouge)}
+/* Bigger and brighter than .terms rather than smaller: this is an offer, not a
+   footnote, and as an aside in --ink-faint it read as legal small print. The
+   parentheses went for the same reason - they frame a line as an afterthought.
+   The WHOLE line is the link, so the tap target is the sentence rather than one
+   word, which matters when three quarters of this traffic is on a phone. */
+.terms.cross{margin-top:7px; font-size:13px; letter-spacing:.06em;
+             color:var(--ink-soft)}
+/* Padding out, margin back in: grows the tap area to ~38px on a phone without
+   adding a single pixel to the fixed banner's height. A 14px-tall target on
+   the page a paid click lands on is a missed tap, not a design choice. */
+.terms.cross a{color:inherit; text-decoration:none; font-weight:600;
+               display:inline-block; padding:12px 8px; margin:-12px -8px}
+.terms.cross span{color:var(--rouge);
+                  border-bottom:1px solid color-mix(in srgb, var(--rouge) 50%, transparent);
+                  transition:border-color .18s ease, color .18s ease}
+.terms.cross a:hover span,.terms.cross a:focus-visible span{
+                  border-bottom-color:var(--rouge); color:var(--chalk)}
 
 /* ---- the list ------------------------------------------------------------ */
 /* Sits after the last buy button, never before it. Anyone who reaches this has
@@ -472,7 +485,7 @@ h1.mark-block{font-size:inherit}
   <p class="terms">vst3 &nbsp;&middot;&nbsp; au &nbsp;&middot;&nbsp; macos standalone &nbsp;&middot;&nbsp; windows</p>
   <a class="cta" data-pos="banner_top" href="https://gazillionindustries.gumroad.com/l/drugs?price=5&amp;wanted=true&amp;utm_source=gazillionindustries.com&amp;utm_medium=cta&amp;utm_content=banner_top">Buy DRUGS now</a>
   <p class="terms">pay what you want &nbsp;&middot;&nbsp; $5 minimum</p>
-  <p class="terms cross">(get it free with <a href="/f12.html" data-cross="banner_top">f(ilter)12</a>)</p>
+  <p class="terms cross"><a href="/f12.html" data-cross="banner_top">get DRUGS for free with <span>f(ilter)12</span></a></p>
 </div>
 
 <main>
@@ -589,7 +602,7 @@ h1.mark-block{font-size:inherit}
   <div class="buy-end">
     <a class="cta" data-pos="page_end" href="https://gazillionindustries.gumroad.com/l/drugs?price=5&amp;wanted=true&amp;utm_source=gazillionindustries.com&amp;utm_medium=cta&amp;utm_content=page_end">Buy DRUGS now</a>
     <p class="terms">pay what you want &nbsp;&middot;&nbsp; $5 minimum</p>
-    <p class="terms cross">(get it free with <a href="/f12.html" data-cross="page_end">f(ilter)12</a>)</p>
+    <p class="terms cross"><a href="/f12.html" data-cross="page_end">get DRUGS for free with <span>f(ilter)12</span></a></p>
   </div>
 
 
