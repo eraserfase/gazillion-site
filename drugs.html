@@ -848,11 +848,55 @@ function track(name, props){
    which is why ON PAGE sat at zero with people plainly on the page. EVENT
    metrics are not bucketed and come back immediately, so this fires one.
    The tag is deferred, hence the short wait for it rather than a bare call. */
+/* DID THIS VISIT COME FROM AN AD? Meta stamps every click with fbclid, and our
+   own ad links carry utm_source. Remembered for the session, because those
+   parameters are on the LANDING url only and vanish the moment somebody clicks
+   through to another page - without this an ad visitor would stop counting as
+   one the instant they moved. The board draws them rising from an ad root, the
+   same way email arrivals do. */
+var GZ_AD = (function(){
+  try{
+    var q = location.search || "";
+    if(/[?&]fbclid=/i.test(q) || /[?&]utm_source=(facebook|instagram|meta|fb|ig)\b/i.test(q))
+      sessionStorage.setItem("gz_ad", "1");
+    return sessionStorage.getItem("gz_ad") === "1";
+  }catch(e){ return false; }
+})();
+
 (function viewPing(){
-  var n = 0, iv = setInterval(function(){
-    if(window.umami && window.umami.track){ clearInterval(iv); track("view_drugs"); }
-    else if(++n > 40) clearInterval(iv);      // ~6s, then give up quietly
+  /* A HEARTBEAT, not a single ping. The board's live nodes count events inside a
+     short window, and an event is a moment - so one ping on load kept somebody
+     "on the page" for the whole window after they had already gone. Tony, 3 Sep
+     2026: "when i leave the checkout page or bounce from a landing page without
+     clicking buy it doesnt leave right away."
+     Repeating it while the tab is VISIBLE turns a moment into presence: still
+     here means still firing, and leaving stops it, so the node empties within
+     one window. Paused when the tab is hidden, because a backgrounded tab is
+     not somebody looking at the page. */
+  var BEAT = 30000, timer = null;
+  function ping(){
+    try{
+      if(window.umami && window.umami.track){
+        track("view_drugs");
+        if(GZ_AD) track("ad_drugs");     // same beat, so the ad root empties too
+      }
+    }catch(e){}
+  }
+  function start(){
+    if(timer) return;
+    ping();
+    timer = setInterval(function(){
+      if(document.visibilityState === "visible") ping(); else stop();
+    }, BEAT);
+  }
+  function stop(){ if(timer){ clearInterval(timer); timer = null; } }
+  var n = 0, wait = setInterval(function(){
+    if(window.umami && window.umami.track){ clearInterval(wait); start(); }
+    else if(++n > 40) clearInterval(wait);      // ~6s, then give up quietly
   }, 150);
+  document.addEventListener("visibilitychange", function(){
+    if(document.visibilityState === "visible") start(); else stop();
+  });
 })();
 
 (function buyClicks(){
