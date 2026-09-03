@@ -522,7 +522,11 @@ h1.mark-block{font-size:inherit}
   </div>
 
   <div class="list" id="list">
-    <p id="list-msg">there will be more of these</p>
+    <!-- "there will be more of these" refers to the testimonial block above,
+         which is still hidden because F12 has no quotes yet. With nothing above
+         it the line pointed at nothing and read as unfinished copy, so it is
+         hidden too. Un-hide BOTH together the moment a real quote goes in. -->
+    <p id="list-msg" hidden>there will be more of these</p>
     <form action="https://app.kit.com/forms/9851450/subscriptions" method="post">
       <input type="email" name="email_address" placeholder="email" required
              autocomplete="email" aria-label="Email address">
