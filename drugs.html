@@ -405,6 +405,20 @@ h1.mark-block{font-size:inherit}
      third-party script on the page. Verified end to end: a path discount code
      survives the redirect and is applied at the total, not just displayed.
 
+     ?price=5 IS REQUIRED HERE and is not on the sibling. DRUGS is pay-what-you-
+     want, and Gumroad cannot put a PWYW item in the cart without a price, so
+     wanted=true ALONE DOES NOTHING on this page - it silently renders the product
+     page instead of the checkout, which is worse than the overlay it replaced.
+     F12 is fixed price and needs no such hint.
+
+     THE PRICE IS IN DOLLARS, NOT CENTS. ?price=5 is $5.00; ?price=500 sends the
+     buyer to a $500.00 checkout. Verified both.
+
+     Pay-what-you-want survives this: the DRUGS line at checkout carries an Edit
+     button - the fixed-price bundle only gets Remove - and the tip row sits under
+     it. The ask simply moves from the product page to the checkout, which is a
+     quieter place to make it.
+
      Gumroad's API cannot settle a payment - v2 is read-only for commerce, with
      no create-charge endpoint - so a hand-built checkout is not available at any
      price. The two real options are their overlay and their hosted checkout;
@@ -420,7 +434,7 @@ h1.mark-block{font-size:inherit}
      edits, not one - that is the cost of knowing which of the three is working. -->
 <div class="banner banner--top">
   <p class="terms">vst3 &nbsp;&middot;&nbsp; au &nbsp;&middot;&nbsp; macos standalone &nbsp;&middot;&nbsp; windows</p>
-  <a class="cta" data-pos="banner_top" href="https://gazillionindustries.gumroad.com/l/drugs?wanted=true&amp;utm_source=gazillionindustries.com&amp;utm_medium=cta&amp;utm_content=banner_top">Buy DRUGS now</a>
+  <a class="cta" data-pos="banner_top" href="https://gazillionindustries.gumroad.com/l/drugs?price=5&amp;wanted=true&amp;utm_source=gazillionindustries.com&amp;utm_medium=cta&amp;utm_content=banner_top">Buy DRUGS now</a>
   <p class="terms">pay what you want &nbsp;&middot;&nbsp; $5 minimum</p>
 </div>
 
@@ -470,7 +484,7 @@ h1.mark-block{font-size:inherit}
   </h1>
 
   <div class="buy-mid">
-    <a class="cta cta--small" data-pos="hero_mid" href="https://gazillionindustries.gumroad.com/l/drugs?wanted=true&amp;utm_source=gazillionindustries.com&amp;utm_medium=cta&amp;utm_content=hero_mid">Buy DRUGS now</a>
+    <a class="cta cta--small" data-pos="hero_mid" href="https://gazillionindustries.gumroad.com/l/drugs?price=5&amp;wanted=true&amp;utm_source=gazillionindustries.com&amp;utm_medium=cta&amp;utm_content=hero_mid">Buy DRUGS now</a>
   </div>
 
   <div class="copy">
@@ -523,7 +537,7 @@ h1.mark-block{font-size:inherit}
   </div>
 
   <div class="buy-end">
-    <a class="cta" data-pos="page_end" href="https://gazillionindustries.gumroad.com/l/drugs?wanted=true&amp;utm_source=gazillionindustries.com&amp;utm_medium=cta&amp;utm_content=page_end">Buy DRUGS now</a>
+    <a class="cta" data-pos="page_end" href="https://gazillionindustries.gumroad.com/l/drugs?price=5&amp;wanted=true&amp;utm_source=gazillionindustries.com&amp;utm_medium=cta&amp;utm_content=page_end">Buy DRUGS now</a>
     <p class="terms">pay what you want &nbsp;&middot;&nbsp; $5 minimum</p>
   </div>
 
