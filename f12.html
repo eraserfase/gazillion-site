@@ -835,7 +835,7 @@ function track(name, props){
 var GZ_AD = (function(){
   try{
     var q = location.search || "";
-    if(/[?&]fbclid=/i.test(q) || /[?&]utm_source=(facebook|instagram|meta|fb|ig)\b/i.test(q))
+    if(/[?&]fbclid=/i.test(q) || /[?&]utm_source=(facebook|instagram|meta|fb|ig)(&|$)/i.test(q))
       sessionStorage.setItem("gz_ad", "1");
     return sessionStorage.getItem("gz_ad") === "1";
   }catch(e){ return false; }
