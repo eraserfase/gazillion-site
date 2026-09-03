@@ -141,6 +141,15 @@ main{position:relative; z-index:1; max-width:660px; margin:0 auto;
 
 .terms{margin:0; font-size:12px; letter-spacing:.14em; text-transform:uppercase;
        color:var(--ink-soft)}
+/* The cross-sell. DRUGS is $5 and it is ALSO free inside a $49 product, so the
+   line exists to raise the average order rather than to describe this one - it
+   sits in the fixed top banner because an ad click lands there and nowhere
+   else is guaranteed to be seen. Tighter tracking than .terms so the extra row
+   costs as little height as possible on a phone. */
+.terms.cross{margin-top:5px; letter-spacing:.1em; color:var(--ink-faint)}
+.terms.cross a{color:var(--rouge); text-decoration:none;
+               border-bottom:1px solid transparent}
+.terms.cross a:hover,.terms.cross a:focus-visible{border-bottom-color:var(--rouge)}
 
 /* ---- the list ------------------------------------------------------------ */
 /* Sits after the last buy button, never before it. Anyone who reaches this has
@@ -463,6 +472,7 @@ h1.mark-block{font-size:inherit}
   <p class="terms">vst3 &nbsp;&middot;&nbsp; au &nbsp;&middot;&nbsp; macos standalone &nbsp;&middot;&nbsp; windows</p>
   <a class="cta" data-pos="banner_top" href="https://gazillionindustries.gumroad.com/l/drugs?price=5&amp;wanted=true&amp;utm_source=gazillionindustries.com&amp;utm_medium=cta&amp;utm_content=banner_top">Buy DRUGS now</a>
   <p class="terms">pay what you want &nbsp;&middot;&nbsp; $5 minimum</p>
+  <p class="terms cross">(get it free with <a href="/f12.html" data-cross="banner_top">f(ilter)12</a>)</p>
 </div>
 
 <main>
@@ -579,6 +589,7 @@ h1.mark-block{font-size:inherit}
   <div class="buy-end">
     <a class="cta" data-pos="page_end" href="https://gazillionindustries.gumroad.com/l/drugs?price=5&amp;wanted=true&amp;utm_source=gazillionindustries.com&amp;utm_medium=cta&amp;utm_content=page_end">Buy DRUGS now</a>
     <p class="terms">pay what you want &nbsp;&middot;&nbsp; $5 minimum</p>
+    <p class="terms cross">(get it free with <a href="/f12.html" data-cross="page_end">f(ilter)12</a>)</p>
   </div>
 
 
@@ -964,6 +975,21 @@ var GZ_AD = (function(){
   document.addEventListener("visibilitychange", function(){
     if(document.visibilityState === "visible") start();   // never stop(): see above
   });
+})();
+
+/* Deliberately NOT buy_click: that series has 189 entries on the board and is
+   the DRUGS checkout funnel. A click here is the opposite of a DRUGS sale - it
+   is somebody leaving to consider the $49 - so it needs its own name or it
+   would read as demand for a product they just declined. */
+(function crossSell(){
+  var links = document.querySelectorAll("a[data-cross]");
+  for(var i = 0; i < links.length; i++){
+    (function(a){
+      a.addEventListener("click", function(){
+        track("cross_to_f12", {position: a.getAttribute("data-cross") || "unknown"});
+      });
+    })(links[i]);
+  }
 })();
 
 (function buyClicks(){
