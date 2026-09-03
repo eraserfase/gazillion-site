@@ -223,7 +223,7 @@ main{position:relative; z-index:1; max-width:660px; margin:0 auto;
                           border-width:11px 0 11px 18px;
                           border-color:transparent transparent transparent var(--ink)}
 .play-badge .say{font-size:11px; letter-spacing:.24em; text-transform:uppercase;
-                 color:var(--ink-soft)}
+                 color:var(--ink-soft); text-shadow:0 1px 4px rgba(0,0,0,.75)}
 .play-badge:hover .disc{background:var(--field-deep); transform:scale(1.06)}
 .play-badge:focus-visible{outline:2px solid var(--chalk); outline-offset:2px}
 .slot{width:100%; max-width:540px; aspect-ratio:16/9; border-radius:10px;
@@ -280,10 +280,37 @@ main{position:relative; z-index:1; max-width:660px; margin:0 auto;
 .copy .lead-sub{margin:0; font-size:12.5px; font-weight:600; letter-spacing:.28em;
           text-transform:uppercase; color:var(--ink-soft)}
 
-/* Second video, sitting between the tagline and the line under it. Same 16:9
-   slot the carousel uses, so whatever goes in one goes in the other unchanged. */
+/* What one working producer said, sitting between the tagline and the line
+   under it. The asset is a 9:16 phone recording, so it is capped by WIDTH and
+   left to find its own height - a vertical clip stretched to a 16:9 slot is
+   either letterboxed to nothing or crops the caption that carries the quote. */
 .testimonial{margin:56px 0 0; width:100%; display:flex; justify-content:center}
-.testimonial .slot{max-width:560px}
+.tm{margin:0; max-width:660px; display:flex; gap:30px; align-items:center;
+    flex-wrap:wrap; justify-content:center; text-align:left}
+.tm-vid{flex:0 0 auto; width:min(300px,64vw); height:auto; border-radius:13px;
+        overflow:hidden; background:#000; box-shadow:0 18px 40px var(--shadow)}
+.tm-vid video{display:block; width:100%; height:auto}
+/* The carousel badge stacks disc-over-label in the middle of an empty panel.
+   Here the middle of the frame is Wino's own caption, so the label goes to the
+   bottom on its own gradient and the disc is pinned dead centre over it. */
+.tm-vid .play-badge{justify-content:flex-end; padding:0 0 12px;
+        background:linear-gradient(180deg,rgba(0,0,0,0) 52%,rgba(0,0,0,.58) 100%)}
+.tm-vid .play-badge .disc{position:absolute; top:50%; left:50%;
+        transform:translate(-50%,-50%)}
+.tm-vid .play-badge:hover .disc{transform:translate(-50%,-50%) scale(1.06)}
+.tm-vid .play-badge .say{color:var(--chalk)}
+.tm-say{flex:1 1 250px; min-width:0; display:flex; flex-direction:column; gap:13px}
+.tm-say blockquote{margin:0; font-family:"Archivo Black","Arial Black",sans-serif;
+        font-size:clamp(16px,3.4vw,20px); line-height:1.38; letter-spacing:.02em;
+        color:var(--chalk); text-wrap:balance}
+.tm-who{margin:0; font-size:12px; letter-spacing:.18em; text-transform:uppercase;
+        color:var(--ink-soft)}
+.tm-who a{font-weight:600; color:var(--rouge); text-decoration:none;
+           border-bottom:1px solid transparent}
+.tm-who a:hover,.tm-who a:focus-visible{border-bottom-color:var(--rouge)}
+/* Under ~560px the figure has already wrapped to a stack; centre it there so a
+   left-aligned quote does not read as a broken column under a centred video. */
+@media (max-width:560px){ .tm{text-align:center} .tm-say{align-items:center} }
 
 .copy{margin:44px 0 0; max-width:34em; text-align:center;
       display:flex; flex-direction:column; gap:24px}
@@ -496,16 +523,29 @@ h1.mark-block{font-size:inherit}
     <p class="spec">AU &nbsp;&middot;&nbsp; VST3 &nbsp;&middot;&nbsp; Standalone &nbsp;&middot;&nbsp; macOS &nbsp;&middot;&nbsp; Windows</p>
   </div>
 
-  <!-- Hidden until there is something real to put in it. An empty box reading
-       "testimonials go here" was shipping to buyers, which reads as unfinished
-       in the one place the page is asking to be trusted. Drop the hidden
-       attribute the moment the first creator video exists. -->
-  <div class="testimonial" hidden>
-    <!-- Swap this slot's contents for the embed:
-         <iframe src="https://www.youtube.com/embed/VIDEO_ID" title="What people are saying"
-                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope"
-                 allowfullscreen></iframe> -->
-    <div class="slot"><span>testimonials go here</span></div>
+  <!-- The first real one, so the box is no longer hidden. WINO (@winowilly)
+       posted this to his story unprompted while bouncing his own sample pack.
+       It runs AS THE STORY rather than as a tidy pull-quote on purpose: the
+       Ableton session behind the caption is the half a marketer cannot write,
+       and it is doing the work the empty slot used to fail at. -->
+  <div class="testimonial">
+    <figure class="tm">
+      <div class="player tm-vid">
+        <video id="wino" playsinline controls preload="metadata"
+               src="drugs/wino-story.mp4" poster="drugs/wino-story-poster.jpg"
+               muted loop autoplay disablepictureinpicture></video>
+        <button class="play-badge" type="button" aria-label="Play Wino's story with sound">
+          <span class="disc" aria-hidden="true"></span>
+          <span class="say">sound on</span>
+        </button>
+      </div>
+      <figcaption class="tm-say">
+        <blockquote>&ldquo;This plug-in is a no frills glue compressor.
+          It does a good job.&rdquo;</blockquote>
+        <p class="tm-who"><a href="https://www.instagram.com/winowilly/" target="_blank"
+             rel="noopener">@winowilly</a> &middot; bouncing Winovision Vol&nbsp;1</p>
+      </figcaption>
+    </figure>
   </div>
 
   <!-- The list is the only asset on this page that survives a change of
@@ -781,11 +821,15 @@ h1.mark-block{font-size:inherit}
 
 <script>
 (function(){
-  var v = document.getElementById("demo");
-  if(!v) return;
-  var player = v.parentNode, badge = player.querySelector(".play-badge");
-  if(!badge) return;
   var reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  // There are two players on the page now - the demo carousel and the
+  // testimonial story - and they want identical behaviour, so this wires every
+  // .player it finds rather than one id. Everything below is unchanged except
+  // that it closes over the video it was handed.
+  function wire(v){
+  var player = v.closest(".player"), badge = player && player.querySelector(".play-badge");
+  if(!badge) return;
 
   // Controls are the no-script fallback, so they ship in the markup and come off
   // here. They come back when the sound goes on, which is when they are useful.
@@ -829,6 +873,10 @@ h1.mark-block{font-size:inherit}
   // Ended only fires once loop is off, i.e. after a listen. Drop back to the
   // silent loop so the slide is an invitation again, not a frozen last frame.
   v.addEventListener("ended", preview);
+  }
+
+  var vids = document.querySelectorAll(".player video");
+  for(var i = 0; i < vids.length; i++) wire(vids[i]);
 })();
 </script>
 
