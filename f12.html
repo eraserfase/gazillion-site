@@ -287,6 +287,20 @@ main{position:relative; z-index:1; max-width:660px; margin:0 auto;
    slot the carousel uses, so whatever goes in one goes in the other unchanged. */
 .testimonial{margin:56px 0 0; width:100%; display:flex; justify-content:center}
 .testimonial .slot{max-width:560px}
+/* Quote styles ported from drugs.html when DIBIA$E's became the first real F12
+   testimonial (4 Sep 2026). Text-only - no .tm-vid rules, because the video
+   lives on his Instagram rather than on this page. */
+.tm{margin:0; max-width:660px; display:flex; gap:30px; align-items:center;
+    flex-wrap:wrap; justify-content:center; text-align:left}
+.tm-say{flex:1 1 250px; min-width:0; display:flex; flex-direction:column; gap:13px}
+.tm-say blockquote{margin:0; font-family:"Archivo Black","Arial Black",sans-serif;
+        font-size:clamp(16px,3.4vw,20px); line-height:1.38; letter-spacing:.02em;
+        color:var(--chalk); text-wrap:balance}
+.tm-who{margin:0; font-size:12px; letter-spacing:.18em; text-transform:uppercase;
+        color:var(--ink-soft)}
+.tm-who a{font-weight:600; color:var(--rouge); text-decoration:none;
+           border-bottom:1px solid transparent}
+.tm-who a:hover,.tm-who a:focus-visible{border-bottom-color:var(--rouge)}
 
 .copy{margin:44px 0 0; max-width:34em; text-align:center;
       display:flex; flex-direction:column; gap:24px}
@@ -517,8 +531,19 @@ h1.mark-block{font-size:inherit}
     <p class="spec">AU &nbsp;&middot;&nbsp; VST3 &nbsp;&middot;&nbsp; Standalone &nbsp;&middot;&nbsp; macOS &nbsp;&middot;&nbsp; Windows</p>
   </div>
 
-  <div class="testimonial" hidden>
-    <div class="slot"><span>testimonials go here</span></div>
+  <!-- First real F12 testimonial, 4 Sep 2026. DIBIA$E ran DRUGS into F12 on a
+       drum bus in Serato Studio and posted the session publicly at
+       instagram.com/p/Dc4CqyKxYfx - these are his own words from that caption,
+       quoted verbatim and not tidied. Permission to use it is explicit: he said
+       "You can post that" in DMs. -->
+  <div class="testimonial">
+    <figure class="tm">
+      <figcaption class="tm-say">
+        <blockquote>&ldquo;Gave my drums some vintage dust.&rdquo;</blockquote>
+        <p class="tm-who"><a href="https://www.instagram.com/p/Dc4CqyKxYfx/" target="_blank"
+             rel="noopener">@darealdibiase</a> &middot; DRUGS into F(ilter)12 on a drum bus</p>
+      </figcaption>
+    </figure>
   </div>
 
   <div class="list" id="list">
@@ -526,7 +551,7 @@ h1.mark-block{font-size:inherit}
          which is still hidden because F12 has no quotes yet. With nothing above
          it the line pointed at nothing and read as unfinished copy, so it is
          hidden too. Un-hide BOTH together the moment a real quote goes in. -->
-    <p id="list-msg" hidden>there will be more of these</p>
+    <p id="list-msg">there will be more of these</p>
     <form action="https://app.kit.com/forms/9851450/subscriptions" method="post">
       <input type="email" name="email_address" placeholder="email" required
              autocomplete="email" aria-label="Email address">
