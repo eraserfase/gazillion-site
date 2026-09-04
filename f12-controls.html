@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>F(ilter)12 control reference - every knob, switch and shape explained</title>
+<meta name="description" content="What every control on the F(ilter)12 panel does: AURA and MAX AURA, the crush pair, filter position, five cutoff shapes, eight Q shapes, slope, the auto filter and the sidechain. With panel screenshots.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="https://gazillionindustries.com/f12-controls.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Gazillion Industries">
+<meta property="og:title" content="F(ilter)12 control reference">
+<meta property="og:description" content="Every knob, switch and shape on the panel, in the order it sits there.">
+<meta property="og:url" content="https://gazillionindustries.com/f12-controls.html">
+<meta property="og:image" content="https://gazillionindustries.com/f12/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The F(ilter)12 plug-in panel: SAMPLE RATE and BIT dials beside a large filter POSITION dial, over a display showing the filter curve and the AURA field.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://gazillionindustries.com/f12/og.jpg">
+<meta name="twitter:title" content="F(ilter)12 control reference">
+<meta name="twitter:description" content="Every knob, switch and shape on the panel, in the order it sits there.">
+
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"TechArticle","@id":"https://gazillionindustries.com/f12-controls.html#article","headline":"F(ilter)12 control reference","description":"What every control on the F(ilter)12 panel does, in the order it sits on the panel.","url":"https://gazillionindustries.com/f12-controls.html","inLanguage":"en","author":{"@id":"https://gazillionindustries.com/#tony"},"publisher":{"@id":"https://gazillionindustries.com/#gazillion"},"about":{"@id":"https://gazillionindustries.com/f12.html#f12"},"image":"https://gazillionindustries.com/f12/manual/panel-light.jpg"},{"@type":"Organization","@id":"https://gazillionindustries.com/#gazillion","name":"Gazillion Industries LLC","alternateName":"Gazillion Industries","url":"https://gazillionindustries.com/","email":"tony@gazillionindustries.com","founder":{"@id":"https://gazillionindustries.com/#tony"}},{"@type":"Person","@id":"https://gazillionindustries.com/#tony","name":"Tony Barko","alternateName":"Anthony Greg Barko","jobTitle":"Founder","worksFor":{"@id":"https://gazillionindustries.com/#gazillion"}}]}</script>
+
+<script defer src="https://cloud.umami.is/script.js"
+        data-website-id="ed71399d-1069-4354-abbf-73dc311e5bc3"></script>
+
+<style>
+/* Same visual world as f12.html: the panel's dark theme, committed to. No media
+   query and no theme stamps, so every colour is painted explicitly. Tokens are
+   lifted from the sibling page unchanged - one product, one surface. */
+:root{
+  --field:#2a0f52; --field-lit:#3a1470; --field-deep:#1d0838;
+  --rouge:#a653f0; --chalk:#f4efff;
+  --ink:#f4efff; --ink-soft:rgba(244,239,255,.60); --ink-faint:rgba(244,239,255,.32);
+  --pill-line:rgba(244,239,255,.20);
+  --shadow:rgba(0,0,0,.6);
+  --rule:rgba(244,239,255,.13);
+  --measure:64ch;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; background:var(--field); color:var(--ink);
+  font-family:Archivo,-apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif;
+  font-size:17px; line-height:1.62; -webkit-font-smoothing:antialiased;
+  background-image:linear-gradient(180deg,var(--field-lit) 0%,var(--field) 38%,var(--field-deep) 100%);
+  background-attachment:fixed; min-height:100vh;
+}
+body::before{
+  content:""; position:fixed; inset:0; pointer-events:none; z-index:0; opacity:.5;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='.055'/%3E%3C/svg%3E");
+}
+main{position:relative; z-index:1; max-width:780px; margin:0 auto; padding:56px 24px 96px}
+
+/* ---- furniture ----------------------------------------------------------- */
+/* Uppercase, .2em, faint. The house's one label treatment, used for eyebrows,
+   figure captions and table heads alike. */
+.furn{font-size:11.5px; letter-spacing:.2em; text-transform:uppercase;
+      color:var(--ink-faint); margin:0}
+
+h1{font-family:"Archivo Black","Arial Black",sans-serif;
+   font-size:clamp(38px,8vw,62px); line-height:.98; letter-spacing:-.01em;
+   margin:14px 0 0; text-wrap:balance}
+h1 .gloss{font-size:.4em; letter-spacing:.01em; vertical-align:.16em; color:var(--rouge)}
+
+.standfirst{font-size:20px; line-height:1.5; color:var(--ink-soft);
+            max-width:var(--measure); margin:18px 0 0}
+
+h2{font-family:"Archivo Black","Arial Black",sans-serif;
+   font-size:26px; line-height:1.15; margin:0; text-wrap:balance}
+h3{font-family:"Archivo Black","Arial Black",sans-serif;
+   font-size:14px; letter-spacing:.1em; text-transform:uppercase;
+   margin:0; color:var(--chalk)}
+
+p{margin:0; max-width:var(--measure)}
+
+/* ---- the section, one per panel group ------------------------------------ */
+section{margin:0; padding:44px 0 0; border-top:1px solid var(--rule)}
+section:first-of-type{border-top:0}
+.sec-head{display:flex; flex-direction:column; gap:10px; margin-bottom:26px}
+.sec-head p{color:var(--ink-soft)}
+
+/* ---- a control ----------------------------------------------------------- */
+.ctl{padding:24px 0; border-top:1px solid var(--rule);
+     display:flex; flex-direction:column; gap:12px}
+.ctl-head{display:flex; flex-wrap:wrap; align-items:baseline; gap:10px 14px}
+.spec{font-size:11.5px; letter-spacing:.06em; text-transform:uppercase;
+      color:var(--ink-faint); font-variant-numeric:tabular-nums}
+.spec b{font-weight:400; color:var(--rouge)}
+.ctl p{color:var(--ink-soft)}
+.ctl p.lead{color:var(--ink)}
+
+/* ---- option lists -------------------------------------------------------- */
+ul.opts{list-style:none; margin:2px 0 0; padding:0; max-width:var(--measure);
+        display:flex; flex-direction:column; gap:9px}
+ul.opts li{display:grid; grid-template-columns:120px 1fr; gap:16px;
+           font-size:16px; line-height:1.5; color:var(--ink-soft)}
+ul.opts li b{font-weight:400; font-size:12px; letter-spacing:.11em;
+             text-transform:uppercase; color:var(--chalk); padding-top:3px}
+
+/* ---- figures ------------------------------------------------------------- */
+figure{margin:6px 0 0; display:flex; flex-direction:column; gap:10px;
+       align-items:flex-start}
+/* The ring is not decoration. One of these stills is the panel's DARK theme,
+   which is near-black on a near-black page and vanished into the ground without
+   an edge to hold it. Drawn as a shadow ring rather than a border so it costs
+   no layout and every figure is edged the same way. */
+figure img{max-width:100%; height:auto; display:block; border-radius:10px;
+           background:var(--field-deep);
+           box-shadow:0 22px 52px -22px var(--shadow), 0 0 0 1px var(--pill-line)}
+figure.wide img{width:100%}
+figcaption{font-size:11.5px; letter-spacing:.16em; text-transform:uppercase;
+           color:var(--ink-faint); max-width:var(--measure)}
+
+/* The full-panel stills are tall portraits. Side by side on a wide screen,
+   stacked on a phone - and never taller than the viewport, or a reader has to
+   scroll a picture to see a picture. */
+.plates{display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+        gap:22px; margin:8px 0 0}
+.plates figure img{width:100%; max-height:70vh; object-fit:contain}
+
+/* ---- callout ------------------------------------------------------------- */
+.note{margin:8px 0 0; padding:16px 20px; max-width:var(--measure);
+      background:rgba(0,0,0,.22); border:1px solid var(--pill-line);
+      border-left:2px solid var(--rouge); border-radius:8px;
+      font-size:16px; line-height:1.55; color:var(--ink-soft)}
+.note b{color:var(--chalk); font-weight:600}
+
+/* ---- table --------------------------------------------------------------- */
+.scroller{overflow-x:auto; margin:8px 0 0; -webkit-overflow-scrolling:touch}
+table{border-collapse:collapse; width:100%; min-width:460px; font-size:15px}
+th,td{text-align:left; padding:11px 14px 11px 0; border-bottom:1px solid var(--rule);
+      vertical-align:top}
+th{font-size:11.5px; letter-spacing:.16em; text-transform:uppercase;
+   color:var(--ink-faint); font-weight:400}
+td:first-child{color:var(--chalk); white-space:nowrap; font-size:13px;
+               letter-spacing:.08em; text-transform:uppercase}
+td{color:var(--ink-soft); font-variant-numeric:tabular-nums}
+
+/* ---- foot ---------------------------------------------------------------- */
+footer{margin:76px 0 0; padding-top:26px; border-top:1px solid var(--rule);
+       display:flex; flex-direction:column; gap:14px; align-items:flex-start}
+footer a{color:var(--chalk); text-decoration:none;
+         border:1px solid var(--pill-line); border-radius:999px;
+         padding:12px 26px; font-size:13px; letter-spacing:.12em;
+         text-transform:uppercase; transition:background .18s ease}
+footer a:hover{background:rgba(244,239,255,.08)}
+footer a:focus-visible{outline:2px solid var(--chalk); outline-offset:3px}
+
+@media (max-width:600px){
+  main{padding:40px 18px 72px}
+  ul.opts li{grid-template-columns:1fr; gap:2px}
+  body{font-size:16px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none !important}}
+</style>
+
+<main>
+
+  <p class="furn">Gazillion Industries &middot; Control reference</p>
+  <h1>F<span class="gloss">(ilter)</span>12</h1>
+  <p class="standfirst">Every knob, switch and shape on the panel, in the order it sits there. What each one does &mdash; not what to set it to.</p>
+
+  <div class="note">
+    <b>Before any of this.</b> Leave everything where it is, run something through it, then switch AURA off and back on. That is the whole pitch. Everything below is detail.
+  </div>
+
+  <!-- ================================================================== -->
+  <section>
+    <div class="sec-head">
+      <p class="furn">The panel</p>
+      <h2>What you are looking at</h2>
+      <p>Four things stacked: the crush pair and the filter position, the filter's shapes, the movement, then the display. Every control is on this one panel &mdash; no tabs, no second page, nothing to go looking for.</p>
+    </div>
+
+    <div class="plates">
+      <figure>
+        <img src="/f12/manual/panel-light.jpg" width="680" height="1800" alt="The F(ilter)12 panel in its light purple theme, everything at its opening setting." loading="lazy" decoding="async">
+        <figcaption>On open &mdash; light</figcaption>
+      </figure>
+      <figure>
+        <img src="/f12/manual/panel-dark.jpg" width="680" height="1800" alt="The same panel in its dark theme, deep purple on near-black." loading="lazy" decoding="async">
+        <figcaption>The same, with DARK on</figcaption>
+      </figure>
+      <figure>
+        <img src="/f12/manual/panel-worked.jpg" width="680" height="1800" alt="The panel with sample rate, bit and filter position pulled down and a WAH resonance shape selected, the display showing a moved filter curve." loading="lazy" decoding="async">
+        <figcaption>Worked &mdash; crush pair down, filter moved</figcaption>
+      </figure>
+    </div>
+
+    <div class="note">
+      <b>The panel changes shape as you use it.</b> A control with nothing to control leaves the panel rather than sitting there greyed out, and the group closes over the space. The display is what gives: open the movement group and it hands over the room.
+    </div>
+  </section>
+
+  <!-- ================================================================== -->
+  <section>
+    <div class="sec-head">
+      <p class="furn">Top row</p>
+      <h2>The three switches above everything</h2>
+    </div>
+
+    <figure class="wide">
+      <img src="/f12/manual/grp-toprow.jpg" width="600" height="72" alt="The top row of the panel: AURA lit, then MAX AURA and DARK." loading="lazy" decoding="async">
+      <figcaption>Aura &middot; max aura &middot; dark</figcaption>
+    </figure>
+
+    <div class="ctl">
+      <div class="ctl-head"><h3>Aura</h3><p class="spec">Switch &middot; <b>on</b> when you open it</p></div>
+      <p class="lead">Things sit better. What was crowding gets out of the way, what was hiding comes forward, and the record breathes without sounding like anything was done to it.</p>
+      <p>We are not going to tell you how. Do it over a mix you know well &mdash; that is the only explanation that has ever landed.</p>
+      </div>
+
+    <div class="ctl">
+      <div class="ctl-head"><h3>Max Aura</h3><p class="spec">Switch &middot; <b>off</b> &middot; hidden while AURA is off</p></div>
+      <p class="lead">The same, turned all the way up. More of everything AURA already does to whatever it touches.</p>
+      <p>You will know within a bar whether a track wants it.</p>
+      <div class="plates">
+        <figure>
+          <img src="/f12/manual/panel-auraoff.jpg" width="680" height="1800" alt="The panel with AURA switched off: the display holds the filter curve and the signal traces but no green and red field, and MAX AURA has left the top row." loading="lazy" decoding="async">
+          <figcaption>Aura off &mdash; no field, and the row is two switches wide</figcaption>
+        </figure>
+        <figure>
+          <img src="/f12/manual/panel-maxaura.jpg" width="680" height="1800" alt="The panel with MAX AURA engaged, the display field denser than at the default setting." loading="lazy" decoding="async">
+          <figcaption>Max aura</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="ctl">
+      <div class="ctl-head"><h3>Dark</h3><p class="spec">Switch &middot; <b>off</b></p></div>
+      <p class="lead">Swaps the panel to its dark colourway. Appearance only, and it saves with the session, so a project opens the way you left it.</p>
+    </div>
+  </section>
+
+  <!-- ================================================================== -->
+  <section>
+    <div class="sec-head">
+      <p class="furn">Left column</p>
+      <h2>Crush pair</h2>
+      <p>Both read as the thing they name &mdash; up is a higher rate and more bits &mdash; so turning down is what destroys.</p>
+    </div>
+
+    <figure>
+      <img src="/f12/manual/grp-crush.jpg" width="408" height="944" alt="The crush pair group: the SAMPLE RATE dial above the BIT dial, both at 100." loading="lazy" decoding="async">
+      <figcaption>Sample rate over bit</figcaption>
+    </figure>
+
+    <div class="ctl">
+      <div class="ctl-head"><h3>Sample Rate</h3><p class="spec">0 &ndash; 100&thinsp;% &middot; <b>100</b></p></div>
+      <p class="lead">Slows the rate the audio is sampled at.</p>
+      <p>The top goes, and what was up there folds back down into the audible range as new content. The fold is the point &mdash; it is what separates this from taking the top off with the filter, and why the two do not stack into the same result.</p>
+    </div>
+
+    <div class="ctl">
+      <div class="ctl-head"><h3>Bit</h3><p class="spec">0 &ndash; 100&thinsp;% &middot; <b>100</b></p></div>
+      <p class="lead">Coarsens the steps the audio is measured in.</p>
+      <p>It works on the size of the steps rather than on level, so it shows itself in tails and in the quiet material between hits. That is where the pair pulls apart: rate reshapes the top, bit reshapes the floor.</p>
+      <p>Twelve bits is as clean as this gets. It only goes down from there.</p>
+    </div>
+
+    <div class="note">
+      Nothing in the plug-in uses lookahead and there is no latency anywhere in it, so none of this costs you delay compensation.
+    </div>
+  </section>
+
+  <!-- ================================================================== -->
+  <section>
+    <div class="sec-head">
+      <p class="furn">The L-shaped group</p>
+      <h2>Filter</h2>
+      <p>The centrepiece. Its group wraps around the crush pair to take in the two rows of pictures, because those belong to it.</p>
+    </div>
+
+    <figure class="wide">
+      <img src="/f12/manual/grp-filter.jpg" width="600" height="824" alt="The filter group: the FILTER switch above the large POSITION dial, the SLOPE dropdown, the CUTOFF SHAPE row, the Q SHAPE row, and the DRIVE, RESO, Q and MIX dials." loading="lazy" decoding="async">
+      <figcaption>The whole filter group</figcaption>
+    </figure>
+
+    <div class="ctl">
+      <div class="ctl-head"><h3>Filter</h3><p class="spec">Switch &middot; <b>on</b></p></div>
+      <p class="lead">Takes the whole filter out of the way, so you can hear what it was doing without losing where you had it set.</p>
+    </div>
+
+    <div class="ctl">
+      <div class="ctl-head"><h3>Position</h3><p class="spec">0 &ndash; 100&thinsp;% &middot; <b>100</b> &middot; the big dial</p></div>
+      <p class="lead">Where in the spectrum the filter sits.</p>
+      <p>The further it works, the more it drives and the more it sings, without you adding anything to make that happen.</p>
+      <p>It is also the anchor for the Q SHAPE row &mdash; those peaks and dips sit at ratios of wherever this knob is, so the whole formation travels with it.</p>
+      <p>This is the knob you will spend the most time with, and the first place to look when you want to automate the filter in your DAW.</p>
+    </div>
+
+    <div class="ctl">
+      <div class="ctl-head"><h3>Cutoff Shape</h3><p class="spec">5 tiles &middot; <b>low-pass</b></p></div>
+      <p class="lead">Low-pass, high-pass, band-pass, notch, morph &mdash; each drawn as its own response curve.</p>
+      <figure class="wide">
+        <img src="/f12/manual/grp-cutoff.jpg" width="560" height="104" alt="The CUTOFF SHAPE row: five tiles drawn as response curves - low-pass, high-pass, band-pass, notch and morph." loading="lazy" decoding="async">
+        <figcaption>Left to right, as they sit</figcaption>
+      </figure>
+      <p>MORPH is the one that is not obvious. It runs one knob from a closing low-pass, through untouched, to an opening high-pass &mdash; so on morph the middle of POSITION's travel is the neutral place, and the two halves go opposite ways. The resonance grows toward both ends with it, so the extremes sing and the middle stays out of the way. On the other four the knob sweeps a corner and the ends are the extremes.</p>
+    </div>
+
+    <div class="ctl">
+      <div class="ctl-head"><h3>Slope</h3><p class="spec">4 entries &middot; <b>24 dirty</b></p></div>
+      <p class="lead">Two choices in one list: 12 or 24&thinsp;dB per octave, clean or dirty.</p>
+      <p>Dirty feeds the circuit's own distortion back through itself. Slope and Q SHAPE are separate controls, so a steep dirty filter can also be a wah.</p>
+      <p>It opens on 24 dirty. There is no neutral starting point here on purpose.</p>
+    </div>
+
+    <div class="ctl">
+      <div class="ctl-head"><h3>Q Shape</h3><p class="spec">8 tiles &middot; <b>plain</b></p></div>
+      <p class="lead">Resonant nodes riding on top of the filter, placed at ratios of the cutoff so the whole formation sweeps with POSITION rather than staying nailed to a frequency.</p>
+      <figure class="wide">
+        <img src="/f12/manual/grp-qshape.jpg" width="560" height="96" alt="The Q SHAPE row: eight tiles drawn as resonance shapes - plain, wah, vowel, comb, scoop, hollow, twin and phaser." loading="lazy" decoding="async">
+        <figcaption>Eight, in the order they sit</figcaption>
+      </figure>
+      <ul class="opts">
+        <li><b>Plain</b> no nodes. The filter's own resonance and nothing added.</li>
+        <li><b>Wah</b> one strong peak right at the cutoff, with a shallow dip just over an octave above it. The body underneath stays &mdash; a boost, so the lows do not leave when you sweep it.</li>
+        <li><b>Vowel</b> four peaks spaced the way a formant table spaces them.</li>
+        <li><b>Comb</b> peaks and nulls alternating on even spacing, seven of them across the range.</li>
+        <li><b>Scoop</b> a smile. Both ends lifted and the cutoff itself pulled down between them.</li>
+        <li><b>Hollow</b> a peak below the cutoff with a deep null immediately above it, and a lift again at the top.</li>
+        <li><b>Twin</b> two peaks, far enough apart to hear as two rather than as one wide one.</li>
+        <li><b>Phaser</b> five notches spread across the range. Cuts only, no boosts.</li>
+      </ul>
+      <p>Every node sits between roughly a third of the cutoff and just under three times it. Further out than that and a node lands in the filter's own stopband, where the shape stops being audible at all.</p>
+      <p>This row and the cutoff row are independent. Any of the eight sits on any of the five.</p>
+    </div>
+
+    <div class="ctl">
+      <div class="ctl-head"><h3>Drive, Reso, Q, Mix</h3><p class="spec">The four small dials</p></div>
+      <figure class="wide">
+        <img src="/f12/manual/grp-fknobs.jpg" width="560" height="132" alt="The four filter dials: DRIVE at 0, RESO at 25, Q at 35 and MIX at 100." loading="lazy" decoding="async">
+        <figcaption>Drive &middot; reso &middot; q &middot; mix</figcaption>
+      </figure>
+      <ul class="opts">
+        <li><b>Drive</b> how hard the signal is pushed into the crush. It sets the level that lands on the quantiser's rails, and the gain comes back off afterwards, so driving it is character rather than volume. 0 to 18&thinsp;dB, opens at 0.</li>
+        <li><b>Reso</b> how hard it sings. 0 to 100&thinsp;%, opens at 25.</li>
+        <li><b>Q</b> how narrow that singing is, and how tight the Q SHAPE nodes sit with it. It drives a peaking section right at the corner, so it is audible on every shape including PLAIN. 0 to 100&thinsp;%, opens at 35.</li>
+        <li><b>Mix</b> how much of the whole thing you keep against what went in untouched. 0 to 100&thinsp;%, opens at 100.</li>
+      </ul>
+      <p>DRIVE is the odd one out in this row. It sits with the filter knobs but it works on the crush stage, so it is the crush pair's third control in everything but position.</p>
+      <p>RESO and Q are the pair to learn together. A wah at low Q is a broad sweep; the same wah at high Q is a point.</p>
+      <p>RESO scales the filter's whole resonance behaviour rather than setting one fixed value, so the character holds across the sweep instead of drifting as POSITION moves.</p>
+    </div>
+  </section>
+
+  <!-- ================================================================== -->
+  <section>
+    <div class="sec-head">
+      <p class="furn">The group that grows</p>
+      <h2>Movement</h2>
+      <p>Two ways to hand the filter to something other than your hand. Neither is on when you open the plug-in.</p>
+    </div>
+
+    <div class="note">
+      <b>One mover at a time.</b> Engaging either switch releases the other. Both driving the same cutoff would mean neither knob does what it says.
+    </div>
+
+    <div class="ctl">
+      <div class="ctl-head"><h3>Auto Filter</h3><p class="spec">Switch &middot; <b>off</b></p></div>
+      <p class="lead">Hands the filter to your song's clock.</p>
+      <p>Locked to the arrangement rather than free-running: it moves only while the transport moves, it stops and returns to the start when you stop, and the sweep lands in the same place in the bar wherever you drop the playhead. On every shape but RANDOM, bar 9 looks like bar 1 and the same eight bars bounce the same way twice.</p>
+      <p>RANDOM is the exception, and worth knowing before you print. It draws a fresh value every time the cycle turns over, and that draw does not reset with the transport &mdash; so it does not repeat from take to take. Commit it to audio when you get one you like.</p>
+      <figure class="wide">
+        <img src="/f12/manual/grp-auto.jpg" width="600" height="398" alt="The movement group with AUTO FILTER engaged: the seven shape tiles, then RATE, GRID, STEPS and DIR, then the ATTACK, RELEASE, SWING, MORPH and AMOUNT dials." loading="lazy" decoding="async">
+        <figcaption>Auto filter, open</figcaption>
+      </figure>
+    </div>
+
+    <div class="ctl">
+      <div class="ctl-head"><h3>Sidechain</h3><p class="spec">Switch &middot; <b>off</b></p></div>
+      <p class="lead">Hands the filter to a signal instead of a clock.</p>
+      <p>Same shapes, different driver. Here the shape is a path rather than a cycle: the follower walks it from rest to fully engaged and back, so a ramp is plain travel, a triangle pumps up and back, and a square gates.</p>
+      <figure class="wide">
+        <img src="/f12/manual/grp-sc.jpg" width="600" height="398" alt="The movement group with SIDECHAIN engaged: the seven shape tiles, then SOURCE, LISTEN, DIR, STEPS and REACT, then the ATTACK, RELEASE, MORPH and AMOUNT dials." loading="lazy" decoding="async">
+        <figcaption>Sidechain, open &mdash; a different row of choices, the same shapes</figcaption>
+      </figure>
+    </div>
+
+    <div class="ctl">
+      <div class="ctl-head"><h3>Shapes</h3><p class="spec">7 tiles &middot; <b>sine</b> &middot; shared</p></div>
+      <p class="lead">The shape the filter opens and closes in, drawn rather than named.</p>
+      <p>Two pairs are worth separating. The ramps differ in which end snaps &mdash; RAMP UP climbs then snaps shut, RAMP DOWN snaps open then falls away &mdash; and the vertical edge in the drawing is the snap. The two squares differ only in which state they start in. The rest are what they look like, except that the triangle rises first.</p>
+    </div>
+
+    <div class="ctl">
+      <div class="ctl-head"><h3>Steps</h3><p class="spec">Smooth, 2, 3, 4, 6, 8, 16 &middot; <b>smooth</b> &middot; shared</p></div>
+      <p class="lead">Cuts the shape into a stair instead of a slide. Smooth reads as <em>SMTH</em> in the box.</p>
+    </div>
+
+    <div class="ctl">
+      <div class="ctl-head"><h3>Morph</h3><p class="spec">0 &ndash; 100&thinsp;% &middot; <b>0</b> &middot; shared</p></div>
+      <p class="lead">Bends one shape into the next.</p>
+      <p>At 0 you get the shape you picked; turning it up walks it toward its neighbour. The seven tiles are points on a continuum, not seven fixed settings.</p>
+    </div>
+
+    <div class="ctl">
+      <div class="ctl-head"><h3>Attack &amp; Release</h3><p class="spec">0.5 &ndash; 200&thinsp;ms &middot; <b>15</b> &nbsp;/&nbsp; 5 &ndash; 2000&thinsp;ms &middot; <b>250</b> &middot; shared</p></div>
+      <p class="lead">How quickly the filter travels once something is moving it, and how quickly it comes back.</p>
+      <p>They shape the filter's travel under either mover. How eagerly the follower itself decides to move is a separate thing, and that is REACT.</p>
+    </div>
+  </section>
+
+  <!-- ================================================================== -->
+  <section>
+    <div class="sec-head">
+      <p class="furn">Auto filter only</p>
+      <h2>The clock's own controls</h2>
+    </div>
+
+    <div class="ctl">
+      <div class="ctl-head"><h3>Rate</h3><p class="spec">12 divisions &middot; <b>1/4</b></p></div>
+      <p class="lead">The division the cycle runs at.</p>
+      <p>4 bars down to 1/16 straight, plus 1/4 and 1/8 dotted, and 1/4, 1/8 and 1/16 triplet. It reads the host's tempo, so it follows a tempo change rather than needing to be reset.</p>
+    </div>
+
+    <div class="ctl">
+      <div class="ctl-head"><h3>Grid</h3><p class="spec">16th, 8th, quint &middot; <b>16th</b></p></div>
+      <p class="lead">Which notes SWING pairs up before it stretches them.</p>
+      <p>16TH and 8TH do nothing until SWING is off 50. QUINT does not work that way &mdash; it is a fixed three-against-two and ignores the SWING knob entirely, so it is the one setting here that changes the feel on its own.</p>
+    </div>
+
+    <div class="ctl">
+      <div class="ctl-head"><h3>Swing</h3><p class="spec">50 &ndash; 75&thinsp;% &middot; <b>50</b></p></div>
+      <p class="lead">Pushes the cycle off the grid the way an MPC does. 50 is straight, on 16TH and 8TH &mdash; QUINT sets its own ratio and this knob stops applying.</p>
+      <p>The clock itself stays exact underneath &mdash; the timing is displaced deliberately rather than allowed to drift.</p>
+    </div>
+
+    <div class="ctl">
+      <div class="ctl-head"><h3>Dir</h3><p class="spec">Both, up, down &middot; <b>both</b></p></div>
+      <p class="lead">Sends the sweep up from the filter, down from it, or both ways.</p>
+      <p>POSITION is the origin. On UP the knob is the floor of the sweep, on DOWN the ceiling, on BOTH the centre &mdash; so switching this moves where the same setting sits without you touching the big dial.</p>
+    </div>
+
+    <div class="ctl">
+      <div class="ctl-head"><h3>Amount</h3><p class="spec">0 &ndash; 4 octaves &middot; <b>1.5</b></p></div>
+      <p class="lead">How far the sweep travels from where POSITION is sitting.</p>
+      <p>Measured in octaves, so the same setting is the same musical distance wherever on the dial you are working.</p>
+      <p>Every dial on the panel prints whole numbers, and this is the only one that opens on a fraction &mdash; so it reads 2 while it is sitting at 1.5, and a nudge or two will not change what it says.</p>
+    </div>
+  </section>
+
+  <!-- ================================================================== -->
+  <section>
+    <div class="sec-head">
+      <p class="furn">Sidechain only</p>
+      <h2>The follower's own controls</h2>
+    </div>
+
+    <div class="ctl">
+      <div class="ctl-head"><h3>Source</h3><p class="spec">Input, sidechain &middot; <b>input</b></p></div>
+      <p class="lead">What the follower listens to.</p>
+      <ul class="opts">
+        <li><b>Input</b> the material itself. An envelope filter with nothing to route.</li>
+        <li><b>Sidechain</b> the external bus.</li>
+      </ul>
+      <p>Which track feeds that bus is chosen in your DAW. No plug-in can see the host's routing, so that end of it is always the host's job.</p>
+    </div>
+
+    <div class="ctl">
+      <div class="ctl-head"><h3>Listen</h3><p class="spec">Full, lows, mids, highs &middot; <b>full</b></p></div>
+      <p class="lead">Narrows what the follower hears to a band of the source.</p>
+      <p>It changes what drives the filter and never what you hear &mdash; nothing on this row is in the audio path. On INPUT it is the useful one: LOWS gives you kick-driven motion off the material itself, without setting up a send.</p>
+    </div>
+
+    <div class="ctl">
+      <div class="ctl-head"><h3>Dir</h3><p class="spec">Up, down &middot; <b>up</b></p></div>
+      <p class="lead">Which way the filter travels as the source gets louder.</p>
+      <ul class="opts">
+        <li><b>Up</b> a louder source pushes the filter open. The envelope-filter move.</li>
+        <li><b>Down</b> a louder source pulls it shut. The pump.</li>
+      </ul>
+    </div>
+
+    <div class="ctl">
+      <div class="ctl-head"><h3>React</h3><p class="spec">Low, med, high &middot; <b>med</b></p></div>
+      <p class="lead">How eagerly the follower makes up its mind.</p>
+      <p>Three settings and no milliseconds &mdash; it is a feel. The milliseconds are ATTACK and RELEASE.</p>
+    </div>
+
+    <div class="ctl">
+      <div class="ctl-head"><h3>Amount</h3><p class="spec">0 &ndash; 100&thinsp;% &middot; <b>50</b></p></div>
+      <p class="lead">How far the follower moves the filter.</p>
+      <p>The two movers name this the same thing and measure it differently: the clock's AMOUNT is in octaves, the follower's is a percentage.</p>
+    </div>
+  </section>
+
+  <!-- ================================================================== -->
+  <section>
+    <div class="sec-head">
+      <p class="furn">Bottom of the panel</p>
+      <h2>The display</h2>
+      <p>Deliberately unlabelled. It is there to be watched while you work, not read.</p>
+    </div>
+
+    <figure class="wide">
+      <img src="/f12/manual/grp-display.jpg" width="600" height="462" alt="The panel display: the heavy filter curve across the top, the input and output traces behind it, and the AURA field drawn as a band of pixels." loading="lazy" decoding="async">
+      <figcaption>The display on the panel</figcaption>
+    </figure>
+
+    <div class="ctl">
+      <div class="ctl-head"><h3>Reading it</h3></div>
+      <p class="lead">The heavy line is the filter. Behind it is what is going in and what is coming out.</p>
+      <p>The field of pixels is AURA: green where it is adding, red where it is taking away, and nothing at all where it has no opinion. That last part is the one to watch &mdash; an empty stretch is the plug-in telling you it left that band alone.</p>
+      <p>Anything on this panel that is not affecting the sound is not on screen, so with nothing playing there is nothing drawn.</p>
+    </div>
+
+    <div class="ctl">
+      <div class="ctl-head"><h3>Expand Visualizer</h3><p class="spec">Switch &middot; bottom left</p></div>
+      <p class="lead">The same plot in its own window &mdash; 720 by 420, centred, and a fixed size.</p>
+      <p>Bigger than the strip on the panel, and with the scales printed on it: dB down the side, frequency along the bottom. For when you want to know exactly what is happening rather than feel it. The panel's own display goes dark while it is up.</p>
+      <figure class="wide">
+        <img src="/f12/manual/scope.jpg" width="960" height="560" alt="The expanded visualizer window: the filter curve and signal traces on a grid with a dB scale from 0 to -84 down the left and a frequency scale from 20 Hz to 20 kHz along the bottom." loading="lazy" decoding="async">
+        <figcaption>The pop-out, with both scales</figcaption>
+      </figure>
+    </div>
+
+    <div class="ctl">
+      <div class="ctl-head"><h3>Help</h3><p class="spec">Switch &middot; bottom, beside it</p></div>
+      <p class="lead">Brings the walkthrough back whenever you want it.</p>
+      <p>It runs itself the first time the plug-in is opened on a machine, and says the same things this page does, a step at a time, pointed at the control it is talking about.</p>
+      <figure class="wide">
+        <img src="/f12/manual/grp-foot.jpg" width="600" height="82" alt="The bottom of the panel: the EXPAND VISUALIZER switch and the HELP switch." loading="lazy" decoding="async">
+        <figcaption>The foot</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ================================================================== -->
+  <section>
+    <div class="sec-head">
+      <p class="furn">Handling</p>
+      <h2>Landing on a value, and the window</h2>
+    </div>
+
+    <div class="ctl">
+      <div class="ctl-head"><h3>Fine tuning</h3></div>
+      <p class="lead">Click any knob and it is selected. Up and down then move it by one of whatever it reads out, and shift holds that to a tenth.</p>
+      <p>Drag to get near a value, arrow to land on it. The auto filter's AMOUNT is the one exception &mdash; its whole range is four octaves, so a step of one would be a quarter of the travel. It moves by a tenth instead, and a hundredth with shift.</p>
+    </div>
+
+    <div class="ctl">
+      <div class="ctl-head"><h3>Resizing</h3></div>
+      <p class="lead">Drag the window's corner to make the panel smaller, down to four fifths.</p>
+      <p>Every part of it scales together, so nothing shifts or reflows on the way down. It does not go bigger. It is already the size it was drawn at.</p>
+    </div>
+  </section>
+
+  <!-- ================================================================== -->
+  <section>
+    <div class="sec-head">
+      <p class="furn">One table</p>
+      <h2>Everything, and where it opens</h2>
+      <p>The whole panel state the first time you load it.</p>
+    </div>
+
+    <div class="scroller">
+      <table>
+        <thead>
+          <tr><th>Control</th><th>Range</th><th>Opens at</th><th>Where</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Aura</td><td>switch</td><td>On</td><td>Top row</td></tr>
+          <tr><td>Max Aura</td><td>switch</td><td>Off</td><td>Top row, with AURA on</td></tr>
+          <tr><td>Dark</td><td>switch</td><td>Off</td><td>Top row</td></tr>
+          <tr><td>Sample Rate</td><td>0 &ndash; 100 %</td><td>100</td><td>Crush pair</td></tr>
+          <tr><td>Bit</td><td>0 &ndash; 100 %</td><td>100</td><td>Crush pair</td></tr>
+          <tr><td>Filter</td><td>switch</td><td>On</td><td>Filter</td></tr>
+          <tr><td>Position</td><td>0 &ndash; 100 %</td><td>100</td><td>Filter</td></tr>
+          <tr><td>Cutoff Shape</td><td>5 tiles</td><td>Low-pass</td><td>Filter</td></tr>
+          <tr><td>Slope</td><td>4 entries</td><td>24 dirty</td><td>Filter</td></tr>
+          <tr><td>Q Shape</td><td>8 tiles</td><td>Plain</td><td>Filter</td></tr>
+          <tr><td>Drive</td><td>0 &ndash; 18 dB</td><td>0</td><td>Filter</td></tr>
+          <tr><td>Reso</td><td>0 &ndash; 100 %</td><td>25</td><td>Filter</td></tr>
+          <tr><td>Q</td><td>0 &ndash; 100 %</td><td>35</td><td>Filter</td></tr>
+          <tr><td>Mix</td><td>0 &ndash; 100 %</td><td>100</td><td>Filter</td></tr>
+          <tr><td>Auto Filter</td><td>switch</td><td>Off</td><td>Movement</td></tr>
+          <tr><td>Sidechain</td><td>switch</td><td>Off</td><td>Movement</td></tr>
+          <tr><td>Shapes</td><td>7 tiles</td><td>Sine</td><td>Movement, either mover</td></tr>
+          <tr><td>Steps</td><td>Smooth &ndash; 16</td><td>Smooth</td><td>Movement, either mover</td></tr>
+          <tr><td>Morph</td><td>0 &ndash; 100 %</td><td>0</td><td>Movement, either mover</td></tr>
+          <tr><td>Attack</td><td>0.5 &ndash; 200 ms</td><td>15</td><td>Movement, either mover</td></tr>
+          <tr><td>Release</td><td>5 &ndash; 2000 ms</td><td>250</td><td>Movement, either mover</td></tr>
+          <tr><td>Rate</td><td>4 bars &ndash; 1/16 trip</td><td>1/4</td><td>Auto filter only</td></tr>
+          <tr><td>Grid</td><td>16th, 8th, quint</td><td>16th</td><td>Auto filter only</td></tr>
+          <tr><td>Swing</td><td>50 &ndash; 75 %</td><td>50</td><td>Auto filter only</td></tr>
+          <tr><td>Dir</td><td>Both, up, down</td><td>Both</td><td>Auto filter only</td></tr>
+          <tr><td>Amount</td><td>0 &ndash; 4 octaves</td><td>1.5</td><td>Auto filter only</td></tr>
+          <tr><td>Source</td><td>Input, sidechain</td><td>Input</td><td>Sidechain only</td></tr>
+          <tr><td>Listen</td><td>Full, lows, mids, highs</td><td>Full</td><td>Sidechain only</td></tr>
+          <tr><td>Dir</td><td>Up, down</td><td>Up</td><td>Sidechain only</td></tr>
+          <tr><td>React</td><td>Low, med, high</td><td>Med</td><td>Sidechain only</td></tr>
+          <tr><td>Amount</td><td>0 &ndash; 100 %</td><td>50</td><td>Sidechain only</td></tr>
+          <tr><td>Expand Visualizer</td><td>switch</td><td>Off</td><td>Foot</td></tr>
+          <tr><td>Help</td><td>switch</td><td>&mdash;</td><td>Foot</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <footer>
+    <p class="furn">Gazillion Industries</p>
+    <a href="/f12.html">F(ilter)12</a>
+  </footer>
+
+</main>
+</html>
