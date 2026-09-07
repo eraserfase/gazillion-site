@@ -1,0 +1,1171 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>SKRUU - varispeed pitch and time stretch plug-in for drums and samples (VST3, AU, Mac and Windows)</title>
+<meta name="description" content="Explore a new dimension in which to stretch and skew your sounds. Control pitch and time independently. Speed it up while pitching down, and vice versa. Elastic pitch and time for controlled expressions and transitions, with the speed and curve of every shift under your hand. Sixteen elastic return shapes and four sampling grades. AU, VST3 and standalone, Mac and Windows. $29.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="https://gazillionindustries.com/skruu.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Gazillion Industries">
+<meta property="og:title" content="SKRUU - pitches love me">
+<meta property="og:description" content="Explore a new dimension in which to stretch and skew your sounds. Control pitch and time, independently.">
+<meta property="og:url" content="https://gazillionindustries.com/skruu.html">
+<meta property="og:image" content="https://gazillionindustries.com/skruu/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The SKRUU plug-in panel: PITCH and TIME dials over a varispeed scale, elastic pitch and elastic time sections with slope curves, a BPM readout and a pitch comparator display.">
+<meta name="twitter:image" content="https://gazillionindustries.com/skruu/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SKRUU - pitches love me">
+<meta name="twitter:description" content="Explore a new dimension in which to stretch and skew your sounds. Control pitch and time, independently.">
+<!-- No og:video yet. The demo capture does not exist, and pointing a crawler at
+     a file that is not there is worse than not claiming one - the card falls
+     back to the image either way, but a broken video URL is cached. The four
+     video tags come across from the sibling page the day the capture lands. -->
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"SoftwareApplication","name":"SKRUU","applicationCategory":"MultimediaApplication","applicationSubCategory":"Audio plug-in","operatingSystem":"macOS 10.13 or later, Windows 10 or later","softwareVersion":"1.0.0","url":"https://gazillionindustries.com/skruu.html","image":"https://gazillionindustries.com/skruu/og.jpg","description":"A varispeed pitch and time plug-in for macOS and Windows. PITCH moves the pitch, from minus twenty to plus ten percent. TIME moves the length, from minus fifty to plus twenty-five. They are separate controls and either can be locked while the other moves. Elastic pitch and elastic time run the knob home through sixteen return shapes, optionally quantised to the grid. Four sampling grades from 31.25 kHz down to 3.91 kHz. AU, VST3 and standalone.","featureList":["PITCH: minus 20% to plus 10%, in 128 states","TIME: length, minus 50% to plus 25%, separate from PITCH","PITCH LOCK and TIME LOCK, so either can be held while the other moves","ELASTIC PITCH and ELASTIC TIME: let go and the knob runs home","Sixteen return shapes, smooth, stepped and overshooting","RETURN and BITE per elastic section, with a grid-quantised option","Four sampling grades: 31.25, 15.62, 7.81 and 3.91 kHz","Pitch comparator display in semitones, input against output","Host BPM readout with locked, in time and drifting states","Two finishes, black and brushed aluminium","Zero latency","Resizable window","Universal binary, Apple Silicon and Intel","Windows 10 or later, 64-bit","Works offline"],"keywords":"varispeed plugin, pitch shifter plugin, tape pitch VST, time stretch plugin, sampler pitch, lo-fi hip hop, boom bap, sample rate reduction, AU plugin, VST3, macOS audio plugin, windows VST3, pitch bend plugin, turntable pitch","softwareRequirements":"macOS 10.13 or later, or Windows 10 or later 64-bit; a host supporting AU or VST3, or none for the standalone","@id":"https://gazillionindustries.com/skruu.html#skruu","author":{"@id":"https://gazillionindustries.com/#tony"},"publisher":{"@id":"https://gazillionindustries.com/#gazillion"},"creator":{"@id":"https://gazillionindustries.com/#tony"},"installUrl":"https://gazillionindustries.com/skruu.html","inLanguage":"en","offers":{"@type":"Offer","priceCurrency":"USD","price":"29.00","availability":"https://schema.org/InStock"}},{"@type":"Organization","@id":"https://gazillionindustries.com/#gazillion","name":"Gazillion Industries LLC","alternateName":"Gazillion Industries","url":"https://gazillionindustries.com/","email":"tony@gazillionindustries.com","founder":{"@id":"https://gazillionindustries.com/#tony"}},{"@type":"Person","@id":"https://gazillionindustries.com/#tony","name":"Tony Barko","alternateName":"Anthony Greg Barko","jobTitle":"Founder","worksFor":{"@id":"https://gazillionindustries.com/#gazillion"},"sameAs":["https://apps.apple.com/us/developer/anthony-greg-barko/id1866031805"]},{"@type":"WebSite","@id":"https://gazillionindustries.com/#website","url":"https://gazillionindustries.com/","name":"Gazillion Industries","inLanguage":"en","publisher":{"@id":"https://gazillionindustries.com/#gazillion"}}]}</script>
+<!-- Same Umami site and same Meta pixel as the sibling pages: one business, one
+     property. Keeping them identical is what lets the pages be compared. -->
+<script defer src="https://cloud.umami.is/script.js"
+        data-website-id="ed71399d-1069-4354-abbf-73dc311e5bc3"></script>
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1164684366890206');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" alt=""
+  src="https://www.facebook.com/tr?id=1164684366890206&amp;ev=PageView&amp;noscript=1"/></noscript>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Archivo+Black&display=swap">
+<style>
+
+
+/* Committed to one visual world: the panel's dark theme. No media query and no
+   theme stamps, so every colour is painted explicitly and the page holds on
+   whatever ground the host puts behind it. */
+:root{
+  /* Same five roles the sibling's page uses, in this plugin's hues - the roles
+     carry across, the colours do not.
+
+     The ground is NOT a straight copy of f12ui's dark tokens, and taking them
+     literally is what made this page read as black. The sibling's ground sits
+     at luminance 22-52 across its gradient: a near-black that is visibly warm
+     and pink. f12ui's slime trio is 14-25, which no eye reads as a colour.
+
+     So the ROLE is matched instead of the token: f12ui::ink (#1d0838) anchors
+     the foot at the sibling's exact luminance, and the gradient steps up from
+     it in the same ratios the sibling uses. Purple all the way up, never
+     black. Same fix as the store header - see f12/promo/cover.html. */
+  --field:#4b0f20; --field-lit:#6d1730; --field-deep:#280711;
+  --rouge:#ff3859; --chalk:#ffeef1;
+  --ink:#ffeef1; --ink-soft:rgba(255,238,241,.62); --ink-faint:rgba(255,238,241,.34);
+  --pill-line:rgba(255,238,241,.22);
+  --shadow:rgba(0,0,0,.6);
+}
+*{box-sizing:border-box}
+/* The UA stylesheet gives [hidden] display:none, and any author display rule
+   beats it - .testimonial sets display:flex, so marking it hidden did nothing
+   and the empty slot kept rendering. This is the normalize rule that makes the
+   attribute mean what it says, everywhere on the page rather than case by case. */
+[hidden]{display:none !important}
+body{
+  margin:0; background:var(--field); color:var(--ink);
+  font-family:Archivo,-apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif;
+  -webkit-font-smoothing:antialiased;
+  background-image:linear-gradient(180deg,var(--field-lit) 0%,var(--field) 38%,var(--field-deep) 100%);
+  background-attachment:fixed; min-height:100vh;
+}
+body::before{
+  content:""; position:fixed; inset:0; pointer-events:none; z-index:0; opacity:.5;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='.055'/%3E%3C/svg%3E");
+}
+/* Top padding clears the fixed banner. The banner's height moves with the
+   viewport because its button's type is clamped, so it is measured into
+   --banner-h rather than reserved at a worst case that would strand dead
+   space at every width but one. The fallback covers the widest banner. */
+main{position:relative; z-index:1; max-width:660px; margin:0 auto;
+     padding:calc(var(--banner-h, 135px) + 18px) 24px 96px;
+     display:flex; flex-direction:column; align-items:center}
+
+/* ---- the two banners ----------------------------------------------------- */
+/* Full-bleed and pinned, one at each end, so the ask is on screen at every
+   scroll position without the page having to repeat itself. Nothing else lives
+   in them: a banner with a second thing in it is a navigation bar, and people
+   read past navigation. */
+.banner{position:fixed; left:0; right:0; z-index:20;
+        display:flex; flex-direction:column; align-items:center; gap:8px;
+        padding:14px 20px;
+        background:color-mix(in srgb, var(--field-deep) 88%, transparent);
+        -webkit-backdrop-filter:blur(16px); backdrop-filter:blur(16px)}
+.banner--top{top:0; border-bottom:1px solid var(--pill-line); padding:16px 20px 18px}
+
+.cta{font-family:"Archivo Black","Arial Black",sans-serif;
+     letter-spacing:.02em; text-decoration:none; text-align:center;
+     color:var(--field-deep); background:var(--chalk); border-radius:999px;
+     display:block; transition:transform .18s ease, box-shadow .18s ease}
+.cta:focus-visible{outline:3px solid var(--chalk); outline-offset:4px}
+
+/* The gumroad-button overrides that used to live here are gone with the overlay
+   script. They existed only to reclaim properties Gumroad's run-time stylesheet
+   set on .gumroad-button, and to hide the wordmark <span> it injected. Base .cta
+   already carries every one of those properties, so there is nothing to reclaim
+   from a script that no longer loads. */
+.cta:hover{transform:translateY(-2px)}
+
+/* One banner, pinned to the top. It is the only ask on the page, so it carries
+   the full treatment rather than a reduced one. */
+.cta{font-size:clamp(18px,5vw,23px); padding:22px 48px; width:100%; max-width:440px;
+     box-shadow:0 0 0 0 rgba(255,238,241,.28), 0 16px 40px -14px rgba(0,0,0,.9);
+     animation:halo 3.4s ease-in-out infinite}
+.cta:hover{animation:none;
+     box-shadow:0 0 0 12px rgba(255,238,241,.10), 0 22px 48px -14px rgba(0,0,0,.9)}
+@keyframes halo{
+  0%,100%{box-shadow:0 0 0 0 rgba(255,238,241,.26), 0 16px 40px -14px rgba(0,0,0,.9)}
+  50%    {box-shadow:0 0 0 14px rgba(255,238,241,0), 0 16px 40px -14px rgba(0,0,0,.9)}
+}
+/* The same ask again at the end of the scroll, but in the flow rather than
+   pinned - so it arrives when someone has finished reading instead of sitting
+   over the page the whole way down. */
+.buy-end{margin:56px 0 0; width:100%; display:flex; flex-direction:column;
+         align-items:center; gap:10px}
+
+.terms{margin:0; font-size:12px; letter-spacing:.14em; text-transform:uppercase;
+       color:var(--ink-soft)}
+
+/* ---- the list ------------------------------------------------------------ */
+/* Sits after the last buy button, never before it. Anyone who reaches this has
+   already walked past the ask twice without taking it, so the list is the
+   second-best outcome rather than a competitor to the first - which is why it is
+   quiet, small, and carries no discount. A bribe here would teach people to wait
+   for the next one instead of buying this one. */
+.list{margin:92px 0 0; width:100%; max-width:440px; text-align:center}
+.list p{margin:0 0 12px; font-size:12px; letter-spacing:.14em;
+        text-transform:uppercase; color:var(--ink-soft)}
+/* The 16px was Chrome's quirks stylesheet, not a decision - a UA margin-bottom
+   on <form> that vanished the moment the doctype put the page in standards
+   mode, pulling the last buy button 16px up the page. Restated here so the
+   spacing survives on its own terms rather than on a parser fallback. */
+.list form{display:flex; gap:8px; margin-bottom:16px}
+.list input{flex:1 1 auto; min-width:0; font-family:inherit; font-size:15px;
+            color:var(--ink); background:var(--field-deep);
+            border:1px solid var(--pill-line); border-radius:999px;
+            padding:12px 18px; -webkit-appearance:none}
+.list input::placeholder{color:var(--ink-faint)}
+.list input:focus{outline:none; border-color:var(--ink-soft)}
+.list button{flex:0 0 auto; font-family:inherit; font-size:12px; font-weight:600;
+             letter-spacing:.1em; text-transform:uppercase; cursor:pointer;
+             color:var(--field-deep); background:var(--chalk); border:0;
+             border-radius:999px; padding:12px 22px}
+.list.is-done form{display:none}
+.list.is-done p{color:var(--ink)}
+
+/* ---- carousel ------------------------------------------------------------ */
+/* Scroll-snap rather than a library: it is native, it takes a trackpad swipe and
+   a phone flick for free, and it degrades to a plain scroller if the script
+   never runs. Slides are a fixed height and centre their contents, so a portrait
+   screenshot and a 16:9 video can sit in the same track without either being
+   cropped or stretched. */
+.carousel{position:relative; width:100%; margin:10px 0 0}
+.track{display:flex; overflow-x:auto; scroll-snap-type:x mandatory;
+       scroll-behavior:smooth; scrollbar-width:none; -ms-overflow-style:none;
+}
+.track::-webkit-scrollbar{display:none}
+/* The end slides are centred with margins, not track padding. A percentage
+   padding on the track shrinks its content box, and flex-basis then resolves
+   against that smaller box - so the slides came out narrower than the padding
+   assumed and the first and last sat 53px off centre. Margins resolve against
+   the same box the basis does, so the arithmetic closes: 11% + 78% + 11%. */
+.slide:first-child{margin-left:19%}
+.slide:last-child{margin-right:19%}
+.slide{flex:0 0 62%; scroll-snap-align:center;
+       display:flex; align-items:center; justify-content:center; height:500px;
+       /* The neighbours stay visible but recede, so it is obvious there is more
+          without them competing with the slide you are looking at. */
+       opacity:.34; transform:scale(.93);
+       transition:opacity .3s ease, transform .3s ease}
+.slide.is-active{opacity:1; transform:none}
+.slide img{max-height:100%; width:auto; border-radius:10px; display:block;
+           box-shadow:0 26px 60px -22px var(--shadow)}
+/* The demo is a capture of the panel, so it is the same portrait shape as the
+   screenshots either side of it and is sized like them rather than like the
+   16:9 slot the testimonial still uses. */
+.slide video{max-height:100%; width:auto; border-radius:10px; display:block;
+             background:var(--field-deep);
+             box-shadow:0 26px 60px -22px var(--shadow)}
+/* The badge covers the video, so anywhere on the poster starts it. It is hidden
+   until the script reveals it: without one the native controls are still there
+   and still work, and a dead button over them would be worse than none. */
+.player{position:relative; display:flex; align-items:center; height:100%}
+.play-badge{display:none; position:absolute; inset:0; z-index:2;
+            border:0; padding:0; margin:0; cursor:pointer; background:transparent;
+            border-radius:10px; flex-direction:column; align-items:center;
+            justify-content:center; gap:14px}
+.player.is-ready .play-badge{display:flex}
+.player.is-started .play-badge{display:none}
+.play-badge .disc{width:64px; height:64px; border-radius:999px;
+                  background:color-mix(in srgb, var(--field-deep) 68%, transparent);
+                  border:1px solid var(--pill-line);
+                  -webkit-backdrop-filter:blur(8px); backdrop-filter:blur(8px);
+                  display:flex; align-items:center; justify-content:center;
+                  transition:background .18s ease, transform .18s ease}
+/* A triangle carries its mass left of centre, so nudge it back into the disc. */
+.play-badge .disc::before{content:""; margin-left:5px; border-style:solid;
+                          border-width:11px 0 11px 18px;
+                          border-color:transparent transparent transparent var(--ink)}
+.play-badge .say{font-size:11px; letter-spacing:.24em; text-transform:uppercase;
+                 color:var(--ink-soft)}
+.play-badge:hover .disc{background:var(--field-deep); transform:scale(1.06)}
+.play-badge:focus-visible{outline:2px solid var(--chalk); outline-offset:2px}
+.slot{width:100%; max-width:540px; aspect-ratio:16/9; border-radius:10px;
+      background:var(--field-deep); border:1px solid var(--pill-line);
+      display:flex; align-items:center; justify-content:center; overflow:hidden}
+.slot iframe{width:100%; height:100%; border:0; display:block}
+.slot span{font-size:11px; letter-spacing:.24em; text-transform:uppercase;
+           color:var(--ink-faint); text-align:center; padding:0 20px}
+
+.nav{position:absolute; top:50%; transform:translateY(-50%); z-index:2;
+     width:40px; height:40px; border-radius:999px; cursor:pointer;
+     background:color-mix(in srgb, var(--field-deep) 70%, transparent);
+     border:1px solid var(--pill-line); color:var(--ink);
+     font-size:20px; line-height:1; display:flex; align-items:center;
+     justify-content:center; -webkit-backdrop-filter:blur(8px); backdrop-filter:blur(8px);
+     transition:background .18s ease}
+.nav:hover{background:var(--field-deep)}
+.nav:focus-visible{outline:2px solid var(--chalk); outline-offset:2px}
+.nav--prev{left:-4px} .nav--next{right:-4px}
+
+.dots{display:flex; justify-content:center; gap:9px; margin:20px 0 0}
+.dot{width:7px; height:7px; border-radius:999px; padding:0; cursor:pointer;
+     border:0; background:var(--ink-faint); transition:background .2s ease, transform .2s ease}
+.dot[aria-current="true"]{background:var(--chalk); transform:scale(1.35)}
+.dot:focus-visible{outline:2px solid var(--chalk); outline-offset:3px}
+
+/* ---- wordmark ------------------------------------------------------------ */
+/* The mark is the plug-in's own outlines, not type. It was set here in Archivo
+   Black with the gloss at .42em, which is a different logo wearing a similar
+   typeface: the panel builds it from three runs at -2 and -0.5 tracking with
+   two overlap tucks, so "(ilter)" sits in the pocket under the F's bars and the
+   1's flag overhangs the closing paren. None of that survives being re-set, and
+   the panel is the brand - `uishot <out.svg> --marksvg` dumps exactly what it
+   draws. Sized by width because the width is what the layout and .mark-sub were
+   built around; currentColor keeps it on --chalk. */
+.mark{display:block; font-family:"Archivo Black","Arial Black",sans-serif;
+      font-size:clamp(52px,15vw,104px); line-height:.92; letter-spacing:-.01em;
+      color:var(--chalk); white-space:nowrap}
+.credit{margin:22px 0 0; font-size:10.5px; letter-spacing:.18em;
+        text-transform:uppercase; color:var(--ink-faint); text-align:center}
+
+.mark-block{margin:34px 0 0; display:flex; flex-direction:column; align-items:center}
+/* The one line that says what the product actually IS, so it keeps the size,
+   weight and contrast it was given - and is now tracked out at run time to sit
+   exactly as wide as DRUGS above it, the way the plug-in panel sets these same
+   two words. Sized as a fraction of the mark so the pairing survives the clamp. */
+/* TWO lines under the name, not one, because that is what the panel sets:
+   the name, the tagline, and the plain-English category, every line justified
+   to the same measure. Sizes here are the band the run-time fitter is allowed
+   to move inside - it takes the size down first and closes the rest with
+   tracking, which is the house rule and never a stretch. */
+.mark-sub{margin:11px 0 0; font-weight:700; text-transform:uppercase;
+          white-space:nowrap; text-align:center; letter-spacing:.2em}
+.mark-sub--say{font-size:clamp(11px,2.9vw,21px); color:var(--chalk)}
+.mark-sub--cat{font-size:clamp(9px,2.1vw,15px); color:var(--ink-soft); margin-top:9px}
+
+/* The ask, small and early: it arrives while the mark is still the loudest
+   thing on screen, so it reads as an invitation rather than a second banner. */
+.buy-mid{margin:36px 0 0; display:flex; justify-content:center}
+.cta--small{font-size:14px; padding:13px 30px; width:auto; max-width:none;
+            letter-spacing:.04em; animation:none;
+            box-shadow:0 10px 26px -12px rgba(0,0,0,.9)}
+.cta--small:hover{box-shadow:0 14px 30px -12px rgba(0,0,0,.9)}
+
+/* Holds the tagline tight under MAKE EVERYTHING BETTER instead of letting the
+   copy block's own 24px gap push it away into a separate paragraph. */
+.lede{display:flex; flex-direction:column; gap:11px}
+.copy .lead-sub{margin:0; font-size:12.5px; font-weight:600; letter-spacing:.28em;
+          text-transform:uppercase; color:var(--ink-soft)}
+
+/* Second video, sitting between the tagline and the line under it. Same 16:9
+   slot the carousel uses, so whatever goes in one goes in the other unchanged. */
+/* A column since 6 Sep 2026: there are two quotes now, not one, and they stack
+   rather than sitting side by side so each keeps the full measure. */
+.testimonial{margin:56px 0 0; width:100%; display:flex; flex-direction:column;
+             align-items:center; gap:52px}
+.testimonial .slot{max-width:560px}
+/* Quote styles ported from drugs.html when DIBIA$E's became the first real F12
+   testimonial (4 Sep 2026). The .tm-vid rules came over on 6 Sep, when both
+   creators' own captures landed on this page instead of only on their feeds. */
+.tm{margin:0; max-width:660px; display:flex; gap:30px; align-items:center;
+    flex-wrap:wrap; justify-content:center; text-align:left}
+.tm-vid{flex:0 0 auto; width:min(300px,64vw); height:auto; border-radius:13px;
+        overflow:hidden; background:#000; box-shadow:0 18px 40px var(--shadow)}
+.tm-vid video{display:block; width:100%; height:auto}
+/* The carousel badge stacks disc-over-label in the middle of an empty panel.
+   Here the middle of the frame is somebody's session, so the label goes to the
+   bottom on its own gradient and the disc is pinned dead centre over it. */
+.tm-vid .play-badge{justify-content:flex-end; padding:0 0 12px;
+        background:linear-gradient(180deg,rgba(0,0,0,0) 52%,rgba(0,0,0,.58) 100%)}
+.tm-vid .play-badge .disc{position:absolute; top:50%; left:50%;
+        transform:translate(-50%,-50%)}
+.tm-vid .play-badge:hover .disc{transform:translate(-50%,-50%) scale(1.06)}
+.tm-vid .play-badge .say{color:var(--chalk)}
+/* Both F12 captures are LANDSCAPE - a DAW window, not a phone story. At the
+   300px a portrait story takes, two plug-in panels side by side are unreadable,
+   so a wide clip runs the full measure with its quote underneath instead of
+   beside it. The sibling page keeps the narrow form for Wino's phone story. */
+.tm--wide{flex-direction:column; gap:22px; max-width:560px; text-align:center}
+.tm--wide .tm-vid{width:100%}
+/* .tm-say carries flex:1 1 250px for the side-by-side form, where 250px is a
+   minimum WIDTH. Turned on its side that basis becomes a 250px minimum HEIGHT
+   and puts a dead half-screen under every quote, so it is reset here. */
+.tm--wide .tm-say{flex:0 0 auto; align-items:center}
+.tm-say{flex:1 1 250px; min-width:0; display:flex; flex-direction:column; gap:13px}
+.tm-say blockquote{margin:0; font-family:"Archivo Black","Arial Black",sans-serif;
+        font-size:clamp(16px,3.4vw,20px); line-height:1.38; letter-spacing:.02em;
+        color:var(--chalk); text-wrap:balance}
+.tm-who{margin:0; font-size:12px; letter-spacing:.18em; text-transform:uppercase;
+        color:var(--ink-soft)}
+.tm-who a{font-weight:600; color:var(--rouge); text-decoration:none;
+           border-bottom:1px solid transparent}
+.tm-who a:hover,.tm-who a:focus-visible{border-bottom-color:var(--rouge)}
+
+.copy{margin:44px 0 0; max-width:34em; text-align:center;
+      display:flex; flex-direction:column; gap:24px}
+.copy .lead{font-family:"Archivo Black","Arial Black",sans-serif;
+            font-size:clamp(17px,4.4vw,22px); letter-spacing:.04em;
+            color:var(--chalk); text-wrap:balance}
+.copy p{margin:0; font-size:17px; line-height:1.65; color:var(--ink-soft)}
+.copy .spec{font-size:12.5px; letter-spacing:.16em; text-transform:uppercase;
+            color:var(--ink-faint)}
+
+/* ---- the ask ------------------------------------------------------------- */
+/* Deliberately the largest and brightest object on the page after the wordmark.
+   On a dark ground a solid chalk fill is the highest contrast available, and the
+   halo pulls the eye without adding a colour the palette does not have. */
+.foot{margin:104px 0 0; font-size:11px; letter-spacing:.22em; text-transform:uppercase;
+      color:var(--ink-faint); text-align:center; line-height:2}
+
+@media (max-width:560px){
+  .slide{flex:0 0 72%; height:400px}
+  .slide:first-child{margin-left:14%}
+  .slide:last-child{margin-right:14%}
+  .nav{width:34px; height:34px; font-size:17px}
+  .nav--prev{left:-8px} .nav--next{right:-8px}
+  /* Equal specificity and later in source, so without the :not() this would
+     inflate the small in-page button back to banner size on phones. */
+  .cta:not(.cta--small){padding:19px 28px}
+  /* Wide tracking pushed the tagline to a second line, orphaning one word. */
+  .copy .lead-sub{font-size:11px; letter-spacing:.19em}
+}
+@media (prefers-reduced-motion:reduce){
+  .track{scroll-behavior:auto}
+  .slide{transition:none}
+  .cta{animation:none !important}
+  .cta:hover{transform:none}
+  .cta,.nav,.dot{transition:none}
+  .play-badge .disc{transition:none}
+}
+
+/* ---- the h1 now wraps the mark ------------------------------------------- */
+/* .mark-block was a div; as an h1 it inherits the UA 2em font-size, which would
+   scale nothing here (every size below is px or vw) but would scale anything
+   added later. Pinned rather than left as a trap. */
+/* font-size only. The weight is deliberately left alone: .mark declares none,
+   so as an <h1> it took the UA's bold, and Archivo Black ships from Google as a
+   single 400 face - meaning the wordmark has always been synthetically
+   emboldened. Pinning 400 here quietly removed that and took 13% of the ink out
+   of it. The h1 keeps its bold so the mark renders as it always has. */
+h1.mark-block{font-size:inherit}
+.mark{display:block}
+
+/* ---- the long copy ------------------------------------------------------- */
+/* It sits below the last buy button on purpose. Someone who came to hear a
+   compressor should not have to read 700 words to reach the ask; someone who
+   wants the detail - or a crawler deciding what this page is about - scrolls.
+   Serving both this way costs neither of them anything. */
+.about{margin:96px 0 0; width:100%; max-width:34em; text-align:left;
+       border-top:1px solid var(--pill-line); padding-top:28px}
+
+/* The copy is a disclosure rather than a section. It stays in the document at
+   all times - <details> hides it with CSS, it is never injected on click - so a
+   crawler still reads every word of it while the page stays as short as it was
+   for somebody who only came to hear the thing. */
+.about > summary{
+  list-style:none; cursor:pointer; display:block; text-align:center;
+  font-size:11px; font-weight:600; letter-spacing:.22em; text-transform:uppercase;
+  color:var(--ink-faint); padding:6px 0; transition:color .18s ease}
+/* Two ways to kill the disclosure triangle, because the one that works depends
+   on the engine: display:block on the summary covers modern Safari and Chrome,
+   the pseudo-element covers what is left. */
+.about > summary::-webkit-details-marker{display:none}
+.about > summary::after{content:"+"; margin-left:.7em; font-weight:400;
+       display:inline-block; transform:translateY(-.02em)}
+.about[open] > summary::after{content:"\2013"}
+.about > summary:hover{color:var(--ink-soft)}
+.about > summary:focus-visible{outline:2px solid var(--ink-soft);
+       outline-offset:6px; border-radius:3px}
+.about-body{margin-top:36px}
+.about h2{margin:38px 0 14px; font-size:12px; font-weight:600; letter-spacing:.2em;
+          text-transform:uppercase; color:var(--chalk)}
+.about h2:first-of-type{margin-top:0}
+.about p{margin:0 0 14px; font-size:15.5px; line-height:1.7; color:var(--ink-soft)}
+.about ul{margin:0; padding:0 0 0 18px; list-style:none}
+.about li{margin:0 0 12px; font-size:15.5px; line-height:1.7; color:var(--ink-soft);
+          position:relative}
+.about li::before{content:"\2014"; position:absolute; left:-18px; color:var(--ink-faint)}
+.about strong{color:var(--ink); font-weight:600}
+.about em{color:var(--ink)}
+
+/* "one-knob bus compressor" is nine characters longer than the "bus compressor"
+   it replaced, and .mark-sub is nowrap. At .2em tracking that pushed the line
+   past a 320px viewport and put a horizontal scrollbar on the narrowest phones.
+   Tracking comes in first because it is the cheapest 23px on the line; the wrap
+   is the backstop below the width where even that is not enough. The line is
+   centred, so where it does break it reads the same as one line. */
+/* The fitter already takes the size down before it tracks out, so the only
+   thing left to guard is a viewport too narrow for the smallest allowed size.
+   Below that the line wraps rather than condensing - it is centred, so a break
+   reads the same as one line, and condensing is the one thing the house rule
+   forbids outright. */
+@media (max-width:340px){ .mark-sub{white-space:normal} }
+
+/* One line set in the page's small-caps voice rather than as body copy, so it
+   reads as a claim about the sound instead of another sentence about it. Sized
+   between .lead-sub and body: louder than the tagline pair above it, quieter
+   than the mark. */
+.copy .caps{margin:0; font-size:13.5px; font-weight:600; letter-spacing:.22em;
+            text-transform:uppercase; color:var(--ink-soft)}
+@media (max-width:560px){ .copy .caps{font-size:12px; letter-spacing:.16em} }
+
+/* ---- slide height, retuned for a taller panel ---------------------------- */
+/* The sibling's slides are 500px because its panel is 680x1320. This one is
+   680x1800, and a portrait image in a fixed-height slot is sized by its height -
+   so at 500 it came out 189px wide against the sibling's 258 and read as a
+   thumbnail rather than the product. Height is the only lever that widens it. */
+/* Sized down from 620/470: the panel is 680x1800 and at the old height it
+   dominated the fold on a laptop, pushing the copy under it out of view. */
+.slide{height:540px}
+@media (max-width:560px){ .slide{height:420px} }
+
+/* ---- the mark's parenthetical ------------------------------------------- */
+/* The panel sets the name as F(ilter)12: a full-size F and 12 with the gloss
+   dropped to roughly two fifths and sitting on the same baseline. Sized in em
+   so it tracks the clamp on .mark rather than needing its own. */
+
+
+/* ---- the buy button under the wordmark has to be inside the first screen -- */
+/* Measured on a 375x812 viewport: everything below the slide is fixed cost -
+   231px above it, 163px of wordmark and tagline, 41px of button = 435 - so the
+   slide had to give back about 40px or the button's bottom sat 23px under the
+   fold. A fixed pixel height only fixes the phone it was tuned on, so this is
+   viewport-relative and capped: tall phones keep the full 430, short ones give
+   the button its room instead. Last rule in the sheet, so it wins on order. */
+@media (max-width:560px){
+  /* 455px was far more than the page actually spends below the slide: the mark
+     and the buy button under it come to 162px measured, so the old number gave
+     away nearly 300px of an 812 screen and left the demo tiny - and the demo is
+     the hook. It also had NO FLOOR, so on a short viewport calc() resolved to
+     single digits and the carousel vanished, images and all. clamp fixes both. */
+  .slide{height:clamp(260px, calc(100vh - 185px), 660px)}
+}
+
+/* ---- the price is the number people decide on, so it carries weight ------- */
+/* .terms is 12px at 60% opacity, which was right when it read "$5 MINIMUM" and
+   wrong once it read "$49". The price alone steps up to full brightness and
+   size; the rest of the line stays quiet so the contrast does the work. */
+.terms .price{font-size:16px; color:var(--chalk); font-weight:600;
+              letter-spacing:.06em}
+
+
+/* ---- justified type blocks ---------------------------------------------- */
+/* THE HOUSE RULE. Lines that sit together are ONE BLOCK: every line justified
+   to the same measure, ink flush both edges, uppercase. Two levers and only
+   two - SCALE and KERNING. Never stretch, never skew, never condense.
+   It is what the GAZILLION / INDUSTRIES lockup is, and what every panel does
+   under its own mark.
+
+   The size difference between the lines is the OUTPUT of justifying, not a
+   fault to even out: a short line fills the measure by coming out larger, a
+   long line by coming out smaller. Do not try to match them.
+
+   The font-size below is the DESIGN size - what the line wants to be - and
+   --fit-min/--fit-max are how far the fitter may scale from it. --fit-aim is
+   the tracking the line WANTS; the solver finds the size that lands on the
+   measure at that tracking, then tracking closes whatever is left. Display type
+   aims tight, which is why AIM here is nothing like the .26 furniture takes. */
+/* The claim block sits on its own between the ask and the copy, so it gets its
+   own spacing rather than inheriting the copy block's 24px rhythm. */
+.hero-block{margin:40px 0 0; width:100%; max-width:34em; margin-left:auto;
+            margin-right:auto; display:flex; flex-direction:column;
+            align-items:center; gap:15px}
+/* Caps and a step up from body size: it is the second half of the claim above
+   it, not a sentence about it, so it sits in the same register the panel's
+   furniture does rather than in the copy block's voice. Tracking comes with the
+   caps - Archivo Black's siblings set tight, but a run of capitals at body
+   tracking reads as shouting rather than as printing. */
+.hero-block .hero-say{margin:0; font-size:20px; line-height:1.5; font-weight:600;
+            text-transform:uppercase; letter-spacing:.08em;
+            color:var(--ink-soft); text-align:center}
+@media (max-width:560px){ .hero-block .hero-say{font-size:16px; letter-spacing:.06em} }
+/* Measured, not guessed: .copy carries a 44px top margin that was tuned to sit
+   under the mark block, and under the claim block instead it opened a 55px hole
+   of INK between AND VICE VERSA and the line below - against 15px inside this
+   block and 24px between the copy's own paragraphs. Adjacent selector so the
+   page that has no claim block keeps the original 44. */
+.hero-block + .copy{margin-top:22px}
+/* The name and the line under it are ONE BLOCK, so they sit together rather
+   than at paragraph distance. 11px was a gap; the panel sets these with the
+   lines nearly touching. */
+.mark-sub--say{margin-top:4px}
+.mark-sub--cat{margin-top:6px}
+/* The second line of a section head: same caps, much lighter, stepped back in
+   tone so the head above it stays the head. The colour is an OPACITY STEP of
+   the page's one bright tone, never a separate grey - that is the house rule
+   for ink and it is what keeps a palette from acquiring stray colours. */
+.copy .lead-note{margin:7px 0 0; font-family:Archivo,-apple-system,sans-serif;
+                 font-weight:500; font-size:13px; letter-spacing:.16em;
+                 text-transform:uppercase; line-height:1.5;
+                 color:var(--ink-soft); text-wrap:balance}
+@media (max-width:560px){ .copy .lead-note{font-size:11.5px; letter-spacing:.12em} }
+.jtblock{width:100%; max-width:34em; margin:0 auto}
+/* SCOPED UNDER .jtblock, and that is not tidiness. .copy p is class+element,
+   which outranks a bare .jt on specificity - so the surrounding page stylesheet
+   was silently supplying BOTH the line-height (1.65, the body measure) and the
+   design font-size (17px, not the 22 asked for here). The first put a body
+   line's worth of air between two rows that are meant to smash together; the
+   second is worse, because the fitter reads the design size off the computed
+   style, so every --fit-min/--fit-max band was being applied to the wrong base
+   and the shorter line hit a ceiling it should never have reached. */
+.jtblock .jt{margin:0; width:100%; text-align:left; text-transform:uppercase;
+    line-height:1; white-space:nowrap;
+    --fit-min:.5; --fit-max:2.2; --fit-aim:.05}
+/* NEVER put overflow:hidden on a .jt or on anything above one. A Range's
+   getBoundingClientRect is CLIPPED by an overflow:hidden ancestor, so a line
+   that overruns measures as exactly its box, the solver concludes it already
+   fits, and the type comes out far too large with a glyph sliced off every
+   line. It looks like a justification bug and is a measurement bug. */
+/* The rows of a block SMASH TOGETHER - no gap between them, which is what the
+   GAZILLION / INDUSTRIES lockup does and what the panels do. line-height:1 is
+   not tight enough on its own: an all-caps line at 1 still carries the font's
+   descender space under it as air, so the leading comes below the cap height
+   instead. No margin between the rows at all. */
+.jtblock .jt--lead{font-family:"Archivo Black","Arial Black",sans-serif;
+          font-size:22px; line-height:.78; color:var(--chalk)}
+.jtblock .jt--lead + .jt--lead{margin-top:0}
+</style>
+
+<div class="banner banner--top">
+  <a class="cta" data-pos="banner_top" href="https://gazillionindustries.gumroad.com/l/skruu?wanted=true&amp;utm_source=gazillionindustries.com&amp;utm_medium=cta&amp;utm_content=banner_top">Buy SKRUU now</a>
+  <!-- Price and formats on ONE line under the button. They answer the same
+       question - what is this going to cost me and will it run - so splitting
+       them above and below the ask made the banner three objects deep for two
+       facts. The price keeps its own weight inside the line. -->
+  <p class="terms"><span class="price">$29</span> &nbsp;&middot;&nbsp; vst3 &nbsp;&middot;&nbsp; au &nbsp;&middot;&nbsp; standalone &nbsp;&middot;&nbsp; macos &nbsp;&middot;&nbsp; windows</p>
+</div>
+
+<main>
+  <!-- Two slides, both themes of the panel. There is no demo capture yet, and a
+       carousel slide holding an empty player is worse than one fewer slide - so
+       the video goes in FRONT of these when it exists, and the player markup and
+       the badge script come across from the sibling page unchanged. -->
+  <div class="carousel">
+    <div class="track" id="track">
+      <div class="slide">
+        <img src="skruu/skruu-dark.jpg" width="680" height="1536"
+             alt="The SKRUU panel in its black finish: large PITCH and TIME dials in cherry, a varispeed scale running from minus twenty to plus ten percent, ELASTIC PITCH and ELASTIC TIME sections each with a slope curve, RETURN and BITE dials, four sampling grades, a red BPM readout, and a pitch comparator display below.">
+      </div>
+      <div class="slide">
+        <img src="skruu/skruu-light.jpg" width="680" height="1536" loading="lazy"
+             alt="The same SKRUU panel in its brushed aluminium finish, the printing dark on a light case and the cherry accent darker to stay readable.">
+      </div>
+    </div>
+    <button class="nav nav--prev" type="button" aria-label="Previous">&lsaquo;</button>
+    <button class="nav nav--next" type="button" aria-label="Next">&rsaquo;</button>
+    <div class="dots" id="dots"></div>
+  </div>
+
+  <!-- The name alone does not say what this is, so the category travels inside
+       the heading - which makes the loudest signal on the page also the one
+       that says what the page is about. The three lines are ONE justified
+       block, the same object the panel sets under its own controls. -->
+  <h1 class="mark-block">
+    <span class="mark">SKRUU</span>
+    <span class="mark-sub mark-sub--say">PITCHES LOVE ME</span>
+    <span class="mark-sub mark-sub--cat">VARISPEED PITCH</span>
+  </h1>
+
+  <div class="buy-mid">
+    <a class="cta cta--small" data-pos="hero_mid" href="https://gazillionindustries.gumroad.com/l/skruu?wanted=true&amp;utm_source=gazillionindustries.com&amp;utm_medium=cta&amp;utm_content=hero_mid">Buy SKRUU now</a>
+  </div>
+
+  <div class="hero-block">
+    <div class="jtblock">
+      <p class="jt jt--lead">Control pitch and time</p>
+      <p class="jt jt--lead">Independently</p>
+    </div>
+    <p class="hero-say">speed it up while pitching down<br>and vice versa</p>
+  </div>
+
+  <div class="copy">
+    <div class="lede">
+      <p class="lead">EXPLORE A NEW DIMENSION IN WHICH TO STRETCH AND SKEW YOUR SOUNDS</p>
+      <p>pitch and time have broken up and are now moving in different directions.<br>there there, its not your fault buddy. its for the best</p>
+    </div>
+    <div class="lede">
+      <p class="lead">ELASTIC PITCH AND TIME</p>
+      <p>for controlled expressions and transitions. control the speed and curve of shifting pitch and time.</p>
+    </div>
+    <div class="lede">
+      <p class="lead">FOUR SAMPLING GRADES</p>
+      <p>hi-fi 31.25 khz<br>standard 15.62 khz<br>lo-fi 1 7.81 khz<br>lo-fi 2 3.91 khz</p>
+    </div>
+    <p class="spec">AU &nbsp;&middot;&nbsp; VST3 &nbsp;&middot;&nbsp; Standalone &nbsp;&middot;&nbsp; macOS &nbsp;&middot;&nbsp; Windows</p>
+  </div>
+
+  <!-- Ships hidden. Nothing real has been said about this one in public yet, and
+       an empty box reading "testimonials go here" reads as unfinished in the one
+       place the page asks to be trusted. Un-hide it and the line under it
+       together, the moment there is a quote. -->
+  <div class="testimonial" hidden></div>
+
+  <div class="list" id="list">
+    <p id="list-msg">there will be more of these</p>
+    <form action="https://app.kit.com/forms/9851450/subscriptions" method="post">
+      <input type="email" name="email_address" placeholder="email" required
+             autocomplete="email" aria-label="Email address">
+      <button type="submit">tell me</button>
+    </form>
+  </div>
+
+  <div class="buy-end">
+    <a class="cta" data-pos="page_end" href="https://gazillionindustries.gumroad.com/l/skruu?wanted=true&amp;utm_source=gazillionindustries.com&amp;utm_medium=cta&amp;utm_content=page_end">Buy SKRUU now</a>
+    <!-- Same line as the top banner: price and formats travel together under
+         every buy button. The one in the middle of the page carries neither -
+         it arrives while the wordmark is still the loudest thing on screen, so
+         it reads as an invitation, and hanging a spec line off it would turn it
+         into a second banner. -->
+    <p class="terms"><span class="price">$29</span> &nbsp;&middot;&nbsp; vst3 &nbsp;&middot;&nbsp; au &nbsp;&middot;&nbsp; standalone &nbsp;&middot;&nbsp; macos &nbsp;&middot;&nbsp; windows</p>
+  </div>
+
+  <details class="about">
+    <summary>more info</summary>
+    <div class="about-body">
+    <h2>What SKRUU is</h2>
+    <p>Two knobs that do not touch each other. PITCH moves the pitch. TIME moves
+    the length. Speed it up while pitching down, or the other way
+    round. Lock either one and play the other, or run both.</p>
+
+    <h2>Elastic</h2>
+    <p>The part that makes it playable. With ELASTIC on, the knob is sprung: move
+    it, let go, and it travels back to where it was. RETURN is how long that
+    takes &mdash; free, or quantised to the bar. BITE is how hard it commits.</p>
+    <p>SLOPE is the road it takes home, and there are sixteen: RAMP, GLIDE, SNAP,
+    WHIP, HANG, CREEP, STAIRS, HALVES, RATCHET, DRUNK, LURCH, BOUNCE, WOBBLE,
+    TREMOR, KICK, CLIFF. Six are smooth, five are stepped, five overshoot and
+    come back. Pitch and time each get their own.</p>
+
+    <h2>How it works</h2>
+    <ul>
+      <li><strong>PITCH</strong> runs from &minus;20% to +10% in 128 states, and
+      reads out in semitones as well as speed. Unity is marked. Double-click
+      returns to it.</li>
+      <li><strong>TIME</strong> runs from &minus;50% to +25%, and moves nothing
+      but the length.</li>
+      <li><strong>PITCH LOCK</strong> and <strong>TIME LOCK</strong> hold one
+      while the other moves.</li>
+      <li><strong>SAMPLING GRADE</strong> is the grid the whole thing is
+      transported on: 31.25&nbsp;kHz, 15.62, 7.81 and 3.91. It is not an EQ
+      preset &mdash; the lower grades put a staircase in, and the staircase is
+      the sound. All four record all the time, so the grade can be changed while
+      a note is sounding.</li>
+      <li><strong>RETURN</strong>, <strong>BITE</strong>, <strong>SLOPE</strong>
+      and <strong>GRID</strong> belong to the elastic sections.</li>
+      <li><strong>DRAG</strong> and <strong>MIX</strong> are in the tree. DRAG is
+      how long the new speed takes to arrive; at the floor it is instant, turned
+      up it is a hand on the platter.</li>
+    </ul>
+
+    <h2>The display</h2>
+    <p>A pitch comparator, in semitones. What went in against what came out, with
+    the octaves marked, so how far off the record you are is a picture rather
+    than a number you have to trust. Above it the host's tempo, and whether the
+    transport is locked to it, in time with it, or drifting.</p>
+
+    <h2>Two finishes</h2>
+    <p>Black and brushed aluminium. Not one panel at two brightnesses &mdash; a
+    component of this kind was sold as one or the other, and they are different
+    objects. The recessed displays stay dark glass in both, because that is what
+    a recessed display is.</p>
+
+    <h2>Formats and compatibility</h2>
+    <p>On macOS, SKRUU installs as an Audio Unit (AU) and a VST3 plug-in, plus a
+    standalone application. macOS 10.13 or later, universal binary for both Apple
+    Silicon and Intel.</p>
+    <p>Windows 10 or later, 64-bit.</p>
+    <p>Zero samples of latency. Any sample rate your session runs at. No internet
+    connection required after activation.</p>
+
+    <h2>Price</h2>
+    <p>$29.</p>
+    </div>
+  </details>
+
+  <p class="foot">Gazillion Industries LLC</p>
+</main>
+<script>
+(function(){
+  var track = document.getElementById("track");
+  var dotsEl = document.getElementById("dots");
+  if(!track || !dotsEl) return;
+  var slides = Array.prototype.slice.call(track.children);
+  if(slides.length < 2){ dotsEl.remove(); return; }
+
+  slides.forEach(function(_, i){
+    var b = document.createElement("button");
+    b.className = "dot";
+    b.type = "button";
+    b.setAttribute("aria-label", "Go to slide " + (i+1));
+    b.addEventListener("click", function(){ go(i); });
+    dotsEl.appendChild(b);
+  });
+  var dots = Array.prototype.slice.call(dotsEl.children);
+
+  // Slides are narrower than the track now, so neither position nor the active
+  // slide can be derived from clientWidth any more. Both come from geometry.
+  function centreOf(el){ return el.offsetLeft + el.offsetWidth / 2; }
+  function index(){
+    var mid = track.scrollLeft + track.clientWidth / 2 + track.offsetLeft;
+    var best = 0, bestDist = Infinity;
+    slides.forEach(function(s, i){
+      var d = Math.abs(centreOf(s) - mid);
+      if(d < bestDist){ bestDist = d; best = i; }
+    });
+    return best;
+  }
+  function go(i){
+    var n = Math.max(0, Math.min(slides.length - 1, i));
+    var left = slides[n].offsetLeft - track.offsetLeft
+                 - (track.clientWidth - slides[n].offsetWidth) / 2;
+    track.scrollTo({ left: left, behavior: "smooth" });
+  }
+  function sync(){
+    var n = index();
+    dots.forEach(function(d, i){ d.setAttribute("aria-current", i === n ? "true" : "false"); });
+    slides.forEach(function(s, i){ s.classList.toggle("is-active", i === n); });
+  }
+
+  document.querySelector(".nav--prev").addEventListener("click", function(){ go(index() - 1); });
+  document.querySelector(".nav--next").addEventListener("click", function(){ go(index() + 1); });
+
+  var t;
+  track.addEventListener("scroll", function(){
+    clearTimeout(t); t = setTimeout(sync, 60);
+  });
+  window.addEventListener("resize", sync);
+
+  track.setAttribute("tabindex", "0");
+  track.addEventListener("keydown", function(e){
+    if(e.key === "ArrowLeft"){ e.preventDefault(); go(index() - 1); }
+    if(e.key === "ArrowRight"){ e.preventDefault(); go(index() + 1); }
+  });
+
+  // ---- auto-advance ------------------------------------------------------
+  // Every five seconds, except that a slide holding a playing video keeps the
+  // floor until the video is done. The check runs at each tick rather than
+  // being armed once, so pausing and resuming the video is handled for free.
+  var AUTO_MS = 5000;
+  var timer = null;
+  // The demo leads the carousel and is the one thing here that shows what the
+  // plug-in does rather than describing it, so nothing pulls it away from
+  // someone who has not asked to move on. The timer starts at the first real
+  // interaction - a tap, a click, a key - and behaves as before from then on.
+  // Hovering and tab-switching deliberately do not count: neither says the
+  // reader is done with the first slide.
+  var engaged = false;
+  var ytPlaying = false;
+  var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  // A YouTube iframe will only report its state if the embed URL asks it to, so
+  // add the parameter rather than requiring whoever pastes the embed to know
+  // that. Talking to it by postMessage avoids loading YouTube's API script,
+  // which a strict content policy would block anyway.
+  slides.forEach(function(sl){
+    var f = sl.querySelector('iframe[src*="youtube.com"], iframe[src*="youtube-nocookie.com"]');
+    if(f && f.src.indexOf("enablejsapi=1") === -1){
+      f.src += (f.src.indexOf("?") === -1 ? "?" : "&") + "enablejsapi=1";
+    }
+  });
+
+  window.addEventListener("message", function(e){
+    if(String(e.origin).indexOf("youtube") === -1) return;
+    var d;
+    try { d = typeof e.data === "string" ? JSON.parse(e.data) : e.data; } catch(err){ return; }
+    if(!d) return;
+    var state = d.event === "onStateChange" ? d.info
+              : (d.info && typeof d.info.playerState === "number" ? d.info.playerState : null);
+    if(state === null) return;
+    ytPlaying = (state === 1);          // 1 playing, 0 ended, 2 paused
+    if(!ytPlaying) restart();           // ended or paused: let the timer run again
+  });
+
+  function subscribe(){
+    slides.forEach(function(sl){
+      var f = sl.querySelector("iframe");
+      if(f && f.contentWindow) f.contentWindow.postMessage('{"event":"listening"}', "*");
+    });
+  }
+  window.addEventListener("load", subscribe);
+  setTimeout(subscribe, 1200);
+
+  function holding(){
+    var el = slides[index()].querySelector("iframe, video");
+    if(!el) return false;                                  // a placeholder holds nothing
+    if(el.tagName === "VIDEO") return !el.paused && !el.ended;
+    return ytPlaying;
+  }
+
+  function tick(){
+    if(document.hidden) return;   // do not race while nobody is looking
+    if(holding()) return;
+    go((index() + 1) % slides.length);
+  }
+  function restart(){
+    if(timer) clearInterval(timer);
+    if(engaged && !reduced) timer = setInterval(tick, AUTO_MS);
+  }
+  function stop(){ if(timer){ clearInterval(timer); timer = null; } }
+
+  // Manual input resets the clock rather than fighting it, and hovering holds
+  // the slide you are looking at.
+  ["click","keydown","touchstart"].forEach(function(ev){
+    document.querySelector(".carousel").addEventListener(ev, function(){
+      engaged = true;
+      restart();
+    }, { passive: true });
+  });
+  var car = document.querySelector(".carousel");
+  car.addEventListener("mouseenter", stop);
+  car.addEventListener("mouseleave", restart);
+  document.addEventListener("visibilitychange", function(){
+    if(document.hidden) stop(); else restart();
+  });
+
+  restart();
+
+  sync();
+})();
+</script>
+<script>
+// Sets "bus compressor" exactly as wide as DRUGS above it. Letter-spacing adds a
+// gap after every character including the last, so the glyphs span natural plus
+// step x gaps while the box measures one step wider - the negative margin takes
+// that trailing step back off, which keeps both the width and the centring true.
+(function fitBanner(){
+  var b = document.querySelector(".banner--top");
+  if(!b) return;
+  function set(){
+    document.documentElement.style.setProperty(
+      "--banner-h", b.getBoundingClientRect().height + "px");
+  }
+  set();
+  addEventListener("resize", set);
+  if(document.fonts && document.fonts.ready) document.fonts.ready.then(set);
+})();
+
+// The house rule: lines that sit together are ONE BLOCK, every line justified
+// to the same measure, and only two levers are allowed - SIZE and KERNING.
+// Never a stretch, never a skew, never a condense. The name sets the measure by
+// being the largest thing; each line under it moves its own size down until it
+// fits and then tracks out to close the remainder, which is the order the
+// panels do it in and the reason the sizes come out different.
+//
+// Size FIRST is not a detail. Tracking alone would put an em between the
+// letters of a short line, at which point it stops reading as a word; and a
+// long line closed by NEGATIVE tracking eats the word spaces before the
+// letters, which is condensing by another name.
+(function markBlock(){
+  var mark = document.querySelector(".mark"),
+      subs = document.querySelectorAll(".mark-sub");
+  if(!mark || !subs.length) return;
+
+  function ink(el){ return el.getBoundingClientRect().width; }
+
+  function fit(el, measure){
+    // Reset to the size the stylesheet asked for before measuring anything -
+    // re-fitting from the LAST fit compounds every resize.
+    el.style.fontSize = "";
+    el.style.letterSpacing = "0px";
+    el.style.marginRight   = "0px";
+    var natural = ink(el);
+    if(natural <= 0) return;
+    // Down to fit, if it has to. Never up: the stylesheet's clamp is the
+    // ceiling this line is allowed, and the band is per line.
+    if(natural > measure){
+      var px = parseFloat(getComputedStyle(el).fontSize) * (measure / natural);
+      el.style.fontSize = px.toFixed(3) + "px";
+      natural = ink(el);
+    }
+    var gaps = el.textContent.trim().length - 1;
+    if(gaps < 1) return;
+    // letter-spacing adds a gap after the LAST glyph too, so the ink spans
+    // natural + gaps x step while the box measures one step wider. The negative
+    // margin takes that trailing step back off, which keeps both the width and
+    // the centring true. Closed loop rather than one algebraic pass, because
+    // the drawn advance is not exactly natural + n x step once hinting and
+    // fractional widths are in it.
+    var step = 0;
+    for(var i = 0; i < 5; i++){
+      var extra = measure - (ink(el) - step);
+      if(Math.abs(extra) < 0.3) break;
+      step += extra / gaps;
+      el.style.letterSpacing = step.toFixed(3) + "px";
+      el.style.marginRight   = (-step).toFixed(3) + "px";
+    }
+  }
+
+  function all(){
+    var measure = ink(mark);
+    for(var i = 0; i < subs.length; i++) fit(subs[i], measure);
+  }
+  all();
+  addEventListener("resize", all);
+  // Archivo Black lands after first paint and is wider than the fallback face,
+  // so a fit run before it arrives is a fit against the wrong font.
+  if(document.fonts && document.fonts.ready) document.fonts.ready.then(all);
+})();
+</script>
+<script>
+// Provider-agnostic by design. Plausible, GoatCounter and Umami each expose a
+// different global; this calls whichever one is actually present and does
+// nothing at all when none is. Changing analytics later is then one script tag
+// in the head rather than an edit at every call site, and the page never depends
+// on that tag being there.
+function track(name, props){
+  try{
+    if(window.plausible)
+      return window.plausible(name, props ? {props:props} : undefined);
+    if(window.goatcounter && window.goatcounter.count)
+      return window.goatcounter.count({path:name, title:name, event:true});
+    if(window.umami && window.umami.track)
+      return window.umami.track(name, props);
+  }catch(e){}
+}
+
+// Every buy button reports which of the three it was. The utm_content on the
+// hrefs answers the same question at the checkout end, but only for the people
+// who actually pay. This counts the ones who clicked and then did not - which is
+// what separates "the page is not convincing" from "the price is not the
+// problem", and there is no way to see it from the checkout side.
+/* A LIVE ARRIVAL SIGNAL, alongside the pageview rather than instead of it.
+   Umami aggregates PAGEVIEW metrics by the hour, so a window that starts
+   mid-hour returns nothing at all - measured 2 Sep 2026, 23:32 UTC: the same
+   traffic gave 21 pageviews "since the top of the hour" and 0 "in the last 15
+   minutes". The launch board's live tree asks exactly that mid-hour question,
+   which is why ON PAGE sat at zero with people plainly on the page. EVENT
+   metrics are not bucketed and come back immediately, so this fires one.
+   The tag is deferred, hence the short wait for it rather than a bare call. */
+/* DID THIS VISIT COME FROM AN AD? Meta stamps every click with fbclid, and our
+   own ad links carry utm_source. Remembered for the session, because those
+   parameters are on the LANDING url only and vanish the moment somebody clicks
+   through to another page - without this an ad visitor would stop counting as
+   one the instant they moved. The board draws them rising from an ad root, the
+   same way email arrivals do. */
+var GZ_AD = (function(){
+  try{
+    var q = location.search || "";
+    if(/[?&]fbclid=/i.test(q) || /[?&]utm_source=(facebook|instagram|meta|fb|ig)(&|$)/i.test(q))
+      sessionStorage.setItem("gz_ad", "1");
+    return sessionStorage.getItem("gz_ad") === "1";
+  }catch(e){ return false; }
+})();
+
+(function viewPing(){
+  /* A HEARTBEAT, not a single ping. The board's live nodes count events inside a
+     short window, and an event is a moment - so one ping on load kept somebody
+     "on the page" for the whole window after they had already gone. Tony, 3 Sep
+     2026: "when i leave the checkout page or bounce from a landing page without
+     clicking buy it doesnt leave right away."
+     Repeating it while the tab is VISIBLE turns a moment into presence: still
+     here means still firing, and leaving stops it, so the node empties within
+     one window. Paused when the tab is hidden, because a backgrounded tab is
+     not somebody looking at the page. */
+  var BEAT = 30000, timer = null;
+  function ping(){
+    try{
+      if(window.umami && window.umami.track){
+        track("view_skruu");
+        if(GZ_AD) track("ad_skruu");     // same beat, so the ad root empties too
+      }
+    }catch(e){}
+  }
+  function start(){
+    if(timer) return;
+    ping();
+    /* SKIP a beat while hidden - never kill the timer. Clearing it meant the
+       heartbeat could only ever restart from a visibilitychange event, and in a
+       tracking iframe that event never comes: it stopped after two beats and
+       the node stayed full forever. Skipping costs one no-op every 30s and
+       recovers on its own. */
+    timer = setInterval(function(){
+      if(document.visibilityState !== "hidden") ping();
+    }, BEAT);
+  }
+  function stop(){ if(timer){ clearInterval(timer); timer = null; } }
+  var n = 0, wait = setInterval(function(){
+    if(window.umami && window.umami.track){ clearInterval(wait); start(); }
+    else if(++n > 40) clearInterval(wait);      // ~6s, then give up quietly
+  }, 150);
+  document.addEventListener("visibilitychange", function(){
+    if(document.visibilityState === "visible") start();   // never stop(): see above
+  });
+})();
+
+(function buyClicks(){
+  var links = document.querySelectorAll("a.cta");
+  for(var i = 0; i < links.length; i++){
+    (function(a){
+      a.addEventListener("click", function(){
+        // buy_click_skruu, NOT buy_click. Umami's share token - which is all the
+        // board has, API keys being a paid plan - returns event metrics by NAME
+        // and silently ignores a url filter, so the event name is the only way
+        // a product's clicks can be told apart. DRUGS keeps the bare
+        // "buy_click" so its history stays one continuous series.
+        track("buy_click_skruu", {position: a.getAttribute("data-pos") || "unknown"});
+        // Standard event name kept standard so the ad sets can still optimise
+        // for InitiateCheckout across the business; the product is carried in
+        // the parameters instead. value/currency also give Meta the amount,
+        // which is what a value-based lookalike is built from later.
+        if (window.fbq) fbq("track", "InitiateCheckout", {
+          content_name: "SKRUU", content_ids: ["skruu"],
+          content_type: "product", value: 29.00, currency: "USD"});
+      });
+    })(links[i]);
+  }
+})();
+
+// Carry an inbound campaign through to the checkout. Each buy button already
+// carries its own utm_content saying which of the three it is, and its own
+// utm_source saying "the site" - which is true and useless the moment somebody
+// arrives from somewhere else, because it overwrites where they actually came
+// from. So an inbound utm_source wins on source/medium/campaign, and the
+// button keeps content. A sale then reads kit / email / wave1 / banner_top
+// rather than losing three quarters of that.
+(function carryCampaign(){
+  var inbound = new URLSearchParams(location.search);
+  if(!inbound.get("utm_source")) return;
+  var links = document.querySelectorAll("a.cta");
+  for(var i = 0; i < links.length; i++){
+    var a = links[i], u;
+    try { u = new URL(a.href); } catch(e) { continue; }
+    ["utm_source","utm_medium","utm_campaign","utm_term"].forEach(function(k){
+      var v = inbound.get(k);
+      if(v) u.searchParams.set(k, v);
+    });
+    a.href = u.toString();
+  }
+})();
+
+(function list(){
+  var box = document.getElementById("list");
+  if(!box) return;
+  var form = box.querySelector("form"),
+      msg  = document.getElementById("list-msg");
+  // Not wired to a provider yet, so hide it. A form posting nowhere still looks
+  // like it worked and loses every address typed into it, which is worse than
+  // not asking.
+  if(!form || form.getAttribute("action").indexOf("PASTE_") === 0){
+    box.hidden = true;
+    return;
+  }
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+    // no-cors so the cross-origin post is allowed at all; the trade is that the
+    // response cannot be read, so success here is optimistic by necessity. What
+    // that hides is a provider outage. The alternative is showing a CORS error
+    // to somebody who did nothing wrong and cannot fix it either.
+    fetch(form.action, {method:"POST", mode:"no-cors", body:new FormData(form)});
+    box.classList.add("is-done");
+    msg.textContent = "ok. you will hear from us.";
+    track("list_signup");
+  });
+})();
+</script>
+<script>
+// The justifier, ported whole from the storefront. Run time rather than
+// hand-set because the measure is fluid and the copy changes: a hard-coded
+// letter-spacing is right at one width for one string and silently wrong
+// everywhere else.
+//
+// The two levers are used in that order. Size moves FIRST, only as far as the
+// line's own --fit-min/--fit-max allow, to bring the tracking near AIM; tracking
+// then closes the remaining gap exactly. Tracking alone would put an em between
+// the letters of a short line, at which point it stops reading as a word.
+//
+// Two measuring passes, not one. The rendered advance is not exactly
+// `natural + n x step` once hinting and fractional widths are involved, so the
+// first pass gets close and the second corrects against what actually drew.
+(function justify(){
+  var range = document.createRange();
+  function ink(el){ range.selectNodeContents(el); return range.getBoundingClientRect().width; }
+  function num(cs, prop, dflt){ var v = parseFloat(cs.getPropertyValue(prop)); return isNaN(v) ? dflt : v; }
+
+  function fit(el){
+    // The measure is the parent's CONTENT box. clientWidth includes padding, so
+    // a padded parent fits every line too wide by exactly that padding.
+    var pcs = getComputedStyle(el.parentNode),
+        target = el.parentNode.clientWidth
+                 - parseFloat(pcs.paddingLeft) - parseFloat(pcs.paddingRight),
+        n = (el.textContent || "").trim().length;
+    if(!target || n < 2) return;
+    var gaps = n - 1, cs = getComputedStyle(el),
+        AIM = num(cs, "--fit-aim", 0.26);   // the tracking this line wants
+
+    // The design size is remembered on first run: re-fitting on resize has to
+    // start from what the CSS asked for, not from whatever the last fit left
+    // behind, or every resize compounds the previous one.
+    var base = parseFloat(el.dataset.base || cs.fontSize);
+    el.dataset.base = base;
+
+    el.style.letterSpacing = "0px";
+    el.style.marginRight = "0px";
+    el.style.fontSize = base + "px";
+    var natural = ink(el);
+    if(!(natural > 0)) return;
+
+    // width(size, track) = natural*(size/base) + gaps*track*size, and with
+    // track = AIM*size that is size * (natural/base + gaps*AIM). Solve for the
+    // size that lands on the measure at the tracking we actually want, then keep
+    // it inside the band this line is allowed to move in.
+    var want = target / (natural / base + gaps * AIM);
+    var size = Math.min(base * num(cs, "--fit-max", 1.35),
+               Math.max(base * num(cs, "--fit-min", 0.88), want));
+    // A line that still overruns the measure at its smallest allowed size has to
+    // get SMALLER, not tighter. The tracking below would go negative and close
+    // the WORD SPACES first - which is condensing, and this identity does not
+    // condense. `flat` is the size at which the ink alone fills the measure.
+    var flat = target / (natural / base);
+    if(size > flat) size = flat;
+    el.style.fontSize = size + "px";
+
+    var step = (target - ink(el)) / gaps;
+    el.style.letterSpacing = step + "px";
+    // letter-spacing adds a gap after the LAST glyph too, so the drawn extent is
+    // one step wider than the ink. Subtract it before correcting, and carry the
+    // same step back as a negative right margin so the box measures the measure.
+    var drawn = ink(el) - step;
+    step += (target - drawn) / gaps;
+    el.style.letterSpacing = step + "px";
+    el.style.marginRight = (-step) + "px";
+  }
+
+  function all(){ [].forEach.call(document.querySelectorAll(".jt"), fit); }
+  all();
+  addEventListener("resize", all);
+  // Archivo Black lands after first paint and is wider than the fallback face,
+  // so a fit run before it arrives is a fit against the wrong font.
+  if(document.fonts && document.fonts.ready) document.fonts.ready.then(all);
+})();
+</script>
+</html>
