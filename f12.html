@@ -285,13 +285,38 @@ main{position:relative; z-index:1; max-width:660px; margin:0 auto;
 
 /* Second video, sitting between the tagline and the line under it. Same 16:9
    slot the carousel uses, so whatever goes in one goes in the other unchanged. */
-.testimonial{margin:56px 0 0; width:100%; display:flex; justify-content:center}
+/* A column since 6 Sep 2026: there are two quotes now, not one, and they stack
+   rather than sitting side by side so each keeps the full measure. */
+.testimonial{margin:56px 0 0; width:100%; display:flex; flex-direction:column;
+             align-items:center; gap:52px}
 .testimonial .slot{max-width:560px}
 /* Quote styles ported from drugs.html when DIBIA$E's became the first real F12
-   testimonial (4 Sep 2026). Text-only - no .tm-vid rules, because the video
-   lives on his Instagram rather than on this page. */
+   testimonial (4 Sep 2026). The .tm-vid rules came over on 6 Sep, when both
+   creators' own captures landed on this page instead of only on their feeds. */
 .tm{margin:0; max-width:660px; display:flex; gap:30px; align-items:center;
     flex-wrap:wrap; justify-content:center; text-align:left}
+.tm-vid{flex:0 0 auto; width:min(300px,64vw); height:auto; border-radius:13px;
+        overflow:hidden; background:#000; box-shadow:0 18px 40px var(--shadow)}
+.tm-vid video{display:block; width:100%; height:auto}
+/* The carousel badge stacks disc-over-label in the middle of an empty panel.
+   Here the middle of the frame is somebody's session, so the label goes to the
+   bottom on its own gradient and the disc is pinned dead centre over it. */
+.tm-vid .play-badge{justify-content:flex-end; padding:0 0 12px;
+        background:linear-gradient(180deg,rgba(0,0,0,0) 52%,rgba(0,0,0,.58) 100%)}
+.tm-vid .play-badge .disc{position:absolute; top:50%; left:50%;
+        transform:translate(-50%,-50%)}
+.tm-vid .play-badge:hover .disc{transform:translate(-50%,-50%) scale(1.06)}
+.tm-vid .play-badge .say{color:var(--chalk)}
+/* Both F12 captures are LANDSCAPE - a DAW window, not a phone story. At the
+   300px a portrait story takes, two plug-in panels side by side are unreadable,
+   so a wide clip runs the full measure with its quote underneath instead of
+   beside it. The sibling page keeps the narrow form for Wino's phone story. */
+.tm--wide{flex-direction:column; gap:22px; max-width:560px; text-align:center}
+.tm--wide .tm-vid{width:100%}
+/* .tm-say carries flex:1 1 250px for the side-by-side form, where 250px is a
+   minimum WIDTH. Turned on its side that basis becomes a 250px minimum HEIGHT
+   and puts a dead half-screen under every quote, so it is reset here. */
+.tm--wide .tm-say{flex:0 0 auto; align-items:center}
 .tm-say{flex:1 1 250px; min-width:0; display:flex; flex-direction:column; gap:13px}
 .tm-say blockquote{margin:0; font-family:"Archivo Black","Arial Black",sans-serif;
         font-size:clamp(16px,3.4vw,20px); line-height:1.38; letter-spacing:.02em;
@@ -537,11 +562,55 @@ h1.mark-block{font-size:inherit}
        quoted verbatim and not tidied. Permission to use it is explicit: he said
        "You can post that" in DMs. -->
   <div class="testimonial">
-    <figure class="tm">
+    <!-- 6 Sep 2026: his own capture of that session now runs here rather than
+         only on his feed. Everything in the frame is his - the dibi flip
+         sessions mark, the Serato Studio window, the two panels - which is the
+         half of a testimonial that cannot be written, so it is not cropped down
+         to just our plug-in. It stays COLD (data-lazy, poster only) because it
+         is a minute long and this page already has one thing moving on it. -->
+    <figure class="tm tm--wide">
+      <div class="player tm-vid">
+        <video id="dibi" playsinline controls preload="none" data-lazy
+               src="dibi-flip.mp4" poster="dibi-flip-poster.jpg"
+               muted loop disablepictureinpicture
+               aria-label="DIBIA$E's dibi flip sessions capture: DRUGS and F(ilter)12 open together over a drum bus in Serato Studio, DOSE at 70 and the filter POSITION at 82, with the meters running."></video>
+        <button class="play-badge" type="button" aria-label="Play DIBIA$E's session with sound">
+          <span class="disc" aria-hidden="true"></span>
+          <span class="say">play</span>
+        </button>
+      </div>
       <figcaption class="tm-say">
         <blockquote>&ldquo;Gave my drums some vintage dust.&rdquo;</blockquote>
         <p class="tm-who"><a href="https://www.instagram.com/p/Dc4CqyKxYfx/" target="_blank"
              rel="noopener">@darealdibiase</a> &middot; DRUGS into F(ilter)12 on a drum bus</p>
+      </figcaption>
+    </figure>
+
+    <!-- WINO (@winowilly_), 5 Sep 2026, posted to his own feed unprompted while
+         building WINOVISION VOL 2 - his words verbatim from
+         x.com/winowilly_/status/2096410297149919679, and the clip is the story
+         he put out the same night. Permission is explicit, given to Tony direct.
+
+         It runs AS THE STORY, mention sticker and all, the way his DRUGS one
+         does on the sibling page: the Ableton session behind it is the part a
+         marketer cannot fake. Only the phone's grey letterboxing is cropped
+         off - nothing inside the frame is touched. -->
+    <figure class="tm tm--wide">
+      <div class="player tm-vid">
+        <video id="wino" playsinline controls preload="none" data-lazy
+               src="f12/wino-f12.mp4" poster="f12/wino-f12-poster.jpg"
+               muted loop disablepictureinpicture
+               aria-label="Wino Willy's story: F(ilter)12 open beside his Winovision Vol 2 Ableton session, the filter POSITION dial moving while the beat runs."></video>
+        <button class="play-badge" type="button" aria-label="Play Wino's story with sound">
+          <span class="disc" aria-hidden="true"></span>
+          <span class="say">play</span>
+        </button>
+      </div>
+      <figcaption class="tm-say">
+        <blockquote>&ldquo;Salute&nbsp;@eraserfase for this f12 plugin.
+          Had a good time cooking this.&rdquo;</blockquote>
+        <p class="tm-who"><a href="https://x.com/winowilly_/status/2096410297149919679"
+             target="_blank" rel="noopener">@winowilly_</a> &middot; building Winovision Vol&nbsp;2</p>
       </figcaption>
     </figure>
   </div>
@@ -983,11 +1052,15 @@ var GZ_AD = (function(){
 </script>
 <script>
 (function(){
-  var v = document.getElementById("demo");
-  if(!v) return;
-  var player = v.parentNode, badge = player.querySelector(".play-badge");
-  if(!badge) return;
   var reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  // There are three players on the page since 6 Sep 2026 - the demo carousel and
+  // the two testimonial captures - and they want identical behaviour, so this
+  // wires every .player it finds rather than one id. Everything below is
+  // unchanged except that it closes over the video it was handed.
+  function wire(v){
+  var player = v.closest(".player"), badge = player && player.querySelector(".play-badge");
+  if(!badge) return;
 
   // Controls are the no-script fallback, so they ship in the markup and come off
   // here. They come back when the sound goes on, which is when they are useful.
@@ -1013,7 +1086,10 @@ var GZ_AD = (function(){
     v.controls = false; v.muted = true; v.loop = true;
     source(PREVIEW);
     try { v.currentTime = 0; } catch(e){}
-    if(!reduced) nudge();
+    // A data-lazy player stays cold on its poster until somebody asks for it.
+    // The testimonials are a minute of somebody else's screen; autoplaying them
+    // would pull megabytes on a phone for something nobody clicked.
+    if(!reduced && !v.hasAttribute("data-lazy")) nudge();
   }
   preview();
 
@@ -1031,6 +1107,10 @@ var GZ_AD = (function(){
   // Ended only fires once loop is off, i.e. after a listen. Drop back to the
   // silent loop so the slide is an invitation again, not a frozen last frame.
   v.addEventListener("ended", preview);
+  }
+
+  var vids = document.querySelectorAll(".player video");
+  for(var i = 0; i < vids.length; i++) wire(vids[i]);
 })();
 </script>
 </html>
