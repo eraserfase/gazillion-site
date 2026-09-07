@@ -29,7 +29,8 @@
 <!-- Same Umami site and same Meta pixel as the sibling page: one business, one
      property. Keeping them identical is what lets the two pages be compared. -->
 <script defer src="https://cloud.umami.is/script.js"
-        data-website-id="ed71399d-1069-4354-abbf-73dc311e5bc3"></script>
+        data-website-id="ed71399d-1069-4354-abbf-73dc311e5bc3"
+        data-domains="gazillionindustries.com,www.gazillionindustries.com"></script>
 <script>
 !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
@@ -900,7 +901,23 @@ h1.mark-block{font-size:inherit}
 // nothing at all when none is. Changing analytics later is then one script tag
 // in the head rather than an edit at every call site, and the page never depends
 // on that tag being there.
+/* PRODUCTION ONLY - and this is a measured fix, not a precaution.
+   Every page here carries the LIVE Umami property id, so any local copy served
+   at the same path reports as real traffic on the real product: a preview, a
+   colourway draft, a page sitting open in a tab while it is being built.
+   Measured 7 Sep 2026, the day SKRUU and TRIPLE OG launched - seven TRIPLE OG
+   colourway drafts (/_tog-beige.html, /_tog-a-midnight.html and five more) fired
+   23 view_tripleog events into production from files that have never existed on
+   the live site and 404 there; and /skruu.html beat 607 times against 3 real
+   pageviews. The board's live tree counts view_<product> by NAME, with no path
+   dimension, so every one of those landed on the product's own node and read as
+   people on the page.
+   data-domains on the tag stops the automatic PAGEVIEW; this stops every manual
+   EVENT. They are gated separately, so both are needed. */
+var GZ_LIVE = /^(www\.)?gazillionindustries\.com$/i.test(location.hostname);
+
 function track(name, props){
+  if(!GZ_LIVE) return;          // never report from a local or draft copy
   try{
     if(window.plausible)
       return window.plausible(name, props ? {props:props} : undefined);
