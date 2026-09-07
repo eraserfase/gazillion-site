@@ -2,14 +2,18 @@
 
 > Gazillion Industries LLC makes audio software: plug-ins for macOS and Windows,
 > and one iPad app. Each product does one job, opens with the control you came
-> for already on screen, and needs no manual. Three are out.
+> for already on screen, and needs no manual. Five are out.
 
 ## Products
 
 - [F(ilter)12](https://gazillionindustries.com/f12.html) — a 12 bit sauce
   filter. $49, and DRUGS is included with it.
 - [DRUGS](https://gazillionindustries.com/drugs.html) — a one-knob character bus
-  compressor. Pay what you want, $5 minimum.
+  compressor. Free, or name your own price.
+- [SKRUU](https://gazillionindustries.com/skruu.html) — varispeed pitch and
+  time stretch. Control pitch and time independently. $29.
+- [TRIPLE OG](https://gazillionindustries.com/tripleog.html) — cassette tape
+  simulation with a transport you can grab. $29.
 - [Chordea](https://apps.apple.com/us/app/chordea/id6757318321) — a MIDI chord
   controller for iPad. $9.99 on the App Store.
 
@@ -50,8 +54,8 @@ Gazillion Industries LLC.
 
 A one-knob character bus compressor for macOS and Windows. Built for dusty, dense
 drums: boom bap, beat tapes, chopped breaks, and the kind of low end that pumps.
-Vinyl sim style squash on the drum bus, with one control. Pay what you want, $5
-minimum.
+Vinyl sim style squash on the drum bus, with one control. Free, or name your own
+price.
 
 ### What it does
 
