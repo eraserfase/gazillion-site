@@ -303,7 +303,10 @@ main{position:relative; z-index:1; max-width:660px; margin:0 auto;
    under it. The asset is a 9:16 phone recording, so it is capped by WIDTH and
    left to find its own height - a vertical clip stretched to a 16:9 slot is
    either letterboxed to nothing or crops the caption that carries the quote. */
-.testimonial{margin:56px 0 0; width:100%; display:flex; justify-content:center}
+/* A column since 6 Sep 2026: there are three quotes now, not one, and they
+   stack rather than sitting side by side so each keeps the full measure. */
+.testimonial{margin:56px 0 0; width:100%; display:flex; flex-direction:column;
+             align-items:center; gap:52px}
 .tm{margin:0; max-width:660px; display:flex; gap:30px; align-items:center;
     flex-wrap:wrap; justify-content:center; text-align:left}
 .tm-vid{flex:0 0 auto; width:min(300px,64vw); height:auto; border-radius:13px;
@@ -327,6 +330,19 @@ main{position:relative; z-index:1; max-width:660px; margin:0 auto;
 .tm-who a{font-weight:600; color:var(--rouge); text-decoration:none;
            border-bottom:1px solid transparent}
 .tm-who a:hover,.tm-who a:focus-visible{border-bottom-color:var(--rouge)}
+/* DIBIA$E's capture is LANDSCAPE - a DAW window, not a phone story. At the
+   300px Wino's story takes, two plug-in panels side by side are unreadable, so
+   a wide clip runs the full measure with its quote underneath instead of beside
+   it. Wino's keeps the narrow form: a phone story is the shape it was shot in.
+   A .tm with no video at all takes this too, so a text-only quote is centred
+   rather than hanging off a missing left column. */
+.tm--wide{flex-direction:column; gap:22px; max-width:560px; text-align:center}
+.tm--wide .tm-vid{width:100%}
+/* .tm-say carries flex:1 1 250px for the side-by-side form, where 250px is a
+   minimum WIDTH. Turned on its side that basis becomes a 250px minimum HEIGHT
+   and puts a dead half-screen under every quote, so it is reset here. */
+.tm--wide .tm-say{flex:0 0 auto; align-items:center}
+
 /* Under ~560px the figure has already wrapped to a stack; centre it there so a
    left-aligned quote does not read as a broken column under a centred video. */
 @media (max-width:560px){ .tm{text-align:center} .tm-say{align-items:center} }
@@ -591,6 +607,61 @@ h1.mark-block{font-size:inherit}
           It does a good job.&rdquo;</blockquote>
         <p class="tm-who"><a href="https://www.instagram.com/winowilly/" target="_blank"
              rel="noopener">@winowilly</a> &middot; bouncing Winovision Vol&nbsp;1</p>
+      </figcaption>
+    </figure>
+
+    <!-- DIBIA$E, 4 Sep 2026. He ran DRUGS into F(ilter)12 on a drum bus in
+         Serato Studio for an episode of his own dibi flip sessions and posted it
+         at instagram.com/p/Dc4CqyKxYfx. Permission is explicit - he said "You
+         can post that" in DMs.
+
+         The QUOTE is the one off the store page rather than the caption. His
+         caption's line about DRUGS names the old hardware it gets compared to,
+         and we do not put another maker's name in our copy even inside quote
+         marks. This says the same thing without borrowing anybody.
+
+         The CLIP is his whole screen, uncropped: the flip sessions mark, the
+         session, both panels. Cropping it down to just our plug-in would be
+         taking the part that proves nothing. It stays COLD (data-lazy, poster
+         only) - it is a minute long, and Wino's story above is already the one
+         thing moving here. -->
+    <figure class="tm tm--wide">
+      <div class="player tm-vid">
+        <video id="dibi" playsinline controls preload="none" data-lazy
+               src="dibi-flip.mp4" poster="dibi-flip-poster.jpg"
+               muted loop disablepictureinpicture
+               aria-label="DIBIA$E's dibi flip sessions capture: DRUGS open over a drum bus in Serato Studio with DOSE at 70 and the gain reduction trace ducking under every hit."></video>
+        <button class="play-badge" type="button" aria-label="Play DIBIA$E's session with sound">
+          <span class="disc" aria-hidden="true"></span>
+          <span class="say">play</span>
+        </button>
+      </div>
+      <figcaption class="tm-say">
+        <blockquote>&ldquo;This compressor sounds great.&rdquo;</blockquote>
+        <p class="tm-who"><a href="https://www.instagram.com/p/Dc4CqyKxYfx/" target="_blank"
+             rel="noopener">@darealdibiase</a> &middot; testing on drum breaks</p>
+      </figcaption>
+    </figure>
+
+    <!-- SPEWCATACLISM (@spewcataclism), off the store page. It came in as an
+         Instagram DM rather than a post, so there is no clip and no permalink -
+         the handle was read off the thread itself, not guessed from the name.
+
+         It is last because it is the longest and the only one that says what the
+         thing does NOT do, which is the note somebody still deciding reads after
+         the two that just say it sounds good.
+
+         The wording is the store page's, which is a condensed stitch of what he
+         actually typed rather than one message quoted whole. Swearing kept -
+         tidying it would cost the only thing it has going for it. -->
+    <figure class="tm tm--wide">
+      <figcaption class="tm-say">
+        <blockquote>&ldquo;You took the mechanics of it, and didn&rsquo;t try to add
+          artifacts &mdash; there&rsquo;s enough on the records. The simplicity allows
+          you to use your ears more, instead of wondering if shit is dialed right
+          or not.&rdquo;</blockquote>
+        <p class="tm-who"><a href="https://www.instagram.com/spewcataclism/" target="_blank"
+             rel="noopener">@spewcataclism</a></p>
       </figcaption>
     </figure>
   </div>
