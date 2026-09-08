@@ -43,7 +43,6 @@ fbq('track', 'PageView');
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Archivo+Black&display=swap">
 <style>
 
-
 /* Committed to one visual world: the panel's dark theme. No media query and no
    theme stamps, so every colour is painted explicitly and the page holds on
    whatever ground the host puts behind it. */
@@ -323,6 +322,15 @@ main{position:relative; z-index:1; max-width:660px; margin:0 auto;
    and puts a dead half-screen under every quote, so it is reset here. */
 .tm--wide .tm-say{flex:0 0 auto; align-items:center}
 .tm-say{flex:1 1 250px; min-width:0; display:flex; flex-direction:column; gap:13px}
+/* CENTRED 8 Sep 2026 at Tony's request. The block was already centred as a BOX -
+   it fills the 612px measure, gapL and gapR both 0 - but its text sat left, so
+   "center it" means the type, not the container. Measured before and after.
+   DELIBERATELY UNLIKE ITS SIBLINGS: f12.html and drugs.html keep their quotes
+   left-aligned because each sits beside a video figure. TRIPLE OG's is text
+   only, alone on the full measure, so it centres. If a video is ever added here,
+   revisit this - and if the siblings are ever centred to match, do it there too
+   rather than leaving three pages disagreeing. */
+.testimonial .tm-say{align-items:center; text-align:center}
 .tm-say blockquote{margin:0; font-family:"Archivo Black","Arial Black",sans-serif;
         font-size:clamp(16px,3.4vw,20px); line-height:1.38; letter-spacing:.02em;
         color:var(--chalk); text-wrap:balance}
@@ -455,7 +463,6 @@ h1.mark-block{font-size:inherit}
    dropped to roughly two fifths and sitting on the same baseline. Sized in em
    so it tracks the clamp on .mark rather than needing its own. */
 
-
 /* ---- the buy button under the wordmark has to be inside the first screen -- */
 /* Measured on a 375x812 viewport: everything below the slide is fixed cost -
    231px above it, 163px of wordmark and tagline, 41px of button = 435 - so the
@@ -478,7 +485,6 @@ h1.mark-block{font-size:inherit}
    size; the rest of the line stays quiet so the contrast does the work. */
 .terms .price{font-size:16px; color:var(--chalk); font-weight:600;
               letter-spacing:.06em}
-
 
 /* ---- justified type blocks ---------------------------------------------- */
 /* THE HOUSE RULE. Lines that sit together are ONE BLOCK: every line justified
@@ -617,6 +623,39 @@ h1.mark-block{font-size:inherit}
     <a class="cta cta--small" data-pos="hero_mid" href="https://gazillionindustries.gumroad.com/l/tripleog?wanted=true&amp;utm_source=gazillionindustries.com&amp;utm_medium=cta&amp;utm_content=hero_mid">Buy TRIPLE OG now</a>
   </div>
 
+  <!-- POSITION: directly under the hero CTA since 8 Sep 2026. It sat below the
+       whole hero block and Tony called it buried - proof that arrives after the
+       ask is proof nobody reads. It now answers "why should I believe you" in
+       the same screen that asks for the money.
+ THAVIUS BECK, Instagram DM, 8 Sep 2026. He was sent a comp licence, used it
+       in Bitwig against his own hardware, and volunteered this. Permission is
+       explicit and on the record - asked "I would love to quote that if I can",
+       answered "Feel free... It's the truth."
+       Both lines are VERBATIM; the ellipses are his own except the one in the
+       second quote, which marks a clause Tony removed on purpose (it compared us
+       favourably to other developers who have offered him plug-ins, and would
+       have read as a swipe at them).
+       The SP404mk2 is named here deliberately. That is a documented exception to
+       the no-manufacturer-marks rule, made by Tony on 8 Sep 2026 for THIS quote:
+       the comparison to his own hardware is the whole weight of it. Do not
+       "correct" it, and do not treat it as licence to name gear anywhere else.
+       No link to a post because there is no post - it was a DM - so the
+       attribution points at his profile instead of inventing a source. -->
+  <div class="testimonial">
+    <figure class="tm">
+      <figcaption class="tm-say">
+        <blockquote>&ldquo;It sounds really good&hellip; I normally use my
+          SP404mk2 for tape emulation effects and this sounds cleaner and feels
+          wider.&rdquo;</blockquote>
+        <blockquote>&ldquo;Nice work on this one&hellip; Enjoying the character
+          a lot.&rdquo;</blockquote>
+        <p class="tm-who"><a href="https://www.instagram.com/thaviusbeck/"
+             target="_blank" rel="noopener">@thaviusbeck</a>
+          &middot; TRIPLE OG in Bitwig</p>
+      </figcaption>
+    </figure>
+  </div>
+
   <div class="hero-block">
     <div class="jtblock">
       <p class="jt jt--lead">Run the tape</p>
@@ -640,11 +679,6 @@ h1.mark-block{font-size:inherit}
     <p class="spec">AU &nbsp;&middot;&nbsp; VST3 &nbsp;&middot;&nbsp; Standalone &nbsp;&middot;&nbsp; macOS &nbsp;&middot;&nbsp; Windows</p>
   </div>
 
-  <!-- Ships hidden. Nothing real has been said about this one in public yet, and
-       an empty box reading "testimonials go here" reads as unfinished in the one
-       place the page asks to be trusted. Un-hide it and the line under it
-       together, the moment there is a quote. -->
-  <div class="testimonial" hidden></div>
 
   <div class="list" id="list">
     <p id="list-msg">there will be more of these</p>
