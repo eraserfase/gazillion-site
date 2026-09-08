@@ -291,7 +291,18 @@ main{position:relative; z-index:1; max-width:660px; margin:0 auto;
    slot the carousel uses, so whatever goes in one goes in the other unchanged. */
 /* A column since 6 Sep 2026: there are two quotes now, not one, and they stack
    rather than sitting side by side so each keeps the full measure. */
-.testimonial{margin:56px 0 0; width:100%; display:flex; flex-direction:column;
+/* SPACING, 8 Sep 2026. Measured off the live page: this block sat 56px under the
+   buy button and 40px above the next section, so by proximity it read as belonging
+   to what FOLLOWS rather than to the CTA it is meant to support. Both new values
+   are already in this page's vocabulary - 34px is the carousel-to-wordmark gap and
+   sits just inside the 36px that binds the wordmark to its buy button, so the quote
+   joins that cluster; 92px is the copy-to-list gap, which is what a real section
+   break measures here. Do not tune these by eye - measure the neighbours first.
+   NOTE: margins do NOT collapse against .hero-block here, so its own 40px top
+   margin ADDS to this one. 92px bottom measured 132px on the page - the largest
+   gap anywhere on it. 52px is the value that actually lands the 92px break, and
+   52px is already this block's own row gap. Measure the result, not the CSS. */
+.testimonial{margin:34px 0 52px; width:100%; display:flex; flex-direction:column;
              align-items:center; gap:52px}
 .testimonial .slot{max-width:560px}
 /* Quote styles ported from drugs.html when DIBIA$E's became the first real F12
