@@ -4,7 +4,7 @@
   'use strict';
   if(!/^(www\.)?gazillionindustries\.com$/i.test(location.hostname)) return;
   var script=document.currentScript, product=script && script.dataset.product;
-  if(!/^(store|drugs|f12|skruu|tripleog)$/.test(product || '')) return;
+  if(!/^(store|drugs|f12|skruu|tripleog|beefy)$/.test(product || '')) return;
   var period='', active=false, sent=false, initialSent=false, away=false;
   var version='presence-exit-20260909a';
   function nonce(){
