@@ -630,6 +630,30 @@ a{color:inherit;text-decoration:none}
     if (!window.GZ_LIVE) return;              /* never report from a draft copy */
     if (window.umami && window.umami.track) window.umami.track(name, props);
   }
+  // Renew storefront presence on the same cadence as the product pages.
+  // Hidden tabs send nothing; returning to the tab renews immediately.
+  if (window.GZ_LIVE) {
+    var ad = false, ready = false;
+    try {
+      if (/[?&]fbclid=/i.test(location.search) || /[?&]utm_source=(facebook|instagram|meta|fb|ig)(&|$)/i.test(location.search))
+        sessionStorage.setItem('gz_ad', '1');
+      ad = sessionStorage.getItem('gz_ad') === '1';
+    } catch(e) {}
+    function beat(){
+      if (document.visibilityState === 'hidden' || !window.umami || !window.umami.track) return;
+      track('view_store');
+      if (ad) track('ad_store');
+      ready = true;
+    }
+    var attempts = 0, wait = setInterval(function(){
+      beat();
+      if (ready || ++attempts >= 40) clearInterval(wait);
+    }, 150);
+    setInterval(beat, 30000);
+    document.addEventListener('visibilitychange', function(){
+      if (document.visibilityState === 'visible') beat();
+    });
+  }
   document.addEventListener('click', function(e){
     var a = e.target.closest('a[data-product]');
     if (!a) return;
