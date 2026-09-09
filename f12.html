@@ -659,6 +659,18 @@ h1.mark-block{font-size:inherit}
         </div>
       </div>
       <div class="slide">
+        <div class="player">
+          <video id="demo-new" playsinline controls preload="none" data-lazy
+                 src="f12/f12-demo-20260909.mp4" poster="f12/f12-demo-20260909-poster.jpg"
+                 width="1080" height="1920" muted loop disablepictureinpicture
+                 aria-label="F(ilter)12 demo"></video>
+          <button class="play-badge" type="button" aria-label="Play the F(ilter)12 demo with sound from the beginning">
+            <span class="disc" aria-hidden="true"></span>
+            <span class="say">sound on</span>
+          </button>
+        </div>
+      </div>
+      <div class="slide">
         <img src="f12/f12-dark.jpg" width="680" height="1800"
              alt="The F(ilter)12 plug-in panel in its dark theme with AURA on: SAMPLE RATE and BIT dials, a large filter POSITION dial reading 88, rows of filter and resonance shapes, and a display showing the filter curve over the AURA field, green where the stage is adding and red where it is taking away.">
       </div>
@@ -898,7 +910,17 @@ h1.mark-block{font-size:inherit}
   function sync(){
     var n = index();
     dots.forEach(function(d, i){ d.setAttribute("aria-current", i === n ? "true" : "false"); });
-    slides.forEach(function(s, i){ s.classList.toggle("is-active", i === n); });
+    slides.forEach(function(s, i){
+      s.classList.toggle("is-active", i === n);
+      // Keep silent previews on the selected slide; off-screen demos stay cold.
+      var v = s.querySelector("video");
+      if(!v) return;
+      if(i === n){
+        if(v.muted && v.paused && !reduced){ var pr = v.play(); if(pr && pr.catch) pr.catch(function(){}); }
+      } else if(!v.paused && v.muted){
+        v.pause();
+      }
+    });
   }
 
   document.querySelector(".nav--prev").addEventListener("click", function(){ go(index() - 1); });
@@ -1195,10 +1217,7 @@ var GZ_AD = window.GZ_ATTR.paid;
 (function(){
   var reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  // There are three players on the page since 6 Sep 2026 - the demo carousel and
-  // the two testimonial captures - and they want identical behaviour, so this
-  // wires every .player it finds rather than one id. Everything below is
-  // unchanged except that it closes over the video it was handed.
+  // Same silent preview and click-for-sound behavior for every player.
   function wire(v){
   var player = v.closest(".player"), badge = player && player.querySelector(".play-badge");
   if(!badge) return;
@@ -1227,10 +1246,12 @@ var GZ_AD = window.GZ_ATTR.paid;
     v.controls = false; v.muted = true; v.loop = true;
     source(PREVIEW);
     try { v.currentTime = 0; } catch(e){}
-    // A data-lazy player stays cold on its poster until somebody asks for it.
-    // The testimonials are a minute of somebody else's screen; autoplaying them
-    // would pull megabytes on a phone for something nobody clicked.
-    if(!reduced && !v.hasAttribute("data-lazy")) nudge();
+    // Carousel previews run only on the selected slide, including after a
+    // listen finishes. Lazy testimonial players stay on their posters.
+    var slide = v.closest(".slide");
+    if(reduced) { v.autoplay = false; v.pause(); }
+    else if(slide ? slide.classList.contains("is-active") : !v.hasAttribute("data-lazy")) nudge();
+    else v.pause();
   }
   preview();
 
@@ -1238,6 +1259,10 @@ var GZ_AD = window.GZ_ATTR.paid;
   // silent loop happened to be would drop you into the middle of a demo built
   // entirely around a before and an after.
   badge.addEventListener("click", function(){
+    var carousel = v.closest(".carousel");
+    if(carousel) carousel.querySelectorAll("video").forEach(function(other){
+      if(other !== v) other.pause();
+    });
     v.muted = false; v.loop = false; v.controls = true;
     source(FULL);
     try { v.currentTime = 0; } catch(e){}
