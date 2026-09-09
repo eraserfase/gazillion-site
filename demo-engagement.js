@@ -10,11 +10,12 @@
   if (!attr) return;
   var tags = attr.tags || {}, groups = {spend_high:"h",spend_light:"l",store_engaged:"e",store_other:"o",drugs_free:"d",gazillion_paid:"p",product_comp:"c",other_active:"x"};
   var products = {f12:"f",skruu:"s",tripleog:"t"};
-  var arm = (tags.utm_content || "").match(/^e01_(f12|skruu|tripleog)_a_(cta|demo)$/);
+  var arm = (tags.utm_content || "").match(/^(e01|e02)_(f12|skruu|tripleog)_a_(cta|demo)$/);
+  var wave = arm && (arm[1] === "e01" ? "a" : "b");
   var campaign = tags.utm_source === "kit" && tags.utm_medium === "email" &&
     tags.utm_campaign === "202609_demo_funnel" && groups[tags.utm_term] && arm &&
-    tags.utm_id === "ef2609_" + tags.utm_term + "_" + arm[1] + "_a";
-  var prefix = campaign ? "gz_ef2609a_" + groups[tags.utm_term] + "_" + products[arm[1]] + "_" + products[product] + "_" : "gz_demo_" + product + "_";
+    tags.utm_id === "ef2609_" + tags.utm_term + "_" + arm[2] + "_" + wave;
+  var prefix = campaign ? "gz_ef2609" + wave + "_" + groups[tags.utm_term] + "_" + products[arm[2]] + "_" + products[product] + "_" : "gz_demo_" + product + "_";
   var pending = [], memory = {}, inFlight = {};
   function stateKey(name) { return "gz_demo_v1:" + attr.token + ":" + name; }
   function seen(key) { try { return sessionStorage.getItem(key) === "1" || memory[key]; } catch(e) { return memory[key]; } }
