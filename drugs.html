@@ -5,6 +5,7 @@
      rules, so any future CSS was one edit away from behaving strangely for no
      visible reason. The lang attribute is the other half of the same omission. -->
 <html lang="en">
+<script defer src="video-audio-focus.js?v=1ed0c194152a"></script>
 <title>DRUGS - one-knob bus compressor for drums (VST, AU, Mac and Windows)</title>
 <meta name="description" content="A one-knob bus compressor for Mac and Windows: denser drums, not louder — peak level barely moves. Vinyl sim squash for breaks and the drum bus. VST and AU. $5+.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -947,7 +948,7 @@ h1.mark-block{font-size:inherit}
       var v = s.querySelector("video");
       if(!v) return;
       if(i === n){
-        if(v.paused && !reduced){ var pr = v.play(); if(pr && pr.catch) pr.catch(function(){}); }
+        if(v.muted && v.paused && !reduced){ var pr = v.play(); if(pr && pr.catch) pr.catch(function(){}); }
       } else if(!v.paused && v.muted){
         v.pause();
       }

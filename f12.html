@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<script defer src="video-audio-focus.js?v=1ed0c194152a"></script>
 <title>F(ilter)12 - 12 bit sauce filter for drums and samples (VST3, AU, Mac and Windows)</title>
 <meta name="description" content="A 12 bit sauce filter for Mac and Windows. AURA sits a record better without sounding like anything was done to it. Sample rate and bit crush, five filter shapes, eight resonance shapes. AU and VST3. $49, and DRUGS comes with it.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -639,20 +640,15 @@ h1.mark-block{font-size:inherit}
        come across from the sibling unchanged. -->
   <div class="carousel">
     <div class="track" id="track">
-      <!-- The demo leads, like the sibling's does. It is captioned rather than
-           narrated, so it still says DRY SIGNAL / WITH AURA / MAX AURA while it
-           is running silently - which is how most people will meet it. -->
+      <!-- The newest demo leads. The original demo follows and retains its
+           full captioned cut when the listener switches its sound on. -->
       <div class="slide">
         <div class="player">
-          <video id="demo" playsinline controls preload="metadata"
-                 src="f12-demo.mp4" data-full="f12/f12-demo-annotated.mp4"
-                 poster="f12-demo-poster.jpg"
-                 width="340" height="900" muted loop autoplay disablepictureinpicture
-                 aria-label="The F(ilter)12 demo: a drum loop dry, then AURA switched on, then MAX AURA, with the display filling with the green and red AURA contour and the filter swept at the end."></video>
-          <!-- The badge is the offer of SOUND, not of play - the clip is already
-               moving. Without script the native controls are still there and
-               still work, which is why they ship in the markup. -->
-          <button class="play-badge" type="button" aria-label="Play the demo with sound from the beginning">
+          <video id="demo-new" playsinline controls preload="metadata"
+                 src="f12/f12-demo-20260909.mp4" poster="f12/f12-demo-20260909-poster.jpg"
+                 width="1080" height="1920" muted loop autoplay disablepictureinpicture
+                 aria-label="F(ilter)12 demo"></video>
+          <button class="play-badge" type="button" aria-label="Play the F(ilter)12 demo with sound from the beginning">
             <span class="disc" aria-hidden="true"></span>
             <span class="say">sound on</span>
           </button>
@@ -660,11 +656,15 @@ h1.mark-block{font-size:inherit}
       </div>
       <div class="slide">
         <div class="player">
-          <video id="demo-new" playsinline controls preload="none" data-lazy
-                 src="f12/f12-demo-20260909.mp4" poster="f12/f12-demo-20260909-poster.jpg"
-                 width="1080" height="1920" muted loop disablepictureinpicture
-                 aria-label="F(ilter)12 demo"></video>
-          <button class="play-badge" type="button" aria-label="Play the F(ilter)12 demo with sound from the beginning">
+          <video id="demo" playsinline controls preload="none" data-lazy
+                 src="f12-demo.mp4" data-full="f12/f12-demo-annotated.mp4"
+                 poster="f12-demo-poster.jpg"
+                 width="340" height="900" muted loop disablepictureinpicture
+                 aria-label="The F(ilter)12 demo: a drum loop dry, then AURA switched on, then MAX AURA, with the display filling with the green and red AURA contour and the filter swept at the end."></video>
+          <!-- The badge is the offer of SOUND, not of play - the clip is already
+               moving. Without script the native controls are still there and
+               still work, which is why they ship in the markup. -->
+          <button class="play-badge" type="button" aria-label="Play the demo with sound from the beginning">
             <span class="disc" aria-hidden="true"></span>
             <span class="say">sound on</span>
           </button>
