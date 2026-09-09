@@ -179,6 +179,7 @@ window.GZ_ATTR = (function(){
 <script defer src="https://cloud.umami.is/script.js"
         data-website-id="ed71399d-1069-4354-abbf-73dc311e5bc3"
         data-domains="gazillionindustries.com,www.gazillionindustries.com"></script>
+<script defer src="presence.js?v=b9e9f0414bd4" data-product="store"></script>
 <script>
 if (window.GZ_LIVE) {
 !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -772,27 +773,6 @@ a{color:inherit;text-decoration:none}
   function track(name, props){
     if (!window.GZ_LIVE) return;              /* never report from a draft copy */
     if (window.umami && window.umami.track) window.umami.track(name, props);
-  }
-  // Renew storefront presence on the same cadence as the product pages.
-  // Hidden tabs send nothing; returning to the tab renews immediately.
-  if (window.GZ_LIVE) {
-    var ad = window.GZ_ATTR.paid, ready = false;
-    function beat(){
-      if (document.visibilityState === 'hidden' || !window.umami || !window.umami.track) return;
-      window.GZ_ATTR.mark('store');
-      track('view_store');
-      if (ad) track('paid_ad_store');
-      else if (!ready) track('origin_other_store');
-      ready = true;
-    }
-    var attempts = 0, wait = setInterval(function(){
-      beat();
-      if (ready || ++attempts >= 40) clearInterval(wait);
-    }, 150);
-    setInterval(beat, 30000);
-    document.addEventListener('visibilitychange', function(){
-      if (document.visibilityState === 'visible') beat();
-    });
   }
   document.addEventListener('click', function(e){
     var a = e.target.closest('a[data-product]');
