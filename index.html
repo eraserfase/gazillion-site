@@ -3,6 +3,54 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script>
+/* Keep the last known arrival through the storefront, products and checkout.
+   A Facebook click ID also occurs on organic links; paid credit needs a paid medium. */
+window.GZ_ATTR = (function(){
+  var result = {paid:false, tags:{}};
+  if(!/^(www\.)?gazillionindustries\.com$/i.test(location.hostname)) return result;
+  var fields = ["utm_source","utm_medium","utm_campaign","utm_content","utm_term","utm_id","ad_id","adset_id","campaign_id","fbclid"];
+  var inbound = new URLSearchParams(location.search), tags = {}, now = Date.now();
+  try {
+    var saved = JSON.parse(sessionStorage.getItem("gz_arrival_v2") || "null");
+    if(saved && now - saved.at < 30*60000) tags = saved.tags || {};
+  } catch(e) {}
+  if(inbound.get("utm_source")){
+    tags = {};
+    fields.forEach(function(k){var v=inbound.get(k); if(v) tags[k]=v.slice(0,1024);});
+  } else if(document.referrer){
+    try {
+      var host = new URL(document.referrer).hostname.toLowerCase().replace(/^www\./,"");
+      if(host && host !== "gazillionindustries.com" && (!/(^|\.)gumroad\.com$/.test(host) || !tags.utm_source)){
+        tags = {};
+        tags.utm_source = host;
+        tags.utm_medium = /(^|\.)(instagram|facebook)\.com$/.test(host) ? "social" : "referral";
+      }
+    } catch(e) {}
+  }
+  var source = (tags.utm_source || "").toLowerCase();
+  var medium = (tags.utm_medium || "").toLowerCase();
+  result.paid = /^(meta|facebook|instagram|fb|ig)$/.test(source)
+    && /^(paid|paid_social|paid-social|paidsocial|cpc|ppc|social_ads)$/.test(medium);
+  result.tags = tags;
+  try { sessionStorage.setItem("gz_arrival_v2", JSON.stringify({at:now,tags:tags})); } catch(e) {}
+  function carry(){
+    if(!tags.utm_source) return;
+    document.querySelectorAll("a[href]").forEach(function(a){
+      try {
+        var u = new URL(a.href, location.href);
+        if(!/^(https?):$/.test(u.protocol)) return;
+        if(!/^(www\.)?gazillionindustries\.com$/i.test(u.hostname)
+           && !/(^|\.)gumroad\.com$/i.test(u.hostname)) return;
+        fields.forEach(function(k){if(tags[k]) u.searchParams.set(k,tags[k]);});
+        a.href = u.toString();
+      } catch(e) {}
+    });
+  }
+  document.addEventListener("DOMContentLoaded",carry);
+  return result;
+})();
+</script>
 <title>Gazillion Industries - VST's and audio software for macOS, Windows and iPad</title>
 <meta name="description" content="SKRUU, varispeed pitch. TRIPLE OG, cassette tape simulation. F(ilter)12, a 12 bit sauce filter. DRUGS, a bus compressor. Chordea, a MIDI chord controller for iPad. AU, VST3 and standalone.">
 <link rel="canonical" href="https://gazillionindustries.com/">
@@ -633,16 +681,12 @@ a{color:inherit;text-decoration:none}
   // Renew storefront presence on the same cadence as the product pages.
   // Hidden tabs send nothing; returning to the tab renews immediately.
   if (window.GZ_LIVE) {
-    var ad = false, ready = false;
-    try {
-      if (/[?&]fbclid=/i.test(location.search) || /[?&]utm_source=(facebook|instagram|meta|fb|ig)(&|$)/i.test(location.search))
-        sessionStorage.setItem('gz_ad', '1');
-      ad = sessionStorage.getItem('gz_ad') === '1';
-    } catch(e) {}
+    var ad = window.GZ_ATTR.paid, ready = false;
     function beat(){
       if (document.visibilityState === 'hidden' || !window.umami || !window.umami.track) return;
       track('view_store');
-      if (ad) track('ad_store');
+      if (ad) track('paid_ad_store');
+      else if (!ready) track('origin_other_store');
       ready = true;
     }
     var attempts = 0, wait = setInterval(function(){
