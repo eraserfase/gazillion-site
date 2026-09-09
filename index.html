@@ -358,7 +358,7 @@ a{color:inherit;text-decoration:none}
 .unit--wide .shot img{height:100%;width:100%;object-fit:cover;object-position:0% 50%;border-radius:2px}
 
 /* ------------------------------------------------------------ the legend */
-.legend{padding:14px 14px 14px; display:flex; flex-direction:column; gap:0}
+.legend{padding:14px 14px 14px; display:flex; flex:1; flex-direction:column; gap:0}
 
 /* THE WORDMARK.  ONE cap height for all five, driven by a single --cap so it
    cannot drift and so it can scale at a breakpoint without the five falling
@@ -391,7 +391,10 @@ a{color:inherit;text-decoration:none}
 .cat  {font-size:9.5px; letter-spacing:.1em; color:var(--accent); font-weight:600}
 .pitch{font-size:9.5px; letter-spacing:.1em; color:var(--ink-soft)}
 
-.ask{margin-top:12px; padding-top:11px; border-top:1px solid var(--hair)}
+.pitch{margin-bottom:12px}
+.beefy-lockup{height:calc(var(--cap) * 1.18 + 51.75px);margin:0 0 12px;display:flex;align-items:center;justify-content:center}
+.beefy-lockup img{display:block;width:100%;height:100%;object-fit:contain}
+.ask{margin-top:auto; padding-top:11px; border-top:1px solid var(--hair)}
 .askline{
   margin:0 0 9px; display:flex; align-items:baseline; justify-content:space-between; gap:8px;
 }
@@ -508,10 +511,7 @@ a{color:inherit;text-decoration:none}
         <a class="cardlink" href="/beefy.html" data-product="beefy" data-name="BEEFY" data-value="19.00" aria-label="BEEFY, saturation and loudness. $19."></a>
         <div class="shot"><img src="beefy/raw.webp" width="640" height="1024" alt="BEEFY’s cartoon steak panel with a fat cow, tongue out, bonk and flames." decoding="async"></div>
         <div class="legend">
-          <p class="mark" style="--markr:1.1"><svg role="img" aria-label="BEEFY" viewBox="0 0 1954 400"><image href="beefy/wordmark.webp" width="1954" height="650"/></svg></p>
-          <p class="jt sub">saturation &amp; loudness</p>
-          <p class="jt cat">THE MAKE GOODER KNOB</p>
-          <p class="jt pitch">more fatterrer. more betterrer.</p>
+          <div class="beefy-lockup"><img src="beefy/wordmark.webp" width="1954" height="650" alt="BEEFY. THE MAKE GOODER KNOB. MORE FATTERRER. MORE BETTERRER."></div>
           <div class="ask">
             <p class="askline"><span class="money">$19</span><span class="formats" data-short="AU &middot; VST3 &middot; Mac &middot; Win">AU &middot; VST3 &middot; Standalone (Mac) &middot; macOS &middot; Windows</span></p>
             <a class="cta" href="/beefy.html" data-product="beefy" data-name="BEEFY" data-value="19.00">Get BEEFY</a>
