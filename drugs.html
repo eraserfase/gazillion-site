@@ -8,6 +8,54 @@
 <title>DRUGS - one-knob bus compressor for drums (VST, AU, Mac and Windows)</title>
 <meta name="description" content="A one-knob bus compressor for Mac and Windows: denser drums, not louder — peak level barely moves. Vinyl sim squash for breaks and the drum bus. VST and AU. $5+.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script>
+/* Keep the last known arrival through the storefront, products and checkout.
+   A Facebook click ID also occurs on organic links; paid credit needs a paid medium. */
+window.GZ_ATTR = (function(){
+  var result = {paid:false, tags:{}};
+  if(!/^(www\.)?gazillionindustries\.com$/i.test(location.hostname)) return result;
+  var fields = ["utm_source","utm_medium","utm_campaign","utm_content","utm_term","utm_id","ad_id","adset_id","campaign_id","fbclid"];
+  var inbound = new URLSearchParams(location.search), tags = {}, now = Date.now();
+  try {
+    var saved = JSON.parse(sessionStorage.getItem("gz_arrival_v2") || "null");
+    if(saved && now - saved.at < 30*60000) tags = saved.tags || {};
+  } catch(e) {}
+  if(inbound.get("utm_source")){
+    tags = {};
+    fields.forEach(function(k){var v=inbound.get(k); if(v) tags[k]=v.slice(0,1024);});
+  } else if(document.referrer){
+    try {
+      var host = new URL(document.referrer).hostname.toLowerCase().replace(/^www\./,"");
+      if(host && host !== "gazillionindustries.com" && (!/(^|\.)gumroad\.com$/.test(host) || !tags.utm_source)){
+        tags = {};
+        tags.utm_source = host;
+        tags.utm_medium = /(^|\.)(instagram|facebook)\.com$/.test(host) ? "social" : "referral";
+      }
+    } catch(e) {}
+  }
+  var source = (tags.utm_source || "").toLowerCase();
+  var medium = (tags.utm_medium || "").toLowerCase();
+  result.paid = /^(meta|facebook|instagram|fb|ig)$/.test(source)
+    && /^(paid|paid_social|paid-social|paidsocial|cpc|ppc|social_ads)$/.test(medium);
+  result.tags = tags;
+  try { sessionStorage.setItem("gz_arrival_v2", JSON.stringify({at:now,tags:tags})); } catch(e) {}
+  function carry(){
+    if(!tags.utm_source) return;
+    document.querySelectorAll("a[href]").forEach(function(a){
+      try {
+        var u = new URL(a.href, location.href);
+        if(!/^(https?):$/.test(u.protocol)) return;
+        if(!/^(www\.)?gazillionindustries\.com$/i.test(u.hostname)
+           && !/(^|\.)gumroad\.com$/i.test(u.hostname)) return;
+        fields.forEach(function(k){if(tags[k]) u.searchParams.set(k,tags[k]);});
+        a.href = u.toString();
+      } catch(e) {}
+    });
+  }
+  document.addEventListener("DOMContentLoaded",carry);
+  return result;
+})();
+</script>
 <link rel="canonical" href="https://gazillionindustries.com/drugs.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Gazillion Industries">
@@ -48,6 +96,7 @@
      The ads run on landing-page views today; this exists so purchase and
      visitor signal accrues for the campaigns that come after. -->
 <script>
+if (/^(www\.)?gazillionindustries\.com$/i.test(location.hostname)) {
 !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
 n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
@@ -55,6 +104,7 @@ t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
 document,'script','https://connect.facebook.net/en_US/fbevents.js');
 fbq('init', '1164684366890206');
 fbq('track', 'PageView');
+}
 </script>
 <noscript><img height="1" width="1" style="display:none" alt=""
   src="https://www.facebook.com/tr?id=1164684366890206&ev=PageView&noscript=1"/></noscript>
@@ -1045,20 +1095,7 @@ function track(name, props){
    which is why ON PAGE sat at zero with people plainly on the page. EVENT
    metrics are not bucketed and come back immediately, so this fires one.
    The tag is deferred, hence the short wait for it rather than a bare call. */
-/* DID THIS VISIT COME FROM AN AD? Meta stamps every click with fbclid, and our
-   own ad links carry utm_source. Remembered for the session, because those
-   parameters are on the LANDING url only and vanish the moment somebody clicks
-   through to another page - without this an ad visitor would stop counting as
-   one the instant they moved. The board draws them rising from an ad root, the
-   same way email arrivals do. */
-var GZ_AD = (function(){
-  try{
-    var q = location.search || "";
-    if(/[?&]fbclid=/i.test(q) || /[?&]utm_source=(facebook|instagram|meta|fb|ig)(&|$)/i.test(q))
-      sessionStorage.setItem("gz_ad", "1");
-    return sessionStorage.getItem("gz_ad") === "1";
-  }catch(e){ return false; }
-})();
+var GZ_AD = window.GZ_ATTR.paid;
 
 (function viewPing(){
   /* A HEARTBEAT, not a single ping. The board's live nodes count events inside a
@@ -1070,17 +1107,20 @@ var GZ_AD = (function(){
      here means still firing, and leaving stops it, so the node empties within
      one window. Paused when the tab is hidden, because a backgrounded tab is
      not somebody looking at the page. */
-  var BEAT = 30000, timer = null;
+  var BEAT = 30000, timer = null, originSent = false;
   function ping(){
+    if(document.visibilityState === "hidden") return;
     try{
       if(window.umami && window.umami.track){
         track("view_drugs");
-        if(GZ_AD) track("ad_drugs");     // same beat, so the ad root empties too
+        if(GZ_AD) track("paid_ad_drugs");
+        else if(!originSent) track("origin_other_drugs");
+        originSent = true;
       }
     }catch(e){}
   }
   function start(){
-    if(timer) return;
+    if(timer){ ping(); return; }
     ping();
     /* SKIP a beat while hidden - never kill the timer. Clearing it meant the
        heartbeat could only ever restart from a visibilitychange event, and in a
@@ -1140,20 +1180,7 @@ var GZ_AD = (function(){
 // from. So an inbound utm_source wins on source/medium/campaign, and the
 // button keeps content. A sale then reads kit / email / wave1 / banner_top
 // rather than losing three quarters of that.
-(function carryCampaign(){
-  var inbound = new URLSearchParams(location.search);
-  if(!inbound.get("utm_source")) return;
-  var links = document.querySelectorAll("a.cta");
-  for(var i = 0; i < links.length; i++){
-    var a = links[i], u;
-    try { u = new URL(a.href); } catch(e) { continue; }
-    ["utm_source","utm_medium","utm_campaign","utm_term"].forEach(function(k){
-      var v = inbound.get(k);
-      if(v) u.searchParams.set(k, v);
-    });
-    a.href = u.toString();
-  }
-})();
+// Arrival tags are forwarded by GZ_ATTR before any link is followed.
 
 (function list(){
   var box = document.getElementById("list");
