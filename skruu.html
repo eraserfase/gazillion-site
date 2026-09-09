@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <script defer src="video-audio-focus.js?v=1ed0c194152a"></script>
-<script defer src="demo-engagement.js?v=4361cbf983c2"></script>
+<script defer src="demo-engagement.js?v=c4523d669588"></script>
+<script defer src="demo-playback.js?v=bb71d451d1df"></script>
 <title>SKRUU - varispeed pitch and time stretch plug-in for drums and samples (VST3, AU, Mac and Windows)</title>
 <meta name="description" content="Explore a new dimension in which to stretch and skew your sounds. Control pitch and time independently. Speed it up while pitching down, and vice versa. Elastic pitch and time for controlled expressions and transitions, with the speed and curve of every shift under your hand. Sixteen elastic return shapes and four sampling grades. AU, VST3 and standalone, Mac and Windows. $29.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -737,7 +738,7 @@ h1.mark-block{font-size:inherit}
       <div class="slide">
         <div class="player">
           <video id="demo-new" playsinline controls preload="metadata"
-                 src="skruu/skruu-demo-20260909.mp4" poster="skruu/skruu-demo-20260909-poster.jpg"
+                 src="skruu/skruu-demo-20260909.mp4" data-fallback="skruu/skruu-demo-20260909.webm" poster="skruu/skruu-demo-20260909-poster.jpg"
                  width="1080" height="1920" muted loop autoplay disablepictureinpicture
                  aria-label="SKRUU demo"></video>
           <button class="play-badge" type="button" aria-label="Play the SKRUU demo with sound from the beginning">
@@ -1351,70 +1352,5 @@ var GZ_AD = window.GZ_ATTR.paid;
   if(document.fonts && document.fonts.ready) document.fonts.ready.then(all);
 })();
 </script>
-<script>
-(function(){
-  var reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  // Same silent preview and click-for-sound behavior for every player.
-  function wire(v){
-  var player = v.closest(".player"), badge = player && player.querySelector(".play-badge");
-  if(!badge) return;
-
-  // Controls are the no-script fallback, so they ship in the markup and come off
-  // here. They come back when the sound goes on, which is when they are useful.
-  v.removeAttribute("controls");
-  player.classList.add("is-ready");
-
-  function nudge(){ var p = v.play(); if(p && p.catch) p.catch(function(){}); }
-
-  // TWO FILES, one player. The resting loop is a short uncaptioned cut - it is
-  // the better thing to have moving on the page - and the full captioned demo is
-  // what a click asks for. data-full is optional: without it both are the same
-  // file and this behaves exactly as it did.
-  var PREVIEW = v.getAttribute("src"), FULL = v.getAttribute("data-full") || PREVIEW;
-  function source(url){
-    if(v.getAttribute("src") !== url){ v.setAttribute("src", url); v.load(); }
-  }
-
-  // The resting state is a SILENT LOOP, not a poster. The panel is a thing that
-  // moves and a still of it undersells it, so the slide plays by itself and the
-  // badge offers the one thing it is not doing - sound.
-  function preview(){
-    player.classList.remove("is-started");
-    v.controls = false; v.muted = true; v.loop = true;
-    source(PREVIEW);
-    try { v.currentTime = 0; } catch(e){}
-    // Carousel previews run only on the selected slide, including after a
-    // listen finishes. Lazy testimonial players stay on their posters.
-    var slide = v.closest(".slide");
-    if(reduced) { v.autoplay = false; v.pause(); }
-    else if(slide ? slide.classList.contains("is-active") : !v.hasAttribute("data-lazy")) nudge();
-    else v.pause();
-  }
-  preview();
-
-  // Sound means FROM THE TOP, and from the full cut. Unmuting wherever the
-  // silent loop happened to be would drop you into the middle of a demo built
-  // entirely around a before and an after.
-  badge.addEventListener("click", function(){
-    var carousel = v.closest(".carousel");
-    if(carousel) carousel.querySelectorAll("video").forEach(function(other){
-      if(other !== v) other.pause();
-    });
-    v.muted = false; v.loop = false; v.controls = true;
-    source(FULL);
-    try { v.currentTime = 0; } catch(e){}
-    player.classList.add("is-started");
-    nudge();
-  });
-
-  // Ended only fires once loop is off, i.e. after a listen. Drop back to the
-  // silent loop so the slide is an invitation again, not a frozen last frame.
-  v.addEventListener("ended", preview);
-  }
-
-  var vids = document.querySelectorAll(".player video");
-  for(var i = 0; i < vids.length; i++) wire(vids[i]);
-})();
-</script>
 </html>

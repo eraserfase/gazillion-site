@@ -23,7 +23,7 @@
     attr.touch();
     var name = prefix + video + "_" + code, key = stateKey(name);
     if (!repeat && (seen(key) || inFlight[key])) return;
-    var props = {product:product,video:video,journey:attr.token,tracking_version:"demo_v1"};
+    var props = {product:product,video:video,journey:attr.token,tracking_version:"demo_v2"};
     ["utm_source","utm_medium","utm_campaign","utm_term","utm_content","utm_id"].forEach(function(k){if(tags[k]) props[k]=tags[k];});
     Object.keys(details || {}).forEach(function(k){props[k]=details[k];});
     // Pending observations retain the original token/cell. A late library load
@@ -60,7 +60,7 @@
   document.querySelectorAll("video[id]").forEach(function(video){
     var codes={"demo-new":"n",demo:"o",dibi:"d",wino:"w"};
     var code=codes[video.id]; if (!code) return;
-    var seconds=0, ranges=[], previous=null, session=attr.token, sounded=false;
+    var seconds=0, ranges=[], previous=null, session=attr.token, sounded=false, mediaFailed=false;
     function audible(){return !document.hidden && !video.paused && !video.ended && !video.seeking && !video.muted && video.volume>0 && video.readyState>=2;}
     function data(){return {asset:(video.currentSrc || video.src || "").split("/").slice(-2).join("/"),audible_seconds:Math.round(seconds*10)/10,heard_seconds:Math.round(heard()*10)/10,duration:Number.isFinite(video.duration)?Math.round(video.duration*10)/10:0};}
     function heard(){return ranges.reduce(function(n,r){return n+r[1]-r[0];},0);}
@@ -93,7 +93,27 @@
     ["pause","ended","seeking","emptied"].forEach(function(type){video.addEventListener(type,boundary);});
     video.addEventListener("seeked",function(){previous=null;sample();});
     video.addEventListener("waiting",function(){if(sounded)emit(code,"buffer",data());previous=null;});
-    video.addEventListener("error",function(){emit(code,"error",Object.assign(data(),{media_error:video.error?video.error.code:0}));});
+    // Capture before the player's target listener swaps sources and clears
+    // video.error. Preserve initial failure and subsequent recovery separately.
+    function recordMediaError(event){
+      if(event.target!==video)return;
+      mediaFailed=true;
+      emit(code,"error",Object.assign(data(),{
+        media_error:video.error?video.error.code:0,
+        media_message:video.error?(video.error.message||"").slice(0,180):"",
+        phase:video.muted?"preview":(sounded?"listening":"requested"),
+        ready_state:video.readyState,network_state:video.networkState,
+        mp4_support:video.canPlayType('video/mp4; codecs="avc1.640032, mp4a.40.2"'),
+        webm_support:video.canPlayType('video/webm; codecs="vp9, opus"')
+      }));
+    }
+    document.addEventListener("error",recordMediaError,true);
+    video.addEventListener("playing",function(){
+      if(mediaFailed){mediaFailed=false;emit(code,"recovered",data());}
+    });
+    video.addEventListener("gz-media-unavailable",function(){emit(code,"unavailable",data());});
+    // Autoplay may fail before deferred scripts finish downloading.
+    if(video.error)recordMediaError({target:video});
     players.push({sample:sample,boundary:boundary});
   });
   setInterval(function(){if(!document.hidden)players.forEach(function(p){p.sample();});},500);
