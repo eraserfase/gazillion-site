@@ -105,7 +105,7 @@ window.GZ_ATTR = (function(){
   result.mark = function(stage, product){
     touch();
     if(!token || !window.umami || typeof window.umami.track !== "function") return;
-    if(stage !== "store" && (!/^(product|buy)$/.test(stage) || !/^(drugs|f12|skruu|tripleog)$/.test(product || ""))) return;
+    if(stage !== "store" && (!/^(product|buy)$/.test(stage) || !/^(drugs|f12|skruu|tripleog|beefy)$/.test(product || ""))) return;
     var name = "gz_"+stage+"_"+(stage === "store" ? "" : product+"_")+token;
     if(sent[name]) return;
     var code = sourceCode();
@@ -147,7 +147,7 @@ window.GZ_ATTR = (function(){
 })();
 </script>
 <title>Gazillion Industries - VST's and audio software for macOS, Windows and iPad</title>
-<meta name="description" content="SKRUU, varispeed pitch. TRIPLE OG, cassette tape simulation. F(ilter)12, a 12 bit sauce filter. DRUGS, a bus compressor. Chordea, a MIDI chord controller for iPad. AU, VST3 and standalone.">
+<meta name="description" content="BEEFY, saturation and loudness. SKRUU, varispeed pitch. TRIPLE OG, cassette tape simulation. F(ilter)12, a 12 bit sauce filter. DRUGS, a bus compressor. Chordea, a MIDI chord controller for iPad. AU, VST3 and standalone.">
 <link rel="canonical" href="https://gazillionindustries.com/">
 
 <meta property="og:type" content="website">
@@ -503,6 +503,21 @@ a{color:inherit;text-decoration:none}
 
     <!-- RELEASE ORDER, newest first - Tony, 7 Sep 2026.  Unchanged. -->
     <div class="rack">
+
+      <article class="unit" style="--accent:#ffce28;--cta-ink:#211715">
+        <a class="cardlink" href="/beefy.html" data-product="beefy" data-name="BEEFY" data-value="19.00" aria-label="BEEFY, saturation and loudness. $19."></a>
+        <div class="shot"><img src="beefy/raw.webp" width="640" height="1024" alt="BEEFY’s cartoon steak panel with a fat cow, tongue out, bonk and flames." decoding="async"></div>
+        <div class="legend">
+          <p class="mark" style="--markr:1.1"><svg role="img" aria-label="BEEFY" viewBox="0 0 1954 400"><image href="beefy/wordmark.webp" width="1954" height="650"/></svg></p>
+          <p class="jt sub">saturation &amp; loudness</p>
+          <p class="jt cat">THE MAKE GOODER KNOB</p>
+          <p class="jt pitch">more fatterrer. more betterrer.</p>
+          <div class="ask">
+            <p class="askline"><span class="money">$19</span><span class="formats" data-short="AU &middot; VST3&lt;br&gt;Standalone (Mac) &middot; Win">AU &middot; VST3 &middot; Standalone (Mac) &middot; macOS &middot; Windows</span></p>
+            <a class="cta" href="/beefy.html" data-product="beefy" data-name="BEEFY" data-value="19.00">Get BEEFY</a>
+          </div>
+        </div>
+      </article>
 
       <article class="unit" style="--accent:#ff3859;--cta-ink:#0b0a09">
         <a class="cardlink" href="/skruu.html" data-product="skruu" data-name="SKRUU" data-value="29.00" aria-label="SKRUU, varispeed pitch. $29."></a>
