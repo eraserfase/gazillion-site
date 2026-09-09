@@ -173,6 +173,7 @@ window.GZ_ATTR = (function(){
 <script defer src="https://cloud.umami.is/script.js"
         data-website-id="ed71399d-1069-4354-abbf-73dc311e5bc3"
         data-domains="gazillionindustries.com,www.gazillionindustries.com"></script>
+<script defer src="presence.js?v=b9e9f0414bd4" data-product="skruu"></script>
 <script>
 if (/^(www\.)?gazillionindustries\.com$/i.test(location.hostname)) {
 !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -1172,51 +1173,6 @@ function track(name, props){
    metrics are not bucketed and come back immediately, so this fires one.
    The tag is deferred, hence the short wait for it rather than a bare call. */
 var GZ_AD = window.GZ_ATTR.paid;
-
-(function viewPing(){
-  /* A HEARTBEAT, not a single ping. The board's live nodes count events inside a
-     short window, and an event is a moment - so one ping on load kept somebody
-     "on the page" for the whole window after they had already gone. Tony, 3 Sep
-     2026: "when i leave the checkout page or bounce from a landing page without
-     clicking buy it doesnt leave right away."
-     Repeating it while the tab is VISIBLE turns a moment into presence: still
-     here means still firing, and leaving stops it, so the node empties within
-     one window. Paused when the tab is hidden, because a backgrounded tab is
-     not somebody looking at the page. */
-  var BEAT = 30000, timer = null, originSent = false;
-  function ping(){
-    if(document.visibilityState === "hidden") return;
-    try{
-      if(window.umami && window.umami.track){
-        window.GZ_ATTR.mark("product", "skruu");
-        track("view_skruu");
-        if(GZ_AD) track("paid_ad_skruu");
-        else if(!originSent) track("origin_other_skruu");
-        originSent = true;
-      }
-    }catch(e){}
-  }
-  function start(){
-    if(timer){ ping(); return; }
-    ping();
-    /* SKIP a beat while hidden - never kill the timer. Clearing it meant the
-       heartbeat could only ever restart from a visibilitychange event, and in a
-       tracking iframe that event never comes: it stopped after two beats and
-       the node stayed full forever. Skipping costs one no-op every 30s and
-       recovers on its own. */
-    timer = setInterval(function(){
-      if(document.visibilityState !== "hidden") ping();
-    }, BEAT);
-  }
-  function stop(){ if(timer){ clearInterval(timer); timer = null; } }
-  var n = 0, wait = setInterval(function(){
-    if(window.umami && window.umami.track){ clearInterval(wait); start(); }
-    else if(++n > 40) clearInterval(wait);      // ~6s, then give up quietly
-  }, 150);
-  document.addEventListener("visibilitychange", function(){
-    if(document.visibilityState === "visible") start();   // never stop(): see above
-  });
-})();
 
 (function buyClicks(){
   var links = document.querySelectorAll("a.cta");
