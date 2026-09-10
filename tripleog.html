@@ -550,31 +550,13 @@ h1.mark-block{font-size:inherit}
 .mark{display:block}
 
 /* ---- the long copy ------------------------------------------------------- */
-/* It sits below the last buy button on purpose. Someone who came to hear a
-   compressor should not have to read 700 words to reach the ask; someone who
-   wants the detail - or a crawler deciding what this page is about - scrolls.
-   Serving both this way costs neither of them anything. */
+/* It sits below the last buy button on purpose, in the open. Someone who came
+   to hear the thing reaches the ask without reading 700 words; someone who
+   wants the detail - or a crawler deciding what this page is about - scrolls
+   to it. Serving both this way costs neither of them anything. */
 .about{margin:96px 0 0; width:100%; max-width:34em; text-align:left;
        border-top:1px solid var(--pill-line); padding-top:28px}
 
-/* The copy is a disclosure rather than a section. It stays in the document at
-   all times - <details> hides it with CSS, it is never injected on click - so a
-   crawler still reads every word of it while the page stays as short as it was
-   for somebody who only came to hear the thing. */
-.about > summary{
-  list-style:none; cursor:pointer; display:block; text-align:center;
-  font-size:11px; font-weight:600; letter-spacing:.22em; text-transform:uppercase;
-  color:var(--ink-faint); padding:6px 0; transition:color .18s ease}
-/* Two ways to kill the disclosure triangle, because the one that works depends
-   on the engine: display:block on the summary covers modern Safari and Chrome,
-   the pseudo-element covers what is left. */
-.about > summary::-webkit-details-marker{display:none}
-.about > summary::after{content:"+"; margin-left:.7em; font-weight:400;
-       display:inline-block; transform:translateY(-.02em)}
-.about[open] > summary::after{content:"\2013"}
-.about > summary:hover{color:var(--ink-soft)}
-.about > summary:focus-visible{outline:2px solid var(--ink-soft);
-       outline-offset:6px; border-radius:3px}
 .about-body{margin-top:36px}
 .about h2{margin:38px 0 14px; font-size:12px; font-weight:600; letter-spacing:.2em;
           text-transform:uppercase; color:var(--chalk)}
@@ -868,8 +850,7 @@ h1.mark-block{font-size:inherit}
     <p class="terms"><span class="price">$29</span> &nbsp;&middot;&nbsp; vst3 &nbsp;&middot;&nbsp; au &nbsp;&middot;&nbsp; standalone &nbsp;&middot;&nbsp; macos &nbsp;&middot;&nbsp; windows</p>
   </div>
 
-  <details class="about">
-    <summary>more info</summary>
+  <section class="about">
     <div class="about-body">
     <h2>What TRIPLE OG is</h2>
     <p>A cassette transport. Six controls for what the medium is and what it is
@@ -936,7 +917,7 @@ h1.mark-block{font-size:inherit}
     <h2>Price</h2>
     <p>$29.</p>
     </div>
-  </details>
+  </section>
 
   <p class="foot">Gazillion Industries LLC</p>
 </main>
