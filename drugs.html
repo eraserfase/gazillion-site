@@ -5,6 +5,15 @@
      rules, so any future CSS was one edit away from behaving strangely for no
      visible reason. The lang attribute is the other half of the same omission. -->
 <html lang="en">
+<!-- The page had no charset declaration and got away with it because GitHub
+     Pages sends "text/html; charset=utf-8" on the wire. That was already luck
+     rather than design - the meta description above carries a literal em dash -
+     and the Japanese in the napskint quote made it visible: served by anything
+     that omits the header (a plain python http.server, a file:// open, a
+     preview host) the browser guesses and the kana render as mojibake.
+     Declared here so the file is correct on its own rather than because of who
+     happens to be serving it. Must stay inside the first 1024 bytes. -->
+<meta charset="utf-8">
 <script defer src="video-audio-focus.js?v=1ed0c194152a"></script>
 <title>DRUGS - one-knob bus compressor for drums (VST, AU, Mac and Windows)</title>
 <meta name="description" content="A one-knob bus compressor for Mac and Windows: denser drums, not louder — peak level barely moves. Vinyl sim squash for breaks and the drum bus. VST and AU. $5+.">
@@ -185,7 +194,8 @@ window.GZ_ATTR = (function(){
      The track() helper further down calls window.umami if it is here and does
      nothing if it is not, so swapping provider is a change to this tag alone. -->
 <script defer src="https://cloud.umami.is/script.js"
-        data-website-id="ed71399d-1069-4354-abbf-73dc311e5bc3"></script>
+        data-website-id="ed71399d-1069-4354-abbf-73dc311e5bc3"
+        data-domains="gazillionindustries.com,www.gazillionindustries.com"></script>
 <script defer src="presence.js?v=b9e9f0414bd4" data-product="drugs"></script>
 <!-- Meta pixel. Same deal as Umami: the id is not a secret, it ships in every
      page that uses it. PageView here, InitiateCheckout on the buy links below,
@@ -544,31 +554,13 @@ h1.mark-block{font-size:inherit}
 .mark{display:block}
 
 /* ---- the long copy ------------------------------------------------------- */
-/* It sits below the last buy button on purpose. Someone who came to hear a
-   compressor should not have to read 700 words to reach the ask; someone who
-   wants the detail - or a crawler deciding what this page is about - scrolls.
-   Serving both this way costs neither of them anything. */
+/* It sits below the last buy button on purpose, in the open. Someone who came
+   to hear the thing reaches the ask without reading 700 words; someone who
+   wants the detail - or a crawler deciding what this page is about - scrolls
+   to it. Serving both this way costs neither of them anything. */
 .about{margin:96px 0 0; width:100%; max-width:34em; text-align:left;
        border-top:1px solid var(--pill-line); padding-top:28px}
 
-/* The copy is a disclosure rather than a section. It stays in the document at
-   all times - <details> hides it with CSS, it is never injected on click - so a
-   crawler still reads every word of it while the page stays as short as it was
-   for somebody who only came to hear the thing. */
-.about > summary{
-  list-style:none; cursor:pointer; display:block; text-align:center;
-  font-size:11px; font-weight:600; letter-spacing:.22em; text-transform:uppercase;
-  color:var(--ink-faint); padding:6px 0; transition:color .18s ease}
-/* Two ways to kill the disclosure triangle, because the one that works depends
-   on the engine: display:block on the summary covers modern Safari and Chrome,
-   the pseudo-element covers what is left. */
-.about > summary::-webkit-details-marker{display:none}
-.about > summary::after{content:"+"; margin-left:.7em; font-weight:400;
-       display:inline-block; transform:translateY(-.02em)}
-.about[open] > summary::after{content:"\2013"}
-.about > summary:hover{color:var(--ink-soft)}
-.about > summary:focus-visible{outline:2px solid var(--ink-soft);
-       outline-offset:6px; border-radius:3px}
 .about-body{margin-top:36px}
 .about h2{margin:38px 0 14px; font-size:12px; font-weight:600; letter-spacing:.2em;
           text-transform:uppercase; color:var(--chalk)}
@@ -733,12 +725,54 @@ h1.mark-block{font-size:inherit}
     <p class="spec">AU &nbsp;&middot;&nbsp; VST3 &nbsp;&middot;&nbsp; Standalone &nbsp;&middot;&nbsp; macOS &nbsp;&middot;&nbsp; Windows</p>
   </div>
 
-  <!-- The first real one, so the box is no longer hidden. WINO (@winowilly)
-       posted this to his story unprompted while bouncing his own sample pack.
-       It runs AS THE STORY rather than as a tidy pull-quote on purpose: the
-       Ableton session behind the caption is the half a marketer cannot write,
-       and it is doing the work the empty slot used to fail at. -->
   <div class="testimonial">
+    <!-- project of napskint (projectofnapskint.com), 6 Sep 2026 - a Japanese DTM
+         blog that posts daily plugin deals and free-plugin finds. They found
+         DRUGS on their own: the post credits no source, so it is not a pickup of
+         the SoundShock/Rekkerd push, and nobody here contacted them.
+
+         This is the first entry in this block that is PRESS rather than a
+         producer. The three below are people who used it saying it sounds good;
+         this is a publication describing what it is. Both belong here, but the
+         attribution line has to say which is which or a reader takes a blog
+         summary for a cosign - so it reads "free-plugin roundup" and not just a
+         handle.
+
+         The QUOTE is their headline in translation, not a sentence anyone here
+         wrote for them. Kept in English because the rest of the block is, with
+         the original standing underneath at attribution size: dropping the
+         Japanese entirely would leave a claim about a Japanese write-up with
+         nothing Japanese in it, and setting the headline itself in display type
+         would put the brand's one line of big type in a fallback face that is
+         not Arial Black.
+
+         IT LEADS THE BLOCK ON TONY'S CALL, 6 Sep 2026. Worth knowing what that
+         trades: the three below are warmer, and Wino's clip is the only thing in
+         here that moves, so the block no longer opens on motion. What it buys is
+         that the first voice a visitor meets is a publication rather than a
+         friend of the maker, which is the harder thing to dismiss.
+
+         It earned the slot on the numbers, not on flattery: 15 downloads out of
+         Japan inside 14 hours of the post, against a baseline of about two a day.
+         See the japanese-dtm-blog-napskint note for the referrer evidence. -->
+    <figure class="tm tm--wide">
+      <figcaption class="tm-say">
+        <blockquote>&ldquo;A compressor with simple controls that adds thickness,
+          density and presence to drums.&rdquo;</blockquote>
+        <p class="tm-who"><a href="https://projectofnapskint.com/drugs/" target="_blank"
+             rel="noopener">project of napskint</a> &middot; free-plugin roundup, Japan
+          &middot; <span lang="ja">無料プラグイン</span></p>
+      </figcaption>
+    </figure>
+    <!-- WINO (@winowilly) posted this to his story unprompted while bouncing his
+         own sample pack. This was the FIRST one to arrive, and it is what unhid
+         this whole box - it led the block until napskint took the top slot on
+         6 Sep 2026, and the history is worth keeping even though the position
+         changed.
+
+         It runs AS THE STORY rather than as a tidy pull-quote on purpose: the
+         Ableton session behind the caption is the half a marketer cannot write,
+         and it is doing the work the empty slot used to fail at. -->
     <figure class="tm">
       <div class="player tm-vid">
         <video id="wino" playsinline controls preload="metadata"
@@ -811,6 +845,7 @@ h1.mark-block{font-size:inherit}
              rel="noopener">@spewcataclism</a></p>
       </figcaption>
     </figure>
+
   </div>
 
   <!-- The list is the only asset on this page that survives a change of
@@ -848,8 +883,7 @@ h1.mark-block{font-size:inherit}
 
 
 
-  <details class="about">
-    <summary>more info</summary>
+  <section class="about">
     <div class="about-body">
     <h2>What DRUGS is</h2>
     <p>DRUGS is a bus compressor with one macro control, called DOSE. Turning DOSE up
@@ -895,7 +929,7 @@ h1.mark-block{font-size:inherit}
     <h2>Price</h2>
     <p>Free, or name your own price.</p>
     </div>
-  </details>
+  </section>
 
   <p class="foot">Gazillion Industries LLC</p>
 </main>
@@ -1168,7 +1202,23 @@ h1.mark-block{font-size:inherit}
 // nothing at all when none is. Changing analytics later is then one script tag
 // in the head rather than an edit at every call site, and the page never depends
 // on that tag being there.
+/* PRODUCTION ONLY - and this is a measured fix, not a precaution.
+   Every page here carries the LIVE Umami property id, so any local copy served
+   at the same path reports as real traffic on the real product: a preview, a
+   colourway draft, a page sitting open in a tab while it is being built.
+   Measured 7 Sep 2026, the day SKRUU and TRIPLE OG launched - seven TRIPLE OG
+   colourway drafts (/_tog-beige.html, /_tog-a-midnight.html and five more) fired
+   23 view_tripleog events into production from files that have never existed on
+   the live site and 404 there; and /skruu.html beat 607 times against 3 real
+   pageviews. The board's live tree counts view_<product> by NAME, with no path
+   dimension, so every one of those landed on the product's own node and read as
+   people on the page.
+   data-domains on the tag stops the automatic PAGEVIEW; this stops every manual
+   EVENT. They are gated separately, so both are needed. */
+var GZ_LIVE = /^(www\.)?gazillionindustries\.com$/i.test(location.hostname);
+
 function track(name, props){
+  if(!GZ_LIVE) return;          // never report from a local or draft copy
   try{
     if(window.plausible)
       return window.plausible(name, props ? {props:props} : undefined);
