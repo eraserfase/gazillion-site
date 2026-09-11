@@ -258,15 +258,26 @@ a{color:inherit;text-decoration:none}
 
 /* ---------------------------------------------------------------- masthead */
 /* The band is an approved mark - black type on the sky, which is how the site
-   already opens.  At 52px it identifies the shop and then gets out of the way. */
+   already opens.  At 52px it identifies the shop and then gets out of the way.
+   The padding came down from 11/12 when the lockup was corrected: INDUSTRIES is
+   its true size now, so the block is taller and the band had to give the height
+   back to stay at 52. */
 .sign{
   background:linear-gradient(105deg,var(--gold-1) 0%,var(--gold-2) 46%,var(--gold-3) 100%);
-  padding:11px 0 12px;
+  padding:9px 0 10px;
 }
+/* The lockup is a BLOCK: two lines justified to one measure, ink flush both
+   edges, size and tracking only. The hand-set sizes that used to sit here were
+   not that - GAZILLION drew 151.6px of ink and INDUSTRIES 114.0px, so the
+   second line fell 25% short of the first and the two never formed an edge.
+   The sizes are solved at run time now by the same arithmetic the identity kit
+   uses (social/brand.sh), against the same three constants. Values below are
+   the no-script fallback only; the fitter overwrites them. */
 .lock{
   margin:0; display:flex; flex-direction:column; align-items:center;
-  color:#0b0a09; line-height:1;
+  color:#0b0a09; line-height:.74;   /* lead, from the identity kit */
 }
+.lock-a,.lock-b{display:block}
 .lock-a{
   font-family:"Archivo Black","Arial Black",sans-serif;
   font-size:27px; letter-spacing:-.055em; margin-right:-.055em;
@@ -629,6 +640,87 @@ a{color:inherit;text-decoration:none}
   <div class="wrap"><p>Gazillion Industries LLC</p></div>
 </footer>
 
+<script>
+/* ===========================================================================
+   THE LOCKUP.  Settled, and not to be re-derived - this is a port of the
+   solver in social/art/brand.html, run against the constants brand.sh passes
+   it: GAZILLION tracked -0.055em, INDUSTRIES +0.31em, oversh 0.0144,
+   binset 0.018.  Size is the only thing solved for; the trackings ARE the
+   identity and never move.
+
+   Why it cannot be hand-set: the two lines are different faces at different
+   trackings, so the size that makes them the same width is a different number
+   at every measure, and a wrong one shows immediately as two centred lines
+   instead of one block.
+
+   Two constants that are invisible until they are wrong:
+     oversh   the edges justify on INK, not on advance.  Archivo Black gives G
+              a far larger left bearing than Archivo Light gives I, so lines
+              that measure identically still read as indented.  The round
+              terminals are pushed 1.44% past the flat ones - GAZILLION opens
+              round and closes flat, so it grows and hangs LEFT.
+     binset   INDUSTRIES sits 1.8% inside GAZILLION.  Flush, the I reads as
+              jammed against the G and the S hangs past the N.
+   ========================================================================= */
+(function lockup(){
+  var L = document.querySelector(".lock");
+  var A = document.querySelector(".lock-a");
+  var B = document.querySelector(".lock-b");
+  if (!L || !A || !B) return;
+
+  var ATRACK = -0.055, BTRACK = 0.31, OVERSH = 0.0144, BINSET = 0.018;
+  var BASE = 152;                 /* the measure the band has always drawn at */
+  var REF  = 200;                 /* measure once at a fixed size, then scale */
+  var ctx  = document.createElement("canvas").getContext("2d");
+
+  /* Ink, not advance: actualBoundingBox* is the drawn extent, which is the
+     thing the eye lines up.  ctx.letterSpacing is not everywhere yet, so the
+     gaps are added by hand when it is missing - n-1 of them, never n, because
+     the trailing one is not ink. */
+  function ink(el, tEm){
+    var cs = getComputedStyle(el);
+    ctx.font = cs.fontStyle + " " + cs.fontWeight + " " + REF + "px " + cs.fontFamily;
+    var native = ("letterSpacing" in ctx);
+    if (native) ctx.letterSpacing = (tEm * REF) + "px";
+    var t = (el.textContent || "").trim();
+    var m = ctx.measureText(t);
+    var w = m.actualBoundingBoxRight + m.actualBoundingBoxLeft;
+    if (!native) w += tEm * REF * (t.length - 1);
+    return { w: w, left: m.actualBoundingBoxLeft };
+  }
+
+  function line(el, tEm, inset, round, target){
+    var k = ink(el, tEm);
+    if (!(k.w > 0)) return;
+    var lineTarget = target * (1 + OVERSH) * (1 - inset);
+    var size = REF * lineTarget / k.w;
+    el.style.fontSize      = size + "px";
+    el.style.letterSpacing = tEm + "em";
+    el.style.marginRight   = "0";
+    el.style.width         = lineTarget + "px";
+    /* actualBoundingBoxLeft is positive leftward, so this is exactly the
+       offset that puts the first glyph's ink on the box edge. */
+    el.style.textIndent    = (k.left * size / REF) + "px";
+    el.style.whiteSpace    = "nowrap";
+    el.style.overflow      = "visible";
+    el.style.position      = "relative";
+    el.style.left          = (round ? -target * OVERSH : 0) + "px";
+  }
+
+  function fit(){
+    var host = L.parentNode;
+    var room = host.clientWidth - 32;
+    if (room <= 0) return;
+    var target = Math.min(BASE, room * 0.66);
+    line(A, ATRACK, 0,      true,  target);
+    line(B, BTRACK, BINSET, false, target);
+  }
+
+  fit();
+  addEventListener("resize", fit);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(fit);
+})();
+</script>
 <script>
 /* ===========================================================================
    THE JUSTIFIER.  Lines that sit together are one block, justified to one
