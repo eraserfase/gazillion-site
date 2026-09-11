@@ -661,6 +661,19 @@ h1.mark-block{font-size:inherit}
                  text-transform:uppercase; line-height:1.5;
                  color:var(--ink-soft); text-wrap:balance}
 @media (max-width:560px){ .copy .lead-note{font-size:11.5px; letter-spacing:.12em} }
+/* WHY .copy NEEDS A WIDTH ON A PHONE, AND ONLY SKRUU DID.
+   main centres its children rather than stretching them, so .copy sizes itself
+   to its content - and fit-content is floored at MIN-CONTENT, which no amount
+   of min-width:0 lowers. These .jt lines are white-space:nowrap, so their
+   min-content is a whole unwrapped line: .copy came out 477px wide inside a
+   342px column and the body copy ran off the side of the screen. The long
+   about-section below it sat correctly the whole time because it is not built
+   from justified lines. Only this page puts a .jtblock inside .copy, which is
+   why only this page did it. An explicit width replaces fit-content with the
+   space that actually exists, and the justifier - which was never at fault,
+   it fits to whatever its parent says - then fits to the real measure. */
+.copy,.jtblock{min-width:0}
+@media (max-width:560px){ .copy{width:100%} }
 .jtblock{width:100%; max-width:34em; margin:0 auto}
 /* SCOPED UNDER .jtblock, and that is not tidiness. .copy p is class+element,
    which outranks a bare .jt on specificity - so the surrounding page stylesheet
