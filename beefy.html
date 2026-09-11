@@ -182,7 +182,7 @@ fbq('track', 'PageView');
 *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:130px}body{margin:0;min-width:280px;font-size:18px;line-height:1.4}button,input,a{font:inherit}button,a,input,summary{-webkit-tap-highlight-color:transparent}button,a{touch-action:manipulation}button{color:inherit}a{color:inherit}img{display:block;max-width:100%;height:auto}[hidden]{display:none!important}button,summary{cursor:pointer}:focus-visible{outline:4px solid var(--red);outline-offset:5px}.sr-only{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 .banner{position:fixed;inset:0 0 auto;z-index:20;padding:13px 20px 12px;text-align:center;background:var(--paper);border-bottom:4px solid var(--ink);box-shadow:0 5px 0 #21171518}
 .buy{display:inline-flex;align-items:center;justify-content:center;gap:22px;min-height:54px;padding:9px 32px;border:3px solid var(--ink);border-radius:17px 21px 16px 19px;background:var(--yellow);box-shadow:4px 5px 0 var(--ink);text-decoration:none;font-size:clamp(22px,3.8vw,30px);line-height:1.1;transition:transform .14s,box-shadow .14s}
-.buy:hover{transform:translate(-1px,-2px) rotate(-.5deg);box-shadow:5px 7px 0 var(--ink)}.buy:active{transform:translate(3px,4px);box-shadow:1px 1px 0 var(--ink)}.buy-price{border-left:2px solid var(--ink);padding-left:20px}.terms{margin:10px 0 0;font-size:14px;line-height:1.25}.terms span{white-space:nowrap}
+.buy:hover{transform:translate(-1px,-2px) rotate(-.5deg);box-shadow:5px 7px 0 var(--ink)}.buy:active{transform:translate(3px,4px);box-shadow:1px 1px 0 var(--ink)}.buy-price{border-left:2px solid var(--ink);padding-left:20px}.terms{margin:10px 0 0;font-size:14px;line-height:1.25}.terms.delivery{margin-top:5px}.terms span{white-space:nowrap}
 main{max-width:720px;margin:0 auto;padding:calc(var(--banner-h) + 24px) 25px 0}.product{margin:0;text-align:center;position:relative}.stage{position:relative;display:grid;place-items:center;min-height:320px;isolation:isolate}
 .panel{height:clamp(360px,62svh,590px);max-width:100%;width:auto;object-fit:contain;filter:drop-shadow(7px 7px 0 #211715);transition:opacity .12s}
 .mark{margin:45px auto 0;max-width:650px}.mark img{width:100%}.buy-mid{text-align:center;margin:27px 0 0}
@@ -202,6 +202,12 @@ main{max-width:720px;margin:0 auto;padding:calc(var(--banner-h) + 24px) 25px 0}.
 <header class="banner">
   <a class="buy" data-pos="banner_top" href="https://gazillionindustries.gumroad.com/l/beefy?wanted=true&amp;utm_source=gazillionindustries.com&amp;utm_medium=cta&amp;utm_content=banner_top"><span>GET BEEFY</span><span class="buy-price">$19</span></a>
   <p class="terms"><span>Mac + Windows</span> &nbsp;·&nbsp; <span>VST3 / AU</span> &nbsp;·&nbsp; <span>Standalone (Mac)</span></p>
+  <!-- Delivery line. Most arrivals are mobile and paid, and they leave in
+       about 16 seconds where desktop stays about a minute. The theory being
+       tested is that they believe buying needs a computer, so they defer and
+       never come back. Nothing here names the checkout. If mobile click-to-sale
+       does not move, the device theory is dead and distrust is what is left. -->
+  <p class="terms delivery"><span>grab it on your phone</span> &middot; <span>arrives by email</span> &middot; <span>install any time</span></p>
 </header>
 <main>
   <div class="hero-art"><div class="hero-visual">
@@ -240,6 +246,7 @@ main{max-width:720px;margin:0 auto;padding:calc(var(--banner-h) + 24px) 25px 0}.
   <div class="buy-end">
     <a class="buy" data-pos="page_end" href="https://gazillionindustries.gumroad.com/l/beefy?wanted=true&amp;utm_source=gazillionindustries.com&amp;utm_medium=cta&amp;utm_content=page_end"><span>GET BEEFY</span><span class="buy-price">$19</span></a>
     <p class="terms">one payment. all the beef.</p>
+  <p class="terms delivery"><span>grab it on your phone</span> &middot; <span>arrives by email</span> &middot; <span>install any time</span></p>
   </div>
   <section class="fine-print">
     <div class="inside">

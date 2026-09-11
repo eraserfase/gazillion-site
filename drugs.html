@@ -598,6 +598,46 @@ h1.mark-block{font-size:inherit}
   .slide{height:clamp(240px, calc(100vh - 185px), 560px)}
 }
 
+/* The banner is fixed, so every line it gains is screen the phone does not get,
+   and a lockup that wraps stops being a lockup. Uppercase at the tracking the
+   spec line uses needs three rows on a 375px screen; lowercase at 12px needs
+   304px of a 335px measure, so it holds one row down to a small phone. Lower
+   case also separates it from the spec line above - that one is a fact about
+   the product, this one is an aside about getting it. */
+.terms.delivery{margin-top:7px; text-transform:none; font-size:12px;
+                letter-spacing:.02em}
+.terms.delivery span{white-space:nowrap}
+@media (max-width:560px){.terms.delivery{font-size:clamp(10px,3.2vw,12px)}}
+
+/* ---- the price rides inside the button ---------------------------------- */
+/* BEEFY put the number in the ask rather than under it, and that is the one
+   page where the price is never separated from the thing it is the price of.
+   The divider is currentColor so it inverts with the pill instead of needing
+   its own value. The label never wraps: a two-line pill stops reading as a
+   button. */
+.cta{display:flex; align-items:center; justify-content:center; gap:18px}
+.cta-label,.cta-price{white-space:nowrap}
+.cta-price{border-left:2px solid currentColor; padding-left:18px}
+.cta--small{gap:12px}
+.cta--small .cta-price{padding-left:12px}
+@media (max-width:560px){
+  .cta:not(.cta--small){font-size:clamp(15px,4.3vw,23px); gap:14px}
+  .cta:not(.cta--small) .cta-price{padding-left:14px}
+}
+
+/* ---- both buy buttons inside the first screen, on every page ------------- */
+/* BEEFY is the reference: the banner ask and the ask under the wordmark are
+   BOTH on screen at load, phone and laptop. Here the slide height was tuned by
+   hand against one viewport and one banner, so every later change to either -
+   the delivery line was the last one - pushed the second button under the fold
+   without saying so. The height is now measured at run time instead: the page
+   reports what it spends above and below the slide, and the slide takes what is
+   left. Last rule in the sheet, so it wins on source order. */
+.slide{height:var(--slide-h, 460px)}
+
+/* The spec line is one fact, so it gets one row: at .14em it needed two on a
+   375px screen and orphaned the last format on its own line. */
+@media (max-width:560px){ .terms{letter-spacing:.06em; font-size:clamp(9.5px,3.2vw,12px)} }
 </style>
 
 <!-- NO OVERLAY. The buttons are ordinary links to Gumroad's own checkout, and
@@ -649,6 +689,12 @@ h1.mark-block{font-size:inherit}
   <p class="terms">vst3 &nbsp;&middot;&nbsp; au &nbsp;&middot;&nbsp; macos standalone &nbsp;&middot;&nbsp; windows</p>
   <a class="cta" data-pos="banner_top" href="https://gazillionindustries.gumroad.com/l/drugs?price=0&amp;wanted=true&amp;utm_source=gazillionindustries.com&amp;utm_medium=cta&amp;utm_content=banner_top">FREE DRUGS</a>
   <p class="terms">free &nbsp;&middot;&nbsp; or name your own price</p>
+  <!-- Delivery line. Most arrivals are mobile and paid, and they leave in
+       about 16 seconds where desktop stays about a minute. The theory being
+       tested is that they believe buying needs a computer, so they defer and
+       never come back. Nothing here names the checkout. If mobile click-to-sale
+       does not move, the device theory is dead and distrust is what is left. -->
+  <p class="terms delivery"><span>grab it on your phone</span> &middot; <span>arrives by email</span> &middot; <span>install any time</span></p>
 </div>
 
 <main>
@@ -879,6 +925,12 @@ h1.mark-block{font-size:inherit}
   <div class="buy-end">
     <a class="cta" data-pos="page_end" href="https://gazillionindustries.gumroad.com/l/drugs?price=0&amp;wanted=true&amp;utm_source=gazillionindustries.com&amp;utm_medium=cta&amp;utm_content=page_end">FREE DRUGS</a>
     <p class="terms">free &nbsp;&middot;&nbsp; or name your own price</p>
+  <!-- Delivery line. Most arrivals are mobile and paid, and they leave in
+       about 16 seconds where desktop stays about a minute. The theory being
+       tested is that they believe buying needs a computer, so they defer and
+       never come back. Nothing here names the checkout. If mobile click-to-sale
+       does not move, the device theory is dead and distrust is what is left. -->
+  <p class="terms delivery"><span>grab it on your phone</span> &middot; <span>arrives by email</span> &middot; <span>install any time</span></p>
   </div>
 
 
@@ -1106,6 +1158,31 @@ h1.mark-block{font-size:inherit}
   }
   set();
   addEventListener("resize", set);
+  if(document.fonts && document.fonts.ready) document.fonts.ready.then(set);
+})();
+
+/* Gives the slide exactly the height that leaves the second buy button on
+   screen. Overhead is measured, never assumed, so it stays true across the two
+   breakpoints, a reflowed banner, a loaded font and a rotated phone. The floor
+   matters: without one a short viewport resolved this to single digits and the
+   carousel disappeared, images and all. */
+(function fitSlide(){
+  var car = document.querySelector(".carousel"),
+      mid = document.querySelector(".buy-mid .cta"),
+      slide = document.querySelector(".slide");
+  if(!car || !mid || !slide) return;
+  function set(){
+    var h = slide.getBoundingClientRect().height;
+    if(!h) return;
+    var top = car.getBoundingClientRect().top + window.scrollY;
+    var below = (mid.getBoundingClientRect().bottom + window.scrollY) - (top + h);
+    var room = window.innerHeight - top - below - 14;
+    document.documentElement.style.setProperty(
+      "--slide-h", Math.max(240, Math.min(660, Math.round(room))) + "px");
+  }
+  set();
+  addEventListener("resize", set);
+  addEventListener("load", set);
   if(document.fonts && document.fonts.ready) document.fonts.ready.then(set);
 })();
 
