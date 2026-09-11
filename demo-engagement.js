@@ -4,12 +4,12 @@
 (function () {
   "use strict";
   if (!/^(www\.)?gazillionindustries\.com$/i.test(location.hostname)) return;
-  var product = (location.pathname.match(/\/(f12|skruu|tripleog)\.html$/) || [])[1];
+  var product = (location.pathname.match(/\/(f12|skruu|tripleog|beefy)\.html$/) || [])[1];
   if (!product) return;
   var attr = window.GZ_ATTR;
   if (!attr) return;
   var tags = attr.tags || {}, groups = {spend_high:"h",spend_light:"l",store_engaged:"e",store_other:"o",drugs_free:"d",gazillion_paid:"p",product_comp:"c",other_active:"x"};
-  var products = {f12:"f",skruu:"s",tripleog:"t"};
+  var products = {f12:"f",skruu:"s",tripleog:"t",beefy:"b"};
   var arm = (tags.utm_content || "").match(/^(e01|e02)_(f12|skruu|tripleog)_a_(cta|demo)$/);
   var wave = arm && (arm[1] === "e01" ? "a" : "b");
   var campaign = tags.utm_source === "kit" && tags.utm_medium === "email" &&

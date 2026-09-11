@@ -195,8 +195,34 @@ main{max-width:720px;margin:0 auto;padding:calc(var(--banner-h) + 24px) 25px 0}.
 .stage::before{content:"";position:absolute;width:95%;max-width:530px;aspect-ratio:1;background:var(--paper);border:3px solid var(--ink);border-radius:48% 52% 46% 54% / 53% 44% 56% 47%;box-shadow:8px 9px 0 #297976;z-index:-1;transform:rotate(-5deg)}
 .hero-visual .stage::before{max-height:95%;width:auto;max-width:95%;height:95%}
 .hero-media{display:grid;place-items:center}
+
+/* Same demo-first carousel and sound control as the other product pages.
+   The barbecue carries its own silhouette; the transparent video needs no box. */
+.carousel{position:relative;width:100%;margin:0}
+.track{display:flex;position:relative;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none}
+.track::-webkit-scrollbar{display:none}
+.slide{flex:0 0 62%;scroll-snap-align:center;display:flex;align-items:center;justify-content:center;height:clamp(360px,62svh,590px);opacity:.34;transform:scale(.93);transition:opacity .3s,transform .3s}
+.slide:first-child{margin-left:19%}.slide:last-child{margin-right:19%}.slide.is-active{opacity:1;transform:none}
+.slide .panel{height:100%;width:auto;max-width:100%;object-fit:contain;filter:none}
+.player{position:relative;display:flex;align-items:center;justify-content:center;height:100%;max-width:100%}
+.player video{display:block;height:100%;width:auto;max-width:100%;object-fit:contain;background:transparent}
+.play-badge{display:none;position:absolute;inset:0;z-index:2;align-items:center;justify-content:center;flex-direction:column;gap:14px;border:0;background:transparent;padding:0;margin:0}
+.player.is-ready .play-badge{display:flex}.player.is-started .play-badge{display:none}
+.play-badge .disc{width:64px;height:64px;border-radius:50%;background:var(--paper);border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;box-shadow:3px 3px 0 var(--ink)}
+.play-badge .disc::before{content:"";margin-left:5px;border-style:solid;border-width:11px 0 11px 18px;border-color:transparent transparent transparent var(--ink)}
+.play-badge .say{font-size:18px;line-height:1;text-transform:uppercase;letter-spacing:.1em;background:var(--paper);padding:6px 9px;border:2px solid var(--ink)}
+.play-badge:hover .disc{background:var(--yellow)}
+.nav{position:absolute;top:calc(50% - 17px);transform:translateY(-50%);z-index:3;width:60px;height:60px;display:grid;place-items:center;border:2px solid var(--ink);border-radius:50%;background:var(--paper);color:var(--ink);font-size:32px;line-height:1;padding:0}
+.nav:hover{background:var(--yellow)}.nav--prev{left:0}.nav--next{right:0}
+.dots{display:flex;justify-content:center;gap:0;height:34px;margin:0}
+.dot{display:grid;place-items:center;width:44px;height:34px;border:0;padding:0;background:transparent}.dot::after{content:"";width:8px;height:8px;border-radius:50%;background:var(--ink);opacity:.3}.dot[aria-current="true"]::after{opacity:1;box-shadow:0 0 0 2px var(--paper)}
+.demo-status{position:absolute;bottom:10px;left:0;right:0;margin:0;text-align:center;background:var(--paper);font-size:15px;padding:8px}
+@media(max-width:480px){.slide{height:clamp(365px,58svh,500px)}}
+
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
 </style>
+<script defer src="demo-engagement.js?v=beefy-20260911"></script>
+<script defer src="beefy-demo.js?v=20260911"></script>
 </head>
 <body>
 <header class="banner">
@@ -211,13 +237,35 @@ main{max-width:720px;margin:0 auto;padding:calc(var(--banner-h) + 24px) 25px 0}.
 </header>
 <main>
   <div class="hero-art"><div class="hero-visual">
-  <figure class="product" aria-label="BEEFY audio effect plugin">
-    <div class="stage">
-      <div class="hero-media">
-      <img class="panel" id="panel" src="beefy/raw.webp" width="640" height="1024" alt="BEEFY’s raw cartoon steak panel, SOFT CLIP on, at BEEF 94, with a bonked cow, tongue out and flames beneath its feet." fetchpriority="high">
+  <div class="carousel" aria-label="BEEFY demo and panel finishes" aria-roledescription="carousel">
+    <div class="track" id="beefy-track" tabindex="0">
+      <div class="slide is-active" role="group" aria-roledescription="slide" aria-label="1 of 3: demo">
+        <div class="player">
+          <video id="demo-new" playsinline controls preload="none" muted loop
+                 width="720" height="1280" poster="beefy/barbecue-20260911-poster.png"
+                 data-webm="beefy/barbecue-20260911.webm" data-hevc="beefy/barbecue-20260911.mov"
+                 aria-label="BEEFY drum demo: three original before-and-after comparisons"></video>
+          <button class="play-badge" type="button" aria-label="Play the BEEFY demo with sound from the beginning">
+            <span class="disc" aria-hidden="true"></span><span class="say">sound on</span>
+          </button>
+          <p class="demo-status" role="status" hidden></p>
+        </div>
+      </div>
+      <div class="slide" role="group" aria-roledescription="slide" aria-label="2 of 3: raw panel">
+        <img class="panel" id="panel" src="beefy/raw.webp" width="640" height="1024" alt="BEEFY’s raw cartoon steak panel, SOFT CLIP on, at BEEF 94, with a bonked cow, tongue out and flames beneath its feet.">
+      </div>
+      <div class="slide" role="group" aria-roledescription="slide" aria-label="3 of 3: dark mode">
+        <img class="panel" src="beefy/blackened.webp" width="640" height="1024" loading="lazy" decoding="async" alt="BEEFY in its blackened dark finish, BEEF at 70 and SOFT CLIP on, with its cow reacting above the flames.">
       </div>
     </div>
-  </figure>
+    <button class="nav nav--prev" type="button" aria-label="Previous slide">&#8249;</button>
+    <button class="nav nav--next" type="button" aria-label="Next slide">&#8250;</button>
+    <div class="dots" role="group" aria-label="Choose BEEFY slide">
+      <button class="dot" type="button" aria-label="Show demo" aria-current="true"></button>
+      <button class="dot" type="button" aria-label="Show raw panel" aria-current="false"></button>
+      <button class="dot" type="button" aria-label="Show dark mode" aria-current="false"></button>
+    </div>
+  </div>
   <h1 class="mark"><img src="beefy/wordmark.webp" width="1954" height="650" alt="BEEFY. THE MAKE GOODER KNOB. MORE FATTERRER. MORE BETTERRER."></h1>
   </div></div>
   <div class="buy-mid"><a class="buy" data-pos="hero_mid" href="https://gazillionindustries.gumroad.com/l/beefy?wanted=true&amp;utm_source=gazillionindustries.com&amp;utm_medium=cta&amp;utm_content=hero_mid"><span>GET BEEFY</span><span class="buy-price">$19</span></a></div>
@@ -302,6 +350,34 @@ main{max-width:720px;margin:0 auto;padding:calc(var(--banner-h) + 24px) 25px 0}.
   document.fonts.ready.then(scheduleFit);
   document.querySelectorAll('.hero-art img').forEach(img => img.addEventListener('load', scheduleFit));
   fitOpening();
+  const track = document.getElementById('beefy-track');
+  const slides = Array.from(track.children);
+  const dots = Array.from(document.querySelectorAll('.dot'));
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)');
+  function slideIndex() {
+    const center = track.scrollLeft + track.clientWidth / 2;
+    return slides.reduce((best, slide, i) => Math.abs(slide.offsetLeft + slide.offsetWidth / 2 - center) < Math.abs(slides[best].offsetLeft + slides[best].offsetWidth / 2 - center) ? i : best, 0);
+  }
+  function syncSlides() {
+    const selected = slideIndex();
+    slides.forEach((slide, i) => slide.classList.toggle('is-active', i === selected));
+    dots.forEach((dot, i) => dot.setAttribute('aria-current', String(i === selected)));
+  }
+  function showSlide(i) {
+    const n = Math.max(0, Math.min(slides.length - 1, i));
+    track.scrollTo({left: slides[n].offsetLeft - (track.clientWidth - slides[n].offsetWidth) / 2, behavior: reduced.matches ? 'instant' : 'smooth'});
+  }
+  document.querySelector('.nav--prev').addEventListener('click', () => showSlide(slideIndex() - 1));
+  document.querySelector('.nav--next').addEventListener('click', () => showSlide(slideIndex() + 1));
+  dots.forEach((dot, i) => dot.addEventListener('click', () => showSlide(i)));
+  let scrollTick;
+  track.addEventListener('scroll', () => {clearTimeout(scrollTick); scrollTick = setTimeout(syncSlides, 60);}, {passive:true});
+  track.addEventListener('keydown', event => {
+    if (event.target !== track) return;
+    if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {event.preventDefault();showSlide(slideIndex() + (event.key === 'ArrowRight' ? 1 : -1));}
+  });
+  addEventListener('resize', syncSlides);
+  syncSlides();
   const wink = document.querySelector('.wink-animation');
   const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
   let winkVisible = false;
