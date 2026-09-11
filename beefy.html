@@ -196,12 +196,13 @@ main{max-width:720px;margin:0 auto;padding:calc(var(--banner-h) + 24px) 25px 0}.
 .hero-visual .stage::before{max-height:95%;width:auto;max-width:95%;height:95%}
 .hero-media{display:grid;place-items:center}
 
-/* Same demo-first carousel and sound control as the other product pages.
-   The barbecue carries its own silhouette; the transparent video needs no box. */
-.carousel{position:relative;width:100%;margin:0}
-.track{display:flex;position:relative;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none}
+/* Keep the original paper circle behind the transparent carousel artwork. */
+.carousel{--slide-height:clamp(360px,62svh,590px);position:relative;width:100%;margin:0}
+.carousel .stage{min-height:0;margin:0}
+.carousel .stage::before{width:min(95%,calc(var(--slide-height) * .95));height:auto;max-width:none;max-height:none}
+.track{display:flex;position:relative;width:100%;min-width:0;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none}
 .track::-webkit-scrollbar{display:none}
-.slide{flex:0 0 62%;scroll-snap-align:center;display:flex;align-items:center;justify-content:center;height:clamp(360px,62svh,590px);opacity:.34;transform:scale(.93);transition:opacity .3s,transform .3s}
+.slide{flex:0 0 62%;scroll-snap-align:center;display:flex;align-items:center;justify-content:center;height:var(--slide-height);opacity:.34;transform:scale(.93);transition:opacity .3s,transform .3s}
 .slide:first-child{margin-left:19%}.slide:last-child{margin-right:19%}.slide.is-active{opacity:1;transform:none}
 .slide .panel{height:100%;width:auto;max-width:100%;object-fit:contain;filter:none}
 .player{position:relative;display:flex;align-items:center;justify-content:center;height:100%;max-width:100%}
@@ -217,7 +218,17 @@ main{max-width:720px;margin:0 auto;padding:calc(var(--banner-h) + 24px) 25px 0}.
 .dots{display:flex;justify-content:center;gap:0;height:34px;margin:0}
 .dot{display:grid;place-items:center;width:44px;height:34px;border:0;padding:0;background:transparent}.dot::after{content:"";width:8px;height:8px;border-radius:50%;background:var(--ink);opacity:.3}.dot[aria-current="true"]::after{opacity:1;box-shadow:0 0 0 2px var(--paper)}
 .demo-status{position:absolute;bottom:10px;left:0;right:0;margin:0;text-align:center;background:var(--paper);font-size:15px;padding:8px}
-@media(max-width:480px){.slide{height:clamp(365px,58svh,500px)}}
+@media(max-width:480px){.carousel{--slide-height:clamp(365px,58svh,500px)}.carousel .stage::before{transform:translateY(-24px) rotate(-5deg)}}
+
+/* Append after existing BEEFY CTA + responsive styles. Keep anchors unchanged. */
+.buy{position:relative;isolation:isolate;width:min(100%,350px);min-height:60px;border-color:transparent;border-radius:0;background:transparent;box-shadow:none;color:var(--paper);filter:drop-shadow(3px 4px 0 var(--ink));transition:transform .14s,filter .14s}
+.buy::before{content:"";position:absolute;left:50%;top:50%;width:calc(100% + 6px);aspect-ratio:1986/305;transform:translate(-50%,-50%);z-index:-1;background:url('beefy/steak-cta-20260911.png') center / contain no-repeat}
+.buy>span{-webkit-text-stroke:2px var(--ink);paint-order:stroke fill;text-shadow:0 1px 0 var(--ink)}
+.buy-price{border-left-color:var(--ink)}
+.buy:hover{transform:translateY(-2px);box-shadow:none;filter:drop-shadow(3px 6px 0 var(--ink))}
+.buy:active{transform:translateY(2px);box-shadow:none;filter:drop-shadow(1px 1px 0 var(--ink))}
+.buy:focus-visible{outline:3px solid var(--ink);outline-offset:7px}
+@media(prefers-reduced-motion:reduce){.buy{transition:none}}
 
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
 </style>
@@ -238,12 +249,13 @@ main{max-width:720px;margin:0 auto;padding:calc(var(--banner-h) + 24px) 25px 0}.
 <main>
   <div class="hero-art"><div class="hero-visual">
   <div class="carousel" aria-label="BEEFY demo and panel finishes" aria-roledescription="carousel">
+    <div class="stage">
     <div class="track" id="beefy-track" tabindex="0">
       <div class="slide is-active" role="group" aria-roledescription="slide" aria-label="1 of 3: demo">
         <div class="player">
           <video id="demo-new" playsinline controls preload="none" muted loop
-                 width="720" height="1280" poster="beefy/barbecue-20260911-poster.png"
-                 data-webm="beefy/barbecue-20260911.webm" data-hevc="beefy/barbecue-20260911.mov"
+                 width="720" height="1280" poster="beefy/barbecue-20260911-v4-poster.png"
+                 data-webm="beefy/barbecue-20260911-v4.webm" data-hevc="beefy/barbecue-20260911-v4.mov"
                  aria-label="BEEFY drum demo: three original before-and-after comparisons"></video>
           <button class="play-badge" type="button" aria-label="Play the BEEFY demo with sound from the beginning">
             <span class="disc" aria-hidden="true"></span><span class="say">sound on</span>
@@ -257,6 +269,7 @@ main{max-width:720px;margin:0 auto;padding:calc(var(--banner-h) + 24px) 25px 0}.
       <div class="slide" role="group" aria-roledescription="slide" aria-label="3 of 3: dark mode">
         <img class="panel" src="beefy/blackened.webp" width="640" height="1024" loading="lazy" decoding="async" alt="BEEFY in its blackened dark finish, BEEF at 70 and SOFT CLIP on, with its cow reacting above the flames.">
       </div>
+    </div>
     </div>
     <button class="nav nav--prev" type="button" aria-label="Previous slide">&#8249;</button>
     <button class="nav nav--next" type="button" aria-label="Next slide">&#8250;</button>
