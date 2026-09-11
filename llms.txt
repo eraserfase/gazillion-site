@@ -36,7 +36,7 @@ feeds its own distortion back through itself, auto filter and sidechain.
 - Works offline
 
 Formats: AU, VST3, standalone. Platform: macOS 10.13 or later, Windows 10 or
-later. Price: $49, and DRUGS comes with it at no extra cost.
+later. Price: $49.
 
 ## Chordea
 
