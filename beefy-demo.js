@@ -1,20 +1,21 @@
-/* BEEFY's transparent counterpart to the shared silent-preview player. */
+/* BEEFY silent preview and deliberate sound playback. */
 (function () {
   "use strict";
   var video = document.getElementById("demo-new");
-  if (!video || !video.dataset.webm || !video.dataset.hevc) return;
+  if (!video || (!video.dataset.mp4 && (!video.dataset.webm || !video.dataset.hevc))) return;
   var player = video.closest(".player");
   var badge = player && player.querySelector(".play-badge");
   if (!badge) return;
   var label = badge.querySelector(".say");
+  var toggle = player.querySelector(".demo-toggle");
   var originalLabel = label ? label.textContent : "sound on";
   var originalAria = badge.getAttribute("aria-label");
   var status = player.querySelector(".demo-status") ||
     (video.closest(".beefy-demo") || player.parentElement).querySelector(".demo-status");
   var slide = video.closest(".slide");
   var motion = matchMedia("(prefers-reduced-motion: reduce)");
-  var webm = video.dataset.webm, hevc = video.dataset.hevc;
-  var selected = webm, initialized = false, mode = "preview";
+  var mp4 = video.dataset.mp4, webm = video.dataset.webm, hevc = video.dataset.hevc;
+  var selected = mp4 || webm, initialized = false, mode = "preview";
   var inView = true, failed = false, switching = false, generation = 0;
 
   // Generic HEVC support may decode the color layer while discarding alpha.
@@ -64,11 +65,10 @@
       status.textContent = "The demo could not load. Try again.";
       status.hidden = false;
     }
-    // Reload without a source to restore the real transparent poster instead
-    // of leaving a black error frame or an opaque replacement video.
+    // Reload without a source to restore the poster instead of an error frame.
     video.removeAttribute("src");
     video.load();
-    video.controls = true;
+    video.controls = false;
     video.dispatchEvent(new CustomEvent("gz-media-unavailable"));
   }
   function nudge() {
@@ -88,7 +88,7 @@
   function recover() {
     var error = video.error;
     if (!error || failed || switching) return;
-    if (selected === hevc && (error.code === 3 || error.code === 4) &&
+    if (hevc && selected === hevc && (error.code === 3 || error.code === 4) &&
         video.canPlayType('video/webm; codecs="vp9, opus"')) {
       switching = true;
       selected = webm;
@@ -129,19 +129,35 @@
     });
     video.muted = false;
     video.loop = false;
-    video.controls = true;
+    video.controls = false;
     setSource();
     try { video.currentTime = 0; } catch (_) {}
     player.classList.add("is-started");
     nudge();
   });
   video.addEventListener("error", recover);
+  function syncToggle() {
+    if (!toggle) return;
+    toggle.textContent = video.paused ? "Resume" : "Pause";
+    toggle.setAttribute("aria-label", (video.paused ? "Resume" : "Pause") + " the BEEFY demo");
+  }
+  if (toggle) toggle.addEventListener("click", function () {
+    if (video.paused) nudge();
+    else { generation++; video.pause(); }
+  });
+  video.addEventListener("pause", syncToggle);
   video.addEventListener("playing", function () {
     if (failed) return;
     clearFailure();
+    syncToggle();
     if (mode === "preview" && !canPreview()) video.pause();
   });
-  video.addEventListener("ended", preview);
+  video.addEventListener("ended", function () {
+    originalLabel = "replay · sound on";
+    originalAria = "Replay the BEEFY demo with sound from the beginning";
+    preview();
+    clearFailure();
+  });
   document.addEventListener("visibilitychange", function () {
     if (document.hidden) { generation++; video.pause(); }
     else syncPreview();
@@ -156,6 +172,11 @@
     syncPreview();
   }, {threshold: 0}).observe(player);
 
+  if (mp4) {
+    initialized = true;
+    preview();
+    return;
+  }
   supportsHEVCAlpha().then(function (supported) {
     // An early click already chose VP9 synchronously under its user gesture.
     if (initialized) return;
