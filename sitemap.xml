@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
   <url>
     <loc>https://gazillionindustries.com/</loc>
     <lastmod>2026-09-09</lastmod>
@@ -44,7 +44,15 @@
   </url>
   <url>
     <loc>https://gazillionindustries.com/beefy.html</loc>
-    <lastmod>2026-09-09</lastmod>
+    <lastmod>2026-09-12</lastmod>
+    <video:video>
+      <video:thumbnail_loc>https://gazillionindustries.com/beefy/beefy-demo-portrait-v1.jpg</video:thumbnail_loc>
+      <video:title>BEEFY drum saturation and soft clipping — 28-second demo</video:title>
+      <video:description>A short drum demonstration comparing processing without and with BEEFY, the Gazillion Industries saturation and loudness plugin.</video:description>
+      <video:content_loc>https://gazillionindustries.com/beefy/beefy-demo-portrait-v1.mp4</video:content_loc>
+      <video:duration>28</video:duration>
+      <video:publication_date>2026-09-12T08:36:33Z</video:publication_date>
+    </video:video>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
