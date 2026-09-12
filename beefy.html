@@ -205,14 +205,17 @@ main{max-width:720px;margin:0 auto;padding:calc(var(--banner-h) + 24px) 25px 0}.
 .slide{flex:0 0 62%;scroll-snap-align:center;display:flex;align-items:center;justify-content:center;height:var(--slide-height);opacity:.34;transform:scale(.93);transition:opacity .3s,transform .3s}
 .slide:first-child{margin-left:19%}.slide:last-child{margin-right:19%}.slide.is-active{opacity:1;transform:none}
 .slide .panel{height:100%;width:auto;max-width:100%;object-fit:contain;filter:none}
-.player{position:relative;display:flex;align-items:center;justify-content:center;height:100%;max-width:100%}
-.player video{display:block;height:100%;width:auto;max-width:100%;object-fit:contain;background:transparent}
+.player{position:relative;display:flex;align-items:center;justify-content:center;width:min(100%,calc(var(--slide-height) * 1080 / 1920));max-width:100%}
+.player video{display:block;width:100%;height:auto;aspect-ratio:1080/1920;object-fit:contain;background:transparent}
 .play-badge{display:none;position:absolute;inset:0;z-index:2;align-items:center;justify-content:center;flex-direction:column;gap:14px;border:0;background:transparent;padding:0;margin:0}
 .player.is-ready .play-badge{display:flex}.player.is-started .play-badge{display:none}
 .play-badge .disc{width:64px;height:64px;border-radius:50%;background:var(--paper);border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;box-shadow:3px 3px 0 var(--ink)}
 .play-badge .disc::before{content:"";margin-left:5px;border-style:solid;border-width:11px 0 11px 18px;border-color:transparent transparent transparent var(--ink)}
 .play-badge .say{font-size:18px;line-height:1;text-transform:uppercase;letter-spacing:.1em;background:var(--paper);padding:6px 9px;border:2px solid var(--ink)}
 .play-badge:hover .disc{background:var(--yellow)}
+.play-badge:focus-visible{outline:3px solid var(--ink);outline-offset:4px}
+.demo-toggle{display:none;position:absolute;right:8px;bottom:8px;z-index:2;min-width:72px;min-height:44px;padding:8px 12px;border:2px solid var(--ink);background:var(--paper);color:var(--ink);font:inherit;font-size:16px;text-transform:uppercase;cursor:pointer}
+.player.is-started .demo-toggle{display:block}.demo-toggle:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
 .nav{position:absolute;top:calc(50% - 17px);transform:translateY(-50%);z-index:3;width:60px;height:60px;display:grid;place-items:center;border:2px solid var(--ink);border-radius:50%;background:var(--paper);color:var(--ink);font-size:32px;line-height:1;padding:0}
 .nav:hover{background:var(--yellow)}.nav--prev{left:0}.nav--next{right:0}
 .dots{display:flex;justify-content:center;gap:0;height:34px;margin:0}
@@ -233,7 +236,7 @@ main{max-width:720px;margin:0 auto;padding:calc(var(--banner-h) + 24px) 25px 0}.
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
 </style>
 <script defer src="demo-engagement.js?v=beefy-20260911"></script>
-<script defer src="beefy-demo.js?v=20260911"></script>
+<script defer src="beefy-demo.js?v=20260912-portrait-custom-v1"></script>
 </head>
 <body>
 <header class="banner">
@@ -253,13 +256,14 @@ main{max-width:720px;margin:0 auto;padding:calc(var(--banner-h) + 24px) 25px 0}.
     <div class="track" id="beefy-track" tabindex="0">
       <div class="slide is-active" role="group" aria-roledescription="slide" aria-label="1 of 3: demo">
         <div class="player">
-          <video id="demo-new" playsinline controls preload="none" muted loop
-                 width="720" height="1280" poster="beefy/barbecue-20260911-v4-poster.png"
-                 data-webm="beefy/barbecue-20260911-v4.webm" data-hevc="beefy/barbecue-20260911-v4.mov"
-                 aria-label="BEEFY drum demo: three original before-and-after comparisons"></video>
+          <video id="demo-new" playsinline preload="none" muted loop
+                 width="1080" height="1920" poster="beefy/beefy-demo-portrait-v1.jpg"
+                 data-mp4="beefy/beefy-demo-portrait-v1.mp4"
+                 aria-label="BEEFY drum demo: before-and-after comparisons"></video>
           <button class="play-badge" type="button" aria-label="Play the BEEFY demo with sound from the beginning">
             <span class="disc" aria-hidden="true"></span><span class="say">sound on</span>
           </button>
+          <button class="demo-toggle" type="button" aria-label="Pause the BEEFY demo">Pause</button>
           <p class="demo-status" role="status" hidden></p>
         </div>
       </div>
