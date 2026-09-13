@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Connecting</title>
+<style>
+body{font:16px -apple-system,system-ui,sans-serif;margin:15vh auto;max-width:28rem;padding:0 1rem;text-align:center;color:#111}
+a{display:inline-block;margin-top:1rem;padding:.7rem 1.2rem;background:#111;color:#fff;border-radius:6px;text-decoration:none}
+</style>
+</head>
+<body>
+<p>Connecting Kit to this Mac&hellip;</p>
+<a id="go" href="http://localhost:8765/start">Finish connecting</a>
+<script>
+// Kit's OAuth redirect lands here because Kit only accepts https redirect URIs.
+// It is handed straight to the local helper (outreach/kit_oauth.py) on the Mac
+// that started the sign-in. The code is useless without the PKCE verifier,
+// which never leaves that helper.
+var q = location.search;
+var dest = "http://localhost:8765/" + (/[?&](code|error)=/.test(q) ? "callback" : "start") + q;
+document.getElementById("go").href = dest;
+location.replace(dest);
+</script>
+</body>
+</html>
