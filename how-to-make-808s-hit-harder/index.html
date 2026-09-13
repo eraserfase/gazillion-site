@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Every BEEFY statement below is lifted from the live beefy.html copy;
+     nothing about how it works internally goes on this page. -->
+<title>How to make 808s hit harder: tuning, saturation, soft clipping</title>
+<meta name="description" content="Why 808s vanish on phones and laptops, and what actually makes them hit harder: tuning, the kick, the envelope, saturation, soft clipping and a mono low end.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="https://gazillionindustries.com/how-to-make-808s-hit-harder/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Gazillion Industries">
+<meta property="og:title" content="How to make 808s hit harder">
+<meta property="og:description" content="Tuning, the kick, the envelope, saturation, soft clipping and a mono low end, in the order worth trying them.">
+<meta property="og:url" content="https://gazillionindustries.com/how-to-make-808s-hit-harder/">
+<meta property="og:image" content="https://gazillionindustries.com/beefy/cover.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://gazillionindustries.com/beefy/cover.png">
+<script defer src="https://cloud.umami.is/script.js"
+        data-website-id="ed71399d-1069-4354-abbf-73dc311e5bc3"
+        data-domains="gazillionindustries.com,www.gazillionindustries.com"></script>
+<script>
+if (/^(www\.)?gazillionindustries\.com$/i.test(location.hostname)) {
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1164684366890206');
+fbq('track', 'PageView');
+}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"TechArticle","@id":"https://gazillionindustries.com/how-to-make-808s-hit-harder/#article",
+"headline":"How to make 808s hit harder",
+"description":"Why 808s vanish on phones and laptops, and what makes them hit harder: tuning, the kick, the envelope, saturation, soft clipping and a mono low end.",
+"inLanguage":"en","datePublished":"2026-09-13","dateModified":"2026-09-13",
+"url":"https://gazillionindustries.com/how-to-make-808s-hit-harder/",
+"author":{"@id":"https://gazillionindustries.com/#tony"},
+"publisher":{"@id":"https://gazillionindustries.com/#gazillion"},
+"about":{"@type":"SoftwareApplication","name":"BEEFY","url":"https://gazillionindustries.com/beefy.html"}},
+{"@type":"Organization","@id":"https://gazillionindustries.com/#gazillion",
+"name":"Gazillion Industries LLC","alternateName":"Gazillion Industries",
+"url":"https://gazillionindustries.com/"},
+{"@type":"Person","@id":"https://gazillionindustries.com/#tony","name":"Tony Barko",
+"sameAs":["https://apps.apple.com/us/developer/anthony-greg-barko/id1866031805"]}
+]}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&display=swap">
+<style>
+/* House article layout (same measure, rhythm and furniture as
+   drum-bus-compressor-settings) in BEEFY's own colorway: paper ground, ink,
+   the red and the teal from beefy.html. The cartoon face is kept to the
+   headline and the button; long reading stays in Archivo. */
+@font-face{font-family:BeefyCartoon;src:url('/beefy/BalsamiqSans-Bold.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}
+:root{
+  --paper:#fff8e8; --ink:#211715; --ink-soft:rgba(33,23,21,.78); --ink-faint:rgba(33,23,21,.55);
+  --red:#de302b; --deep:#9d1c1c; --teal:#9bcac6; --line:rgba(33,23,21,.16);
+}
+*{box-sizing:border-box}
+body{margin:0; background:var(--paper); color:var(--ink);
+  font-family:Archivo,-apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif;
+  -webkit-font-smoothing:antialiased; min-height:100vh; border-top:10px solid var(--teal)}
+main{max-width:36em; margin:0 auto; padding:56px 24px 96px}
+
+.crumb{font-size:11px; letter-spacing:.2em; text-transform:uppercase; margin:0 0 40px}
+.crumb a{color:var(--ink-faint); text-decoration:none}
+.crumb a:hover{color:var(--ink)}
+
+h1{font-family:BeefyCartoon,"Comic Sans MS",sans-serif; font-weight:700;
+   font-size:clamp(34px,7vw,52px); line-height:1.02; letter-spacing:-.01em;
+   margin:0 0 14px; color:var(--ink); text-wrap:balance}
+.standfirst{margin:0 0 52px; font-size:17px; line-height:1.65; color:var(--ink-soft)}
+
+h2{margin:52px 0 16px; font-size:12px; font-weight:600; letter-spacing:.2em;
+   text-transform:uppercase; color:var(--deep)}
+p{margin:0 0 16px; font-size:16.5px; line-height:1.72; color:var(--ink-soft)}
+strong{color:var(--ink); font-weight:600}
+em{color:var(--ink)}
+ul{margin:0 0 16px; padding-left:1.2em}
+li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
+
+.card{border:1.5px solid var(--line); border-radius:14px; padding:22px 24px; margin:0 0 8px;
+      background:rgba(155,202,198,.18)}
+.card dl{margin:0; display:grid; grid-template-columns:auto 1fr; gap:10px 18px}
+.card dt{font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--deep);
+         font-weight:600; white-space:nowrap; align-self:baseline}
+.card dd{margin:0; font-size:16px; line-height:1.5; color:var(--ink)}
+@media (max-width:460px){
+  .card dl{grid-template-columns:1fr; gap:2px 0}
+  .card dd{margin:0 0 12px}
+}
+
+a.inline{color:var(--ink); text-decoration:underline;
+         text-underline-offset:3px; text-decoration-thickness:1px;
+         text-decoration-color:var(--ink-faint)}
+a.inline:hover{text-decoration-color:var(--red)}
+
+.aside{margin:34px 0; padding:18px 0 0; border-top:1.5px solid var(--line);
+       font-size:15px; line-height:1.6; color:var(--ink-faint)}
+.aside a{color:var(--ink-soft); text-decoration:underline;
+         text-underline-offset:3px; text-decoration-color:var(--ink-faint)}
+.aside a:hover{color:var(--ink)}
+
+.end{margin:64px 0 0; padding:28px 24px; border:1.5px solid var(--line); border-radius:14px;
+     text-align:center; background:rgba(155,202,198,.18)}
+.end p{margin:0 0 18px; color:var(--ink-soft)}
+.cta{font-family:BeefyCartoon,"Comic Sans MS",sans-serif; font-weight:700; font-size:19px; letter-spacing:.01em;
+     text-decoration:none; color:var(--paper); background:var(--red);
+     border:2.5px solid var(--ink); border-radius:999px; padding:13px 30px; display:inline-block;
+     transition:transform .18s ease}
+.cta:hover{transform:translateY(-2px)}
+.cta:focus-visible{outline:3px solid var(--ink); outline-offset:4px}
+.foot{margin:88px 0 0; font-size:11px; letter-spacing:.22em; text-transform:uppercase;
+      color:var(--ink-faint); text-align:center}
+.foot a{color:var(--ink-faint)}
+</style>
+
+<main>
+  <p class="crumb"><a href="/">&larr; Gazillion Industries</a></p>
+
+  <h1>How to make 808s hit harder</h1>
+  <p class="standfirst">Turning an 808 up rarely makes it hit harder. These are
+  the moves that do, in the order worth trying them.</p>
+
+  <h2>The short version</h2>
+  <div class="card">
+    <dl>
+      <dt>Tune</dt><dd>to the key of the track</dd>
+      <dt>Kick</dt><dd>give each its own moment</dd>
+      <dt>Envelope</dt><dd>a clear start, a tail that ends before the next note</dd>
+      <dt>Harmonics</dt><dd>saturation or soft clipping on the 808 channel</dd>
+      <dt>Low end</dt><dd>mono, with rumble cleared underneath</dd>
+      <dt>A/B</dt><dd>at matched loudness</dd>
+    </dl>
+  </div>
+
+  <h2>Why 808s disappear</h2>
+  <p>Most of an 808's energy sits in the sub, and phone and laptop speakers
+  play very little of it. What they do play is the harmonics above it, and your
+  ear fills in the missing fundamental from those.</p>
+  <p>So a clean, sine-like 808 can shake a car and vanish on a phone, while one
+  with some grit reads as heavy on both. <strong>Most of "hit harder" is giving
+  small speakers something to play.</strong></p>
+
+  <h2>Tune it first</h2>
+  <p>An 808 is a pitched note. Out of key, it fights the chords and the kick,
+  and the low end turns to mud whatever you put on the channel. Tune the sample
+  to the root of the track and follow the bassline when the chords move. Check
+  it with a tuner, not by ear on small speakers.</p>
+
+  <h2>The kick and the 808</h2>
+  <p>When both land at once their low ends collide: they reinforce on some
+  notes and cancel on others, and the hit you wanted goes soft. Three ways
+  out:</p>
+  <ul>
+    <li>a short, clicky kick that is gone before the 808 swells</li>
+    <li>sidechain the 808 so it ducks a few dB under the kick</li>
+    <li>drop the kick where they collide and let the 808's attack be the hit</li>
+  </ul>
+
+  <h2>Shape the envelope</h2>
+  <p>Punch lives in the first few milliseconds. A soft fade-in blurs the start;
+  a clean attack, or a short pitch drop at the top of the note, gives the ear
+  something to lock onto.</p>
+  <p>At the other end, a tail that runs into the next note smears the groove.
+  Set the decay so each note ends before the next one starts, unless the slide
+  is the point.</p>
+
+  <h2>Saturation adds what small speakers can play</h2>
+  <p>This is the big one. Saturation generates harmonics above the sub, which
+  is exactly the range a phone can reproduce. A little adds weight and
+  presence. More pushes the 808 toward a growl.</p>
+  <p>Put it on the 808 channel itself rather than the master, so you control it
+  per sound. If the sub thins out as you push, blend: run the saturation in
+  parallel, or high-pass the driven copy and keep the clean sub underneath.</p>
+
+  <h2>Soft clipping, and louder without clipping</h2>
+  <p>The clipping everyone warns you about happens at the output: the signal
+  goes over 0&nbsp;dBFS, the peaks get chopped flat, and it crackles. Soft
+  clipping rounds the loudest peaks off before they get there. That buys room
+  to raise the 808's overall level, and it adds harmonics while it works.</p>
+  <p><strong>How hard you drive the clipper decides the result more than any
+  setting on it.</strong> Raise the gain going in until you hear the edge,
+  then back off a touch.</p>
+
+  <p class="aside">Or put
+  <a href="/beefy.html" data-umami-event="guide_808_to_beefy" data-umami-event-spot="mid">BEEFY</a>
+  on the 808: one big knob and a SOFT CLIP button. The demo on the page is 28
+  seconds.</p>
+
+  <h2>Keep the low end mono</h2>
+  <p>Stereo wideners and chorus on a sub cause trouble the moment the mix is
+  summed to mono, as most club systems and plenty of small speakers do: parts
+  of it cancel. Keep everything down low in mono. If you want a wider 808,
+  widen only the driven upper layer.</p>
+
+  <h2>Clear space underneath</h2>
+  <p>A high-pass around 20&ndash;30&nbsp;Hz removes rumble that eats headroom
+  without adding anything you can hear. Then make room in whatever else lives
+  in the low mids (keys, pads, guitars) so the 808's harmonics are not
+  competing with them.</p>
+
+  <h2>Judge it at the same loudness</h2>
+  <p>Saturation and clipping make things louder, and louder sounds better for
+  the first few seconds. <strong>Match the level of the processed and
+  bypassed 808 before you decide.</strong> If it only hit harder because it got
+  louder, the fader was the fix.</p>
+
+  <h2>Stock plugins that do this</h2>
+  <div class="card">
+    <dl>
+      <dt>FL Studio</dt><dd>Fruity Soft Clipper</dd>
+      <dt>Ableton Live</dt><dd>Saturator, with soft clip on</dd>
+      <dt>Logic Pro</dt><dd>ChromaGlow (Logic Pro 11 and later)</dd>
+    </dl>
+  </div>
+
+  <h2>What BEEFY does</h2>
+  <p>BEEFY is our saturation and loudness plugin, and it covers the harmonics
+  and clipping steps above in one place.</p>
+  <p><strong>BEEF</strong> is the main event: more weight, density and loudness
+  as you turn it up. <strong>SOFT CLIP</strong> opens switched on. It adds
+  harmonics above the low end so there is more to hear than sub, and takes care
+  of the initial gain staging, so there is no input level to hunt for.
+  <strong>JUICE</strong> sets the level going in, <strong>COOK</strong> moves
+  the tone from rounder toward brighter and more bitten, and
+  <strong>LIMIT</strong> keeps output peaks in check if you would rather have
+  that.</p>
+
+  <div class="end">
+    <p>BEEFY &mdash; saturation and loudness plugin for Mac and Windows. There is
+    a 28-second demo with three without/with comparisons on the page.</p>
+    <a class="cta" href="/beefy.html" data-umami-event="guide_808_to_beefy" data-umami-event-spot="end">Hear it &mdash; $19</a>
+  </div>
+
+  <p class="foot"><a href="/">Gazillion Industries LLC</a></p>
+</main>
+</html>
