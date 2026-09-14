@@ -44,9 +44,10 @@ connection once, then it works offline. Price: $19, one-time.
 
 ## Reading material
 
-Guides on getting drums and low end to hit, written by the people who make the
-plugins.
+Guides on drums, low end, saturation, lofi, pitch, tape and loudness, written by
+the people who make the plugins.
 
+### BEEFY guides
 - [How to make 808s hit harder](https://gazillionindustries.com/how-to-make-808s-hit-harder/)
   — Tuning, the kick, the envelope, saturation, soft clipping and a mono low end.
 - [How to make drums hit harder](https://gazillionindustries.com/how-to-make-drums-hit-harder/)
@@ -101,9 +102,28 @@ plugins.
   — Saturation for presence, parallel distortion for aggression, and heavy drive as an effect.
 - [How to make a synth sound thicker](https://gazillionindustries.com/how-to-make-a-synth-sound-thicker/)
   — Unison, oscillators, a mono sub, chorus, saturation and layering, without the harshness.
+
+### F(ilter)12 guides
+- [How to make lofi beats](https://gazillionindustries.com/how-to-make-lofi-beats/)
+  — Tempo, chords, swung drums, crush, noise, wobble and a gentle pump.
+- [How to make lofi drums](https://gazillionindustries.com/how-to-make-lofi-drums/)
+  — Soft hits, heavy swing, low-pass, a little crush, saturation and a dark room.
+- [Bitcrushing explained](https://gazillionindustries.com/bitcrushing-explained/)
+  — Bit depth, quantization noise, sample rate reduction and what 12-bit and 8-bit sound like.
+- [What is aliasing in audio](https://gazillionindustries.com/what-is-aliasing-in-audio/)
+  — What it is, what it sounds like, how to prevent it, and how to use it on purpose.
+- [How to make a sample sound old](https://gazillionindustries.com/how-to-make-a-sample-sound-old/)
+  — Narrow the range, add warmth and grain, wobble, noise and a small room.
+- [How to use an auto filter](https://gazillionindustries.com/auto-filter-effect/)
+  — LFO and envelope modes, sidechain filtering, and keeping it in the groove.
+- [How to make a filter sweep](https://gazillionindustries.com/how-to-make-a-filter-sweep/)
+  — High-pass and low-pass builds, automation curve, resonance, and what to sweep.
+
+### DRUGS guides
 - [Drum bus compressor settings](https://gazillionindustries.com/drum-bus-compressor-settings/)
   — attack, release, ratio and threshold on a drum bus, and a starting point.
-- All guides: https://gazillionindustries.com/reading-material/
+
+All guides: https://gazillionindustries.com/reading-material/
 
 ## F(ilter)12
 
