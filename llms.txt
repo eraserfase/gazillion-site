@@ -71,6 +71,14 @@ plugins.
   — Set it up on a return, drive it hard, filter the burnt copy, and blend it under the dry signal.
 - [Tape vs tube saturation](https://gazillionindustries.com/tape-vs-tube-saturation/)
   — Which harmonics each adds, what they do to transients, and which to use where.
+- [How to mix the kick and the 808](https://gazillionindustries.com/how-to-mix-kick-and-808/)
+  — Who owns the sub, tuning, sidechain, phase, and using the 808 as the kick.
+- [How to distort an 808](https://gazillionindustries.com/how-to-distort-808s/)
+  — Keep the sub clean, distort a high-passed copy, pick the drive, and handle glides.
+- [How to make bass audible on phone speakers](https://gazillionindustries.com/how-to-make-bass-audible-on-phone-speakers/)
+  — Harmonics, a mid-bass layer, EQ that helps, and testing on a real phone.
+- [How to make bass fatter](https://gazillionindustries.com/how-to-make-bass-fatter/)
+  — Layer a sub and mid-bass, add harmonics, compress for consistency, and make it growl.
 - [Drum bus compressor settings](https://gazillionindustries.com/drum-bus-compressor-settings/)
   — attack, release, ratio and threshold on a drum bus, and a starting point.
 - All guides: https://gazillionindustries.com/reading-material/
