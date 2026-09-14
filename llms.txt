@@ -119,6 +119,18 @@ the people who make the plugins.
 - [How to make a filter sweep](https://gazillionindustries.com/how-to-make-a-filter-sweep/)
   — High-pass and low-pass builds, automation curve, resonance, and what to sweep.
 
+### SKRUU guides
+- [What is varispeed](https://gazillionindustries.com/what-is-varispeed/)
+  — Speed and pitch together: the math, how it differs from pitch shifting, and how it's used.
+- [How to change pitch without changing tempo](https://gazillionindustries.com/how-to-change-pitch-without-changing-tempo/)
+  — How pitch shifting and time stretching work, which mode to use, and how to avoid artifacts.
+- [How to pitch a sample](https://gazillionindustries.com/how-to-pitch-a-sample/)
+  — Find the key, repitch or pitch shift, pitch the chops, and automate for movement.
+- [How to make slowed and reverb](https://gazillionindustries.com/how-to-make-slowed-and-reverb/)
+  — Slow it with varispeed, add a long dark reverb, and make sped-up versions too.
+- [How to chop and screw a song](https://gazillionindustries.com/how-to-chop-and-screw/)
+  — Where DJ Screw's Houston sound comes from, and how to screw and chop a song in a DAW.
+
 ### DRUGS guides
 - [Drum bus compressor settings](https://gazillionindustries.com/drum-bus-compressor-settings/)
   — attack, release, ratio and threshold on a drum bus, and a starting point.
