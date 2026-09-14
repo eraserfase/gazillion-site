@@ -1,0 +1,101 @@
+# Tells Bing (and the other IndexNow engines) which pages changed, once GitHub Pages
+# has actually published them. Pinging before the deploy lands gets the old page crawled.
+#
+# Only URLs listed in sitemap.xml are sent, plus llms.txt, so scratch pages and assets
+# never reach a search engine. Removed sitemap URLs are sent too, so they drop out.
+# The key file cb94b8640633c2f4af2f60ee2eb171ba.txt at the site root must stay.
+#
+# Run it by hand with "all" ticked to resend every sitemap URL.
+name: IndexNow
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      all:
+        description: Send every URL in the sitemap
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+  pages: read
+
+concurrency:
+  group: indexnow
+  cancel-in-progress: false
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Wait for Pages to publish this commit
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          for i in $(seq 1 60); do
+            build=$(gh api "repos/${{ github.repository }}/pages/builds/latest" --jq '"\(.status) \(.commit)"' || true)
+            status=${build%% *}; commit=${build##* }
+            if [ "$status" = "built" ] && { [ "$commit" = "$GITHUB_SHA" ] || git merge-base --is-ancestor "$GITHUB_SHA" "$commit" 2>/dev/null; }; then
+              echo "Pages built $commit"; exit 0
+            fi
+            echo "waiting: $build"; sleep 15
+          done
+          echo "::warning::Pages build not confirmed after 15 minutes; sending anyway"
+
+      - name: Send changed URLs to IndexNow
+        env:
+          BEFORE: ${{ github.event.before }}
+          ALL: ${{ github.event_name == 'workflow_dispatch' && inputs.all }}
+        run: |
+          python3 - <<'EOF'
+          import json, os, re, subprocess, sys, urllib.request
+
+          HOST = 'gazillionindustries.com'
+          ORIGIN = f'https://{HOST}'
+          KEY = 'cb94b8640633c2f4af2f60ee2eb171ba'
+
+          def git(*a):
+              return subprocess.run(['git', *a], capture_output=True, text=True).stdout
+
+          def locs(xml):
+              return set(re.findall(r'<loc>\s*(.*?)\s*</loc>', xml))
+
+          def url_for(path):
+              if path == 'index.html':
+                  return ORIGIN + '/'
+              if path.endswith('/index.html'):
+                  return f'{ORIGIN}/{path[:-len("index.html")]}'
+              return f'{ORIGIN}/{path}'
+
+          now = locs(open('sitemap.xml').read())
+          before = os.environ.get('BEFORE') or ''
+          if os.environ.get('ALL') == 'true' or not before or set(before) == {'0'}:
+              urls = now | {ORIGIN + '/llms.txt'}
+          else:
+              was = locs(git('show', f'{before}:sitemap.xml'))
+              changed = {url_for(p) for p in git('diff', '--name-only', before, os.environ['GITHUB_SHA']).split()}
+              urls = {u for u in changed if u in now or u == ORIGIN + '/llms.txt'} | (now - was) | (was - now)
+
+          urls = sorted(urls)
+          if not urls:
+              print('No sitemap pages changed; nothing to send.')
+              sys.exit(0)
+          print('\n'.join(urls))
+          body = json.dumps({'host': HOST, 'key': KEY, 'keyLocation': f'{ORIGIN}/{KEY}.txt', 'urlList': urls}).encode()
+          req = urllib.request.Request('https://api.indexnow.org/indexnow', data=body, method='POST',
+                                       headers={'Content-Type': 'application/json; charset=utf-8'})
+          try:
+              code = urllib.request.urlopen(req, timeout=60).status
+          except urllib.error.HTTPError as e:
+              print(f'IndexNow refused: HTTP {e.code} {e.read()[:300]!r}')
+              sys.exit(1)
+          print(f'IndexNow HTTP {code} for {len(urls)} URLs')
+          sys.exit(0 if code in (200, 202) else 1)
+          EOF
