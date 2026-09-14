@@ -95,6 +95,12 @@ plugins.
   — Glide, sliding lines that stay in key, distortion that keeps the sub, and room for the kick.
 - [How to make a sample sound fuller](https://gazillionindustries.com/how-to-make-a-sample-sound-fuller/)
   — Clean it first, add harmonics, compress for sustain, support it with a bass layer, and give it room.
+- [How to make your beats sound fuller](https://gazillionindustries.com/how-to-make-beats-sound-fuller/)
+  — Cover the frequency range, layer and double, add saturation, width and space.
+- [How to use distortion on vocals](https://gazillionindustries.com/distortion-on-vocals/)
+  — Saturation for presence, parallel distortion for aggression, and heavy drive as an effect.
+- [How to make a synth sound thicker](https://gazillionindustries.com/how-to-make-a-synth-sound-thicker/)
+  — Unison, oscillators, a mono sub, chorus, saturation and layering, without the harshness.
 - [Drum bus compressor settings](https://gazillionindustries.com/drum-bus-compressor-settings/)
   — attack, release, ratio and threshold on a drum bus, and a starting point.
 - All guides: https://gazillionindustries.com/reading-material/
