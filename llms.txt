@@ -191,6 +191,8 @@ rather than out of a computer.
 - MIX is dry/wet with zero latency anywhere in the path, so the dry signal is
   sample-aligned with the wet one. Parallel compression does not comb-filter at
   any setting.
+- GAIN adds 5 dB after the compressor and before LIMIT, so the bus comes out
+  louder as well as denser. GAIN and LIMIT are both on when DRUGS opens.
 - LIMIT is a zero-latency soft ceiling at -0.3 dBFS on the output with a clip
   indicator. It attenuates only and is transparent below about -0.9 dBFS.
 
