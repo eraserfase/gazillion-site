@@ -1,13 +1,9 @@
-/* The way back to the shelf - offered only to people who came from it.
+/* The way back to the shelf - a small door home in the bottom-right corner,
+   on every product page, for every visitor.
 
-   A product page is the end of a funnel. A visitor who landed on it directly
-   (an ad, a search, a shared link) is never shown an exit; the only way on is
-   the ask. Someone who walked in from the storefront was browsing, so they get
-   a small door back in the bottom-right corner.
-
-   The test is the page they came from: this origin, at "/" or /index.html.
-   It is remembered per page for the tab, because a reload replaces the
-   referrer with the page itself (measured in Chrome, 13 Sep 2026).
+   It shipped 13 Sep 2026 shown only to people who arrived from the storefront
+   (a same-origin referrer at "/"), so direct and ad arrivals had no exit.
+   The owner lifted that the same day: the button is quiet enough to show to all.
 
    The button never shares a row with an ask. While a buy button or the signup
    form is level with it and within 48px it fades out, and comes back once the
@@ -25,17 +21,6 @@
    3px ink outline and hard shadow, because paper on teal alone measured 1.70:1. */
 (function(){
   'use strict';
-  var KEY = 'gz-shelf:' + location.pathname, fromShelf = false;
-  try {
-    var ref = new URL(document.referrer);
-    fromShelf = ref.origin === location.origin && /^\/(index\.html)?$/.test(ref.pathname);
-  } catch(e) {}
-  try {
-    if (fromShelf) sessionStorage.setItem(KEY, '1');
-    else fromShelf = sessionStorage.getItem(KEY) === '1';
-  } catch(e) {}
-  if (!fromShelf) return;
-
   var ASKS = 'a.cta, a.buy, form', CLEAR_X = 48, CLEAR_Y = 12;
 
   function mount(){
