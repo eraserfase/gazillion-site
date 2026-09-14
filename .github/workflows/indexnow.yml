@@ -21,6 +21,7 @@ on:
 permissions:
   contents: read
   pages: read
+  actions: read
 
 # No concurrency group: GitHub keeps only one queued run per group and cancels the rest,
 # which dropped a push's URLs. Sends are idempotent, so overlapping runs are harmless.
@@ -43,6 +44,12 @@ jobs:
             status=${build%% *}; commit=${build##* }
             if [ "$status" = "built" ] && { [ "$commit" = "$GITHUB_SHA" ] || git merge-base --is-ancestor "$GITHUB_SHA" "$commit" 2>/dev/null; }; then
               echo "Pages built $commit"; exit 0
+            fi
+            # The builds API sometimes lags the deploy workflow; its own run for this commit counts too.
+            deployed=$(gh api "repos/${{ github.repository }}/actions/runs?head_sha=$GITHUB_SHA&per_page=20" \
+              --jq '[.workflow_runs[] | select(.name=="pages build and deployment" and .conclusion=="success")] | length' || echo 0)
+            if [ "${deployed:-0}" -gt 0 ]; then
+              echo "Pages deploy workflow succeeded for $GITHUB_SHA"; exit 0
             fi
             echo "waiting: $build"; sleep 15
           done
