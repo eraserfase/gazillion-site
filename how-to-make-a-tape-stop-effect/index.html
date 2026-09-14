@@ -19,6 +19,19 @@
 <script defer src="https://cloud.umami.is/script.js"
         data-website-id="ed71399d-1069-4354-abbf-73dc311e5bc3"
         data-domains="gazillionindustries.com,www.gazillionindustries.com"></script>
+<!-- Google Analytics 4, property "Gazillion Industries". Same hostname gate as
+     the pixel, so a local or draft copy never reports. -->
+<script>
+if (/^(www\.)?gazillionindustries\.com$/i.test(location.hostname)) {
+  var gaTag = document.createElement("script"); gaTag.async = true;
+  gaTag.src = "https://www.googletagmanager.com/gtag/js?id=G-2ZY2T73BLK";
+  document.head.appendChild(gaTag);
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function(){ window.dataLayer.push(arguments); };
+  gtag("js", new Date());
+  gtag("config", "G-2ZY2T73BLK");
+}
+</script>
 <script>
 if (/^(www\.)?gazillionindustries\.com$/i.test(location.hostname)) {
 !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
