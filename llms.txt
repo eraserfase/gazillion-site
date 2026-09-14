@@ -79,6 +79,14 @@ plugins.
   — Harmonics, a mid-bass layer, EQ that helps, and testing on a real phone.
 - [How to make bass fatter](https://gazillionindustries.com/how-to-make-bass-fatter/)
   — Layer a sub and mid-bass, add harmonics, compress for consistency, and make it growl.
+- [How to make a snare hit harder](https://gazillionindustries.com/how-to-make-snare-hit-harder/)
+  — Sample and tuning, layers, transients, saturation, soft clipping and a short room.
+- [How to make drums sound bigger](https://gazillionindustries.com/how-to-make-drums-sound-bigger/)
+  — Room, sustain, density, weight and width: the half of drum sound that punch doesn't cover.
+- [How to make drums cut through the mix](https://gazillionindustries.com/how-to-make-drums-cut-through-the-mix/)
+  — Fix masking, keep transients, add presence, duck busy parts, pan with purpose and tame the reverb.
+- [Transient shaper vs saturation](https://gazillionindustries.com/transient-shaper-vs-saturation/)
+  — Why they push drums in opposite directions, which one your drums need, and how to use both.
 - [Drum bus compressor settings](https://gazillionindustries.com/drum-bus-compressor-settings/)
   — attack, release, ratio and threshold on a drum bus, and a starting point.
 - All guides: https://gazillionindustries.com/reading-material/
