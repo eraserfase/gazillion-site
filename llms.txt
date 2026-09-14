@@ -55,6 +55,14 @@ plugins.
   — What a soft clipper does, how it differs from hard clipping and a limiter, and where to use one.
 - [How to saturate drums](https://gazillionindustries.com/how-to-saturate-drums/)
   — Kick, snare, drum bus and parallel saturation, and how to keep cymbals from turning harsh.
+- [Gain staging for beatmakers](https://gazillionindustries.com/gain-staging/)
+  — Channel levels, plugin input, buses and the master, plus the common mistakes.
+- [How to make your mix louder without clipping](https://gazillionindustries.com/how-to-make-mix-louder-without-clipping/)
+  — Low end, balance, density, soft clipping and a true-peak limiter, plus what streaming does to loud masters.
+- [Clipper before limiter](https://gazillionindustries.com/clipper-before-limiter/)
+  — Why the clipper goes first, how to set both, and why the true-peak limiter stays last.
+- [How loud should a master be](https://gazillionindustries.com/how-loud-should-my-master-be/)
+  — LUFS, true peak, what Spotify does to loud masters, and how to choose a level with references.
 - [Drum bus compressor settings](https://gazillionindustries.com/drum-bus-compressor-settings/)
   — attack, release, ratio and threshold on a drum bus, and a starting point.
 - All guides: https://gazillionindustries.com/reading-material/
