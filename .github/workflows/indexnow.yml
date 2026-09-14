@@ -22,9 +22,8 @@ permissions:
   contents: read
   pages: read
 
-concurrency:
-  group: indexnow
-  cancel-in-progress: false
+# No concurrency group: GitHub keeps only one queued run per group and cancels the rest,
+# which dropped a push's URLs. Sends are idempotent, so overlapping runs are harmless.
 
 jobs:
   ping:
