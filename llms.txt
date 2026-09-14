@@ -104,8 +104,8 @@ Page: https://gazillionindustries.com/skruu.html
 A cassette transport plug-in for macOS and Windows: tape simulation with a
 transport you can grab. TONE, HISS, AGE, DRIVE and MIX shape the medium. WOW
 FLUT and CATCH are the transport, and CATCH is a stateful drag and recovery
-rather than more wobble. BEND is a sprung hand on the reel: drag it, let go,
-and it snaps home.
+rather than more wobble. SCRUB is a hand on the tape: drag it back and the head
+runs back across the tape, let go and it rebounds home. SLAM is a tape stop.
 
 - TONE: the playback system's brightness
 - HISS: a continuous broadband noise bed, partly decorrelated across the
@@ -113,17 +113,21 @@ and it snaps home.
 - AGE: nought to sixty years of deterioration, as one macro
 - DRIVE: soft asymmetric saturation with magnetic hysteresis
 - WOW FLUT: composite transport instability, not a single sine
-- CATCH: a drag, jam and recovery engine, with a manual trigger
-- BEND: a sprung hand on the reel that snaps home on release
+- CATCH: a drag, jam and recovery engine, with a manual trigger (TILT)
+- SCRUB: drag the head back across the tape; it rebounds home on release
+- SLAM: a tape stop; hold it and the transport drags to a halt. SLAM RETURN
+  sets how long the stop takes
 - MIX, on the face, defaulting to 100%
 - Head gap loss that moves with the transport
 - Stereo VU meters against a 0 VU reference
 - A transport display: reels, tape, heads and the tension between them
+- BYPASS for the whole plug-in, and output gain of plus or minus 10 dB
 - Two finishes, black and brushed aluminium
 - Resizable window
 
 Formats: macOS AU, VST3 and standalone, macOS 10.13 or later (Apple Silicon and
 Intel); Windows 10 or later, 64-bit VST3.
+Latency: about 4 ms, reported to the host.
 Activation: no internet connection required after activation.
 Price: $29.
 Page: https://gazillionindustries.com/tripleog.html
