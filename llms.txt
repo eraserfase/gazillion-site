@@ -212,7 +212,8 @@ and marked by where it came from.
 - Platform: macOS 10.13 or later, Windows 10 or later 64-bit
 - Architecture: universal binary, Apple Silicon and Intel
 - Latency: zero samples
-- No internet connection required, ever
+- Activation: with the license key from the download email; needs an internet
+  connection once, then works offline
 - Price: free, or name your own price
 - Page: https://gazillionindustries.com/drugs.html
 
