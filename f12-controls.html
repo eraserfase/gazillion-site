@@ -187,12 +187,12 @@ footer a:focus-visible{outline:2px solid var(--chalk); outline-offset:3px}
 
     <div class="plates">
       <figure>
-        <img src="/f12/manual/panel-light.jpg" width="680" height="1800" alt="The F(ilter)12 panel in its light purple theme, everything at its opening setting." loading="lazy" decoding="async">
-        <figcaption>On open &mdash; light</figcaption>
+        <img src="/f12/manual/panel-dark.jpg" width="680" height="1800" alt="The F(ilter)12 panel in its dark theme, everything at its opening setting." loading="lazy" decoding="async">
+        <figcaption>On open &mdash; dark</figcaption>
       </figure>
       <figure>
-        <img src="/f12/manual/panel-dark.jpg" width="680" height="1800" alt="The same panel in its dark theme, deep purple on near-black." loading="lazy" decoding="async">
-        <figcaption>The same, with DARK on</figcaption>
+        <img src="/f12/manual/panel-light.jpg" width="680" height="1800" alt="The same panel in its light purple theme, with DARK off." loading="lazy" decoding="async">
+        <figcaption>The same, with DARK off</figcaption>
       </figure>
       <figure>
         <img src="/f12/manual/panel-worked.jpg" width="680" height="1800" alt="The panel with sample rate, bit and filter position pulled down and a WAH resonance shape selected, the display showing a moved filter curve." loading="lazy" decoding="async">
@@ -240,8 +240,8 @@ footer a:focus-visible{outline:2px solid var(--chalk); outline-offset:3px}
     </div>
 
     <div class="ctl">
-      <div class="ctl-head"><h3>Dark</h3><p class="spec">Switch &middot; <b>off</b></p></div>
-      <p class="lead">Swaps the panel to its dark colourway. Appearance only, and it saves with the session, so a project opens the way you left it.</p>
+      <div class="ctl-head"><h3>Dark</h3><p class="spec">Switch &middot; <b>on</b></p></div>
+      <p class="lead">Swaps the panel between its dark colourway, which it opens in, and the light one. Appearance only, and it saves with the session, so a project opens the way you left it.</p>
     </div>
   </section>
 
@@ -347,12 +347,12 @@ footer a:focus-visible{outline:2px solid var(--chalk); outline-offset:3px}
         <figcaption>Drive &middot; reso &middot; q &middot; mix</figcaption>
       </figure>
       <ul class="opts">
-        <li><b>Drive</b> how hard the signal is pushed into the crush. It sets the level that lands on the quantiser's rails, and the gain comes back off afterwards, so driving it is character rather than volume. 0 to 18&thinsp;dB, opens at 0.</li>
+        <li><b>Drive</b> how hard the signal is pushed into the filter's own saturation. The gain comes back off afterwards, so driving it is character rather than volume. It works wherever the filter is running, and does nothing with FILTER off. 0 to 18&thinsp;dB, opens at 0.</li>
         <li><b>Reso</b> how hard it sings. 0 to 100&thinsp;%, opens at 25.</li>
         <li><b>Q</b> how narrow that singing is, and how tight the Q SHAPE nodes sit with it. It drives a peaking section right at the corner, so it is audible on every shape including PLAIN. 0 to 100&thinsp;%, opens at 35.</li>
         <li><b>Mix</b> how much of the whole thing you keep against what went in untouched. 0 to 100&thinsp;%, opens at 100.</li>
       </ul>
-      <p>DRIVE is the odd one out in this row. It sits with the filter knobs but it works on the crush stage, so it is the crush pair's third control in everything but position.</p>
+      <p>DRIVE belongs to the filter, not the crush. It pushes the filter's own saturation, so the crush pair stays just SAMPLE RATE and BIT.</p>
       <p>RESO and Q are the pair to learn together. A wah at low Q is a broad sweep; the same wah at high Q is a point.</p>
       <p>RESO scales the filter's whole resonance behaviour rather than setting one fixed value, so the character holds across the sweep instead of drifting as POSITION moves.</p>
     </div>
@@ -576,7 +576,7 @@ footer a:focus-visible{outline:2px solid var(--chalk); outline-offset:3px}
         <tbody>
           <tr><td>Aura</td><td>switch</td><td>On</td><td>Top row</td></tr>
           <tr><td>Max Aura</td><td>switch</td><td>Off</td><td>Top row, with AURA on</td></tr>
-          <tr><td>Dark</td><td>switch</td><td>Off</td><td>Top row</td></tr>
+          <tr><td>Dark</td><td>switch</td><td>On</td><td>Top row</td></tr>
           <tr><td>Sample Rate</td><td>0 &ndash; 100 %</td><td>100</td><td>Crush pair</td></tr>
           <tr><td>Bit</td><td>0 &ndash; 100 %</td><td>100</td><td>Crush pair</td></tr>
           <tr><td>Filter</td><td>switch</td><td>On</td><td>Filter</td></tr>
