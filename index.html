@@ -485,6 +485,8 @@ a{color:inherit;text-decoration:none}
 
 .foot{border-top:1px solid var(--hair); padding:20px 0 26px}
 .foot p{margin:0; text-align:center; font-size:9.5px; letter-spacing:.2em; text-transform:uppercase; color:var(--ink-faint)}
+.foot a{color:inherit; text-decoration:none}
+.foot a:hover{text-decoration:underline; text-underline-offset:2px}
 
 /* ------------------------------------------------------------ responsive */
 /* Hierarchy survives, geometry does not.  76% of traffic is mobile and the
@@ -652,7 +654,7 @@ a{color:inherit;text-decoration:none}
 </main>
 
 <footer class="foot">
-  <div class="wrap"><p>Gazillion Industries LLC</p></div>
+  <div class="wrap"><p>Gazillion Industries LLC <span aria-hidden="true">&middot;</span> <a href="/reading-material/" data-umami-event="footer_reading_material">reading material</a></p></div>
 </footer>
 
 <script>
