@@ -87,6 +87,14 @@ plugins.
   — Fix masking, keep transients, add presence, duck busy parts, pan with purpose and tame the reverb.
 - [Transient shaper vs saturation](https://gazillionindustries.com/transient-shaper-vs-saturation/)
   — Why they push drums in opposite directions, which one your drums need, and how to use both.
+- [How to layer kicks](https://gazillionindustries.com/how-to-layer-kicks/)
+  — Top, body and sub: filter each layer, align the starts, fix phase and glue them into one kick.
+- [How to make boom bap drums](https://gazillionindustries.com/how-to-make-boom-bap-drums/)
+  — Tempo, sounds, a starting pattern, swing, drum bus processing and structure.
+- [How to make drill 808s](https://gazillionindustries.com/how-to-make-drill-808s/)
+  — Glide, sliding lines that stay in key, distortion that keeps the sub, and room for the kick.
+- [How to make a sample sound fuller](https://gazillionindustries.com/how-to-make-a-sample-sound-fuller/)
+  — Clean it first, add harmonics, compress for sustain, support it with a bass layer, and give it room.
 - [Drum bus compressor settings](https://gazillionindustries.com/drum-bus-compressor-settings/)
   — attack, release, ratio and threshold on a drum bus, and a starting point.
 - All guides: https://gazillionindustries.com/reading-material/
