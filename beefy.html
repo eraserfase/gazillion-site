@@ -227,8 +227,8 @@ main{max-width:720px;margin:0 auto;padding:calc(var(--banner-h) + 24px) 25px 0}.
 
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
 </style>
-<script defer src="demo-engagement.js?v=beefy-20260911"></script>
-<script defer src="beefy-demo.js?v=20260912-portrait-custom-v1"></script>
+<script defer src="demo-engagement.js?v=beefy-20260914"></script>
+<script defer src="beefy-demo.js?v=20260914-live-clip"></script>
 </head>
 <body>
 <header class="banner">
@@ -246,7 +246,7 @@ main{max-width:720px;margin:0 auto;padding:calc(var(--banner-h) + 24px) 25px 0}.
   <div class="carousel" aria-label="BEEFY demo and panel finishes" aria-roledescription="carousel">
     <div class="stage">
     <div class="track" id="beefy-track" tabindex="0">
-      <div class="slide is-active" role="group" aria-roledescription="slide" aria-label="1 of 3: demo">
+      <div class="slide is-active" role="group" aria-roledescription="slide" aria-label="1 of 4: demo">
         <div class="player">
           <video id="demo-new" playsinline preload="none" muted loop
                  width="1080" height="1920" poster="beefy/beefy-demo-portrait-v1.jpg"
@@ -259,10 +259,23 @@ main{max-width:720px;margin:0 auto;padding:calc(var(--banner-h) + 24px) 25px 0}.
           <p class="demo-status" role="status" hidden></p>
         </div>
       </div>
-      <div class="slide" role="group" aria-roledescription="slide" aria-label="2 of 3: raw panel">
+      <div class="slide" role="group" aria-roledescription="slide" aria-label="2 of 4: live clip">
+        <div class="player">
+          <video id="demo-live" playsinline preload="none" muted loop data-lazy
+                 width="1080" height="1920" poster="beefy/beefy-live-subbass-20260914.jpg"
+                 data-mp4="beefy/beefy-live-subbass-20260914.mp4" data-name="the BEEFY live clip"
+                 aria-label="Live session clip: BEEFY on a sub bass, adding midrange harmonics so it passes the phone test"></video>
+          <button class="play-badge" type="button" aria-label="Play the BEEFY live clip with sound from the beginning">
+            <span class="disc" aria-hidden="true"></span><span class="say">sound on</span>
+          </button>
+          <button class="demo-toggle" type="button" aria-label="Pause the BEEFY live clip">Pause</button>
+          <p class="demo-status" role="status" hidden></p>
+        </div>
+      </div>
+      <div class="slide" role="group" aria-roledescription="slide" aria-label="3 of 4: raw panel">
         <img class="panel" id="panel" src="beefy/raw.webp" width="640" height="1024" alt="BEEFY’s raw cartoon steak panel, SOFT CLIP on, at BEEF 94, with a bonked cow, tongue out and flames beneath its feet.">
       </div>
-      <div class="slide" role="group" aria-roledescription="slide" aria-label="3 of 3: dark mode">
+      <div class="slide" role="group" aria-roledescription="slide" aria-label="4 of 4: dark mode">
         <img class="panel" src="beefy/blackened.webp" width="640" height="1024" loading="lazy" decoding="async" alt="BEEFY in its blackened dark finish, BEEF at 70 and SOFT CLIP on, with its cow reacting above the flames.">
       </div>
     </div>
@@ -271,6 +284,7 @@ main{max-width:720px;margin:0 auto;padding:calc(var(--banner-h) + 24px) 25px 0}.
     <button class="nav nav--next" type="button" aria-label="Next slide">&#8250;</button>
     <div class="dots" role="group" aria-label="Choose BEEFY slide">
       <button class="dot" type="button" aria-label="Show demo" aria-current="true"></button>
+      <button class="dot" type="button" aria-label="Show live clip" aria-current="false"></button>
       <button class="dot" type="button" aria-label="Show raw panel" aria-current="false"></button>
       <button class="dot" type="button" aria-label="Show dark mode" aria-current="false"></button>
     </div>

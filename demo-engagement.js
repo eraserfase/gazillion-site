@@ -59,7 +59,7 @@
 
   var players=[];
   document.querySelectorAll("video[id]").forEach(function(video){
-    var codes={"demo-new":"n",demo:"o",dibi:"d",wino:"w"};
+    var codes={"demo-new":"n","demo-live":"l",demo:"o",dibi:"d",wino:"w"};
     var code=codes[video.id]; if (!code) return;
     var seconds=0, ranges=[], previous=null, session=attr.token, sounded=false, mediaFailed=false;
     function audible(){return !document.hidden && !video.paused && !video.ended && !video.seeking && !video.muted && video.volume>0 && video.readyState>=2;}

@@ -1,8 +1,11 @@
 /* BEEFY silent preview and deliberate sound playback. */
 (function () {
   "use strict";
-  var video = document.getElementById("demo-new");
+  // Every player on the page gets the same silent preview, sound-on badge and pause.
+  document.querySelectorAll(".player video").forEach(setup);
+  function setup(video) {
   if (!video || (!video.dataset.mp4 && (!video.dataset.webm || !video.dataset.hevc))) return;
+  var name = video.dataset.name || "the BEEFY demo";
   var player = video.closest(".player");
   var badge = player && player.querySelector(".play-badge");
   if (!badge) return;
@@ -60,7 +63,7 @@
     player.classList.remove("is-started");
     player.classList.add("has-media-error");
     if (label) label.textContent = "try again";
-    badge.setAttribute("aria-label", "Video could not load. Retry the BEEFY demo with sound");
+    badge.setAttribute("aria-label", "Video could not load. Retry " + name + " with sound");
     if (status) {
       status.textContent = "The demo could not load. Try again.";
       status.hidden = false;
@@ -139,7 +142,7 @@
   function syncToggle() {
     if (!toggle) return;
     toggle.textContent = video.paused ? "Resume" : "Pause";
-    toggle.setAttribute("aria-label", (video.paused ? "Resume" : "Pause") + " the BEEFY demo");
+    toggle.setAttribute("aria-label", (video.paused ? "Resume" : "Pause") + " " + name);
   }
   if (toggle) toggle.addEventListener("click", function () {
     if (video.paused) nudge();
@@ -154,7 +157,7 @@
   });
   video.addEventListener("ended", function () {
     originalLabel = "replay · sound on";
-    originalAria = "Replay the BEEFY demo with sound from the beginning";
+    originalAria = "Replay " + name + " with sound from the beginning";
     preview();
     clearFailure();
   });
@@ -184,4 +187,5 @@
     selected = supported ? hevc : webm;
     preview();
   });
+  }
 })();
