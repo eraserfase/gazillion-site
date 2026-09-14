@@ -125,6 +125,16 @@ the people who make the plugins.
   — Slow it with varispeed, add a long dark reverb, and make sped-up versions too.
 - [How to chop and screw a song](https://gazillionindustries.com/how-to-chop-and-screw/)
   — Where DJ Screw's Houston sound comes from, and how to screw and chop a song in a DAW.
+- [Wow and flutter](https://gazillionindustries.com/wow-and-flutter/)
+  — What causes them, what they sound like, and how to add them on purpose.
+- [How to make a tape stop effect](https://gazillionindustries.com/how-to-make-a-tape-stop-effect/)
+  — Why speed and pitch fall together, length and curve, and variations.
+- [Tape hiss](https://gazillionindustries.com/tape-hiss/)
+  — Where it comes from, how to reduce it cleanly, and how to add it on purpose.
+- [How to make music sound like a cassette tape](https://gazillionindustries.com/how-to-make-music-sound-like-cassette/)
+  — Softer highs, saturation, hiss, wow and flutter, channel mismatch and dropouts.
+- [How a tape machine works](https://gazillionindustries.com/how-does-a-tape-machine-work/)
+  — The transport, the heads, bias, tape speed, and why tape sounds like tape.
 - [Drum bus compressor settings](https://gazillionindustries.com/drum-bus-compressor-settings/)
   — attack, release, ratio and threshold on a drum bus, and a starting point.
 
