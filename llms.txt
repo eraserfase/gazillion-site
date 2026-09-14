@@ -63,6 +63,14 @@ plugins.
   — Why the clipper goes first, how to set both, and why the true-peak limiter stays last.
 - [How loud should a master be](https://gazillionindustries.com/how-loud-should-my-master-be/)
   — LUFS, true peak, what Spotify does to loud masters, and how to choose a level with references.
+- [Saturation vs distortion](https://gazillionindustries.com/saturation-vs-distortion/)
+  — Saturation, overdrive, distortion and fuzz: what changes, and which one you want.
+- [How to use saturation in a mix](https://gazillionindustries.com/how-to-use-saturation/)
+  — Bass, drums, vocals, synths, buses and the master: what saturation is for and how much to use.
+- [Parallel saturation](https://gazillionindustries.com/parallel-saturation/)
+  — Set it up on a return, drive it hard, filter the burnt copy, and blend it under the dry signal.
+- [Tape vs tube saturation](https://gazillionindustries.com/tape-vs-tube-saturation/)
+  — Which harmonics each adds, what they do to transients, and which to use where.
 - [Drum bus compressor settings](https://gazillionindustries.com/drum-bus-compressor-settings/)
   — attack, release, ratio and threshold on a drum bus, and a starting point.
 - All guides: https://gazillionindustries.com/reading-material/
