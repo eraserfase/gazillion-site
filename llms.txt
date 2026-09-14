@@ -2,20 +2,62 @@
 
 > Gazillion Industries LLC makes audio software: plug-ins for macOS and Windows,
 > and one iPad app. Each product does one job, opens with the control you came
-> for already on screen, and needs no manual. Five are out.
+> for already on screen, and needs no manual. Six are out.
 
 ## Products
 
 - [F(ilter)12](https://gazillionindustries.com/f12.html) — a 12 bit sauce
-  filter. $49, and DRUGS is included with it.
+  filter. $49.
 - [DRUGS](https://gazillionindustries.com/drugs.html) — a one-knob character bus
   compressor. Free, or name your own price.
 - [SKRUU](https://gazillionindustries.com/skruu.html) — varispeed pitch and
   time stretch. Control pitch and time independently. $29.
 - [TRIPLE OG](https://gazillionindustries.com/tripleog.html) — cassette tape
   simulation with a transport you can grab. $29.
+- [BEEFY](https://gazillionindustries.com/beefy.html) — a saturation and
+  loudness plugin with soft clipping, for drums, 808s, bass and samples. $19.
 - [Chordea](https://apps.apple.com/us/app/chordea/id6757318321) — a MIDI chord
   controller for iPad. $9.99 on the App Store.
+
+## BEEFY
+
+A saturation and loudness effect for macOS and Windows, for making sounds
+thicker, punchier and more up front. It adds body, squeezes some space out of
+the peaks, and brings out harmonics that help a sound feel bigger. Built for
+drums, 808s and bass, and just as usable on synths, chopped samples, keys,
+guitar and vocals.
+
+- BEEF: the main control. More weight, density and loudness as it goes up
+- COOK: tone, from rounder toward a brighter, more bitten edge
+- JUICE: input level
+- SOFT CLIP: on by default. Rounds off the loudest parts and adds harmonics
+  above the low end, so an 808 or bass has more to hear than sub. Handles the
+  initial gain staging
+- LIMIT: keeps output peaks in check; separate from SOFT CLIP
+- Input and output clip lights
+- A cartoon panel with two finishes and a cow that reacts to the audio
+- Resizable window that remembers its size
+
+Formats: macOS VST3, Audio Unit and standalone (Apple Silicon and Intel);
+Windows 64-bit VST3. Activation with the included license key needs an internet
+connection once, then it works offline. Price: $19, one-time.
+
+## Reading material
+
+Guides on getting drums and low end to hit, written by the people who make the
+plugins.
+
+- [How to make 808s hit harder](https://gazillionindustries.com/how-to-make-808s-hit-harder/)
+  — Tuning, the kick, the envelope, saturation, soft clipping and a mono low end.
+- [How to make drums hit harder](https://gazillionindustries.com/how-to-make-drums-hit-harder/)
+  — Samples, the transient, compression attack, soft clipping, saturation and room in the mix.
+- [Soft clipping explained](https://gazillionindustries.com/soft-clipping-explained/)
+  — What a soft clipper does, how it differs from hard clipping and a limiter, and where to use one.
+- [How to saturate drums](https://gazillionindustries.com/how-to-saturate-drums/)
+  — Kick, snare, drum bus and parallel saturation, and how to keep cymbals from turning harsh.
+- [Drum bus compressor settings](https://gazillionindustries.com/drum-bus-compressor-settings/)
+  — attack, release, ratio and threshold on a drum bus, and a starting point.
+- All guides: https://gazillionindustries.com/reading-material/
 
 ## F(ilter)12
 
