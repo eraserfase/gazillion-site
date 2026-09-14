@@ -135,6 +135,8 @@ the people who make the plugins.
   — Softer highs, saturation, hiss, wow and flutter, channel mismatch and dropouts.
 - [How a tape machine works](https://gazillionindustries.com/how-does-a-tape-machine-work/)
   — The transport, the heads, bias, tape speed, and why tape sounds like tape.
+- [The SP-404 and the sound of Los Angeles](https://gazillionindustries.com/sp-404-history/)
+  — How a cheap sampler its makers underestimated became the instrument of LA's beat scene.
 - [Drum bus compressor settings](https://gazillionindustries.com/drum-bus-compressor-settings/)
   — attack, release, ratio and threshold on a drum bus, and a starting point.
 
