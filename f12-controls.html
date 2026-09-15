@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <title>F(ilter)12 control reference - every knob, switch and shape explained</title>
-<meta name="description" content="What every control on the F(ilter)12 panel does: AURA and MAX AURA, the crush pair, filter position, five cutoff shapes, eight Q shapes, slope, the auto filter and the sidechain. With panel screenshots.">
+<meta name="description" content="What every control on the F(ilter)12 panel does: AURA and MAX AURA, the crush pair, filter position, five cutoff shapes, six Q shapes including DRAW, slope, the auto filter, the sidechain and bypass. With panel screenshots.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="canonical" href="https://gazillionindustries.com/f12-controls.html">
 <meta property="og:type" content="article">
@@ -201,7 +201,7 @@ footer a:focus-visible{outline:2px solid var(--chalk); outline-offset:3px}
     </div>
 
     <div class="note">
-      <b>The panel changes shape as you use it.</b> A control with nothing to control leaves the panel rather than sitting there greyed out, and the group closes over the space. The display is what gives: open the movement group and it hands over the room.
+      <b>The panel changes shape as you use it.</b> A control with nothing to control leaves the panel rather than sitting there grayed out, and the group closes over the space. The display is what gives: open the movement group and it hands over the room.
     </div>
   </section>
 
@@ -209,12 +209,12 @@ footer a:focus-visible{outline:2px solid var(--chalk); outline-offset:3px}
   <section>
     <div class="sec-head">
       <p class="furn">Top row</p>
-      <h2>The three switches above everything</h2>
+      <h2>The four switches above everything</h2>
     </div>
 
     <figure class="wide">
-      <img src="/f12/manual/grp-toprow.jpg" width="600" height="72" alt="The top row of the panel: AURA lit, then MAX AURA and DARK." loading="lazy" decoding="async">
-      <figcaption>Aura &middot; max aura &middot; dark</figcaption>
+      <img src="/f12/manual/grp-toprow.jpg" width="600" height="72" alt="The top row of the panel: AURA lit, then MAX AURA, DARK and BYPASS." loading="lazy" decoding="async">
+      <figcaption>Aura &middot; max aura &middot; dark &middot; bypass</figcaption>
     </figure>
 
     <div class="ctl">
@@ -230,7 +230,7 @@ footer a:focus-visible{outline:2px solid var(--chalk); outline-offset:3px}
       <div class="plates">
         <figure>
           <img src="/f12/manual/panel-auraoff.jpg" width="680" height="1800" alt="The panel with AURA switched off: the display holds the filter curve and the signal traces but no green and red field, and MAX AURA has left the top row." loading="lazy" decoding="async">
-          <figcaption>Aura off &mdash; no field, and the row is two switches wide</figcaption>
+          <figcaption>Aura off &mdash; no field, and the row is three switches wide</figcaption>
         </figure>
         <figure>
           <img src="/f12/manual/panel-maxaura.jpg" width="680" height="1800" alt="The panel with MAX AURA engaged, the display field denser than at the default setting." loading="lazy" decoding="async">
@@ -241,7 +241,19 @@ footer a:focus-visible{outline:2px solid var(--chalk); outline-offset:3px}
 
     <div class="ctl">
       <div class="ctl-head"><h3>Dark</h3><p class="spec">Switch &middot; <b>on</b></p></div>
-      <p class="lead">Swaps the panel between its dark colourway, which it opens in, and the light one. Appearance only, and it saves with the session, so a project opens the way you left it.</p>
+      <p class="lead">Swaps the panel between its dark colorway, which it opens in, and the light one. Appearance only, and it saves with the session, so a project opens the way you left it.</p>
+    </div>
+
+    <div class="ctl">
+      <div class="ctl-head"><h3>Bypass</h3><p class="spec">Switch &middot; <b>off</b></p></div>
+      <p class="lead">Takes the whole plug-in out. The panel goes gray and the display goes empty, so there is no doubting it is off.</p>
+      <p>It fades over 20&thinsp;ms rather than cutting, so flipping it while the track plays does not click. It saves with the session like everything else.</p>
+      <div class="plates">
+        <figure>
+          <img src="/f12/manual/panel-bypass.jpg" width="680" height="1800" alt="The panel with BYPASS lit: every control grayed and dimmed, and the display empty." loading="lazy" decoding="async">
+          <figcaption>Bypassed</figcaption>
+        </figure>
+      </div>
     </div>
   </section>
 
@@ -281,11 +293,11 @@ footer a:focus-visible{outline:2px solid var(--chalk); outline-offset:3px}
     <div class="sec-head">
       <p class="furn">The L-shaped group</p>
       <h2>Filter</h2>
-      <p>The centrepiece. Its group wraps around the crush pair to take in the two rows of pictures, because those belong to it.</p>
+      <p>The centerpiece. Its group wraps around the crush pair to take in the two rows of pictures, because those belong to it.</p>
     </div>
 
     <figure class="wide">
-      <img src="/f12/manual/grp-filter.jpg" width="600" height="824" alt="The filter group: the FILTER switch above the large POSITION dial, the SLOPE dropdown, the CUTOFF SHAPE row, the Q SHAPE row, and the DRIVE, RESO, Q and MIX dials." loading="lazy" decoding="async">
+      <img src="/f12/manual/grp-filter.jpg" width="600" height="824" alt="The filter group: the FILTER switch above the large POSITION dial, the SLOPE knob and DIRTY switch, the CUTOFF SHAPE row, the Q SHAPE row, and the DRIVE, RESO, Q and MIX dials." loading="lazy" decoding="async">
       <figcaption>The whole filter group</figcaption>
     </figure>
 
@@ -313,31 +325,51 @@ footer a:focus-visible{outline:2px solid var(--chalk); outline-offset:3px}
     </div>
 
     <div class="ctl">
-      <div class="ctl-head"><h3>Slope</h3><p class="spec">4 entries &middot; <b>24 dirty</b></p></div>
-      <p class="lead">Two choices in one list: 12 or 24&thinsp;dB per octave, clean or dirty.</p>
-      <p>Dirty feeds the circuit's own distortion back through itself. Slope and Q SHAPE are separate controls, so a steep dirty filter can also be a wah.</p>
-      <p>It opens on 24 dirty. There is no neutral starting point here on purpose.</p>
+      <div class="ctl-head"><h3>Slope</h3><p class="spec">18 &ndash; 144&thinsp;dB/oct &middot; <b>24</b></p></div>
+      <p class="lead">How hard the filter falls away past the corner. Gentle at the bottom of the knob, a wall at the top.</p>
+      <p>All the way up, almost nothing gets past, and the corner is rounded off rather than square. It is a knob, not a list, so turning it while something plays sweeps the line smoothly from one steepness to the next.</p>
+      <p>Sessions saved at 12&thinsp;dB per octave in 1.0 open at 18, the gentlest it goes now.</p>
     </div>
 
     <div class="ctl">
-      <div class="ctl-head"><h3>Q Shape</h3><p class="spec">8 tiles &middot; <b>plain</b></p></div>
+      <div class="ctl-head"><h3>Dirty</h3><p class="spec">Switch &middot; <b>on</b></p></div>
+      <p class="lead">Feeds the filter's own distortion back through itself. Off, the same filter runs clean.</p>
+      <p>SLOPE, DIRTY and Q SHAPE are separate controls, so a steep dirty filter can also be a wah. It opens dirty. There is no neutral starting point here on purpose.</p>
+    </div>
+
+    <div class="ctl">
+      <div class="ctl-head"><h3>Q Shape</h3><p class="spec">6 tiles &middot; <b>plain</b></p></div>
       <p class="lead">Resonant nodes riding on top of the filter, placed at ratios of the cutoff so the whole formation sweeps with POSITION rather than staying nailed to a frequency.</p>
       <figure class="wide">
-        <img src="/f12/manual/grp-qshape.jpg" width="560" height="96" alt="The Q SHAPE row: eight tiles drawn as resonance shapes - plain, wah, vowel, comb, scoop, hollow, twin and phaser." loading="lazy" decoding="async">
-        <figcaption>Eight, in the order they sit</figcaption>
+        <img src="/f12/manual/grp-qshape.jpg" width="560" height="88" alt="The Q SHAPE row: six tiles - plain drawn as a flat line, the words DRAW and WAH, then vowel, comb and scoop drawn as resonance shapes." loading="lazy" decoding="async">
+        <figcaption>Six, in the order they sit</figcaption>
       </figure>
       <ul class="opts">
         <li><b>Plain</b> no nodes. The filter's own resonance and nothing added.</li>
+        <li><b>Draw</b> your own, drawn on the display. It has its own entry below.</li>
         <li><b>Wah</b> one strong peak right at the cutoff, with a shallow dip just over an octave above it. The body underneath stays &mdash; a boost, so the lows do not leave when you sweep it.</li>
         <li><b>Vowel</b> four peaks spaced the way a formant table spaces them.</li>
         <li><b>Comb</b> peaks and nulls alternating on even spacing, seven of them across the range.</li>
         <li><b>Scoop</b> a smile. Both ends lifted and the cutoff itself pulled down between them.</li>
-        <li><b>Hollow</b> a peak below the cutoff with a deep null immediately above it, and a lift again at the top.</li>
-        <li><b>Twin</b> two peaks, far enough apart to hear as two rather than as one wide one.</li>
-        <li><b>Phaser</b> five notches spread across the range. Cuts only, no boosts.</li>
       </ul>
-      <p>Every node sits between roughly a third of the cutoff and just under three times it. Further out than that and a node lands in the filter's own stopband, where the shape stops being audible at all.</p>
-      <p>This row and the cutoff row are independent. Any of the eight sits on any of the five.</p>
+      <p>Every node in the built-in shapes sits between roughly a third of the cutoff and just under three times it. Further out than that and a node lands in the filter's own stopband, where the shape stops being audible at all.</p>
+      <p>This row and the cutoff row are independent. Any of the six sits on any of the five.</p>
+      <p>HOLLOW, TWIN and PHASER were retired in 2.0. A session that used one opens in DRAW, holding that exact shape.</p>
+    </div>
+
+    <div class="ctl">
+      <div class="ctl-head"><h3>Draw</h3><p class="spec">Q SHAPE &middot; up to 7 points</p></div>
+      <p class="lead">Your own Q shape. Pick DRAW and the display is where you draw it, starting from the shape you were on.</p>
+      <figure class="wide">
+        <img src="/f12/manual/grp-draw.jpg" width="600" height="462" alt="The display in DRAW: the filter line bent by four points - a boost low down, a notch cut to the floor, a tall peak with its width handles out either side, and a dip on the falling slope." loading="lazy" decoding="async">
+        <figcaption>Four points, one selected with its handles out</figcaption>
+      </figure>
+      <ul class="opts">
+        <li><b>Click</b> empty space to add a point, and drag it anywhere. All the way down takes that frequency out; all the way up is +24&thinsp;dB.</li>
+        <li><b>Handles</b> click a point and pull the handles either side of it for its width. Scrolling over a point does the same: up narrows, down widens.</li>
+        <li><b>Right-click</b> a point for bell, notch, low shelf, high shelf, low cut or high cut, or to delete it. Double-click deletes it too.</li>
+      </ul>
+      <p>The points sit at ratios of the cutoff like every other shape, so they ride POSITION, the auto filter and the sidechain. It works the same on the panel and in the pop-out.</p>
     </div>
 
     <div class="ctl">
@@ -354,7 +386,7 @@ footer a:focus-visible{outline:2px solid var(--chalk); outline-offset:3px}
       </ul>
       <p>DRIVE belongs to the filter, not the crush. It pushes the filter's own saturation, so the crush pair stays just SAMPLE RATE and BIT.</p>
       <p>RESO and Q are the pair to learn together. A wah at low Q is a broad sweep; the same wah at high Q is a point.</p>
-      <p>RESO scales the filter's whole resonance behaviour rather than setting one fixed value, so the character holds across the sweep instead of drifting as POSITION moves.</p>
+      <p>RESO scales the filter's whole resonance behavior rather than setting one fixed value, so the character holds across the sweep instead of drifting as POSITION moves.</p>
     </div>
   </section>
 
@@ -376,7 +408,7 @@ footer a:focus-visible{outline:2px solid var(--chalk); outline-offset:3px}
       <p>Locked to the arrangement rather than free-running: it moves only while the transport moves, it stops and returns to the start when you stop, and the sweep lands in the same place in the bar wherever you drop the playhead. On every shape but RANDOM, bar 9 looks like bar 1 and the same eight bars bounce the same way twice.</p>
       <p>RANDOM is the exception, and worth knowing before you print. It draws a fresh value every time the cycle turns over, and that draw does not reset with the transport &mdash; so it does not repeat from take to take. Commit it to audio when you get one you like.</p>
       <figure class="wide">
-        <img src="/f12/manual/grp-auto.jpg" width="600" height="398" alt="The movement group with AUTO FILTER engaged: the seven shape tiles, then RATE, GRID, STEPS and DIR, then the ATTACK, RELEASE, SWING, MORPH and AMOUNT dials." loading="lazy" decoding="async">
+        <img src="/f12/manual/grp-auto.jpg" width="600" height="494" alt="The movement group with AUTO FILTER engaged: the seven shape tiles, then RATE, GRID, STEPS and DIR, then the drawn sweep with a dot on it, then the ATTACK, RELEASE, SWING, PHASE, MORPH and AMOUNT dials." loading="lazy" decoding="async">
         <figcaption>Auto filter, open</figcaption>
       </figure>
     </div>
@@ -436,14 +468,26 @@ footer a:focus-visible{outline:2px solid var(--chalk); outline-offset:3px}
 
     <div class="ctl">
       <div class="ctl-head"><h3>Swing</h3><p class="spec">50 &ndash; 75&thinsp;% &middot; <b>50</b></p></div>
-      <p class="lead">Pushes the cycle off the grid the way an MPC does. 50 is straight, on 16TH and 8TH &mdash; QUINT sets its own ratio and this knob stops applying.</p>
+      <p class="lead">Pushes the cycle off the grid. 50 is straight, on 16TH and 8TH &mdash; QUINT sets its own ratio and this knob stops applying.</p>
       <p>The clock itself stays exact underneath &mdash; the timing is displaced deliberately rather than allowed to drift.</p>
+    </div>
+
+    <div class="ctl">
+      <div class="ctl-head"><h3>Phase</h3><p class="spec">0 &ndash; 360&deg; &middot; <b>0</b></p></div>
+      <p class="lead">Where in the shape each cycle starts.</p>
+      <p>It slides the shape along the bar without changing its rate, and the sweep stays locked to the arrangement wherever you set it.</p>
+    </div>
+
+    <div class="ctl">
+      <div class="ctl-head"><h3>The sweep</h3><p class="spec">Drawn &middot; under the boxes</p></div>
+      <p class="lead">A picture of the move all of these make together, and a dot where the song is.</p>
+      <p>It shows one bar, or one whole cycle when a cycle runs longer than a bar, with the beats marked faintly so SWING and PHASE can be read against them. Nothing on it is a control.</p>
     </div>
 
     <div class="ctl">
       <div class="ctl-head"><h3>Dir</h3><p class="spec">Both, up, down &middot; <b>both</b></p></div>
       <p class="lead">Sends the sweep up from the filter, down from it, or both ways.</p>
-      <p>POSITION is the origin. On UP the knob is the floor of the sweep, on DOWN the ceiling, on BOTH the centre &mdash; so switching this moves where the same setting sits without you touching the big dial.</p>
+      <p>POSITION is the origin. On UP the knob is the floor of the sweep, on DOWN the ceiling, on BOTH the center &mdash; so switching this moves where the same setting sits without you touching the big dial.</p>
     </div>
 
     <div class="ctl">
@@ -504,7 +548,7 @@ footer a:focus-visible{outline:2px solid var(--chalk); outline-offset:3px}
     <div class="sec-head">
       <p class="furn">Bottom of the panel</p>
       <h2>The display</h2>
-      <p>Deliberately unlabelled. It is there to be watched while you work, not read.</p>
+      <p>Deliberately unlabeled. It is there to be watched while you work, not read.</p>
     </div>
 
     <figure class="wide">
@@ -516,13 +560,14 @@ footer a:focus-visible{outline:2px solid var(--chalk); outline-offset:3px}
       <div class="ctl-head"><h3>Reading it</h3></div>
       <p class="lead">The heavy line is the filter. Behind it is what is going in and what is coming out.</p>
       <p>The field of pixels is AURA: green where it is adding, red where it is taking away, and nothing at all where it has no opinion. That last part is the one to watch &mdash; an empty stretch is the plug-in telling you it left that band alone.</p>
+      <p>AURA lives inside the filter, so past the cutoff there is no field at all. In DRAW, this is also where you draw.</p>
       <p>Anything on this panel that is not affecting the sound is not on screen, so with nothing playing there is nothing drawn.</p>
     </div>
 
     <div class="ctl">
       <div class="ctl-head"><h3>Expand Visualizer</h3><p class="spec">Switch &middot; bottom left</p></div>
-      <p class="lead">The same plot in its own window &mdash; 720 by 420, centred, and a fixed size.</p>
-      <p>Bigger than the strip on the panel, and with the scales printed on it: dB down the side, frequency along the bottom. For when you want to know exactly what is happening rather than feel it. The panel's own display goes dark while it is up.</p>
+      <p class="lead">The same plot in its own window &mdash; 720 by 420, centered, and a fixed size.</p>
+      <p>Bigger than the strip on the panel, and with the scales printed on it: dB down the side, frequency along the bottom. For when you want to know exactly what is happening rather than feel it. The panel's own display steps aside while it is up, and DRAW works in the window the same as on the panel.</p>
       <figure class="wide">
         <img src="/f12/manual/scope.jpg" width="960" height="560" alt="The expanded visualizer window: the filter curve and signal traces on a grid with a dB scale from 0 to -84 down the left and a frequency scale from 20 Hz to 20 kHz along the bottom." loading="lazy" decoding="async">
         <figcaption>The pop-out, with both scales</figcaption>
@@ -532,7 +577,7 @@ footer a:focus-visible{outline:2px solid var(--chalk); outline-offset:3px}
     <div class="ctl">
       <div class="ctl-head"><h3>Help</h3><p class="spec">Switch &middot; bottom, beside it</p></div>
       <p class="lead">Brings the walkthrough back whenever you want it.</p>
-      <p>It runs itself the first time the plug-in is opened on a machine, and says the same things this page does, a step at a time, pointed at the control it is talking about.</p>
+      <p>It runs itself the first time the plug-in is opened on a machine, once it is activated, and says the same things this page does, a step at a time, pointed at the control it is talking about.</p>
       <figure class="wide">
         <img src="/f12/manual/grp-foot.jpg" width="600" height="82" alt="The bottom of the panel: the EXPAND VISUALIZER switch and the HELP switch." loading="lazy" decoding="async">
         <figcaption>The foot</figcaption>
@@ -577,13 +622,15 @@ footer a:focus-visible{outline:2px solid var(--chalk); outline-offset:3px}
           <tr><td>Aura</td><td>switch</td><td>On</td><td>Top row</td></tr>
           <tr><td>Max Aura</td><td>switch</td><td>Off</td><td>Top row, with AURA on</td></tr>
           <tr><td>Dark</td><td>switch</td><td>On</td><td>Top row</td></tr>
+          <tr><td>Bypass</td><td>switch</td><td>Off</td><td>Top row</td></tr>
           <tr><td>Sample Rate</td><td>0 &ndash; 100 %</td><td>100</td><td>Crush pair</td></tr>
           <tr><td>Bit</td><td>0 &ndash; 100 %</td><td>100</td><td>Crush pair</td></tr>
           <tr><td>Filter</td><td>switch</td><td>On</td><td>Filter</td></tr>
           <tr><td>Position</td><td>0 &ndash; 100 %</td><td>100</td><td>Filter</td></tr>
           <tr><td>Cutoff Shape</td><td>5 tiles</td><td>Low-pass</td><td>Filter</td></tr>
-          <tr><td>Slope</td><td>4 entries</td><td>24 dirty</td><td>Filter</td></tr>
-          <tr><td>Q Shape</td><td>8 tiles</td><td>Plain</td><td>Filter</td></tr>
+          <tr><td>Slope</td><td>18 &ndash; 144 dB/oct</td><td>24</td><td>Filter</td></tr>
+          <tr><td>Dirty</td><td>switch</td><td>On</td><td>Filter</td></tr>
+          <tr><td>Q Shape</td><td>6 tiles</td><td>Plain</td><td>Filter</td></tr>
           <tr><td>Drive</td><td>0 &ndash; 18 dB</td><td>0</td><td>Filter</td></tr>
           <tr><td>Reso</td><td>0 &ndash; 100 %</td><td>25</td><td>Filter</td></tr>
           <tr><td>Q</td><td>0 &ndash; 100 %</td><td>35</td><td>Filter</td></tr>
@@ -598,6 +645,7 @@ footer a:focus-visible{outline:2px solid var(--chalk); outline-offset:3px}
           <tr><td>Rate</td><td>4 bars &ndash; 1/16 trip</td><td>1/4</td><td>Auto filter only</td></tr>
           <tr><td>Grid</td><td>16th, 8th, quint</td><td>16th</td><td>Auto filter only</td></tr>
           <tr><td>Swing</td><td>50 &ndash; 75 %</td><td>50</td><td>Auto filter only</td></tr>
+          <tr><td>Phase</td><td>0 &ndash; 360&deg;</td><td>0</td><td>Auto filter only</td></tr>
           <tr><td>Dir</td><td>Both, up, down</td><td>Both</td><td>Auto filter only</td></tr>
           <tr><td>Amount</td><td>0 &ndash; 4 octaves</td><td>1.5</td><td>Auto filter only</td></tr>
           <tr><td>Source</td><td>Input, sidechain</td><td>Input</td><td>Sidechain only</td></tr>

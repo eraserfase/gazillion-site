@@ -136,15 +136,20 @@ Page: https://gazillionindustries.com/tripleog.html
 
 A 12 bit sauce filter for macOS and Windows. AURA is an adaptive correction that
 moves with the source and sits a record better without sounding processed. Sample
-rate and bit reduction, five filter shapes, eight resonance shapes, a slope that
-feeds its own distortion back through itself, auto filter and sidechain.
+rate and bit reduction, five filter shapes, six resonance shapes including one you
+draw yourself, a slope that runs from gentle to a wall, a DIRTY switch that feeds
+the filter's own distortion back through itself, auto filter and sidechain.
+Current version: 2.0 (a free update for everyone who owns it).
 
 - AURA adaptive enhancement, and MAX AURA
 - Sample rate and bit depth reduction
 - Five filter shapes: low-pass, high-pass, band-pass, notch and morph
-- Eight resonance shapes that travel with the filter
-- Slope that feeds its own distortion back through itself
-- Auto filter driven by a clock, with swing
+- Six resonance shapes that travel with the filter
+- DRAW: your own resonance shape, drawn on the display (bell, notch, shelf or cut per point)
+- Slope from 18 dB per octave to a wall
+- DIRTY switch that feeds the filter's own distortion back through itself
+- Auto filter driven by a clock, with swing and start phase
+- Whole plug-in bypass
 - Sidechain that follows another signal
 - Visualizer that pops out into its own window
 - Resizable window
