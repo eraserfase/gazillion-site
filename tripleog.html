@@ -778,15 +778,32 @@ h1.mark-block{font-size:inherit}
 .gr-rating .gr-stars{color:#ffc23d; font-size:25px; letter-spacing:3px; vertical-align:middle}
 .gr-rating .gr-score{font-size:21px; font-weight:800; margin:0 3px 0 11px; vertical-align:middle; color:var(--ink)}
 .gr-rating .gr-count{display:block; font-size:12px; margin-top:4px; color:var(--ink-soft); letter-spacing:.03em; text-transform:uppercase}
-.gr-carousel{display:flex; gap:14px; overflow-x:auto; scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch; scrollbar-width:none; margin:18px auto 0; max-width:600px; padding:2px 6px 8px}
+/* Gumroad reviews, 19 Sep 2026: set exactly like the .tm-say testimonial quotes
+   further down (Archivo Black in chalk, tracked-caps attribution, name in rouge) -
+   no card, no per-quote stars: the badge above already carries the stars and only
+   5-star reviews get in. One quote per view; the prev/next buttons and dots are
+   the slide carousel's own .nav/.dot, so desktop (no swipe) can page through. */
+.gr-reviews{max-width:560px; margin:26px auto 0}
+.gr-carousel{display:flex; overflow-x:auto; scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch; scrollbar-width:none; overscroll-behavior-x:contain}
 .gr-carousel::-webkit-scrollbar{display:none}
-.gr-carousel.gr-solo{justify-content:center}
-.gr-quote{scroll-snap-align:center; flex:0 0 84%; max-width:400px; margin:0; box-sizing:border-box; background:var(--field-lit); border:1px solid var(--ink-faint); border-radius:12px; padding:17px 20px; text-align:left}
-.gr-quote .gr-stars{color:#ffc23d; font-size:16px; letter-spacing:2px}
-.gr-quote blockquote{margin:9px 0 0; font-size:16px; line-height:1.42; color:var(--ink)}
-.gr-quote figcaption{margin-top:11px; font-size:11px; color:var(--ink-soft); text-transform:uppercase; letter-spacing:.05em}
+.gr-carousel:focus-visible{outline:2px solid var(--chalk); outline-offset:6px; border-radius:4px}
+.gr-quote{flex:0 0 100%; scroll-snap-align:center; margin:0; padding:0 8px; box-sizing:border-box; display:flex; flex-direction:column; justify-content:center; align-items:center; gap:13px; text-align:center}
+.gr-quote blockquote{margin:0; font-family:"Archivo Black","Arial Black",sans-serif; font-size:clamp(16px,3.4vw,20px); line-height:1.38; letter-spacing:.02em; color:var(--chalk); text-wrap:balance; overflow-wrap:anywhere}
+.gr-who{margin:0; font-size:12px; letter-spacing:.18em; text-transform:uppercase; color:var(--ink-soft)}
+.gr-who b{font-weight:600; color:var(--rouge)}
+.gr-controls{display:flex; align-items:center; justify-content:center; gap:14px; margin-top:18px}
+.gr-nav{width:40px; height:40px; border-radius:999px; cursor:pointer; padding:0; background:color-mix(in srgb, var(--field-deep) 70%, transparent); border:1px solid var(--pill-line); color:var(--ink); font-size:20px; line-height:1; display:flex; align-items:center; justify-content:center; transition:background .18s ease}
+.gr-nav:hover{background:var(--field-deep)}
+.gr-nav:focus-visible,.gr-dot:focus-visible{outline:2px solid var(--chalk); outline-offset:2px}
+.gr-dots{display:flex; gap:9px}
+.gr-dot{width:7px; height:7px; border-radius:999px; padding:0; cursor:pointer; border:0; background:var(--ink-faint); transition:background .2s ease, transform .2s ease}
+.gr-dot[aria-current="true"]{background:var(--chalk); transform:scale(1.35)}
 .gr-mini{color:#ffc23d; font-size:clamp(10px,2.6vw,12px); letter-spacing:1px; margin-left:8px; white-space:nowrap; vertical-align:baseline}
 .gr-mini-num{color:var(--ink); letter-spacing:normal; margin-left:3px; font-weight:700}
+/* Phones: the delivery line already fills the measure, so the mini-stars wrapped
+   onto a second line hard against the LEFT edge (the line is text-align:start).
+   Give them their own centred row instead. */
+@media (max-width:560px){.terms.delivery{text-align:center} .gr-mini{display:block; margin:4px 0 0}}
 </style>
 
 <div class="banner banner--top">

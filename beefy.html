@@ -240,13 +240,26 @@ main{max-width:720px;margin:0 auto;padding:calc(var(--banner-h) + 24px) 25px 0}.
 @media(max-width:480px){.carousel{--slide-height:clamp(365px,58svh,500px)}.carousel .stage::before{transform:translateY(-24px) rotate(-5deg)}}
 
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
-.gr-carousel{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin:22px auto 0;max-width:600px;padding:8px 12px 14px}
+/* Gumroad reviews, 19 Sep 2026: one paper card per view (the same card as .said),
+   no per-card stars (the badge above carries them), and prev/next + dots in the
+   slide carousel's own .nav/.dot style so desktop can page through without a swipe. */
+.gr-reviews{max-width:560px;margin:22px auto 0}
+.gr-carousel{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;overscroll-behavior-x:contain;padding:8px 0 14px;isolation:isolate}
 .gr-carousel::-webkit-scrollbar{display:none}
-.gr-carousel.gr-solo{justify-content:center}
-.gr-quote{scroll-snap-align:center;flex:0 0 84%;max-width:400px;margin:0;box-sizing:border-box;background:var(--paper);border:3px solid var(--ink);border-radius:22px 27px 19px 25px;box-shadow:6px 7px 0 var(--ink);padding:20px 22px;text-align:center}
-.gr-quote .gr-stars{color:#ffb400;font-size:22px;letter-spacing:2px;-webkit-text-stroke:1.2px var(--ink)}
-.gr-quote blockquote{margin:8px 0 0;font-size:22px;line-height:1.22;color:var(--deep)}
-.gr-quote figcaption{margin-top:12px;font-size:14px}
+.gr-carousel:focus-visible{outline:3px solid var(--ink);outline-offset:4px}
+.gr-quote{position:relative;flex:0 0 100%;scroll-snap-align:center;margin:0;box-sizing:border-box;padding:24px 36px 22px 30px;display:flex;flex-direction:column;justify-content:center;text-align:center}
+.gr-quote::before{content:"";position:absolute;inset:0 10px 0 4px;z-index:-1;background:var(--paper);border:3px solid var(--ink);border-radius:22px 27px 19px 25px;box-shadow:6px 7px 0 var(--ink)}
+.gr-quote blockquote{margin:0;font-size:clamp(20px,4vw,26px);line-height:1.22;color:var(--deep);text-wrap:balance;overflow-wrap:anywhere}
+.gr-who{margin:12px 0 0;font-size:15px;line-height:1.4}
+.gr-who b{color:var(--red)}
+.gr-controls{display:flex;align-items:center;justify-content:center;gap:6px;margin-top:6px}
+.gr-nav{width:48px;height:48px;display:grid;place-items:center;border:2px solid var(--ink);border-radius:50%;background:var(--paper);color:var(--ink);font:inherit;font-size:28px;line-height:1;padding:0;cursor:pointer;box-shadow:3px 3px 0 var(--ink)}
+.gr-nav:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink)}
+.gr-nav:focus-visible,.gr-dot:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.gr-dots{display:flex}
+.gr-dot{display:grid;place-items:center;width:34px;height:34px;border:0;padding:0;background:transparent;cursor:pointer}
+.gr-dot::after{content:"";width:8px;height:8px;border-radius:50%;background:var(--ink);opacity:.3}
+.gr-dot[aria-current="true"]::after{opacity:1;box-shadow:0 0 0 2px var(--paper)}
 .gr-mini{color:#ffb400;font-size:clamp(11px,2.8vw,13px);letter-spacing:1px;margin-left:8px;-webkit-text-stroke:.7px var(--ink);white-space:nowrap}
 .gr-mini-num{color:var(--ink); letter-spacing:normal; margin-left:3px; font-weight:700}
 </style>
