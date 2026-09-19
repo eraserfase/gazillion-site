@@ -16,7 +16,7 @@
     tags.utm_campaign === "202609_demo_funnel" && groups[tags.utm_term] && arm &&
     tags.utm_id === "ef2609_" + tags.utm_term + "_" + arm[2] + "_" + wave;
   var prefix = campaign ? "gz_ef2609" + wave + "_" + groups[tags.utm_term] + "_" + products[arm[2]] + "_" + products[product] + "_" : "gz_demo_" + product + "_";
-  var pending = [], memory = {}, inFlight = {};
+  var pending = [], memory = {}, inFlight = {}, summaries = {};
   function stateKey(name) { return "gz_demo_v1:" + attr.token + ":" + name; }
   function seen(key) { try { return sessionStorage.getItem(key) === "1" || memory[key]; } catch(e) { return memory[key]; } }
   function remember(key) { memory[key]=true; try { sessionStorage.setItem(key,"1"); } catch(e) {} }
@@ -27,6 +27,14 @@
     var props = {product:product,video:video,journey:attr.token,tracking_version:"demo_v2"};
     ["utm_source","utm_medium","utm_campaign","utm_term","utm_content","utm_id"].forEach(function(k){if(tags[k]) props[k]=tags[k];});
     Object.keys(details || {}).forEach(function(k){props[k]=details[k];});
+    // Pause/ended and visibilitychange/pagehide describe the same boundary
+    // in common browsers. Keep changed listening evidence, not duplicate
+    // summaries with identical properties for this exact journey/video.
+    if(repeat && code === "summary"){
+      var summary=JSON.stringify(props);
+      if(summaries[key] === summary) return;
+      summaries[key]=summary;
+    }
     // Pending observations retain the original token/cell. A late library load
     // cannot recast them as a later session or fabricate another observation.
     if (!repeat) inFlight[key]=true;

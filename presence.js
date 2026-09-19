@@ -5,8 +5,8 @@
   if(!/^(www\.)?gazillionindustries\.com$/i.test(location.hostname)) return;
   var script=document.currentScript, product=script && script.dataset.product;
   if(!/^(store|drugs|f12|skruu|tripleog|beefy)$/.test(product || '')) return;
-  var period='', active=false, sent=false, initialSent=false, away=false;
-  var version='presence-exit-20260909a';
+  var period='', active=false, sent=false, initialSent=false, away=false, lastBeatAt=0;
+  var version='presence-dedup-20260919';
   function nonce(){
     var bytes=new Uint8Array(6);crypto.getRandomValues(bytes);
     return Array.from(bytes,function(b){return b.toString(16).padStart(2,'0');}).join('');
@@ -19,6 +19,11 @@
   }
   function beat(){
     if(away || document.visibilityState==='hidden' || !available()) return;
+    // Deferred startup and pageshow can run in the same instant. One lease
+    // renewal is enough; a new visible interval/bfcache return still starts
+    // immediately because leave() clears active and sent.
+    var now=Date.now();
+    if(active && sent && now>=lastBeatAt && now-lastBeatAt<1000) return;
     if(!active){period=nonce();active=true;sent=false;}
     if(window.GZ_ATTR) window.GZ_ATTR.mark(product==='store'?'store':'product',product==='store'?undefined:product);
     // Keep existing named arrival/source evidence once, not one count per beat.
@@ -27,7 +32,7 @@
       window.umami.track((window.GZ_ATTR && window.GZ_ATTR.paid?'paid_ad_':'origin_other_')+product);
       initialSent=true;
     }
-    signal('gzh');sent=true;
+    signal('gzh');sent=true;lastBeatAt=now;
   }
   function leave(){
     if(!active) return;
