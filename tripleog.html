@@ -4,7 +4,7 @@
      GitHub Pages sends charset=utf-8 on the wire. Must stay inside the first 1024 bytes. -->
 <meta charset="utf-8">
 <script defer src="video-audio-focus.js?v=1ed0c194152a"></script>
-<script defer src="demo-engagement.js?v=4dff222a6327"></script>
+<script defer src="demo-engagement.js?v=7e5e9c694f6c"></script>
 <script defer src="demo-playback.js?v=bb71d451d1df"></script>
 <title>TRIPLE OG - cassette tape simulation with a transport you can grab (VST3, AU, Mac and Windows)</title>
 <meta name="description" content="A cassette transport, not a tape saturator. Tone, hiss, age up to sixty years, drive, wow and flutter, a CATCH that jams the transport and sprints to recover, and a SCRUB you play with your hand. AU, VST3 and standalone, Mac and Windows. $29.">
@@ -103,14 +103,14 @@ window.GZ_ATTR = (function(){
   }
   function emit(name){
     try {
-      var p = window.umami.track(name);
+      var p = (window.GZTraffic || window.umami).track(name);
       if(p && typeof p.catch === "function") p.catch(function(){});
       return true;
     } catch(e){ return false; }
   }
   result.mark = function(stage, product){
     touch();
-    if(!token || !window.umami || typeof window.umami.track !== "function") return;
+    if(!token || !(window.GZTraffic || window.umami) || typeof (window.GZTraffic || window.umami).track !== "function") return;
     if(stage !== "store" && (!/^(product|buy)$/.test(stage) || !/^(drugs|f12|skruu|tripleog)$/.test(product || ""))) return;
     var name = "gz_"+stage+"_"+(stage === "store" ? "" : product+"_")+token;
     if(sent[name]) return;
@@ -173,7 +173,9 @@ window.GZ_ATTR = (function(){
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"SoftwareApplication","name":"TRIPLE OG","applicationCategory":"MultimediaApplication","applicationSubCategory":"Audio plug-in","operatingSystem":"macOS 10.13 or later, Windows 10 or later","softwareVersion":"1.1.0","url":"https://gazillionindustries.com/tripleog.html","image":"https://gazillionindustries.com/tripleog/og.jpg","description":"A cassette transport plug-in for macOS and Windows. TONE, HISS, AGE in years, DRIVE and MIX shape the medium; WOW FLUT and CATCH are the transport, and CATCH is a stateful drag and recovery rather than more wobble. SCRUB is a hand on the tape: drag it back and the head runs back across the tape, let go and it rebounds home. SLAM is a tape stop. AU, VST3 and standalone.","featureList":["TONE: the playback system's brightness","HISS: a continuous broadband noise bed, partly decorrelated across the channels","AGE: nought to sixty years of deterioration, as one macro","DRIVE: soft asymmetric saturation with magnetic hysteresis, 2x oversampled","WOW FLUT: composite transport instability, not a single sine","CATCH: a stateful drag, jam and recovery engine, with a manual trigger","SCRUB: drag the head back across the tape, rebounds home on release","SLAM: a tape stop, with SLAM RETURN setting how long the stop takes","MIX, on the face, defaulting to 100%","Head gap loss that moves with the transport","Stereo VU meters against a 0 VU reference","A transport display: reels, tape, heads and the tension between them","Two finishes, black and brushed aluminium","Resizable window","Universal binary, Apple Silicon and Intel","Windows 10 or later, 64-bit, VST3","Works offline"],"keywords":"cassette plugin, tape plugin, wow and flutter VST, tape stop plugin, lo-fi tape, hiss plugin, tape saturation, boom bap, lo-fi hip hop, AU plugin, VST3, macOS audio plugin, windows VST3, tape transport, varispeed tape","softwareRequirements":"macOS 10.13 or later, or Windows 10 or later 64-bit; a host supporting AU or VST3, or none for the standalone","@id":"https://gazillionindustries.com/tripleog.html#tripleog","author":{"@id":"https://gazillionindustries.com/#tony"},"publisher":{"@id":"https://gazillionindustries.com/#gazillion"},"creator":{"@id":"https://gazillionindustries.com/#tony"},"installUrl":"https://gazillionindustries.com/tripleog.html","inLanguage":"en","offers":{"@type":"Offer","priceCurrency":"USD","price":"29.00","availability":"https://schema.org/InStock"}},{"@type":"Organization","@id":"https://gazillionindustries.com/#gazillion","name":"Gazillion Industries LLC","alternateName":"Gazillion Industries","url":"https://gazillionindustries.com/","email":"tony@gazillionindustries.com","founder":{"@id":"https://gazillionindustries.com/#tony"}},{"@type":"Person","@id":"https://gazillionindustries.com/#tony","name":"Tony Barko","alternateName":"Anthony Greg Barko","jobTitle":"Founder","worksFor":{"@id":"https://gazillionindustries.com/#gazillion"},"sameAs":["https://apps.apple.com/us/developer/anthony-greg-barko/id1866031805"]},{"@type":"WebSite","@id":"https://gazillionindustries.com/#website","url":"https://gazillionindustries.com/","name":"Gazillion Industries","inLanguage":"en","publisher":{"@id":"https://gazillionindustries.com/#gazillion"}}]}</script>
 <!-- Same Umami site and same Meta pixel as the sibling pages: one business, one
      property. Keeping them identical is what lets the pages be compared. -->
-<script defer src="https://cloud.umami.is/script.js"
+<script>window.GZCloudBeforeSend=function(t,p){return t==='event'&&!p.name?p:false;};</script>
+<script defer src="/traffic.js?v=37092f63d724"></script>
+<script async src="https://cloud.umami.is/script.js" data-auto-track="false" data-before-send="GZCloudBeforeSend" onload="window.GZTraffic?.attachUmami()" onerror="window.GZTraffic?.attachUmami()"
         data-website-id="ed71399d-1069-4354-abbf-73dc311e5bc3"
         data-domains="gazillionindustries.com,www.gazillionindustries.com"></script>
 <!-- Google Analytics 4, property "Gazillion Industries". Same hostname gate as
@@ -189,7 +191,7 @@ if (/^(www\.)?gazillionindustries\.com$/i.test(location.hostname)) {
   gtag("config", "G-2ZY2T73BLK");
 }
 </script>
-<script data-endpoint="https://board.gazillionindustries.com/presence/collect" defer src="presence.js?v=fb67ebafc67e" data-product="tripleog"></script>
+<script data-endpoint="https://board.gazillionindustries.com/presence/collect" defer src="presence.js?v=f36802aeaeea" data-product="tripleog"></script>
 <script defer src="home-button.js?v=20260913b"></script>
 <script>
 if (/^(www\.)?gazillionindustries\.com$/i.test(location.hostname)) {
@@ -1320,8 +1322,8 @@ function track(name, props){
       return window.plausible(name, props ? {props:props} : undefined);
     if(window.goatcounter && window.goatcounter.count)
       return window.goatcounter.count({path:name, title:name, event:true});
-    if(window.umami && window.umami.track)
-      return window.umami.track(name, props);
+    if((window.GZTraffic || window.umami) && (window.GZTraffic || window.umami).track)
+      return (window.GZTraffic || window.umami).track(name, props);
   }catch(e){}
 }
 

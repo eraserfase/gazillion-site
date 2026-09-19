@@ -64,11 +64,10 @@ footer{margin-top:52px; color:#7d7489; font-size:14px}
   <tr><th>Service</th><th>What it does</th><th>What it holds</th></tr>
   <tr>
     <td>Umami</td>
-    <td>Counts page visits and which buttons are pressed, so it is possible to
-        tell whether a page works.</td>
+    <td>Counts page visits as an independent check of the site's activity.</td>
     <td>No cookies and no cross-site tracking. Page address, referrer, country,
-        browser and device type, and an anonymous daily identifier that cannot
-        be traced back to a person or joined up across days.</td>
+        browser and device type, and an anonymous identifier that rotates
+        monthly. It does not contain your name or email address.</td>
   </tr>
   <tr>
     <td>Meta pixel</td>
@@ -96,17 +95,24 @@ footer{margin-top:52px; color:#7d7489; font-size:14px}
         will stop it.</td>
   </tr>
   <tr>
-    <td>Gazillion live activity</td>
-    <td>Shows which website pages are currently open and when a visitor follows
-        a checkout link. Visible pages send a presence signal every 15 seconds
-        and a departure signal when hidden or closed.</td>
-    <td>No additional cookies or browser storage. Our server creates an
-        anonymous daily identifier from the connection address and browser
+    <td>Gazillion activity</td>
+    <td>Records page visits, source tags, the names (never the values) of link
+        parameters, button presses and demo playback on our own server. It also shows which pages are currently open: visible pages
+        send a presence signal every 15 seconds and a departure signal when
+        hidden or closed. Presence renewals are not additional visits.</td>
+    <td>No additional cookies or browser storage. Our server creates
+        anonymous identifiers from the connection address and browser
         information using a private key; it does not retain the address or
-        browser string. Presence signals expire automatically. Existing
-        anonymous journey tokens and source tags can connect observed website
-        steps to an order carrying the same token. They do not identify visits
-        to Gumroad's payment form.</td>
+        browser string. Records include browser and device categories, preferred
+        language and location details supplied by our existing website infrastructure.
+        Screen dimensions help classify the device; the dimensions are not retained.
+        Live identifiers rotate daily and presence signals
+        expire automatically. Recorded visit identifiers rotate monthly, and
+        activity records are retained to preserve business history. Existing
+        anonymous Umami, Google and journey identifiers can connect matching
+        observations without counting them twice. An order carrying the same
+        journey token can be linked to its observed website steps. These
+        observations do not identify visits to Gumroad's payment form.</td>
   </tr>
 </table>
 

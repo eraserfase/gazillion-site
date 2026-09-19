@@ -101,14 +101,14 @@ window.GZ_ATTR = (function(){
   }
   function emit(name){
     try {
-      var p = window.umami.track(name);
+      var p = (window.GZTraffic || window.umami).track(name);
       if(p && typeof p.catch === "function") p.catch(function(){});
       return true;
     } catch(e){ return false; }
   }
   result.mark = function(stage, product){
     touch();
-    if(!token || !window.umami || typeof window.umami.track !== "function") return;
+    if(!token || !(window.GZTraffic || window.umami) || typeof (window.GZTraffic || window.umami).track !== "function") return;
     if(stage !== "store" && (!/^(product|buy)$/.test(stage) || !/^(drugs|f12|skruu|tripleog|beefy)$/.test(product || ""))) return;
     var name = "gz_"+stage+"_"+(stage === "store" ? "" : product+"_")+token;
     if(sent[name]) return;
@@ -162,7 +162,9 @@ window.GZ_ATTR = (function(){
 <meta name="twitter:image" content="https://gazillionindustries.com/beefy/cover.png">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "VideoObject", "@id": "https://gazillionindustries.com/beefy.html#demo", "name": "BEEFY drum saturation and soft clipping — 28-second demo", "description": "A short drum demonstration comparing processing without and with BEEFY, the Gazillion Industries saturation and loudness plugin.", "thumbnailUrl": ["https://gazillionindustries.com/beefy/beefy-demo-portrait-v1.jpg"], "uploadDate": "2026-09-12T08:36:33Z", "duration": "PT28.222S", "contentUrl": "https://gazillionindustries.com/beefy/beefy-demo-portrait-v1.mp4", "url": "https://gazillionindustries.com/beefy.html", "publisher": {"@type": "Organization", "name": "Gazillion Industries LLC", "url": "https://gazillionindustries.com/"}}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "BEEFY", "applicationCategory": "MultimediaApplication", "applicationSubCategory": "Audio effect plugin", "operatingSystem": "macOS, Windows 64-bit", "softwareVersion": "1.1.1", "url": "https://gazillionindustries.com/beefy.html", "image": "https://gazillionindustries.com/beefy/cover.png", "description": "A saturation and loudness effect for drums, bass, samples, synths and anything you want to make more fatterrer. BEEF adds weight and density, COOK changes the tone, and SOFT CLIP adds rounded fuzz with automatic initial gain staging. Optional LIMIT and input/output clipping indicators. Mac VST3, Audio Unit and standalone; Windows VST3.", "keywords": "saturation plugin, loudness plugin, soft clipper, drum saturation, bass distortion, 808, drum bus, VST3, Audio Unit, Mac, Windows", "publisher": {"@type": "Organization", "name": "Gazillion Industries LLC", "url": "https://gazillionindustries.com/"}, "offers": {"@type": "Offer", "price": "19.00", "priceCurrency": "USD", "url": "https://gazillionindustries.gumroad.com/l/beefy"}}</script>
-<script defer src="https://cloud.umami.is/script.js"
+<script>window.GZCloudBeforeSend=function(t,p){return t==='event'&&!p.name?p:false;};</script>
+<script defer src="/traffic.js?v=37092f63d724"></script>
+<script async src="https://cloud.umami.is/script.js" data-auto-track="false" data-before-send="GZCloudBeforeSend" onload="window.GZTraffic?.attachUmami()" onerror="window.GZTraffic?.attachUmami()"
         data-website-id="ed71399d-1069-4354-abbf-73dc311e5bc3"
         data-domains="gazillionindustries.com,www.gazillionindustries.com"></script>
 <!-- Google Analytics 4, property "Gazillion Industries". Same hostname gate as
@@ -178,7 +180,7 @@ if (/^(www\.)?gazillionindustries\.com$/i.test(location.hostname)) {
   gtag("config", "G-2ZY2T73BLK");
 }
 </script>
-<script data-endpoint="https://board.gazillionindustries.com/presence/collect" defer src="presence.js?v=fb67ebafc67e" data-product="beefy"></script>
+<script data-endpoint="https://board.gazillionindustries.com/presence/collect" defer src="presence.js?v=f36802aeaeea" data-product="beefy"></script>
 <script defer src="home-button.js?v=20260913b"></script>
 <script>
 if (/^(www\.)?gazillionindustries\.com$/i.test(location.hostname)) {
@@ -263,7 +265,7 @@ main{max-width:720px;margin:0 auto;padding:calc(var(--banner-h) + 24px) 25px 0}.
 .gr-mini{color:#ffb400;font-size:clamp(11px,2.8vw,13px);letter-spacing:1px;margin-left:8px;-webkit-text-stroke:.7px var(--ink);white-space:nowrap}
 .gr-mini-num{color:var(--ink); letter-spacing:normal; margin-left:3px; font-weight:700}
 </style>
-<script defer src="demo-engagement.js?v=4dff222a6327"></script>
+<script defer src="demo-engagement.js?v=7e5e9c694f6c"></script>
 <script defer src="beefy-demo.js?v=20260914-live-clip"></script>
 </head>
 <body>
@@ -476,7 +478,7 @@ main{max-width:720px;margin:0 auto;padding:calc(var(--banner-h) + 24px) 25px 0}.
     link.addEventListener('click', () => {
       if (!/^(www\.)?gazillionindustries\.com$/i.test(location.hostname)) return;
       window.GZ_ATTR.mark('buy', 'beefy');
-      if (window.umami) window.umami.track('buy_click_beefy', {position: link.dataset.pos});
+      if ((window.GZTraffic || window.umami)) (window.GZTraffic || window.umami).track('buy_click_beefy', {position: link.dataset.pos});
       if (window.fbq) fbq('track', 'InitiateCheckout', {content_name:'BEEFY', content_ids:['beefy'], content_type:'product', value:19, currency:'USD'});
     });
   });

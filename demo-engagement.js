@@ -42,10 +42,10 @@
     flush();
   }
   function flush() {
-    if (!window.umami || typeof window.umami.track !== "function") return;
+    if (!(window.GZTraffic || window.umami) || typeof (window.GZTraffic || window.umami).track !== "function") return;
     pending.splice(0).forEach(function(item){
       try {
-        var result = window.umami.track(item.name,item.props);
+        var result = (window.GZTraffic || window.umami).track(item.name,item.props);
         // No automatic network retry: an ambiguous response could double count.
         if (!item.repeat) remember(item.key);
         if (result && result.catch) result.catch(function(){});

@@ -97,14 +97,14 @@ window.GZ_ATTR = (function(){
   }
   function emit(name){
     try {
-      var p = window.umami.track(name);
+      var p = (window.GZTraffic || window.umami).track(name);
       if(p && typeof p.catch === "function") p.catch(function(){});
       return true;
     } catch(e){ return false; }
   }
   result.mark = function(stage, product){
     touch();
-    if(!token || !window.umami || typeof window.umami.track !== "function") return;
+    if(!token || !(window.GZTraffic || window.umami) || typeof (window.GZTraffic || window.umami).track !== "function") return;
     if(stage !== "store" && (!/^(product|buy)$/.test(stage) || !/^(drugs|f12|skruu|tripleog|beefy)$/.test(product || ""))) return;
     var name = "gz_"+stage+"_"+(stage === "store" ? "" : product+"_")+token;
     if(sent[name]) return;
@@ -189,7 +189,9 @@ window.GZ_ATTR = (function(){
      incident: a draft page on a dev server is indistinguishable from the real
      one unless something checks the hostname. -->
 <script>window.GZ_LIVE = /^(www\.)?gazillionindustries\.com$/i.test(location.hostname);</script>
-<script defer src="https://cloud.umami.is/script.js"
+<script>window.GZCloudBeforeSend=function(t,p){return t==='event'&&!p.name?p:false;};</script>
+<script defer src="/traffic.js?v=37092f63d724"></script>
+<script async src="https://cloud.umami.is/script.js" data-auto-track="false" data-before-send="GZCloudBeforeSend" onload="window.GZTraffic?.attachUmami()" onerror="window.GZTraffic?.attachUmami()"
         data-website-id="ed71399d-1069-4354-abbf-73dc311e5bc3"
         data-domains="gazillionindustries.com,www.gazillionindustries.com"></script>
 <!-- Google Analytics 4, property "Gazillion Industries". Same hostname gate as
@@ -205,7 +207,7 @@ if (/^(www\.)?gazillionindustries\.com$/i.test(location.hostname)) {
   gtag("config", "G-2ZY2T73BLK");
 }
 </script>
-<script data-endpoint="https://board.gazillionindustries.com/presence/collect" defer src="presence.js?v=fb67ebafc67e" data-product="store"></script>
+<script data-endpoint="https://board.gazillionindustries.com/presence/collect" defer src="presence.js?v=f36802aeaeea" data-product="store"></script>
 <script>
 if (window.GZ_LIVE) {
 !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -959,7 +961,7 @@ a{color:inherit;text-decoration:none}
 (function(){
   function track(name, props){
     if (!window.GZ_LIVE) return;              /* never report from a draft copy */
-    if (window.umami && window.umami.track) window.umami.track(name, props);
+    if ((window.GZTraffic || window.umami) && (window.GZTraffic || window.umami).track) (window.GZTraffic || window.umami).track(name, props);
   }
   document.addEventListener('click', function(e){
     var a = e.target.closest('a[data-product]');

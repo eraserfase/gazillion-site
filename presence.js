@@ -14,7 +14,7 @@
     var bytes=new Uint8Array(6);crypto.getRandomValues(bytes);
     return Array.from(bytes,function(b){return b.toString(16).padStart(2,'0');}).join('');
   }
-  function available(){return !!endpoint || window.umami && typeof window.umami.track==='function';}
+  function available(){return !!endpoint || (window.GZTraffic || window.umami) && typeof (window.GZTraffic || window.umami).track==='function';}
   function direct(type, target){
     if(type==='lease' && directPending===period) return;
     if(!period) period=nonce();
@@ -38,7 +38,7 @@
     if(!available()) return;
     if(endpoint){direct(kind==='gzh'?'lease':'leave');return;}
     var ad=!!(window.GZ_ATTR && window.GZ_ATTR.paid);
-    window.umami.track(kind+'_'+product+'_'+period+'_'+(ad?'a':'o'));
+    (window.GZTraffic || window.umami).track(kind+'_'+product+'_'+period+'_'+(ad?'a':'o'));
   }
   function beat(){
     if(away || document.visibilityState==='hidden' || !available()) return;
@@ -50,9 +50,9 @@
     if(!active){period=nonce();active=true;sent=false;}
     if(window.GZ_ATTR) window.GZ_ATTR.mark(product==='store'?'store':'product',product==='store'?undefined:product);
     // Keep existing named arrival/source evidence once, not one count per beat.
-    if(!initialSent && window.umami && typeof window.umami.track==='function'){
-      window.umami.track('view_'+product);
-      window.umami.track((window.GZ_ATTR && window.GZ_ATTR.paid?'paid_ad_':'origin_other_')+product);
+    if(!initialSent && (window.GZTraffic || window.umami) && typeof (window.GZTraffic || window.umami).track==='function'){
+      (window.GZTraffic || window.umami).track('view_'+product);
+      (window.GZTraffic || window.umami).track((window.GZ_ATTR && window.GZ_ATTR.paid?'paid_ad_':'origin_other_')+product);
       initialSent=true;
     }
     signal('gzh');sent=true;lastBeatAt=now;
