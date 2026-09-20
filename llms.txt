@@ -349,6 +349,10 @@ the people who make the plugins.
   — The frequency map, how to sweep for resonances, and what not to boost.
 - [Why is my mix muddy?](https://gazillionindustries.com/why-is-my-mix-muddy/)
   — Where mud lives in the spectrum, how to clear it, and what else causes it.
+- [The TR-808](https://gazillionindustries.com/tr-808/)
+  — The ringing circuit in every voice, what DECAY really does, and the myths.
+- [The Sausage Fattener, and how BEEFY is different](https://gazillionindustries.com/sausage-fattener-vs-beefy/)
+  — What it is, what is documented about it, and where BEEFY's controls differ.
 - [How to compress drums](https://gazillionindustries.com/how-to-compress-drums/)
   — Attack, release and how much gain reduction, on single drums and on the bus.
 - [Parallel compression](https://gazillionindustries.com/parallel-compression/)
@@ -373,12 +377,16 @@ the people who make the plugins.
   — What it is for, how to set it, and why most problems need one band.
 - [Limiter vs compressor](https://gazillionindustries.com/limiter-vs-compressor/)
   — Where the line sits between them, and which one goes last.
+- [The Amen break](https://gazillionindustries.com/amen-break/)
+  — Where it came from, why it works, and why nobody in the band was ever paid.
 - [Filter cutoff and resonance explained](https://gazillionindustries.com/filter-cutoff-and-resonance/)
   — The corner frequency, the slope, the resonant peak, and what each costs.
 - [How to make music sound like it's in another room](https://gazillionindustries.com/how-to-make-music-sound-like-another-room/)
   — The steep low-pass, the reverb, and why the low end has to stay.
 - [How to make a telephone effect on vocals](https://gazillionindustries.com/telephone-effect-on-vocals/)
   — The band-pass, the compression, and the modern cell-phone version.
+- [RC-20 Retro Color](https://gazillionindustries.com/rc-20-retro-color/)
+  — The six modules in order, what Magnitude does, and where it differs from a filter.
 - [Formant shifting](https://gazillionindustries.com/formant-shifting/)
   — What formants are, and why a pitched-up voice sounds like a smaller person.
 - [Time stretching explained](https://gazillionindustries.com/time-stretching-explained/)
@@ -399,6 +407,8 @@ the people who make the plugins.
   — Bob Moog's 2002 Minimoog: the dual filters, the touch surface, and the variants.
 - [J Dilla](https://gazillionindustries.com/j-dilla/)
   — The life, the machines, how the drums really work, and the claims that do not hold up.
+- [The creation of the MPC](https://gazillionindustries.com/mpc-creation/)
+  — The machines that failed first, what Akai and Linn each did, and how swing works.
 - [Drum bus compressor settings](https://gazillionindustries.com/drum-bus-compressor-settings/)
   — attack, release, ratio and threshold on a drum bus, and a starting point.
 
