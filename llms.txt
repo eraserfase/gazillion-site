@@ -355,6 +355,8 @@ the people who make the plugins.
   — Five moves that change what a record means, not just where it starts.
 - [How to make drums sound dusty](https://gazillionindustries.com/how-to-make-drums-sound-dusty/)
   — Limit the top, drop the resolution, saturate, compress, and leave the grid.
+- [The SP-303 and the vinyl sim sound](https://gazillionindustries.com/sp-303/)
+  — What the 2001 sampler was, what its Vinyl Simulator does, and who used it.
 - [Filter cutoff and resonance explained](https://gazillionindustries.com/filter-cutoff-and-resonance/)
   — The corner frequency, the slope, the resonant peak, and what each costs.
 - [How to make music sound like it's in another room](https://gazillionindustries.com/how-to-make-music-sound-like-another-room/)
@@ -377,6 +379,10 @@ the people who make the plugins.
   — Connections, levels, tape types, and getting the playback back in.
 - [Four-track recording on cassette](https://gazillionindustries.com/four-track-recording/)
   — Four tracks on one cassette, bouncing, and what each generation costs.
+- [The Minimoog Voyager](https://gazillionindustries.com/minimoog-voyager/)
+  — Bob Moog's 2002 Minimoog: the dual filters, the touch surface, and the variants.
+- [J Dilla](https://gazillionindustries.com/j-dilla/)
+  — The life, the machines, how the drums really work, and the claims that do not hold up.
 - [Drum bus compressor settings](https://gazillionindustries.com/drum-bus-compressor-settings/)
   — attack, release, ratio and threshold on a drum bus, and a starting point.
 
