@@ -355,6 +355,26 @@ the people who make the plugins.
   — What it is, what is documented about it, and where BEEFY's controls differ.
 - [The TR-909](https://gazillionindustries.com/tr-909/)
   — Which voices are circuits, which are samples, and what TUNE really does.
+- [True peak](https://gazillionindustries.com/true-peak/)
+  — Why a file can read zero and still clip, and what ceiling to use.
+- [Crest factor](https://gazillionindustries.com/crest-factor/)
+  — Peak minus average, and why it decides how loud a track can get.
+- [Dithering](https://gazillionindustries.com/dithering/)
+  — What it does, why rounding is worse than noise, and when to skip it.
+- [Phase cancellation](https://gazillionindustries.com/phase-cancellation/)
+  — Why two versions of one sound cancel, and how to find and fix it.
+- [Harmonic distortion](https://gazillionindustries.com/harmonic-distortion/)
+  — Where even and odd harmonics come from, and why they make things louder.
+- [What is clipping in audio?](https://gazillionindustries.com/what-is-clipping/)
+  — Hard versus soft, why it works on transients, and where it does damage.
+- [Headroom in mixing](https://gazillionindustries.com/headroom-in-mixing/)
+  — How much to leave, and why the usual explanation is out of date.
+- [Oversampling](https://gazillionindustries.com/oversampling/)
+  — Why distortion needs it, EQ does not, and what it costs you.
+- [Fletcher-Munson curves](https://gazillionindustries.com/fletcher-munson/)
+  — Why hearing changes with level, and what volume to decide at.
+- [Mono compatibility](https://gazillionindustries.com/mono-compatibility/)
+  — Which kinds of width survive summing, and how to test for it.
 - [How to compress drums](https://gazillionindustries.com/how-to-compress-drums/)
   — Attack, release and how much gain reduction, on single drums and on the bus.
 - [Parallel compression](https://gazillionindustries.com/parallel-compression/)
