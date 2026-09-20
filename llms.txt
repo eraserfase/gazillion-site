@@ -353,6 +353,8 @@ the people who make the plugins.
   — The ringing circuit in every voice, what DECAY really does, and the myths.
 - [The Sausage Fattener, and how BEEFY is different](https://gazillionindustries.com/sausage-fattener-vs-beefy/)
   — What it is, what is documented about it, and where BEEFY's controls differ.
+- [The TR-909](https://gazillionindustries.com/tr-909/)
+  — Which voices are circuits, which are samples, and what TUNE really does.
 - [How to compress drums](https://gazillionindustries.com/how-to-compress-drums/)
   — Attack, release and how much gain reduction, on single drums and on the bus.
 - [Parallel compression](https://gazillionindustries.com/parallel-compression/)
@@ -403,12 +405,24 @@ the people who make the plugins.
   — Connections, levels, tape types, and getting the playback back in.
 - [Four-track recording on cassette](https://gazillionindustries.com/four-track-recording/)
   — Four tracks on one cassette, bouncing, and what each generation costs.
+- [The Space Echo](https://gazillionindustries.com/space-echo/)
+  — The tape loop, the five heads, and what the twelve modes actually select.
 - [The Minimoog Voyager](https://gazillionindustries.com/minimoog-voyager/)
   — Bob Moog's 2002 Minimoog: the dual filters, the touch surface, and the variants.
 - [J Dilla](https://gazillionindustries.com/j-dilla/)
   — The life, the machines, how the drums really work, and the claims that do not hold up.
 - [The creation of the MPC](https://gazillionindustries.com/mpc-creation/)
   — The machines that failed first, what Akai and Linn each did, and how swing works.
+- [MF DOOM](https://gazillionindustries.com/mf-doom/)
+  — The date everyone had wrong, the method in his own words, and the machines.
+- [Madlib](https://gazillionindustries.com/madlib/)
+  — The hotel-room rig, whole-record sampling, and ten minutes a beat.
+- [Kenny Segal](https://gazillionindustries.com/kenny-segal/)
+  — Live players over samples, the 404 as an effects box, and editing hit by hit.
+- [DJ Premier](https://gazillionindustries.com/dj-premier/)
+  — Two machines, one job each, and chops recombined from sections nobody takes.
+- [The Alchemist](https://gazillionindustries.com/alchemist/)
+  — The ASR-10 years, swing at 62 percent, and the drumless question.
 - [Drum bus compressor settings](https://gazillionindustries.com/drum-bus-compressor-settings/)
   — attack, release, ratio and threshold on a drum bus, and a starting point.
 
