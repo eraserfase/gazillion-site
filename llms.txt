@@ -9,7 +9,7 @@ as a universal binary for Apple Silicon and Intel, and on Windows as a 64-bit
 VST3. Each one is bought or downloaded from its own page on
 gazillionindustries.com. Prices below are in US dollars.
 
-Last updated: 2026-09-14
+Last updated: 2026-09-20
 
 ## Products
 
@@ -337,6 +337,46 @@ the people who make the plugins.
   — The transport, the heads, bias, tape speed, and why tape sounds like tape.
 - [The SP-404 and the sound of Los Angeles](https://gazillionindustries.com/sp-404-history/)
   — How a cheap sampler its makers underestimated became the instrument of LA's beat scene.
+- [How to mix drums](https://gazillionindustries.com/how-to-mix-drums/)
+  — Balance first, then EQ, compression, saturation and the bus.
+- [How to master a beat](https://gazillionindustries.com/how-to-master-a-beat/)
+  — Headroom, a plain chain, clipping before the limiter, and the checks.
+- [How to compress drums](https://gazillionindustries.com/how-to-compress-drums/)
+  — Attack, release and how much gain reduction, on single drums and on the bus.
+- [Parallel compression](https://gazillionindustries.com/parallel-compression/)
+  — Blending a crushed copy under the dry track, and the alignment trap.
+- [Glue compression](https://gazillionindustries.com/glue-compression/)
+  — What a bus compressor does to a group, and where to start.
+- [How to chop samples](https://gazillionindustries.com/how-to-chop-samples/)
+  — Tempo, where to slice, killing clicks, and playing a new arrangement.
+- [How to chop a drum break](https://gazillionindustries.com/how-to-chop-a-drum-break/)
+  — Finding a break, slicing it, keeping the swing, making it sit.
+- [How to flip a sample](https://gazillionindustries.com/how-to-flip-a-sample/)
+  — Five moves that change what a record means, not just where it starts.
+- [How to make drums sound dusty](https://gazillionindustries.com/how-to-make-drums-sound-dusty/)
+  — Limit the top, drop the resolution, saturate, compress, and leave the grid.
+- [Filter cutoff and resonance explained](https://gazillionindustries.com/filter-cutoff-and-resonance/)
+  — The corner frequency, the slope, the resonant peak, and what each costs.
+- [How to make music sound like it's in another room](https://gazillionindustries.com/how-to-make-music-sound-like-another-room/)
+  — The steep low-pass, the reverb, and why the low end has to stay.
+- [How to make a telephone effect on vocals](https://gazillionindustries.com/telephone-effect-on-vocals/)
+  — The band-pass, the compression, and the modern cell-phone version.
+- [Formant shifting](https://gazillionindustries.com/formant-shifting/)
+  — What formants are, and why a pitched-up voice sounds like a smaller person.
+- [Time stretching explained](https://gazillionindustries.com/time-stretching-explained/)
+  — How the algorithms work, which mode to use, and when to repitch instead.
+- [Chipmunk soul](https://gazillionindustries.com/chipmunk-soul/)
+  — Choosing the vocal, how far to pitch it up, and the drums that go under it.
+- [Tape delay explained](https://gazillionindustries.com/tape-delay-explained/)
+  — Why the repeats darken, how the time is set, and where slapback sits.
+- [How to make a tape loop](https://gazillionindustries.com/how-to-make-a-tape-loop/)
+  — Splicing a loop, working out its length, and the in-the-box version.
+- [Tape speed](https://gazillionindustries.com/tape-speed/)
+  — Why faster tape is cleaner, and what each standard speed sounds like.
+- [How to record to cassette](https://gazillionindustries.com/how-to-record-to-cassette/)
+  — Connections, levels, tape types, and getting the playback back in.
+- [Four-track recording on cassette](https://gazillionindustries.com/four-track-recording/)
+  — Four tracks on one cassette, bouncing, and what each generation costs.
 - [Drum bus compressor settings](https://gazillionindustries.com/drum-bus-compressor-settings/)
   — attack, release, ratio and threshold on a drum bus, and a starting point.
 
