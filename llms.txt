@@ -375,6 +375,12 @@ the people who make the plugins.
   — Why hearing changes with level, and what volume to decide at.
 - [Mono compatibility](https://gazillionindustries.com/mono-compatibility/)
   — Which kinds of width survive summing, and how to test for it.
+- [What is a transient?](https://gazillionindustries.com/what-is-a-transient/)
+  — Why the ear identifies instruments by attack, and what processing does to it.
+- [VU meters](https://gazillionindustries.com/vu-meter/)
+  — What it measures, why the slow needle is the point, and when to trust it.
+- [Best saturation plugins](https://gazillionindustries.com/best-saturation-plugins/)
+  — What the main saturation plugins actually do, with prices and a disclosure.
 - [How to compress drums](https://gazillionindustries.com/how-to-compress-drums/)
   — Attack, release and how much gain reduction, on single drums and on the bus.
 - [Parallel compression](https://gazillionindustries.com/parallel-compression/)
