@@ -95,6 +95,38 @@ window.GZ_ATTR = (function(){
     try { sessionStorage.setItem(KEY,JSON.stringify({at:at,tags:tags,referrer:original,token:token})); } catch(e) {}
     return token;
   }
+  /* FIRST TOUCH, KEPT ACROSS SESSIONS. The arrival record above is sessionStorage with a
+     30-minute TTL, deliberately - a session must never be resurrected from a shared link.
+     But that also erased the ad click of anyone who came back later, so a buyer who saw the
+     ad on Monday and searched for us on Wednesday arrived looking like a cold Google visitor.
+     Measured 20 Sep 2026: every journey in the board's store was under four minutes, 16 of
+     the last 21 BEEFY purchases had no journey at all, and a day the owner counted 5 real orders
+     on was credited 3 by the ad tag and 2 by Meta.
+     This record is SEPARATE: localStorage, 30 days, written once (first touch wins), and it
+     never touches the session token, the session TTL, or the live utm_* tags. It is only ever
+     added to a checkout link when the CURRENT arrival carries no campaign of its own, so a
+     fresh ad click still attributes exactly as it does today. */
+  var FIRST_KEY = "gz_first_v1", FIRST_TTL = 30*86400000;
+  function firstTouch(){
+    var now = Date.now(), have = null;
+    try { have = JSON.parse(localStorage.getItem(FIRST_KEY) || "null"); } catch(e){ have = null; }
+    if(have && (!have.at || now-have.at >= FIRST_TTL || typeof have.at !== "number")) have = null;
+    if(!have && (tags.utm_campaign || tags.utm_source)){
+      have = {at:now, source:tags.utm_source || "", medium:tags.utm_medium || "",
+              campaign:tags.utm_campaign || "", paid:!!result.paid};
+      try { localStorage.setItem(FIRST_KEY, JSON.stringify(have)); } catch(e){}
+    }
+    return have;
+  }
+  function firstTags(){
+    var f = firstTouch();
+    if(!f || tags.utm_campaign || !(f.campaign || f.source)) return null;
+    var out = {gz_first_days:String(Math.max(0, Math.round((Date.now()-f.at)/86400000)))};
+    if(f.campaign) out.gz_first_campaign = f.campaign;
+    if(f.source) out.gz_first_source = f.source;
+    if(f.medium) out.gz_first_medium = f.medium;
+    return out;
+  }
   function sourceCode(){
     var aliases = {"ig":"instagram","instagram.com":"instagram","l.instagram.com":"instagram","m.instagram.com":"instagram",
                    "fb":"facebook","facebook.com":"facebook","m.facebook.com":"facebook","l.facebook.com":"facebook","lm.facebook.com":"facebook"};
@@ -137,12 +169,15 @@ window.GZ_ATTR = (function(){
       if(!own && !checkout) return;
       touch();
       fields.forEach(function(k){ if(tags[k]) u.searchParams.set(k,tags[k]); });
+      var first = firstTags();
+      if(first) Object.keys(first).forEach(function(k){ u.searchParams.set(k,first[k]); });
       if(token) u.searchParams.set("gz_journey",token);
       if(checkout){
         // Gumroad's documented referrer override preserves the actual first
         // external URL. UTM-only/direct arrivals use this real site URL.
         var origin = url(original) || new URL(location.origin+location.pathname);
         fields.forEach(function(k){ var value=u.searchParams.get(k); if(value) origin.searchParams.set(k,value); });
+        if(first) Object.keys(first).forEach(function(k){ origin.searchParams.set(k,first[k]); });
         if(token) origin.searchParams.set("gz_journey",token);
         else origin.searchParams.delete("gz_journey");
         u.searchParams.set("referrer",origin.toString());
