@@ -341,6 +341,14 @@ the people who make the plugins.
   — Balance first, then EQ, compression, saturation and the bus.
 - [How to master a beat](https://gazillionindustries.com/how-to-master-a-beat/)
   — Headroom, a plain chain, clipping before the limiter, and the checks.
+- [Saturation explained](https://gazillionindustries.com/saturation-explained/)
+  — Harmonics, the types, where it goes in a chain, and what it costs.
+- [How to mix vocals](https://gazillionindustries.com/how-to-mix-vocals/)
+  — Rides before compression, the chain, and making a voice fit the track.
+- [How to EQ vocals](https://gazillionindustries.com/how-to-eq-vocals/)
+  — The frequency map, how to sweep for resonances, and what not to boost.
+- [Why is my mix muddy?](https://gazillionindustries.com/why-is-my-mix-muddy/)
+  — Where mud lives in the spectrum, how to clear it, and what else causes it.
 - [How to compress drums](https://gazillionindustries.com/how-to-compress-drums/)
   — Attack, release and how much gain reduction, on single drums and on the bus.
 - [Parallel compression](https://gazillionindustries.com/parallel-compression/)
@@ -357,6 +365,14 @@ the people who make the plugins.
   — Limit the top, drop the resolution, saturate, compress, and leave the grid.
 - [The SP-303 and the vinyl sim sound](https://gazillionindustries.com/sp-303/)
   — What the 2001 sampler was, what its Vinyl Simulator does, and who used it.
+- [Compression explained](https://gazillionindustries.com/what-is-a-compressor/)
+  — Threshold, ratio, attack, release, and settings that are a fair place to start.
+- [Sidechain compression](https://gazillionindustries.com/sidechain-compression/)
+  — Ducking one track with another: routing, settings, and when not to.
+- [Multiband compression](https://gazillionindustries.com/multiband-compression/)
+  — What it is for, how to set it, and why most problems need one band.
+- [Limiter vs compressor](https://gazillionindustries.com/limiter-vs-compressor/)
+  — Where the line sits between them, and which one goes last.
 - [Filter cutoff and resonance explained](https://gazillionindustries.com/filter-cutoff-and-resonance/)
   — The corner frequency, the slope, the resonant peak, and what each costs.
 - [How to make music sound like it's in another room](https://gazillionindustries.com/how-to-make-music-sound-like-another-room/)
