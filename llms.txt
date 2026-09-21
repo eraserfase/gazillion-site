@@ -9,7 +9,7 @@ as a universal binary for Apple Silicon and Intel, and on Windows as a 64-bit
 VST3. Each one is bought or downloaded from its own page on
 gazillionindustries.com. Prices below are in US dollars.
 
-Last updated: 2026-09-20
+Last updated: 2026-09-21
 
 ## Products
 
@@ -381,8 +381,6 @@ the people who make the plugins.
   — What it measures, why the slow needle is the point, and when to trust it.
 - [Best saturation plugins](https://gazillionindustries.com/best-saturation-plugins/)
   — What the main saturation plugins actually do, with prices and a disclosure.
-- [The Capitol echo chambers](https://gazillionindustries.com/capitol-echo-chambers/)
-  — Eight concrete rooms under a car park, and why they still sound like that.
 - [How to use a limiter](https://gazillionindustries.com/how-to-use-a-limiter/)
   — Where it goes, what ceiling, and how much gain reduction is normal.
 - [Why do my drums sound weak?](https://gazillionindustries.com/why-do-my-drums-sound-weak/)
@@ -455,6 +453,8 @@ the people who make the plugins.
   — Two machines, one job each, and chops recombined from sections nobody takes.
 - [The Alchemist](https://gazillionindustries.com/alchemist/)
   — The ASR-10 years, swing at 62 percent, and the drumless question.
+- [The Capitol echo chambers](https://gazillionindustries.com/capitol-echo-chambers/)
+  — Eight concrete rooms under a car park, and why they still sound like that.
 - [Drum bus compressor settings](https://gazillionindustries.com/drum-bus-compressor-settings/)
   — attack, release, ratio and threshold on a drum bus, and a starting point.
 
