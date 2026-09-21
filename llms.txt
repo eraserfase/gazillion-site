@@ -381,6 +381,12 @@ the people who make the plugins.
   — What it measures, why the slow needle is the point, and when to trust it.
 - [Best saturation plugins](https://gazillionindustries.com/best-saturation-plugins/)
   — What the main saturation plugins actually do, with prices and a disclosure.
+- [The Capitol echo chambers](https://gazillionindustries.com/capitol-echo-chambers/)
+  — Eight concrete rooms under a car park, and why they still sound like that.
+- [How to use a limiter](https://gazillionindustries.com/how-to-use-a-limiter/)
+  — Where it goes, what ceiling, and how much gain reduction is normal.
+- [Why do my drums sound weak?](https://gazillionindustries.com/why-do-my-drums-sound-weak/)
+  — Five causes in order, and why the plugin is the fourth one.
 - [How to compress drums](https://gazillionindustries.com/how-to-compress-drums/)
   — Attack, release and how much gain reduction, on single drums and on the bus.
 - [Parallel compression](https://gazillionindustries.com/parallel-compression/)
