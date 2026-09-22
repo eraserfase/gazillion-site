@@ -286,6 +286,7 @@ fbq('track', 'PageView');
      black. Same fix as the store header - see f12/promo/cover.html. */
   --field:#17263f; --field-lit:#243c63; --field-deep:#0c1422;
   --rouge:#ff6a45; --chalk:#e8e4d8;
+  --buy:#cc2a1e;
   --ink:#e8e4d8; --ink-soft:rgba(232,228,216,.64); --ink-faint:rgba(232,228,216,.38);
   --pill-line:rgba(232,228,216,.24);
   --shadow:rgba(0,0,0,.6);
@@ -329,7 +330,7 @@ main{position:relative; z-index:1; max-width:660px; margin:0 auto;
 
 .cta{font-family:"Archivo Black","Arial Black",sans-serif;
      letter-spacing:.02em; text-decoration:none; text-align:center;
-     color:var(--field-deep); background:var(--chalk); border-radius:999px;
+     color:#fff; background:var(--buy); border-radius:999px;
      display:block; transition:transform .18s ease, box-shadow .18s ease}
 .cta:focus-visible{outline:3px solid var(--chalk); outline-offset:4px}
 
@@ -343,13 +344,13 @@ main{position:relative; z-index:1; max-width:660px; margin:0 auto;
 /* One banner, pinned to the top. It is the only ask on the page, so it carries
    the full treatment rather than a reduced one. */
 .cta{font-size:clamp(18px,5vw,23px); padding:22px 48px; width:100%; max-width:440px;
-     box-shadow:0 0 0 0 rgba(232,228,216,.28), 0 16px 40px -14px rgba(0,0,0,.9);
+     box-shadow:0 0 0 0 rgba(204,42,30,.34), 0 16px 40px -14px rgba(0,0,0,.9);
      animation:halo 3.4s ease-in-out infinite}
 .cta:hover{animation:none;
-     box-shadow:0 0 0 12px rgba(232,228,216,.10), 0 22px 48px -14px rgba(0,0,0,.9)}
+     box-shadow:0 0 0 12px rgba(204,42,30,.16), 0 22px 48px -14px rgba(0,0,0,.9)}
 @keyframes halo{
-  0%,100%{box-shadow:0 0 0 0 rgba(232,228,216,.26), 0 16px 40px -14px rgba(0,0,0,.9)}
-  50%    {box-shadow:0 0 0 14px rgba(232,228,216,0), 0 16px 40px -14px rgba(0,0,0,.9)}
+  0%,100%{box-shadow:0 0 0 0 rgba(204,42,30,.32), 0 16px 40px -14px rgba(0,0,0,.9)}
+  50%    {box-shadow:0 0 0 14px rgba(204,42,30,0), 0 16px 40px -14px rgba(0,0,0,.9)}
 }
 /* The same ask again at the end of the scroll, but in the flow rather than
    pinned - so it arrives when someone has finished reading instead of sitting
