@@ -284,6 +284,27 @@ li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
   play is essentially absent from the free field. That is the point at which paying for one
   plugin replaces stacking four.</p>
 
+  <h2>Formats, hosts and the things that break</h2>
+  <p>Free plugins fail in ways paid ones mostly do not, and all of them are foreseeable.</p>
+
+  <p><strong>Format coverage is uneven.</strong> A free plugin may ship VST3 and nothing else,
+  which is a problem in hosts that want AU, and AAX is rare outside commercial products. Check
+  before you build a session rather than after.</p>
+
+  <p><strong>Signing and notarization.</strong> Recent macOS versions refuse to load plugins
+  that have not been signed, and free projects frequently have not been, because the
+  certificates cost money annually. The plugin is not broken; the system simply will not run
+  it, and the workarounds change with every OS release.</p>
+
+  <p><strong>Silent abandonment.</strong> A paid plugin that stops being updated usually
+  announces it. A free one just stops, and you find out when a host update arrives. Projects
+  that ship their source survive this, because somebody can rebuild them; a binary from a
+  site that has gone quiet cannot.</p>
+
+  <p>None of this argues against free tools. It argues for treating a free plugin the way you
+  would treat any dependency: know what happens to your sessions if it disappears, and keep
+  bounced audio of anything you would be unable to recreate.</p>
+
   <h2>Questions people ask</h2>
   <h3>What is the best free tape plugin?</h3>
   <p>An open-source physical model of a reel machine is the strongest free option for tape
