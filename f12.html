@@ -118,6 +118,26 @@ window.GZ_ATTR = (function(){
     if(f.medium) out.gz_first_medium = f.medium;
     return out;
   }
+  /* Meta's own two browser identifiers. `_fbp` is set by the pixel that this
+     page already loads; `_fbc` is set when the arrival carried an fbclid. The
+     server gets NEITHER from Gumroad, and without them a server-side Purchase
+     cannot be deduplicated against the browser one - which is why Events
+     Manager reports our Purchase coverage as 1% against a 75% goal.
+     They ride the documented referrer override, because that is the only field
+     measured to survive to the sale record; url_parameters comes back empty. */
+  function cookie(name){
+    try {
+      var m = document.cookie.match("(?:^|; )"+name.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")+"=([^;]*)");
+      return m ? decodeURIComponent(m[1]) : "";
+    } catch(e){ return ""; }
+  }
+  function metaIds(){
+    var out = {}, fbp = cookie("_fbp"), fbc = cookie("_fbc");
+    if(/^fb\.\d\.\d{10,16}\.[0-9A-Za-z_-]{4,64}$/.test(fbp)) out.gz_fbp = fbp;
+    if(/^fb\.\d\.\d{10,16}\./.test(fbc)) out.gz_fbc = fbc.slice(0,400);
+    else if(tags.fbclid) out.gz_fbc = "fb.1."+Date.now()+"."+tags.fbclid;
+    return out;
+  }
   function sourceCode(){
     var aliases = {"ig":"instagram","instagram.com":"instagram","l.instagram.com":"instagram","m.instagram.com":"instagram",
                    "fb":"facebook","facebook.com":"facebook","m.facebook.com":"facebook","l.facebook.com":"facebook","lm.facebook.com":"facebook"};
@@ -171,6 +191,8 @@ window.GZ_ATTR = (function(){
         if(first) Object.keys(first).forEach(function(k){ origin.searchParams.set(k,first[k]); });
         if(token) origin.searchParams.set("gz_journey",token);
         else origin.searchParams.delete("gz_journey");
+        var ids = metaIds();
+        Object.keys(ids).forEach(function(k){ origin.searchParams.set(k,ids[k]); });
         u.searchParams.set("referrer",origin.toString());
       }
       a.href = u.toString();
