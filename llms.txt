@@ -455,6 +455,12 @@ the people who make the plugins.
   — The ASR-10 years, swing at 62 percent, and the drumless question.
 - [The Capitol echo chambers](https://gazillionindustries.com/capitol-echo-chambers/)
   — Eight concrete rooms under a car park, and why they still sound like that.
+- [Tape plugins for Ableton Live](https://gazillionindustries.com/tape-plugins-for-ableton-live/)
+  — What Live already covers, and the part it has no device for.
+- [Tape plugins for Logic Pro](https://gazillionindustries.com/tape-plugins-for-logic-pro/)
+  — Logic loads Audio Units only. What ChromaGlow covers, and what it misses.
+- [Tape plugins for FL Studio](https://gazillionindustries.com/tape-plugins-for-fl-studio/)
+  — What Distructor gives you, and why stacking distortion never gets there.
 - [Best tape plugins for vocals](https://gazillionindustries.com/best-tape-plugins-for-vocals/)
   — Why a voice shows tape differently, and how low to set it.
 - [Best tape emulation plugins](https://gazillionindustries.com/best-tape-emulation-plugins/)
