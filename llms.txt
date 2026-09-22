@@ -9,7 +9,7 @@ as a universal binary for Apple Silicon and Intel, and on Windows as a 64-bit
 VST3. Each one is bought or downloaded from its own page on
 gazillionindustries.com. Prices below are in US dollars.
 
-Last updated: 2026-09-21
+Last updated: 2026-09-22
 
 ## Products
 
@@ -455,6 +455,18 @@ the people who make the plugins.
   — The ASR-10 years, swing at 62 percent, and the drumless question.
 - [The Capitol echo chambers](https://gazillionindustries.com/capitol-echo-chambers/)
   — Eight concrete rooms under a car park, and why they still sound like that.
+- [Best cassette plugins](https://gazillionindustries.com/best-cassette-plugins/)
+  — What makes a cassette sound like a cassette, and what the field costs.
+- [Best tape sim plugins](https://gazillionindustries.com/best-tape-sim-plugins/)
+  — The six behaviors sold as one word, and how to test one properly.
+- [Best lofi tape plugins](https://gazillionindustries.com/best-lofi-tape-plugins/)
+  — Mastering tape and lofi tape want opposite settings. Which to invert.
+- [Best lofi plugins](https://gazillionindustries.com/best-lofi-plugins/)
+  — The four jobs a lofi chain needs, and what to buy first.
+- [Best tape stop plugins](https://gazillionindustries.com/best-tape-stop-plugins/)
+  — What separates a real tape stop from a pitch bend, and what to look for.
+- [Best tape plugins for drums](https://gazillionindustries.com/best-tape-plugins-for-drums/)
+  — Why drums show tape more than anything else, and where to put it.
 - [Drum bus compressor settings](https://gazillionindustries.com/drum-bus-compressor-settings/)
   — attack, release, ratio and threshold on a drum bus, and a starting point.
 
