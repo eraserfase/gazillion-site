@@ -133,6 +133,20 @@ h3{margin:28px 0 8px; font-size:17px; font-weight:600; line-height:1.4; color:va
 ul,ol{margin:0 0 16px; padding-left:1.2em}
 li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
 .cta{background:var(--accent); color:var(--field-deep)}
+
+/* ---- listen block -------------------------------------------------------
+   Every page that ranks for these terms explains how tape SOUNDS in words and
+   then shows a screenshot. None of them lets you hear it. These are real
+   renders of one loop through TRIPLE OG, labelled with the settings, so the
+   reader can check the description against the thing itself. */
+.listen{margin:0 0 8px}
+.listen figure{margin:0 0 18px}
+.listen figure:last-child{margin-bottom:0}
+.listen figcaption{font-size:12px; letter-spacing:.14em; text-transform:uppercase;
+                   color:var(--ink-faint); margin:0 0 8px}
+.listen figcaption b{color:var(--ink); font-weight:600; letter-spacing:.06em}
+.listen audio{width:100%; height:36px; display:block}
+.listen .src{font-size:13px; color:var(--ink-faint); margin:14px 0 0; line-height:1.5}
 </style>
 
 <main>
@@ -221,6 +235,28 @@ li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
   <p>If a plugin has no transport, adding one is not possible afterwards; you can automate a
   pitch control and get an approximation. If a plugin has a transport you can play, that is a
   different instrument. It is worth deciding which you want before comparing anything else.</p>
+  <h2>Hear it</h2>
+  <div class="card listen">
+    <p>Every page in this category describes how a cassette sounds and then shows you a screenshot. Here are the three things that actually make the sound, one at a time, and then together.</p>
+    <figure>
+      <figcaption><b>Dry</b> &mdash; no processing &mdash; speed holds at 1.000</figcaption>
+      <audio controls preload="none" src="/tripleog/tog-dry.m4a"></audio>
+    </figure>
+    <figure>
+      <figcaption><b>Wow and flutter 65</b> &mdash; speed moves between 0.941 and 1.071</figcaption>
+      <audio controls preload="none" src="/tripleog/tog-wowflutter.m4a"></audio>
+    </figure>
+    <figure>
+      <figcaption><b>Hiss 60, tone 45</b> &mdash; a noise bed, nothing else</figcaption>
+      <audio controls preload="none" src="/tripleog/tog-hiss.m4a"></audio>
+    </figure>
+    <figure>
+      <figcaption><b>Age 35, hiss 45, drive 30, wow 40</b> &mdash; a worn deck &mdash; speed 0.951 to 1.059</figcaption>
+      <audio controls preload="none" src="/tripleog/tog-aged.m4a"></audio>
+    </figure>
+    <p class="src">The same eleven seconds each time, rendered offline through TRIPLE OG at the settings shown. No other processing, no master bus, no edits.</p>
+  </div>
+
 
   <h2>Questions people ask</h2>
   <h3>What is the best cassette plugin?</h3>

@@ -133,6 +133,20 @@ h3{margin:28px 0 8px; font-size:17px; font-weight:600; line-height:1.4; color:va
 ul,ol{margin:0 0 16px; padding-left:1.2em}
 li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
 .cta{background:var(--accent); color:var(--field-deep)}
+
+/* ---- listen block -------------------------------------------------------
+   Every page that ranks for these terms explains how tape SOUNDS in words and
+   then shows a screenshot. None of them lets you hear it. These are real
+   renders of one loop through TRIPLE OG, labelled with the settings, so the
+   reader can check the description against the thing itself. */
+.listen{margin:0 0 8px}
+.listen figure{margin:0 0 18px}
+.listen figure:last-child{margin-bottom:0}
+.listen figcaption{font-size:12px; letter-spacing:.14em; text-transform:uppercase;
+                   color:var(--ink-faint); margin:0 0 8px}
+.listen figcaption b{color:var(--ink); font-weight:600; letter-spacing:.06em}
+.listen audio{width:100%; height:36px; display:block}
+.listen .src{font-size:13px; color:var(--ink-faint); margin:14px 0 0; line-height:1.5}
 </style>
 
 <main>
@@ -200,6 +214,20 @@ li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
   808s are the risk: a wavering sub fights the kick and sounds out of tune fast, so keep low end off
   the effect or use very little. On a lead vocal, a small amount can sound like a vintage record;
   more than that sounds like a mistake.</p>
+  <h2>Hear it</h2>
+  <div class="card listen">
+    <p>Descriptions of wow and flutter only go so far. Here is one loop with the speed held steady, then the same loop with the transport allowed to wander.</p>
+    <figure>
+      <figcaption><b>Dry</b> &mdash; no processing &mdash; speed holds at 1.000</figcaption>
+      <audio controls preload="none" src="/tripleog/tog-dry.m4a"></audio>
+    </figure>
+    <figure>
+      <figcaption><b>Wow and flutter 65</b> &mdash; speed moves between 0.941 and 1.071</figcaption>
+      <audio controls preload="none" src="/tripleog/tog-wowflutter.m4a"></audio>
+    </figure>
+    <p class="src">The same eleven seconds each time, rendered offline through TRIPLE OG at the settings shown. No other processing, no master bus, no edits.</p>
+  </div>
+
 
   <h2>Questions people ask</h2>
   <h3>What does wow and flutter mean?</h3>
