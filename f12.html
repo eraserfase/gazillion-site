@@ -747,17 +747,59 @@ h1.mark-block{font-size:inherit}
    onto a second line hard against the LEFT edge (the line is text-align:start).
    Give them their own centred row instead. */
 @media (max-width:560px){.terms.delivery{text-align:center} .gr-mini{display:block; margin:4px 0 0}}
+
+/* ---- payment marks ------------------------------------------------------- */
+/* Under the ratings row. Gumroad owns the checkout, so no link can open a
+   wallet directly - every mark goes to the same one-tap checkout, where the
+   wallet the buyer's device supports is already the first thing offered. The
+   row exists to say so before the tap, not after. utm_content carries which
+   mark was used so the board can tell whether it moved click-to-sale.
+   The white chip is the page's, not the brands' - it gives Apple's black
+   badge and PayPal's blue wordmark a background they both read on, over four
+   pages with four different banners, without touching the artwork itself. */
+.paymarks{margin:9px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:7px;
+          justify-content:center;align-items:center;line-height:0}
+.paymark{display:inline-flex;align-items:center;justify-content:center;
+         height:34px;padding:0 12px;border-radius:7px;background:#fff;
+         box-shadow:0 1px 2px rgba(0,0,0,.28);text-decoration:none;
+         transition:transform .14s,box-shadow .14s}
+.paymark:hover{transform:translateY(-1px);box-shadow:0 3px 6px rgba(0,0,0,.34)}
+.paymark:active{transform:translateY(0);box-shadow:0 1px 2px rgba(0,0,0,.28)}
+.paymark img{display:block;width:auto}
+.pm-apple img{height:22px}    /* badge: fills its own box */
+.pm-google img{height:34px}   /* badge: ships with its required clear space */
+.pm-paypal img{height:15px}   /* bare wordmark: no built-in clear space */
+.pm-google{display:none}
+.no-applepay .pm-apple{display:none}
+.no-applepay .pm-google{display:inline-flex}
+@media (max-width:480px){
+  .paymarks{gap:6px}
+  .paymark{height:31px;padding:0 10px}
+  .pm-apple img{height:20px}.pm-google img{height:31px}.pm-paypal img{height:14px}
+}
+
+/* Delivery line: uppercase, bold, white. Decided 22 Sep 2026. */
+.terms.delivery{margin-top:0;color:#fff;text-transform:uppercase;font-weight:700}
+
+/* One line on a phone, decided 22 Sep 2026. Uppercase and bold widened the line
+   enough to wrap; these are the largest sizes that still fit. */
+@media (max-width:560px){
+  .terms.delivery{font-size:clamp(8px,2.5vw,12px);letter-spacing:.025em}
+}
+
 </style>
+<script>if(!window.ApplePaySession)document.documentElement.className+=" no-applepay";</script>
 
 <div class="banner banner--top">
-  <p class="terms">vst3 &nbsp;&middot;&nbsp; au &nbsp;&middot;&nbsp; macos standalone &nbsp;&middot;&nbsp; windows</p>
   <a class="cta" data-pos="banner_top" href="https://gazillionindustries.gumroad.com/l/f12-plugin-only?wanted=true&amp;utm_source=gazillionindustries.com&amp;utm_medium=cta&amp;utm_content=banner_top"><span class="cta-label">GET F(ilter)12</span><span class="cta-price">$49</span></a>
+  <p class="terms">vst3 &nbsp;&middot;&nbsp; au &nbsp;&middot;&nbsp; macos standalone &nbsp;&middot;&nbsp; windows</p>
   <!-- Delivery line. Most arrivals are mobile and paid, and they leave in
        about 16 seconds where desktop stays about a minute. The theory being
        tested is that they believe buying needs a computer, so they defer and
        never come back. Nothing here names the checkout. If mobile click-to-sale
        does not move, the device theory is dead and distrust is what is left. -->
   <p class="terms delivery"><span>grab it on your phone</span> &middot; <span>arrives by email</span> &middot; <span>install any time</span> <!-- GR-STARS:START f12 --><span class="gr-mini" role="img" aria-label="Rated 5.0 out of 5 on Gumroad">★★★★★ <span class="gr-mini-num">5.0</span></span><!-- GR-STARS:END --></p>
+  <p class="paymarks"><a class="paymark pm-apple" href="https://gazillionindustries.gumroad.com/l/f12-plugin-only?wanted=true&amp;utm_source=gazillionindustries.com&amp;utm_medium=cta&amp;utm_content=pay_wallet"><img src="pay/apple-pay-mark.svg" width="166" height="106" alt="Apple Pay"></a><a class="paymark pm-google" href="https://gazillionindustries.gumroad.com/l/f12-plugin-only?wanted=true&amp;utm_source=gazillionindustries.com&amp;utm_medium=cta&amp;utm_content=pay_wallet"><img src="pay/google-pay-mark.svg" width="1094" height="742" alt="Google Pay"></a><a class="paymark pm-paypal" href="https://gazillionindustries.gumroad.com/l/f12-plugin-only?wanted=true&amp;utm_source=gazillionindustries.com&amp;utm_medium=cta&amp;utm_content=pay_paypal"><img src="pay/paypal-mark.svg" width="170" height="48" alt="PayPal"></a></p>
 </div>
 
 <main>
