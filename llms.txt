@@ -455,6 +455,10 @@ the people who make the plugins.
   — The ASR-10 years, swing at 62 percent, and the drumless question.
 - [The Capitol echo chambers](https://gazillionindustries.com/capitol-echo-chambers/)
   — Eight concrete rooms under a car park, and why they still sound like that.
+- [Best tape emulation plugins](https://gazillionindustries.com/best-tape-emulation-plugins/)
+  — Reel and cassette are different products. Pick the machine first.
+- [Best free tape plugins](https://gazillionindustries.com/best-free-tape-plugins/)
+  — What free tape plugins do well, and where they run out.
 - [Best cassette plugins](https://gazillionindustries.com/best-cassette-plugins/)
   — What makes a cassette sound like a cassette, and what the field costs.
 - [Best tape sim plugins](https://gazillionindustries.com/best-tape-sim-plugins/)
