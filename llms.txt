@@ -481,6 +481,16 @@ the people who make the plugins.
   — What separates a real tape stop from a pitch bend, and what to look for.
 - [Best tape plugins for drums](https://gazillionindustries.com/best-tape-plugins-for-drums/)
   — Why drums show tape more than anything else, and where to put it.
+- [Vinyl sim, and what a vinyl sim plugin does](https://gazillionindustries.com/vinyl-sim-plugin/)
+  — The effect taken apart: bandwidth, noise, the squash and the wear.
+- [Best free VST plugins](https://gazillionindustries.com/best-free-vst-plugins/)
+  — Which categories free fills well, and what it costs you later.
+- [Best free compressor plugins](https://gazillionindustries.com/best-free-compressor/)
+  — What to look for, and the jobs you actually need one for.
+- [How to make Madlib type beats](https://gazillionindustries.com/how-to-make-madlib-type-beats/)
+  — Loops left long, drums underneath, very little cleanup.
+- [How to make Dilla type beats](https://gazillionindustries.com/how-to-make-dilla-type-beats/)
+  — The feel, taken apart into things you can actually do.
 - [Drum bus compressor settings](https://gazillionindustries.com/drum-bus-compressor-settings/)
   — attack, release, ratio and threshold on a drum bus, and a starting point.
 
