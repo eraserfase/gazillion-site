@@ -53,7 +53,7 @@ The interaction between elements matters as much as the individual offsets. A ha
 
 ## Chopping and how much to keep
 
-When you chop a sample, resist the urge to keep every hit. A full drum break played straight through will sound like a drum break. What you want is a fragment, a single snare hit, a ghost of a hi-hat, a crash that bleeds into silence. Pull one or two hits from a longer phrase and let the rest of the bar sit empty. The space between your chops becomes part of the groove. If you fill every gap with another slice, you lose the tension that makes the pattern feel alive.
+When you chop a sample, resist the urge to keep every hit. A full drum break played straight through will sound like a drum break. What you want is a fragment, a single snare hit, a ghost of a hi-hat, a crash that bleeds into silence. Pull one or two hits from a longer phrase and let the rest of the bar sit empty. The space between your [chops](https://gazillionindustries.com/how-to-chop-a-drum-break/) becomes part of the groove. If you fill every gap with another slice, you lose the tension that makes the pattern feel alive.
 
 A good rule is to keep less than you think you need. Take a four-bar phrase and pull out only the hits that carry weight, the ones that land on beats you would not otherwise emphasize. Leave the rest. You can always add another slice later, but removing a chop after the fact means rebuilding the whole pattern around it. Start sparse. Let the kick and snare do the talking before you layer in extra texture.
 
@@ -65,7 +65,7 @@ Once the hits are placed and the timing feels right, the next step is shaping ho
 
 Reverb is where restraint matters most. Many of these beats sound almost completely dry, with the snare and hats sitting right on top of the mix with no tail at all. If you do add space, keep it very short, a small plate or room with the decay turned down until you can barely hear it. The goal is to make the drums feel close and immediate, not to place them in a room. A subtle slap-back on the snare can add a hint of depth without washing out the transient.
 
-On the drum bus as a whole, a gentle compressor with a slow attack lets the transients through while gluing the hits together. A light high-pass filter on the bus removes any sub content that competes with the bass line. Some producers run the entire drum bus through a tape-style saturator to soften the digital edge and make everything feel like it came off the same machine. The overall result should sound like the drums were played on a single piece of hardware, slightly compressed, slightly warm, and sitting in a narrow frequency band that leaves the low end and the high end open for the bass and the keys.
+On the drum bus as a whole, a gentle compressor with a slow attack lets the transients through while gluing the hits together. A light high-pass filter on the bus removes any sub content that competes with the bass line. Some producers run the entire [drum bus](https://gazillionindustries.com/what-is-a-drum-bus/) through a tape-style saturator to soften the digital edge and make everything feel like it came off the same machine. The overall result should sound like the drums were played on a single piece of hardware, slightly compressed, slightly warm, and sitting in a narrow frequency band that leaves the low end and the high end open for the bass and the keys.
 
 ## What gets it wrong
 

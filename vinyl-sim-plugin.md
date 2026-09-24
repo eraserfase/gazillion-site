@@ -9,7 +9,7 @@ Published 2026-09-24, updated 2026-09-24. By Gazillion Industries, who make DRUG
 
 Every plugin in this category claims the same thing and they do not all do the same work. Pulled apart, the effect is four separate behaviors happening at once, and which of them a given plugin actually implements is what decides whether the result sounds like a record or like a filter with noise on it.
 
-A vinyl sim is a plugin that adds the warmth, noise floor, and subtle pitch instability associated with analog disc playback to a digital audio signal. It typically layers a crackle or hiss bed, applies gentle high-frequency roll-off, and introduces slow wow and flutter so the track reads as though it were cut to a physical disc and played back through a turntable rather than rendered purely in the box.
+A vinyl sim is a plugin that adds the warmth, noise floor, and subtle pitch instability associated with analog disc playback to a digital audio signal. It typically layers a crackle or [hiss](https://gazillionindustries.com/tape-hiss/) bed, applies gentle high-frequency roll-off, and introduces slow wow and flutter so the track reads as though it were cut to a physical disc and played back through a turntable rather than rendered purely in the box.
 
 ## The short version
 
@@ -31,7 +31,7 @@ A vinyl simulator takes a clean digital signal and reshapes it to resemble what 
 
 Beyond the frequency shaping, the plugin introduces noise. A steady hiss sits under everything, and intermittent crackle pops at irregular intervals, mimicking the sound of a needle dragging across a worn groove. Some simulators also add a subtle pitch instability, a slow wobble in the timing that makes sustained notes drift slightly sharp or flat. This is the wow and flutter that a turntable introduces when the platter is not perfectly true.
 
-The third thing a vinyl sim does is compress the signal in a nonlinear way. Transients get softened, peaks get tamed, and the overall dynamic range narrows without a traditional compressor doing the work. Harmonic distortion layers in, usually even-order, which thickens the sound and makes it feel denser. The combination of all these elements is what separates a convincing simulation from a thin one. A thin simulation applies only the frequency curve and the noise floor, leaving the signal otherwise untouched. A convincing one also handles the transient behavior, the saturation, and the pitch instability together, so the result reads as a single coherent artifact rather than a stack of unrelated processing.
+The third thing a vinyl sim does is compress the signal in a nonlinear way. Transients get softened, peaks get tamed, and the overall dynamic range narrows without a traditional [compressor](https://gazillionindustries.com/what-is-a-compressor/) doing the work. Harmonic distortion layers in, usually even-order, which thickens the sound and makes it feel denser. The combination of all these elements is what separates a convincing simulation from a thin one. A thin simulation applies only the frequency curve and the noise floor, leaving the signal otherwise untouched. A convincing one also handles the transient behavior, the saturation, and the pitch instability together, so the result reads as a single coherent artifact rather than a stack of unrelated processing.
 
 **DOSE 88.** It dives on each hit and takes the bar to come back.
 

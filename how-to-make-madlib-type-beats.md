@@ -31,7 +31,7 @@ Digging is not about finding the most famous record or the cleanest production. 
 
 A usable loop in this approach does not need to be four bars long or perfectly in time. It can be two bars, three bars, a single sustained chord with a horn stab on top of it. What matters is that it has a texture you cannot replicate with synthesis, a room sound, a tape hiss, a performance that was captured once and never repeated. If you can hear the engineer's hands on the fader, if you can hear the singer breathing between phrases, that is a usable loop. You do not need to clean it up. The dirt is the point.
 
-The practical test is simple. Put the loop on your sampler or in your DAW, leave it running, and start building drums underneath it. If the loop starts to feel like a bed rather than a solo, if your drums can sit under it without fighting for the same frequency space, you have found something workable. If you find yourself wanting to EQ it, compress it, or chop it into pieces before you even try to build around it, it is probably too polished. You want a loop that resists your control, that forces you to build around its imperfections rather than the other way around.
+The practical test is simple. Put the loop on your sampler or in your DAW, leave it running, and start building drums underneath it. If the loop starts to feel like a bed rather than a solo, if your drums can sit under it without fighting for the same frequency space, you have found something workable. If you find yourself wanting to EQ it, [compress](https://gazillionindustries.com/how-to-compress-drums/) it, or [chop](https://gazillionindustries.com/how-to-chop-a-drum-break/) it into pieces before you even try to build around it, it is probably too polished. You want a loop that resists your control, that forces you to build around its imperfections rather than the other way around.
 
 **DOSE 12.** The line along the bottom is gain reduction; here it barely leaves the top.
 
@@ -89,7 +89,7 @@ The dust is part of the character. You do not want to scrub it all away. What yo
 
 ### How long should the loop be?
 
-Keep loops short and tight. A few bars of a chopped sample, repeated with slight variation, gives the beat its hypnotic pull. Longer loops tend to lose the raw, dusty feel that defines this style. The shorter the phrase, the more space you leave for drums and atmosphere to breathe around it.
+Keep loops short and tight. A few bars of a chopped sample, repeated with slight variation, gives the beat its hypnotic pull. Longer loops tend to lose the raw, [dusty](https://gazillionindustries.com/how-to-make-drums-sound-dusty/) feel that defines this style. The shorter the phrase, the more space you leave for drums and atmosphere to breathe around it.
 
 ## What DRUGS does
 
