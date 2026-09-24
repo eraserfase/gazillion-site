@@ -113,6 +113,17 @@ a.inline:hover{text-decoration-color:var(--chalk)}
          text-underline-offset:3px; text-decoration-color:var(--ink-faint)}
 .aside a:hover{color:var(--chalk)}
 
+/* Press quote above the end card, set like the landing page's .tm-say quotes:
+   Archivo Black in chalk, attribution in tracked caps, link in the accent. */
+.pquote{margin:64px 0 0; text-align:center}
+.pquote blockquote{margin:0 0 13px; font-family:"Archivo Black","Arial Black",sans-serif;
+        font-size:clamp(16px,3.4vw,20px); line-height:1.38; letter-spacing:.02em;
+        color:var(--chalk); text-wrap:balance}
+.pquote figcaption{font-size:12px; letter-spacing:.18em; text-transform:uppercase; color:var(--ink-soft)}
+.pquote figcaption a{font-weight:600; color:var(--accent); text-decoration:none}
+.pquote figcaption a:hover{text-decoration:underline}
+.pquote + .end{margin-top:40px}
+
 .end{margin:64px 0 0; padding:28px 24px; border:1px solid var(--pill-line); border-radius:14px;
      text-align:center; background:rgba(242,233,235,.03)}
 .end p{margin:0 0 18px; color:var(--ink-soft)}
@@ -480,6 +491,10 @@ li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
 
   <p>Six behaviors. Most plugins pick three. The sixth is the one you can play.</p>
 
+  <figure class="pquote">
+    <blockquote>&ldquo;Most tape plugins treat the transport as something to model quietly in the background, but this one hands it to you as an instrument.&rdquo;</blockquote>
+    <figcaption><a href="https://audiocolour.com/best-tape-emulation-plugins/#8_Gazillion_Industries_TRIPLE_OG" target="_blank" rel="noopener">Best Tape Emulation Plugins</a> &middot; AudioColour.com</figcaption>
+  </figure>
   <div class="end">
     <p>TRIPLE OG &mdash; cassette tape simulation for Mac and Windows, with a transport
     that drags, jams and sprints to catch up. There is a demo on the page.</p>
