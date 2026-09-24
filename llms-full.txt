@@ -11151,27 +11151,101 @@ To make a sample sound old, narrow its frequency range, then add the flaws of ol
 
 - **Space**: narrower stereo, a small dark room
 
+## Hear the moves separately
+
+Four renders of one short source, so the words underneath have something to point at. Clean, then the band narrowed and nothing else, then bit reduction on its own, then bits and rate together.
+
+- **Clean** — no processing — https://gazillionindustries.com/f12/f12-clean.m4a
+
+- **Band narrowed** — filter only, grain untouched — https://gazillionindustries.com/f12/f12-filter60.m4a
+
+- **Grain only** — bit reduction, rate untouched — https://gazillionindustries.com/f12/f12-bitcrush.m4a
+
+- **Bits and rate together** — the pair — https://gazillionindustries.com/f12/f12-both.m4a
+
+Those four files were measured for this page rather than described from memory. In the clean render, 99 per cent of the energy sits below about 870 Hz. Narrowing the band drops the average level by 1.4 dB, which is the first thing aging a sample costs you. Bit reduction leaves that 99 per cent point at about 1.5 kHz; bits and rate together push it out to about 3.4 kHz — higher than the clean source, on a file that had nothing added to its top end. That content is folded down from above the new ceiling, and it is what people mean by grain. Rendered through [F(ilter)12](https://gazillionindustries.com/f12.html).
+
 **4 bit at 8 kHz.** Bits make it grainy; the rate is what makes it clang.
 
 ## Why old recordings sound old
 
 Old media couldn't hold much. Records, tape, early samplers and radios all lost some low end and a lot of top end, added noise, drifted in speed and blurred the stereo image, if they had one at all. Each of those is a separate move you can make, which is good news: you can choose which era of old you mean. If the era you mean is the sampler rather than the medium, [12 bit sampler plugins](https://gazillionindustries.com/12-bit-sampler-plugins/) is the one to read.
 
+## Pick an era before you touch a knob
+
+Old is a family of sounds, and the knobs have no opinion about which member you want. Decide what playback you are pretending to have, then spend your moves on the flaws that belong to it. Stack all of them and you get a sound nobody ever heard: a warped, hissing, crackling, band-passed, quantized object that reads as a plugin chain, because that is the only place it has ever existed.
+
+- **Worn record**: high-pass 60–100 Hz, low-pass 6–10 kHz, crackle low, slight narrowing
+
+- **Kitchen radio**: band from roughly 400 Hz to 3 kHz, hard mono, a little drive, no room
+
+- **Early sampler**: band left wide, rate stepped down, bits down, no wobble at all
+
+- **Cassette dub**: wobble and hiss lead, top off around 12 kHz, band second
+
+- **Phone line**: roughly 300 Hz to 3 kHz, mono, hard drive, nothing else
+
+- **Room next door**: low-pass first, then a long dark tail, then narrow it
+
+Three of those have their own pages: [telephone effect on vocals](https://gazillionindustries.com/telephone-effect-on-vocals/) for the tight band, [how to make music sound like another room](https://gazillionindustries.com/how-to-make-music-sound-like-another-room/) for the muffled one, and [how to make music sound like cassette](https://gazillionindustries.com/how-to-make-music-sound-like-cassette/) for the wobble.
+
 ## Narrow the range
 
 This is most of the effect. A high-pass takes out the deep low end that old playback never had, and a low-pass takes the air off the top. The narrower the band, the older and smaller it sounds: a gentle roll-off reads as a warm record, a tight band around the mids reads as an old radio or telephone. Use a resonant filter for a little extra honk.
+
+Slope matters as much as the corner. A 6 dB per octave low-pass at 8 kHz leaves real content at 16 kHz, one octave up and only 6 dB down, so the sample keeps its air and just sounds dull. At 24 dB per octave the same corner puts 16 kHz 24 dB down and 32 kHz off the map, and the top of the record is gone rather than softened. Start at 12 or 18, and reach for 24 when you want the edge of the band to be audible as an edge.
+
+Resonance is the difference between a filter you hear and a filter you notice. Two to four dB of lift at the corner makes the band sound like a horn or a cone instead of a smooth curve, and buys back a little of the level the filter just took. Past about 6 dB it rings on transients and the ear finds the plugin. [Filter cutoff and resonance](https://gazillionindustries.com/filter-cutoff-and-resonance/) covers what the two controls do to each other.
 
 ## Add warmth and grain
 
 Gentle saturation rounds the peaks and adds density, like a signal that went through old circuits. A little bit depth or sample rate reduction adds the grain of early digital samplers. Stack them lightly. The theory is in [bitcrushing explained](https://gazillionindustries.com/bitcrushing-explained/).
 
+The two pull in opposite directions, which is why they work together. Saturation adds harmonics related to the source — second, third, fourth above the note — so it thickens without souring the pitch. Rate reduction adds content with no relation to the note at all. Set the drive first with the crusher bypassed, until the loudest bar is being held rather than squashed, then bring the grain in underneath. The other order has the drive distorting the grain instead of the music, and it goes to gravel fast. [Saturation explained](https://gazillionindustries.com/saturation-explained/) has the harmonic picture.
+
 [F(ilter)12](https://gazillionindustries.com/f12.html) puts a filter, the crush pair and drive in one place. There's a demo on the page.
+
+## The numbers behind the grain
+
+Bit depth and sample rate are two unrelated pieces of arithmetic sold as one knob. Knowing which one you are turning is the difference between a sample that sounds aged and one that sounds broken.
+
+Sample rate sets a ceiling. A stream can carry nothing above half its rate, so stepping down to 8 kHz puts a hard lid at 4 kHz — and what was above the lid folds back down rather than disappearing. A 5 kHz partial at an 8 kHz rate reappears at 8000 minus 5000, which is 3 kHz, and 3 kHz is not a harmonic of anything in the source. Play a rising line and the folded content walks downward while the note walks up. That inversion is the clang, and it is the most recognizable tell of digital aging. [What is aliasing in audio](https://gazillionindustries.com/what-is-aliasing-in-audio/) takes it apart properly.
+
+Bit depth sets a floor. Each bit is worth about 6 dB of range, so 16 bit leaves roughly 96 dB between the loudest sample and the noise under it, 12 bit about 72 dB, 8 bit about 48 and 4 bit about 24. Take bits away and the floor climbs toward the music. That is why crushing is inaudible on a loud sustained chord and obvious on a decay: the tail falls into the floor and the end of the note dissolves into a fixed, grainy hiss that does not duck when the music does. If a crusher seems to be doing nothing, you are auditioning it on the loud part.
+
+**12 bit, rate untouched.** About 72 dB of range left — enough to hold a decay and still put a floor under it.
 
 ## Add movement and noise
 
 Old media never ran at a perfectly steady speed. A slow, subtle pitch wobble makes a sample feel like it's playing off a worn tape or a slightly warped record. Under it, a quiet noise bed, hiss for tape, a soft crackle for vinyl, gives the silence a texture. Keep both barely audible; the listener should feel them before they notice them.
 
+Put a number on the wobble or you will overdo it. A 0.3 per cent speed deviation is about 5 cents, a twentieth of a semitone: you will not name the interval, you will only hear the note refuse to sit still. One per cent is about 17 cents and sounds seasick on anything sustained. Rate matters too — under 1 Hz reads as a warped disc, 4 to 7 Hz reads as a transport that needs servicing. Drums hide both and sustained horns hide neither, so wobble the pitched parts on their own. [Wow and flutter](https://gazillionindustries.com/wow-and-flutter/) is the long version; [tape hiss](https://gazillionindustries.com/tape-hiss/) covers the bed.
+
+Set the bed by its distance from the music, not by its own number. Thirty to forty dB below the sample's peak is the window: audible in the gaps, gone under the loudest bar. A bed that survives the loudest bar is doing something other than age.
+
+[TRIPLE OG](https://gazillionindustries.com/tripleog.html) is our cassette tape simulation for Mac and Windows, with HISS, WOW FLUT and an AGE control running from zero to sixty years — the wobble-and-hiss half of this article in one box.
+
+## Where it goes in the chain
+
+Order changes the result more than any single setting in it. Each step below exists because the step after it would otherwise be working on the wrong thing.
+
+- Speed or pitch move first, so everything after it ages what you actually kept.
+
+- Drive second, on the full band, before anything has been thrown away.
+
+- High-pass and low-pass third, which also removes the harshest of the drive.
+
+- Rate and bits fourth, on a signal whose top end you already chose.
+
+- A second, gentle low-pass after the crusher to tame what folded down.
+
+- Noise bed next, then width, then a small dark room last.
+
+Two of those are worth an argument. Filtering before the crusher decides whether there is anything up there to fold down at all: a band already stopping at 6 kHz cannot produce much folded content at an 8 kHz rate, so if you want the clang, cut the top end after. And the bed should usually sit after anything that reacts to level — hiss in front of a bus compressor gets lifted every time the music gets out of the way, which is a pumping bed rather than a still one. If it has to go early, because you want it crushed along with the music, keep the compression after it gentle. [Gain staging](https://gazillionindustries.com/gain-staging/) matters here more than usual, because three of these stages change the level.
+
 ## How to make a sample sound old
+
+- Nudge the playback speed by 1 to 3 per cent, up or down.
 
 - High-pass the sample to remove the deepest lows.
 
@@ -11189,7 +11263,65 @@ Old media never ran at a perfectly steady speed. A slow, subtle pitch wobble mak
 
 - Send it to a small, dark room reverb, blended low.
 
-If the sample turns thin in the process, [how to make a sample sound fuller](https://gazillionindustries.com/how-to-make-a-sample-sound-fuller/) covers getting the body back.
+- Bounce it, then listen to the bounce on a phone before you build on it.
+
+If the sample turns thin in the process, [how to make a sample sound fuller](https://gazillionindustries.com/how-to-make-a-sample-sound-fuller/) covers getting the body back. Step one is worth understanding on its own: [what is varispeed](https://gazillionindustries.com/what-is-varispeed/) explains why moving pitch and time together sounds like a machine and moving them apart sounds like software.
+
+## A worked example, one pass end to end
+
+Numbers, so the steps above have somewhere to start. The source is a clean, wide, modern string figure and the target is a record somebody played a lot. Every value is a starting position, not a setting.
+
+- Speed down 3 per cent. That is 53 cents flat, near enough half a semitone, and it darkens the whole thing before any filter is involved.
+
+- High-pass at 90 Hz, 24 dB per octave.
+
+- Drive until the loudest bar reads about 2 dB hotter than it went in, then pull the output back by the same 2 dB.
+
+- Low-pass at 7.5 kHz, 18 dB per octave, 3 dB of lift at the corner.
+
+- Sample rate down to 16 kHz, putting the ceiling at 8 kHz — above the filter you just set, so the grain arrives without the clang.
+
+- Bits down to 10, leaving about 60 dB of range: the decay grains out, the body does not.
+
+- Wobble at 0.35 Hz, depth about 6 cents.
+
+- Hiss 36 dB below the sample's peak. Width to 65 per cent.
+
+- Room: 0.8 s tail, 12 ms pre-delay, low-passed at 4 kHz, returned 18 dB under the dry signal. Twelve milliseconds is the round trip to a wall about two meters away, which is why it reads as a room and not as a hall.
+
+Then take one thing away. Almost every version of this is one move too far, and the move to lose is whichever one you can name with your eyes closed.
+
+## How to check it without fooling yourself
+
+Aging a sample makes it quieter and darker, and quieter and darker loses a straight A/B whatever you did. Level-match first: bypass, match the average by meter, then judge.
+
+Three checks catch nearly everything. The phone, where a narrowed band and a raised noise floor have nowhere to hide and [the low end you high-passed away](https://gazillionindustries.com/how-to-make-bass-audible-on-phone-speakers/) was never audible anyway. The analyzer: play a rising line through the chain and watch for content walking downward while the note walks up, which is folded content, and now you know how much of it you have. And mono: a narrowed image survives collapsing, a stereo room over a crushed sample often does not, which is where most of these chains quietly fall apart — see [mono compatibility](https://gazillionindustries.com/mono-compatibility/).
+
+The cheapest check is last. Mute the aged version, play the clean one against the rest of the track, and see which one the track wants. Doing that the next day, off a bounce, saves more work than any plugin on this page.
+
+## When it goes wrong, and what it sounds like
+
+- **Clang**: rate too low under a bright source; folded content walking the wrong way
+
+- **Gravel**: drive after the crusher instead of before it
+
+- **Mud**: high-pass too low, plus saturation, plus a room; nothing has an edge
+
+- **Seasick**: wobble over about 15 cents on sustained pitched material
+
+- **Breathing**: a noise bed in front of anything that reacts to level
+
+Mud is the common one and the hardest to hear on your own record, because it arrives gradually and sounds warm on the way in. The test is the mix rather than the sample: if everything else has to get out of the way for the aged loop to be audible, the loop has spread rather than sat down. [Why is my mix muddy](https://gazillionindustries.com/why-is-my-mix-muddy/) has the frequency map.
+
+Transient loss is the other one. Aging a full loop ages the drums in it, and a hit that has been low-passed, saturated and crushed has a soft front edge — vintage on its own, absent under a modern kick and snare. Either age the melodic parts and leave the drums alone, or age everything and accept that the kit now needs replacing rather than reinforcing. [How to make drums sound dusty](https://gazillionindustries.com/how-to-make-drums-sound-dusty/) takes the second road on purpose, and [what is a transient](https://gazillionindustries.com/what-is-a-transient/) explains what you spent.
+
+One more only shows up after you deliver. A quiet noise bed is the part of a file most likely to change when it is encoded for streaming or a messaging app, so encode a bounce at a low bitrate and listen to that before deciding the bed is doing its job.
+
+## What it costs
+
+Every one of these moves takes something. Level: narrowing the band alone dropped the average by 1.4 dB on the renders at the top of this page, and the width control and the room each take their own cut. Top end, permanently — a shelf after the fact only lifts noise. Stereo width you may want later. Transients. And once you bounce you have committed, because a decision that sounded characterful at midnight is not negotiable at noon.
+
+There is a mix cost too. An aged sample stops carrying the top of the record, so something else has to: a hat, an air band on the vocal, a shaker. Producers who age a loop and then wonder why the track went small have usually forgotten to give that job to somebody. Keep the clean render in the session, muted, on a track you can find.
 
 ## Questions people ask
 
@@ -11205,6 +11337,34 @@ Band-pass it tightly around the midrange, cutting most of the lows and highs, ad
 
 Less filtering than older eras: a slightly softened top end, some compression and saturation, and a touch of early digital grit from mild sample rate or bit reduction rather than heavy tape wobble or crackle.
 
+### How do I make a sample sound like an old record?
+
+High-pass around 60 to 100 Hz, low-pass between 6 and 10 kHz, add a crackle bed roughly 35 dB under the peak, and narrow the width to about two thirds. Leave the bit depth alone: records were noisy and band-limited, and they were never quantized.
+
+### How do I make vocals sound old?
+
+Go narrower than you would on music and commit to mono. Roughly 300 Hz to 3 kHz with drive into it reads as a line or a horn; 200 Hz to 6 kHz with a small room reads as an old studio. Keep the wobble off a lead vocal, because the ear finds pitch drift on a voice faster than on anything else.
+
+### Should I age a sample before or after I chop it?
+
+Chop first, age after. Aging first bakes the bed and the wobble into every slice, so the hiss restarts on each hit and the wobble jumps between chops. Aging the chopped arrangement keeps one continuous bed across the whole thing, which is what a playback chain would have done.
+
+### What plugin makes samples sound old?
+
+Any filter plus any saturator plus any crusher will do it, and your DAW's stock devices are listed below. A dedicated box is worth it mainly for speed: filter, drive and crush on one panel can be moved against each other instead of one at a time.
+
+### Why does my old-sounding sample turn to mud in the mix?
+
+Usually the high-pass is too low and the saturation and room are filling everything between 150 and 500 Hz. Raise the high-pass until the sample sounds slightly thin on its own, then check it in context. A sample that sounds right soloed is almost always too full in the mix.
+
+### How much pitch wobble is too much?
+
+About 15 cents of depth is the edge on sustained pitched material, which is roughly a 0.9 per cent speed deviation. Below 10 cents it registers as age; above 20 it registers as a broken machine, which is a fine choice as long as you meant it.
+
+### Can I make a sample sound old without making it quieter?
+
+Not without adding gain back. Filtering removes energy, so make the level up after the chain and compare at matched loudness. If the aged version still loses at the same level, the settings are the problem rather than the loudness.
+
 ## Stock plugins that do this
 
 - **FL Studio**: Fruity Love Philter; Fruity Squeeze; Fruity Blood Overdrive
@@ -11213,9 +11373,21 @@ Less filtering than older eras: a slightly softened top end, some compression an
 
 - **Logic Pro**: Channel EQ; Bitcrusher; ChromaGlow (Logic Pro 11 and later)
 
+## Doing it with stock devices
+
+**Ableton Live.** Redux is the whole grain section in one device, split the way this page is: downsampling on the left, bit reduction on the right. Rate sets the rate the signal is degraded to, Bits sets the depth, and Jitter adds noise to the downsampler's clock, which makes the result noisier and wider at once. The Filter section is the part that matters for aging — Pre puts a filter before the downsampler so there is less up there to fold down, Post puts a low-pass after it, and the Post-Filter Octave slider is set in octaves relative to half the Rate value, which is to say relative to the ceiling. Shape decides how hard the quantizer treats quiet signal against loud, so it governs whether the decay grains out before the body does. For the record read, Vinyl Distortion has a crackle generator and two modes, Soft and Hard, which Ableton describes as a dub plate and a standard record. Utility does the width: 0 per cent is mono, and Bass Mono centers the low end while leaving the rest alone.
+
+**FL Studio.** Fruity Squeeze is a bit reducer, a distortion and a filter in one device, with a Pre/Post switch that puts its low-pass either side of the bit reduction — the same decision as Redux's Pre and Post. Squarize is the bit depth. The Puncher section replaces samples with a fixed value, and Image-Line's manual says the best results come from low Amount settings, which is true of every other control on this page. Fruity Love Philter gives you the resonant band and the movement; Fruity Blood Overdrive is the drive to put in front of it.
+
+**Logic Pro.** Channel EQ with the analyzer running is the fastest way to set the band, because you can watch where the sample's energy actually stops instead of guessing a corner. Bitcrusher covers the grain, ChromaGlow in Logic Pro 11 and later covers the drive, and Direction Mixer handles the narrowing. Turn the analyzer off before you judge the result: watching a spectrum move is the fastest way to talk yourself into a setting your ears did not choose.
+
+The devices change; the order does not. And if you are building a wider lo-fi sound rather than aging one sample, [how to make lofi beats](https://gazillionindustries.com/how-to-make-lofi-beats/) puts these moves in the context of a whole beat.
+
 ## What F(ilter)12 does
 
 F(ilter)12 is our 12 bit sauce filter for drums and samples. The filter sets where in the spectrum things sit, with five shapes and six resonance shapes, and **DRIVE** for warmth. The lo-fi section, **SAMPLE RATE** and **BIT**, adds the grain. **AURA** on top helps the result sit better in the mix without sounding processed.
+
+One panel rather than three plugins, for the reason this page keeps making: these controls only mean anything against each other. Set the band, hear what the rate has left to fold down, move the band again. Mac and Windows, AU, VST3 and standalone, $49, and DRUGS comes with it. There is a demo on the product page, which answers faster than a paragraph.
 
 Nobody believes the photo filter. A sample aged one flaw at a time, they believe.
 
@@ -11609,7 +11781,7 @@ A soft kick under a heavy low-pass leaves almost nothing in the band a small dri
 
 F(ilter)12 is our 12 bit sauce filter, built for drums and samples. Its lo-fi section is **SAMPLE RATE**, which rolls off the top and folds what was up there back down, and **BIT**, which rounds off quiet detail and gives what remains a hard edge. The filter behind it has five shapes, six resonance shapes and **DRIVE**, and **AUTO FILTER** can move it with swing. One producer's line on the page: it gave their drums some vintage dust.
 
-On a drum bus that means one instance instead of three, which matters for the order question above: the crush pair and the filter are already arranged so the filter is cleaning up after the rate reduction rather than feeding it. Start with BIT, then SAMPLE RATE, then bring the cutoff down until the hats stop clicking, then add DRIVE last. AURA is the adaptive correction over the top, green in the display where it is adding and red where it is taking away. It works only on what the filter is letting through, so it puts definition back under the cutoff without raising the cutoff.
+On a drum bus that means one instance instead of three, and the order question above is already answered inside the panel: the crush pair sits in front of the filter rather than behind it, so the filter is choosing which artifacts survive instead of feeding them. Start with BIT, then SAMPLE RATE, then bring the cutoff down until the hats stop clicking, then add DRIVE last. AURA is the adaptive correction over the top, green in the display where it is adding and red where it is taking away. It works only on what the filter is letting through, so it puts definition back under the cutoff without raising the cutoff.
 
 It runs on Mac and Windows as AU, VST3 and standalone, and it is $49 with DRUGS included free. There is a demo on the page, and it is the honest way to decide whether the panel suits how you work.
 
@@ -12217,13 +12389,13 @@ Aliasing happens when audio contains frequencies above half the sample rate (the
 
 A sample rate can only describe frequencies up to half its value. At 44.1 kHz, that ceiling is 22.05 kHz. Anything above it gets mirrored back below the ceiling by the same distance it went over. A simple example: at a 15 kHz sample rate the ceiling is 7.5 kHz, so a 10 kHz tone shows up at 5 kHz instead (15 minus 10). That new tone has no musical relationship to the note that made it, which is why aliasing sounds wrong rather than warm.
 
-The mirror repeats, which is the part most explanations leave out. A sample rate does not fold once. It folds around every whole multiple of itself, so an alias lands at the distance between the offending frequency and the nearest multiple of the rate: the absolute value of f minus n times the rate, for any whole number n. At 44.1 kHz a 25 kHz partial comes back at 19,100 Hz. A 45 kHz partial comes back at 900 Hz, because it has passed one whole multiple and is 900 Hz over the far side of it. Content more than an octave above anything a human can hear arrives in the low mids, under the bass, and that is the case nobody expects.
+The mirror repeats, which is the part most explanations leave out. A rate does not fold once. It folds around every whole multiple of itself, so an alias lands at the distance between the offending frequency and the nearest multiple of the rate: the absolute value of f minus n times the rate, for any whole number n. At 44.1 kHz a 25 kHz partial comes back at 19,100 Hz. A 45 kHz partial comes back at 900 Hz, having passed one whole multiple and landed 900 Hz the far side of it. Content an octave above anything a human can hear arrives under the bass, and that is the case nobody plans for.
 
 No filter is involved anywhere in this. The folded partial is *added* to whatever was already sitting at that frequency, at close to the level it had before it folded. That is why aliasing survives EQ so badly. Pull 2 kHz down and you pull the snare down with it, because by the time the signal reaches the EQ the alias and the snare are the same numbers in the same file.
 
 ## Hear the fold
 
-Aliasing gets described in adjectives more than it gets played. Here is one loop four ways: clean, bit reduction on its own, sample rate reduction on its own, and both. The third file is the one this page is about.
+Fold-back is easier to recognize than to describe. Here is one loop four ways: clean, bit reduction on its own, sample rate reduction on its own, and both. The third file is aliasing by itself, with nothing else going on.
 
 - **Dry** — no processing — https://gazillionindustries.com/f12/f12-clean.m4a
 
@@ -12235,7 +12407,7 @@ Aliasing gets described in adjectives more than it gets played. Here is one loop
 
 The same 1.049 seconds each time, through [F(ilter)12](https://gazillionindustries.com/f12.html). Peaks sit within 0.05 of each other and RMS within two per cent, so what moves across the four files is spectrum rather than volume.
 
-Run those four through an analyzer and the adjective problem goes away. Take the 99 per cent spectral rolloff, the frequency below which ninety-nine per cent of the energy sits. Dry, that loop rolls off at 869 Hz. Bit reduction alone moves it to 1,463 Hz. Sample rate reduction alone moves it to 3,348 Hz. Both together, 3,406 Hz. Aliasing made the loop almost four times brighter than it started, which is the opposite of what the word lofi suggests.
+The third file measures brighter than the first, not darker. Its 99 per cent spectral rolloff — the frequency below which ninety-nine per cent of the energy sits — moves from 869 Hz dry to 3,348 Hz, at the same RMS. Folding adds content. It never subtracts any.
 
 ## What aliasing sounds like
 
@@ -12245,7 +12417,7 @@ That backward motion is worth hearing once on purpose, because it is the only sy
 
 ## The failure modes, and what each one sounds like
 
-Aliasing does not have one sound. It has a handful, and they turn up in different places in a mix, which is why it gets misdiagnosed as five separate problems.
+Aliasing does not have one sound. It has a handful, in different places in a mix, which is why it gets diagnosed as five separate problems.
 
 - **A buzz under the bass.** Heavy drive on a mid-range source throws harmonics past the ceiling and the far ones land in the low mids. The mix gets crowded somewhere you never processed. See [why is my mix muddy](https://gazillionindustries.com/why-is-my-mix-muddy/).
 
@@ -12271,7 +12443,7 @@ Two of those are choices and two are accidents. Sample rate reduction is a choic
 
 ## A worked example: one 5 kHz sine, hard clipped
 
-Distortion is the accident that costs the most, because it is the one that ends up on everything. Here is the whole problem in a single test you can repeat in five minutes, with the numbers from running it.
+Distortion is the accident that costs the most, because it ends up on everything. Here is the whole problem in one test, with the numbers from running it.
 
 Generate a 5 kHz sine in a 44.1 kHz session and hard clip it flat. Hard clipping a sine produces odd harmonics only, so the honest output is 5, 15, 25, 35, 45 kHz and upward. Two of those fit. The rest fold. Measured against the fundamental at 0 dB, the render came back like this: 15 kHz at −10.3 dB, which is real; 19,100 Hz at −16.3 dB, which is the 25 kHz harmonic folded; 9,100 Hz at −21.9 dB, which is the 35 kHz one; and 900 Hz at −28.4 dB, which is the 45 kHz one arriving under the bass. Counting everything above −50 dB inside the audible band, that file holds thirteen peaks. Two of them are the signal.
 
@@ -12297,7 +12469,7 @@ In [F(ilter)12](https://gazillionindustries.com/f12.html), SAMPLE RATE folds the
 
 ## How to test a plugin for aliasing in ten minutes
 
-Do this once with a plugin you already trust and once with a plugin you suspect. Ten minutes buys an answer that a week of forum reading does not.
+Do this once with a plugin you trust and once with a plugin you suspect. Ten minutes buys an answer a week of forum reading does not.
 
 - Put a test tone generator on an empty track and set it to a 5 kHz sine.
 
@@ -12315,21 +12487,13 @@ Do this once with a plugin you already trust and once with a plugin you suspect.
 
 - Swap the sine for the real part, match levels, and A/B the two settings.
 
-Step eight is the one people skip, and it is the one that decides anything. A plugin can alias badly on a sine and still sound better than the clean version on a snare. Measure first so the choice is a choice.
+Step eight is the one people skip and the only one that decides anything. A plugin can alias badly on a sine and still beat the clean version on a snare. Measure first so the choice is a choice.
 
 ## Where the anti-aliasing control lives in your DAW
 
-The switch exists under three names, and which one you get depends on the host and the device rather than on anything technical: Oversampling, Hi-Quality, or just Quality.
+The switch goes by three names — Oversampling, Hi-Quality, or just Quality — and in Ableton Live it is not on the device face at all. It sits in the context menu on the device title bar, or under Show Options in the same bar. Ableton's own manual puts Saturator's Hi-Quality mode there and says it lowers aliasing and improves sound quality, particularly on high-frequency signals, for a slight rise in CPU. The same manual gives EQ Eight an Oversampling option that runs the device at twice the current session rate for smoother filter behavior in the top end, and gives Glue Compressor one in the same place. Two of its warnings are worth carrying into the mix: the CPU cost is real, and with oversampling on, loud peaks can still pass 0 dB, so the switch is no substitute for watching [true peak](https://gazillionindustries.com/true-peak/).
 
-In Ableton Live the control is not on the device face at all. It sits in the context menu on the device title bar, or under Show Options in the same bar. Ableton's own manual puts Saturator's Hi-Quality mode there and says it lowers aliasing and improves sound quality, particularly on high-frequency signals, for a slight rise in CPU. The same manual gives EQ Eight an Oversampling option that runs the device at twice the current session rate for smoother filter behavior in the top end, and gives Glue Compressor one in the same place. Two of its warnings are worth carrying into the mix: the CPU cost is real, and with oversampling on, loud peaks can still pass 0 dB, so the switch is no substitute for watching [true peak](https://gazillionindustries.com/true-peak/).
-
-In every other host, check three places in this order: the device's own panel, the small settings or gear menu attached to it, and the host's wrapper around third-party plugins. If none of the three has it, assume the device does not oversample and do the work yourself with a low-pass in front of it. Stock EQs, compressors and delays usually leave it off by default even when they have it, because the default is chosen for CPU rather than for your mix.
-
-## How much the session rate helps
-
-Raising the whole session to 96 kHz is the other lever, and it half works. The same 5 kHz clipped sine, rendered at three rates and measured the same way, gives thirteen audible-band peaks at 44.1 kHz, ten at 48 kHz and five at 96 kHz. More usefully, the loudest ghost drops from −16.3 dB below the fundamental at 44.1 kHz to −37.8 dB at 96 kHz. That is a 21.5 dB improvement, and it is not zero: three aliases are still in there at 96 kHz, because clipping generates harmonics forever and the mirror keeps repeating.
-
-What a high session rate costs is everything, everywhere. Double the rate doubles the CPU, the disk and the buffer pressure for every track in the project, including the forty that have no distortion on them. Oversampling spends the same currency on the three plugins that need it. Work at 44.1 or 48 kHz and oversample the nonlinear stages.
+In every other host, check three places in this order: the device's own panel, the settings or gear menu attached to it, and the host's wrapper around third-party plugins. If none of the three has it, assume the device does not oversample and put a low-pass in front of it yourself. Stock devices that do have it usually ship with it off, because the default was chosen for CPU rather than for your mix.
 
 ## Where the folded content actually lands
 
@@ -12349,19 +12513,17 @@ The levels go with the arithmetic. Stepping a lone 6 kHz tone down to an 8 kHz r
 
 ## Where it goes in the chain
 
-Put the fold where you can still undo it. Anything that creates aliasing wants to sit early enough that a filter after it can shape the result and a filter before it can decide what is allowed to fold at all. Two low-passes around a crusher, one either side, give you both controls and cost nothing. See [filter cutoff and resonance](https://gazillionindustries.com/filter-cutoff-and-resonance/).
+Put the fold where you can still undo it. Anything that aliases wants to sit early enough that a filter before it decides what is allowed to fold and a filter after it shapes what came back. Two low-passes around a crusher, one either side, give you both controls for nothing. See [filter cutoff and resonance](https://gazillionindustries.com/filter-cutoff-and-resonance/).
 
 What comes after matters as much. A compressor after an aliasing source is reacting to energy that is not in the performance, so the ducking lands off the beat and reads as a fault in the compressor. A reverb after one sprays the ghosts across the tail, where they stop being grit and start being noise. A limiter after one spends its headroom on content that adds nothing, which is the quiet version of this problem and the expensive one — the worked example above lost eleven peaks' worth of level to material nobody asked for. [Clipper before limiter](https://gazillionindustries.com/clipper-before-limiter/) covers the order that survives.
-
-On the master bus, take the opposite position. Nothing that folds belongs there. By the time a mix reaches the last insert every element is sharing the same spectrum, so a fold at that point smears across all of them at once and there is no send to pull it back on.
 
 ## How to use it on purpose
 
 Lofi producers reach for aliasing deliberately. Lowering the sample rate on drums, chords or a whole loop gives the crunchy, metallic top of old samplers, especially alongside bit depth reduction (see [bitcrushing explained](https://gazillionindustries.com/bitcrushing-explained/)). Filter the result afterward if it gets piercing; you want grit, not a headache. [Best bitcrusher plugins](https://gazillionindustries.com/best-bitcrusher-plugins/) goes through which ones let you hear that fold-back and which ones hide it.
 
-Pick the rate by deciding where you want the ghosts, not by turning the knob until it sounds broken. A fold line at 6 kHz (a 12 kHz rate) sends a 7 kHz cymbal partial to 5 kHz, which is close enough to the source that the ear hears brightness with an edge on it. A fold line at 4 kHz sends the same partial to 1 kHz, an octave and a half under the note, and the ear hears a different instrument. The first is a texture. The second is an effect, and it needs to be arranged for.
+Pick the rate by deciding where you want the ghosts, not by turning the knob until it breaks. A fold line at 6 kHz (a 12 kHz rate) sends a 7 kHz cymbal partial to 5 kHz, near enough the source that the ear hears brightness with an edge on it. A fold line at 4 kHz sends the same partial to 1 kHz, and the ear hears a second instrument. The first is a texture. The second is an arrangement decision.
 
-Three moves make it usable rather than merely loud. Run it in parallel and blend, so the transient of the dry hit stays under the grit. High-pass the crushed copy around 300 Hz, because the low end gains nothing from folding and loses definition to it. And ride the blend with the arrangement instead of printing one amount for the whole song — the crush that carries a sparse eight bars will bury a full chorus. The same logic drives [how to make a sample sound old](https://gazillionindustries.com/how-to-make-a-sample-sound-old/).
+Three moves make it usable rather than merely loud. Blend it in parallel so the dry transient stays under the grit. High-pass the crushed copy around 300 Hz, because the low end gains nothing from folding and loses definition to it. And ride the blend with the arrangement: the crush that carries a sparse eight bars will bury a full chorus. Same logic as [how to make a sample sound old](https://gazillionindustries.com/how-to-make-a-sample-sound-old/).
 
 **12 bit, full rate.** Quantization grain with the fold line left where it was — grit without the clang.
 
@@ -12369,9 +12531,9 @@ Three moves make it usable rather than merely loud. Run it in parallel and blend
 
 Oversampling costs CPU, and the cost is close to linear: 4x means roughly four times the work in that plugin's stage. On a project with distortion on twenty tracks that is a real number, and it is the reason the switch ships off.
 
-It can also cost latency. The filters that band-limit before the downsample are delay lines, and a steeper filter is a longer one. Well-behaved plugins report their delay and the host compensates. Some do not, and the symptom is a track that slides a few samples out of time only when the switch is on. Check it by copying the track, flipping the polarity on the copy and bypassing the plugin on one of them: a clean null means the host is compensating correctly.
+It can also cost latency. The filters that band-limit before the downsample are delay lines, and a steeper filter is a longer one. Well-behaved plugins report the delay and the host compensates; some do not, and the symptom is a track that slides a few samples late only when the switch is on. Check by copying the track, flipping polarity on the copy and bypassing the plugin on one of them. A clean null means the host is compensating.
 
-And oversampling costs you a sound. Clean distortion is thinner than dirty distortion, because a lot of what people like about aggressive saturation is the inharmonic content underneath it. Turn the switch on, listen, and if the part got worse then leave it off and say so in the notes. Going the other way, committing to a crushed render costs you the fold line: once a 2 kHz ghost is printed into the file, choosing a different rate later means going back to the source.
+And oversampling costs you a sound. Clean distortion is thinner than dirty distortion, because a lot of what people like about aggressive saturation is the inharmonic content underneath it. Turn the switch on, listen, and if the part got worse then leave it off on purpose. Raising the whole session to 96 kHz is the blunt version of the same trade: it doubles CPU and disk on all forty tracks to fix the three with distortion on them. Going the other way, printing a crushed render costs you the fold line — once a 2 kHz ghost is in the file, a different rate means going back to the source.
 
 ## Questions people ask
 
@@ -12393,11 +12555,11 @@ Half the sample rate. At 44.1 kHz it is 22.05 kHz, at 48 kHz it is 24 kHz, at 96
 
 ### Why does my synth sound out of tune in the high notes?
 
-Most likely aliasing in the oscillator. A bright waveform has harmonics stretching far above the note, and as you play higher those harmonics cross the ceiling and fold back at frequencies with no relationship to the key. The chord sounds fine two octaves down and sour at the top. Look for an HQ, Quality or Oversampling control on the instrument, or low-pass the oscillator before it reaches the amp stage.
+Most likely aliasing in the oscillator. A bright waveform has harmonics stretching far above the note; play higher and they cross the ceiling and fold back at frequencies unrelated to the key. The same chord is fine two octaves down and sour at the top. Look for an HQ, Quality or Oversampling control on the instrument, or low-pass the oscillator before the amp stage.
 
 ### Does recording at 96 kHz get rid of aliasing?
 
-It reduces it a great deal and does not remove it. In a measurement of one 5 kHz sine hard clipped at three rates, the loudest alias sat 16.3 dB below the fundamental at 44.1 kHz and 37.8 dB below it at 96 kHz, with five audible-band peaks left instead of thirteen. The cost is that the whole project runs at double the CPU and disk, while oversampling spends that only on the plugins that need it.
+It reduces it a great deal and does not remove it. Measuring one 5 kHz sine hard clipped at three rates, the loudest alias sat 16.3 dB below the fundamental at 44.1 kHz and 37.8 dB below it at 96 kHz, with five audible-band peaks left instead of thirteen. The cost is that the whole project runs at double CPU and disk, while oversampling spends that only where it is needed.
 
 ### Is aliasing the same as distortion?
 
@@ -12409,7 +12571,7 @@ Feed it a single high sine, around 5 kHz, and put a spectrum analyzer after it. 
 
 ### Does oversampling remove aliasing completely?
 
-It removes the audible part in most cases. Running at four times the rate and filtering before the downsample took a hard-clipped 5 kHz sine from thirteen audible-band peaks to two, and the two that were left were the real signal. Higher drive levels and unbounded harmonic generators can still push content past even the raised ceiling, which is why some plugins offer 8x and 16x.
+It removes the audible part in most cases. Running at four times the rate and filtering before the downsample took a hard-clipped 5 kHz sine from thirteen audible-band peaks to two, and both survivors were real signal. Harder drive can still push content past the raised ceiling, which is why some plugins offer 8x and 16x.
 
 ### Why does aliasing sound metallic?
 
@@ -12417,11 +12579,11 @@ Because the frequencies it adds are unrelated to the note. The ear reads sets of
 
 ### Can you remove aliasing after it has been recorded?
 
-Not really. Once the fold has happened the ghost and the music occupy the same frequencies in the same file, so anything that attenuates one attenuates the other. Narrow notches help when the aliasing is a couple of steady tones from a sustained source. For anything broadband, go back to the source and re-render with oversampling on.
+Not really. Once the fold has happened, the ghost and the music occupy the same frequencies in the same file, so whatever attenuates one attenuates the other. Narrow notches help when it is a couple of steady tones off a sustained source. For anything broadband, go back and re-render with oversampling on.
 
 ### Does aliasing matter if I make lofi?
 
-It matters more, not less, because it is the main ingredient rather than an accident. Knowing where the fold line sits lets you put the ghosts somewhere useful instead of somewhere that fights the vocal. The trap is running an aliasing crusher and an aliasing saturator in the same chain: the second one folds the first one's output, and the result is dense in a way that stops reading as texture. See [how to make lofi drums](https://gazillionindustries.com/how-to-make-lofi-drums/).
+It matters more, because it is the main ingredient rather than an accident. Knowing where the fold line sits lets you put the ghosts somewhere useful instead of on top of the vocal. The trap is an aliasing crusher and an aliasing saturator in the same chain: the second folds the first one's output, and the result goes dense enough to stop reading as texture. See [how to make lofi drums](https://gazillionindustries.com/how-to-make-lofi-drums/).
 
 ## What F(ilter)12 does
 
@@ -14967,6 +15129,54 @@ The vocal folds produce a buzz full of harmonics. The throat, mouth and nose the
 
 Those peaks stay roughly where they are when a singer changes note. A tenor holding a vowel up an octave still sounds like a tenor, because the mouth did not get smaller. A sample played faster does not have that luxury: every frequency in it moves, formants included, so the ear computes a smaller throat and hands you a chipmunk.
 
+The size part of that is arithmetic you can do on paper. Treat the tract from the folds to the lips as a tube about 17.5 cm long, closed at one end, and its resonances land at odd multiples of a quarter wavelength. With sound moving at 343 m/s that puts them near 490, 1470 and 2450 Hz. Shorten the tube and all three rise by the same factor. That factor is the entire effect, and it is the only thing a speed change does.
+
+There is a second mechanism underneath, and it is the one that makes correction unreliable at the extremes. The folds supply energy only at whole multiples of the fundamental, so a formant is visible to a plugin only where a harmonic happens to land on it. At a 110 Hz fundamental there are seven harmonics below 800 Hz to draw the first peak with. At 440 Hz there is one. A tracker asked to find a resonance it has almost no evidence for will guess, and what you hear is the guess.
+
+## The arithmetic of a formant move
+
+Every speed change is one multiplier applied to everything at once. A semitone is a ratio of the twelfth root of two, about 1.0595, so four semitones up is 1.2599 and every frequency in the file rises by 26%. Formants are frequencies. They go too.
+
+Take the "ah" above, with peaks at 730 and 1100 Hz. Pitch it up four semitones with no correction and those peaks arrive at 920 and 1386 Hz. Run the tube backward from the new numbers and the implied speaker has a vocal tract of 13.9 cm rather than 17.5. Nobody measures that consciously. The ear does the division in a syllable and reports a child.
+
+- **+2 semitones**: ratio 1.1225, everything +12.2%, implied tract 15.6 cm
+
+- **+4 semitones**: ratio 1.2599, +26.0%, implied tract 13.9 cm
+
+- **+5 semitones**: ratio 1.3348, +33.5%, implied tract 13.1 cm
+
+- **+7 semitones**: ratio 1.4983, +49.8%, implied tract 11.7 cm
+
+- **+12 semitones**: ratio 2.0, +100%, implied tract 8.75 cm
+
+- **Downward**: the same ratios inverted: −5 is 0.7492, tract 23.4 cm
+
+The reason a sped-up vowel reads as a smaller person rather than as a different vowel is that the multiplier hits every peak equally. What names a vowel is the relationship between the first two formants, and a relationship survives multiplication untouched. So the vowel arrives intact and only its scale has moved, which is exactly the measurement the ear uses to size a body.
+
+## Test it in your own session
+
+You can prove the mechanism in ten seconds with no plugin at all. Hold one note and move your mouth from "ee" to "ah" and back without letting the note change. The pitch never moved. Everything else did. That difference is formants on their own, with nothing else in the signal touched.
+
+The version with numbers takes about five minutes.
+
+- Put a three-second held vowel from a single voice on one track.
+
+- Open a spectrum analyzer, set the FFT size to 4096 or higher, and turn averaging slow.
+
+- Ignore the individual harmonic spikes and find the two lowest broad humps under them.
+
+- Write down the frequency at the top of each hump. Those are the first two formants.
+
+- Bounce the same file up five semitones with formant preservation switched off.
+
+- Measure again: both humps should now sit 33.5% higher than they did.
+
+- Bounce a third time with preservation switched on, and measure once more.
+
+- Compare the third measurement with the first. Anything past a few percent is slippage.
+
+Then do the listening half on the same three files, in the same order, on a phone speaker. A phone gives you almost nothing under the first formant, so the first formant is most of what survives the trip, and an error there is obvious on a train in a way it never is on monitors.
+
 ## How to use it
 
 - Pitch the sample where the music needs it first, and leave formants alone.
@@ -14981,19 +15191,79 @@ Those peaks stay roughly where they are when a singer changes note. A tenor hold
 
 - Check consonants: heavy formant moves make S and T sounds artificial first.
 
+- Match loudness between the corrected and uncorrected versions before you judge either.
+
+- Keep the uncorrected bounce on a muted track.
+
 Going the other way is a production tool on its own. Formants down with the pitch untouched gives you the voice of somebody much larger without turning the melody into a drone, which is why it shows up on every villain ad-lib since about 2011. Up without pitch gives a thin, nasal, slightly uncanny read that sits well under a mix because it occupies almost no low end.
+
+## Where it sits in the chain
+
+Put the formant move first, ahead of anything you tuned by ear. A notch you placed at 340 Hz was placed against a resonance the shifter is about to relocate, and an EQ left upstream goes on cutting a frequency with nothing at it any more. Move the formants, then set the EQ against what is actually there.
+
+Pitch correction belongs before the formant shift rather than after. A corrector wants the spectral envelope the singer actually produced; hand it one that has already been slid up or down and its note detection gets worse for no gain. De-essing belongs after, because unvoiced sounds are where the damage lands and a de-esser downstream is catching it instead of feeding it in.
+
+Saturation and reverb go last, on the shifted signal. Adding harmonics to something that has already been taken apart and rebuilt multiplies whatever smear is in it, and a reverb fed the shifted voice puts the room behind the new size rather than the old one. If you want the old room, print the shift and send the print.
+
+The parallel move is worth knowing, and Apple ships it as a tip in the Logic Pro guide: Pitch at 0 semitones, Mix at 50%, Formant at +1, Robotize off. You get the same singer with a smaller head standing next to herself, and the Mix slider sets how much of her there is. Blending a formant-shifted copy under an untouched lead is the cheapest doubling in the room, and it costs no tuning.
 
 [SKRUU](https://gazillionindustries.com/skruu.html) moves pitch and time independently: PITCH runs from −20% to +10% in 128 states and reads out in semitones as well as speed, so you can hear where the character starts to change and stop there.
 
 **SAMPLING GRADE at LO-FI 1.** 7.81 kHz rather than 31.25.
 
+## Formant controls, DAW by DAW
+
+Four of the big hosts ship a formant control and none of them agree on where it lives or what it is scaled in. The pattern to look for is a formant parameter bolted to whichever stretch algorithm the host considers its best one, which is reliably also its most expensive one. Where each host hides its [speed](https://gazillionindustries.com/varispeed-in-every-daw/) control is a different map.
+
+### Ableton Live: Formants, inside Complex Pro
+
+Live keeps it in a warp mode rather than a device. Choose Complex Pro on the clip and a Formants control appears next to it; Ableton's manual states that at 100% the original formants are preserved even when the pitch is changed significantly. Two limits come with that. The control does nothing at all unless the clip's transposition has been changed, and Ableton says plainly that Complex and Complex Pro can cost more CPU than the other warp modes, suggesting freeze or resample to get it back.
+
+The Envelope control beside it is the one people leave alone. Ableton gives 128 as the default and suggests lower values for high-pitched samples and higher for low ones, worth a pass on any source far from a speaking range. Re-Pitch, the mode that behaves like a speed control, deactivates the transposition controls outright, so there is no formant question in it at all: everything moves together, by design.
+
+### Logic Pro: the Formant knob on Vocal Transformer
+
+Logic splits pitch and formants onto two knobs of one plugin. Apple's guide describes the Pitch knob as transposing in semitone steps and as changing the pitch of a voice rather than its character, while the Formant knob shifts formants with the pitch held or moved independently. Apple names its own extremes: positive values give the Mickey Mouse read, negative values head toward Darth Vader.
+
+The setting worth finding is in the Extended Parameters area. A Formants pop-up offers Process always or Keep unvoiced formants, and Apple's stated reason for the second is that processing only the voiced formants retains sibilant sounds and gives a more natural transformation on some signals. That is a direct fix for the artifact most people hit first, and it is folded away behind a disclosure triangle where nobody looks.
+
+### FL Studio: per note in Newtone, a switch in Pitcher
+
+Image-Line splits the job across two plugins. In Newtone the formant control is per note: enter Advanced Edit mode, double-click the note, and drag vertically on the Formant handle. Image-Line's own manual describes formants as resonances caused by the size and shape of the vocal tract, and says changing them changes the apparent size, age or sex of the vocalist.
+
+Pitcher, the live one, gives you a Formant switch for preservation and a Gender knob that overrides it. Image-Line is blunt about leaving the switch off: past a shift of more than a few notes you get the helium sound. Pitcher also carries a minimum-frequency setting for its pitch detection, and the manual suggests 80 to 170 Hz for male voices and 170 to 220 Hz for female ones. Set that before you blame the formant control for a tracking error.
+
+### Cubase: Shift Formant in VariAudio
+
+Steinberg puts it in the Sample Editor, not on an insert. Segment the audio, turn on Edit VariAudio, select one or more segments and move the Shift Formant slider, which takes positive and negative percentages with 0 leaving the original alone. Steinberg states that formant shifting does not affect the pitch or timing of a segment, and that using it selects the Solo algorithm automatically, which is a choice made for you on material you may have picked a different algorithm for. With Smart Controls set to All you can skip the Inspector and drag the control in the lower left corner of a segment, which on a long vocal is the difference between editing and data entry.
+
+## What it sounds like when it breaks
+
+Every failure here has a sound, and each sound has one cause you can point at. Learn the five and a bad vocal diagnoses itself in a pass.
+
+**Sibilance goes first.** S, T, F and SH are broadband noise with no resonant peaks in them, so a shifter told to move their formants has nothing to lock onto and makes something up. It arrives as a chirp or a thin whistle riding on the consonant. This is precisely what Logic's Keep unvoiced formants setting exists to sidestep.
+
+**The barrel.** Push formants far enough down and energy piles into the 200 to 400 Hz region and the voice sounds cupped, as though the singer is inside something. Bigger stops reading as bigger and starts reading as enclosed, usually two or three semitones before you expected it to.
+
+**Breath with no floor.** Inhales and the air between words are noise, and noise is what an analysis stage handles worst. On a heavily shifted take they thin to a hiss, and the performance quietly loses its sense of a body in a room.
+
+**Smear on anything polyphonic.** A formant shifter assumes one source with one spectral envelope. Give it a stereo mix, a stacked harmony or a held chord and it averages what it finds, returning a soft, phasey version of the input with no useful resizing in it.
+
+**What the compressor reveals.** A shifted vocal that convinced you in solo can come apart once a compressor lifts the quiet passages 6 or 8 dB, because the artifacts were always sitting under the loud syllables. Audition it after the compressor, at mix level, or you are auditioning the wrong signal.
+
 ## When you want the chipmunk
 
 Half the records people love are built on formants moving with the pitch. Soul vocals sped up until they stop being sung and start being an instrument have carried entire catalogs, and the small-throat artifact is the signature, not a mistake to be corrected. [Chipmunk soul](https://gazillionindustries.com/chipmunk-soul/) is the whole method, and it is worth knowing which of the two you are doing before you reach for a correction knob.
 
+None of this is limited to voices either. Anything with a resonant body has formants: the shell of a drum, the box of a guitar, the room around both. A speed change moves every one of them by the same ratio, which is why a break sped up 8% does not sound like the same kit played faster but like a smaller kit, and why slowing one down is the cheapest large room available. The ear sizes objects the way it sizes people, off the resonances, and it does not care that a snare has no throat. See [what varispeed is](https://gazillionindustries.com/what-is-varispeed/) for the mechanism underneath all of it.
+
 ## Where it costs you
 
 Formant processing is analysis and resynthesis, so it has artifacts. Big shifts thin out breath and sibilance, and on a busy stereo mix rather than a single voice they smear. It also fights with the rest of the chain: a formant-shifted vocal that sounded convincing solo can reveal its edges once a compressor lifts the quiet parts. And correcting a pitched-up sample all the way back often costs you the reason you pitched it up in the first place.
+
+It costs latency too, and the floor is set by physics rather than by coding. To resolve a 100 Hz fundamental an analysis window has to cover at least one 10 ms period, and trackers in practice use several of them, so a formant shifter across a live vocal gives a singer a delay in the headphones they can feel. Print it, or track dry and shift afterward.
+
+The last cost is a decision rather than a defect. Both bounces are right for different records, and the one that sounded obviously better in solo is not reliably the one that survives the mix, so carry both to the end. [Pitching a sample](https://gazillionindustries.com/how-to-pitch-a-sample/) is the same argument one step earlier.
 
 ## Questions people ask
 
@@ -15013,9 +15283,43 @@ Pitch is the note. Formants are the peaks in the spectrum that tell you which vo
 
 The one in your DAW is usually good for a couple of semitones, which covers most corrective work. Dedicated tools hold together further out, but past about five semitones every method starts sounding processed, so plan the take rather than the plugin.
 
+### What does formant mean in music?
+
+A resonance belonging to the body that made the sound, fixed by that body's size and shape rather than by the note. In a voice it is the throat and mouth. On a snare it is the shell. It is the part of a sound that tells your ear what produced it.
+
+### Why does my pitched-up vocal sound like a chipmunk?
+
+Because the shifter moved the formants along with the note. Raised resonances read to the ear as a shorter vocal tract, and a shorter tract means a smaller person. Switch on formant preservation, or shift the formants down by the interval you pitched up.
+
+### Should formants go up or down when I pitch a vocal up?
+
+Down. Start at the same interval in the opposite direction, so four semitones up against four semitones of formants down, then back off until the vowel sits right. The correction almost never needs the full amount to sound convincing.
+
+### How many semitones can you pitch shift before it sounds bad?
+
+Two or three either way survives on most material with no correction at all. Past about five, every method announces itself, and formant correction buys distance rather than removing the limit. A better take beats a better algorithm every time.
+
+### Does formant shifting work on a full mix?
+
+Poorly. The analysis assumes a single source with one spectral envelope, and a mix has dozens of sources overlapping. What comes back is smeared and phasey rather than resized. Shift the stem, or shift the voice before it is committed.
+
+### How do I make my voice sound deeper without changing the pitch?
+
+Shift the formants down and leave the pitch at zero. One to three semitones of downward formant shift adds apparent size without touching the melody. Past that, the low mids pile up and the voice sounds cupped rather than large.
+
+### What is formant correction?
+
+Formant preservation under another name. The plugin measures the spectral envelope before the pitch move and re-imposes it afterward, so the resonances stay put while the note travels. Ableton, Logic Pro, FL Studio and Cubase each ship a version of it.
+
+### Is formant shifting the same as autotune?
+
+No. Pitch correction moves notes onto a grid. Formant shifting moves the resonances and leaves the notes alone. They often sit in the same plugin, which is where the confusion starts, and they are the two halves of [separating pitch from everything else](https://gazillionindustries.com/how-to-change-pitch-without-changing-tempo/).
+
 ## What SKRUU does
 
 SKRUU is two knobs that do not touch each other. **PITCH** moves the pitch and **TIME** moves the length: speed it up while pitching down, or the other way round, and lock either one while you play the other. PITCH runs from −20% to +10% in 128 states and reads out in semitones as well as speed, with unity marked; TIME runs from −50% to +25% and moves nothing but the length. The display is a pitch comparator in semitones, what went in against what came out, so how far off the record you are is a picture rather than a number you have to trust.
+
+It sits on the other side of this line on purpose. A varispeed move carries pitch and formants together, because one rate governs both, and the shrinking singer is the outcome rather than a fault waiting for a correction knob. When that is the sound you came for, a formant control is the first thing you would be switching off.
 
 The notes were always right. Now you get to decide who is singing them.
 
@@ -15071,29 +15375,27 @@ To change pitch without changing tempo, use pitch shifting; to change tempo with
 
 Time stretching slices audio into tiny overlapping pieces and either repeats or skips them to change the length, then blends the seams. Pitch shifting stretches the audio in time and resamples it back to the original length, so the pitch moves while the duration stays. The better the algorithm, the better it hides the seams, but every method trades something: smeared transients, a phasey or metallic tone, or a watery sound on sustained notes.
 
-Two families do the work, and they fail in opposite directions. A time-domain method — the one behind most transient-preserving modes — cuts the file into overlapping grains, hunts for the point where the next grain best matches the last, and crossfades there. A frequency-domain method — a phase vocoder, which is what the tonal and complex modes run — takes a short window of samples, works out the amplitude and phase of every frequency bin inside it, advances its read clock at a different rate than its write clock, and builds new audio from the result. The first keeps attacks intact and struggles with held tones. The second keeps held tones smooth and struggles with attacks. That is the entire argument behind the mode menu.
+Two families do the work, and they fail in opposite directions. A time-domain method, which is what most transient-preserving modes run, cuts the file into overlapping grains, hunts for the point where the next grain best matches the last, and crossfades there. A frequency-domain method, a phase vocoder, takes a short window of samples, works out the amplitude and phase of every frequency bin inside it, advances its read clock at a different rate than its write clock, and builds new audio from the result. The first keeps attacks intact and struggles with held tones. The second is the reverse. That is the whole argument behind the mode menu.
 
-The window length is where the trade lives, and it is measurable rather than a matter of taste. A 2048-sample window at 44.1 kHz is 46.4 ms long and resolves frequency to 21.5 Hz. Halve it to 1024 samples and you get 23.2 ms and 43.1 Hz: sharper in time, blunter in pitch. Double it to 4096 and you get 92.9 ms and 10.8 Hz, which is clean on a sustained low note and hopeless on a snare, because a snare's front edge is over in a few milliseconds and the window is twenty times longer than the event it is trying to describe. Nobody escapes that. Every mode in every DAW is a different guess about where to sit on the line.
+The window length is where the trade lives, and it is measurable rather than a matter of taste. A 2048-sample window at 44.1 kHz is 46.4 ms long and resolves frequency to 21.5 Hz. Halve it to 1024 samples and you get 23.2 ms and 43.1 Hz: sharper in time, blunter in pitch. Double it to 4096 and you get 92.9 ms and 10.8 Hz, clean on a sustained low note and hopeless on a snare, because a snare's front edge is over in a few milliseconds and the window is twenty times longer than the event it is describing. Every mode in every DAW is a different guess about where to sit on that line.
 
 ## Semitones, cents and percent: the arithmetic
 
-All three units describe the same ratio, and converting between them in your head kills most of the guesswork. One semitone is two to the power of one twelfth, 1.0595, so a semitone up is 5.95% faster and an octave is exactly double. A semitone splits into 100 cents. Run it backward and 1% of speed is 17 cents, which is why a nudge you can barely see on a fader is plainly audible against a held chord.
+All three units describe one ratio, and converting between them in your head kills most of the guesswork. A semitone is two to the power of one twelfth, 1.0595, so a semitone up is 5.95% faster and an octave is exactly double. A semitone splits into 100 cents. Backward, 1% of speed is 17 cents, which is why a nudge you can barely see on a fader is plainly audible against a held chord. At A440 a single cent is a quarter of a Hertz, and two copies five cents apart beat against each other 1.27 times a second — the mechanism behind [detune](https://gazillionindustries.com/best-detune-plugins/).
 
-The tempo conversion is the one that catches people. Take a 90 BPM loop up three semitones as a speed change and the ratio is 1.1892, so it now runs at 107.03 BPM. Go the other way and ask what a small tempo nudge does to the key: pushing 90 to 93 BPM is a ratio of 1.0333, which is 57 cents, more than half a semitone. Sample rate does the same thing to you by accident. Play a 44.1 kHz file at 48 kHz and it runs 8.84% fast, 147 cents sharp, and that 90 BPM loop arrives at 97.96 BPM. If a borrowed loop is mysteriously a semitone and a half out, check the file's rate before you reach for a shifter.
-
-Cents earn their keep at the small end. At A440, one cent is a quarter of a Hertz — 0.25 Hz exactly enough. Layer two copies five cents apart and the difference between them is 1.27 Hz, so you hear a beat a little over once a second: slow, wide, and the whole mechanism behind [detune](https://gazillionindustries.com/best-detune-plugins/). It is also why a five cent correction on a lead vocal is obvious and a five cent correction on a kick is a waste of an afternoon.
+The tempo conversion is the one that catches people. Take a 90 BPM loop up three semitones as a speed change and the ratio is 1.1892, so it runs at 107.03 BPM. Run it the other way and a tempo nudge from 90 to 93 BPM is a ratio of 1.0333, which is 57 cents — more than half a semitone, from a change most people would call small. Sample rate does the same to you by accident. Play a 44.1 kHz file at 48 kHz and it runs 8.84% fast, 147 cents sharp, and that 90 BPM loop arrives at 97.96 BPM. If a borrowed loop is mysteriously a semitone and a half out, check its rate before you reach for a shifter.
 
 ## A worked example: eight bars at 90
 
-Numbers make the difference concrete. Eight bars of 4/4 at 90 BPM is 32 beats, and at two thirds of a second a beat that is 21.33 seconds of audio. Here is the same +3 semitone intention, spent three ways.
+Eight bars of 4/4 at 90 BPM is 32 beats, and at two thirds of a second a beat that is 21.33 seconds of audio. Here is one +3 semitone intention, spent three ways.
 
-- **Varispeed, +3 semitones.** Rate 1.1892. The length falls to 17.94 s, 15.9% shorter, and the loop now sits at 107 BPM. Nothing is invented; every part of the recording moves together, hiss and room included.
+- **Varispeed, +3 semitones.** Rate 1.1892. Length falls to 17.94 s, 15.9% shorter, and the loop sits at 107 BPM. Nothing is invented; everything moves together, hiss and room included.
 
-- **Pitch shift, +3 semitones, tempo held.** The length stays 21.33 s and the tempo stays 90. Inside, this is the varispeed move followed by a time stretch of 1.1892 that drags the 17.94 s back out to 21.33 s. The stretch is the half with the artifacts in it.
+- **Pitch shift, +3 semitones, tempo held.** Length stays 21.33 s, tempo stays 90. Inside, this is the varispeed move plus a time stretch of 1.1892 dragging 17.94 s back out to 21.33 s. The stretch is the half with the artifacts in it.
 
-- **Time stretch to 107 BPM, pitch held.** The length falls to 17.94 s and the key stays put. Same stretch ratio, same artifacts, spent on the clock instead of the key.
+- **Time stretch to 107 BPM, pitch held.** Length falls to 17.94 s and the key stays put. Same ratio, same artifacts, spent on the clock instead of the key.
 
-Read the middle line again, because it is the point of the page. A pitch shift is a speed change plus a stretch that cancels the length change. You pay for the stretch either way. The only question is whether you spend it on the key or on the clock — and when you can live with the linked result, you spend nothing at all.
+Read the middle line again. A pitch shift is a speed change plus a stretch that cancels the length change, so you pay for the stretch either way; the only question is whether you spend it on the key or on the clock. When you can live with the linked result you spend nothing at all.
 
 ## Choose the mode for the material
 
@@ -15105,7 +15407,7 @@ Read the middle line again, because it is the point of the page. A pitch shift i
 
 - **For character:** repitch or varispeed, which doesn't separate them at all. See [what is varispeed](https://gazillionindustries.com/what-is-varispeed/).
 
-Two habits survive contact with every mode menu. Match the window to the fastest event in the file rather than to the name of the instrument: a plucked upright bass is transient material even though bass is a melodic part, and a pad with no attack at all will take the longest window you own and thank you. And judge the mode on the element you care about most, because a break with a sung sample over the top has no single right answer. That is the argument for splitting it onto two tracks and giving each one its own mode.
+Match the window to the fastest event in the file rather than to the name of the instrument. A plucked upright bass is transient material even though bass is a melodic part, and a pad with no attack will take the longest window you own and thank you. A break with a sung sample over the top has no single right answer, which is the argument for splitting it onto two tracks and giving each one its own mode.
 
 ## How to change pitch without changing tempo
 
@@ -15121,7 +15423,7 @@ Two habits survive contact with every mode menu. Match the window to the fastest
 
 - Listen for artifacts, and try another mode if it sounds phasey or smeared.
 
-Two things the step list cannot carry. Transposing a region is a non-destructive property in most hosts, so the file on disk is untouched and you can walk the value back — right up until you bounce. And the host holds an advantage a plugin never will: it can look at the whole clip before it plays a single sample of it, while an insert only ever sees the next block of audio arriving. That is why a clip transposition on a settled part usually sounds a shade cleaner than the same move made live, and why the live move is the only one of the two you can perform.
+Two things the steps cannot carry. Transposing a region is non-destructive in most hosts, so the file on disk is untouched and you can walk the value back — right up until you bounce. And the host holds an advantage a plugin never will: it can look at the whole clip before playing a sample of it, while an insert only sees the next block arriving. That is why a clip transposition on a settled part sounds a shade cleaner than the same move made live, and why the live move is the only one you can perform.
 
 **Pitched up.** Same control, the other direction.
 
@@ -15135,25 +15437,13 @@ Two things the step list cannot carry. Transposing a region is a non-destructive
 
 - Check the hits and the sustained notes for smearing.
 
-Then check the length instead of trusting it. Solo the stretched clip, look at where it ends against the bar line, and confirm it lands where the grid says it should. Warping works from markers the host drops on detected transients, and one marker on the wrong hit will drag half a bar while the rest stays still. On anything with a swung or dragged feel, the marker set is usually what is wrong, not the algorithm, and no amount of switching modes will fix a marker.
+Then check the length instead of trusting it. Solo the clip, look at where it ends against the bar line, and confirm it lands where the grid says. Warping works from markers the host drops on detected transients, and one marker on the wrong hit will drag half a bar while the rest stays still. On anything swung or dragged, the marker set is usually what is wrong, and no amount of switching modes fixes a marker.
 
 [SKRUU](https://gazillionindustries.com/skruu.html) puts pitch and time on separate knobs you can play, and lets either spring back.
 
-## Hear the linked case
-
-Everything above is about prising pitch and tempo apart. This is the sound of leaving them married, which is the option you are turning down every time you warp something. One loop, three rates, no other processing. The figures are the renderer's own readout.
-
-- **Unity** — rate 1.0000, +0.00 semitones — https://gazillionindustries.com/skruu/skruu-dry.m4a
-
-- **Slowed** — rate 0.9275, −7.25%, −1.30 semitones — https://gazillionindustries.com/skruu/skruu-down.m4a
-
-- **Sped up** — rate 1.0779, +7.79%, +1.30 semitones — https://gazillionindustries.com/skruu/skruu-up.m4a
-
-One source loop, rendered offline through the same engine the plug-in runs.
-
 ## Test it in your own session
 
-You can measure what a stretch costs rather than argue about it. Ten minutes, any DAW.
+Measure what a stretch costs instead of arguing about it. Ten minutes, any DAW.
 
 - Duplicate the track so you have two copies of the same clip, A and B.
 
@@ -15167,63 +15457,53 @@ You can measure what a stretch costs rather than argue about it. Ten minutes, an
 
 - Play both together. What you hear is everything the algorithm failed to put back.
 
-- Repeat the whole thing at 1 semitone and compare the two residues.
+- Repeat at 1 semitone and compare the two residues.
 
-Two round trips is harsher than anything you would do on purpose, and that is the point: it magnifies the character of the error until you can name it, and once you can name it you will spot it at normal sizes. Run it once per mode and you stop guessing forever. The leftover from a transient-preserving mode is a rattle of tiny attack fragments. The leftover from a phase vocoder is a soft pitched wash with no edges anywhere in it.
+Two round trips is harsher than anything you would do on purpose, and that is the point: it magnifies the error until you can name it, and once you can name it you spot it at normal sizes. The leftover from a transient-preserving mode is a rattle of tiny attack fragments. The leftover from a phase vocoder is a soft pitched wash with no edges in it anywhere.
 
 ## Formants, and why voices go cartoon
 
-A voice carries two independent pitch systems and a shifter moves both. The vocal folds set the fundamental, and that is the note. The throat, mouth and nose form a resonant tube whose peaks — the formants — sit at frequencies fixed by the shape of the tube, and they stay where they are when the singer jumps from a low note to a high one. That is how your ear knows one person singing a wide interval from two different people singing a note each.
+A voice carries two independent pitch systems and a shifter moves both. The vocal folds set the fundamental, and that is the note. The throat, mouth and nose form a resonant tube whose peaks — the formants — sit at frequencies fixed by the shape of the tube, and they stay put when the singer jumps from a low note to a high one. That is how your ear tells one person singing a wide interval from two people singing a note each.
 
-A rate change moves every frequency in the file by the same ratio, formants included. Resonance in a tube runs inversely with its length, so doubling every formant is the acoustic signature of a throat half the size. The ear reads that as a smaller body rather than a higher note, which is exactly where the cartoon comes from. Formant preservation measures the spectral envelope, shifts the harmonics underneath it, and puts the envelope back where it started. Turn it on for anything with a voice in it. Turn it off when the cartoon is the point — see [chipmunk soul](https://gazillionindustries.com/chipmunk-soul/) and [formant shifting](https://gazillionindustries.com/formant-shifting/).
-
-One warning, because the control gets left on out of habit. Formant preservation is a second estimation stacked on top of the stretch, and on a full mix there is no single envelope for it to hold, since the drums and the bass live inside the same spectrum as the voice. On a stereo mix it usually sounds worse than leaving it off. Save it for isolated vocals.
+A rate change moves every frequency by the same ratio, formants included. Resonance in a tube runs inversely with its length, so doubling every formant is the acoustic signature of a throat half the size, and the ear reads that as a smaller body rather than a higher note. Formant preservation measures the spectral envelope, shifts the harmonics underneath it and puts the envelope back. Turn it on for anything with a voice in it, and off when the cartoon is the point — see [chipmunk soul](https://gazillionindustries.com/chipmunk-soul/) and [formant shifting](https://gazillionindustries.com/formant-shifting/). One warning, because the control gets left on out of habit: it is a second estimation stacked on the stretch, and a full mix gives it no single envelope to hold, since drums and bass live in the same spectrum as the voice. On a stereo mix it usually sounds worse than off.
 
 ## Where it goes in the chain
 
-Put the stretch ahead of anything that reacts to level, time or pitch. A compressor after a shift hears the material you actually kept and sets its attacks against it. A compressor before one has its own release times stretched along with the audio, which arrives at your ears as a fault in the compressor rather than a move in the music. The same goes for gates, transient shapers and anything fed from a sidechain.
+Put the stretch ahead of anything that reacts to level, time or pitch. A compressor after a shift hears the material you actually kept and sets its attacks against it. A compressor before one has its own release times stretched along with the audio, which arrives at your ears as a fault in the compressor rather than a move in the music. Same for gates, transient shapers and anything fed from a sidechain. Anything you tuned by ear before the shift is out of tune after it, so set pitch first and tune second.
 
-Delay and reverb are a real decision rather than a default. Put them after the shift and the tails move with the source, which reads as one room doing one thing. Feed a send from the unshifted signal instead and you get a stationary space with a moving source inside it, which reads as two recordings glued together. Either can be correct; make the call on purpose. Tempo-synced delays are the trap, because they follow the project tempo, so a clip you moved with a speed change is now in a different tempo from the delay feeding off it. Set the delay by hand or bounce the clip first. The slowed case is worked through in [how to make slowed and reverb](https://gazillionindustries.com/how-to-make-slowed-and-reverb/).
-
-Two more, quickly. Anything you tuned by ear before the shift is out of tune after it, so set the pitch first and tune second. And a shifter sitting on a bus applies identical work to every source underneath it; the moment two of those sources want different modes, the bus is the wrong place for it.
+Delay and reverb are a decision rather than a default. After the shift, the tails move with the source and it reads as one room doing one thing; fed from a send off the unshifted signal, you get a stationary space with a moving source inside it, which reads as two recordings glued together. Either can be right — make the call on purpose. Tempo-synced delays are the trap, because they follow the project tempo, so a clip you moved with a speed change is now in a different tempo from the delay feeding off it. Set the delay by hand or bounce the clip first. The slowed case is worked through in [how to make slowed and reverb](https://gazillionindustries.com/how-to-make-slowed-and-reverb/).
 
 ## The failure modes, and what each one sounds like
 
-- **Smearing.** A hit loses its front edge and turns into a short swell. Cause: a window longer than the attack it is covering. Fix: a transient-preserving mode, or a shorter window where the mode exposes one. Background in [what is a transient](https://gazillionindustries.com/what-is-a-transient/).
+- **Smearing.** A hit loses its front edge and turns into a short swell. Cause: a window longer than the attack. Fix: a transient mode, or a shorter window where one is exposed. Background in [what is a transient](https://gazillionindustries.com/what-is-a-transient/).
 
-- **Pre-echo.** A faint copy of the hit arrives before the hit, up to roughly a window's length early. Cause: transient energy spread backward across the analysis window. Fix: shorter window, transient mode, or cut the hit out and move it on its own.
+- **Pre-echo.** A faint copy of the hit arrives before the hit, up to roughly a window's length early. Cause: transient energy spread backward across the analysis window. Fix: shorter window, transient mode, or move the hit on its own.
 
-- **Metallic or phasey tone.** A thin ringing cast over sustained material, worst on cymbals and distorted guitars. Cause: the phases of the partials no longer line up after resynthesis. Fix: a higher-quality mode, a smaller move, or accept it as a sound and commit.
+- **Metallic or phasey tone.** A thin ringing cast over sustained material, worst on cymbals and distorted guitars. Cause: the phases of the partials no longer line up after resynthesis. Fix: a better mode, a smaller move, or commit to it as a sound.
 
-- **Watery shimmer.** A slow wobble under held notes. Cause: grain crossfades landing at a slightly different phase each time around. Fix: a tonal mode, or less shift.
+- **Watery shimmer.** A slow wobble under held notes. Cause: grain crossfades landing at a slightly different phase each time around. Fix: a tonal mode.
 
-- **Flamming.** One hit comes back as two. Cause: a grain boundary sitting inside the attack, so part of the attack plays twice. Fix: nudge the clip start a few milliseconds and run it again, which often moves the boundary off the hit entirely.
+- **Flamming.** One hit comes back as two. Cause: a grain boundary sitting inside the attack. Fix: nudge the clip start a few milliseconds, which often moves the boundary off the hit entirely.
 
-- **Loop drift.** The loop stops ending on the bar. Cause: warp markers on the wrong hits, or a stretch ratio that does not divide into the loop length. Fix: check the markers first and the algorithm second.
+- **Loop drift.** The loop stops ending on the bar. Cause: warp markers on the wrong hits, or a ratio that does not divide into the loop length. Fix: markers first, algorithm second.
 
 All of them scale with the size of the move and with how much the material looks like noise to the analyzer. A sine wave survives two octaves without complaint. A cymbal crash does not survive two semitones cleanly, and a full mix has a cymbal in it.
 
 ## Per-DAW: where the control actually is
 
-The operation is identical everywhere and the menus agree about nothing, which is most of why this question keeps getting asked.
+**Ableton Live.** Warp on in the clip, then Transpose in semitones and Detune in cents in Clip view. The Warp Mode chooser holds Beats, Tones, Texture, Re-Pitch, Complex and Complex Pro. Re-Pitch refuses to separate the two, so if your pitch moves whenever the tempo does, that is the mode you are in. Complex Pro carries a Formants control, and that is the one for vocals.
 
-**Ableton Live.** Warp on in the clip, then Transpose in semitones and Detune in cents in Clip view. The Warp Mode chooser holds Beats, Tones, Texture, Re-Pitch, Complex and Complex Pro. Re-Pitch is the mode that refuses to separate the two, so if your pitch is moving whenever the tempo does, that is the mode you are sitting in. Complex Pro carries a Formants control, and that is the one for vocals.
+**Logic Pro.** Flex Time moves length, Flex Pitch moves individual notes, and the Region inspector has Transpose for a whole region. Flex Time's algorithms run Slicing, Rhythmic, Monophonic, Polyphonic, Speed and Tempophone; Speed is the one that links pitch back to length. For a whole-project move there is a Varispeed readout in the control bar — the full tour is in [varispeed in every DAW](https://gazillionindustries.com/varispeed-in-every-daw/).
 
-**Logic Pro.** Flex Time moves length, Flex Pitch moves individual notes, and the Region inspector has Transpose for a whole region at once. Flex Time's algorithm list runs Slicing, Rhythmic, Monophonic, Polyphonic, Speed and Tempophone, and Speed is the one that links pitch back to length. For a whole-project move there is a Varispeed readout in the control bar — the full tour is in [varispeed in every DAW](https://gazillionindustries.com/varispeed-in-every-daw/).
+**FL Studio.** Channel Settings, the Time stretching and pitch shifting panel, and the Mode menu inside it. The élastique modes hold pitch while time moves; Resample links them. Pitcher and NewTone are the note-level tools when a region transpose is too blunt. **Pro Tools** puts it in Elastic Audio: Polyphonic, Rhythmic, Monophonic, X-Form or Varispeed, with Varispeed the linked one and no controls of its own. **Reaper** gives an item a playrate and a separate pitch adjustment in semitones, with a checkbox deciding whether pitch follows the rate; the shifter itself is selectable per item, which is unusually honest about the algorithm being a choice.
 
-**FL Studio.** Channel Settings, the Time stretching and pitch shifting panel, and the Mode menu inside it. The élastique modes hold pitch while time moves; Resample links them, which is the speed-change case. Pitcher and NewTone are the note-level tools when a region transpose is too blunt.
-
-**Pro Tools.** Elastic Audio on the track, then Polyphonic, Rhythmic, Monophonic, X-Form or Varispeed from the plug-in menu. Varispeed is the linked one, and Avid document it as having no controls of its own.
-
-**Reaper.** Item properties carry a playrate and a separate pitch adjustment in semitones, with a checkbox deciding whether pitch follows the rate. Leave it unticked and you have a speed change; tick it and you have a stretch. The pitch shifter itself is selectable per item, which is unusually honest about the fact that the algorithm is a choice.
-
-**Cubase** puts it in AudioWarp and Musical Mode, running on the élastique algorithms, with transpose on the info line. **Studio One** sets a timestretch mode per event, with transpose and tune beside it in the inspector. **Bitwig** keeps stretch modes on the clip, including a repitch mode that links the two back together. **GarageBand** has region transpose and no varispeed at all. And **Audacity** is the clearest teacher in the list, because it splits the three operations by name in the Effect menu: Change Pitch holds the tempo, Change Tempo holds the pitch, Change Speed links them.
+**Cubase** uses AudioWarp and Musical Mode on the élastique algorithms, with transpose on the info line. **Studio One** sets a timestretch mode per event, transpose and tune beside it. **Bitwig** keeps stretch modes on the clip, including a repitch mode that links the two back together. **GarageBand** has region transpose and no varispeed at all. And **Audacity** is the clearest teacher here, splitting the three operations by name in the Effect menu: Change Pitch holds the tempo, Change Tempo holds the pitch, Change Speed links them.
 
 ## What it costs you
 
-Say the price out loud before you commit to it. A stretch costs CPU, and the modes worth using cost the most — on a session with thirty warped clips that is the difference between a project that plays and one that stutters, which is why bouncing is a discipline and not a tidying habit. A rate change costs top end on the way down, because every frequency travels with it: a cymbal sitting at 10 kHz lands at 8.4 kHz three semitones down, and no EQ puts back air that is no longer in the file. And a stretch costs sync the moment the ratio is wrong — run a clip 4% slow across eight bars at 90 BPM and its end arrives 0.89 seconds late, about a beat and a third.
+Say the price out loud before you commit. A stretch costs CPU, and the modes worth using cost the most — across thirty warped clips that is the difference between a project that plays and one that stutters, which is why bouncing is a discipline and not a tidying habit. A rate change costs top end on the way down, because every frequency travels with it: a cymbal at 10 kHz lands at 8.4 kHz three semitones down, and no EQ puts back air that is no longer in the file. And it costs sync the moment the ratio is wrong — run a clip 4% slow across eight bars at 90 BPM and its end arrives 0.89 seconds late, about a beat and a third.
 
-The last cost is a decision. Every generation of stretching stacks on the one before it, so a clip you shift, bounce, shift again and bounce again is carrying four passes of artifacts and has no road back. Bounce once you are sure, keep the untouched file next to it, and write the semitone value down somewhere. You will want to move it 40 cents next week.
+The last cost is a decision. Every generation of stretching stacks on the one before it, so a clip you shift, bounce, shift and bounce again carries four passes of artifacts and no road back. Bounce once you are sure, keep the untouched file beside it, and write the semitone value down. You will want to move it 40 cents next week.
 
 ## Keep it clean
 
@@ -15245,27 +15525,27 @@ Large shifts expose the algorithm's artifacts: smeared transients, a metallic or
 
 ### How do I change the pitch of a song without changing the speed?
 
-Import the file, set it to follow the project tempo with a complex or high-quality stretch mode, and transpose the region in semitones. On a full mix keep the move small and leave formant preservation off, because there is no single voice for it to hold on to. Listen to the linked version first: a small speed change across a whole record is often less noticeable than the artifacts of holding the tempo still.
+Import it, set it to follow the project tempo with a complex or high-quality stretch mode, and transpose the region in semitones. Keep the move small and leave formant preservation off on a full mix, because there is no single voice for it to hold on to. Try the linked version first: a small speed change across a whole record is often less noticeable than the artifacts of holding the tempo still.
 
 ### How do I change tempo without changing pitch in Audacity?
 
-Select the audio and use Effect, then Change Tempo, which moves the length and leaves the pitch alone. Change Pitch does the opposite. Change Speed links the two together, which is the speed-change case.
+Select the audio and use Effect, then Change Tempo, which moves the length and leaves the pitch alone. Change Pitch does the opposite. Change Speed links the two, which is the speed-change case.
 
 ### How many semitones can I shift before it sounds bad?
 
-There is no fixed limit, because it depends on the material and the mode, but the shape is reliable: the damage scales with the ratio. A pad or a bass line will take five or six semitones. Drums and full mixes start showing seams at two or three. Noisy content breaks first — cymbals, distorted guitar, room ambience. Find your own limit with the null test above rather than reading a number off a page.
+There is no fixed limit, but the shape is reliable: damage scales with the ratio. A pad or a bass line will take five or six semitones. Drums and full mixes show seams at two or three. Noisy content breaks first — cymbals, distorted guitar, room ambience. Find your own limit with the null test above rather than reading a number off a page.
 
 ### Does changing the pitch change the key?
 
-Yes, by exactly the amount you shifted. Twelve semitones is an octave, so the key letter comes back around to itself. Three semitones up takes A minor to C minor. Cents do not change the key name, they change the tuning: 50 cents is a quarter tone, and it will sit badly against anything else tuned to concert pitch.
+Yes, by exactly the amount you shifted. Twelve semitones is an octave, so the key letter comes back around to itself; three semitones up takes A minor to C minor. Cents change the tuning rather than the key name, and 50 cents is a quarter tone, which will sit badly against anything tuned to concert pitch.
 
 ### Is it better to pitch the sample or change the project tempo?
 
-Change the project tempo while the arrangement is still flexible, because it costs nothing and processes nothing. Pitch or stretch the sample once the arrangement is settled, or when the two disagree by more than the sample can absorb. On a chopped sample the tempo route almost always wins, since every chop you stretch is another edge for the algorithm to blur — see [how to chop samples](https://gazillionindustries.com/how-to-chop-samples/).
+Change the project tempo while the arrangement is still flexible, because it costs nothing and processes nothing. Pitch or stretch the sample once the arrangement is settled, or when the two disagree by more than the sample can absorb. On a chopped sample the tempo route almost always wins, since every chop you stretch is another edge to blur — see [how to chop samples](https://gazillionindustries.com/how-to-chop-samples/).
 
 ### Why does my drum loop lose its punch when I stretch it?
 
-The analysis window is longer than the attack. A kick's front edge is a handful of milliseconds and a 46 ms window smooths straight over it, so the hit arrives as a swell instead. Switch to a transient-preserving mode, or slice the loop at the hits and move the slices rather than stretching through them.
+The analysis window is longer than the attack. A kick's front edge is a handful of milliseconds and a 46 ms window smooths straight over it, so the hit arrives as a swell. Switch to a transient-preserving mode, or slice the loop at the hits and move the slices rather than stretching through them.
 
 ### Does pitch shifting lose quality?
 
@@ -15305,7 +15585,7 @@ Yes. Plugin shifters do it on an insert while the track plays, and DAW stretch m
 
 SKRUU is our varispeed pitch and time stretch plugin: two knobs that don't touch each other. **PITCH** moves the pitch, from −20% to +10%, reading out in semitones as well as speed. **TIME** moves the length, from −50% to +25%. Speed it up while pitching down, or the other way round. **PITCH LOCK** and **TIME LOCK** hold one while the other moves, and **ELASTIC** makes either knob spring back along a return shape you choose. Zero samples of latency.
 
-The bottom half of the panel is about what happens when you let go. **RETURN** sets how long the trip home takes, **BITE** how hard the knob commits to it, and sixteen **SLOPE** shapes decide the road back, while **DRAG** sets how long a new speed takes to arrive in the first place. **SAMPLING GRADE** steps the rate down through 31.25, 15.62, 7.81 and 3.91 kHz. AU, VST3 and standalone, Mac and Windows. It is the linked half of this page rather than the separated half, and that is the honest way to use it next to a stretch: take as much of the move as you can stand to hear as a speed change, where nothing is invented, and leave only the remainder for an algorithm to guess at.
+The bottom half of the panel is about what happens when you let go. **RETURN** sets how long the trip home takes, **BITE** how hard the knob commits to it, and sixteen **SLOPE** shapes decide the road back, while **DRAG** sets how long a new speed takes to arrive. **SAMPLING GRADE** steps the rate down through 31.25, 15.62, 7.81 and 3.91 kHz. AU, VST3 and standalone, Mac and Windows. It is the linked half of this page rather than the separated half, which is the honest way to use it next to a stretch: take as much of the move as you can stand to hear as a speed change, where nothing is invented, and leave only the remainder for an algorithm to guess at.
 
 The divorce went through. They still get along better than you'd think.
 
