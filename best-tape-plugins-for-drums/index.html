@@ -157,6 +157,27 @@ li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
           border:1px solid var(--pill-line)}
 .shot figcaption{font-size:13px; color:var(--ink-faint); line-height:1.5; margin:10px 2px 0}
 .shot figcaption b{color:var(--ink-soft); font-weight:600}
+
+/* The closing button. The guides rank and the product page does not, so the
+   article is the doorway - and it carried one link per ~1,400 words, with the
+   only button sitting BELOW 'Keep reading' where a reader who clicks a related
+   guide never reaches it. */
+.buyline{margin:30px 0 0; text-align:center}
+
+.pframe{display:flex; gap:18px; align-items:center; margin:0 0 30px;
+        padding:16px; border:1px solid var(--pill-line); border-radius:14px;
+        background:rgba(242,233,235,.03)}
+.pframe img{width:128px; height:200px; object-fit:cover; object-position:top;
+            border-radius:8px; display:block; flex:0 0 auto}
+.pframe-t{min-width:0}
+.pframe-n{font-family:"Archivo Black","Arial Black",sans-serif; font-size:19px;
+          margin:0 0 4px; letter-spacing:.01em}
+.pframe-d{margin:0 0 12px; font-size:14px; line-height:1.5; color:var(--ink-soft)}
+.pframe .cta{font-size:14px; padding:11px 22px}
+@media (max-width:560px){
+  .pframe{flex-direction:column; align-items:flex-start; gap:14px}
+  .pframe img{width:110px; height:170px}
+}
 </style>
 
 <main>
@@ -164,6 +185,15 @@ li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
 
   <h1>Best tape plugins for drums</h1>
   <p class="byline">Gazillion Industries &middot; <time datetime="2026-09-22">September 22, 2026</time></p>
+
+  <aside class="pframe">
+    <img src="/tripleog/tripleog-dark.jpg" alt="TRIPLE OG plug-in panel" loading="eager">
+    <div class="pframe-t">
+      <p class="pframe-n">TRIPLE OG</p>
+      <p class="pframe-d">Cassette transport for Mac and Windows. AU, VST3 and standalone.</p>
+      <a class="cta" href="/tripleog.html" data-umami-event="guide_tapedrums_to_tripleog" data-umami-event-spot="frame">Hear it</a>
+    </div>
+  </aside>
 
 <p class="standfirst">Tape on a drum bus does a specific thing: it thickens the hits,
   rounds the top, and puts a small amount of instability under the groove so the loop stops
@@ -186,7 +216,9 @@ li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
       <dt>Our answer</dt><dd>TRIPLE OG, cassette tape simulation with the transport on the face</dd>
     </dl>
   </div>
-  <figure class="shot">
+  
+  <p class="aside"><a href="/tripleog.html" data-umami-event="guide_tapedrums_to_tripleog" data-umami-event-spot="top">TRIPLE OG</a> is our cassette sim for Mac and Windows, with the transport on the face rather than in a menu. There is a demo on the page.</p>
+<figure class="shot">
     <img src="/tripleog/tog-tape.jpg" width="648" height="464" loading="lazy"
          alt="The TAPE section of the TRIPLE OG panel: DRIVE at 45, AGE at 22 years, TONE at 40, HISS at 25 and MIX at 100 per cent.">
     <figcaption>The medium, as five controls.</figcaption>
@@ -231,7 +263,7 @@ li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
   <figure class="shot">
     <img src="/tripleog/tog-wowflut.jpg" width="210" height="237" loading="lazy"
          alt="The WOW/FLUT knob set to 40.">
-    <figcaption><b>WOW/FLUT</b> is composite instability, not one sine wave. Slow drift and fast warble at unrelated rates.</figcaption>
+    <figcaption><b>WOW/FLUT on <a href="/tripleog.html" data-umami-event="guide_tapedrums_to_tripleog" data-umami-event-spot="fig">TRIPLE OG</a></b> is composite instability, not one sine wave. Slow drift and fast warble at unrelated rates.</figcaption>
   </figure>
 
 
@@ -294,6 +326,8 @@ li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
          alt="The TRIPLE OG transport display: two reels, the tape path between them, the REC and PLAY heads, and a speed readout of 101.5 per cent.">
     <figcaption>The readout is the speed, not a level. At <b>101.5%</b> the transport is running fast and the tape between the reels is under tension.</figcaption>
   </figure>
+  <p class="buyline"><a class="cta" href="/tripleog.html" data-umami-event="guide_tapedrums_to_tripleog" data-umami-event-spot="midbtn">Hear TRIPLE OG</a></p>
+
 
 
   <h2>Tape and the low end</h2>
@@ -354,8 +388,10 @@ li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
       <figcaption><b>Hiss 60, tone 45</b> &mdash; a noise bed, nothing else</figcaption>
       <audio controls preload="none" src="/tripleog/tog-hiss.m4a"></audio>
     </figure>
-    <p class="src">The same eleven seconds each time, rendered offline through TRIPLE OG at the settings shown. No other processing, no master bus, no edits.</p>
+    <p class="src">The same eleven seconds each time, rendered offline through <a href="/tripleog.html" data-umami-event="guide_tapedrums_to_tripleog" data-umami-event-spot="audio">TRIPLE OG</a> at the settings shown. No other processing, no master bus, no edits.</p>
   </div>
+  <p class="aside">Everything below is answered the same way we built <a href="/tripleog.html" data-umami-event="guide_tapedrums_to_tripleog" data-umami-event-spot="faq">TRIPLE OG</a> &mdash; the tape is the easy half, the transport is the half almost nothing does.</p>
+
 
 
   <h2>Questions people ask</h2>
@@ -395,7 +431,7 @@ li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
   commitment. Filter the return so it is not competing in the sub.</p>
 
   <h2>What TRIPLE OG does</h2>
-  <p>TRIPLE OG is our cassette tape simulation. <strong>WOW FLUT</strong> is the speed
+  <p><a href="/tripleog.html" data-umami-event="guide_tapedrums_to_tripleog" data-umami-event-spot="close">TRIPLE OG</a> is our cassette tape simulation. <strong>WOW FLUT</strong> is the speed
   instability, <strong>AGE</strong> runs from nought to sixty years and makes the tape
   darker, noisier and less stable as it climbs, and <strong>HISS</strong> is a continuous
   broadband bed under the whole thing. <strong>TONE</strong> sets the playback brightness and
@@ -406,6 +442,12 @@ li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
 
   <p>A break that came off a record was already on tape once. Putting it back is not
   nostalgia, it is just finishing the job.</p>
+
+  <div class="end">
+    <p>TRIPLE OG &mdash; cassette tape simulation for Mac and Windows, with a transport
+    that drags, jams and sprints to catch up. There is a demo on the page.</p>
+    <a class="cta" href="/tripleog.html" data-umami-event="guide_tapedrums_to_tripleog" data-umami-event-spot="end">Hear it</a>
+  </div>
 
   <h2>Keep reading</h2>
   <ul>
@@ -420,11 +462,6 @@ li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
     <li><a class="inline" href="/tape-plugins-for-logic-pro/">Tape plugins for Logic Pro</a> &mdash; Logic loads Audio Units only. What ChromaGlow covers, and what it misses.</li>
   </ul>
 
-  <div class="end">
-    <p>TRIPLE OG &mdash; cassette tape simulation for Mac and Windows, with a transport
-    that drags, jams and sprints to catch up. There is a demo on the page.</p>
-    <a class="cta" href="/tripleog.html" data-umami-event="guide_tapedrums_to_tripleog" data-umami-event-spot="end">Hear it &mdash; $29</a>
-  </div>
 
   <p class="foot"><a href="/">Gazillion Industries LLC</a> &middot; <a href="/reading-material/">reading material</a></p>
 </main>

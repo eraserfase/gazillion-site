@@ -133,6 +133,21 @@ h3{margin:28px 0 8px; font-size:17px; font-weight:600; line-height:1.4; color:va
 ul,ol{margin:0 0 16px; padding-left:1.2em}
 li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
 .cta{background:var(--accent); color:var(--field-deep)}
+
+.pframe{display:flex; gap:18px; align-items:center; margin:0 0 30px;
+        padding:16px; border:1px solid var(--pill-line); border-radius:14px;
+        background:rgba(242,233,235,.03)}
+.pframe img{width:128px; height:200px; object-fit:cover; object-position:top;
+            border-radius:8px; display:block; flex:0 0 auto}
+.pframe-t{min-width:0}
+.pframe-n{font-family:"Archivo Black","Arial Black",sans-serif; font-size:19px;
+          margin:0 0 4px; letter-spacing:.01em}
+.pframe-d{margin:0 0 12px; font-size:14px; line-height:1.5; color:var(--ink-soft)}
+.pframe .cta{font-size:14px; padding:11px 22px}
+@media (max-width:560px){
+  .pframe{flex-direction:column; align-items:flex-start; gap:14px}
+  .pframe img{width:110px; height:170px}
+}
 </style>
 
 <main>
@@ -140,6 +155,15 @@ li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
 
   <h1>How to compress drums</h1>
   <p class="byline">Gazillion Industries &middot; <time datetime="2026-09-20">September 20, 2026</time></p>
+
+  <aside class="pframe">
+    <img src="/drugs/drugs-dark.jpg" alt="DRUGS plug-in panel" loading="eager">
+    <div class="pframe-t">
+      <p class="pframe-n">DRUGS</p>
+      <p class="pframe-d">A one-knob bus compressor for drums. Free, Mac and Windows.</p>
+      <a class="cta" href="/drugs.html" data-umami-event="guide_compressdrums_to_drugs" data-umami-event-spot="frame">FREE DRUGS</a>
+    </div>
+  </aside>
 
 <p class="standfirst">The break sounded enormous when you chopped it at two in the morning.
   Under a bass line and a vocal it went flat, like someone had put a coat over the speaker.
@@ -245,6 +269,12 @@ li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
   <p>Put the coat back on the speaker and take it off again a few times. The break was never the
   problem.</p>
 
+  <div class="end">
+    <p>DRUGS &mdash; a one-knob bus compressor for drums, free for Mac and Windows.
+    One control called DOSE, with GAIN and a soft ceiling on the way out.</p>
+    <a class="cta" href="/drugs.html" data-umami-event="guide_compressdrums_to_drugs" data-umami-event-spot="end">FREE DRUGS</a>
+  </div>
+
   <h2>Keep reading</h2>
   <ul>
     <li><a class="inline" href="/glue-compression/">Glue compression</a> &mdash; What a bus compressor does to a group, and where to start.</li>
@@ -255,11 +285,6 @@ li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
     <li><a class="inline" href="/what-is-a-transient/">What is a transient?</a> &mdash; Why the ear identifies instruments by attack, and what processing does to it.</li>
   </ul>
 
-  <div class="end">
-    <p>DRUGS &mdash; a one-knob bus compressor for drums, free for Mac and Windows.
-    One control called DOSE, with GAIN and a soft ceiling on the way out.</p>
-    <a class="cta" href="/drugs.html" data-umami-event="guide_compressdrums_to_drugs" data-umami-event-spot="end">FREE DRUGS</a>
-  </div>
 
   <p class="foot"><a href="/">Gazillion Industries LLC</a> &middot; <a href="/reading-material/">reading material</a></p>
 </main>

@@ -133,6 +133,21 @@ h3{margin:28px 0 8px; font-size:17px; font-weight:600; line-height:1.4; color:va
 ul,ol{margin:0 0 16px; padding-left:1.2em}
 li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
 .cta{background:var(--accent); color:var(--field-deep)}
+
+.pframe{display:flex; gap:18px; align-items:center; margin:0 0 30px;
+        padding:16px; border:1px solid var(--pill-line); border-radius:14px;
+        background:rgba(242,233,235,.03)}
+.pframe img{width:128px; height:200px; object-fit:cover; object-position:top;
+            border-radius:8px; display:block; flex:0 0 auto}
+.pframe-t{min-width:0}
+.pframe-n{font-family:"Archivo Black","Arial Black",sans-serif; font-size:19px;
+          margin:0 0 4px; letter-spacing:.01em}
+.pframe-d{margin:0 0 12px; font-size:14px; line-height:1.5; color:var(--ink-soft)}
+.pframe .cta{font-size:14px; padding:11px 22px}
+@media (max-width:560px){
+  .pframe{flex-direction:column; align-items:flex-start; gap:14px}
+  .pframe img{width:110px; height:170px}
+}
 </style>
 
 <main>
@@ -140,6 +155,15 @@ li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
 
   <h1>Madlib</h1>
   <p class="byline">Gazillion Industries &middot; <time datetime="2026-09-20">September 20, 2026</time></p>
+
+  <aside class="pframe">
+    <img src="/og-home-20260910.jpg" alt="Gazillion Industries plug-in panel" loading="eager">
+    <div class="pframe-t">
+      <p class="pframe-n">Gazillion Industries</p>
+      <p class="pframe-d">Plug-ins for people who make beats.</p>
+      <a class="cta" href="/" data-umami-event="guide_madlib_to_gazillion" data-umami-event-spot="frame">See the plugins</a>
+    </div>
+  </aside>
 
 <p class="standfirst">A producer checks into a hotel in São Paulo in 2002 with a portable
   turntable, a cheap sampler and a tape deck, and comes home with the beats for a record people
@@ -253,6 +277,12 @@ li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
   <p>A hotel room, three objects, and a record people are still taking apart. The gear was never
   the variable.</p>
 
+  <div class="end">
+    <p>Gazillion Industries makes plugins tuned by ear: DRUGS, F(ilter)12, SKRUU,
+    TRIPLE OG and BEEFY.</p>
+    <a class="cta" href="/" data-umami-event="guide_madlib_to_gazillion" data-umami-event-spot="end">See the plugins</a>
+  </div>
+
   <h2>Keep reading</h2>
   <ul>
     <li><a class="inline" href="/mf-doom/">MF DOOM</a> &mdash; The date everyone had wrong, the method in his own words, and the machines.</li>
@@ -260,11 +290,6 @@ li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
     <li><a class="inline" href="/sp-303/">The SP-303 and the vinyl sim sound</a> &mdash; What the 2001 sampler was, what its Vinyl Simulator does, and who used it.</li>
   </ul>
 
-  <div class="end">
-    <p>Gazillion Industries makes plugins tuned by ear: DRUGS, F(ilter)12, SKRUU,
-    TRIPLE OG and BEEFY.</p>
-    <a class="cta" href="/" data-umami-event="guide_madlib_to_gazillion" data-umami-event-spot="end">See the plugins</a>
-  </div>
 
   <p class="foot"><a href="/">Gazillion Industries LLC</a> &middot; <a href="/reading-material/">reading material</a></p>
 </main>

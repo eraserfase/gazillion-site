@@ -121,6 +121,21 @@ a.inline:hover{text-decoration-color:var(--red)}
 .crumb span{color:var(--ink-faint); margin:0 .5em}
 .byline{font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:var(--ink-faint); margin:0 0 26px}
 h3{margin:28px 0 8px; font-size:17px; font-weight:600; line-height:1.4; color:var(--ink)}
+
+.pframe{display:flex; gap:18px; align-items:center; margin:0 0 30px;
+        padding:16px; border:1px solid var(--pill-line); border-radius:14px;
+        background:rgba(242,233,235,.03)}
+.pframe img{width:128px; height:200px; object-fit:cover; object-position:top;
+            border-radius:8px; display:block; flex:0 0 auto}
+.pframe-t{min-width:0}
+.pframe-n{font-family:"Archivo Black","Arial Black",sans-serif; font-size:19px;
+          margin:0 0 4px; letter-spacing:.01em}
+.pframe-d{margin:0 0 12px; font-size:14px; line-height:1.5; color:var(--ink-soft)}
+.pframe .cta{font-size:14px; padding:11px 22px}
+@media (max-width:560px){
+  .pframe{flex-direction:column; align-items:flex-start; gap:14px}
+  .pframe img{width:110px; height:170px}
+}
 </style>
 
 <main>
@@ -128,6 +143,15 @@ h3{margin:28px 0 8px; font-size:17px; font-weight:600; line-height:1.4; color:va
 
   <h1>How to make 808s hit harder</h1>
   <p class="byline">Gazillion Industries &middot; <time datetime="2026-09-13">September 13, 2026</time></p>
+
+  <aside class="pframe">
+    <img src="/beefy/cover.png" alt="BEEFY plug-in panel" loading="eager">
+    <div class="pframe-t">
+      <p class="pframe-n">BEEFY</p>
+      <p class="pframe-d">Saturation and loudness for Mac and Windows. AU, VST3 and standalone.</p>
+      <a class="cta" href="/beefy.html" data-umami-event="guide_808_to_beefy" data-umami-event-spot="frame">Hear it</a>
+    </div>
+  </aside>
 
 <p class="standfirst">The beat that rattled your desk at 2 a.m. is playing
   out of a phone on the bus, and the 808 is gone. The hats still hiss, the
@@ -288,6 +312,12 @@ h3{margin:28px 0 8px; font-size:17px; font-weight:600; line-height:1.4; color:va
   shake anything. You can hear it, though, and on that speaker that is as hard
   as a note gets.</p>
 
+  <div class="end">
+    <p>BEEFY &mdash; saturation and loudness plugin for Mac and Windows. There is
+    a 28-second demo with three without/with comparisons on the page.</p>
+    <a class="cta" href="/beefy.html" data-umami-event="guide_808_to_beefy" data-umami-event-spot="end">Hear it</a>
+  </div>
+
   <h2>Keep reading</h2>
   <ul>
     <li><a class="inline" href="/how-to-mix-kick-and-808/">How to mix the kick and the 808</a> &mdash; Who owns the sub, tuning, sidechain, phase, and using the 808 as the kick.</li>
@@ -296,11 +326,6 @@ h3{margin:28px 0 8px; font-size:17px; font-weight:600; line-height:1.4; color:va
     <li><a class="inline" href="/tr-808/">The TR-808</a> &mdash; The ringing circuit in every voice, what DECAY really does, and the myths.</li>
   </ul>
 
-  <div class="end">
-    <p>BEEFY &mdash; saturation and loudness plugin for Mac and Windows. There is
-    a 28-second demo with three without/with comparisons on the page.</p>
-    <a class="cta" href="/beefy.html" data-umami-event="guide_808_to_beefy" data-umami-event-spot="end">Hear it &mdash; $19</a>
-  </div>
 
   <p class="foot"><a href="/">Gazillion Industries LLC</a> &middot; <a href="/reading-material/">reading material</a></p>
 </main>

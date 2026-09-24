@@ -157,6 +157,27 @@ li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
           border:1px solid var(--pill-line)}
 .shot figcaption{font-size:13px; color:var(--ink-faint); line-height:1.5; margin:10px 2px 0}
 .shot figcaption b{color:var(--ink-soft); font-weight:600}
+
+/* The closing button. The guides rank and the product page does not, so the
+   article is the doorway - and it carried one link per ~1,400 words, with the
+   only button sitting BELOW 'Keep reading' where a reader who clicks a related
+   guide never reaches it. */
+.buyline{margin:30px 0 0; text-align:center}
+
+.pframe{display:flex; gap:18px; align-items:center; margin:0 0 30px;
+        padding:16px; border:1px solid var(--pill-line); border-radius:14px;
+        background:rgba(242,233,235,.03)}
+.pframe img{width:128px; height:200px; object-fit:cover; object-position:top;
+            border-radius:8px; display:block; flex:0 0 auto}
+.pframe-t{min-width:0}
+.pframe-n{font-family:"Archivo Black","Arial Black",sans-serif; font-size:19px;
+          margin:0 0 4px; letter-spacing:.01em}
+.pframe-d{margin:0 0 12px; font-size:14px; line-height:1.5; color:var(--ink-soft)}
+.pframe .cta{font-size:14px; padding:11px 22px}
+@media (max-width:560px){
+  .pframe{flex-direction:column; align-items:flex-start; gap:14px}
+  .pframe img{width:110px; height:170px}
+}
 </style>
 
 <main>
@@ -164,6 +185,15 @@ li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
 
   <h1>Best cassette plugins</h1>
   <p class="byline">Gazillion Industries &middot; <time datetime="2026-09-22">September 22, 2026</time></p>
+
+  <aside class="pframe">
+    <img src="/tripleog/tripleog-dark.jpg" alt="TRIPLE OG plug-in panel" loading="eager">
+    <div class="pframe-t">
+      <p class="pframe-n">TRIPLE OG</p>
+      <p class="pframe-d">Cassette transport for Mac and Windows. AU, VST3 and standalone.</p>
+      <a class="cta" href="/tripleog.html" data-umami-event="guide_cassetteplugins_to_tripleog" data-umami-event-spot="frame">Hear it</a>
+    </div>
+  </aside>
 
 <p class="standfirst">A cassette is not a small reel-to-reel. It runs at a fraction of the
   speed, on a quarter of the width, through a transport built to a price, and every one of
@@ -185,10 +215,12 @@ li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
       <dt>Our answer</dt><dd>TRIPLE OG, $29, Mac and Windows</dd>
     </dl>
   </div>
-  <figure class="shot">
+  
+  <p class="aside"><a href="/tripleog.html" data-umami-event="guide_cassetteplugins_to_tripleog" data-umami-event-spot="top">TRIPLE OG</a> is our cassette sim for Mac and Windows, with the transport on the face rather than in a menu. There is a demo on the page.</p>
+<figure class="shot">
     <img src="/tripleog/tog-tape.jpg" width="648" height="464" loading="lazy"
          alt="The TAPE section of the TRIPLE OG panel: DRIVE at 45, AGE at 22 years, TONE at 40, HISS at 25 and MIX at 100 per cent.">
-    <figcaption>The medium, as five controls. <b>AGE</b> reads in years rather than a percentage, because that is what the quantity is &mdash; here it is set to 22.</figcaption>
+    <figcaption>The medium, as five controls. <b>AGE on <a href="/tripleog.html" data-umami-event="guide_cassetteplugins_to_tripleog" data-umami-event-spot="fig">TRIPLE OG</a></b> reads in years rather than a percentage, because that is what the quantity is &mdash; here it is set to 22.</figcaption>
   </figure>
 
 
@@ -308,6 +340,8 @@ li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
          alt="Two VU meters labelled L and R, calibrated from minus twenty to zero with a red section past zero and a peak lamp.">
     <figcaption>Stereo VU against a 0 VU reference, with a peak lamp. Tape level is read here, not on a bar graph.</figcaption>
   </figure>
+  <p class="buyline"><a class="cta" href="/tripleog.html" data-umami-event="guide_cassetteplugins_to_tripleog" data-umami-event-spot="midbtn">Hear TRIPLE OG</a></p>
+
 
 
   <h2>Where it goes in the chain</h2>
@@ -364,7 +398,7 @@ li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
       <figcaption><b>Age 35, hiss 45, drive 30, wow 40</b> &mdash; a worn deck &mdash; speed 0.951 to 1.059</figcaption>
       <audio controls preload="none" src="/tripleog/tog-aged.m4a"></audio>
     </figure>
-    <p class="src">The same eleven seconds each time, rendered offline through TRIPLE OG at the settings shown. No other processing, no master bus, no edits.</p>
+    <p class="src">The same eleven seconds each time, rendered offline through <a href="/tripleog.html" data-umami-event="guide_cassetteplugins_to_tripleog" data-umami-event-spot="audio">TRIPLE OG</a> at the settings shown. No other processing, no master bus, no edits.</p>
   </div>
 
 
@@ -423,6 +457,8 @@ li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
   serious implementation from a cosmetic one. Check it by listening in mono and then in
   stereo: if nothing at all changes about the character, the plugin is processing both
   channels with the same numbers.</p>
+  <p class="aside">Everything below is answered the same way we built <a href="/tripleog.html" data-umami-event="guide_cassetteplugins_to_tripleog" data-umami-event-spot="faq">TRIPLE OG</a> &mdash; the tape is the easy half, the transport is the half almost nothing does.</p>
+
 
   <h2>Questions people ask</h2>
   <h3>What is the best cassette plugin?</h3>
@@ -461,7 +497,7 @@ li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
   there faster than building it from five separate ones.</p>
 
   <h2>What TRIPLE OG does</h2>
-  <p>TRIPLE OG is our cassette tape simulation for Mac and Windows. <strong>TONE</strong>
+  <p><a href="/tripleog.html" data-umami-event="guide_cassetteplugins_to_tripleog" data-umami-event-spot="close">TRIPLE OG</a> is our cassette tape simulation for Mac and Windows. <strong>TONE</strong>
   sets playback brightness, <strong>DRIVE</strong> the thickness, <strong>HISS</strong> the
   broadband bed under it, and <strong>AGE</strong> runs from nought to sixty years, making
   the tape darker, noisier and less stable as it climbs. <strong>WOW FLUT</strong> is the
@@ -471,6 +507,12 @@ li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
   makes it drag and then sprint to catch up.</p>
 
   <p>Everybody models the tape. The deck is the part you could hear from across the room.</p>
+
+  <div class="end">
+    <p>TRIPLE OG &mdash; cassette tape simulation for Mac and Windows, with a transport
+    that drags, jams and sprints to catch up. There is a demo on the page.</p>
+    <a class="cta" href="/tripleog.html" data-umami-event="guide_cassetteplugins_to_tripleog" data-umami-event-spot="end">Hear it</a>
+  </div>
 
   <h2>Keep reading</h2>
   <ul>
@@ -483,11 +525,6 @@ li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
     <li><a class="inline" href="/best-free-tape-plugins/">Best free tape plugins</a> &mdash; What free tape plugins do well, and where they run out.</li>
   </ul>
 
-  <div class="end">
-    <p>TRIPLE OG &mdash; cassette tape simulation for Mac and Windows, with a transport
-    that drags, jams and sprints to catch up. There is a demo on the page.</p>
-    <a class="cta" href="/tripleog.html" data-umami-event="guide_cassetteplugins_to_tripleog" data-umami-event-spot="end">Hear it &mdash; $29</a>
-  </div>
 
   <p class="foot"><a href="/">Gazillion Industries LLC</a> &middot; <a href="/reading-material/">reading material</a></p>
 </main>

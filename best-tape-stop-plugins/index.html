@@ -157,6 +157,27 @@ li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
           border:1px solid var(--pill-line)}
 .shot figcaption{font-size:13px; color:var(--ink-faint); line-height:1.5; margin:10px 2px 0}
 .shot figcaption b{color:var(--ink-soft); font-weight:600}
+
+/* The closing button. The guides rank and the product page does not, so the
+   article is the doorway - and it carried one link per ~1,400 words, with the
+   only button sitting BELOW 'Keep reading' where a reader who clicks a related
+   guide never reaches it. */
+.buyline{margin:30px 0 0; text-align:center}
+
+.pframe{display:flex; gap:18px; align-items:center; margin:0 0 30px;
+        padding:16px; border:1px solid var(--pill-line); border-radius:14px;
+        background:rgba(242,233,235,.03)}
+.pframe img{width:128px; height:200px; object-fit:cover; object-position:top;
+            border-radius:8px; display:block; flex:0 0 auto}
+.pframe-t{min-width:0}
+.pframe-n{font-family:"Archivo Black","Arial Black",sans-serif; font-size:19px;
+          margin:0 0 4px; letter-spacing:.01em}
+.pframe-d{margin:0 0 12px; font-size:14px; line-height:1.5; color:var(--ink-soft)}
+.pframe .cta{font-size:14px; padding:11px 22px}
+@media (max-width:560px){
+  .pframe{flex-direction:column; align-items:flex-start; gap:14px}
+  .pframe img{width:110px; height:170px}
+}
 </style>
 
 <main>
@@ -164,6 +185,15 @@ li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
 
   <h1>Best tape stop plugins</h1>
   <p class="byline">Gazillion Industries &middot; <time datetime="2026-09-22">September 22, 2026</time></p>
+
+  <aside class="pframe">
+    <img src="/tripleog/tripleog-dark.jpg" alt="TRIPLE OG plug-in panel" loading="eager">
+    <div class="pframe-t">
+      <p class="pframe-n">TRIPLE OG</p>
+      <p class="pframe-d">Cassette transport for Mac and Windows. AU, VST3 and standalone.</p>
+      <a class="cta" href="/tripleog.html" data-umami-event="guide_tapestopplugins_to_tripleog" data-umami-event-spot="frame">Hear it</a>
+    </div>
+  </aside>
 
 <p class="standfirst">The tape stop is the sound of a machine losing its grip: pitch and
   time sagging together as the reel slows, then either silence or a scramble back up to
@@ -186,7 +216,9 @@ li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
       <dt>Our answer</dt><dd>TRIPLE OG's SLAM, with SLAM RETURN for the length</dd>
     </dl>
   </div>
-  <figure class="shot">
+  
+  <p class="aside"><a href="/tripleog.html" data-umami-event="guide_tapestopplugins_to_tripleog" data-umami-event-spot="top">TRIPLE OG</a> is our cassette sim for Mac and Windows, with the transport on the face rather than in a menu. There is a demo on the page.</p>
+<figure class="shot">
     <img src="/tripleog/tog-display.jpg" width="620" height="374" loading="lazy"
          alt="The TRIPLE OG transport display: two reels, the tape path, the REC and PLAY heads and a speed readout of 101.5 per cent.">
     <figcaption>The readout is speed, not level. At <b>101.5%</b> the transport is running fast.</figcaption>
@@ -244,7 +276,7 @@ li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
   <figure class="shot">
     <img src="/tripleog/tog-panel-dark.jpg" width="401" height="998" loading="lazy"
          alt="The whole TRIPLE OG panel in its dark finish: transport display at the top, VU meters, the TAPE section, the TRANSPORT section and the SCRUB strip.">
-    <figcaption>The whole thing. Top half is the machine, bottom half is the tape, and the <b>SCRUB</b> strip along the bottom is played by hand.</figcaption>
+    <figcaption>The whole thing. Top half is the machine, bottom half is the tape, and the <b>SCRUB on <a href="/tripleog.html" data-umami-event="guide_tapestopplugins_to_tripleog" data-umami-event-spot="fig">TRIPLE OG</a></b> strip along the bottom is played by hand.</figcaption>
   </figure>
 
 
@@ -275,6 +307,8 @@ li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
          alt="The TRANSPORT section of the TRIPLE OG panel: WOW/FLUT at 40, CATCH at 55, SLAM RETURN at 120, and TILT and SLAM buttons.">
     <figcaption>The machine rather than the tape. <b>SLAM</b> is a stop you press, <b>SLAM RETURN</b> sets how long it takes to fall, and <b>CATCH</b> is the drag and the sprint back.</figcaption>
   </figure>
+  <p class="buyline"><a class="cta" href="/tripleog.html" data-umami-event="guide_tapestopplugins_to_tripleog" data-umami-event-spot="midbtn">Hear TRIPLE OG</a></p>
+
 
 
   <h2>Getting one in time</h2>
@@ -352,8 +386,10 @@ li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
       <figcaption><b>CATCH 100</b> &mdash; speed falls to 0.211 and sprints back to 1.854</figcaption>
       <audio controls preload="none" src="/tripleog/tog-catch.m4a"></audio>
     </figure>
-    <p class="src">The same eleven seconds each time, rendered offline through TRIPLE OG at the settings shown. No other processing, no master bus, no edits.</p>
+    <p class="src">The same eleven seconds each time, rendered offline through <a href="/tripleog.html" data-umami-event="guide_tapestopplugins_to_tripleog" data-umami-event-spot="audio">TRIPLE OG</a> at the settings shown. No other processing, no master bus, no edits.</p>
   </div>
+  <p class="aside">Everything below is answered the same way we built <a href="/tripleog.html" data-umami-event="guide_tapestopplugins_to_tripleog" data-umami-event-spot="faq">TRIPLE OG</a> &mdash; the tape is the easy half, the transport is the half almost nothing does.</p>
+
 
 
   <h2>Questions people ask</h2>
@@ -389,7 +425,7 @@ li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
   believable return to speed, which is the part listeners actually notice.</p>
 
   <h2>What TRIPLE OG does</h2>
-  <p>TRIPLE OG is our cassette tape simulation, and the transport is half the plug-in.
+  <p><a href="/tripleog.html" data-umami-event="guide_tapestopplugins_to_tripleog" data-umami-event-spot="close">TRIPLE OG</a> is our cassette tape simulation, and the transport is half the plug-in.
   <strong>SLAM</strong> is the stop: hold it and the tape drags to a halt, let go and it
   comes back up to speed, and whatever you do to it, it rebounds back into sync with your
   session. <strong>SLAM RETURN</strong> sets how long the stop takes.
@@ -400,6 +436,12 @@ li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
   <strong>WOW FLUT</strong> handle the tape itself.</p>
 
   <p>A stop is easy. A stop that comes back in time is the part everyone gets wrong.</p>
+
+  <div class="end">
+    <p>TRIPLE OG &mdash; cassette tape simulation for Mac and Windows, with a transport
+    that drags, jams and sprints to catch up. There is a demo on the page.</p>
+    <a class="cta" href="/tripleog.html" data-umami-event="guide_tapestopplugins_to_tripleog" data-umami-event-spot="end">Hear it</a>
+  </div>
 
   <h2>Keep reading</h2>
   <ul>
@@ -412,11 +454,6 @@ li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
     <li><a class="inline" href="/best-free-tape-plugins/">Best free tape plugins</a> &mdash; What free tape plugins do well, and where they run out.</li>
   </ul>
 
-  <div class="end">
-    <p>TRIPLE OG &mdash; cassette tape simulation for Mac and Windows, with a transport
-    that drags, jams and sprints to catch up. There is a demo on the page.</p>
-    <a class="cta" href="/tripleog.html" data-umami-event="guide_tapestopplugins_to_tripleog" data-umami-event-spot="end">Hear it &mdash; $29</a>
-  </div>
 
   <p class="foot"><a href="/">Gazillion Industries LLC</a> &middot; <a href="/reading-material/">reading material</a></p>
 </main>

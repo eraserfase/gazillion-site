@@ -157,6 +157,27 @@ li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
           border:1px solid var(--pill-line)}
 .shot figcaption{font-size:13px; color:var(--ink-faint); line-height:1.5; margin:10px 2px 0}
 .shot figcaption b{color:var(--ink-soft); font-weight:600}
+
+/* The closing button. The guides rank and the product page does not, so the
+   article is the doorway - and it carried one link per ~1,400 words, with the
+   only button sitting BELOW 'Keep reading' where a reader who clicks a related
+   guide never reaches it. */
+.buyline{margin:30px 0 0; text-align:center}
+
+.pframe{display:flex; gap:18px; align-items:center; margin:0 0 30px;
+        padding:16px; border:1px solid var(--pill-line); border-radius:14px;
+        background:rgba(242,233,235,.03)}
+.pframe img{width:128px; height:200px; object-fit:cover; object-position:top;
+            border-radius:8px; display:block; flex:0 0 auto}
+.pframe-t{min-width:0}
+.pframe-n{font-family:"Archivo Black","Arial Black",sans-serif; font-size:19px;
+          margin:0 0 4px; letter-spacing:.01em}
+.pframe-d{margin:0 0 12px; font-size:14px; line-height:1.5; color:var(--ink-soft)}
+.pframe .cta{font-size:14px; padding:11px 22px}
+@media (max-width:560px){
+  .pframe{flex-direction:column; align-items:flex-start; gap:14px}
+  .pframe img{width:110px; height:170px}
+}
 </style>
 
 <main>
@@ -164,6 +185,15 @@ li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
 
   <h1>How to record to cassette</h1>
   <p class="byline">Gazillion Industries &middot; <time datetime="2026-09-20">September 20, 2026</time></p>
+
+  <aside class="pframe">
+    <img src="/tripleog/tripleog-dark.jpg" alt="TRIPLE OG plug-in panel" loading="eager">
+    <div class="pframe-t">
+      <p class="pframe-n">TRIPLE OG</p>
+      <p class="pframe-d">Cassette transport for Mac and Windows. AU, VST3 and standalone.</p>
+      <a class="cta" href="/tripleog.html" data-umami-event="guide_tocassette_to_tripleog" data-umami-event-spot="frame">Hear it</a>
+    </div>
+  </aside>
 
 <p class="standfirst">There is a deck in your parents' garage with a broken door and a counter
   that still reads 0187. It will do something to your beat that nothing on your laptop will do,
@@ -263,6 +293,12 @@ li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
 
   <p>The counter still reads 0187. Now it is reading it over your drums.</p>
 
+  <div class="end">
+    <p>TRIPLE OG &mdash; cassette tape simulation for Mac and Windows, with a transport
+    that drags, jams and sprints to catch up. There is a demo on the page.</p>
+    <a class="cta" href="/tripleog.html" data-umami-event="guide_tocassette_to_tripleog" data-umami-event-spot="end">Hear it</a>
+  </div>
+
   <h2>Keep reading</h2>
   <ul>
     <li><a class="inline" href="/four-track-recording/">Four-track recording on cassette</a> &mdash; Four tracks on one cassette, bouncing, and what each generation costs.</li>
@@ -272,11 +308,6 @@ li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
     <li><a class="inline" href="/best-lofi-tape-plugins/">Best lofi tape plugins</a> &mdash; Mastering tape and lofi tape want opposite settings. Which to invert.</li>
   </ul>
 
-  <div class="end">
-    <p>TRIPLE OG &mdash; cassette tape simulation for Mac and Windows, with a transport
-    that drags, jams and sprints to catch up. There is a demo on the page.</p>
-    <a class="cta" href="/tripleog.html" data-umami-event="guide_tocassette_to_tripleog" data-umami-event-spot="end">Hear it &mdash; $29</a>
-  </div>
 
   <p class="foot"><a href="/">Gazillion Industries LLC</a> &middot; <a href="/reading-material/">reading material</a></p>
 </main>

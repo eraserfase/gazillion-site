@@ -133,6 +133,21 @@ h3{margin:28px 0 8px; font-size:17px; font-weight:600; line-height:1.4; color:va
 ul,ol{margin:0 0 16px; padding-left:1.2em}
 li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
 .cta{background:var(--accent); color:var(--field-deep)}
+
+.pframe{display:flex; gap:18px; align-items:center; margin:0 0 30px;
+        padding:16px; border:1px solid var(--pill-line); border-radius:14px;
+        background:rgba(242,233,235,.03)}
+.pframe img{width:128px; height:200px; object-fit:cover; object-position:top;
+            border-radius:8px; display:block; flex:0 0 auto}
+.pframe-t{min-width:0}
+.pframe-n{font-family:"Archivo Black","Arial Black",sans-serif; font-size:19px;
+          margin:0 0 4px; letter-spacing:.01em}
+.pframe-d{margin:0 0 12px; font-size:14px; line-height:1.5; color:var(--ink-soft)}
+.pframe .cta{font-size:14px; padding:11px 22px}
+@media (max-width:560px){
+  .pframe{flex-direction:column; align-items:flex-start; gap:14px}
+  .pframe img{width:110px; height:170px}
+}
 </style>
 
 <main>
@@ -140,6 +155,15 @@ li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
 
   <h1>What is varispeed</h1>
   <p class="byline">Gazillion Industries &middot; <time datetime="2026-09-14">September 14, 2026</time></p>
+
+  <aside class="pframe">
+    <img src="/skruu/skruu-dark.jpg" alt="SKRUU plug-in panel" loading="eager">
+    <div class="pframe-t">
+      <p class="pframe-n">SKRUU</p>
+      <p class="pframe-d">Varispeed pitch and time stretch for Mac and Windows.</p>
+      <a class="cta" href="/skruu.html" data-umami-event="guide_varispeed_to_skruu" data-umami-event-spot="frame">Hear it</a>
+    </div>
+  </aside>
 
 <p class="standfirst">In 1966 the Beatles gave George Martin two takes of "Strawberry
   Fields Forever" in different keys and tempos and asked him to join them. He sped one up
@@ -231,6 +255,12 @@ li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
   <p>George Martin had two tape machines and a deadline. The trick still sounds like
   magic.</p>
 
+  <div class="end">
+    <p>SKRUU &mdash; varispeed pitch and time stretch for Mac and Windows. Pitch and
+    time move independently, with sixteen elastic return shapes.</p>
+    <a class="cta" href="/skruu.html" data-umami-event="guide_varispeed_to_skruu" data-umami-event-spot="end">Hear it</a>
+  </div>
+
   <h2>Keep reading</h2>
   <ul>
     <li><a class="inline" href="/how-to-change-pitch-without-changing-tempo/">How to change pitch without changing tempo</a> &mdash; How pitch shifting and time stretching work, which mode to use, and how to avoid artifacts.</li>
@@ -238,11 +268,6 @@ li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
     <li><a class="inline" href="/how-to-chop-and-screw/">How to chop and screw a song</a> &mdash; Where DJ Screw&#x27;s Houston sound comes from, and how to screw and chop a song in a DAW.</li>
   </ul>
 
-  <div class="end">
-    <p>SKRUU &mdash; varispeed pitch and time stretch for Mac and Windows. Pitch and
-    time move independently, with sixteen elastic return shapes.</p>
-    <a class="cta" href="/skruu.html" data-umami-event="guide_varispeed_to_skruu" data-umami-event-spot="end">Hear it &mdash; $29</a>
-  </div>
 
   <p class="foot"><a href="/">Gazillion Industries LLC</a> &middot; <a href="/reading-material/">reading material</a></p>
 </main>

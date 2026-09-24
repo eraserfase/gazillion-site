@@ -157,6 +157,27 @@ li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
           border:1px solid var(--pill-line)}
 .shot figcaption{font-size:13px; color:var(--ink-faint); line-height:1.5; margin:10px 2px 0}
 .shot figcaption b{color:var(--ink-soft); font-weight:600}
+
+/* The closing button. The guides rank and the product page does not, so the
+   article is the doorway - and it carried one link per ~1,400 words, with the
+   only button sitting BELOW 'Keep reading' where a reader who clicks a related
+   guide never reaches it. */
+.buyline{margin:30px 0 0; text-align:center}
+
+.pframe{display:flex; gap:18px; align-items:center; margin:0 0 30px;
+        padding:16px; border:1px solid var(--pill-line); border-radius:14px;
+        background:rgba(242,233,235,.03)}
+.pframe img{width:128px; height:200px; object-fit:cover; object-position:top;
+            border-radius:8px; display:block; flex:0 0 auto}
+.pframe-t{min-width:0}
+.pframe-n{font-family:"Archivo Black","Arial Black",sans-serif; font-size:19px;
+          margin:0 0 4px; letter-spacing:.01em}
+.pframe-d{margin:0 0 12px; font-size:14px; line-height:1.5; color:var(--ink-soft)}
+.pframe .cta{font-size:14px; padding:11px 22px}
+@media (max-width:560px){
+  .pframe{flex-direction:column; align-items:flex-start; gap:14px}
+  .pframe img{width:110px; height:170px}
+}
 </style>
 
 <main>
@@ -164,6 +185,15 @@ li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
 
   <h1>Best tape plugins for vocals</h1>
   <p class="byline">Gazillion Industries &middot; <time datetime="2026-09-22">September 22, 2026</time></p>
+
+  <aside class="pframe">
+    <img src="/tripleog/tripleog-dark.jpg" alt="TRIPLE OG plug-in panel" loading="eager">
+    <div class="pframe-t">
+      <p class="pframe-n">TRIPLE OG</p>
+      <p class="pframe-d">Cassette transport for Mac and Windows. AU, VST3 and standalone.</p>
+      <a class="cta" href="/tripleog.html" data-umami-event="guide_tapevocals_to_tripleog" data-umami-event-spot="frame">Hear it</a>
+    </div>
+  </aside>
 
 <p class="standfirst">Tape on a vocal does something no compressor and no saturator does:
   it makes the take sound like a recording of a person rather than a capture of one. The
@@ -187,7 +217,9 @@ li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
     </dl>
   </div>
 
-  <h2>Why a voice shows tape differently</h2>
+  
+  <p class="aside"><a href="/tripleog.html" data-umami-event="guide_tapevocals_to_tripleog" data-umami-event-spot="top">TRIPLE OG</a> is our cassette sim for Mac and Windows, with the transport on the face rather than in a menu. There is a demo on the page.</p>
+<h2>Why a voice shows tape differently</h2>
   <p>A drum hit lasts a fraction of a second and the ear has no reference for what its pitch
   should have been. A sung note lasts seconds and the ear knows exactly. So the behavior that
   does most of the work on a drum bus, speed instability, is the one that gives you away on a
@@ -272,6 +304,8 @@ li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
          alt="Two VU meters labelled L and R with a peak lamp.">
     <figcaption>A voice punishes level error more than anything else, so the meters matter here.</figcaption>
   </figure>
+  <p class="buyline"><a class="cta" href="/tripleog.html" data-umami-event="guide_tapevocals_to_tripleog" data-umami-event-spot="midbtn">Hear TRIPLE OG</a></p>
+
 
 
 
@@ -316,7 +350,7 @@ li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
   <figure class="shot">
     <img src="/tripleog/tog-wowflut.jpg" width="210" height="237" loading="lazy"
          alt="The WOW/FLUT knob set to 40.">
-    <figcaption>Keep <b>WOW/FLUT</b> well below where you would set it on keys. A voice is
+    <figcaption>Keep <b>WOW/FLUT on <a href="/tripleog.html" data-umami-event="guide_tapevocals_to_tripleog" data-umami-event-spot="fig">TRIPLE OG</a></b> well below where you would set it on keys. A voice is
     the one source where the listener knows what the pitch was meant to be.</figcaption>
   </figure>
   <h2>Hear it</h2>
@@ -330,8 +364,10 @@ li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
       <figcaption><b>Hiss 60, tone 45</b> &mdash; a noise bed, nothing else</figcaption>
       <audio controls preload="none" src="/tripleog/tog-hiss.m4a"></audio>
     </figure>
-    <p class="src">The same eleven seconds each time, rendered offline through TRIPLE OG at the settings shown. No other processing, no master bus, no edits.</p>
+    <p class="src">The same eleven seconds each time, rendered offline through <a href="/tripleog.html" data-umami-event="guide_tapevocals_to_tripleog" data-umami-event-spot="audio">TRIPLE OG</a> at the settings shown. No other processing, no master bus, no edits.</p>
   </div>
+  <p class="aside">Everything below is answered the same way we built <a href="/tripleog.html" data-umami-event="guide_tapevocals_to_tripleog" data-umami-event-spot="faq">TRIPLE OG</a> &mdash; the tape is the easy half, the transport is the half almost nothing does.</p>
+
 
 
   <h2>Questions people ask</h2>
@@ -360,7 +396,7 @@ li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
   is most of why a stack of real takes sounds wider than copies.</p>
 
   <h2>What TRIPLE OG does</h2>
-  <p>TRIPLE OG is our cassette tape simulation. On a lead, <strong>TONE</strong> and
+  <p><a href="/tripleog.html" data-umami-event="guide_tapevocals_to_tripleog" data-umami-event-spot="close">TRIPLE OG</a> is our cassette tape simulation. On a lead, <strong>TONE</strong> and
   <strong>DRIVE</strong> do the useful work while <strong>AGE</strong>,
   <strong>HISS</strong> and <strong>WOW FLUT</strong> stay low. On a double, a stack or an
   ad-lib, open all five and let it sound like a different recording. The transport,
@@ -368,6 +404,12 @@ li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
   vocal needs to fall apart on purpose at the end of a phrase.</p>
 
   <p>The safest place for a cassette on a vocal is underneath another one.</p>
+
+  <div class="end">
+    <p>TRIPLE OG &mdash; cassette tape simulation for Mac and Windows, with a transport
+    that drags, jams and sprints to catch up. There is a demo on the page.</p>
+    <a class="cta" href="/tripleog.html" data-umami-event="guide_tapevocals_to_tripleog" data-umami-event-spot="end">Hear it</a>
+  </div>
 
   <h2>Keep reading</h2>
   <ul>
@@ -378,11 +420,6 @@ li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
     <li><a class="inline" href="/best-cassette-plugins/">Best cassette plugins</a> &mdash; What makes a cassette sound like a cassette, and what the field costs.</li>
   </ul>
 
-  <div class="end">
-    <p>TRIPLE OG &mdash; cassette tape simulation for Mac and Windows, with a transport
-    that drags, jams and sprints to catch up. There is a demo on the page.</p>
-    <a class="cta" href="/tripleog.html" data-umami-event="guide_tapevocals_to_tripleog" data-umami-event-spot="end">Hear it &mdash; $29</a>
-  </div>
 
   <p class="foot"><a href="/">Gazillion Industries LLC</a> &middot; <a href="/reading-material/">reading material</a></p>
 </main>
