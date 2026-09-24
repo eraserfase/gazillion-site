@@ -36,5 +36,6 @@ linking.
 - [RC-20 Retro Color](https://gazillionindustries.com/rc-20-retro-color.md): The six modules in order, what Magnitude does, and where it differs from a filter.
 - [How to make a telephone effect on vocals](https://gazillionindustries.com/telephone-effect-on-vocals.md): The band-pass, the compression, and the modern cell-phone version.
 - [Telephone effect plugins](https://gazillionindustries.com/telephone-effect-plugins.md): The band, the slope, the compression and the grit, plus free and paid options.
+- [What does 12 bit audio actually sound like](https://gazillionindustries.com/what-does-12-bit-sound-like.md): Each bit is about 6 dB, so 12 bits gives roughly 72 dB against 16 bit's 96. The audible result is a noise floor that only exists while the music plays, quantization that sits on the signal rather than under it, and tails that go grainy and stop early. Loud material hides all of it.
 - [What is aliasing in audio](https://gazillionindustries.com/what-is-aliasing-in-audio.md): What it is, what it sounds like, how to prevent it, and how to use it on purpose.
 - [Why does my beat sound like a computer made it?](https://gazillionindustries.com/why-does-my-beat-sound-digital.md): Grid timing, identical velocities, silent gaps, full bandwidth and copy-pasted bars, with a concrete fix for each.

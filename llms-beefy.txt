@@ -59,6 +59,7 @@ linking.
 - [Parallel saturation](https://gazillionindustries.com/parallel-saturation.md): Set it up on a return, drive it hard, filter the burnt copy, and blend it under the dry signal.
 - [Phase cancellation](https://gazillionindustries.com/phase-cancellation.md): Why two versions of one sound cancel, and how to find and fix it.
 - [Saturation explained](https://gazillionindustries.com/saturation-explained.md): Harmonics, the types, where it goes in a chain, and what it costs.
+- [How to saturate a drum bus in Ableton when Roar is already on it](https://gazillionindustries.com/saturation-plugins-for-ableton-live.md): Roar covers most of what a drum bus needs. The second stage only earns its place when it does a different job.
 - [Saturation vs distortion](https://gazillionindustries.com/saturation-vs-distortion.md): Saturation, overdrive, distortion and fuzz: what changes, and which one you want.
 - [The Sausage Fattener, and how BEEFY is different](https://gazillionindustries.com/sausage-fattener-vs-beefy.md): What it is, what is documented about it, and where BEEFY's controls differ.
 - [Soft clipping explained](https://gazillionindustries.com/soft-clipping-explained.md): What a soft clipper does, how it differs from hard clipping and a limiter, and where to use one.

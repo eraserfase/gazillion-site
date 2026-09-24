@@ -503,6 +503,8 @@ the people who make the plugins.
   — Free options first, ranked by what each one buys you, then the one paid step worth making.
 - [Why your mix sounds harsh after mastering](https://gazillionindustries.com/why-is-my-mix-harsh.md)
   — A diagnostic order for a harsh master, from the limiter down to your monitoring level.
+- [How to saturate a drum bus in Ableton when Roar is already on it](https://gazillionindustries.com/saturation-plugins-for-ableton-live.md)
+  — Roar covers most of what a drum bus needs. The second stage only earns its place when it does a different job.
 - [Vinyl sim, and what a vinyl sim plugin does](https://gazillionindustries.com/vinyl-sim-plugin.md)
   — The effect taken apart: bandwidth, noise, the squash and the wear.
 - [Best free VST plugins](https://gazillionindustries.com/best-free-vst-plugins.md)
@@ -537,6 +539,8 @@ the people who make the plugins.
   — Grid timing, identical velocities, silent gaps, full bandwidth and copy-pasted bars, with a concrete fix for each.
 - [How to get the sound of an old sampler without buying one](https://gazillionindustries.com/how-to-get-an-old-sampler-sound.md)
   — The old sampler sound is a stack of specific limitations, and you can apply each one on purpose.
+- [What does 12 bit audio actually sound like](https://gazillionindustries.com/what-does-12-bit-sound-like.md)
+  — Each bit is about 6 dB, so 12 bits gives roughly 72 dB against 16 bit's 96. The audible result is a noise floor that only exists while the music plays, quantization that sits on the signal rather than under it, and tails that go grainy and stop early. Loud material hides all of it.
 - [Best pitch shifter plugins](https://gazillionindustries.com/best-pitch-shifter-plugins.md)
   — Which family to use, what formant control buys, and the free options worth having.
 - [Best time stretch plugins](https://gazillionindustries.com/best-time-stretch-plugins.md)
@@ -557,6 +561,10 @@ the people who make the plugins.
   — Why most doppler moves sound wrong, and what a real one drives.
 - [Varispeed in Ableton Live, and how to slow a sample](https://gazillionindustries.com/varispeed-in-ableton-live.md)
   — Which Ableton warp mode slows a sample without smearing it, and why.
+- [Why old Memphis rap tapes sound so distorted and blown out](https://gazillionindustries.com/memphis-rap-sound.md)
+  — The sound came from the medium and the method: cheap gear, mixed loud to cassette, then dubbed tape to tape for sale. Each generation added noise, lost top end and squashed the peaks further. A history of the format, and the settings that get there now.
+- [How to make phonk drums sound like a cassette dub](https://gazillionindustries.com/how-to-make-phonk-drums.md)
+  — Cowbell tuning, a wrecked 808, and the second-generation copy on top.
 - [Drum bus compressor settings](https://gazillionindustries.com/drum-bus-compressor-settings.md)
   — attack, release, ratio and threshold on a drum bus, and a starting point.
 
