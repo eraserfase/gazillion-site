@@ -9331,6 +9331,20 @@ In [F(ilter)12](https://gazillionindustries.com/f12.html), twelve bits is as cle
 
 Drums take crushing well, since the grit sits on transients and tails. Samples and chords get a worn, vintage texture. Vocals can take a little as an effect, or a lot for a robotic, radio-broken sound. On bass, go carefully: heavy crushing adds noise that muddies the low end, so crush a filtered copy instead.
 
+## Where the folded content actually lands
+
+Lower the sample rate and everything above half the new rate does not disappear. It mirrors down. A partial at frequency f comes back at the new rate minus f, so the content that returns is not a harmonic of anything in the music, which is why it reads as metallic rather than bright. The rule is one subtraction, and it tells you in advance what you are about to hear:
+
+- **22.05 kHz — fold line at 11,025 Hz**: a 6 kHz hat partial passes through unchanged
+
+- **16 kHz — fold line at 8,000 Hz**: a 6 kHz hat partial passes through unchanged
+
+- **11.025 kHz — fold line at 5,512 Hz**: a 6 kHz hat partial comes back at 5,025 Hz
+
+- **8 kHz — fold line at 4,000 Hz**: a 6 kHz hat partial comes back at 2,000 Hz
+
+At 8 kHz that 6 kHz hat partial lands at 2 kHz, which is in the middle of where the vocal and snare live, and a 7 kHz one lands at 1 kHz. That is the whole reason a crushed hi-hat can make a mix sound cluttered in a region you never touched. Filtering before the rate reduction removes the content that would have folded; filtering after only attenuates it once it is already sitting on top of the music.
+
 ## Questions people ask
 
 ### What is the difference between distortion and a bitcrusher?
@@ -10540,6 +10554,20 @@ In [F(ilter)12](https://gazillionindustries.com/f12.html), SAMPLE RATE folds the
 ## How to use it on purpose
 
 Lofi producers reach for aliasing deliberately. Lowering the sample rate on drums, chords or a whole loop gives the crunchy, metallic top of old samplers, especially alongside bit depth reduction (see [bitcrushing explained](https://gazillionindustries.com/bitcrushing-explained/)). Filter the result afterward if it gets piercing; you want grit, not a headache. [Best bitcrusher plugins](https://gazillionindustries.com/best-bitcrusher-plugins/) goes through which ones let you hear that fold-back and which ones hide it.
+
+## Where the folded content actually lands
+
+Lower the sample rate and everything above half the new rate does not disappear. It mirrors down. A partial at frequency f comes back at the new rate minus f, so the content that returns is not a harmonic of anything in the music, which is why it reads as metallic rather than bright. The rule is one subtraction, and it tells you in advance what you are about to hear:
+
+- **22.05 kHz — fold line at 11,025 Hz**: a 6 kHz hat partial passes through unchanged
+
+- **16 kHz — fold line at 8,000 Hz**: a 6 kHz hat partial passes through unchanged
+
+- **11.025 kHz — fold line at 5,512 Hz**: a 6 kHz hat partial comes back at 5,025 Hz
+
+- **8 kHz — fold line at 4,000 Hz**: a 6 kHz hat partial comes back at 2,000 Hz
+
+At 8 kHz that 6 kHz hat partial lands at 2 kHz, which is in the middle of where the vocal and snare live, and a 7 kHz one lands at 1 kHz. That is the whole reason a crushed hi-hat can make a mix sound cluttered in a region you never touched. Filtering before the rate reduction removes the content that would have folded; filtering after only attenuates it once it is already sitting on top of the music.
 
 ## Questions people ask
 

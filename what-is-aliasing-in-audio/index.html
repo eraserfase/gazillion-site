@@ -265,6 +265,25 @@ li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
   href="/best-bitcrusher-plugins/">Best bitcrusher plugins</a> goes through which ones let
   you hear that fold-back and which ones hide it.</p>
 
+  <h2>Where the folded content actually lands</h2>
+  <p>Lower the sample rate and everything above half the new rate does not disappear. It mirrors
+  down. A partial at frequency f comes back at the new rate minus f, so the content that returns
+  is not a harmonic of anything in the music, which is why it reads as metallic rather than bright.
+  The rule is one subtraction, and it tells you in advance what you are about to hear:</p>
+  <div class="card">
+    <dl>
+      <dt>22.05 kHz &mdash; fold line at 11,025&nbsp;Hz</dt><dd>a 6&nbsp;kHz hat partial passes through unchanged</dd>
+      <dt>16 kHz &mdash; fold line at 8,000&nbsp;Hz</dt><dd>a 6&nbsp;kHz hat partial passes through unchanged</dd>
+      <dt>11.025 kHz &mdash; fold line at 5,512&nbsp;Hz</dt><dd>a 6&nbsp;kHz hat partial comes back at 5,025&nbsp;Hz</dd>
+      <dt>8 kHz &mdash; fold line at 4,000&nbsp;Hz</dt><dd>a 6&nbsp;kHz hat partial comes back at 2,000&nbsp;Hz</dd>
+    </dl>
+  </div>
+  <p>At 8&nbsp;kHz that 6&nbsp;kHz hat partial lands at 2&nbsp;kHz, which is in the middle of where
+  the vocal and snare live, and a 7&nbsp;kHz one lands at 1&nbsp;kHz. That is the whole reason a
+  crushed hi-hat can make a mix sound cluttered in a region you never touched. Filtering before the
+  rate reduction removes the content that would have folded; filtering after only attenuates it
+  once it is already sitting on top of the music.</p>
+
   <h2>Questions people ask</h2>
   <h3>What is aliasing in sound?</h3>
   <p>Aliasing is when frequencies above half the sample rate fold back into the audible
