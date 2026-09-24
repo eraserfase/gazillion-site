@@ -6,6 +6,8 @@
 <meta name="description" content="What the vinyl simulator effect actually is, why it works on drums, the four parts of the sound, and what separates a convincing one from a thin one.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="canonical" href="https://gazillionindustries.com/vinyl-sim-plugin/">
+<link rel="alternate" type="text/markdown" href="https://gazillionindustries.com/vinyl-sim-plugin.md" title="Markdown version for agents">
+<link rel="describedby" type="text/plain" href="https://gazillionindustries.com/llms.txt">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Gazillion Industries">
 <meta property="og:title" content="Vinyl sim, and what a vinyl sim plugin does">
@@ -174,6 +176,18 @@ li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
 
 <p class="standfirst">Every plugin in this category claims the same thing and they do not all do the same work. Pulled apart, the effect is four separate behaviors happening at once, and which of them a given plugin actually implements is what decides whether the result sounds like a record or like a filter with noise on it.</p>
   <p>A vinyl sim is a plugin that adds the warmth, noise floor, and subtle pitch instability associated with analog disc playback to a digital audio signal. It typically layers a crackle or hiss bed, applies gentle high-frequency roll-off, and introduces slow wow and flutter so the track reads as though it were cut to a physical disc and played back through a turntable rather than rendered purely in the box.</p>
+
+    <h2>The short version</h2>
+  <div class="card">
+    <dl>
+      <dt>What it is</dt><dd>four things at once, not one process</dd>
+      <dt>The four</dt><dd>bandwidth, noise, the squash, the wear</dd>
+      <dt>The one most leave out</dt><dd>the squash - level collapsing and returning</dd>
+      <dt>Why on drums</dt><dd>it shortens hits and lifts the room behind them</dd>
+      <dt>Sounds fake when</dt><dd>it is a low-pass with noise laid over the top</dd>
+      <dt>Our answer</dt><dd>DRUGS, free, one control called DOSE</dd>
+    </dl>
+  </div>
 
   <h2>What the effect actually does</h2>
   <p>A vinyl simulator takes a clean digital signal and reshapes it to resemble what a turntable would have produced from a lacquer cut. The most obvious change is bandwidth. High frequencies roll off gently, low frequencies lose their deepest extension, and the midrange gets a slight forward push. This alone makes a track sound older and more confined, as though it were captured through a smaller lens.</p>

@@ -1,0 +1,19 @@
+# Gazillion Industries
+
+> Audio plug-ins for macOS and Windows: AU, VST3 and standalone. Each does one
+> job and needs no manual. Tuned by ear; none is an emulation of any hardware.
+
+Last updated: 2026-09-24
+
+## Products
+
+- [BEEFY](https://gazillionindustries.com/beefy.html): Saturation and loudness for Mac and Windows. AU, VST3 and standalone.
+- [DRUGS](https://gazillionindustries.com/drugs.html): A one-knob bus compressor for drums. Free, Mac and Windows.
+- [F(ilter)12](https://gazillionindustries.com/f12.html): A 12 bit sauce filter for Mac and Windows. AU, VST3 and standalone.
+- [SKRUU](https://gazillionindustries.com/skruu.html): Varispeed pitch and time stretch for Mac and Windows.
+- [TRIPLE OG](https://gazillionindustries.com/tripleog.html): Cassette transport for Mac and Windows. AU, VST3 and standalone.
+
+## Fuller versions
+
+- [Index of everything](https://gazillionindustries.com/llms.txt): products plus all 122 articles
+- [Complete text](https://gazillionindustries.com/llms-full.txt): every article in one file
