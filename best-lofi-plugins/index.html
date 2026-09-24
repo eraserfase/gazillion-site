@@ -170,6 +170,12 @@ li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
         background:rgba(242,233,235,.03)}
 .pframe img{width:132px; height:206px; object-fit:cover; object-position:top;
             border-radius:8px; display:block}
+/* Every picture on a guide is a picture of the product, so every picture is a
+   way to the product. Tony, 24 Sep 2026. */
+.imglink{display:block; text-decoration:none; border:0}
+.imglink img{transition:transform .18s ease, filter .18s ease}
+.imglink:hover img{transform:translateY(-2px); filter:brightness(1.06)}
+.imglink:focus-visible{outline:3px solid var(--chalk); outline-offset:3px; border-radius:10px}
 .pframe-t{min-width:0; display:flex; flex-direction:column; align-items:center}
 .pframe-n{font-family:"Archivo Black","Arial Black",sans-serif; font-size:19px;
           margin:0 0 4px; letter-spacing:.01em}
@@ -188,7 +194,7 @@ li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
   <p class="byline">Gazillion Industries &middot; <time datetime="2026-09-22">September 22, 2026</time></p>
 
   <aside class="pframe">
-    <img src="/tripleog/tripleog-dark.jpg" alt="TRIPLE OG plug-in panel" loading="eager">
+    <a href="/tripleog.html" data-umami-event="guide_lofiplugins_to_tripleog" data-umami-event-spot="frameimg" class="imglink"><img src="/tripleog/tripleog-dark.jpg" alt="TRIPLE OG plug-in panel" loading="eager"></a>
     <div class="pframe-t">
       <p class="pframe-n">TRIPLE OG</p>
       <p class="pframe-d">Cassette transport for Mac and Windows. AU, VST3 and standalone.</p>
@@ -220,8 +226,8 @@ li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
   
   <p class="aside"><a href="/tripleog.html" data-umami-event="guide_lofiplugins_to_tripleog" data-umami-event-spot="top">TRIPLE OG</a> is our cassette sim for Mac and Windows, with the transport on the face rather than in a menu. There is a demo on the page.</p>
 <figure class="shot">
-    <img src="/tripleog/tog-age.jpg" width="228" height="428" loading="lazy"
-         alt="The AGE knob reading 22YR and the MIX knob reading 100 per cent.">
+    <a href="/tripleog.html" data-umami-event="guide_lofiplugins_to_tripleog" data-umami-event-spot="figimg" class="imglink"><img src="/tripleog/tog-age.jpg" width="228" height="428" loading="lazy"
+         alt="The AGE knob reading 22YR and the MIX knob reading 100 per cent."></a>
     <figcaption><b>AGE on <a href="/tripleog.html" data-umami-event="guide_lofiplugins_to_tripleog" data-umami-event-spot="fig">TRIPLE OG</a></b> is in years because that is what the quantity is. Nought to sixty, darker and noisier and less steady as it climbs.</figcaption>
   </figure>
 
@@ -259,8 +265,8 @@ li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
   <strong>TONE</strong> and <strong>AGE</strong>, noise with <strong>HISS</strong>, and
   instability with <strong>WOW FLUT</strong> and the transport. There's a demo on the page.</p>
   <figure class="shot">
-    <img src="/tripleog/tog-panel-dark.jpg" width="401" height="998" loading="lazy"
-         alt="The whole TRIPLE OG panel in its dark finish: transport display at the top, VU meters, the TAPE section, the TRANSPORT section and the SCRUB strip.">
+    <a href="/tripleog.html" data-umami-event="guide_lofiplugins_to_tripleog" data-umami-event-spot="figimg" class="imglink"><img src="/tripleog/tog-panel-dark.jpg" width="401" height="998" loading="lazy"
+         alt="The whole TRIPLE OG panel in its dark finish: transport display at the top, VU meters, the TAPE section, the TRANSPORT section and the SCRUB strip."></a>
     <figcaption>The whole thing. Top half is the machine, bottom half is the tape, and the <b>SCRUB</b> strip along the bottom is played by hand.</figcaption>
   </figure>
 
@@ -291,8 +297,8 @@ li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
   instrument library. The instrument is the least transferable purchase of the three, because
   the character is fixed in the recordings and you cannot apply it to anything else.</p>
   <figure class="shot">
-    <img src="/tripleog/tog-display.jpg" width="620" height="374" loading="lazy"
-         alt="The TRIPLE OG transport display: two reels, the tape path, the REC and PLAY heads and a speed readout of 101.5 per cent.">
+    <a href="/tripleog.html" data-umami-event="guide_lofiplugins_to_tripleog" data-umami-event-spot="figimg" class="imglink"><img src="/tripleog/tog-display.jpg" width="620" height="374" loading="lazy"
+         alt="The TRIPLE OG transport display: two reels, the tape path, the REC and PLAY heads and a speed readout of 101.5 per cent."></a>
     <figcaption>The readout is speed, not level. At <b>101.5%</b> the transport is running fast.</figcaption>
   </figure>
 
@@ -318,8 +324,8 @@ li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
   the bit reduction is usually after the filter instead of before it, so nothing is smoothing
   the aliasing.</p>
   <figure class="shot">
-    <img src="/tripleog/tog-tape.jpg" width="648" height="464" loading="lazy"
-         alt="The TAPE section of the TRIPLE OG panel: DRIVE at 45, AGE at 22 years, TONE at 40, HISS at 25 and MIX at 100 per cent.">
+    <a href="/tripleog.html" data-umami-event="guide_lofiplugins_to_tripleog" data-umami-event-spot="figimg" class="imglink"><img src="/tripleog/tog-tape.jpg" width="648" height="464" loading="lazy"
+         alt="The TAPE section of the TRIPLE OG panel: DRIVE at 45, AGE at 22 years, TONE at 40, HISS at 25 and MIX at 100 per cent."></a>
     <figcaption>The medium, as five controls. <b>AGE</b> reads in years rather than a percentage, because that is what the quantity is &mdash; here it is set to 22.</figcaption>
   </figure>
   <p class="buyline"><a class="cta" href="/tripleog.html" data-umami-event="guide_lofiplugins_to_tripleog" data-umami-event-spot="midbtn">Hear TRIPLE OG</a></p>

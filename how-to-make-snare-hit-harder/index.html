@@ -128,6 +128,12 @@ h3{margin:28px 0 8px; font-size:17px; font-weight:600; line-height:1.4; color:va
         background:rgba(242,233,235,.03)}
 .pframe img{width:132px; height:206px; object-fit:cover; object-position:top;
             border-radius:8px; display:block}
+/* Every picture on a guide is a picture of the product, so every picture is a
+   way to the product. Tony, 24 Sep 2026. */
+.imglink{display:block; text-decoration:none; border:0}
+.imglink img{transition:transform .18s ease, filter .18s ease}
+.imglink:hover img{transform:translateY(-2px); filter:brightness(1.06)}
+.imglink:focus-visible{outline:3px solid var(--chalk); outline-offset:3px; border-radius:10px}
 .pframe-t{min-width:0; display:flex; flex-direction:column; align-items:center}
 .pframe-n{font-family:"Archivo Black","Arial Black",sans-serif; font-size:19px;
           margin:0 0 4px; letter-spacing:.01em}
@@ -146,7 +152,7 @@ h3{margin:28px 0 8px; font-size:17px; font-weight:600; line-height:1.4; color:va
   <p class="byline">Gazillion Industries &middot; <time datetime="2026-09-13">September 13, 2026</time></p>
 
   <aside class="pframe">
-    <img src="/beefy/cover.png" alt="BEEFY plug-in panel" loading="eager">
+    <a href="/beefy.html" data-umami-event="guide_snare_to_beefy" data-umami-event-spot="frameimg" class="imglink"><img src="/beefy/cover.png" alt="BEEFY plug-in panel" loading="eager"></a>
     <div class="pframe-t">
       <p class="pframe-n">BEEFY</p>
       <p class="pframe-d">Saturation and loudness for Mac and Windows. AU, VST3 and standalone.</p>

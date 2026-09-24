@@ -140,6 +140,12 @@ li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
         background:rgba(242,233,235,.03)}
 .pframe img{width:132px; height:206px; object-fit:cover; object-position:top;
             border-radius:8px; display:block}
+/* Every picture on a guide is a picture of the product, so every picture is a
+   way to the product. Tony, 24 Sep 2026. */
+.imglink{display:block; text-decoration:none; border:0}
+.imglink img{transition:transform .18s ease, filter .18s ease}
+.imglink:hover img{transform:translateY(-2px); filter:brightness(1.06)}
+.imglink:focus-visible{outline:3px solid var(--chalk); outline-offset:3px; border-radius:10px}
 .pframe-t{min-width:0; display:flex; flex-direction:column; align-items:center}
 .pframe-n{font-family:"Archivo Black","Arial Black",sans-serif; font-size:19px;
           margin:0 0 4px; letter-spacing:.01em}
@@ -158,7 +164,7 @@ li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
   <p class="byline">Gazillion Industries &middot; <time datetime="2026-09-14">September 14, 2026</time></p>
 
   <aside class="pframe">
-    <img src="/f12/f12-dark.jpg" alt="F(ilter)12 plug-in panel" loading="eager">
+    <a href="/f12.html" data-umami-event="guide_aliasing_to_f12" data-umami-event-spot="frameimg" class="imglink"><img src="/f12/f12-dark.jpg" alt="F(ilter)12 plug-in panel" loading="eager"></a>
     <div class="pframe-t">
       <p class="pframe-n">F(ilter)12</p>
       <p class="pframe-d">A 12 bit sauce filter for Mac and Windows. AU, VST3 and standalone.</p>

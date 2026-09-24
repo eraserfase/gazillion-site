@@ -170,6 +170,12 @@ li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
         background:rgba(242,233,235,.03)}
 .pframe img{width:132px; height:206px; object-fit:cover; object-position:top;
             border-radius:8px; display:block}
+/* Every picture on a guide is a picture of the product, so every picture is a
+   way to the product. Tony, 24 Sep 2026. */
+.imglink{display:block; text-decoration:none; border:0}
+.imglink img{transition:transform .18s ease, filter .18s ease}
+.imglink:hover img{transform:translateY(-2px); filter:brightness(1.06)}
+.imglink:focus-visible{outline:3px solid var(--chalk); outline-offset:3px; border-radius:10px}
 .pframe-t{min-width:0; display:flex; flex-direction:column; align-items:center}
 .pframe-n{font-family:"Archivo Black","Arial Black",sans-serif; font-size:19px;
           margin:0 0 4px; letter-spacing:.01em}
@@ -188,7 +194,7 @@ li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
   <p class="byline">Gazillion Industries &middot; <time datetime="2026-09-22">September 22, 2026</time></p>
 
   <aside class="pframe">
-    <img src="/tripleog/tripleog-dark.jpg" alt="TRIPLE OG plug-in panel" loading="eager">
+    <a href="/tripleog.html" data-umami-event="guide_cassetteplugins_to_tripleog" data-umami-event-spot="frameimg" class="imglink"><img src="/tripleog/tripleog-dark.jpg" alt="TRIPLE OG plug-in panel" loading="eager"></a>
     <div class="pframe-t">
       <p class="pframe-n">TRIPLE OG</p>
       <p class="pframe-d">Cassette transport for Mac and Windows. AU, VST3 and standalone.</p>
@@ -219,8 +225,8 @@ li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
   
   <p class="aside"><a href="/tripleog.html" data-umami-event="guide_cassetteplugins_to_tripleog" data-umami-event-spot="top">TRIPLE OG</a> is our cassette sim for Mac and Windows, with the transport on the face rather than in a menu. There is a demo on the page.</p>
 <figure class="shot">
-    <img src="/tripleog/tog-tape.jpg" width="648" height="464" loading="lazy"
-         alt="The TAPE section of the TRIPLE OG panel: DRIVE at 45, AGE at 22 years, TONE at 40, HISS at 25 and MIX at 100 per cent.">
+    <a href="/tripleog.html" data-umami-event="guide_cassetteplugins_to_tripleog" data-umami-event-spot="figimg" class="imglink"><img src="/tripleog/tog-tape.jpg" width="648" height="464" loading="lazy"
+         alt="The TAPE section of the TRIPLE OG panel: DRIVE at 45, AGE at 22 years, TONE at 40, HISS at 25 and MIX at 100 per cent."></a>
     <figcaption>The medium, as five controls. <b>AGE on <a href="/tripleog.html" data-umami-event="guide_cassetteplugins_to_tripleog" data-umami-event-spot="fig">TRIPLE OG</a></b> reads in years rather than a percentage, because that is what the quantity is &mdash; here it is set to 22.</figcaption>
   </figure>
 
@@ -247,8 +253,8 @@ li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
   softens more as the tape wears. A plugin that models this as a low-pass filter sounds
   muffled; a plugin that models it as saturation of the highs sounds old.</p>
   <figure class="shot">
-    <img src="/tripleog/tog-age.jpg" width="228" height="428" loading="lazy"
-         alt="The AGE knob reading 22YR and the MIX knob reading 100 per cent.">
+    <a href="/tripleog.html" data-umami-event="guide_cassetteplugins_to_tripleog" data-umami-event-spot="figimg" class="imglink"><img src="/tripleog/tog-age.jpg" width="228" height="428" loading="lazy"
+         alt="The AGE knob reading 22YR and the MIX knob reading 100 per cent."></a>
     <figcaption><b>AGE</b> is in years because that is what the quantity is. Nought to sixty, darker and noisier and less steady as it climbs.</figcaption>
   </figure>
 
@@ -290,8 +296,8 @@ li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
   <p>Prices in this category move, so check before you buy. The more useful comparison is
   what each one does with the transport, because that is where they actually differ.</p>
   <figure class="shot">
-    <img src="/tripleog/tog-panel-dark.jpg" width="401" height="998" loading="lazy"
-         alt="The whole TRIPLE OG panel in its dark finish: transport display at the top, VU meters, the TAPE section, the TRANSPORT section and the SCRUB strip.">
+    <a href="/tripleog.html" data-umami-event="guide_cassetteplugins_to_tripleog" data-umami-event-spot="figimg" class="imglink"><img src="/tripleog/tog-panel-dark.jpg" width="401" height="998" loading="lazy"
+         alt="The whole TRIPLE OG panel in its dark finish: transport display at the top, VU meters, the TAPE section, the TRANSPORT section and the SCRUB strip."></a>
     <figcaption>The whole thing. Top half is the machine, bottom half is the tape, and the <b>SCRUB</b> strip along the bottom is played by hand.</figcaption>
   </figure>
 
@@ -337,8 +343,8 @@ li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
   head that was never quite square, do not stay identical. A cassette sim that keeps the
   image locked dead center is missing one of the easiest cues there is.</p>
   <figure class="shot">
-    <img src="/tripleog/tog-vu.jpg" width="600" height="98" loading="lazy"
-         alt="Two VU meters labelled L and R, calibrated from minus twenty to zero with a red section past zero and a peak lamp.">
+    <a href="/tripleog.html" data-umami-event="guide_cassetteplugins_to_tripleog" data-umami-event-spot="figimg" class="imglink"><img src="/tripleog/tog-vu.jpg" width="600" height="98" loading="lazy"
+         alt="Two VU meters labelled L and R, calibrated from minus twenty to zero with a red section past zero and a peak lamp."></a>
     <figcaption>Stereo VU against a 0 VU reference, with a peak lamp. Tape level is read here, not on a bar graph.</figcaption>
   </figure>
   <p class="buyline"><a class="cta" href="/tripleog.html" data-umami-event="guide_cassetteplugins_to_tripleog" data-umami-event-spot="midbtn">Hear TRIPLE OG</a></p>
@@ -363,8 +369,8 @@ li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
   can push it much further than you would dare on a beat. On a whole mix, treat it as a
   finishing move and use less of everything than felt right in solo.</p>
   <figure class="shot">
-    <img src="/tripleog/tog-transport.jpg" width="648" height="236" loading="lazy"
-         alt="The TRANSPORT section of the TRIPLE OG panel: WOW/FLUT at 40, CATCH at 55, SLAM RETURN at 120, and TILT and SLAM buttons.">
+    <a href="/tripleog.html" data-umami-event="guide_cassetteplugins_to_tripleog" data-umami-event-spot="figimg" class="imglink"><img src="/tripleog/tog-transport.jpg" width="648" height="236" loading="lazy"
+         alt="The TRANSPORT section of the TRIPLE OG panel: WOW/FLUT at 40, CATCH at 55, SLAM RETURN at 120, and TILT and SLAM buttons."></a>
     <figcaption>The machine rather than the tape. <b>SLAM</b> is a stop you press, <b>SLAM RETURN</b> sets how long it takes to fall, and <b>CATCH</b> is the drag and the sprint back.</figcaption>
   </figure>
 
@@ -426,15 +432,15 @@ li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
   and separate completely at the extremes, and the extreme is where this particular sound
   lives.</p>
   <figure class="shot">
-    <img src="/tripleog/tog-fresh.jpg" width="401" height="998" loading="lazy"
-         alt="TRIPLE OG set for a well-kept deck: DRIVE 18, AGE 0 years, TONE 55, HISS 8, WOW/FLUT 12.">
+    <a href="/tripleog.html" data-umami-event="guide_cassetteplugins_to_tripleog" data-umami-event-spot="figimg" class="imglink"><img src="/tripleog/tog-fresh.jpg" width="401" height="998" loading="lazy"
+         alt="TRIPLE OG set for a well-kept deck: DRIVE 18, AGE 0 years, TONE 55, HISS 8, WOW/FLUT 12."></a>
     <figcaption><b>A well-kept deck.</b> AGE at nought, hiss at 8, barely any speed movement.
     This is the flattering setting and the one most cassette plugins ship at.</figcaption>
   </figure>
 
   <figure class="shot">
-    <img src="/tripleog/tog-worn.jpg" width="401" height="998" loading="lazy"
-         alt="TRIPLE OG set for a worn deck: DRIVE 46, AGE 48 years, TONE 38, HISS 62, WOW/FLUT 58.">
+    <a href="/tripleog.html" data-umami-event="guide_cassetteplugins_to_tripleog" data-umami-event-spot="figimg" class="imglink"><img src="/tripleog/tog-worn.jpg" width="401" height="998" loading="lazy"
+         alt="TRIPLE OG set for a worn deck: DRIVE 46, AGE 48 years, TONE 38, HISS 62, WOW/FLUT 58."></a>
     <figcaption><b>The same machine, forty-eight years on.</b> Four things moved together &mdash;
     age, noise, bandwidth and instability. Turning any one of them up on its own does not get
     here, which is the whole point.</figcaption>
