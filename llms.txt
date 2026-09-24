@@ -507,10 +507,36 @@ the people who make the plugins.
   — Loops left long, drums underneath, very little cleanup.
 - [How to make Dilla type beats](https://gazillionindustries.com/how-to-make-dilla-type-beats.md)
   — The feel, taken apart into things you can actually do.
-- [12 bit sampler plugins](https://gazillionindustries.com/12-bit-sampler-plugins.md)
-  — Bit depth and sample rate are two different knobs. Most writing treats them as one.
+- [Best low pass and high pass filter plugins](https://gazillionindustries.com/best-lowpass-highpass-filter-plugins.md)
+  — Slope, resonance, drive and sync: what separates filter plugins, plus free picks.
+- [Telephone effect plugins](https://gazillionindustries.com/telephone-effect-plugins.md)
+  — The band, the slope, the compression and the grit, plus free and paid options.
+- [Best auto filter plugins](https://gazillionindustries.com/best-auto-filter-plugins.md)
+  — Resonance, envelope followers, sync and swing: how to pick an auto filter.
+- [Best filter plugins](https://gazillionindustries.com/best-filter-plugins.md)
+  — Three things separate good filters from bad, and a ten-minute test that settles it.
+- [Best 12 bit sampler plugins](https://gazillionindustries.com/12-bit-sampler-plugins.md)
+  — What 12 bit really does, how to test one, and the free options worth trying.
 - [Best bitcrusher plugins](https://gazillionindustries.com/best-bitcrusher-plugins.md)
-  — Crushing adds content above where you set it. That is the part the threads miss.
+  — What bit and rate reduction do, how to audition one, free and paid picks.
+- [Best pitch shifter plugins](https://gazillionindustries.com/best-pitch-shifter-plugins.md)
+  — Which family to use, what formant control buys, and the free options worth having.
+- [Best time stretch plugins](https://gazillionindustries.com/best-time-stretch-plugins.md)
+  — Which algorithm for which material, how to test one in ten minutes, and the free routes.
+- [Best varispeed plugins](https://gazillionindustries.com/best-varispeed-plugins.md)
+  — What the rate control has to do, how to test one, and the free options worth downloading.
+- [Best detune plugins](https://gazillionindustries.com/best-detune-plugins.md)
+  — Cents, beating and mono: how to pick a detune plugin, free or paid.
+- [Varispeed in every DAW](https://gazillionindustries.com/varispeed-in-every-daw.md)
+  — What each DAW has built in, where the setting hides, and when a plugin wins.
+- [Best slowed and reverb plugins](https://gazillionindustries.com/slowed-and-reverb-plugins.md)
+  — Why it takes two plugins, which ones, and the settings that make it work.
+- [Tape speed plugins](https://gazillionindustries.com/tape-speed-plugins.md)
+  — What rate change does, the free routes, and how to test a tape speed plugin.
+- [Best formant shifter plugins](https://gazillionindustries.com/best-formant-shifter-plugins.md)
+  — What formant shift moves, how to test one, and the free plugins worth installing.
+- [Best doppler plugins](https://gazillionindustries.com/best-doppler-plugins.md)
+  — Why most doppler moves sound wrong, and what a real one drives.
 - [Drum bus compressor settings](https://gazillionindustries.com/drum-bus-compressor-settings.md)
   — attack, release, ratio and threshold on a drum bus, and a starting point.
 

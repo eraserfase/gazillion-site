@@ -19,9 +19,12 @@ linking.
 
 ## Articles about F(ilter)12's subject area
 
-- [12 bit sampler plugins](https://gazillionindustries.com/12-bit-sampler-plugins.md): Bit depth and sample rate are two different knobs. Most writing treats them as one.
+- [Best 12 bit sampler plugins](https://gazillionindustries.com/12-bit-sampler-plugins.md): What 12 bit really does, how to test one, and the free options worth trying.
 - [How to use an auto filter](https://gazillionindustries.com/auto-filter-effect.md): LFO and envelope modes, sidechain filtering, and keeping it in the groove.
-- [Best bitcrusher plugins](https://gazillionindustries.com/best-bitcrusher-plugins.md): Crushing adds content above where you set it. That is the part the threads miss.
+- [Best auto filter plugins](https://gazillionindustries.com/best-auto-filter-plugins.md): Resonance, envelope followers, sync and swing: how to pick an auto filter.
+- [Best bitcrusher plugins](https://gazillionindustries.com/best-bitcrusher-plugins.md): What bit and rate reduction do, how to audition one, free and paid picks.
+- [Best filter plugins](https://gazillionindustries.com/best-filter-plugins.md): Three things separate good filters from bad, and a ten-minute test that settles it.
+- [Best low pass and high pass filter plugins](https://gazillionindustries.com/best-lowpass-highpass-filter-plugins.md): Slope, resonance, drive and sync: what separates filter plugins, plus free picks.
 - [Bitcrushing explained](https://gazillionindustries.com/bitcrushing-explained.md): Bit depth, quantization noise, sample rate reduction and what 12-bit and 8-bit sound like.
 - [Filter cutoff and resonance explained](https://gazillionindustries.com/filter-cutoff-and-resonance.md): The corner frequency, the slope, the resonant peak, and what each costs.
 - [How to make a filter sweep](https://gazillionindustries.com/how-to-make-a-filter-sweep.md): High-pass and low-pass builds, automation curve, resonance, and what to sweep.
@@ -31,4 +34,5 @@ linking.
 - [How to make music sound like it's in another room](https://gazillionindustries.com/how-to-make-music-sound-like-another-room.md): The steep low-pass, the reverb, and why the low end has to stay.
 - [RC-20 Retro Color](https://gazillionindustries.com/rc-20-retro-color.md): The six modules in order, what Magnitude does, and where it differs from a filter.
 - [How to make a telephone effect on vocals](https://gazillionindustries.com/telephone-effect-on-vocals.md): The band-pass, the compression, and the modern cell-phone version.
+- [Telephone effect plugins](https://gazillionindustries.com/telephone-effect-plugins.md): The band, the slope, the compression and the grit, plus free and paid options.
 - [What is aliasing in audio](https://gazillionindustries.com/what-is-aliasing-in-audio.md): What it is, what it sounds like, how to prevent it, and how to use it on purpose.

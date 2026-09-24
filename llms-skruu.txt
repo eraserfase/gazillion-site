@@ -19,11 +19,20 @@ linking.
 
 ## Articles about SKRUU's subject area
 
+- [Best detune plugins](https://gazillionindustries.com/best-detune-plugins.md): Cents, beating and mono: how to pick a detune plugin, free or paid.
+- [Best doppler plugins](https://gazillionindustries.com/best-doppler-plugins.md): Why most doppler moves sound wrong, and what a real one drives.
+- [Best formant shifter plugins](https://gazillionindustries.com/best-formant-shifter-plugins.md): What formant shift moves, how to test one, and the free plugins worth installing.
+- [Best pitch shifter plugins](https://gazillionindustries.com/best-pitch-shifter-plugins.md): Which family to use, what formant control buys, and the free options worth having.
+- [Best time stretch plugins](https://gazillionindustries.com/best-time-stretch-plugins.md): Which algorithm for which material, how to test one in ten minutes, and the free routes.
+- [Best varispeed plugins](https://gazillionindustries.com/best-varispeed-plugins.md): What the rate control has to do, how to test one, and the free options worth downloading.
 - [Chipmunk soul](https://gazillionindustries.com/chipmunk-soul.md): Choosing the vocal, how far to pitch it up, and the drums that go under it.
 - [Formant shifting](https://gazillionindustries.com/formant-shifting.md): What formants are, and why a pitched-up voice sounds like a smaller person.
 - [How to change pitch without changing tempo](https://gazillionindustries.com/how-to-change-pitch-without-changing-tempo.md): How pitch shifting and time stretching work, which mode to use, and how to avoid artifacts.
 - [How to chop and screw a song](https://gazillionindustries.com/how-to-chop-and-screw.md): Where DJ Screw's Houston sound comes from, and how to screw and chop a song in a DAW.
 - [How to make slowed and reverb](https://gazillionindustries.com/how-to-make-slowed-and-reverb.md): Slow it with varispeed, add a long dark reverb, and make sped-up versions too.
 - [How to pitch a sample](https://gazillionindustries.com/how-to-pitch-a-sample.md): Find the key, repitch or pitch shift, pitch the chops, and automate for movement.
+- [Best slowed and reverb plugins](https://gazillionindustries.com/slowed-and-reverb-plugins.md): Why it takes two plugins, which ones, and the settings that make it work.
+- [Tape speed plugins](https://gazillionindustries.com/tape-speed-plugins.md): What rate change does, the free routes, and how to test a tape speed plugin.
 - [Time stretching explained](https://gazillionindustries.com/time-stretching-explained.md): How the algorithms work, which mode to use, and when to repitch instead.
+- [Varispeed in every DAW](https://gazillionindustries.com/varispeed-in-every-daw.md): What each DAW has built in, where the setting hides, and when a plugin wins.
 - [What is varispeed](https://gazillionindustries.com/what-is-varispeed.md): Speed and pitch together: the math, how it differs from pitch shifting, and how it's used.

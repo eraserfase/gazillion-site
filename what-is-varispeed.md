@@ -53,6 +53,46 @@ Modern pitch shifting and time stretching pull pitch and length apart with DSP, 
 
 - **Transitions:** a speed ramp at the end of a section, or a slow-down to a stop.
 
+## Speed to semitones, as a lookup
+
+Varispeed ties pitch and duration together, so any speed change is also an interval. The conversion is twelve times the base-two logarithm of the speed ratio. Worked out for the intervals people actually reach for:
+
+- **+6 semitones**: play at 141.4% speed
+
+- **+5 semitones**: play at 133.5% speed
+
+- **+4 semitones**: play at 126.0% speed
+
+- **+3 semitones**: play at 118.9% speed
+
+- **+2 semitones**: play at 112.2% speed
+
+- **+1 semitone**: play at 105.9% speed
+
+- **unchanged**: 100% — ratio 1.000
+
+- **−1 semitone**: play at 94.4% speed
+
+- **−2 semitones**: play at 89.1% speed
+
+- **−3 semitones**: play at 84.1% speed
+
+- **−4 semitones**: play at 79.4% speed
+
+- **−5 semitones**: play at 74.9% speed
+
+- **−6 semitones**: play at 70.7% speed
+
+- **+12 semitones (one octave up)**: 200% — double speed
+
+- **−12 semitones (one octave down)**: 50% — half speed
+
+- **A 45 rpm record played at 33⅓**: 74.1% — down 5.20 semitones
+
+- **A 33⅓ record played at 45 rpm**: 135.0% — up 5.20 semitones
+
+The two record-speed rows are the reason so much sample-based music sits near five semitones from where it started. That interval is not a choice anyone made; it falls out of the two speeds a turntable offers.
+
 ## Questions people ask
 
 ### Did the Beatles use varispeed?

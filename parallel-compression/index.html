@@ -259,6 +259,24 @@ li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
   <p>It is also easy to overdo on a whole mix. Weight on a drum bus reads as power; weight on the
   master reads as fatigue by the second chorus.</p>
 
+  <h2>Why parallel compression can make drums thinner</h2>
+  <p>If the compressed copy arrives later than the dry one and nothing compensates for it, the two
+  signals comb. The first cancellation sits at one over twice the delay, so the size of the hole
+  is set by the latency of whatever is on the parallel path &mdash; usually the plug-in's own
+  reported latency, or a buffer the host did not compensate.</p>
+  <div class="card">
+    <dl>
+      <dt>32 samples (0.7&nbsp;ms at 44.1&nbsp;kHz)</dt><dd>first null near 689&nbsp;Hz &middot; at 48&nbsp;kHz, 750&nbsp;Hz</dd>
+      <dt>64 samples (1.5&nbsp;ms at 44.1&nbsp;kHz)</dt><dd>first null near 345&nbsp;Hz &middot; at 48&nbsp;kHz, 375&nbsp;Hz</dd>
+      <dt>128 samples (2.9&nbsp;ms at 44.1&nbsp;kHz)</dt><dd>first null near 172&nbsp;Hz &middot; at 48&nbsp;kHz, 188&nbsp;Hz</dd>
+      <dt>256 samples (5.8&nbsp;ms at 44.1&nbsp;kHz)</dt><dd>first null near 86&nbsp;Hz &middot; at 48&nbsp;kHz, 94&nbsp;Hz</dd>
+      <dt>512 samples (11.6&nbsp;ms at 44.1&nbsp;kHz)</dt><dd>first null near 43&nbsp;Hz &middot; at 48&nbsp;kHz, 47&nbsp;Hz</dd>
+    </dl>
+  </div>
+  <p>Those are all in the range a drum bus lives in, which is why the symptom reads as "thinner"
+  rather than as an obvious filter. To check it, invert the parallel channel and solo the pair:
+  aligned copies cancel to silence, and whatever is left is the misalignment.</p>
+
   <h2>Questions people ask</h2>
   <h3>What is the purpose of parallel compression?</h3>
   <p>To raise the quiet parts of a sound without flattening the loud ones. You get the density of

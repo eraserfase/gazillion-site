@@ -1,6 +1,6 @@
-# 12 bit sampler plugins
+# Best 12 bit sampler plugins
 
-> What 12 bit actually does to a sample, why sample rate reduction is the other half of the sound, and how to tell a good one from a bad one in ten minutes.
+> How to choose a 12 bit sampler plugin: what bit depth and sample rate reduction really do, how to test one, where it sits, and the free options.
 
 Source: https://gazillionindustries.com/12-bit-sampler-plugins/  
 Published 2026-09-24, updated 2026-09-24. By Gazillion Industries, who make F(ilter)12.

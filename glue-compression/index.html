@@ -280,6 +280,27 @@ li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
   they contribute almost nothing to how loud a master can get. If loudness is the goal, that
   is a limiter or a clipper and it is a different stage with a different job.</p>
 
+  <h2>What release time should a compressor use at my tempo?</h2>
+  <p>Release is a tempo question before it is a taste question. Set it so the gain reduction has
+  recovered before the next hit lands, and the useful ceiling is the sixteenth note at your tempo.
+  Past that the compressor is still pulling down when the next transient arrives, which is what
+  flattens a groove. The arithmetic is one division: 60000 divided by the tempo gives the quarter
+  note in milliseconds, and you halve it from there.</p>
+  <div class="card">
+    <dl>
+      <dt>70 bpm</dt><dd>quarter 857&nbsp;ms &middot; eighth 429&nbsp;ms &middot; sixteenth 214&nbsp;ms</dd>
+      <dt>80 bpm</dt><dd>quarter 750&nbsp;ms &middot; eighth 375&nbsp;ms &middot; sixteenth 188&nbsp;ms</dd>
+      <dt>90 bpm</dt><dd>quarter 667&nbsp;ms &middot; eighth 333&nbsp;ms &middot; sixteenth 167&nbsp;ms</dd>
+      <dt>100 bpm</dt><dd>quarter 600&nbsp;ms &middot; eighth 300&nbsp;ms &middot; sixteenth 150&nbsp;ms</dd>
+      <dt>120 bpm</dt><dd>quarter 500&nbsp;ms &middot; eighth 250&nbsp;ms &middot; sixteenth 125&nbsp;ms</dd>
+      <dt>140 bpm</dt><dd>quarter 429&nbsp;ms &middot; eighth 214&nbsp;ms &middot; sixteenth 107&nbsp;ms</dd>
+      <dt>170 bpm</dt><dd>quarter 353&nbsp;ms &middot; eighth 176&nbsp;ms &middot; sixteenth 88&nbsp;ms</dd>
+    </dl>
+  </div>
+  <p>Start at the eighth-note figure for a drum bus and move toward the sixteenth if the compressor
+  is still breathing on the next hit. Slower than the quarter note and it stops tracking the bar
+  at all.</p>
+
   <h2>Questions people ask</h2>
   <h3>What is the difference between compression and glue compression?</h3>
   <p>Compression is the process; glue is one use of it. A compressor on a single track controls

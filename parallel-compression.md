@@ -67,6 +67,22 @@ Parallel compression raises the average level of everything it touches, which me
 
 It is also easy to overdo on a whole mix. Weight on a drum bus reads as power; weight on the master reads as fatigue by the second chorus.
 
+## Why parallel compression can make drums thinner
+
+If the compressed copy arrives later than the dry one and nothing compensates for it, the two signals comb. The first cancellation sits at one over twice the delay, so the size of the hole is set by the latency of whatever is on the parallel path — usually the plug-in's own reported latency, or a buffer the host did not compensate.
+
+- **32 samples (0.7 ms at 44.1 kHz)**: first null near 689 Hz · at 48 kHz, 750 Hz
+
+- **64 samples (1.5 ms at 44.1 kHz)**: first null near 345 Hz · at 48 kHz, 375 Hz
+
+- **128 samples (2.9 ms at 44.1 kHz)**: first null near 172 Hz · at 48 kHz, 188 Hz
+
+- **256 samples (5.8 ms at 44.1 kHz)**: first null near 86 Hz · at 48 kHz, 94 Hz
+
+- **512 samples (11.6 ms at 44.1 kHz)**: first null near 43 Hz · at 48 kHz, 47 Hz
+
+Those are all in the range a drum bus lives in, which is why the symptom reads as "thinner" rather than as an obvious filter. To check it, invert the parallel channel and solo the pair: aligned copies cancel to silence, and whatever is left is the misalignment.
+
 ## Questions people ask
 
 ### What is the purpose of parallel compression?

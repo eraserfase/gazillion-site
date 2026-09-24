@@ -81,7 +81,7 @@ The mix is where most attempts fall apart. A clean, wide, well-separated mix wit
 
 ### How do you find samples nobody else is using?
 
-Go to thrift stores and estate sales and buy the records nobody wants. Look for private pressings, regional releases, and albums from small labels that pressed in tiny runs. The more obscure the source, the less likely someone
+Go to thrift stores and estate sales and buy the records nobody wants. Look for private pressings, regional releases, and albums from small labels that pressed in tiny runs. The more obscure the source, the less likely someone has already flipped it.
 
 ### Should I clean up a dusty sample?
 

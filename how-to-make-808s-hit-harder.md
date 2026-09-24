@@ -87,6 +87,24 @@ Rumble is rent you pay for nothing. A high-pass around 20–30 Hz removes energy
 
 Louder always wins the first five seconds. Saturation and clipping both raise level, so **match the processed and bypassed 808 before you decide anything.** If it only hit harder because it got louder, the fader was the fix.
 
+## Where the harmonics land, note by note
+
+A sub that is close to a sine has almost nothing above its fundamental, and a phone speaker cannot reproduce the fundamental at all. What survives on a small speaker is the harmonics, so it matters which ones you are adding and where they land. The series is the fundamental times two, three, four and five:
+
+- **E1 — 41.2 Hz**: 2× 82 · 3× 124 · 4× 165 · 5× 206 Hz — first harmonic above 200 Hz is the 5th
+
+- **F1 — 43.6 Hz**: 2× 87 · 3× 131 · 4× 175 · 5× 218 Hz — first harmonic above 200 Hz is the 5th
+
+- **F#1 — 46.2 Hz**: 2× 92 · 3× 139 · 4× 185 · 5× 231 Hz — first harmonic above 200 Hz is the 5th
+
+- **G1 — 49.0 Hz**: 2× 98 · 3× 147 · 4× 196 · 5× 245 Hz — first harmonic above 200 Hz is the 5th
+
+- **A1 — 55.0 Hz**: 2× 110 · 3× 165 · 4× 220 · 5× 275 Hz — first harmonic above 200 Hz is the 4th
+
+- **C2 — 65.4 Hz**: 2× 131 · 3× 196 · 4× 262 · 5× 327 Hz — first harmonic above 200 Hz is the 4th
+
+The last column is the one to read. A small speaker rolls off steeply below roughly 200 Hz, so the first harmonic clearing that line is the lowest thing the listener will actually hear. Write low enough and it is the fourth or fifth, which is why the note choice changes how much saturation the part needs.
+
 ## Questions people ask
 
 ### Why do my 808s sound weak?

@@ -1,6 +1,6 @@
 # Best bitcrusher plugins
 
-> Why crushing adds top end rather than removing it, what separates a good bitcrusher from a bad one, and the free ones already installed in your DAW.
+> How to choose a bitcrusher plugin: what bit depth and sample rate reduction really do, how to audition one, and the free and paid options.
 
 Source: https://gazillionindustries.com/best-bitcrusher-plugins/  
 Published 2026-09-24, updated 2026-09-24. By Gazillion Industries, who make F(ilter)12.

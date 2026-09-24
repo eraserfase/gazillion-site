@@ -89,6 +89,26 @@ Parallel is worth more on a loop than on multitracks, because it lets you add we
 
 If the break already sounds compressed — and most do, because they came off a record — a second stage does very little except make it flatter. The gain reduction meter will still move; that is not evidence the sound is improving.
 
+## What release time should a compressor use at my tempo?
+
+Release is a tempo question before it is a taste question. Set it so the gain reduction has recovered before the next hit lands, and the useful ceiling is the sixteenth note at your tempo. Past that the compressor is still pulling down when the next transient arrives, which is what flattens a groove. The arithmetic is one division: 60000 divided by the tempo gives the quarter note in milliseconds, and you halve it from there.
+
+- **70 bpm**: quarter 857 ms · eighth 429 ms · sixteenth 214 ms
+
+- **80 bpm**: quarter 750 ms · eighth 375 ms · sixteenth 188 ms
+
+- **90 bpm**: quarter 667 ms · eighth 333 ms · sixteenth 167 ms
+
+- **100 bpm**: quarter 600 ms · eighth 300 ms · sixteenth 150 ms
+
+- **120 bpm**: quarter 500 ms · eighth 250 ms · sixteenth 125 ms
+
+- **140 bpm**: quarter 429 ms · eighth 214 ms · sixteenth 107 ms
+
+- **170 bpm**: quarter 353 ms · eighth 176 ms · sixteenth 88 ms
+
+Start at the eighth-note figure for a drum bus and move toward the sixteenth if the compressor is still breathing on the next hit. Slower than the quarter note and it stops tracking the bar at all.
+
 ## Questions people ask
 
 ### What type of compressor is best for drums?

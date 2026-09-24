@@ -263,6 +263,35 @@ li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
     to a stop.</li>
   </ul>
 
+  <h2>Speed to semitones, as a lookup</h2>
+  <p>Varispeed ties pitch and duration together, so any speed change is also an interval. The
+  conversion is twelve times the base-two logarithm of the speed ratio. Worked out for the
+  intervals people actually reach for:</p>
+  <div class="card">
+    <dl>
+      <dt>+6 semitones</dt><dd>play at 141.4% speed</dd>
+      <dt>+5 semitones</dt><dd>play at 133.5% speed</dd>
+      <dt>+4 semitones</dt><dd>play at 126.0% speed</dd>
+      <dt>+3 semitones</dt><dd>play at 118.9% speed</dd>
+      <dt>+2 semitones</dt><dd>play at 112.2% speed</dd>
+      <dt>+1 semitone</dt><dd>play at 105.9% speed</dd>
+      <dt>unchanged</dt><dd>100% &mdash; ratio 1.000</dd>
+      <dt>&minus;1 semitone</dt><dd>play at 94.4% speed</dd>
+      <dt>&minus;2 semitones</dt><dd>play at 89.1% speed</dd>
+      <dt>&minus;3 semitones</dt><dd>play at 84.1% speed</dd>
+      <dt>&minus;4 semitones</dt><dd>play at 79.4% speed</dd>
+      <dt>&minus;5 semitones</dt><dd>play at 74.9% speed</dd>
+      <dt>&minus;6 semitones</dt><dd>play at 70.7% speed</dd>
+      <dt>+12 semitones (one octave up)</dt><dd>200% &mdash; double speed</dd>
+      <dt>&minus;12 semitones (one octave down)</dt><dd>50% &mdash; half speed</dd>
+      <dt>A 45 rpm record played at 33&#8531;</dt><dd>74.1% &mdash; down 5.20 semitones</dd>
+      <dt>A 33&#8531; record played at 45 rpm</dt><dd>135.0% &mdash; up 5.20 semitones</dd>
+    </dl>
+  </div>
+  <p>The two record-speed rows are the reason so much sample-based music sits near five semitones
+  from where it started. That interval is not a choice anyone made; it falls out of the two speeds
+  a turntable offers.</p>
+
   <h2>Questions people ask</h2>
   <h3>Did the Beatles use varispeed?</h3>
   <p>Yes. The best-known example is "Strawberry Fields Forever," where George Martin joined
@@ -299,6 +328,15 @@ li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
     <li><a class="inline" href="/how-to-change-pitch-without-changing-tempo/">How to change pitch without changing tempo</a> &mdash; How pitch shifting and time stretching work, which mode to use, and how to avoid artifacts.</li>
     <li><a class="inline" href="/how-to-make-slowed-and-reverb/">How to make slowed and reverb</a> &mdash; Slow it with varispeed, add a long dark reverb, and make sped-up versions too.</li>
     <li><a class="inline" href="/how-to-chop-and-screw/">How to chop and screw a song</a> &mdash; Where DJ Screw&#x27;s Houston sound comes from, and how to screw and chop a song in a DAW.</li>
+    <li><a class="inline" href="/best-pitch-shifter-plugins/">Best pitch shifter plugins</a> &mdash; Which family to use, what formant control buys, and the free options worth having.</li>
+    <li><a class="inline" href="/best-time-stretch-plugins/">Best time stretch plugins</a> &mdash; Which algorithm for which material, how to test one in ten minutes, and the free routes.</li>
+    <li><a class="inline" href="/best-varispeed-plugins/">Best varispeed plugins</a> &mdash; What the rate control has to do, how to test one, and the free options worth downloading.</li>
+    <li><a class="inline" href="/best-detune-plugins/">Best detune plugins</a> &mdash; Cents, beating and mono: how to pick a detune plugin, free or paid.</li>
+    <li><a class="inline" href="/varispeed-in-every-daw/">Varispeed in every DAW</a> &mdash; What each DAW has built in, where the setting hides, and when a plugin wins.</li>
+    <li><a class="inline" href="/slowed-and-reverb-plugins/">Best slowed and reverb plugins</a> &mdash; Why it takes two plugins, which ones, and the settings that make it work.</li>
+    <li><a class="inline" href="/tape-speed-plugins/">Tape speed plugins</a> &mdash; What rate change does, the free routes, and how to test a tape speed plugin.</li>
+    <li><a class="inline" href="/best-formant-shifter-plugins/">Best formant shifter plugins</a> &mdash; What formant shift moves, how to test one, and the free plugins worth installing.</li>
+    <li><a class="inline" href="/best-doppler-plugins/">Best doppler plugins</a> &mdash; Why most doppler moves sound wrong, and what a real one drives.</li>
   </ul>
 
 
