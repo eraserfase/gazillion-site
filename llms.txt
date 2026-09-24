@@ -9,7 +9,7 @@ as a universal binary for Apple Silicon and Intel, and on Windows as a 64-bit
 VST3. Each one is bought or downloaded from its own page on
 gazillionindustries.com. Prices below are in US dollars.
 
-Last updated: 2026-09-22
+Last updated: 2026-09-24
 
 ## Products
 
@@ -337,6 +337,8 @@ the people who make the plugins.
   — The transport, the heads, bias, tape speed, and why tape sounds like tape.
 - [The SP-404 and the sound of Los Angeles](https://gazillionindustries.com/sp-404-history/)
   — How a cheap sampler its makers underestimated became the instrument of LA's beat scene.
+- [Drum bus compressor settings](https://gazillionindustries.com/drum-bus-compressor-settings/)
+  — What each control actually changes, and where to start.
 - [How to mix drums](https://gazillionindustries.com/how-to-mix-drums/)
   — Balance first, then EQ, compression, saturation and the bus.
 - [How to master a beat](https://gazillionindustries.com/how-to-master-a-beat/)
