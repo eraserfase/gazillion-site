@@ -107,7 +107,7 @@ Eight bars, 120 BPM, four-four. One bar is 2 seconds, the build is 16 seconds, a
 
 - **Drop**: back to 18 kHz inside one grid step
 
-Each two-bar step divides the cutoff by 3.1. That constant ratio is the whole trick. The sweep becomes an even slide instead of a long nothing followed by a lurch, and the reason it works is that the ear measures the same distance between every pair of numbers on that list.
+Each two-bar step divides the cutoff by 3.1. That constant ratio is the whole trick: the ear hears the same distance between every pair of numbers on that list, so the move reads as an even slide rather than a long nothing followed by a lurch.
 
 For the draining version, invert it. A high-pass from 40 Hz to 800 Hz over the same sixteen seconds is 4.3 octaves, multiplying by 2.1 every two bars: 40, 85, 179, 378, 800. The kick loses its weight first, then its body, and the last two bars leave you with a radio in the next room. Tempo takes care of itself as long as you write the sweep in bars: at 90 BPM a bar is 2.67 seconds, the eight-bar build runs 21.3 seconds, and the same 6.5 octaves simply travel at 0.30 octaves per second instead.
 

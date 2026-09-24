@@ -499,6 +499,10 @@ the people who make the plugins.
   — Why drums show tape more than anything else, and where to put it.
 - [How to get analog warmth without buying hardware](https://gazillionindustries.com/analog-warmth.md)
   — Four mechanisms hide behind one word, and naming the one you want is most of the work.
+- [The cheapest way to make your beats louder](https://gazillionindustries.com/cheapest-way-to-make-beats-louder.md)
+  — Free options first, ranked by what each one buys you, then the one paid step worth making.
+- [Why your mix sounds harsh after mastering](https://gazillionindustries.com/why-is-my-mix-harsh.md)
+  — A diagnostic order for a harsh master, from the limiter down to your monitoring level.
 - [Vinyl sim, and what a vinyl sim plugin does](https://gazillionindustries.com/vinyl-sim-plugin.md)
   — The effect taken apart: bandwidth, noise, the squash and the wear.
 - [Best free VST plugins](https://gazillionindustries.com/best-free-vst-plugins.md)
@@ -551,6 +555,8 @@ the people who make the plugins.
   — What formant shift moves, how to test one, and the free plugins worth installing.
 - [Best doppler plugins](https://gazillionindustries.com/best-doppler-plugins.md)
   — Why most doppler moves sound wrong, and what a real one drives.
+- [Varispeed in Ableton Live, and how to slow a sample](https://gazillionindustries.com/varispeed-in-ableton-live.md)
+  — Which Ableton warp mode slows a sample without smearing it, and why.
 - [Drum bus compressor settings](https://gazillionindustries.com/drum-bus-compressor-settings.md)
   — attack, release, ratio and threshold on a drum bus, and a starting point.
 

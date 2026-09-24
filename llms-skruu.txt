@@ -34,5 +34,6 @@ linking.
 - [Best slowed and reverb plugins](https://gazillionindustries.com/slowed-and-reverb-plugins.md): Why it takes two plugins, which ones, and the settings that make it work.
 - [Tape speed plugins](https://gazillionindustries.com/tape-speed-plugins.md): What rate change does, the free routes, and how to test a tape speed plugin.
 - [Time stretching explained](https://gazillionindustries.com/time-stretching-explained.md): How the algorithms work, which mode to use, and when to repitch instead.
+- [Varispeed in Ableton Live, and how to slow a sample](https://gazillionindustries.com/varispeed-in-ableton-live.md): Which Ableton warp mode slows a sample without smearing it, and why.
 - [Varispeed in every DAW](https://gazillionindustries.com/varispeed-in-every-daw.md): What each DAW has built in, where the setting hides, and when a plugin wins.
 - [What is varispeed](https://gazillionindustries.com/what-is-varispeed.md): Speed and pitch together: the math, how it differs from pitch shifting, and how it's used.

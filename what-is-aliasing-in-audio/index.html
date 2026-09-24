@@ -47,7 +47,7 @@ fbq('init', '1164684366890206');
 fbq('track', 'PageView');
 }
 </script>
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"TechArticle","@id":"https://gazillionindustries.com/what-is-aliasing-in-audio/#article","headline":"What is aliasing in audio","description":"What aliasing is, what it sounds like, where it comes from in a mix, how to prevent it with oversampling, and how lofi producers use it on purpose.","image":"https://gazillionindustries.com/f12/og.jpg","inLanguage":"en","datePublished":"2026-09-14","dateModified":"2026-09-24","url":"https://gazillionindustries.com/what-is-aliasing-in-audio/","mainEntityOfPage":"https://gazillionindustries.com/what-is-aliasing-in-audio/","author":{"@id":"https://gazillionindustries.com/#gazillion"},"publisher":{"@id":"https://gazillionindustries.com/#gazillion"},"about":{"@type":"SoftwareApplication","name":"F(ilter)12","url":"https://gazillionindustries.com/f12.html"},"isPartOf":{"@id":"https://gazillionindustries.com/reading-material/#page"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Gazillion Industries","item":"https://gazillionindustries.com/"},{"@type":"ListItem","position":2,"name":"Reading material","item":"https://gazillionindustries.com/reading-material/"},{"@type":"ListItem","position":3,"name":"What is aliasing in audio","item":"https://gazillionindustries.com/what-is-aliasing-in-audio/"}]},{"@type":"Organization","@id":"https://gazillionindustries.com/#gazillion","name":"Gazillion Industries LLC","alternateName":"Gazillion Industries","url":"https://gazillionindustries.com/"},{"@type":"FAQPage","@id":"https://gazillionindustries.com/what-is-aliasing-in-audio/#faq","mainEntity":[{"@type":"Question","name":"What is aliasing in sound?","acceptedAnswer":{"@type":"Answer","text":"Aliasing is when frequencies above half the sample rate fold back into the audible range as lower, unrelated tones, adding a metallic or out-of-tune quality to the sound."}},{"@type":"Question","name":"Can you explain aliasing with an example?","acceptedAnswer":{"@type":"Answer","text":"At a 15&nbsp;kHz sample rate, the highest frequency that can be represented is 7.5&nbsp;kHz. A 10&nbsp;kHz tone can't fit, so it reappears at 5&nbsp;kHz: 2.5&nbsp;kHz below the ceiling, the same distance it went over."}},{"@type":"Question","name":"What is anti-aliasing in audio?","acceptedAnswer":{"@type":"Answer","text":"Anti-aliasing means removing or preventing frequencies above the Nyquist limit before they can fold back, usually with a low-pass filter before downsampling, or by processing at a higher sample rate with oversampling."}}]}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"TechArticle","@id":"https://gazillionindustries.com/what-is-aliasing-in-audio/#article","headline":"What is aliasing in audio","description":"What aliasing is, what it sounds like, where it comes from in a mix, how to prevent it with oversampling, and how lofi producers use it on purpose.","image":"https://gazillionindustries.com/f12/og.jpg","inLanguage":"en","datePublished":"2026-09-14","dateModified":"2026-09-24","url":"https://gazillionindustries.com/what-is-aliasing-in-audio/","mainEntityOfPage":"https://gazillionindustries.com/what-is-aliasing-in-audio/","author":{"@id":"https://gazillionindustries.com/#gazillion"},"publisher":{"@id":"https://gazillionindustries.com/#gazillion"},"about":{"@type":"SoftwareApplication","name":"F(ilter)12","url":"https://gazillionindustries.com/f12.html"},"isPartOf":{"@id":"https://gazillionindustries.com/reading-material/#page"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Gazillion Industries","item":"https://gazillionindustries.com/"},{"@type":"ListItem","position":2,"name":"Reading material","item":"https://gazillionindustries.com/reading-material/"},{"@type":"ListItem","position":3,"name":"What is aliasing in audio","item":"https://gazillionindustries.com/what-is-aliasing-in-audio/"}]},{"@type":"Organization","@id":"https://gazillionindustries.com/#gazillion","name":"Gazillion Industries LLC","alternateName":"Gazillion Industries","url":"https://gazillionindustries.com/"},{"@type":"FAQPage","@id":"https://gazillionindustries.com/what-is-aliasing-in-audio/#faq","mainEntity":[{"@type":"Question","name":"What is aliasing in sound?","acceptedAnswer":{"@type":"Answer","text":"Aliasing is when frequencies above half the sample rate fold back into the audible range as lower, unrelated tones, adding a metallic or out-of-tune quality to the sound."}},{"@type":"Question","name":"Can you explain aliasing with an example?","acceptedAnswer":{"@type":"Answer","text":"At a 15&nbsp;kHz sample rate, the highest frequency that can be represented is 7.5&nbsp;kHz. A 10&nbsp;kHz tone can't fit, so it reappears at 5&nbsp;kHz: 2.5&nbsp;kHz below the ceiling, the same distance it went over."}},{"@type":"Question","name":"What is anti-aliasing in audio?","acceptedAnswer":{"@type":"Answer","text":"Anti-aliasing means removing or preventing frequencies above the Nyquist limit before they can fold back, usually with a low-pass filter before downsampling, or by processing at a higher sample rate with oversampling."}},{"@type":"Question","name":"What is the Nyquist frequency?","acceptedAnswer":{"@type":"Answer","text":"Half the sample rate. At 44.1&nbsp;kHz it is 22.05&nbsp;kHz, at 48&nbsp;kHz it is 24&nbsp;kHz, at 96&nbsp;kHz it is 48&nbsp;kHz. It is the highest frequency that rate can describe, and every alias is a reflection around it or around a whole multiple of the rate itself."}},{"@type":"Question","name":"Why does my synth sound out of tune in the high notes?","acceptedAnswer":{"@type":"Answer","text":"Most likely aliasing in the oscillator. A bright waveform has harmonics stretching far above the note, and as you play higher those harmonics cross the ceiling and fold back at frequencies with no relationship to the key. The chord sounds fine two octaves down and sour at the top. Look for an HQ, Quality or Oversampling control on the instrument, or low-pass the oscillator before it reaches the amp stage."}},{"@type":"Question","name":"Does recording at 96 kHz get rid of aliasing?","acceptedAnswer":{"@type":"Answer","text":"It reduces it a great deal and does not remove it. In a measurement of one 5&nbsp;kHz sine hard clipped at three rates, the loudest alias sat 16.3&nbsp;dB below the fundamental at 44.1&nbsp;kHz and 37.8&nbsp;dB below it at 96&nbsp;kHz, with five audible-band peaks left instead of thirteen. The cost is that the whole project runs at double the CPU and disk, while oversampling spends that only on the plugins that need it."}},{"@type":"Question","name":"Is aliasing the same as distortion?","acceptedAnswer":{"@type":"Answer","text":"No. Distortion adds harmonics that are whole-number multiples of the input, which is why it reads as a change of tone rather than a change of note. Aliasing adds tones at frequencies with no arithmetic relationship to the input at all. Distortion often causes aliasing, because the harmonics it creates are the material that folds. See harmonic distortion ."}},{"@type":"Question","name":"How do I know if a plugin is aliasing?","acceptedAnswer":{"@type":"Answer","text":"Feed it a single high sine, around 5&nbsp;kHz, and put a spectrum analyzer after it. Any peak that is not a whole-number multiple of 5&nbsp;kHz is an alias. Then sweep the tone upward: aliases move down while the source moves up, and nothing else in audio does that."}},{"@type":"Question","name":"Does oversampling remove aliasing completely?","acceptedAnswer":{"@type":"Answer","text":"It removes the audible part in most cases. Running at four times the rate and filtering before the downsample took a hard-clipped 5&nbsp;kHz sine from thirteen audible-band peaks to two, and the two that were left were the real signal. Higher drive levels and unbounded harmonic generators can still push content past even the raised ceiling, which is why some plugins offer 8x and 16x."}},{"@type":"Question","name":"Why does aliasing sound metallic?","acceptedAnswer":{"@type":"Answer","text":"Because the frequencies it adds are unrelated to the note. The ear reads sets of whole-number harmonics as pitch and reads inharmonic sets as struck metal, which is roughly what a bell or a cymbal is. Folded partials are inharmonic by definition, so a fold puts a small, dense bell on top of whatever made it."}},{"@type":"Question","name":"Can you remove aliasing after it has been recorded?","acceptedAnswer":{"@type":"Answer","text":"Not really. Once the fold has happened the ghost and the music occupy the same frequencies in the same file, so anything that attenuates one attenuates the other. Narrow notches help when the aliasing is a couple of steady tones from a sustained source. For anything broadband, go back to the source and re-render with oversampling on."}},{"@type":"Question","name":"Does aliasing matter if I make lofi?","acceptedAnswer":{"@type":"Answer","text":"It matters more, not less, because it is the main ingredient rather than an accident. Knowing where the fold line sits lets you put the ghosts somewhere useful instead of somewhere that fights the vocal. The trap is running an aliasing crusher and an aliasing saturator in the same chain: the second one folds the first one's output, and the result is dense in a way that stops reading as texture. See how to make lofi drums ."}}]}]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Archivo+Black&display=swap">
@@ -224,6 +224,56 @@ li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
   (15 minus 10). That new tone has no musical relationship to the note that made it,
   which is why aliasing sounds wrong rather than warm.</p>
 
+  <p>The mirror repeats, which is the part most explanations leave out. A sample rate
+  does not fold once. It folds around every whole multiple of itself, so an alias lands
+  at the distance between the offending frequency and the nearest multiple of the rate:
+  the absolute value of f minus n times the rate, for any whole number n. At
+  44.1&nbsp;kHz a 25&nbsp;kHz partial comes back at 19,100&nbsp;Hz. A 45&nbsp;kHz
+  partial comes back at 900&nbsp;Hz, because it has passed one whole multiple and is
+  900&nbsp;Hz over the far side of it. Content more than an octave above anything a
+  human can hear arrives in the low mids, under the bass, and that is the case nobody
+  expects.</p>
+
+  <p>No filter is involved anywhere in this. The folded partial is <em>added</em> to
+  whatever was already sitting at that frequency, at close to the level it had before it
+  folded. That is why aliasing survives EQ so badly. Pull 2&nbsp;kHz down and you pull
+  the snare down with it, because by the time the signal reaches the EQ the alias and
+  the snare are the same numbers in the same file.</p>
+
+  <h2>Hear the fold</h2>
+  <div class="card listen">
+    <p>Aliasing gets described in adjectives more than it gets played. Here is one loop
+    four ways: clean, bit reduction on its own, sample rate reduction on its own, and
+    both. The third file is the one this page is about.</p>
+    <figure>
+      <figcaption><b>Dry</b> &mdash; no processing</figcaption>
+      <audio controls preload="none" src="/f12/f12-clean.m4a"></audio>
+    </figure>
+    <figure>
+      <figcaption><b>Bit reduction only</b> &mdash; grain, and no fold</figcaption>
+      <audio controls preload="none" src="/f12/f12-bitcrush.m4a"></audio>
+    </figure>
+    <figure>
+      <figcaption><b>Sample rate reduction only</b> &mdash; this is aliasing on its own</figcaption>
+      <audio controls preload="none" src="/f12/f12-rate25.m4a"></audio>
+    </figure>
+    <figure>
+      <figcaption><b>Both</b> &mdash; grain and fold together</figcaption>
+      <audio controls preload="none" src="/f12/f12-both.m4a"></audio>
+    </figure>
+    <p class="src">The same 1.049 seconds each time, through
+    <a href="/f12.html" data-umami-event="guide_aliasing_to_f12" data-umami-event-spot="audio">F(ilter)12</a>.
+    Peaks sit within 0.05 of each other and RMS within two per cent, so what moves
+    across the four files is spectrum rather than volume.</p>
+  </div>
+
+  <p>Run those four through an analyzer and the adjective problem goes away. Take the
+  99&nbsp;per&nbsp;cent spectral rolloff, the frequency below which ninety-nine per cent
+  of the energy sits. Dry, that loop rolls off at 869&nbsp;Hz. Bit reduction alone moves
+  it to 1,463&nbsp;Hz. Sample rate reduction alone moves it to 3,348&nbsp;Hz. Both
+  together, 3,406&nbsp;Hz. Aliasing made the loop almost four times brighter than it
+  started, which is the opposite of what the word lofi suggests.</p>
+
   <h2>What aliasing sounds like</h2>
   <p>On a sustained note it's a faint extra tone that moves the wrong way when the pitch
   bends: the note goes up, the alias goes down. On drums and noisy sounds it's a hard,
@@ -232,6 +282,36 @@ li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
   machine. <strong>If a bright sound gets harsher in a way EQ can't fix, suspect
   aliasing.</strong></p>
 
+  <p>That backward motion is worth hearing once on purpose, because it is the only
+  symptom nothing else produces. Take a sine sweeping from 5&nbsp;kHz up to 7&nbsp;kHz
+  and step the rate down to 8&nbsp;kHz. The arithmetic says the ghost starts at
+  3&nbsp;kHz and ends at 1&nbsp;kHz. Rendered and measured, the loudest component across
+  the first quarter second sits near 2.9&nbsp;kHz and across the last quarter second
+  near 1.1&nbsp;kHz &mdash; the averages a moving window gives you. The source climbs a
+  fifth. The ghost drops an octave and a half. Nothing acoustic does that, which is why
+  the ear files it under machine rather than under instrument.</p>
+
+  <h2>The failure modes, and what each one sounds like</h2>
+  <p>Aliasing does not have one sound. It has a handful, and they turn up in different
+  places in a mix, which is why it gets misdiagnosed as five separate problems.</p>
+  <ul>
+    <li><strong>A buzz under the bass.</strong> Heavy drive on a mid-range source throws
+    harmonics past the ceiling and the far ones land in the low mids. The mix gets
+    crowded somewhere you never processed. See <a class="inline"
+    href="/why-is-my-mix-muddy/">why is my mix muddy</a>.</li>
+    <li><strong>A ring on the hats that will not EQ out.</strong> Notch it and the hat
+    goes with it, because the alias is sitting on the same frequency as the part of the
+    hat you want.</li>
+    <li><strong>A pad that goes sour in the top octave.</strong> Hold a low chord and it
+    is fine; play the same chord two octaves up and it detunes. The synth's own
+    harmonics have crossed the ceiling.</li>
+    <li><strong>A riser that stops rising.</strong> The sweep climbs, something else
+    starts descending underneath it, and the two cross in the middle of the build.</li>
+    <li><strong>Fine on monitors, brittle on earbuds.</strong> Small drivers push the
+    5&nbsp;kHz to 10&nbsp;kHz band forward, which is where most folded content lands
+    from ordinary distortion.</li>
+  </ul>
+
   <h2>Where it comes from in a mix</h2>
   <ul>
     <li><strong>Distortion and clipping:</strong> they create new harmonics, and some land
@@ -239,9 +319,44 @@ li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
     clipping explained</a>.</li>
     <li><strong>Sample rate reduction:</strong> lowering the rate lowers the ceiling, on
     purpose.</li>
-    <li><strong>Pitching samples up</strong> in a sampler without good interpolation.</li>
+    <li><strong>Pitching samples up</strong> in a sampler without a band-limited resampler.</li>
     <li><strong>Bright synth waveforms</strong> generated without anti-aliasing.</li>
   </ul>
+
+  <p>Two of those are choices and two are accidents. Sample rate reduction is a choice,
+  and the whole lofi category is built on it. The pitch case is the one people get wrong
+  most often, because the usual advice is to use better interpolation. Interpolation is
+  not the fix. Play a 15&nbsp;kHz partial back at double speed and it wants to be
+  30&nbsp;kHz; at a 44.1&nbsp;kHz session rate it returns at 14,100&nbsp;Hz, and it
+  returns at 14,100&nbsp;Hz whether the sampler reads the file with nearest-neighbor or
+  with linear interpolation. Both were measured. What removes it is a resampler that
+  band-limits before it reads, or an HQ mode that does the same thing under a friendlier
+  name. The rest of the pitch-up picture is in <a class="inline"
+  href="/how-to-pitch-a-sample/">how to pitch a sample</a>.</p>
+
+  <h2>A worked example: one 5 kHz sine, hard clipped</h2>
+  <p>Distortion is the accident that costs the most, because it is the one that ends up
+  on everything. Here is the whole problem in a single test you can repeat in five
+  minutes, with the numbers from running it.</p>
+
+  <p>Generate a 5&nbsp;kHz sine in a 44.1&nbsp;kHz session and hard clip it flat. Hard
+  clipping a sine produces odd harmonics only, so the honest output is 5, 15, 25, 35,
+  45&nbsp;kHz and upward. Two of those fit. The rest fold. Measured against the
+  fundamental at 0&nbsp;dB, the render came back like this: 15&nbsp;kHz at
+  &minus;10.3&nbsp;dB, which is real; 19,100&nbsp;Hz at &minus;16.3&nbsp;dB, which is
+  the 25&nbsp;kHz harmonic folded; 9,100&nbsp;Hz at &minus;21.9&nbsp;dB, which is the
+  35&nbsp;kHz one; and 900&nbsp;Hz at &minus;28.4&nbsp;dB, which is the 45&nbsp;kHz one
+  arriving under the bass. Counting everything above &minus;50&nbsp;dB inside the
+  audible band, that file holds thirteen peaks. Two of them are the signal.</p>
+
+  <p>Now run the identical clip at four times the rate, low-pass it, and bring it back
+  down &mdash; which is exactly what an oversampling switch does. The same measurement
+  returns two peaks: 5&nbsp;kHz and 15&nbsp;kHz at &minus;10.3&nbsp;dB. Nothing else
+  above &minus;50&nbsp;dB. The eleven ghosts are gone and the harmonic the distortion
+  was supposed to add is untouched, at the same level it had before. That is the entire
+  argument for oversampling in one pair of renders, and it is why <a class="inline"
+  href="/oversampling/">oversampling</a> is a switch rather than a taste question on
+  anything you drive hard.</p>
 
   <p class="aside">In
   <a href="/f12.html" data-umami-event="guide_aliasing_to_f12" data-umami-event-spot="mid">F(ilter)12</a>,
@@ -254,16 +369,66 @@ li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
     <li>Low-pass bright material before running it through heavy nonlinear processing.</li>
     <li>Use a higher quality or "HQ" mode on samplers and synths when pitching things up.</li>
     <li>Check by sweeping a high note: if a second tone moves the opposite way, that's aliasing.</li>
+    <li>Where a plugin offers 2x, 4x and 8x, step up until the difference stops being audible and stay there.</li>
+    <li>Turn the setting on for the bounce even if you left it off while writing, because the render is what people hear.</li>
+    <li>Keep bright, noisy layers off the same insert as heavy drive and run them in parallel instead.</li>
   </ol>
 
-  <h2>How to use it on purpose</h2>
-  <p>Lofi producers reach for aliasing deliberately. Lowering the sample rate on drums,
-  chords or a whole loop gives the crunchy, metallic top of old samplers, especially
-  alongside bit depth reduction (see <a class="inline"
-  href="/bitcrushing-explained/">bitcrushing explained</a>). Filter the result afterward
-  if it gets piercing; you want grit, not a headache. <a class="inline"
-  href="/best-bitcrusher-plugins/">Best bitcrusher plugins</a> goes through which ones let
-  you hear that fold-back and which ones hide it.</p>
+  <h2>How to test a plugin for aliasing in ten minutes</h2>
+  <p>Do this once with a plugin you already trust and once with a plugin you suspect.
+  Ten minutes buys an answer that a week of forum reading does not.</p>
+  <ol>
+    <li>Put a test tone generator on an empty track and set it to a 5&nbsp;kHz sine.</li>
+    <li>Insert the plugin after it and drive it until the effect is obvious.</li>
+    <li>Open a spectrum analyzer after the plugin and set the range to 60&nbsp;dB.</li>
+    <li>Note every peak that is not a whole-number multiple of 5&nbsp;kHz.</li>
+    <li>Sweep the generator slowly from 5&nbsp;kHz to 10&nbsp;kHz.</li>
+    <li>Watch which peaks travel downward while the tone travels up.</li>
+    <li>Turn the plugin's oversampling or quality control on and repeat step four.</li>
+    <li>Swap the sine for the real part, match levels, and A/B the two settings.</li>
+  </ol>
+  <p>Step eight is the one people skip, and it is the one that decides anything. A
+  plugin can alias badly on a sine and still sound better than the clean version on a
+  snare. Measure first so the choice is a choice.</p>
+
+  <h2>Where the anti-aliasing control lives in your DAW</h2>
+  <p>The switch exists under three names, and which one you get depends on the host and
+  the device rather than on anything technical: Oversampling, Hi-Quality, or just
+  Quality.</p>
+
+  <p>In Ableton Live the control is not on the device face at all. It sits in the
+  context menu on the device title bar, or under Show Options in the same bar. Ableton's
+  own manual puts Saturator's Hi-Quality mode there and says it lowers aliasing and
+  improves sound quality, particularly on high-frequency signals, for a slight rise in
+  CPU. The same manual gives EQ Eight an Oversampling option that runs the device at
+  twice the current session rate for smoother filter behavior in the top end, and gives
+  Glue Compressor one in the same place. Two of its warnings are worth carrying into the
+  mix: the CPU cost is real, and with oversampling on, loud peaks can still pass
+  0&nbsp;dB, so the switch is no substitute for watching <a class="inline"
+  href="/true-peak/">true peak</a>.</p>
+
+  <p>In every other host, check three places in this order: the device's own panel, the
+  small settings or gear menu attached to it, and the host's wrapper around third-party
+  plugins. If none of the three has it, assume the device does not oversample and do the
+  work yourself with a low-pass in front of it. Stock EQs, compressors and delays
+  usually leave it off by default even when they have it, because the default is chosen
+  for CPU rather than for your mix.</p>
+
+  <h2>How much the session rate helps</h2>
+  <p>Raising the whole session to 96&nbsp;kHz is the other lever, and it half works. The
+  same 5&nbsp;kHz clipped sine, rendered at three rates and measured the same way, gives
+  thirteen audible-band peaks at 44.1&nbsp;kHz, ten at 48&nbsp;kHz and five at
+  96&nbsp;kHz. More usefully, the loudest ghost drops from &minus;16.3&nbsp;dB below the
+  fundamental at 44.1&nbsp;kHz to &minus;37.8&nbsp;dB at 96&nbsp;kHz. That is a
+  21.5&nbsp;dB improvement, and it is not zero: three aliases are still in there at
+  96&nbsp;kHz, because clipping generates harmonics forever and the mirror keeps
+  repeating.</p>
+
+  <p>What a high session rate costs is everything, everywhere. Double the rate doubles
+  the CPU, the disk and the buffer pressure for every track in the project, including
+  the forty that have no distortion on them. Oversampling spends the same currency on
+  the three plugins that need it. Work at 44.1 or 48&nbsp;kHz and oversample the
+  nonlinear stages.</p>
 
   <h2>Where the folded content actually lands</h2>
   <p>Lower the sample rate and everything above half the new rate does not disappear. It mirrors
@@ -284,6 +449,84 @@ li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
   rate reduction removes the content that would have folded; filtering after only attenuates it
   once it is already sitting on top of the music.</p>
 
+  <p>The levels go with the arithmetic. Stepping a lone 6&nbsp;kHz tone down to an
+  8&nbsp;kHz rate and measuring the result, the 2&nbsp;kHz ghost came back
+  9.4&nbsp;dB <em>louder</em> than what survived of the 6&nbsp;kHz original. A
+  7&nbsp;kHz tone at the same rate put its 1&nbsp;kHz ghost 16.5&nbsp;dB above the
+  source. Push the fold line up to 11.025&nbsp;kHz and the gap closes to 1.5&nbsp;dB.
+  The closer a partial sits to the fold line, the gentler the fold; the further above it
+  sits, the more the ghost dominates what you hear.</p>
+
+  <h2>Where it goes in the chain</h2>
+  <p>Put the fold where you can still undo it. Anything that creates aliasing wants to
+  sit early enough that a filter after it can shape the result and a filter before it
+  can decide what is allowed to fold at all. Two low-passes around a crusher, one either
+  side, give you both controls and cost nothing. See <a class="inline"
+  href="/filter-cutoff-and-resonance/">filter cutoff and resonance</a>.</p>
+
+  <p>What comes after matters as much. A compressor after an aliasing source is reacting
+  to energy that is not in the performance, so the ducking lands off the beat and reads
+  as a fault in the compressor. A reverb after one sprays the ghosts across the tail,
+  where they stop being grit and start being noise. A limiter after one spends its
+  headroom on content that adds nothing, which is the quiet version of this problem and
+  the expensive one &mdash; the worked example above lost eleven peaks' worth of level
+  to material nobody asked for. <a class="inline" href="/clipper-before-limiter/">Clipper
+  before limiter</a> covers the order that survives.</p>
+
+  <p>On the master bus, take the opposite position. Nothing that folds belongs there. By
+  the time a mix reaches the last insert every element is sharing the same spectrum, so
+  a fold at that point smears across all of them at once and there is no send to pull it
+  back on.</p>
+
+  <h2>How to use it on purpose</h2>
+  <p>Lofi producers reach for aliasing deliberately. Lowering the sample rate on drums,
+  chords or a whole loop gives the crunchy, metallic top of old samplers, especially
+  alongside bit depth reduction (see <a class="inline"
+  href="/bitcrushing-explained/">bitcrushing explained</a>). Filter the result afterward
+  if it gets piercing; you want grit, not a headache. <a class="inline"
+  href="/best-bitcrusher-plugins/">Best bitcrusher plugins</a> goes through which ones let
+  you hear that fold-back and which ones hide it.</p>
+
+  <p>Pick the rate by deciding where you want the ghosts, not by turning the knob until
+  it sounds broken. A fold line at 6&nbsp;kHz (a 12&nbsp;kHz rate) sends a 7&nbsp;kHz
+  cymbal partial to 5&nbsp;kHz, which is close enough to the source that the ear hears
+  brightness with an edge on it. A fold line at 4&nbsp;kHz sends the same partial to
+  1&nbsp;kHz, an octave and a half under the note, and the ear hears a different
+  instrument. The first is a texture. The second is an effect, and it needs to be
+  arranged for.</p>
+
+  <p>Three moves make it usable rather than merely loud. Run it in parallel and blend,
+  so the transient of the dry hit stays under the grit. High-pass the crushed copy
+  around 300&nbsp;Hz, because the low end gains nothing from folding and loses
+  definition to it. And ride the blend with the arrangement instead of printing one
+  amount for the whole song &mdash; the crush that carries a sparse eight bars will bury
+  a full chorus. The same logic drives <a class="inline"
+  href="/how-to-make-a-sample-sound-old/">how to make a sample sound old</a>.</p>
+
+  <figure class="shot">
+    <a href="/f12.html" data-umami-event="guide_aliasing_to_f12" data-umami-event-spot="figimg" class="imglink"><img src="/f12/f12-bit-12.jpg" width="374" height="731" loading="lazy" alt="F(ilter)12 at 12 bit and full sample rate."></a>
+    <figcaption><b>12 bit, full rate.</b> Quantization grain with the fold line left where it was &mdash; grit without the clang.</figcaption>
+  </figure>
+
+  <h2>What it costs you</h2>
+  <p>Oversampling costs CPU, and the cost is close to linear: 4x means roughly four
+  times the work in that plugin's stage. On a project with distortion on twenty tracks
+  that is a real number, and it is the reason the switch ships off.</p>
+
+  <p>It can also cost latency. The filters that band-limit before the downsample are
+  delay lines, and a steeper filter is a longer one. Well-behaved plugins report their
+  delay and the host compensates. Some do not, and the symptom is a track that slides a
+  few samples out of time only when the switch is on. Check it by copying the track,
+  flipping the polarity on the copy and bypassing the plugin on one of them: a clean
+  null means the host is compensating correctly.</p>
+
+  <p>And oversampling costs you a sound. Clean distortion is thinner than dirty
+  distortion, because a lot of what people like about aggressive saturation is the
+  inharmonic content underneath it. Turn the switch on, listen, and if the part got
+  worse then leave it off and say so in the notes. Going the other way, committing to a
+  crushed render costs you the fold line: once a 2&nbsp;kHz ghost is printed into the
+  file, choosing a different rate later means going back to the source.</p>
+
   <h2>Questions people ask</h2>
   <h3>What is aliasing in sound?</h3>
   <p>Aliasing is when frequencies above half the sample rate fold back into the audible
@@ -297,6 +540,59 @@ li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
   <p>Anti-aliasing means removing or preventing frequencies above the Nyquist limit before
   they can fold back, usually with a low-pass filter before downsampling, or by processing
   at a higher sample rate with oversampling.</p>
+  <h3>What is the Nyquist frequency?</h3>
+  <p>Half the sample rate. At 44.1&nbsp;kHz it is 22.05&nbsp;kHz, at 48&nbsp;kHz it is
+  24&nbsp;kHz, at 96&nbsp;kHz it is 48&nbsp;kHz. It is the highest frequency that rate
+  can describe, and every alias is a reflection around it or around a whole multiple of
+  the rate itself.</p>
+  <h3>Why does my synth sound out of tune in the high notes?</h3>
+  <p>Most likely aliasing in the oscillator. A bright waveform has harmonics stretching
+  far above the note, and as you play higher those harmonics cross the ceiling and fold
+  back at frequencies with no relationship to the key. The chord sounds fine two octaves
+  down and sour at the top. Look for an HQ, Quality or Oversampling control on the
+  instrument, or low-pass the oscillator before it reaches the amp stage.</p>
+  <h3>Does recording at 96 kHz get rid of aliasing?</h3>
+  <p>It reduces it a great deal and does not remove it. In a measurement of one
+  5&nbsp;kHz sine hard clipped at three rates, the loudest alias sat 16.3&nbsp;dB below
+  the fundamental at 44.1&nbsp;kHz and 37.8&nbsp;dB below it at 96&nbsp;kHz, with five
+  audible-band peaks left instead of thirteen. The cost is that the whole project runs
+  at double the CPU and disk, while oversampling spends that only on the plugins that
+  need it.</p>
+  <h3>Is aliasing the same as distortion?</h3>
+  <p>No. Distortion adds harmonics that are whole-number multiples of the input, which
+  is why it reads as a change of tone rather than a change of note. Aliasing adds tones
+  at frequencies with no arithmetic relationship to the input at all. Distortion often
+  causes aliasing, because the harmonics it creates are the material that folds. See
+  <a class="inline" href="/harmonic-distortion/">harmonic distortion</a>.</p>
+  <h3>How do I know if a plugin is aliasing?</h3>
+  <p>Feed it a single high sine, around 5&nbsp;kHz, and put a spectrum analyzer after
+  it. Any peak that is not a whole-number multiple of 5&nbsp;kHz is an alias. Then sweep
+  the tone upward: aliases move down while the source moves up, and nothing else in
+  audio does that.</p>
+  <h3>Does oversampling remove aliasing completely?</h3>
+  <p>It removes the audible part in most cases. Running at four times the rate and
+  filtering before the downsample took a hard-clipped 5&nbsp;kHz sine from thirteen
+  audible-band peaks to two, and the two that were left were the real signal. Higher
+  drive levels and unbounded harmonic generators can still push content past even the
+  raised ceiling, which is why some plugins offer 8x and 16x.</p>
+  <h3>Why does aliasing sound metallic?</h3>
+  <p>Because the frequencies it adds are unrelated to the note. The ear reads sets of
+  whole-number harmonics as pitch and reads inharmonic sets as struck metal, which is
+  roughly what a bell or a cymbal is. Folded partials are inharmonic by definition, so a
+  fold puts a small, dense bell on top of whatever made it.</p>
+  <h3>Can you remove aliasing after it has been recorded?</h3>
+  <p>Not really. Once the fold has happened the ghost and the music occupy the same
+  frequencies in the same file, so anything that attenuates one attenuates the other.
+  Narrow notches help when the aliasing is a couple of steady tones from a sustained
+  source. For anything broadband, go back to the source and re-render with oversampling
+  on.</p>
+  <h3>Does aliasing matter if I make lofi?</h3>
+  <p>It matters more, not less, because it is the main ingredient rather than an
+  accident. Knowing where the fold line sits lets you put the ghosts somewhere useful
+  instead of somewhere that fights the vocal. The trap is running an aliasing crusher
+  and an aliasing saturator in the same chain: the second one folds the first one's
+  output, and the result is dense in a way that stops reading as texture. See
+  <a class="inline" href="/how-to-make-lofi-drums/">how to make lofi drums</a>.</p>
 
   <h2>What F(ilter)12 does</h2>
   <p>F(ilter)12 is our 12 bit sauce filter, and its lo-fi section uses this on purpose.

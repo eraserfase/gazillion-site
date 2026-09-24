@@ -53,9 +53,9 @@ Then loosen the grid itself, and loosen it unevenly. Ten milliseconds is the use
 
 ## Swing in milliseconds, worked out
 
-Swing percentages are easier to trust once you convert them. A swing control moves the offbeat of a pair from the halfway point to wherever you set it, so the number is a position, not an amount. At 85 BPM a quarter note lasts 705.9 ms, an eighth lasts 352.9 ms and a sixteenth lasts 176.5 ms. Those four numbers are all you need.
+Swing percentages are easier to trust once you convert them. A swing control moves the offbeat of a pair from the halfway point to wherever you set it, so the number is a position, not an amount. At 85 BPM a quarter note lasts 705.9 ms, an eighth lasts 352.9 ms and a sixteenth lasts 176.5 ms. Those three numbers are all you need.
 
-Take sixteenth-note swing, which is what most lofi kits use. The pair of sixteenths spans one eighth, 352.9 ms. Straight puts the offbeat at 176.5 ms. Set swing to 58 per cent and it moves to 0.58 × 352.9 = 204.7 ms, which is 28 ms late. Set it to 62 per cent and it lands at 218.8 ms, 42 ms late. Full triplet swing, 66.7 per cent, puts it at 235.3 ms, 59 ms late. Drop the tempo to 72 BPM and the same 62 per cent setting is worth 50 ms, because the beat got longer. The swing number stayed still and the groove moved, which is why a setting you loved on one beat feels wrong on the next.
+Take sixteenth-note swing, which is what most lofi kits use. The pair of sixteenths spans one eighth, 352.9 ms. Straight puts the offbeat at 176.5 ms. Set swing to 58 per cent and it moves to 0.58 × 352.9 = 204.7 ms, which is 28 ms late. Set it to 62 per cent and it lands at 218.8 ms, 42 ms late. Full triplet swing, 66.7 per cent, puts it at 235.3 ms, 59 ms late. Drop the tempo to 72 BPM and the same 62 per cent setting is worth 50 ms, because the beat got longer. The swing number stayed still and the groove moved, which is why a setting you loved on one track feels wrong on the next.
 
 Somewhere between 56 and 63 per cent is where most of this music lives. Below 55 it reads as tight. Above 65 it reads as a shuffle, which is a different genre with its own rules. Set the number, then nudge individual hits away from it — the swing gets you the shape and the hand-nudges get you the person.
 
@@ -247,7 +247,7 @@ A soft kick under a heavy low-pass leaves almost nothing in the band a small dri
 
 F(ilter)12 is our 12 bit sauce filter, built for drums and samples. Its lo-fi section is **SAMPLE RATE**, which rolls off the top and folds what was up there back down, and **BIT**, which rounds off quiet detail and gives what remains a hard edge. The filter behind it has five shapes, six resonance shapes and **DRIVE**, and **AUTO FILTER** can move it with swing. One producer's line on the page: it gave their drums some vintage dust.
 
-On a drum bus that means one instance instead of three, which matters for the order question above: the crush pair and the filter are already arranged so the filter is cleaning up after the rate reduction rather than feeding it. Start with BIT, then SAMPLE RATE, then bring the cutoff down until the hats stop clicking, then add DRIVE last. AURA is there when the kit reads dull rather than dusty and you want some definition back without undoing the filter.
+On a drum bus that means one instance instead of three, which matters for the order question above: the crush pair and the filter are already arranged so the filter is cleaning up after the rate reduction rather than feeding it. Start with BIT, then SAMPLE RATE, then bring the cutoff down until the hats stop clicking, then add DRIVE last. AURA is the adaptive correction over the top, green in the display where it is adding and red where it is taking away. It works only on what the filter is letting through, so it puts definition back under the cutoff without raising the cutoff.
 
 It runs on Mac and Windows as AU, VST3 and standalone, and it is $49 with DRUGS included free. There is a demo on the page, and it is the honest way to decide whether the panel suits how you work.
 

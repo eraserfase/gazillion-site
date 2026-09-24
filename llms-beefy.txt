@@ -21,6 +21,7 @@ linking.
 
 - [How to get analog warmth without buying hardware](https://gazillionindustries.com/analog-warmth.md): Four mechanisms hide behind one word, and naming the one you want is most of the work.
 - [Best saturation plugins](https://gazillionindustries.com/best-saturation-plugins.md): What the main saturation plugins actually do, with prices and a disclosure.
+- [The cheapest way to make your beats louder](https://gazillionindustries.com/cheapest-way-to-make-beats-louder.md): Free options first, ranked by what each one buys you, then the one paid step worth making.
 - [Clipper before limiter](https://gazillionindustries.com/clipper-before-limiter.md): Why the clipper goes first, how to set both, and why the true-peak limiter stays last.
 - [Crest factor](https://gazillionindustries.com/crest-factor.md): Peak minus average, and why it decides how loud a track can get.
 - [How to use distortion on vocals](https://gazillionindustries.com/distortion-on-vocals.md): Saturation for presence, parallel distortion for aggression, and heavy drive as an effect.
@@ -70,4 +71,5 @@ linking.
 - [What is a transient?](https://gazillionindustries.com/what-is-a-transient.md): Why the ear identifies instruments by attack, and what processing does to it.
 - [What is clipping in audio?](https://gazillionindustries.com/what-is-clipping.md): Hard versus soft, why it works on transients, and where it does damage.
 - [Why do my drums sound weak?](https://gazillionindustries.com/why-do-my-drums-sound-weak.md): Five causes in order, and why the plugin is the fourth one.
+- [Why your mix sounds harsh after mastering](https://gazillionindustries.com/why-is-my-mix-harsh.md): A diagnostic order for a harsh master, from the limiter down to your monitoring level.
 - [Why is my mix muddy?](https://gazillionindustries.com/why-is-my-mix-muddy.md): Where mud lives in the spectrum, how to clear it, and what else causes it.
