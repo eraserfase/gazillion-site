@@ -37,19 +37,19 @@ The erase head comes first and clears whatever was there. The record head is a t
 
 Magnetic tape doesn't respond evenly to small signals, so recording the audio alone would sound distorted. Machines add a bias signal, a high-frequency tone far above hearing, mixed with the audio at the record head. It pushes the tape into its most linear range. How much bias is used changes the tone, and aligning it is part of maintaining a machine.
 
-TRIPLE OG puts a cassette transport in a plugin, VU meters included. There's a demo on the page.
+[TRIPLE OG](https://gazillionindustries.com/tripleog.html) puts a cassette transport in a plugin, VU meters included. There's a demo on the page.
 
 ## Why tape sounds like tape
 
-- Saturation: push the level and the tape runs out of room gradually, rounding peaks. See tape vs tube saturation.
+- **Saturation:** push the level and the tape runs out of room gradually, rounding peaks. See [tape vs tube saturation](https://gazillionindustries.com/tape-vs-tube-saturation/).
 
-- Head bump: a low-frequency lift whose position depends on speed and head design.
+- **Head bump:** a low-frequency lift whose position depends on speed and head design.
 
-- High-frequency loss: worse at slow speeds and at high levels.
+- **High-frequency loss:** worse at slow speeds and at high levels.
 
-- Noise: the random magnetic noise of the tape itself. See tape hiss.
+- **Noise:** the random magnetic noise of the tape itself. See [tape hiss](https://gazillionindustries.com/tape-hiss/).
 
-- Speed variation: tiny wobbles in the transport. See wow and flutter.
+- **Speed variation:** tiny wobbles in the transport. See [wow and flutter](https://gazillionindustries.com/wow-and-flutter/).
 
 ## Questions people ask
 
@@ -67,7 +67,7 @@ Tape rounds off peaks as it saturates, softens the highest frequencies and adds 
 
 ## What TRIPLE OG does
 
-TRIPLE OG is our cassette tape simulation: a cassette transport, with six controls for what the medium is and what it's doing, and two for your hands. TONE, HISS, AGE and DRIVE set what the tape is, WOW FLUT and CATCH set what the transport is doing, and SCRUB and SLAM let you grab it. The display shows the reels, the tape and the two heads, with a pair of VU meters against a 0 VU reference so you can see how hard you're hitting it.
+TRIPLE OG is our cassette tape simulation: a cassette transport, with six controls for what the medium is and what it's doing, and two for your hands. **TONE**, **HISS**, **AGE** and **DRIVE** set what the tape is, **WOW FLUT** and **CATCH** set what the transport is doing, and **SCRUB** and **SLAM** let you grab it. The display shows the reels, the tape and the two heads, with a pair of VU meters against a 0 VU reference so you can see how hard you're hitting it.
 
 Rust on plastic, a magnet, and a motor that never quite keeps perfect time. That's the whole trick, and people still build studios around it.
 

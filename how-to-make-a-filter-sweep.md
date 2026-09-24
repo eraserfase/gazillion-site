@@ -25,6 +25,8 @@ A filter sweep is a change in a filter's cutoff over time, usually to build tens
 
 - **Target**: a group or return, not always the master
 
+**12 bit, full rate.** Quantisation without losing the top.
+
 ## What a filter sweep does
 
 A low-pass filter lets frequencies below its cutoff through; close it and the sound gets darker and further away. A high-pass lets frequencies above its cutoff through; raise it and the kick and bass drain out, leaving a thin, anxious version of the track. Either way, taking something away makes its return feel bigger, which is the whole point of a sweep.
@@ -45,21 +47,23 @@ A low-pass filter lets frequencies below its cutoff through; close it and the so
 
 - Leave the kick or the vocal unfiltered if they need to carry through.
 
+**12 bit, full rate.** Quantisation without losing the top.
+
 ## Make it musical
 
 Frequency is heard logarithmically, so a straight-line sweep in hertz seems to crawl at the start and rush at the end. Curve the automation to compensate, or use a filter whose cutoff knob is already scaled musically. Resonance adds a whistle that follows the cutoff; a touch of it makes a sweep sing, too much makes it scream. And don't sweep everything: filtering the music while the drums keep playing clean often builds more tension than filtering the whole track.
 
-F(ilter)12's resonance shapes travel with the knob, so a sweep carries its whole character with it. There's a demo on the page.
+[F(ilter)12](https://gazillionindustries.com/f12.html)'s resonance shapes travel with the knob, so a sweep carries its whole character with it. There's a demo on the page.
 
 ## Beyond builds
 
-- Intros: start a loop low-passed and open it over the first eight bars.
+- **Intros:** start a loop low-passed and open it over the first eight bars.
 
-- Breakdowns: close a low-pass on the drums so the vocal carries the section.
+- **Breakdowns:** close a low-pass on the drums so the vocal carries the section.
 
-- Transitions: a quick high-pass on the last beat before a new section.
+- **Transitions:** a quick high-pass on the last beat before a new section.
 
-- Repeating movement: for sweeps that loop, use an auto filter instead of automation.
+- **Repeating movement:** for sweeps that loop, use an [auto filter](https://gazillionindustries.com/auto-filter-effect/) instead of automation.
 
 ## Questions people ask
 
@@ -85,7 +89,7 @@ Not always. Sweeping only the music or only the drums, while other parts stay cl
 
 ## What F(ilter)12 does
 
-F(ilter)12 is our 12 bit sauce filter. POSITION sets where in the spectrum the filter sits, and the further it works the more it drives and the more it sings. There are five shapes, including a morph that runs from a closing low-pass through untouched in the middle to an opening high-pass, which makes a single knob a full sweep. Six resonance shapes travel with it, and SLOPE, DRIVE, RESO and Q shape the edge.
+F(ilter)12 is our 12 bit sauce filter. **POSITION** sets where in the spectrum the filter sits, and the further it works the more it drives and the more it sings. There are five shapes, including a morph that runs from a closing low-pass through untouched in the middle to an opening high-pass, which makes a single knob a full sweep. Six resonance shapes travel with it, and **SLOPE**, **DRIVE**, **RESO** and **Q** shape the edge.
 
 Close it, let the room lean in, open it. It still works every time.
 

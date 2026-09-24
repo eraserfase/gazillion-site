@@ -25,6 +25,8 @@ To chop a drum break, isolate a section where the drums play alone, set your pro
 
 - **Keep**: the bleed and the room: that is half the sound
 
+**DOSE 88.** It dives on each hit and takes the bar to recover.
+
 ## Finding a break worth chopping
 
 A break is the part of a record where the band drops out and the drummer keeps going. The canonical ones are canonical because they are clean, short and swung: the four bars from The Winstons' "Amen, Brother" in 1969, Clyde Stubblefield's bars on James Brown's "Funky Drummer" in 1970, the opening of The Honey Drippers' "Impeach the President" in 1973. What they have in common is exposure. No horns, no vocal, no bass, so the hits arrive with only the room behind them.
@@ -53,21 +55,23 @@ You will not always get that. When the break has bleed from the rest of the arra
 
 The reason those four bars still work is that a person played them slightly off a grid, and slicing them to a grid is the fastest way to throw that away. Quantize to a swung grid if you quantize at all, or leave the slices where your fingers put them and fix only the hits that are obviously late.
 
-If the break's tempo is not your tempo, decide whether you want the pitch to move with it. Repitching the whole break drags it up or down in key and changes the character of the kit, which producers have used deliberately since sampling time was expensive. Stretching keeps the pitch and adds artifacts. Time stretching explained covers which one to reach for.
+If the break's tempo is not your tempo, decide whether you want the pitch to move with it. Repitching the whole break drags it up or down in key and changes the character of the kit, which producers have used deliberately since sampling time was expensive. Stretching keeps the pitch and adds artifacts. [Time stretching explained](https://gazillionindustries.com/time-stretching-explained/) covers which one to reach for.
 
-DRUGS is our free one-knob bus compressor for drums. Run the chopped break through it and the room comes up under the hits, which is the sound most people are chasing when they say a break sounds sampled.
+[DRUGS](https://gazillionindustries.com/drugs.html) is our free one-knob bus compressor for drums. Run the chopped break through it and the room comes up under the hits, which is the sound most people are chasing when they say a break sounds sampled.
+
+**DOSE 88.** It dives on each hit and takes the bar to recover.
 
 ## Make it sit
 
-A chopped break usually arrives with too much information: hi-hat wash, a room, and whatever else bled in. Take the top down before you take the low end out, add weight with compression, and layer a modern kick under the sampled one if you need the bottom to reach a phone. Layering also lets you keep the sampled kick's attack while borrowing somebody else's sub; see how to layer kicks.
+A chopped break usually arrives with too much information: hi-hat wash, a room, and whatever else bled in. Take the top down before you take the low end out, add weight with [compression](https://gazillionindustries.com/how-to-compress-drums/), and layer a modern kick under the sampled one if you need the bottom to reach a phone. Layering also lets you keep the sampled kick's attack while borrowing somebody else's sub; see [how to layer kicks](https://gazillionindustries.com/how-to-layer-kicks/).
 
-If you want it dirtier rather than bigger, how to make drums sound dusty is the other direction from here.
+If you want it dirtier rather than bigger, [how to make drums sound dusty](https://gazillionindustries.com/how-to-make-drums-sound-dusty/) is the other direction from here.
 
 ## Where it costs you
 
 Chopping is destructive. Every slice edge is a place where the room stops abruptly, and twenty of them in a bar turns a live kit into a machine gun, which may be what you want and is usually not. Heavy quantizing does the same thing to the feel. And a famous break is famous: anyone over thirty will name it in two bars, so either flip it hard enough to be yours or accept that you are in conversation with everyone else who used it.
 
-The feel that comes out of chopping by hand rather than to the grid is covered in how to make Dilla type beats.
+The feel that comes out of chopping by hand rather than to the grid is covered in [how to make Dilla type beats](https://gazillionindustries.com/how-to-make-dilla-type-beats/).
 
 ## Questions people ask
 
@@ -85,7 +89,7 @@ The four-bar break from The Winstons' "Amen, Brother", released in 1969 as a B-s
 
 ## What DRUGS does
 
-DRUGS is a bus compressor with one macro control, called DOSE, and it is free. Turning DOSE up makes a drum bus denser rather than louder: it reshapes a break instead of leveling it, and brings the room up underneath the hits. There is no threshold to hunt for. The release reacts to the transient in front of it, so a hit gets the shorter time and the gain recovers inside the gap where pumping would be audible.
+DRUGS is a bus compressor with one macro control, called **DOSE**, and it is free. Turning DOSE up makes a drum bus denser rather than louder: it reshapes a break instead of leveling it, and brings the room up underneath the hits. There is no threshold to hunt for. The release reacts to the transient in front of it, so a hit gets the shorter time and the gain recovers inside the gap where pumping would be audible.
 
 Six seconds, cut so the horn players could rest. Still working fifty-odd years later.
 

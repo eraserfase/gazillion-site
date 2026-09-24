@@ -27,7 +27,7 @@ A tape stop effect slows audio to a halt so its pitch and speed fall together, l
 
 ## What a tape stop actually is
 
-When a motor stops, the tape or platter doesn't halt instantly: it coasts down, and everything playing slows and drops in pitch at the same time. That's varispeed taken all the way to zero, which is why a real tape stop can't be faked with a volume fade or a pitch shift that keeps the tempo. The speed has to fall. See what is varispeed for how speed and pitch are tied.
+When a motor stops, the tape or platter doesn't halt instantly: it coasts down, and everything playing slows and drops in pitch at the same time. That's varispeed taken all the way to zero, which is why a real tape stop can't be faked with a volume fade or a pitch shift that keeps the tempo. The speed has to fall. See [what is varispeed](https://gazillionindustries.com/what-is-varispeed/) for how speed and pitch are tied.
 
 ## How to make a tape stop effect
 
@@ -49,17 +49,17 @@ When a motor stops, the tape or platter doesn't halt instantly: it coasts down, 
 
 Logic Pro's region fades include Slow Down and Speed Up types that do this directly. In other DAWs, automate a pitch and speed drop on a bounced clip (in Ableton, a clip set to the Re-Pitch warp mode follows tempo changes with its pitch), or use a tape stop or gross-beat-style plugin. Whatever the tool, check the result on the drums: a good tape stop makes the kick and snare groan down, not just the melody.
 
-TRIPLE OG's SLAM is a tape stop you hold down, and CATCH drags, jams and sprints back. There's a demo on the page.
+[TRIPLE OG](https://gazillionindustries.com/tripleog.html)'s SLAM is a tape stop you hold down, and CATCH drags, jams and sprints back. There's a demo on the page.
 
 ## Variations
 
-- Tape start: reverse it, so the audio ramps up from nothing into the downbeat.
+- **Tape start:** reverse it, so the audio ramps up from nothing into the downbeat.
 
-- Half stop: slow down and snap back before reaching zero.
+- **Half stop:** slow down and snap back before reaching zero.
 
-- Drag: a brief slow-down that recovers, like a tape catching; see wow and flutter for the smaller version.
+- **Drag:** a brief slow-down that recovers, like a tape catching; see [wow and flutter](https://gazillionindustries.com/wow-and-flutter/) for the smaller version.
 
-- Selective stop: stop the music but let the drums play through, or the other way round.
+- **Selective stop:** stop the music but let the drums play through, or the other way round.
 
 ## Questions people ask
 
@@ -77,7 +77,7 @@ Use a region fade set to Slow Down on the end of the region, and adjust the fade
 
 ## What TRIPLE OG does
 
-TRIPLE OG is our cassette tape simulation, with a transport you can grab. SLAM is the tape stop: hold it and the transport drags to a halt, let go and it comes back up to speed, and SLAM RETURN sets how long the stop takes. CATCH is the machine losing its footing on its own: it drags, jams and then recovers, on its own clock or from a trigger on the panel. SCRUB is you doing it by hand: drag the lever and the head runs back across the tape, and it rebounds home when you let go.
+TRIPLE OG is our cassette tape simulation, with a transport you can grab. **SLAM** is the tape stop: hold it and the transport drags to a halt, let go and it comes back up to speed, and **SLAM RETURN** sets how long the stop takes. **CATCH** is the machine losing its footing on its own: it drags, jams and then recovers, on its own clock or from a trigger on the panel. **SCRUB** is you doing it by hand: drag the lever and the head runs back across the tape, and it rebounds home when you let go.
 
 The room already knows what that groan means. Give it a new section to walk into.
 

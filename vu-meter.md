@@ -25,25 +25,29 @@ A VU meter shows average level rather than peak level. It was standardized at th
 
 - **Gap between them**: that is your crest factor
 
+**BEEF at 8.** The reference you A/B against.
+
 ## Peak and average are different questions
 
 A peak meter answers "will this clip", which is a technical question with a yes or no answer. An average meter answers "how loud is this", which is what your ear actually cares about. The two can disagree wildly: a sharp snare can peak near the ceiling and read modestly on a VU, while a distorted bass can sit well below the ceiling and read high.
 
-That gap is not a nuisance, it is information. The difference between what a peak meter shows and what an average meter shows is the crest factor, which is the single number that predicts how loud a track can eventually get.
+That gap is not a nuisance, it is information. The difference between what a peak meter shows and what an average meter shows is the [crest factor](https://gazillionindustries.com/crest-factor/), which is the single number that predicts how loud a track can eventually get.
 
 ## What to use it for
 
-- Balancing. Set relative levels with an average meter, because that is closer to what the listener hears.
+- **Balancing.** Set relative levels with an average meter, because that is closer to what the listener hears.
 
-- Gain staging into analog-modeled plugins. Many are calibrated so that a given level hits their sweet spot. A VU meter is how you find it.
+- **Gain staging into analog-modeled plugins.** Many are calibrated so that a given level hits their sweet spot. A VU meter is how you find it.
 
-- Spotting over-compression. If the needle stops moving, the dynamics are gone.
+- **Spotting over-compression.** If the needle stops moving, the dynamics are gone.
 
-- Comparing to a reference. Level-match by average, not by peak, or the comparison is meaningless.
+- **Comparing to a reference.** Level-match by average, not by peak, or the comparison is meaningless.
 
-- Never for safety. A VU meter will happily sit at zero while your peaks go over. Keep a peak meter on the master for that.
+- **Never for safety.** A VU meter will happily sit at zero while your peaks go over. Keep a peak meter on the master for that.
 
-BEEFY has input and output clip lights for the safety question, and JUICE for setting how hard you feed it — which is exactly the decision an average meter helps you make.
+[BEEFY](https://gazillionindustries.com/beefy.html) has input and output clip lights for the safety question, and JUICE for setting how hard you feed it — which is exactly the decision an average meter helps you make.
+
+**SOFT CLIP** as the out stage, BEEF at 62.
 
 ## The calibration question
 
@@ -75,7 +79,7 @@ Aim for the loudest sections to sit around zero, with the needle moving rather t
 
 ## What BEEFY does
 
-BEEFY is a saturation and loudness effect for making sounds thicker, punchier and more up front. JUICE sets the level going in, which is the control an average meter helps you set; BEEF brings weight, density and loudness; COOK changes the color and bite. SOFT CLIP opens switched on and takes care of the initial gain staging, so the clipping finds the sound without you hunting for a magic input level, and the input and output clip lights cover the safety question a VU meter cannot.
+BEEFY is a saturation and loudness effect for making sounds thicker, punchier and more up front. **JUICE** sets the level going in, which is the control an average meter helps you set; **BEEF** brings weight, density and loudness; **COOK** changes the color and bite. **SOFT CLIP** opens switched on and takes care of the initial gain staging, so the clipping finds the sound without you hunting for a magic input level, and the input and output clip lights cover the safety question a VU meter cannot.
 
 Too slow to protect you, and right about the only thing that matters.
 

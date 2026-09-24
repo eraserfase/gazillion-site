@@ -25,29 +25,33 @@ RC-20 Retro Color is a character effect by XLN Audio, announced in December 2016
 
 - **Price**: $99, with documented sales around half that
 
+**12 bit, full rate.** Quantisation without losing the top.
+
 ## What each module does
 
-- NOISE adds a noise bed from a library of recorded sources, which is what supplies the vinyl, tape and room textures.
+- **NOISE** adds a noise bed from a library of recorded sources, which is what supplies the vinyl, tape and room textures.
 
-- WOBBLE is the pitch instability: wow and flutter, the slow drift and the faster waver of a tape transport.
+- **WOBBLE** is the pitch instability: wow and flutter, the slow drift and the faster waver of a tape transport.
 
-- DISTORT is saturation and distortion, with its own mix control.
+- **DISTORT** is saturation and distortion, with its own mix control.
 
-- DIGITAL is the degrader: bit depth and sample rate reduction, with its own mix.
+- **DIGITAL** is the degrader: bit depth and sample rate reduction, with its own mix.
 
-- SPACE is a reverb.
+- **SPACE** is a reverb.
 
-- MAGNETIC produces volume drops, the dropouts of a worn tape.
+- **MAGNETIC** produces volume drops, the dropouts of a worn tape.
 
 XLN's marketing names them slightly differently from the panel labels — Noise Generator, Wobble & Flutter, Saturation & Distortion, Degrader & Bitcrusher, Reverb, Volume Drops — which is worth knowing if you are reading about it rather than looking at it.
 
 ## Two things worth getting right
 
-It is a series chain, not a parallel bank. The manual describes audio passing from left to right through the modules, so DISTORT is working on a signal that already has noise in it, and DIGITAL is degrading what the distortion produced. At least one review describes it as parallel. The manual is the authority, and the ordering explains why turning things up in different orders gives you different results.
+**It is a series chain, not a parallel bank.** The manual describes audio passing from left to right through the modules, so DISTORT is working on a signal that already has noise in it, and DIGITAL is degrading what the distortion produced. At least one review describes it as parallel. The manual is the authority, and the ordering explains why turning things up in different orders gives you different results.
 
-Magnitude is a depth control, not a mix. It scales the effect of the whole chain, which is why pulling it back is not the same as reducing a dry/wet balance: the individual modules have their own mix knobs and those behave independently.
+**Magnitude is a depth control, not a mix.** It scales the effect of the whole chain, which is why pulling it back is not the same as reducing a dry/wet balance: the individual modules have their own mix knobs and those behave independently.
 
-F(ilter)12 is built the other way round: a filter with a lo-fi section in front of it, rather than a rack of character modules in a row.
+[F(ilter)12](https://gazillionindustries.com/f12.html) is built the other way round: a filter with a lo-fi section in front of it, rather than a rack of character modules in a row.
+
+**12 bit, full rate.** Quantisation without losing the top.
 
 ## What reviewers said it is not good at
 
@@ -85,7 +89,7 @@ Series. The manual describes the signal passing from left to right through the s
 
 ## What F(ilter)12 does
 
-F(ilter)12 is a filter with a lo-fi section in front of it and an adaptive correction called AURA on top. SAMPLE RATE and BIT are the crush pair. POSITION sets where in the spectrum the filter sits, and the further it works the more it drives and the more it sings. There are five shapes — low-pass, high-pass, band-pass, notch and a morph — and SLOPE runs from 18 dB per octave to a wall. Q SHAPE puts peaks and dips at fixed distances from the cutoff so the whole shape travels with the knob: WAH, VOWEL, COMB, SCOOP, PLAIN, or DRAW your own.
+F(ilter)12 is a filter with a lo-fi section in front of it and an adaptive correction called AURA on top. **SAMPLE RATE** and **BIT** are the crush pair. **POSITION** sets where in the spectrum the filter sits, and the further it works the more it drives and the more it sings. There are five shapes — low-pass, high-pass, band-pass, notch and a morph — and **SLOPE** runs from 18 dB per octave to a wall. **Q SHAPE** puts peaks and dips at fixed distances from the cutoff so the whole shape travels with the knob: WAH, VOWEL, COMB, SCOOP, PLAIN, or DRAW your own.
 
 Six boxes in a row is one design. A filter you can drive and move is another. Know which problem you have.
 

@@ -25,9 +25,11 @@ Drums sound bigger when they have body, space and weight, not just punch. Add a 
 
 - **Space**: big drums need room in the arrangement
 
+**SOFT CLIP** as the out stage, BEEF at 62.
+
 ## Big is not the same as punchy
 
-Punch is the front edge of a hit; size is everything after it: body, sustain, room and width. A kit can hit hard and still sound small, like a snare cracking inside a shoebox. The punch side is covered in how to make drums hit harder. This is the other half.
+Punch is the front edge of a hit; size is everything after it: body, sustain, room and width. A kit can hit hard and still sound small, like a snare cracking inside a shoebox. The punch side is covered in [how to make drums hit harder](https://gazillionindustries.com/how-to-make-drums-hit-harder/). This is the other half.
 
 ## Give them a room
 
@@ -43,13 +45,15 @@ Size is mostly space. A short room reverb, with a little pre-delay so the hit st
 
 - Pull it back until the groove stops pumping, if it does.
 
-The dry drums keep the hit and the crushed ones bring up everything behind it. The same idea with saturation instead is in parallel saturation.
+The dry drums keep the hit and the crushed ones bring up everything behind it. The same idea with saturation instead is in [parallel saturation](https://gazillionindustries.com/parallel-saturation/).
+
+**BEEF at 96.** Past where most settings want to live.
 
 ## Add density
 
-Saturation brings each hit's body up toward its peak, which reads as a bigger, fuller drum. On a bus it also pulls the kit and its room together. See how to saturate drums.
+Saturation brings each hit's body up toward its peak, which reads as a bigger, fuller drum. On a bus it also pulls the kit and its room together. See [how to saturate drums](https://gazillionindustries.com/how-to-saturate-drums/).
 
-BEEFY on the drum bus pulls the hits and the body closer together. The demo on the page is 28 seconds.
+[BEEFY](https://gazillionindustries.com/beefy.html) on the drum bus pulls the hits and the body closer together. The demo on the page is 28 seconds.
 
 ## Weight and width
 
@@ -83,7 +87,7 @@ Start with better, tuned samples, then work on punch (transients and peaks) and 
 
 ## What BEEFY does
 
-BEEFY is our saturation and loudness plugin. Try it on a whole drum bus to pull the hits and the body closer together, which is most of what "bigger" asks for. BEEF brings more weight and density as it goes up, COOK sets how round or bright the added color is, and SOFT CLIP, on by default, rounds off the loudest parts so the kit can sit louder.
+BEEFY is our saturation and loudness plugin. Try it on a whole drum bus to pull the hits and the body closer together, which is most of what "bigger" asks for. **BEEF** brings more weight and density as it goes up, **COOK** sets how round or bright the added color is, and **SOFT CLIP**, on by default, rounds off the loudest parts so the kit can sit louder.
 
 You still don't own a stairwell. The drums just stopped sounding like the closet.
 

@@ -25,11 +25,15 @@ Oversampling runs a process at a higher internal sample rate than your session, 
 
 - **Rule**: on for anything nonlinear, especially on bright material
 
+**LIMIT** instead, everything else identical.
+
 ## What aliasing sounds like
 
 This is the whole reason the feature exists. Harmonics are orderly: at two, three and four times the input frequency, they stay musically related to the note. Aliased content is not. It appears at frequencies determined by arithmetic rather than by music, it moves in the opposite direction when you play a higher note, and it sits in the mix as a metallic, gritty edge that gets worse the brighter the source.
 
-On a bass line you may never hear it, because the harmonics stay low enough to be legal. On a bright hi-hat, a cymbal or a full mix, a hard clipper without oversampling will generate a great deal of it. What aliasing is covers the mechanism in detail.
+On a bass line you may never hear it, because the harmonics stay low enough to be legal. On a bright hi-hat, a cymbal or a full mix, a hard clipper without oversampling will generate a great deal of it. [What aliasing is](https://gazillionindustries.com/what-is-aliasing-in-audio/) covers the mechanism in detail.
+
+**BEEF at 8.** The reference you A/B against.
 
 ## When to turn it on
 
@@ -43,7 +47,7 @@ On a bass line you may never hear it, because the harmonics stay low enough to b
 
 - Four times is a sensible default. Sixteen times is rarely worth the CPU it costs.
 
-BEEFY is our saturation and loudness effect. Its page lists three knobs and two output switches, and it does not claim an oversampling control, so treat it the way you would any nonlinear process: if the source is very bright, feed it less.
+[BEEFY](https://gazillionindustries.com/beefy.html) is our saturation and loudness effect. Its page lists three knobs and two output switches, and it does not claim an oversampling control, so treat it the way you would any nonlinear process: if the source is very bright, feed it less.
 
 ## Where it costs you
 
@@ -71,7 +75,7 @@ Two or four times covers almost everything. Higher settings produce diminishing 
 
 ## What BEEFY does
 
-BEEFY is a saturation and loudness effect for making sounds thicker, punchier and more up front. It adds body, squeezes some space out of the peaks, and brings out harmonics that help a sound feel bigger. BEEF brings weight, density and attitude; COOK changes the color and bite from a rounder feel toward a brighter, more cooked edge; JUICE sets the level going in, which is the control that matters most here: feeding a very bright source more gently is the oldest way of managing what a nonlinear process does with it.
+BEEFY is a saturation and loudness effect for making sounds thicker, punchier and more up front. It adds body, squeezes some space out of the peaks, and brings out harmonics that help a sound feel bigger. **BEEF** brings weight, density and attitude; **COOK** changes the color and bite from a rounder feel toward a brighter, more cooked edge; **JUICE** sets the level going in, which is the control that matters most here: feeding a very bright source more gently is the oldest way of managing what a nonlinear process does with it.
 
 A setting in the corner that costs CPU and buys you the absence of something. Worth it more often than not.
 

@@ -3,7 +3,7 @@
 > The Minimoog Voyager explained: why Bob Moog built it in 2002, what the dual filters and touch surface do, every variant, and what it is good at.
 
 Source: https://gazillionindustries.com/minimoog-voyager/  
-Published 2026-09-20, updated 2026-09-24. By Gazillion Industries, who make Gazillion Industries.
+Published 2026-09-20, updated 2026-09-24. By Gazillion Industries.
 
 ---
 
@@ -41,21 +41,21 @@ Then the modern parts: 128 patch locations expandable to 896, MIDI in, out and t
 
 ## The variants
 
-- Signature Edition (2002): the first 600, $3,495, signed.
+- **Signature Edition** (2002): the first 600, $3,495, signed.
 
-- Standard (2002 on): $2,995.
+- **Standard** (2002 on): $2,995.
 
-- Anniversary Edition (2004–05): black cabinet, backlit panel, $3,295.
+- **Anniversary Edition** (2004–05): black cabinet, backlit panel, $3,295.
 
-- Electric Blue (2005 on) and the Select Series (2006 on), which let buyers specify cabinet and lighting.
+- **Electric Blue** (2005 on) and the **Select Series** (2006 on), which let buyers specify cabinet and lighting.
 
-- Rack Mount Edition (2005): five rack spaces, MIDI controlled, and stackable up to sixteen units for polyphony by brute force.
+- **Rack Mount Edition** (2005): five rack spaces, MIDI controlled, and stackable up to sixteen units for polyphony by brute force.
 
-- Old School (2008–09): no memory, no MIDI, no touch surface. A Model D argument in a Voyager case.
+- **Old School** (2008–09): no memory, no MIDI, no touch surface. A Model D argument in a Voyager case.
 
-- XL (2010): 61 keys, a ribbon controller and a patch bay.
+- **XL** (2010): 61 keys, a ribbon controller and a patch bay.
 
-- 10th Anniversary Gold (2012): 31 units, 24-karat gold, $15,000.
+- **10th Anniversary Gold** (2012): 31 units, 24-karat gold, $15,000.
 
 ## What it is good at
 
@@ -63,9 +63,11 @@ Bass, first. One oscillator an octave down, a second detuned by a few cents agai
 
 Leads and hooks, second, especially with the touch surface mapped to filter cutoff, so the phrase moves because your hand moved. And thirdly the thing monosynths are worst at and this one is unusually good at: sitting quietly. Turn the resonance down, open the filters halfway, play chords one note at a time, and it behaves like an instrument in a room rather than a machine making a noise.
 
-There is a hip hop footnote worth having. A Voyager that belonged to J Dilla is in the Smithsonian's National Museum of African American History and Culture, donated by his mother in 2014 along with his sampler, its power cord, a cable and the factory soft case. The museum's record puts its serial number at 263, inside the first run, and dates it 2002 to 2005. The instrument is not in that case as a synthesizer. It is there as evidence about how a particular producer worked.
+There is a hip hop footnote worth having. A Voyager that belonged to [J Dilla](https://gazillionindustries.com/j-dilla/) is in the Smithsonian's National Museum of African American History and Culture, donated by his mother in 2014 along with his sampler, its power cord, a cable and the factory soft case. The museum's record puts its serial number at 263, inside the first run, and dates it 2002 to 2005. The instrument is not in that case as a synthesizer. It is there as evidence about how a particular producer worked.
 
-We make BEEFY. BEEF at 96. Saturation and loudness, for when a synth needs to stop being polite.
+**BEEF at 96.** Saturation and loudness, for when a synth needs to stop being polite.
+
+We make [BEEFY](https://gazillionindustries.com/beefy.html). BEEF at 96. Saturation and loudness, for when a synth needs to stop being polite.
 
 ## Where it costs you
 

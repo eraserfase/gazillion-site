@@ -25,6 +25,8 @@ Mix vocals in this order: get the level right against the beat with no processin
 
 - **Check**: phone speaker, and at conversation volume
 
+**BEEF at 8.** The reference you A/B against.
+
 ## Level first, and level again
 
 A vocal take has a 15 dB range between the quietest word and the loudest, and no compressor handles that gracefully on its own. If you ask one to, it will pump on the loud words and let the quiet ones vanish. Draw the level line instead: go through the take and raise the words that disappear and lower the ones that jump, until the waveform looks roughly even. Then compress what is left, which will be a few decibels rather than fifteen.
@@ -51,13 +53,15 @@ This is boring and it is the difference between an amateur vocal and a professio
 
 - Check on a phone before you decide anything is finished.
 
-BEEFY is our saturation and loudness effect, and the page says it plainly: feed it a vocal that could use some attitude. SOFT CLIP holds the peaks while BEEF adds the weight.
+[BEEFY](https://gazillionindustries.com/beefy.html) is our saturation and loudness effect, and the page says it plainly: feed it a vocal that could use some attitude. SOFT CLIP holds the peaks while BEEF adds the weight.
+
+**SOFT CLIP** as the out stage, BEEF at 62.
 
 ## Making it fit rather than sit on top
 
 A vocal that sounds stuck on the front is usually competing with the beat rather than sharing with it. Three things fix it. Carve a small dip in the instrumental where the voice lives, around 1 to 3 kHz, using a compressor on the beat bus triggered by the vocal if you want it automatic. Match the spaces: a dry vocal over a wet beat always sounds pasted on. And commit to a level choice: in rap the vocal usually sits further forward than in almost any other genre, and trying to split the difference produces something that reads as neither.
 
-For the beat side of that conversation, see how to make drums cut through the mix.
+For the beat side of that conversation, see [how to make drums cut through the mix](https://gazillionindustries.com/how-to-make-drums-cut-through-the-mix/).
 
 ## Where it costs you
 
@@ -83,7 +87,7 @@ Three to six decibels on the loudest words, or two stages of about three decibel
 
 ## What BEEFY does
 
-BEEFY is a saturation and loudness effect for making sounds thicker, punchier and more up front. There is no drum-only rule: the page invites a thin synth, a chopped sample, an electric piano, a guitar or a vocal that could use some attitude. BEEF brings weight, density and loudness; COOK changes the color and bite from rounder toward brighter; JUICE sets the level going in. SOFT CLIP opens switched on and brings rounded, fuzzy edges to the loudest parts.
+BEEFY is a saturation and loudness effect for making sounds thicker, punchier and more up front. There is no drum-only rule: the page invites a thin synth, a chopped sample, an electric piano, a guitar or a vocal that could use some attitude. **BEEF** brings weight, density and loudness; **COOK** changes the color and bite from rounder toward brighter; **JUICE** sets the level going in. **SOFT CLIP** opens switched on and brings rounded, fuzzy edges to the loudest parts.
 
 The sticker or the basement. Neither, once the level line is drawn.
 

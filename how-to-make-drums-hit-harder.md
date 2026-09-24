@@ -27,11 +27,15 @@ Drums hit harder when the front edge of each hit stays sharp and the body behind
 
 - **A/B**: against a reference, at matched loudness
 
+**BEEF at 96.** Where the plug-in stops being polite. Most settings that sound right in solo are about half this.
+
+**SOFT CLIP as the out stage.** BEEF 62, JUICE +2.0. The clipper rounds the peak instead of holding a ceiling over it.
+
 ## Why your drums sound weak
 
 Loudness is an average. Punch is a peak. Your ears judge loudness mostly by average level over time, while your meter and your ceiling only care about peaks. A drum hit is a spike, a loud front edge with a quieter body behind it, so its peak sits far above its average. (A sine wave, for comparison, peaks just 3 dB above its average.)
 
-Those spikes reach 0 dBFS long before the kit sounds loud. Hitting harder is a trade: keep the front edge, bring up the body, and stop the peaks from spending all the headroom. Everything below is some version of that trade.
+Those spikes reach 0 dBFS long before the kit sounds loud. Hitting harder is a trade: keep the front edge, bring up the body, and stop the peaks from spending all the headroom. **Everything below is some version of that trade.**
 
 ## Start with hits that hit
 
@@ -43,11 +47,11 @@ If a kick has chest but no click, layer a short click on top rather than EQing o
 
 A kick is two sounds pretending to be one. The body usually lives somewhere between 50 and 100 Hz and the click somewhere around 2 to 5 kHz, depending on the drum. On a club system the body does the work. On a laptop it's almost all click, so if the kick disappears there, the click is where to add.
 
-If an 808 shares the low end, the kick has to negotiate for it. That fight is covered in how to make 808s hit harder.
+If an 808 shares the low end, the kick has to negotiate for it. That fight is covered in [how to make 808s hit harder](https://gazillionindustries.com/how-to-make-808s-hit-harder/).
 
 ## Let the transient through
 
-A fast attack is where punch goes to die. A compressor with an attack under about 3 ms catches the transient and flattens the stick. Set it around 10 to 30 ms instead, and the hit gets through while the body behind it comes up. The rest of the numbers are in drum bus compressor settings.
+A fast attack is where punch goes to die. A compressor with an attack under about 3 ms catches the transient and flattens the stick. Set it around 10 to 30 ms instead, and the hit gets through while the body behind it comes up. The rest of the numbers are in [drum bus compressor settings](https://gazillionindustries.com/drum-bus-compressor-settings/).
 
 A transient shaper goes straight at the attack instead: turn the attack up and each hit gets a sharper front edge, no threshold involved. Ableton's Drum Buss has a Transients knob for exactly this.
 
@@ -63,13 +67,13 @@ This is where the loudness comes from. A soft clipper rounds the tallest spikes 
 
 - Level-match against bypass and compare.
 
-Clipping the whole bus has a catch. Every kick drives everything playing with it into the curve, so the hats get gritty on each downbeat. If you hear that, clip the kick and snare on their own channels instead. More in soft clipping explained.
+Clipping the whole bus has a catch. Every kick drives everything playing with it into the curve, so the hats get gritty on each downbeat. If you hear that, clip the kick and snare on their own channels instead. More in [soft clipping explained](https://gazillionindustries.com/soft-clipping-explained/).
 
-Or put BEEFY on the drum bus: SOFT CLIP is on when it opens, and the demo on the page is 28 seconds.
+Or put [BEEFY](https://gazillionindustries.com/beefy.html) on the drum bus: SOFT CLIP is on when it opens, and the demo on the page is 28 seconds.
 
 ## Saturation for density
 
-Saturation is how a hit gets heard on a phone. It adds harmonics above what the drum already plays, right where small speakers can reproduce them, and it takes a little off the peaks on the way, which pulls the body up toward the hit. A little on the bus thickens the kit. A lot gets loud and rude, fast. The full method is in how to saturate drums.
+Saturation is how a hit gets heard on a phone. It adds harmonics above what the drum already plays, right where small speakers can reproduce them, and it takes a little off the peaks on the way, which pulls the body up toward the hit. A little on the bus thickens the kit. A lot gets loud and rude, fast. The full method is in [how to saturate drums](https://gazillionindustries.com/how-to-saturate-drums/).
 
 ## Parallel: keep the clean hit, add the crushed one
 
@@ -81,9 +85,9 @@ Crowded low mids swallow punch. Pads, keys and guitars tend to pile up somewhere
 
 ## Judge it against a record
 
-Pull up a record whose drums you would steal if you could. Dr. Dre's 2001 is a fair place to start; so is anything Timbaland made for Missy Elliott around the turn of the century. Match its loudness to your beat with a loudness meter, then flip back and forth.
+Pull up a record whose drums you would steal if you could. Dr. Dre's *2001* is a fair place to start; so is anything Timbaland made for Missy Elliott around the turn of the century. Match its loudness to your beat with a loudness meter, then flip back and forth.
 
-Louder always wins the first five seconds, so match levels before you believe anything. If your drums only hit harder because they got louder, the fader was the fix.
+Louder always wins the first five seconds, so **match levels before you believe anything**. If your drums only hit harder because they got louder, the fader was the fix.
 
 ## Questions people ask
 
@@ -111,7 +115,7 @@ Clipping the bus is quicker and pulls the kit together, but every kick drives th
 
 BEEFY is our saturation and loudness plugin, and it covers the clipping, saturation and density steps above in one window. Put it on a kick that needs more chest, a snare that needs more smack, or the whole drum bus to pull the hits and the body closer together.
 
-BEEF is the main event: more weight, density and loudness as you turn it up. SOFT CLIP opens switched on and takes care of the initial gain staging, so there is no input level to hunt for. LIMIT keeps output peaks in check instead, if you prefer. COOK moves the tone from rounder toward brighter and more bitten, and JUICE sets the level going in.
+**BEEF** is the main event: more weight, density and loudness as you turn it up. **SOFT CLIP** opens switched on and takes care of the initial gain staging, so there is no input level to hunt for. **LIMIT** keeps output peaks in check instead, if you prefer. **COOK** moves the tone from rounder toward brighter and more bitten, and **JUICE** sets the level going in.
 
 Back to the kitchen speaker, at the same loudness as the reference record. This time the drums don't knock. They come in.
 

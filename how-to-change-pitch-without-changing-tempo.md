@@ -25,19 +25,21 @@ To change pitch without changing tempo, use pitch shifting; to change tempo with
 
 - **Vocals**: preserve formants
 
+**TIME −35%, PITCH at unity.** Length without pitch — the other half of the machine.
+
 ## How the separation works
 
 Time stretching slices audio into tiny overlapping pieces and either repeats or skips them to change the length, then blends the seams. Pitch shifting stretches the audio in time and resamples it back to the original length, so the pitch moves while the duration stays. The better the algorithm, the better it hides the seams, but every method trades something: smeared transients, a phasey or metallic tone, or a watery sound on sustained notes.
 
 ## Choose the mode for the material
 
-- Drums and loops: modes that detect and preserve transients, so hits stay sharp.
+- **Drums and loops:** modes that detect and preserve transients, so hits stay sharp.
 
-- Melodic parts: tonal modes that keep sustained notes smooth.
+- **Melodic parts:** tonal modes that keep sustained notes smooth.
 
-- Full mixes: the highest-quality complex modes, which cost more CPU.
+- **Full mixes:** the highest-quality complex modes, which cost more CPU.
 
-- For character: repitch or varispeed, which doesn't separate them at all. See what is varispeed.
+- **For character:** repitch or varispeed, which doesn't separate them at all. See [what is varispeed](https://gazillionindustries.com/what-is-varispeed/).
 
 ## How to change pitch without changing tempo
 
@@ -53,6 +55,8 @@ Time stretching slices audio into tiny overlapping pieces and either repeats or 
 
 - Listen for artifacts, and try another mode if it sounds phasey or smeared.
 
+**Pitched up.** Same control, the other direction.
+
 ## How to change tempo without changing pitch
 
 - Set the clip to follow the project tempo.
@@ -63,11 +67,11 @@ Time stretching slices audio into tiny overlapping pieces and either repeats or 
 
 - Check the hits and the sustained notes for smearing.
 
-SKRUU puts pitch and time on separate knobs you can play, and lets either spring back.
+[SKRUU](https://gazillionindustries.com/skruu.html) puts pitch and time on separate knobs you can play, and lets either spring back.
 
 ## Keep it clean
 
-Small moves hide best. A semitone or two, or a few BPM, usually sounds natural; a big jump in either direction exposes the algorithm. If you need a large change, try splitting it: move part of the way with varispeed, which sounds natural, and the rest with pitch shifting. And bounce the result once you like it, so you're not stacking stretch on top of stretch. For samples specifically, see how to pitch a sample.
+Small moves hide best. A semitone or two, or a few BPM, usually sounds natural; a big jump in either direction exposes the algorithm. If you need a large change, try splitting it: move part of the way with varispeed, which sounds natural, and the rest with pitch shifting. And bounce the result once you like it, so you're not stacking stretch on top of stretch. For samples specifically, see [how to pitch a sample](https://gazillionindustries.com/how-to-pitch-a-sample/).
 
 ## Questions people ask
 
@@ -93,7 +97,7 @@ Large shifts expose the algorithm's artifacts: smeared transients, a metallic or
 
 ## What SKRUU does
 
-SKRUU is our varispeed pitch and time stretch plugin: two knobs that don't touch each other. PITCH moves the pitch, from −20% to +10%, reading out in semitones as well as speed. TIME moves the length, from −50% to +25%. Speed it up while pitching down, or the other way round. PITCH LOCK and TIME LOCK hold one while the other moves, and ELASTIC makes either knob spring back along a return shape you choose. Zero samples of latency.
+SKRUU is our varispeed pitch and time stretch plugin: two knobs that don't touch each other. **PITCH** moves the pitch, from −20% to +10%, reading out in semitones as well as speed. **TIME** moves the length, from −50% to +25%. Speed it up while pitching down, or the other way round. **PITCH LOCK** and **TIME LOCK** hold one while the other moves, and **ELASTIC** makes either knob spring back along a return shape you choose. Zero samples of latency.
 
 The divorce went through. They still get along better than you'd think.
 

@@ -31,6 +31,8 @@ Equalization is the first category to fill for free, because the gap between a g
 
 Reverb is the category where free options surprise people most. A good free reverb with a clean algorithmic engine and a few plate and hall presets will sit in a mix just as well as a paid unit costing several times more. The paid reverbs earn their price through convolution engines, extensive modulation, and workflow features like send-return management, but the raw sound of a well-tuned free reverb is genuinely competitive. Utility plugins round out the free tier. Gain stages, meters, stereo wideners, and simple transient shapers are all categories where the free options are so capable that paying for them feels like buying a slightly nicer screwdriver.
 
+**DOSE 88.** It dives on each hit and takes the bar to come back.
+
 ## What free genuinely does as well as paid
 
 An equalizer is a set of filters applied to a signal. The mathematics behind a parametric band, a shelf, or a high-pass slope are public knowledge, and a free plugin that implements them cleanly sounds the same as a paid one charging a premium. The difference you pay for is usually the interface, the presets, the brand story, and the workflow conveniences like mid-side routing or linear-phase options. If you need a straightforward EQ and you are comfortable with a slightly less polished interface, a free option handles the job without any audible compromise.
@@ -73,7 +75,7 @@ You need fewer than you think. A solid compressor, an equalizer, a reverb, and a
 
 ## What DRUGS does
 
-DRUGS is our bus compressor for drums, free for Mac and Windows. One control called DOSE, with MIX on the face for parallel without a send, GAIN on the way out and a soft ceiling after it. It has no threshold and no ratio, because the whole point is that you do not set them.
+DRUGS is our bus compressor for drums, free for Mac and Windows. One control called **DOSE**, with **MIX** on the face for parallel without a send, **GAIN** on the way out and a soft ceiling after it. It has no threshold and no ratio, because the whole point is that you do not set them.
 
 ---
 

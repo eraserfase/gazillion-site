@@ -25,6 +25,8 @@ The Sausage Fattener is a saturation and loudness plugin released under the Dada
 
 - **Overlap**: both are drive-it-and-it-gets-bigger tools
 
+**LIMIT** instead, everything else identical.
+
 ## What the Sausage Fattener is, from its makers
 
 It appeared in 2011 — the first published reviews are from August and December of that year — at $29, and now sells for $39. The panel carries FATNESS, COLOR and a small GAIN knob with a lamp that lights when you clip it. There are no switches, no meters and no quality or oversampling options on the face.
@@ -37,27 +39,29 @@ One thing genuinely is not documented anywhere, in either direction: whether it 
 
 ## What BEEFY is, from our page
 
-BEEFY is a saturation and loudness effect for making sounds thicker, punchier and more up front. BEEF is the main control: more weight, more density, more loudness and more attitude as you turn it up. COOK changes the color and bite, from a rounder feel toward a brighter, more cooked edge. JUICE sets the level going in, so you can feed it harder or back it off.
+BEEFY is a saturation and loudness effect for making sounds thicker, punchier and more up front. **BEEF** is the main control: more weight, more density, more loudness and more attitude as you turn it up. **COOK** changes the color and bite, from a rounder feel toward a brighter, more cooked edge. **JUICE** sets the level going in, so you can feed it harder or back it off.
 
-Then two output choices that are separate from each other. SOFT CLIP is on when it opens: it brings rounded, fuzzy edges to the loudest parts and takes care of the initial gain staging, so the clipping finds the sound without you hunting for a magic input level. LIMIT is the other option, for keeping output peaks in check. You can also turn both off and push it yourself. Input and output clip lights show you both ends.
+Then two output choices that are separate from each other. **SOFT CLIP** is on when it opens: it brings rounded, fuzzy edges to the loudest parts and takes care of the initial gain staging, so the clipping finds the sound without you hunting for a magic input level. **LIMIT** is the other option, for keeping output peaks in check. You can also turn both off and push it yourself. Input and output clip lights show you both ends.
+
+**BEEF at 8.** The reference you A/B against.
 
 ## Where they actually differ
 
-How many decisions you get. Theirs gives you one drive control and one tone control. Ours splits the job three ways: input level, drive, and tone, which means you can feed it hot and back the drive off, or feed it gently and push. Whether that is an advantage depends entirely on whether you want to make that decision.
+**How many decisions you get.** Theirs gives you one drive control and one tone control. Ours splits the job three ways: input level, drive, and tone, which means you can feed it hot and back the drive off, or feed it gently and push. Whether that is an advantage depends entirely on whether you want to make that decision.
 
-What happens at the output. On BEEFY, soft clipping and limiting are two separate switches, either of which can be off. That is an explicit choice about how the peaks get handled, and it is on the panel. The other plugin's output behavior is part of the single drive path and is not separately exposed.
+**What happens at the output.** On BEEFY, soft clipping and limiting are two separate switches, either of which can be off. That is an explicit choice about how the peaks get handled, and it is on the panel. The other plugin's output behavior is part of the single drive path and is not separately exposed.
 
-What the tone control means. COOK moves BEEFY from a rounder character toward a brighter, more cooked one. COLOR on the other plugin is described by its makers in general terms only, and reviewers disagree about what it is doing, so we are not going to characterize it.
+**What the tone control means.** COOK moves BEEFY from a rounder character toward a brighter, more cooked one. COLOR on the other plugin is described by its makers in general terms only, and reviewers disagree about what it is doing, so we are not going to characterize it.
 
-What we have not claimed. We are not saying BEEFY is cleaner, or louder, or more transparent, or better voiced. We have not measured their plugin and we are not going to publish a comparison we did not run.
+**What we have not claimed.** We are not saying BEEFY is cleaner, or louder, or more transparent, or better voiced. We have not measured their plugin and we are not going to publish a comparison we did not run.
 
-BEEFY is $19 for Mac and Windows, and there is a demo on the page with three without-and-with comparisons. Use your ears rather than this article.
+[BEEFY](https://gazillionindustries.com/beefy.html) is $19 for Mac and Windows, and there is a demo on the page with three without-and-with comparisons. Use your ears rather than this article.
 
 ## Which to reach for
 
 If you want one knob and a result, plenty of people have been happy with the other one for more than a decade and there is no reason to argue with that. If you want to separate how hard you feed it from how hard it drives, and to decide for yourself whether the peaks get rounded or held, BEEFY exposes those as controls.
 
-And for most sources, the honest answer is that either will get you into the same neighborhood, and the interesting decisions happen before the plugin: what you feed it, how loud, and whether the problem is really saturation at all. See saturation explained for that conversation and gain staging for the part that comes first.
+And for most sources, the honest answer is that either will get you into the same neighborhood, and the interesting decisions happen before the plugin: what you feed it, how loud, and whether the problem is really saturation at all. See [saturation explained](https://gazillionindustries.com/saturation-explained/) for that conversation and [gain staging](https://gazillionindustries.com/gain-staging/) for the part that comes first.
 
 ## Questions people ask
 
@@ -79,7 +83,7 @@ Try both on your own material. Ours is $19 with a demo on its page; theirs is $3
 
 ## What BEEFY does
 
-BEEFY is a saturation and loudness effect. It adds body, squeezes some space out of the peaks, and brings out harmonics that help a sound feel bigger. Start with drums: kicks that need more chest, snares that need more smack, a break that needs to stop being so polite. There is no drum-only rule — a thin synth, a chopped sample, an electric piano or a vocal with attitude all qualify. BEEF, COOK and JUICE are the three knobs; SOFT CLIP and LIMIT are separate choices at the output.
+BEEFY is a saturation and loudness effect. It adds body, squeezes some space out of the peaks, and brings out harmonics that help a sound feel bigger. Start with drums: kicks that need more chest, snares that need more smack, a break that needs to stop being so polite. There is no drum-only rule — a thin synth, a chopped sample, an electric piano or a vocal with attitude all qualify. **BEEF**, **COOK** and **JUICE** are the three knobs; **SOFT CLIP** and **LIMIT** are separate choices at the output.
 
 Two plugins in the same aisle. The useful comparison happens in your session, not in a blog post.
 

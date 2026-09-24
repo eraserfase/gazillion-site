@@ -25,13 +25,15 @@ Mono compatibility means your mix still works when the left and right channels a
 
 - **Test**: a mono button on the master, used often
 
+**SOFT CLIP** as the out stage, BEEF at 62.
+
 ## What actually disappears
 
 Panning is safe. If the guitar is on the left and the organ is on the right, summing them puts both in the middle at a slightly lower level, and nothing is lost.
 
 What is not safe is width created from a single source. Duplicate a part, delay one copy by a few milliseconds and pan them apart, and in stereo it sounds wide and impressive. Sum it and the two copies partially cancel, removing a comb of frequencies and leaving something thinner than the original mono part you started with. The same applies to most wideners, to stereo chorus and flanging, and to anything involving polarity inversion between channels.
 
-The underlying mechanism is the same one in phase cancellation: two versions of one sound, arriving at different times, subtracting from each other.
+The underlying mechanism is the same one in [phase cancellation](https://gazillionindustries.com/phase-cancellation/): two versions of one sound, arriving at different times, subtracting from each other.
 
 ## Where mono still happens
 
@@ -39,7 +41,9 @@ More often than people assume. Phone speakers are a single driver. A lot of smal
 
 You do not need to mix in mono to respect this. You need to check in mono often enough that nothing in the arrangement depends on stereo to exist.
 
-BEEFY is our saturation and loudness effect, and it is the right answer to a thin sound only after you have checked that the thinness is not two tracks cancelling each other.
+[BEEFY](https://gazillionindustries.com/beefy.html) is our saturation and loudness effect, and it is the right answer to a thin sound only after you have checked that the thinness is not two tracks cancelling each other.
+
+**BEEF at 8.** The reference you A/B against.
 
 ## How to check
 
@@ -81,7 +85,7 @@ The low end benefits from being centered, because stereo information down there 
 
 ## What BEEFY does
 
-BEEFY is a saturation and loudness effect for making sounds thicker, punchier and more up front. It adds body, squeezes some space out of the peaks, and brings out harmonics that help a sound feel bigger, which is a genuine way to make a part more present without relying on stereo width to do it. BEEF brings weight and density, COOK changes the color and bite, JUICE sets the level going in, and SOFT CLIP opens switched on to round the loudest parts.
+BEEFY is a saturation and loudness effect for making sounds thicker, punchier and more up front. It adds body, squeezes some space out of the peaks, and brings out harmonics that help a sound feel bigger, which is a genuine way to make a part more present without relying on stereo width to do it. **BEEF** brings weight and density, **COOK** changes the color and bite, **JUICE** sets the level going in, and **SOFT CLIP** opens switched on to round the loudest parts.
 
 Four playback systems, three of them summing your record. Press the button more often.
 

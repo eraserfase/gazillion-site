@@ -25,41 +25,59 @@ A lofi tape plugin wants wear, noise and speed movement turned up, and bandwidth
 
 - **Our answer**: TRIPLE OG, $29, Mac and Windows
 
-TRIPLE OG is our cassette sim for Mac and Windows, with the transport on the face rather than in a menu. There is a demo on the page.
+[TRIPLE OG](https://gazillionindustries.com/tripleog.html) is our cassette sim for Mac and Windows, with the transport on the face rather than in a menu. There is a demo on the page.
+
+**AGE on [TRIPLE OG](https://gazillionindustries.com/tripleog.html)** is in years because that is what the quantity is. Nought to sixty, darker and noisier and less steady as it climbs.
+
+**HISS at 85.** Same panel, same everything else. The bed sits under the music rather than on top of it.
+
+**DRIVE at 92.** Soft asymmetric saturation, oversampled, with the level held flat across the travel.
 
 ## The settings, inverted
 
-Wear. A mastering chain wants a machine that was aligned this morning. A lofi chain wants one nobody has serviced. If a plugin has an age or wear control, this is the one to move first, because it usually moves several behaviors at once in the way they actually move together.
+**Wear.** A mastering chain wants a machine that was aligned this morning. A lofi chain wants one nobody has serviced. If a plugin has an age or wear control, this is the one to move first, because it usually moves several behaviors at once in the way they actually move together.
 
-Noise. In mastering, the noise floor is something to keep under the music. In lofi it is part of the music, and it wants to be audible in the gaps. Tape hiss is the fastest single change you can make to a clean production, and it is also the one most people set ten decibels too low to hear.
+**Noise.** In mastering, the noise floor is something to keep under the music. In lofi it is part of the music, and it wants to be audible in the gaps. [Tape hiss](https://gazillionindustries.com/tape-hiss/) is the fastest single change you can make to a clean production, and it is also the one most people set ten decibels too low to hear.
 
-Speed. Mastering work wants speed rock steady. Lofi wants it to wander. This is the behavior that no other plugin in your folder supplies, and it is what makes a bandwidth-limited noisy track read as old rather than filtered. Wow and flutter covers what the two halves of that movement sound like.
+**Speed.** Mastering work wants speed rock steady. Lofi wants it to wander. This is the behavior that no other plugin in your folder supplies, and it is what makes a bandwidth-limited noisy track read as old rather than filtered. [Wow and flutter](https://gazillionindustries.com/wow-and-flutter/) covers what the two halves of that movement sound like.
 
-Bandwidth. Both want less top end, but they want it differently. In mastering, the loss should be gradual and level-dependent. In lofi it can be severe, and the important part is that the top goes soft rather than vanishing. A steep filter gives you a muffled modern recording; saturation of the highs gives you a worn tape.
+**Bandwidth.** Both want less top end, but they want it differently. In mastering, the loss should be gradual and level-dependent. In lofi it can be severe, and the important part is that the top goes soft rather than vanishing. A steep filter gives you a muffled modern recording; saturation of the highs gives you a worn tape.
 
-TRIPLE OG is a cassette tape simulation, so it starts where a lofi chain wants to be. AGE runs from nought to sixty years and moves wear, noise and stability together. There's a demo on the page.
+[TRIPLE OG](https://gazillionindustries.com/tripleog.html) is a cassette tape simulation, so it starts where a lofi chain wants to be. **AGE** runs from nought to sixty years and moves wear, noise and stability together. There's a demo on the page.
+
+The whole thing. Top half is the machine, bottom half is the tape, and the **SCRUB** strip along the bottom is played by hand.
 
 ## Why the reference matters more than the plugin
 
 Most tape plugins are modeled on studio reel machines, because that is what professional engineers used. Those machines were fast, wide, quiet and stable, and their makers spent decades making them more so. A faithful reel simulation is therefore a fairly clean-sounding thing, and no amount of turning knobs on one will produce the sound of a cassette that has been played four hundred times.
 
-A cassette is slow, narrow and consumer-built. Everything a reel machine was designed to avoid, a cassette does by default. That is why the reference is the decision, and it is made before you compare a single control. Detail in how to make music sound like a cassette tape.
+A cassette is slow, narrow and consumer-built. Everything a reel machine was designed to avoid, a cassette does by default. That is why the reference is the decision, and it is made before you compare a single control. Detail in [how to make music sound like a cassette tape](https://gazillionindustries.com/how-to-make-music-sound-like-cassette/).
+
+**SCRUB** is played, not set.
 
 ## A lofi tape chain that works
 
-- Put it on a bus, not on every channel. Instability that is independent on each track smears the timing rather than loosening it.
+- **Put it on a bus, not on every channel.** Instability that is independent on each track smears the timing rather than loosening it.
 
-- Set the wear by ear on the brightest source in the mix, usually hats or a shaker.
+- **Set the wear by ear on the brightest source** in the mix, usually hats or a shaker.
 
-- Bring the noise up until you hear it in the gaps, then back it off slightly. Audible is the target; obvious is too far.
+- **Bring the noise up until you hear it in the gaps**, then back it off slightly. Audible is the target; obvious is too far.
 
-- Add speed movement last, and less than feels right at first. It accumulates over a full track in a way it does not over four bars.
+- **Add speed movement last**, and less than feels right at first. It accumulates over a full track in a way it does not over four bars.
 
-- Check in mono, because noise and modulation that sound wide can collapse or cancel.
+- **Check in mono**, because noise and modulation that sound wide can collapse or cancel.
 
-- Match the level and bypass. If the bypassed version sounds better at matched level, you have gone too far, and that is a normal place to end up.
+- **Match the level and bypass.** If the bypassed version sounds better at matched level, you have gone too far, and that is a normal place to end up.
 
 ## Hear it
+
+Lofi tape is a set of faults turned up rather than an effect. Here is a loop clean, then the same loop through a deck with age, noise, drive and speed movement on it.
+
+- **Dry** — no processing — speed holds at 1.000 — https://gazillionindustries.com/tripleog/tog-dry.m4a
+
+- **Age 35, hiss 45, drive 30, wow 40** — a worn deck — speed 0.951 to 1.059 — https://gazillionindustries.com/tripleog/tog-aged.m4a
+
+The same eleven seconds each time, rendered offline through [TRIPLE OG](https://gazillionindustries.com/tripleog.html) at the settings shown. No other processing, no master bus, no edits.
 
 ## Making it sit in a modern mix
 
@@ -69,7 +87,7 @@ The way out is to be selective about what gets aged. Age the parts that carry th
 
 The other half is the top end. Lofi processing takes away the frequencies that make a mix sound loud, so a lofi track at the same measured level sounds quieter than a clean one. Leave one element bright and unaged — a hat, a transient, a top layer — and the mix keeps a sense of level without giving up the texture everywhere else.
 
-Hear TRIPLE OG
+The medium, as five controls. **AGE** reads in years rather than a percentage, because that is what the quantity is — here it is set to 22.
 
 ## Where the lofi ceiling is
 
@@ -78,6 +96,10 @@ There is a point past which more processing stops adding character and starts re
 The useful test is memory. Play the aged version, then the original, then the aged version again. If the second pass through the aged version sounds thin rather than warm, the setting was tuned while your ears were adjusting to it rather than tuned to the material. This happens to everybody and it is the main reason lofi mixes tend to arrive over-processed.
 
 Aiming low and stacking also beats aiming high in one pass. Two gentle stages in different places — some age on the sampler, a little more on the bus — sound more like a signal that went through several imperfect things than one heavy setting does, because a signal that went through several imperfect things is exactly what the references were.
+
+**A well-kept deck.** AGE at nought, hiss at 8, barely any speed movement. This is the flattering setting and the one most cassette plugins ship at.
+
+**The same machine, forty-eight years on.** Four things moved together — age, noise, bandwidth and instability. Turning any one of them up on its own does not get here, which is the whole point.
 
 ## Lofi tape on vocals
 
@@ -93,13 +115,13 @@ That layering approach solves both problems at once and is how most records that
 
 Lofi has no obvious stopping point, because there is no correct level of degradation the way there is a correct level for a vocal. Three checks work better than a setting.
 
-Play it after silence. Leave the room, come back and play it cold. Ears adjust to processing within about a minute, and almost every over-aged mix was tuned by ears that had already acclimatized to the previous version.
+**Play it after silence.** Leave the room, come back and play it cold. Ears adjust to processing within about a minute, and almost every over-aged mix was tuned by ears that had already acclimatized to the previous version.
 
-Play it after a reference. Not to match it, but to notice which direction the difference runs. If your track is markedly darker and noisier than the records you are aiming at, that is worth knowing before mastering rather than after.
+**Play it after a reference.** Not to match it, but to notice which direction the difference runs. If your track is markedly darker and noisier than the records you are aiming at, that is worth knowing before mastering rather than after.
 
-Play it on a phone. Lofi processing removes exactly the frequencies a small speaker relies on, so a mix that sounds warm on monitors can vanish entirely on a phone. If the track still communicates there, the processing is inside the limit.
+**Play it on a phone.** Lofi processing removes exactly the frequencies a small speaker relies on, so a mix that sounds warm on monitors can vanish entirely on a phone. If the track still communicates there, the processing is inside the limit.
 
-Everything below is answered the same way we built TRIPLE OG — the tape is the easy half, the transport is the half almost nothing does.
+Everything below is answered the same way we built [TRIPLE OG](https://gazillionindustries.com/tripleog.html) — the tape is the easy half, the transport is the half almost nothing does.
 
 ## Questions people ask
 
@@ -133,7 +155,7 @@ When the bass stops having pitch and two different takes start sounding the same
 
 ## What TRIPLE OG does
 
-TRIPLE OG is our cassette tape simulation, which puts it at the lofi end of the category by construction rather than by turning a reel machine down. AGE runs from nought to sixty years and makes the tape darker, noisier and less stable as it climbs. HISS is a continuous broadband bed, TONE sets playback brightness, DRIVE the thickness, and WOW FLUT the speed instability. SLAM, SCRUB and CATCH are the transport, on the face.
+[TRIPLE OG](https://gazillionindustries.com/tripleog.html) is our cassette tape simulation, which puts it at the lofi end of the category by construction rather than by turning a reel machine down. **AGE** runs from nought to sixty years and makes the tape darker, noisier and less stable as it climbs. **HISS** is a continuous broadband bed, **TONE** sets playback brightness, **DRIVE** the thickness, and **WOW FLUT** the speed instability. **SLAM**, **SCRUB** and **CATCH** are the transport, on the face.
 
 Nobody ever got a worn cassette by servicing a studio machine less often.
 

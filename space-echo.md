@@ -37,9 +37,9 @@ So the machine offers four useful tap patterns — one head, two heads at two di
 
 The delay time is the distance between the record head and a playback head divided by the tape speed, and REPEAT RATE changes the speed of the motor. The service documentation gives a range of roughly 12 to 40 centimeters per second, which is a ratio of more than three to one, so sweeping that control moves the pitch of whatever is already recorded on the loop by more than an octave.
 
-That is the single most recognizable gesture the machine makes, and it is not an effect anybody designed. It is what happens when you change the speed of a tape that already has audio on it. Varispeed covers the mechanism and tape delay explained covers how the repeats degrade generation by generation.
+That is the single most recognizable gesture the machine makes, and it is not an effect anybody designed. It is what happens when you change the speed of a tape that already has audio on it. [Varispeed](https://gazillionindustries.com/what-is-varispeed/) covers the mechanism and [tape delay explained](https://gazillionindustries.com/tape-delay-explained/) covers how the repeats degrade generation by generation.
 
-TRIPLE OG is a cassette transport rather than an echo, which makes it the other half of this: send your delay returns through it and the repeats come back with tape on them.
+[TRIPLE OG](https://gazillionindustries.com/tripleog.html) is a cassette transport rather than an echo, which makes it the other half of this: send your delay returns through it and the repeats come back with tape on them.
 
 ## What else is in the box
 
@@ -53,9 +53,9 @@ Roland has reissued the concept digitally several times, most recently in pedal 
 
 ## Two things to stop repeating
 
-- Hendrix did not use a Space Echo. He died in September 1970 and the first Space Echo appeared in 1973. The sixties tape-echo sound belongs to other machines.
+- **Hendrix did not use a Space Echo.** He died in September 1970 and the first Space Echo appeared in 1973. The sixties tape-echo sound belongs to other machines.
 
-- Brian Eno's long-delay system was not one either. That was two reel-to-reel machines in series, a setup that predates the RE-201.
+- **Brian Eno's long-delay system was not one either.** That was two reel-to-reel machines in series, a setup that predates the RE-201.
 
 ## Questions people ask
 
@@ -77,7 +77,7 @@ Roland's own figure is about 300 hours of use before the loop should be replaced
 
 ## What TRIPLE OG does
 
-TRIPLE OG is a cassette transport: six controls for what the medium is and what it is doing, and one for your hand. TONE is the playback system's brightness, where 50 is a musically neutral cassette rather than a bypass. HISS is a continuous broadband bed, shaped and partly decorrelated across the channels. AGE is in years, nought to sixty. WOW FLUT is continuous, bounded instability built from several motions at once, and SLAM is the tape stop: hold it and the transport drags to a halt.
+TRIPLE OG is a cassette transport: six controls for what the medium is and what it is doing, and one for your hand. **TONE** is the playback system's brightness, where 50 is a musically neutral cassette rather than a bypass. **HISS** is a continuous broadband bed, shaped and partly decorrelated across the channels. **AGE** is in years, nought to sixty. **WOW FLUT** is continuous, bounded instability built from several motions at once, and **SLAM** is the tape stop: hold it and the transport drags to a halt.
 
 A loop of tape, five heads and a motor you can slow down with your hand. Half a century later every plugin in the category is still describing that box.
 

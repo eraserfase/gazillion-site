@@ -25,19 +25,23 @@ Bitcrushing reduces the bit depth of audio, so each sample is stored with fewer 
 
 - **Use**: drums, samples, vocals, lofi textures; blend to taste
 
+**12 bit, full rate.** The quantisation is there but the top end is intact.
+
+**4 bit at 8 kHz.** Bits make it grainy; the rate is what makes it clang.
+
 ## What bit depth does
 
 Digital audio measures the wave thousands of times a second, and bit depth sets how many different levels each measurement can land on. Each bit doubles the steps and adds roughly 6 dB of dynamic range: 16 bits gives 65,536 steps and about 96 dB, 12 bits gives 4,096 and about 72 dB, 8 bits gives 256 and about 48 dB. Take bits away and the wave is forced onto a coarser staircase. The error between the real wave and the staircase is heard as noise and grit, loudest on the quiet parts, like reverb tails and fades.
 
 ## What sample rate reduction does
 
-The sample rate sets the highest frequency audio can hold: half the sample rate. Lower it and the top end disappears. In a lofi effect the frequencies that no longer fit aren't filtered away first, so they fold back down as new, out-of-tune tones. That metallic shimmer is aliasing, and it's half the sound of a crushed drum. The full explanation is in what is aliasing in audio.
+The sample rate sets the highest frequency audio can hold: half the sample rate. Lower it and the top end disappears. In a lofi effect the frequencies that no longer fit aren't filtered away first, so they fold back down as new, out-of-tune tones. That metallic shimmer is aliasing, and it's half the sound of a crushed drum. The full explanation is in [what is aliasing in audio](https://gazillionindustries.com/what-is-aliasing-in-audio/).
 
 ## Bitcrushing vs distortion
 
-Distortion bends the waveform on a smooth curve and adds harmonics related to the notes, so it sounds warm or gritty but musical. Bitcrushing chops the wave into steps, so its noise depends on the level and doesn't follow the harmonic series as neatly, which is why it sounds digital. They stack well: a little saturation before a gentle crush often sounds better than either alone. See saturation vs distortion.
+Distortion bends the waveform on a smooth curve and adds harmonics related to the notes, so it sounds warm or gritty but musical. Bitcrushing chops the wave into steps, so its noise depends on the level and doesn't follow the harmonic series as neatly, which is why it sounds digital. They stack well: a little saturation before a gentle crush often sounds better than either alone. See [saturation vs distortion](https://gazillionindustries.com/saturation-vs-distortion/).
 
-In F(ilter)12, twelve bits is as clean as it gets. It only goes down from there.
+In [F(ilter)12](https://gazillionindustries.com/f12.html), twelve bits is as clean as it gets. It only goes down from there.
 
 ## How to bitcrush audio
 
@@ -67,9 +71,11 @@ Yes, as an effect: a little for a lo-fi or radio texture, a lot for a broken, ro
 
 ### Does 12-bit sound better than 16-bit?
 
-Not technically: 16-bit has more dynamic range and less noise. But 12-bit has a grain and warmth that many producers like, which is why vintage 12-bit samplers are still loved.
+Not technically: 16-bit has more dynamic range and less noise. But 12-bit has a grain and warmth that many producers like, which is why vintage 12-bit samplers are still loved. [12 bit sampler plugins](https://gazillionindustries.com/12-bit-sampler-plugins/) covers what the format does to a sample and what the second half of the sound is.
 
 ## Stock plugins that do this
+
+Three of these are already installed. What to listen for when comparing them, and the paid ones worth knowing, are in [best bitcrusher plugins](https://gazillionindustries.com/best-bitcrusher-plugins/).
 
 - **FL Studio**: Fruity Squeeze (bit reduction)
 
@@ -79,7 +85,7 @@ Not technically: 16-bit has more dynamic range and less noise. But 12-bit has a 
 
 ## What F(ilter)12 does
 
-F(ilter)12's lo-fi section is the crush pair. SAMPLE RATE slows the rate the audio is sampled at, so the top goes and what was up there folds back down as new content. BIT coarsens the steps it's measured in, so quiet detail rounds off and what's left picks up a hard edge. Twelve bits is as clean as it gets. Behind the crush sits a filter with five shapes and six resonance shapes, and on top sits AURA, which helps it all sit better.
+F(ilter)12's lo-fi section is the crush pair. **SAMPLE RATE** slows the rate the audio is sampled at, so the top goes and what was up there folds back down as new content. **BIT** coarsens the steps it's measured in, so quiet detail rounds off and what's left picks up a hard edge. Twelve bits is as clean as it gets. Behind the crush sits a filter with five shapes and six resonance shapes, and on top sits **AURA**, which helps it all sit better.
 
 The consoles had no choice about the bits. You do, which is the whole fun.
 

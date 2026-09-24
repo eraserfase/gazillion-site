@@ -3,7 +3,7 @@
 > How the MPC came to exist: the Linn machines that failed first, what Akai and Roger Linn each contributed, and the swing control in the designer's own words.
 
 Source: https://gazillionindustries.com/mpc-creation/  
-Published 2026-09-20, updated 2026-09-24. By Gazillion Industries, who make Gazillion Industries.
+Published 2026-09-20, updated 2026-09-24. By Gazillion Industries.
 
 ---
 
@@ -45,13 +45,13 @@ The MPC60 manual gives the same two settings as worked examples, both at 100 bpm
 
 Two practical notes that get lost. The delay is applied to every even sixteenth equally, so swing is a proportion of the note rather than a fixed number of milliseconds, and it scales with tempo automatically. And 96 ticks per quarter note is a coarse grid by modern standards, which is exactly why these machines offer a handful of usable shuffle positions rather than a continuous sweep. The limitation is part of the sound.
 
-Gazillion Industries makes plugins tuned by ear, which is the same argument in a different box: pick the behavior that makes people move, then build the control around it.
+[Gazillion Industries](https://gazillionindustries.com/) makes plugins tuned by ear, which is the same argument in a different box: pick the behavior that makes people move, then build the control around it.
 
 ## The MPC3000
 
 The 1994 model is the one most associated with the golden era, and the manual's own list of what changed is the best summary anyone has written. Sampling went from 12-bit non-linear at 40 kHz to 16-bit linear at 44.1 kHz, with stereo sampling and a digital input added. Memory went from 2 MB to 16 MB and the five-second per-sound cap disappeared. Voices doubled from 16 to 32, and each got a dynamic lowpass filter with its own envelope and resonance. Sequence memory rose about 30 percent to 75,000 notes. Pad banks went from two to four.
 
-And one addition that matters more than its billing: a Shift Timing feature, independent of timing correction, that moves notes earlier or later by an amount you set. Combined with per-track swing, that is the toolkit behind the rhythmic arguments of the next decade. Our piece on J Dilla goes through what one producer did with it.
+And one addition that matters more than its billing: a Shift Timing feature, independent of timing correction, that moves notes earlier or later by an amount you set. Combined with per-track swing, that is the toolkit behind the rhythmic arguments of the next decade. Our piece on [J Dilla](https://gazillionindustries.com/j-dilla/) goes through what one producer did with it.
 
 What did not change: the sequencer still ran at 96 ticks per quarter note.
 
@@ -89,11 +89,13 @@ The designer's own suggestions are 54 percent to loosen straight sixteenths with
 
 The MPC3000 sampled at 16-bit linear 44.1 kHz instead of 12-bit at 40 kHz, had 16 MB of memory instead of 2, doubled the voices to 32, added a filter per voice, added stereo sampling and a digital input, and added Shift Timing. The sequencer resolution stayed at 96 ticks per quarter note.
 
-We make DRUGS. What we make for the bus those pads end up on.
+What we make for the bus those pads end up on.
+
+We make [DRUGS](https://gazillionindustries.com/drugs.html). What we make for the bus those pads end up on.
 
 ## Where it still matters
 
-If you never touch one of these machines, two things from it are still worth stealing. The swing percentages are real numbers you can dial into any DAW, and 54 and 62 are better starting points than the 8 percent your host defaults to. And shifting one voice against another, rather than nudging a whole pattern, is a technique rather than a piece of hardware. See how to make boom bap drums and how to chop a drum break.
+If you never touch one of these machines, two things from it are still worth stealing. The swing percentages are real numbers you can dial into any DAW, and 54 and 62 are better starting points than the 8 percent your host defaults to. And shifting one voice against another, rather than nudging a whole pattern, is a technique rather than a piece of hardware. See [how to make boom bap drums](https://gazillionindustries.com/how-to-make-boom-bap-drums/) and [how to chop a drum break](https://gazillionindustries.com/how-to-chop-a-drum-break/).
 
 A software failure closed one company and forced the design into someone else's factory. The grid it shipped with is still under most of the rhythm you hear.
 

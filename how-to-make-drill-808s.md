@@ -25,6 +25,8 @@ To make drill 808s, program a sliding bassline around 140 BPM with a half-time f
 
 - **Kick**: space by timing or sidechain
 
+**BEEF at 8.** The reference you A/B against.
+
 ## What makes a drill 808
 
 Movement. Where many trap 808s hold a note, drill 808s slide constantly: short notes that bend up or down into the next, off the grid, often answering the vocal. Under a half-time groove with the snare on the third beat and restless hats, the 808 becomes the melody's shadow and the drums' second kick at once. The tone is usually distorted enough to growl on a phone.
@@ -37,11 +39,13 @@ Glide, or portamento, makes a note bend smoothly into the next instead of jumpin
 
 Start from the song's root. Let most slides land on notes from the chord, and use bigger bends as punctuation, not on every note. Overlap the end of one note with the start of the next so the glide triggers. Keep notes short; long drill 808s turn into a hum. And never let two 808 notes sound at once: two low notes through distortion make harsh extra tones that nothing fixes.
 
+**LIMIT** instead, everything else identical.
+
 ## Tune it
 
 An 808 sample has a pitch, and a drill line moves it constantly, so a mistuned sample is wrong on every note. Check the sample's pitch with a tuner, set its root note in the sampler so the piano roll tells the truth, then write the line.
 
-BEEFY can take a clean bass note toward a growl. The demo on the page is 28 seconds.
+[BEEFY](https://gazillionindustries.com/beefy.html) can take a clean bass note toward a growl. The demo on the page is 28 seconds.
 
 ## Distort it without losing the floor
 
@@ -55,11 +59,11 @@ BEEFY can take a clean bass note toward a growl. The demo on the page is 28 seco
 
 - Blend the copy under the clean 808 and check on a phone.
 
-If slides get messy through the distortion, pull the drive back or automate the blend down through the bend. The full method is in how to distort an 808.
+If slides get messy through the distortion, pull the drive back or automate the blend down through the bend. The full method is in [how to distort an 808](https://gazillionindustries.com/how-to-distort-808s/).
 
 ## Make room for the kick
 
-Drill 808s often land close to the kick, and sometimes replace it. Where they collide, duck the 808 a few dB with sidechain, move the 808 note a little later, or drop the kick and let the 808's attack do the job. The details are in how to mix the kick and the 808.
+Drill 808s often land close to the kick, and sometimes replace it. Where they collide, duck the 808 a few dB with sidechain, move the 808 note a little later, or drop the kick and let the 808's attack do the job. The details are in [how to mix the kick and the 808](https://gazillionindustries.com/how-to-mix-kick-and-808/).
 
 ## Questions people ask
 
@@ -81,7 +85,7 @@ Turn on glide or portamento, set the instrument to mono or legato, and overlap t
 
 ## What BEEFY does
 
-BEEFY is our saturation and loudness plugin, and 808s and bass are very much invited. SOFT CLIP, on by default, brings rounded, fuzzy edges to the loudest parts and adds harmonics above the low end, so the line is heard on small speakers. Push BEEF and a clean bass note moves toward a growl, and COOK makes the edge rounder or more bitten. Use it on the copy or return in the split above.
+BEEFY is our saturation and loudness plugin, and 808s and bass are very much invited. **SOFT CLIP**, on by default, brings rounded, fuzzy edges to the loudest parts and adds harmonics above the low end, so the line is heard on small speakers. Push **BEEF** and a clean bass note moves toward a growl, and **COOK** makes the edge rounder or more bitten. Use it on the copy or return in the split above.
 
 Everybody copies the pattern first. The ones who get it right copy the slide.
 

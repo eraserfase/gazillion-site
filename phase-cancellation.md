@@ -25,6 +25,8 @@ Phase cancellation happens when two versions of the same sound arrive at differe
 
 - **Test**: listen in mono; cancellation is loudest there
 
+**BEEF at 96.** Past where most settings want to live.
+
 ## Polarity is not phase
 
 The button on your channel strip marked with a circle and a slash flips polarity: every sample is multiplied by minus one, instantly, at every frequency. That is a useful, simple operation and it is the right fix for exactly one problem, which is a microphone pointed at the opposite side of a drum from another microphone.
@@ -37,7 +39,9 @@ Mix a sound with a delayed copy of itself and you get reinforcement at frequenci
 
 The arithmetic is simple enough to use. A one-millisecond offset puts the first null at 500 Hz, with more at 1.5 kHz, 2.5 kHz and so on up. Halve the delay and every null moves up an octave. Which tells you the important practical fact: small offsets do their damage high up, larger offsets reach down into the body of the sound, and past about 25 or 30 milliseconds the ear stops hearing a filter and starts hearing an echo.
 
-BEEFY is a saturation and loudness effect, so it will make a thin, combed drum louder and still thin. Fix the alignment first, then reach for weight.
+[BEEFY](https://gazillionindustries.com/beefy.html) is a saturation and loudness effect, so it will make a thin, combed drum louder and still thin. Fix the alignment first, then reach for weight.
+
+**LIMIT** instead, everything else identical.
 
 ## How to find and fix it
 
@@ -59,7 +63,7 @@ BEEFY is a saturation and loudness effect, so it will make a thin, combed drum l
 
 Some of it is the sound. Room reflections comb-filter every recording ever made and that is what a room is. Deliberate short delays are how chorus, flanging and most stereo widening work. The distinction is whether you chose it: a wideners that sounds huge in stereo and disappears in mono has canceled the thing you were widening, and that one is not a choice, it is a bill arriving later.
 
-See how to layer kicks for the version of this problem that eats low end specifically.
+See [how to layer kicks](https://gazillionindustries.com/how-to-layer-kicks/) for the version of this problem that eats low end specifically.
 
 ## Questions people ask
 
@@ -81,7 +85,7 @@ Low frequencies have long wavelengths, so they survive small offsets that destro
 
 ## What BEEFY does
 
-BEEFY is our saturation and loudness effect: it adds body, squeezes some space out of the peaks, and brings out harmonics that help a sound feel bigger. BEEF is weight and density, COOK is the color and bite, JUICE is the level going in, and SOFT CLIP rounds the loudest parts. What it cannot do is put back a frequency that two tracks removed from each other. Alignment is upstream of tone, always.
+BEEFY is our saturation and loudness effect: it adds body, squeezes some space out of the peaks, and brings out harmonics that help a sound feel bigger. **BEEF** is weight and density, **COOK** is the color and bite, **JUICE** is the level going in, and **SOFT CLIP** rounds the loudest parts. What it cannot do is put back a frequency that two tracks removed from each other. Alignment is upstream of tone, always.
 
 Two good microphones, one drum, and a subtraction nobody asked for.
 

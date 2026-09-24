@@ -25,6 +25,8 @@ Time stretching changes the length of audio without changing its pitch. It works
 
 - **Alternative**: repitch instead, and let the key move
 
+**TIME −35%, PITCH at unity.** Length without pitch — the other half of the machine.
+
 ## The two families of algorithm
 
 The time-domain method chops the audio into small grains and overlaps them, adding repeats to make it longer or throwing some away to make it shorter, aligning each splice so the waveform matches where it joins. It is cheap, it keeps transients crisp, and when it fails you hear stuttering or a comb-filtered flutter on sustained sound.
@@ -47,11 +49,13 @@ The frequency-domain method analyzes the signal into frequency bands and phases,
 
 - When both fail, repitch instead and accept the key change.
 
-SKRUU keeps pitch and time as separate knobs: TIME runs from −50% to +25% and moves nothing but the length, and PITCH LOCK holds the pitch while you do it.
+[SKRUU](https://gazillionindustries.com/skruu.html) keeps pitch and time as separate knobs: TIME runs from −50% to +25% and moves nothing but the length, and PITCH LOCK holds the pitch while you do it.
+
+**PITCH −3.09 ST.** Pitch and tempo moving together, the way a machine does it.
 
 ## Stretching versus repitching
 
-Repitching is what a tape machine or a turntable does: speed and pitch move together, no analysis, no artifacts, and a key change you have to live with. Producers chose it for decades because it was the only option, and the sound of a sample repitched down a tone is baked into entire genres. What is varispeed covers the mechanism, and how to change pitch without changing tempo covers the other direction.
+Repitching is what a tape machine or a turntable does: speed and pitch move together, no analysis, no artifacts, and a key change you have to live with. Producers chose it for decades because it was the only option, and the sound of a sample repitched down a tone is baked into entire genres. [What is varispeed](https://gazillionindustries.com/what-is-varispeed/) covers the mechanism, and [how to change pitch without changing tempo](https://gazillionindustries.com/how-to-change-pitch-without-changing-tempo/) covers the other direction.
 
 The rule of thumb: if the sample is close to your tempo, stretch it. If it is far away, or if the artifacts are audible, repitch it and build the beat around the new key. A sample pitched to fit sounds like a decision. A sample stretched 20 percent sounds like a plugin.
 
@@ -79,7 +83,7 @@ About 10 percent on a full mix, more on a single instrument, and a great deal on
 
 ## What SKRUU does
 
-SKRUU is two knobs that do not touch each other. PITCH moves the pitch and TIME moves the length, so you can speed it up while pitching down, or the other way round. PITCH runs from −20% to +10% in 128 states and reads out in semitones as well as speed; TIME runs from −50% to +25%. PITCH LOCK and TIME LOCK hold one while the other moves, DRAG sets how long the new speed takes to arrive, and there is zero latency.
+SKRUU is two knobs that do not touch each other. **PITCH** moves the pitch and **TIME** moves the length, so you can speed it up while pitching down, or the other way round. PITCH runs from −20% to +10% in 128 states and reads out in semitones as well as speed; TIME runs from −50% to +25%. **PITCH LOCK** and **TIME LOCK** hold one while the other moves, **DRAG** sets how long the new speed takes to arrive, and there is zero latency.
 
 The fan noise behind the singer was never in the room. It arrived when you dragged the corner.
 

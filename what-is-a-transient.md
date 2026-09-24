@@ -25,6 +25,8 @@ A transient is the short burst of energy at the start of a sound, before it sett
 
 - **Trade**: keep it and the track is dynamic, lose it and the track is loud
 
+**BEEF at 96.** Past where most settings want to live.
+
 ## Why the attack carries the identity
 
 Take a recording of a piano note, cut off the first thirty milliseconds, and most listeners stop hearing a piano. The sustained part is a set of harmonics that many instruments share; the attack is where the physical event lives, and the ear uses it to work out what happened.
@@ -33,17 +35,19 @@ That is why a drum that has been heavily compressed can be measurably louder and
 
 ## What happens to transients in a mix
 
-- Compression with a fast attack catches the transient itself and turns it down. Useful for control, expensive in impact.
+- **Compression with a fast attack** catches the transient itself and turns it down. Useful for control, expensive in impact.
 
-- Compression with a slow attack lets it through and squashes the body afterward, which makes the transient relatively louder. That is where punch comes from.
+- **Compression with a slow attack** lets it through and squashes the body afterward, which makes the transient relatively louder. That is where punch comes from.
 
-- Clipping shears the top off the transient only, leaving the body alone. Efficient for loudness and directly destructive to attack if overdone.
+- **Clipping** shears the top off the transient only, leaving the body alone. Efficient for loudness and directly destructive to attack if overdone.
 
-- Saturation rounds the transient's peak and adds harmonics, which softens the edge while making the sound feel bigger.
+- **Saturation** rounds the transient's peak and adds harmonics, which softens the edge while making the sound feel bigger.
 
-- Limiting is the last thing to touch them, and by then there should be very little left to catch.
+- **Limiting** is the last thing to touch them, and by then there should be very little left to catch.
 
-BEEFY is our saturation and loudness effect, and the page is specific about this: SOFT CLIP brings rounded, fuzzy edges to the loudest parts, which is a transient decision as much as a tonal one.
+[BEEFY](https://gazillionindustries.com/beefy.html) is our saturation and loudness effect, and the page is specific about this: SOFT CLIP brings rounded, fuzzy edges to the loudest parts, which is a transient decision as much as a tonal one.
+
+**LIMIT** instead, everything else identical.
 
 ## How to hear what you are doing to them
 
@@ -55,7 +59,7 @@ BEEFY is our saturation and loudness effect, and the page is specific about this
 
 - Check on a small speaker. Transients survive there better than low end does, so a track with no attack has almost nothing left on a phone.
 
-- If you need both, use two paths: one with the attack intact and one squashed, blended. That is parallel compression.
+- If you need both, use two paths: one with the attack intact and one squashed, blended. That is [parallel compression](https://gazillionindustries.com/parallel-compression/).
 
 ## Where it costs you
 
@@ -73,7 +77,7 @@ Neither. Strong transient response means a system or a mix reproduces attacks ac
 
 ### Is a transient shaper just a compressor?
 
-No. A compressor reacts to level: it acts when the signal crosses a threshold. A transient designer reacts to the shape of the envelope, so it treats an attack the same way whether the part is loud or quiet. See transient shaper vs saturation.
+No. A compressor reacts to level: it acts when the signal crosses a threshold. A transient designer reacts to the shape of the envelope, so it treats an attack the same way whether the part is loud or quiet. See [transient shaper vs saturation](https://gazillionindustries.com/transient-shaper-vs-saturation/).
 
 ### How long is a transient?
 
@@ -81,7 +85,7 @@ For most percussive sounds, a few milliseconds up to perhaps twenty. Which is wh
 
 ## What BEEFY does
 
-BEEFY is a saturation and loudness effect for making sounds thicker, punchier and more up front. It adds body, squeezes some space out of the peaks, and brings out harmonics that help a sound feel bigger. SOFT CLIP opens switched on and rounds the loudest parts, which is the transient-facing control; BEEF adds weight and density behind the hit; COOK changes the color and bite from rounder toward brighter; and JUICE sets how hard you are feeding it in the first place.
+BEEFY is a saturation and loudness effect for making sounds thicker, punchier and more up front. It adds body, squeezes some space out of the peaks, and brings out harmonics that help a sound feel bigger. **SOFT CLIP** opens switched on and rounds the loudest parts, which is the transient-facing control; **BEEF** adds weight and density behind the hit; **COOK** changes the color and bite from rounder toward brighter; and **JUICE** sets how hard you are feeding it in the first place.
 
 Five milliseconds, almost no energy, and the whole difference between a snare and a slap.
 

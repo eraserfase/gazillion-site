@@ -25,11 +25,13 @@ An 808 hits harder when small speakers get something to play and the low end sto
 
 - **A/B**: at matched loudness
 
+**BEEF at 96.** Where the plug-in stops being polite. Most settings that sound right in solo are about half this.
+
 ## Why 808s disappear on phones
 
 The fundamental is the problem. Tune an 808 to a low F and the note sits near 44 Hz. Most phone and laptop speakers give back very little below a couple hundred hertz (exactly where they quit varies by model), and a clean, sine-like 808 is almost nothing but that one low frequency. Nothing is left for the speaker to play.
 
-Your ear will rebuild a missing low note if you hand it the evidence: the harmonics stacked at whole-number multiples above it, so 87, 131, 175 and 218 Hz for that F. Kanye West put 808s in an album title in 2008, and the drum hasn't needed an introduction since. It still needs harmonics. The sub is for the car. The harmonics are for everyone else.
+Your ear will rebuild a missing low note if you hand it the evidence: the harmonics stacked at whole-number multiples above it, so 87, 131, 175 and 218 Hz for that F. Kanye West put 808s in an album title in 2008, and the drum hasn't needed an introduction since. It still needs harmonics. **The sub is for the car. The harmonics are for everyone else.**
 
 ## Tune it first
 
@@ -71,7 +73,7 @@ The clipping everyone warns you about happens at the output: the signal goes ove
 
 How hard you drive it decides the result more than any setting on it. Past the edge, the note goes blunt and anything sharing the channel comes out chewed.
 
-Or put BEEFY on the 808: one big knob and a SOFT CLIP button. The demo on the page is 28 seconds.
+Or put [BEEFY](https://gazillionindustries.com/beefy.html) on the 808: one big knob and a SOFT CLIP button. The demo on the page is 28 seconds.
 
 ## Keep the low end mono
 
@@ -83,7 +85,7 @@ Rumble is rent you pay for nothing. A high-pass around 20–30 Hz removes energy
 
 ## Judge it at the same loudness
 
-Louder always wins the first five seconds. Saturation and clipping both raise level, so match the processed and bypassed 808 before you decide anything. If it only hit harder because it got louder, the fader was the fix.
+Louder always wins the first five seconds. Saturation and clipping both raise level, so **match the processed and bypassed 808 before you decide anything.** If it only hit harder because it got louder, the fader was the fix.
 
 ## Questions people ask
 
@@ -115,7 +117,7 @@ A clean one is close: a low, mostly pure tone with a quick pitch drop at the sta
 
 BEEFY is our saturation and loudness plugin, and it covers the harmonics and clipping steps above in one window (tuning and the kick are still on you).
 
-BEEF is the main event: more weight, density and loudness as you turn it up. SOFT CLIP opens switched on. It adds harmonics above the low end so there is more to hear than sub, and takes care of the initial gain staging, so there is no input level to hunt for. JUICE sets the level going in, COOK moves the tone from rounder toward brighter and more bitten, and LIMIT keeps output peaks in check if you would rather have that. The cow on the panel reacts to the audio.
+**BEEF** is the main event: more weight, density and loudness as you turn it up. **SOFT CLIP** opens switched on. It adds harmonics above the low end so there is more to hear than sub, and takes care of the initial gain staging, so there is no input level to hunt for. **JUICE** sets the level going in, **COOK** moves the tone from rounder toward brighter and more bitten, and **LIMIT** keeps output peaks in check if you would rather have that. The cow on the panel reacts to the audio.
 
 Now play the beat on the phone again. On the bus the 808 still won't shake anything. You can hear it, though, and on that speaker that is as hard as a note gets.
 

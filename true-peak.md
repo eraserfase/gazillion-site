@@ -25,6 +25,8 @@ True peak is the highest level the waveform actually reaches once it is converte
 
 - **Worst offenders**: heavily limited material and bright transients
 
+**LIMIT** instead, everything else identical.
+
 ## What is actually happening
 
 Digital audio stores a series of points. To play it back, a converter reconstructs a smooth waveform that passes through those points, and between any two of them the curve can rise above both. If two consecutive samples sit just under full scale, the curve joining them may go over it. The file is legal, the meter is honest, and the analog signal clips anyway.
@@ -45,13 +47,15 @@ Encoding makes it worse. Lossy formats do not reproduce the waveform exactly, an
 
 - If you are over, do not simply pull the output down: find the transient causing it and deal with it upstream, with a clipper or with saturation.
 
-BEEFY is our saturation and loudness effect, and its SOFT CLIP is the upstream answer: round the peaks before the limiter ever sees them.
+[BEEFY](https://gazillionindustries.com/beefy.html) is our saturation and loudness effect, and its SOFT CLIP is the upstream answer: round the peaks before the limiter ever sees them.
+
+**BEEF at 96.** Past where most settings want to live.
 
 ## Where the decibel goes
 
 People resist the −1 dBTP ceiling because it looks like giving away a decibel of loudness. It is not, for two reasons. Streaming services normalize playback anyway, so the absolute ceiling is not what determines how loud your track sounds next to anything else. And the decibel you are protecting buys you a clean decode instead of intermittent distortion on exactly the loudest, most important moments of the record.
 
-If you want the loudness conversation rather than the ceiling conversation, that is how loud should my master be and clipper before limiter.
+If you want the loudness conversation rather than the ceiling conversation, that is [how loud should my master be](https://gazillionindustries.com/how-loud-should-my-master-be/) and [clipper before limiter](https://gazillionindustries.com/clipper-before-limiter/).
 
 ## Where it costs you
 
@@ -77,7 +81,7 @@ LUFS measures perceived loudness over time, which is what streaming normalizatio
 
 ## What BEEFY does
 
-BEEFY is a saturation and loudness effect for making sounds thicker, punchier and more up front. It adds body, squeezes some space out of the peaks, and brings out harmonics that help a sound feel bigger. SOFT CLIP opens switched on and brings rounded, fuzzy edges to the loudest parts, which lowers peaks before a limiter has to. LIMIT is the other choice, a straight-ahead way to keep the output peaks in check, and the two are separate decisions. Input and output clip lights show you both ends.
+BEEFY is a saturation and loudness effect for making sounds thicker, punchier and more up front. It adds body, squeezes some space out of the peaks, and brings out harmonics that help a sound feel bigger. **SOFT CLIP** opens switched on and brings rounded, fuzzy edges to the loudest parts, which lowers peaks before a limiter has to. **LIMIT** is the other choice, a straight-ahead way to keep the output peaks in check, and the two are separate decisions. Input and output clip lights show you both ends.
 
 The meter was not lying. It was answering a different question from the one the converter asks.
 

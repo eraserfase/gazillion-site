@@ -25,6 +25,8 @@ Harmonic distortion is new frequency content added at whole-number multiples of 
 
 - **In production**: a control; the amount is the decision
 
+**BEEF at 8.** The reference you A/B against.
+
 ## Where the harmonics come from
 
 A circuit that reproduces its input exactly, only louder, adds nothing. A circuit that cannot quite do that returns a slightly different waveform, and the difference between what you put in and what came out is always expressible as harmonics of the input.
@@ -35,9 +37,11 @@ That distinction is the whole of the warm-versus-harsh conversation. The second 
 
 ## Why distortion makes things louder
 
-Two mechanisms, both useful. Adding harmonics puts energy in frequency ranges where the ear is more sensitive than it is at the fundamental, so a bass note with harmonics reads as louder without any more low end. And the process that generates the harmonics rounds the peaks of the waveform, which lowers the peak level relative to the average and lets you turn the whole thing up. See crest factor for that second half.
+Two mechanisms, both useful. Adding harmonics puts energy in frequency ranges where the ear is more sensitive than it is at the fundamental, so a bass note with harmonics reads as louder without any more low end. And the process that generates the harmonics rounds the peaks of the waveform, which lowers the peak level relative to the average and lets you turn the whole thing up. See [crest factor](https://gazillionindustries.com/crest-factor/) for that second half.
 
-BEEFY is our saturation and loudness effect, and this is its job description: it brings out harmonics that help a sound feel bigger.
+[BEEFY](https://gazillionindustries.com/beefy.html) is our saturation and loudness effect, and this is its job description: it brings out harmonics that help a sound feel bigger.
+
+**SOFT CLIP** as the out stage, BEEF at 62.
 
 ## How much is a lot
 
@@ -71,7 +75,7 @@ Harmonic distortion adds content at multiples of the input frequencies, which st
 
 ## What BEEFY does
 
-BEEFY is a saturation and loudness effect for making sounds thicker, punchier and more up front. It adds body, squeezes some space out of the peaks, and brings out harmonics that help a sound feel bigger. BEEF is more weight, density, loudness and attitude as you turn it up; COOK changes the color and bite, from a rounder feel toward a brighter, more cooked edge; JUICE sets the level going in. SOFT CLIP opens switched on and brings rounded, fuzzy edges to the loudest parts, adding harmonics above the low end so there is more to hear than just sub.
+BEEFY is a saturation and loudness effect for making sounds thicker, punchier and more up front. It adds body, squeezes some space out of the peaks, and brings out harmonics that help a sound feel bigger. **BEEF** is more weight, density, loudness and attitude as you turn it up; **COOK** changes the color and bite, from a rounder feel toward a brighter, more cooked edge; **JUICE** sets the level going in. **SOFT CLIP** opens switched on and brings rounded, fuzzy edges to the loudest parts, adding harmonics above the low end so there is more to hear than just sub.
 
 One measurement, two industries, opposite goals. The number was never the point.
 

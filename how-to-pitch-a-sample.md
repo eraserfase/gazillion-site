@@ -25,13 +25,15 @@ To pitch a sample, first find its key, then decide how you want it to move. Repi
 
 - **Movement**: automate pitch for bends and drops
 
+**Pitched up.** Same control, the other direction.
+
 ## Find the key first
 
 Load the sample, find a sustained note or chord, and check it with a tuner or your DAW's key detection. Confirm by ear: play the root note on a keyboard under the sample and listen for the note that sounds like home. Old records often sit a few cents off standard tuning because of tape and turntable speed, so expect to fine-tune after you transpose.
 
 ## Repitch or pitch shift
 
-Repitching changes speed and pitch together, the way a sampler or a turntable does. Pitch up and the sample gets faster and brighter; pitch down and it slows and darkens. It keeps the sample sounding like a record, with no artifacts, but it changes the tempo. Pitch shifting keeps the tempo and moves only the pitch, which fits a sample to a fixed grid but can sound processed on big moves. More in what is varispeed and how to change pitch without changing tempo.
+Repitching changes speed and pitch together, the way a sampler or a turntable does. Pitch up and the sample gets faster and brighter; pitch down and it slows and darkens. It keeps the sample sounding like a record, with no artifacts, but it changes the tempo. Pitch shifting keeps the tempo and moves only the pitch, which fits a sample to a fixed grid but can sound processed on big moves. More in [what is varispeed](https://gazillionindustries.com/what-is-varispeed/) and [how to change pitch without changing tempo](https://gazillionindustries.com/how-to-change-pitch-without-changing-tempo/).
 
 ## How to pitch a sample
 
@@ -47,11 +49,13 @@ Repitching changes speed and pitch together, the way a sampler or a turntable do
 
 - Check the sample against your drums and bass, and fix any chop that clashes.
 
-SKRUU lets you play pitch and time on separate knobs, with shifts that spring back.
+[SKRUU](https://gazillionindustries.com/skruu.html) lets you play pitch and time on separate knobs, with shifts that spring back.
+
+**PITCH −3.09 ST.** Pitch and tempo moving together, the way a machine does it.
 
 ## Pitch the chops, not just the loop
 
-Chopped samples don't have to stay in their original key. Pitch each chop to fit the chord under it and a single phrase becomes a melody. Keep an eye on the tone: chops pitched far up get thin and chipmunky, and chops pitched far down get muddy and slow. If a chop thins out, see how to make a sample sound fuller.
+Chopped samples don't have to stay in their original key. Pitch each chop to fit the chord under it and a single phrase becomes a melody. Keep an eye on the tone: chops pitched far up get thin and chipmunky, and chops pitched far down get muddy and slow. If a chop thins out, see [how to make a sample sound fuller](https://gazillionindustries.com/how-to-make-a-sample-sound-fuller/).
 
 ## Automate pitch for movement
 
@@ -81,7 +85,7 @@ Check a sustained note or chord with a tuner or key detection, then confirm by p
 
 ## What SKRUU does
 
-SKRUU is our varispeed pitch and time stretch plugin for drums and samples. PITCH runs from −20% to +10% and reads out in semitones as well as speed, so you know exactly how far off the record you are; the display compares what went in against what came out. TIME moves the length on its own knob, and ELASTIC springs either one back along one of sixteen shapes, from a smooth glide to a ratchet. Four sampling grades, down to 3.91 kHz, add a staircase when you want grit.
+SKRUU is our varispeed pitch and time stretch plugin for drums and samples. **PITCH** runs from −20% to +10% and reads out in semitones as well as speed, so you know exactly how far off the record you are; the display compares what went in against what came out. **TIME** moves the length on its own knob, and **ELASTIC** springs either one back along one of sixteen shapes, from a smooth glide to a ratchet. Four sampling grades, down to 3.91 kHz, add a staircase when you want grit.
 
 Twenty-odd years later, the soul samples still come back brighter. Now you know how.
 

@@ -25,17 +25,21 @@ To flip a sample, change what it means, not just where it starts. The moves that
 
 - **Rule**: if the original is still recognizable in the first bar, keep going
 
+**DOSE 12.** The line along the bottom is gain reduction.
+
 ## Five ways to flip it
 
-Pitch it until it becomes someone else. A soul vocal up five semitones stops being a man in 1972 and becomes an instrument you have never heard. Down four and the same phrase turns into a threat. Pitching also moves the formants, which is why extreme moves sound like a different singer rather than the same one transposed; formant shifting is the control that separates those two things.
+**Pitch it until it becomes someone else.** A soul vocal up five semitones stops being a man in 1972 and becomes an instrument you have never heard. Down four and the same phrase turns into a threat. Pitching also moves the formants, which is why extreme moves sound like a different singer rather than the same one transposed; [formant shifting](https://gazillionindustries.com/formant-shifting/) is the control that separates those two things.
 
-Chop it and change the order. Take the four bars apart and play them back in a sequence the band never played, so the chord you liked lands where the drums hit rather than where the arranger put it. How to chop samples covers the mechanics.
+**Chop it and change the order.** Take the four bars apart and play them back in a sequence the band never played, so the chord you liked lands where the drums hit rather than where the arranger put it. [How to chop samples](https://gazillionindustries.com/how-to-chop-samples/) covers the mechanics.
 
-Strip it to one element. Low-pass until only the bass line survives, or high-pass until you have nothing but the ride and the room, then build the rest yourself. What you keep is a groove and a texture, and nobody can name the record from a filtered ride cymbal.
+**Strip it to one element.** Low-pass until only the bass line survives, or high-pass until you have nothing but the ride and the room, then build the rest yourself. What you keep is a groove and a texture, and nobody can name the record from a filtered ride cymbal.
 
-Replay it. Learn the four notes and play them on whatever is in the room. You keep the idea, lose the clearance problem, and get to change the voicing while you are there. Sample your own replay and treat that as the source.
+**Replay it.** Learn the four notes and play them on whatever is in the room. You keep the idea, lose the clearance problem, and get to change the voicing while you are there. Sample your own replay and treat that as the source.
 
-Change the context. A ballad at 72 bpm becomes a different animal under drums at 144, because the ear hears the same phrase at half time. Slow it, swing it, or put a break under it that argues with the original feel.
+**Change the context.** A ballad at 72 bpm becomes a different animal under drums at 144, because the ear hears the same phrase at half time. Slow it, swing it, or put a break under it that argues with the original feel.
+
+**DOSE 88.** It dives on each hit and takes the bar to recover.
 
 ## How to flip a sample
 
@@ -53,7 +57,7 @@ Change the context. A ballad at 72 bpm becomes a different animal under drums at
 
 - Process the flipped part as one thing so the pieces share a sound.
 
-DRUGS is our free one-knob bus compressor for drums, and it is what we reach for when a flipped loop needs drums with the room pushed up under the hits instead of on top of them.
+[DRUGS](https://gazillionindustries.com/drugs.html) is our free one-knob bus compressor for drums, and it is what we reach for when a flipped loop needs drums with the room pushed up under the hits instead of on top of them.
 
 ## Where it costs you
 
@@ -61,7 +65,7 @@ Flipping hard means giving up the thing that made you load the record. Pitch it 
 
 Clearance does not care how clever the flip is, either. Transformation is a musical argument, not a legal defense.
 
-A flip that leaves most of the loop alone is its own approach - how to make Madlib type beats.
+A flip that leaves most of the loop alone is its own approach - [how to make Madlib type beats](https://gazillionindustries.com/how-to-make-madlib-type-beats/).
 
 ## Questions people ask
 
@@ -79,7 +83,7 @@ Finding the bar, hearing what it could become, and rebuilding it is arrangement 
 
 ## What DRUGS does
 
-DRUGS is a bus compressor with one macro control, called DOSE, and it is free. It goes on a drum bus and makes it denser rather than louder, reshaping a break instead of leveling it, with the room brought up underneath the hits. There is no threshold and no ratio in the model, so there is nothing to set up: turn it up until the drums stop being polite.
+DRUGS is a bus compressor with one macro control, called **DOSE**, and it is free. It goes on a drum bus and makes it denser rather than louder, reshaping a break instead of leveling it, with the room brought up underneath the hits. There is no threshold and no ratio in the model, so there is nothing to set up: turn it up until the drums stop being polite.
 
 Four people looped the same bar this week. Only one of them is going to be unrecognizable.
 

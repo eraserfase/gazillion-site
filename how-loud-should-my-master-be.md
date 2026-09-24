@@ -23,6 +23,8 @@ There is no single right number. Streaming services normalize playback; Spotify 
 
 - **Test**: listen to it turned down to -14, not just at full level
 
+**SOFT CLIP** as the out stage, BEEF at 62.
+
 ## What LUFS actually measures
 
 A peak meter tells you how close the loudest sample gets to the ceiling. A loudness meter tells you how loud the song feels. LUFS weights the signal the way hearing does and averages it over time: momentary loudness uses a 400 ms window, short-term uses 3 seconds, and integrated covers the whole track. Integrated LUFS is the number streaming services use.
@@ -35,13 +37,15 @@ Spotify adjusts tracks to -14 dB LUFS. Louder masters get turned down to it and 
 
 Other services normalize too, and not all of them publish their targets as plainly. The safe assumption is that your master will be turned down somewhere, so it has to sound good at a lower level than you mastered it.
 
+**BEEF at 8.** The reference you A/B against.
+
 ## So how loud for rap and beats?
 
 Louder than -14 is common in rap and trap, and that's fine as long as the master still hits once it's turned down. The honest way to pick a number is to measure your competition. Load three or four records in your lane into a loudness meter, note their integrated LUFS, and get your master into the same neighborhood, only if it still sounds better there.
 
-Then listen to your master and the references level-matched. If yours loses its punch next to them at the same loudness, it was pushed too hard, and no extra dB will fix that.
+**Then listen to your master and the references level-matched.** If yours loses its punch next to them at the same loudness, it was pushed too hard, and no extra dB will fix that.
 
-Loudness that survives normalization comes from density, not limiting. That's what BEEFY is for. The demo on the page is 28 seconds.
+Loudness that survives normalization comes from density, not limiting. That's what [BEEFY](https://gazillionindustries.com/beefy.html) is for. The demo on the page is 28 seconds.
 
 ## How to check your master
 
@@ -55,7 +59,7 @@ Loudness that survives normalization comes from density, not limiting. That's wh
 
 - Turn everything down to -14 LUFS and compare by ear.
 
-If you want more loudness than the limiter can give cleanly, go back to the mix: how to make your mix louder without clipping and clipper before limiter cover the chain.
+If you want more loudness than the limiter can give cleanly, go back to the mix: [how to make your mix louder without clipping](https://gazillionindustries.com/how-to-make-mix-louder-without-clipping/) and [clipper before limiter](https://gazillionindustries.com/clipper-before-limiter/) cover the chain.
 
 ## Questions people ask
 
@@ -77,7 +81,7 @@ Not necessarily. -14 LUFS is where Spotify plays tracks back, not a rule for how
 
 ## What BEEFY does
 
-BEEFY is our saturation and loudness plugin, and it works on the kind of loudness that holds up at -14: density. BEEF adds weight, density and loudness to drums, 808s and bass as you turn it up. SOFT CLIP opens switched on and rounds off the loudest parts, and LIMIT keeps output peaks in check instead if you prefer. Use a loudness meter for the number and your ears for the rest.
+BEEFY is our saturation and loudness plugin, and it works on the kind of loudness that holds up at -14: density. **BEEF** adds weight, density and loudness to drums, 808s and bass as you turn it up. **SOFT CLIP** opens switched on and rounds off the loudest parts, and **LIMIT** keeps output peaks in check instead if you prefer. Use a loudness meter for the number and your ears for the rest.
 
 Print all the loudness you want. The records that still sound rich at -14 are the ones that saved some.
 

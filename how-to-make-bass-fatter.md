@@ -25,6 +25,8 @@ To make bass fatter, build body and harmonics around the sub rather than just ad
 
 - **Mono**: keep the low end centered
 
+**BEEF at 96.** Past where most settings want to live.
+
 ## What "fat" actually is
 
 Fat bass isn't more sub. It's a bass whose low end, body and harmonics all show up together, note after note. A sub alone is felt more than heard and disappears on small speakers; harmonics alone sound thin and buzzy. Fat is both, at a steady level, with enough room around it that nothing else steps on it.
@@ -35,13 +37,15 @@ Split the job. One layer is a clean, mostly sine-like sub that holds the floor. 
 
 ## Add harmonics
 
-Saturation or distortion on the mid-bass layer (or a high-passed copy of a single bass) thickens it and makes it audible on phones and laptops. Start gentle for warmth, push harder for grit. The details are in how to use saturation in a mix and parallel saturation.
+Saturation or distortion on the mid-bass layer (or a high-passed copy of a single bass) thickens it and makes it audible on phones and laptops. Start gentle for warmth, push harder for grit. The details are in [how to use saturation in a mix](https://gazillionindustries.com/how-to-use-saturation/) and [parallel saturation](https://gazillionindustries.com/parallel-saturation/).
+
+**BEEF at 8.** The reference you A/B against.
 
 ## Compress for consistency
 
 A bass that jumps in level from note to note never sounds full. Moderate compression evens it out so every note carries the same weight. Slower attack keeps the pluck or front edge; faster attack smooths it. On bass guitar this does more for fatness than any EQ move.
 
-BEEFY is built for this: more weight, density and loudness with one big knob. The demo on the page is 28 seconds.
+[BEEFY](https://gazillionindustries.com/beefy.html) is built for this: more weight, density and loudness with one big knob. The demo on the page is 28 seconds.
 
 ## How to make bass growl
 
@@ -59,7 +63,7 @@ The growl is the moving filter on distorted harmonics. Without the movement it's
 
 ## Give it room
 
-Fatness disappears when other parts crowd the same range. Keys, pads and guitars with a lot of low-mid content blur the bass's body, so thin those out a little. If the kick and bass overlap, sort that first: how to mix the kick and the 808 covers the low-end handoff.
+Fatness disappears when other parts crowd the same range. Keys, pads and guitars with a lot of low-mid content blur the bass's body, so thin those out a little. If the kick and bass overlap, sort that first: [how to mix the kick and the 808](https://gazillionindustries.com/how-to-mix-kick-and-808/) covers the low-end handoff.
 
 ## Questions people ask
 
@@ -85,7 +89,7 @@ Add harmonics and body rather than raw low end, cut competing low-mid content fr
 
 ## What BEEFY does
 
-BEEFY is our saturation and loudness plugin for making sounds thicker, punchier and more up front, and 808s and bass are very much invited. BEEF adds weight, density and loudness as you turn it up. SOFT CLIP, on by default, adds harmonics above the low end and can take a clean bass note toward a growl. COOK moves the tone from rounder toward brighter and more bitten, and JUICE sets the level going in.
+BEEFY is our saturation and loudness plugin for making sounds thicker, punchier and more up front, and 808s and bass are very much invited. **BEEF** adds weight, density and loudness as you turn it up. **SOFT CLIP**, on by default, adds harmonics above the low end and can take a clean bass note toward a growl. **COOK** moves the tone from rounder toward brighter and more bitten, and **JUICE** sets the level going in.
 
 Same bassline, tailored this time. The whole room notices, for the right reason.
 

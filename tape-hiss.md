@@ -47,13 +47,21 @@ A soft, even hiss, like air or distant rain, sitting under the music. It rises a
 
 - Leave a little hiss rather than damage the music.
 
-TRIPLE OG's HISS is a continuous broadband bed, partly decorrelated across the channels. There's a demo on the page.
+[TRIPLE OG](https://gazillionindustries.com/tripleog.html)'s HISS is a continuous broadband bed, partly decorrelated across the channels. There's a demo on the page.
 
 ## How to add tape hiss on purpose
 
-Hiss is one of the quickest ways to make a clean digital production feel like a recording with history. Keep it quiet, just audible in the gaps. Filter it so it doesn't compete with cymbals, and make it slightly different in each channel so it feels wide rather than stuck in the middle. It pairs naturally with wow and flutter and the other moves in how to make music sound like a cassette tape.
+Hiss is one of the quickest ways to make a clean digital production feel like a recording with history. Keep it quiet, just audible in the gaps. Filter it so it doesn't compete with cymbals, and make it slightly different in each channel so it feels wide rather than stuck in the middle. It pairs naturally with [wow and flutter](https://gazillionindustries.com/wow-and-flutter/) and the other moves in [how to make music sound like a cassette tape](https://gazillionindustries.com/how-to-make-music-sound-like-cassette/).
 
 ## Hear it
+
+Hiss is easier to judge against the thing it sits under. Here is a loop clean, then the same loop with a noise bed under it and the top end pulled back.
+
+- **Dry** — no processing — speed holds at 1.000 — https://gazillionindustries.com/tripleog/tog-dry.m4a
+
+- **Hiss 60, tone 45** — a noise bed, nothing else — https://gazillionindustries.com/tripleog/tog-hiss.m4a
+
+The same eleven seconds each time, rendered offline through TRIPLE OG at the settings shown. No other processing, no master bus, no edits.
 
 ## Questions people ask
 
@@ -71,7 +79,7 @@ Common causes are dirty or magnetized playback heads, a worn or damaged tape, or
 
 ## What TRIPLE OG does
 
-TRIPLE OG is our cassette tape simulation. HISS is a continuous broadband bed, shaped and partly decorrelated across the channels, with no clicks, crackle or dust, because that's a different medium. AGE runs from nought to sixty years and makes the tape darker, noisier and less stable as it climbs. TONE sets the playback brightness, and WOW FLUT, CATCH, SCRUB and SLAM handle the transport.
+TRIPLE OG is our cassette tape simulation. **HISS** is a continuous broadband bed, shaped and partly decorrelated across the channels, with no clicks, crackle or dust, because that's a different medium. **AGE** runs from nought to sixty years and makes the tape darker, noisier and less stable as it climbs. **TONE** sets the playback brightness, and **WOW FLUT**, **CATCH**, **SCRUB** and **SLAM** handle the transport.
 
 Rain on a far-off roof. Engineers spent decades trying to stop it. It turns out people missed it.
 

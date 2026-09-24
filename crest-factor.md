@@ -25,6 +25,8 @@ Crest factor is the difference between a signal's peak level and its average lev
 
 - **Why it matters**: the peak sets your ceiling, the average sets your loudness
 
+**LIMIT** instead, everything else identical.
+
 ## Why it decides everything about loudness
 
 Your output has a hard ceiling: you cannot exceed it without distortion you did not choose. What determines how loud the track sounds is not that ceiling, it is the average level underneath it. So the entire loudness question is: how much average can I get for a given peak?
@@ -33,15 +35,17 @@ A snare hit is a spike followed by almost nothing. Its peak is enormous and its 
 
 ## How each tool reduces it
 
-- Compression pulls the loud parts down over time and lets you raise everything afterward, which lowers peak relative to average.
+- **Compression** pulls the loud parts down over time and lets you raise everything afterward, which lowers peak relative to average.
 
-- Clipping shears or rounds only the few samples at the top, lowering peak and barely touching average. That makes it the most efficient tool per decibel, and the most destructive if overdone.
+- **Clipping** shears or rounds only the few samples at the top, lowering peak and barely touching average. That makes it the most efficient tool per decibel, and the most destructive if overdone.
 
-- Saturation rounds peaks and adds harmonics, raising average while lowering peak, which is why it is the gentlest loudness tool in the box.
+- **Saturation** rounds peaks and adds harmonics, raising average while lowering peak, which is why it is the gentlest loudness tool in the box.
 
-- Limiting catches what is left, which should be very little.
+- **Limiting** catches what is left, which should be very little.
 
-BEEFY is our saturation and loudness effect: the page describes it as squeezing some space out of the peaks, which is this article in six words.
+[BEEFY](https://gazillionindustries.com/beefy.html) is our saturation and loudness effect: the page describes it as squeezing some space out of the peaks, which is this article in six words.
+
+**BEEF at 96.** Past where most settings want to live.
 
 ## How to use it in practice
 
@@ -83,7 +87,7 @@ Yes, and so do clipping, limiting and saturation. That is what they have in comm
 
 ## What BEEFY does
 
-BEEFY is our saturation and loudness effect. BEEF brings more weight, more density and more loudness as you turn it up; COOK changes the color and bite from rounder toward brighter; JUICE sets the level going in. SOFT CLIP opens switched on and takes care of the initial gain staging, bringing rounded, fuzzy edges to the loudest parts, and LIMIT holds the output peaks when you want that instead. Both are optional and both are on the panel.
+BEEFY is our saturation and loudness effect. **BEEF** brings more weight, more density and more loudness as you turn it up; **COOK** changes the color and bite from rounder toward brighter; **JUICE** sets the level going in. **SOFT CLIP** opens switched on and takes care of the initial gain staging, bringing rounded, fuzzy edges to the loudest parts, and **LIMIT** holds the output peaks when you want that instead. Both are optional and both are on the panel.
 
 One number, measurable in ten seconds, that explains the last decade of arguments about loudness.
 

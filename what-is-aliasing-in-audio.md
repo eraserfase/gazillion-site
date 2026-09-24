@@ -25,25 +25,27 @@ Aliasing happens when audio contains frequencies above half the sample rate (the
 
 - **Or use it**: lofi crush, digital grit
 
+**4 bit at 8 kHz.** Bits make it grainy; the rate is what makes it clang.
+
 ## How aliasing works
 
 A sample rate can only describe frequencies up to half its value. At 44.1 kHz, that ceiling is 22.05 kHz. Anything above it gets mirrored back below the ceiling by the same distance it went over. A simple example: at a 15 kHz sample rate the ceiling is 7.5 kHz, so a 10 kHz tone shows up at 5 kHz instead (15 minus 10). That new tone has no musical relationship to the note that made it, which is why aliasing sounds wrong rather than warm.
 
 ## What aliasing sounds like
 
-On a sustained note it's a faint extra tone that moves the wrong way when the pitch bends: the note goes up, the alias goes down. On drums and noisy sounds it's a hard, metallic sheen on the top end. On a heavily crushed sample it's that ringing, robotic shimmer that makes the sound feel like it's coming through a broken machine. If a bright sound gets harsher in a way EQ can't fix, suspect aliasing.
+On a sustained note it's a faint extra tone that moves the wrong way when the pitch bends: the note goes up, the alias goes down. On drums and noisy sounds it's a hard, metallic sheen on the top end. On a heavily crushed sample it's that ringing, robotic shimmer that makes the sound feel like it's coming through a broken machine. **If a bright sound gets harsher in a way EQ can't fix, suspect aliasing.**
 
 ## Where it comes from in a mix
 
-- Distortion and clipping: they create new harmonics, and some land above the ceiling. See soft clipping explained.
+- **Distortion and clipping:** they create new harmonics, and some land above the ceiling. See [soft clipping explained](https://gazillionindustries.com/soft-clipping-explained/).
 
-- Sample rate reduction: lowering the rate lowers the ceiling, on purpose.
+- **Sample rate reduction:** lowering the rate lowers the ceiling, on purpose.
 
-- Pitching samples up in a sampler without good interpolation.
+- **Pitching samples up** in a sampler without good interpolation.
 
-- Bright synth waveforms generated without anti-aliasing.
+- **Bright synth waveforms** generated without anti-aliasing.
 
-In F(ilter)12, SAMPLE RATE folds the top back down as new content on purpose. There's a demo on the page.
+In [F(ilter)12](https://gazillionindustries.com/f12.html), SAMPLE RATE folds the top back down as new content on purpose. There's a demo on the page.
 
 ## How to avoid it when you don't want it
 
@@ -57,7 +59,7 @@ In F(ilter)12, SAMPLE RATE folds the top back down as new content on purpose. Th
 
 ## How to use it on purpose
 
-Lofi producers reach for aliasing deliberately. Lowering the sample rate on drums, chords or a whole loop gives the crunchy, metallic top of old samplers, especially alongside bit depth reduction (see bitcrushing explained). Filter the result afterward if it gets piercing; you want grit, not a headache.
+Lofi producers reach for aliasing deliberately. Lowering the sample rate on drums, chords or a whole loop gives the crunchy, metallic top of old samplers, especially alongside bit depth reduction (see [bitcrushing explained](https://gazillionindustries.com/bitcrushing-explained/)). Filter the result afterward if it gets piercing; you want grit, not a headache. [Best bitcrusher plugins](https://gazillionindustries.com/best-bitcrusher-plugins/) goes through which ones let you hear that fold-back and which ones hide it.
 
 ## Questions people ask
 
@@ -75,7 +77,7 @@ Anti-aliasing means removing or preventing frequencies above the Nyquist limit b
 
 ## What F(ilter)12 does
 
-F(ilter)12 is our 12 bit sauce filter, and its lo-fi section uses this on purpose. SAMPLE RATE slows the rate the audio is sampled at, so the top goes and what was up there folds back down as new content. BIT coarsens the steps, so quiet detail rounds off. A filter with five shapes sits behind the crush to shape what comes out, and AURA helps the result sit in the mix.
+F(ilter)12 is our 12 bit sauce filter, and its lo-fi section uses this on purpose. **SAMPLE RATE** slows the rate the audio is sampled at, so the top goes and what was up there folds back down as new content. **BIT** coarsens the steps, so quiet detail rounds off. A filter with five shapes sits behind the crush to shape what comes out, and **AURA** helps the result sit in the mix.
 
 The wagon wheels are still spinning backward. Now you get to decide how fast.
 

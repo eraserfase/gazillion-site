@@ -25,13 +25,17 @@ Soft clipping is distortion used on purpose. A soft clipper leaves quieter signa
 
 - **Watch**: blunt transients, gritty cymbals, aliasing
 
+**SOFT CLIP as the out stage.** BEEF 62, JUICE +2.0. The clipper rounds the peak instead of holding a ceiling over it.
+
+**LIMIT as the out stage.** Identical settings otherwise. The choice is which one catches the peak, and they do not sound the same.
+
 ## Hard clipping and soft clipping
 
 Clipping is a shape. Push a signal past what a system can pass and the top of the waveform gets cut off. Hard clipping cuts it flat at the ceiling, which leaves a sharp corner. Sharp corners mean strong high harmonics, and at 0 dBFS on your output they mean the crackle everyone warns you about.
 
 A soft clipper bends the waveform into the ceiling on a curve (a tanh shape is the classic), so the corner is rounded and the added harmonics fall away faster as they climb. Same idea, better manners.
 
-The ugly kind has a famous case. When Metallica's Death Magnetic came out in 2008, fans complained in public that the CD sounded distorted and crushed. That is clipping as a problem. Everything below is clipping as a tool.
+The ugly kind has a famous case. When Metallica's *Death Magnetic* came out in 2008, fans complained in public that the CD sounded distorted and crushed. That is clipping as a problem. Everything below is clipping as a tool.
 
 ## Why it makes things louder
 
@@ -45,13 +49,13 @@ One costs movement, the other costs grit. Pick per job, and often use both, with
 
 ## Where to use a soft clipper
 
-- 808s and bass: harmonics above the sub, so the note survives small speakers. More in how to make 808s hit harder.
+- **808s and bass:** harmonics above the sub, so the note survives small speakers. More in [how to make 808s hit harder](https://gazillionindustries.com/how-to-make-808s-hit-harder/).
 
-- Kick and snare: shave the spike and raise the drum. More in how to make drums hit harder.
+- **Kick and snare:** shave the spike and raise the drum. More in [how to make drums hit harder](https://gazillionindustries.com/how-to-make-drums-hit-harder/).
 
-- The drum bus: density, with a catch. The kick drives everything playing with it into the curve, so hats get gritty on each downbeat. The saturation side is in how to saturate drums.
+- **The drum bus:** density, with a catch. The kick drives everything playing with it into the curve, so hats get gritty on each downbeat. The saturation side is in [how to saturate drums](https://gazillionindustries.com/how-to-saturate-drums/).
 
-- The master: ahead of a limiter, so the limiter works less. Go gently here; everything in the mix pays for it.
+- **The master:** ahead of a limiter, so the limiter works less. Go gently here; everything in the mix pays for it.
 
 ## How to set a soft clipper
 
@@ -67,7 +71,7 @@ One costs movement, the other costs grit. Pick per job, and often use both, with
 
 Some clippers offer a knee or softness control; softer is smoother and gives up a little level. Input gain still decides more than anything else on the panel.
 
-BEEFY opens with SOFT CLIP switched on and does the initial gain staging for you. The demo on the page is 28 seconds.
+BEEFY opens with [SOFT CLIP](https://gazillionindustries.com/beefy.html) switched on and does the initial gain staging for you. The demo on the page is 28 seconds.
 
 ## What it costs
 
@@ -79,11 +83,11 @@ There is also aliasing. The harmonics a clipper creates can land above what the 
 
 A meter tells you a clipper is working. It does not tell you whether it is working well, and by the time a plugin shows red the decision has already been made. Three things are audible well before that.
 
-The transient stops growing. Push the input and listen to the front of the kick rather than the body. Below the clip point, more input makes the attack louder. Above it, more input makes the body louder while the attack stays where it is. That moment is the clip point, and you can find it by ear in about ten seconds.
+**The transient stops growing.** Push the input and listen to the front of the kick rather than the body. Below the clip point, more input makes the attack louder. Above it, more input makes the body louder while the attack stays where it is. That moment is the clip point, and you can find it by ear in about ten seconds.
 
-The tail gets closer. Because the peak stops rising and everything underneath keeps rising, the room and the ring come up relative to the hit. On a drum bus that reads as the kit sounding bigger. Past a certain point it reads as the kit sounding further away, and that is usually the signal to stop.
+**The tail gets closer.** Because the peak stops rising and everything underneath keeps rising, the room and the ring come up relative to the hit. On a drum bus that reads as the kit sounding bigger. Past a certain point it reads as the kit sounding further away, and that is usually the signal to stop.
 
-Cymbals go first. High frequency content has the sharpest peaks relative to its energy, so hats and rides distort audibly before a kick does. If a mix is getting harsh as it gets louder, it is almost always the top of the kit meeting the clipper rather than anything wrong with the EQ.
+**Cymbals go first.** High frequency content has the sharpest peaks relative to its energy, so hats and rides distort audibly before a kick does. If a mix is getting harsh as it gets louder, it is almost always the top of the kit meeting the clipper rather than anything wrong with the EQ.
 
 ## What actually gets clipped
 
@@ -97,7 +101,7 @@ The practical consequence is that a clipper on the mix bus is a drum-and-bass pr
 
 Clipping generates harmonics above the original signal. Some of those land above what the sample rate can carry, and rather than disappearing they fold back down into the audible range at frequencies unrelated to the music. That folding is aliasing, and it is the difference between a clipper that sounds solid and one that sounds brittle.
 
-Oversampling runs the clipping stage at a multiple of the session rate so those harmonics have somewhere to go, then filters and comes back down. It costs processing and it is worth it on anything with real high frequency content. It matters least on a source that has no top end to begin with, which is why a clipper can sound fine on a bass and harsh on a full kit at the same setting. More on the mechanism in oversampling and aliasing.
+Oversampling runs the clipping stage at a multiple of the session rate so those harmonics have somewhere to go, then filters and comes back down. It costs processing and it is worth it on anything with real high frequency content. It matters least on a source that has no top end to begin with, which is why a clipper can sound fine on a bass and harsh on a full kit at the same setting. More on the mechanism in [oversampling](https://gazillionindustries.com/oversampling/) and [aliasing](https://gazillionindustries.com/what-is-aliasing-in-audio/).
 
 ## Questions people ask
 
@@ -133,9 +137,9 @@ They overlap and are not the same. Saturation shapes the whole signal continuous
 
 ## What BEEFY's SOFT CLIP does
 
-BEEFY is our saturation and loudness plugin, and SOFT CLIP is on when it opens. It brings rounded, fuzzy edges to the loudest parts, adds harmonics above the low end, and takes care of the initial gain staging, so you are not hunting for an input level. BEEF adds weight, density and loudness on top.
+BEEFY is our saturation and loudness plugin, and SOFT CLIP is on when it opens. It brings rounded, fuzzy edges to the loudest parts, adds harmonics above the low end, and takes care of the initial gain staging, so you are not hunting for an input level. **BEEF** adds weight, density and loudness on top.
 
-Prefer the peaks held without the fuzz? Switch to LIMIT, or turn both buttons off and push it yourself. LIMIT and SOFT CLIP are separate choices, and the input and output clip lights keep an eye on either end.
+Prefer the peaks held without the fuzz? Switch to **LIMIT**, or turn both buttons off and push it yourself. LIMIT and SOFT CLIP are separate choices, and the input and output clip lights keep an eye on either end.
 
 Nobody hires a bouncer to make the night. The job is making sure nothing ends it early.
 

@@ -25,6 +25,8 @@ EQ a vocal by finding and cutting what is in the way first, then adding only wha
 
 - **10 kHz+**: air, best added with a wide shelf
 
+**BEEF at 8.** The reference you A/B against.
+
 ## Subtractive first, and why
 
 Boosting adds level, and level flatters. Make five boosts and the vocal is now 4 dB louder than it was, which your ear reads as better whether or not the tone improved. Cutting the problems leaves you with a quieter, cleaner signal you can then turn up in one move, and the decisions stay honest.
@@ -47,7 +49,9 @@ There is a second reason. A resonance is a narrow peak, and narrow problems need
 
 - Bypass at matched level and confirm each move earns its place.
 
-BEEFY is a saturation and loudness effect rather than an equalizer, and the distinction matters here: it adds harmonics, which is a different way of making a voice more present than boosting what is already there.
+[BEEFY](https://gazillionindustries.com/beefy.html) is a saturation and loudness effect rather than an equalizer, and the distinction matters here: it adds harmonics, which is a different way of making a voice more present than boosting what is already there.
+
+**SOFT CLIP** as the out stage, BEEF at 62.
 
 ## Static EQ versus the problems that come and go
 
@@ -79,7 +83,7 @@ Cut before, so the compressor is not reacting to a frequency you are about to re
 
 ## What BEEFY does
 
-BEEFY is a saturation and loudness effect for making sounds thicker, punchier and more up front. On a vocal it is the other route to presence: instead of boosting a frequency that is already there, it brings out harmonics that help a sound feel bigger, and squeezes some space out of the peaks. BEEF adds weight, density and attitude, COOK changes the color and bite from a rounder feel toward a brighter edge, and JUICE sets the level going in. The page's own invitation: a vocal that could use some attitude.
+BEEFY is a saturation and loudness effect for making sounds thicker, punchier and more up front. On a vocal it is the other route to presence: instead of boosting a frequency that is already there, it brings out harmonics that help a sound feel bigger, and squeezes some space out of the peaks. **BEEF** adds weight, density and attitude, **COOK** changes the color and bite from a rounder feel toward a brighter edge, and **JUICE** sets the level going in. The page's own invitation: a vocal that could use some attitude.
 
 Cut 300, boost 3k. Or find out what this particular voice is actually doing, which takes four minutes longer and works.
 

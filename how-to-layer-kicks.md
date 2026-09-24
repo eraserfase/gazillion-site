@@ -25,6 +25,8 @@ To layer kicks, give each layer one job and filter it to that job: a short click
 
 - **Glue**: kick bus, light compression or saturation, mono
 
+**BEEF at 96.** Past where most settings want to live.
+
 ## Why layer at all
 
 Almost no single sample has everything. One has a great click and no weight; another has a chest-thumping body and a mushy attack; a third has a sub tail that belongs in a car and nothing else. Layering lets you pick the best part of each. It also lets you change one part, say a longer sub for a slower song, without replacing the whole kick.
@@ -49,21 +51,23 @@ Filter every layer to its role so they don't double up. High-pass the top layer 
 
 - Route all layers to a kick bus and set their balance there.
 
+**BEEF at 8.** The reference you A/B against.
+
 ## Glue them into one kick
 
 Three layers should sound like one drum. On the kick bus, a little compression or saturation makes them react together, so the top, body and sub move as a unit. Soft clipping the bus shaves the peak where the layers stack. Keep the whole bus in mono. When it's right, bounce it to a single sample so it's easy to move between sessions.
 
-BEEFY on the kick bus gives the layers more chest together. The demo on the page is 28 seconds.
+[BEEFY](https://gazillionindustries.com/beefy.html) on the kick bus gives the layers more chest together. The demo on the page is 28 seconds.
 
 ## Common problems
 
-- Hollow or thin when layered: phase cancellation. Flip polarity or nudge the sub a few samples.
+- **Hollow or thin when layered:** phase cancellation. Flip polarity or nudge the sub a few samples.
 
-- Flam or double hit: the starts aren't aligned. Trim and zoom in.
+- **Flam or double hit:** the starts aren't aligned. Trim and zoom in.
 
-- Muddy: two layers covering the same range. Filter harder.
+- **Muddy:** two layers covering the same range. Filter harder.
 
-- Clashes with the 808: see how to mix the kick and the 808.
+- **Clashes with the 808:** see [how to mix the kick and the 808](https://gazillionindustries.com/how-to-mix-kick-and-808/).
 
 ## Questions people ask
 
@@ -81,7 +85,7 @@ Usually two or three: a top for the click, a body for punch, and a sub if the bo
 
 ## What BEEFY does
 
-BEEFY is our saturation and loudness plugin, for kicks that need more chest. On a kick bus, BEEF adds weight, density and loudness to all the layers at once, which helps them read as one drum. SOFT CLIP, on by default, rounds off the peak where layers stack, and can give a kick a pleasantly chewed-up edge. COOK sets how round or bright the added color is.
+BEEFY is our saturation and loudness plugin, for kicks that need more chest. On a kick bus, **BEEF** adds weight, density and loudness to all the layers at once, which helps them read as one drum. **SOFT CLIP**, on by default, rounds off the peak where layers stack, and can give a kick a pleasantly chewed-up edge. **COOK** sets how round or bright the added color is.
 
 Clean handoffs, same team. The crowd only sees one runner cross the line.
 

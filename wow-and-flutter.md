@@ -7,7 +7,7 @@ Published 2026-09-14, updated 2026-09-14. By Gazillion Industries, who make TRIP
 
 ---
 
-Boards of Canada's Music Has the Right to Children (1998) sounds like a childhood home video left in a hot car: every chord a little seasick, every melody leaning slightly off the note. Much of that feeling is pitch that won't sit still, and engineers have had names for it since long before anyone wanted it on purpose.
+Boards of Canada's *Music Has the Right to Children* (1998) sounds like a childhood home video left in a hot car: every chord a little seasick, every melody leaning slightly off the note. Much of that feeling is pitch that won't sit still, and engineers have had names for it since long before anyone wanted it on purpose.
 
 Wow and flutter are speed variations in tape machines and turntables that make the pitch waver. Wow is slow, a gentle swaying drift you hear as the pitch sagging and rising; flutter is fast, a trembling shimmer on sustained notes. Hi-fi gear tries to keep both to a tiny fraction of a percent. Producers add them on purpose to make music sound worn, nostalgic and alive.
 
@@ -45,13 +45,21 @@ Subtle wow makes sustained chords feel like they're breathing. Heavier wow sound
 
 - Check the result against the bass and vocal, and back off if they sound out of tune.
 
-TRIPLE OG's WOW FLUT is built from several motions at once, because one sine is just a chorus. There's a demo on the page.
+[TRIPLE OG](https://gazillionindustries.com/tripleog.html)'s WOW FLUT is built from several motions at once, because one sine is just a chorus. There's a demo on the page.
 
 ## Where it works, and where it doesn't
 
-Keys, pads, guitars, chopped samples and lofi loops take wow and flutter beautifully; see how to make lofi beats. Drums hide it. Bass and 808s are the risk: a wavering sub fights the kick and sounds out of tune fast, so keep low end off the effect or use very little. On a lead vocal, a small amount can sound like a vintage record; more than that sounds like a mistake.
+Keys, pads, guitars, chopped samples and lofi loops take wow and flutter beautifully; see [how to make lofi beats](https://gazillionindustries.com/how-to-make-lofi-beats/). Drums hide it. Bass and 808s are the risk: a wavering sub fights the kick and sounds out of tune fast, so keep low end off the effect or use very little. On a lead vocal, a small amount can sound like a vintage record; more than that sounds like a mistake.
 
 ## Hear it
+
+Descriptions of wow and flutter only go so far. Here is one loop with the speed held steady, then the same loop with the transport allowed to wander.
+
+- **Dry** — no processing — speed holds at 1.000 — https://gazillionindustries.com/tripleog/tog-dry.m4a
+
+- **Wow and flutter 65** — speed moves between 0.941 and 1.071 — https://gazillionindustries.com/tripleog/tog-wowflutter.m4a
+
+The same eleven seconds each time, rendered offline through TRIPLE OG at the settings shown. No other processing, no master bus, no edits.
 
 ## Questions people ask
 
@@ -69,7 +77,7 @@ The names describe the sound: "wow" for the slow rise and fall in pitch, and "fl
 
 ## What TRIPLE OG does
 
-TRIPLE OG is our cassette tape simulation, and wow and flutter are only the start. WOW FLUT is continuous, bounded instability built from several motions at once. AGE runs from nought to sixty years, darker, noisier and less speed-stable as it climbs. CATCH is the machine failing on its own: it drags, jams and then recovers, and SCRUB and SLAM let you do it on purpose by hand. TONE, HISS, DRIVE and MIX shape the tape itself.
+TRIPLE OG is our cassette tape simulation, and wow and flutter are only the start. **WOW FLUT** is continuous, bounded instability built from several motions at once. **AGE** runs from nought to sixty years, darker, noisier and less speed-stable as it climbs. **CATCH** is the machine failing on its own: it drags, jams and then recovers, and **SCRUB** and **SLAM** let you do it on purpose by hand. **TONE**, **HISS**, **DRIVE** and **MIX** shape the tape itself.
 
 Leave the home video in the car a little longer. It only gets better.
 

@@ -3,7 +3,7 @@
 > How the Capitol Records echo chambers work: eight concrete rooms under a Hollywood car park, why they are trapezoidal, and why reverb used to be real estate.
 
 Source: https://gazillionindustries.com/capitol-echo-chambers/  
-Published 2026-09-20, updated 2026-09-24. By Gazillion Industries, who make Gazillion Industries.
+Published 2026-09-20, updated 2026-09-24. By Gazillion Industries.
 
 ---
 
@@ -43,9 +43,9 @@ That is the fact to sit with. Before convolution, before plates were common and 
 
 Reverb and saturation solve the same complaint from opposite directions, and knowing which one you need is most of the skill.
 
-A chamber adds time. It puts the sound in a space, surrounds it with reflections and makes it feel large because it is taking up more of the second. The cost is clarity: everything you send down there comes back blurred, the gaps between notes fill in, and a dense arrangement turns to mud fast.
+A chamber adds *time*. It puts the sound in a space, surrounds it with reflections and makes it feel large because it is taking up more of the second. The cost is clarity: everything you send down there comes back blurred, the gaps between notes fill in, and a dense arrangement turns to mud fast.
 
-Saturation, covered in its own guide, adds content. It generates harmonics that were not in the source, which makes a sound denser and more present without adding a millisecond to its length. The cost is space in the spectrum rather than space in time: harmonics stack up in the upper mids and crowd the same range every other instrument wants.
+Saturation, covered in [its own guide](https://gazillionindustries.com/saturation-explained/), adds *content*. It generates harmonics that were not in the source, which makes a sound denser and more present without adding a millisecond to its length. The cost is space in the spectrum rather than space in time: harmonics stack up in the upper mids and crowd the same range every other instrument wants.
 
 Which is why the classic records made in that building use both, on different things. Strings and voices go to the chamber. The rhythm section mostly does not.
 
@@ -53,7 +53,9 @@ Which is why the classic records made in that building use both, on different th
 
 They are still there and still working, which is genuinely unusual: most of the great purpose-built chambers of that era were demolished, converted or filled in when the real estate became worth more than the reverb. In 2019 Universal Audio released officially licensed software emulations of the four most popular chambers, which is as close as most people will get, and the building itself has been a Los Angeles Historic-Cultural Monument since 2006.
 
-We make TRIPLE OG. A cassette transport rather than a tape saturator — the machine as well as the medium.
+A cassette transport rather than a tape saturator — the machine as well as the medium.
+
+We make [TRIPLE OG](https://gazillionindustries.com/tripleog.html). A cassette transport rather than a tape saturator — the machine as well as the medium.
 
 ## What to take from it if you have no concrete
 

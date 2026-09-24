@@ -507,6 +507,10 @@ the people who make the plugins.
   — Loops left long, drums underneath, very little cleanup.
 - [How to make Dilla type beats](https://gazillionindustries.com/how-to-make-dilla-type-beats.md)
   — The feel, taken apart into things you can actually do.
+- [12 bit sampler plugins](https://gazillionindustries.com/12-bit-sampler-plugins.md)
+  — Bit depth and sample rate are two different knobs. Most writing treats them as one.
+- [Best bitcrusher plugins](https://gazillionindustries.com/best-bitcrusher-plugins.md)
+  — Crushing adds content above where you set it. That is the part the threads miss.
 - [Drum bus compressor settings](https://gazillionindustries.com/drum-bus-compressor-settings.md)
   — attack, release, ratio and threshold on a drum bus, and a starting point.
 

@@ -25,6 +25,8 @@ Sidechain compression is compression triggered by a different signal from the on
 
 - **Alternative**: a volume envelope, if you want the shape exactly
 
+**DOSE 88.** Same source. The line dives on each hit and takes the whole bar to come back — that recovery is the pump.
+
 ## Why it works
 
 Two sounds in the same frequency range at the same moment do not add up to twice as much; they add up to mud, and whichever one you turn up wins at the expense of the other. A kick and a sub bass are the standard example because both live below 120 Hz and both need to be felt rather than heard. Ducking the bass for the length of the kick gives the kick an empty room to arrive in, and the ear fills in the bass note it did not quite hear.
@@ -49,7 +51,7 @@ The second reason is rhythmic. A track that dips and recovers in time with the k
 
 If the trigger kick is not in the arrangement, put one on a muted track and use it anyway. That is the standard way of getting a pump with no audible kick.
 
-DRUGS is our free one-knob drum bus compressor. It has no sidechain input, so this job belongs to a compressor that does; DRUGS is what goes on the drums afterward.
+[DRUGS](https://gazillionindustries.com/drugs.html) is our free one-knob drum bus compressor. It has no sidechain input, so this job belongs to a compressor that does; DRUGS is what goes on the drums afterward.
 
 ## When to use a volume envelope instead
 
@@ -57,7 +59,7 @@ A compressor gives you a curve it chooses. An automation lane or a volume-shapin
 
 ## Where it costs you
 
-Heavy sidechaining removes energy from your track four times a bar, and a mix that pumps hard feels exciting for thirty seconds and tiring by the second chorus. It also hides problems rather than fixing them: if the kick and bass are clashing because they occupy the same two octaves, ducking papers over an arrangement decision. Tuning the kick and the bass note to each other, or moving one of them in pitch, often removes the need entirely. See how to mix kick and 808 for that conversation.
+Heavy sidechaining removes energy from your track four times a bar, and a mix that pumps hard feels exciting for thirty seconds and tiring by the second chorus. It also hides problems rather than fixing them: if the kick and bass are clashing because they occupy the same two octaves, ducking papers over an arrangement decision. Tuning the kick and the bass note to each other, or moving one of them in pitch, often removes the need entirely. See [how to mix kick and 808](https://gazillionindustries.com/how-to-mix-kick-and-808/) for that conversation.
 
 ## Questions people ask
 
@@ -79,7 +81,7 @@ Three to six decibels if you are solving a low-end clash and do not want it hear
 
 ## What DRUGS does
 
-DRUGS is our free bus compressor for drums, and it does one job. DOSE moves the transfer curve, the knee, the attack and the release together, making a drum bus denser rather than louder, with the room brought up underneath the hits. There is no sidechain input and no trigger routing: it listens to what you feed it and nothing else. Put your ducking compressor on the bass, and put this on the drums that are doing the ducking.
+DRUGS is our free bus compressor for drums, and it does one job. **DOSE** moves the transfer curve, the knee, the attack and the release together, making a drum bus denser rather than louder, with the room brought up underneath the hits. There is no sidechain input and no trigger routing: it listens to what you feed it and nothing else. Put your ducking compressor on the bass, and put this on the drums that are doing the ducking.
 
 Four times a bar, everything gets out of the way of a sound you can hardly hear. That is the whole trick.
 

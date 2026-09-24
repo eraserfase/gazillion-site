@@ -27,17 +27,21 @@ Use saturation to solve a specific problem: a sound that's too thin, too polite,
 
 - **Check**: matched loudness, every time
 
+**BEEF at 8.** Barely doing anything — useful as the reference you A/B against.
+
+**BEEF at 96.** Where the plug-in stops being polite. Most settings that sound right in solo are about half this.
+
 ## What saturation is for
 
 Saturation adds harmonics and softens peaks. That gives you three useful results. A sound gets denser, because its body comes up toward its peaks. It gets more present, because harmonics land in the range ears are most sensitive to. And it translates, because a phone speaker that can't play a low note can still play the harmonics above it. If you can't name which of the three you're after, you don't need the plugin yet.
 
 ## Bass and 808s
 
-This is where saturation earns its keep. A clean sub is nearly invisible on small speakers, and a little drive gives it harmonics a laptop can play. Keep the lowest octave clean by saturating a high-passed copy if the sub starts to smear. The long version is in how to make 808s hit harder.
+This is where saturation earns its keep. A clean sub is nearly invisible on small speakers, and a little drive gives it harmonics a laptop can play. Keep the lowest octave clean by saturating a high-passed copy if the sub starts to smear. The long version is in [how to make 808s hit harder](https://gazillionindustries.com/how-to-make-808s-hit-harder/).
 
 ## Drums
 
-Saturation brings each hit's body up toward its front edge and gives a kit something to sound like on any speaker. Kicks take less than snares; a whole bus takes less than either, because every hit drives everything else into the curve with it. Details in how to saturate drums.
+Saturation brings each hit's body up toward its front edge and gives a kit something to sound like on any speaker. Kicks take less than snares; a whole bus takes less than either, because every hit drives everything else into the curve with it. Details in [how to saturate drums](https://gazillionindustries.com/how-to-saturate-drums/).
 
 ## Vocals
 
@@ -51,7 +55,7 @@ A thin synth or a tiny sample often just needs harmonics to take up space. Drive
 
 On a bus, a small amount ties parts together, since everything on the bus drives the curve together. On the master, go very light or skip it. Every harmonic you add there lands on the whole mix at once, and problems are easier to fix a track at a time.
 
-BEEFY has no drum-only rule: bass, synths, samples, keys, guitar, vocals. The demo on the page is 28 seconds.
+[BEEFY](https://gazillionindustries.com/beefy.html) has no drum-only rule: bass, synths, samples, keys, guitar, vocals. The demo on the page is 28 seconds.
 
 ## How to set it
 
@@ -93,7 +97,7 @@ Usually after EQ and compression, so it colors an even signal, and before any re
 
 ## What BEEFY does
 
-BEEFY is our saturation and loudness plugin for making sounds thicker, punchier and more up front. BEEF is the main control: a little for weight and presence, more for an obviously saturated sound. COOK sets the color, JUICE sets the level going in, and SOFT CLIP opens switched on and handles the initial gain staging. Feed it a thin synth, a chopped sample, an electric piano, a guitar, or a vocal that could use some attitude.
+BEEFY is our saturation and loudness plugin for making sounds thicker, punchier and more up front. **BEEF** is the main control: a little for weight and presence, more for an obviously saturated sound. **COOK** sets the color, **JUICE** sets the level going in, and **SOFT CLIP** opens switched on and handles the initial gain staging. Feed it a thin synth, a chopped sample, an electric piano, a guitar, or a vocal that could use some attitude.
 
 Taste first. Then the hot sauce, on the one plate that needed it.
 

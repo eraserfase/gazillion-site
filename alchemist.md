@@ -3,7 +3,7 @@
 > How The Alchemist works: the ASR-10 years, swing at 62 percent, quantizing one element and leaving the rest, and the truth about the drumless records.
 
 Source: https://gazillionindustries.com/alchemist/  
-Published 2026-09-20, updated 2026-09-24. By Gazillion Industries, who make Gazillion Industries.
+Published 2026-09-20, updated 2026-09-24. By Gazillion Industries.
 
 ---
 
@@ -35,9 +35,9 @@ That is the same lesson as every other producer worth studying: the limitation w
 
 Two specifics worth stealing, both his.
 
-Swing at 62 or 63 percent. That is his stated comfort zone, and it lines up with the setting the designer of the MPC recommends for a loosened, relaxed feel. Anyone can type it into a groove control tonight. See the creation of the MPC for where that number comes from and what it actually does to the sixteenths.
+**Swing at 62 or 63 percent.** That is his stated comfort zone, and it lines up with the setting the designer of the MPC recommends for a loosened, relaxed feel. Anyone can type it into a groove control tonight. See [the creation of the MPC](https://gazillionindustries.com/mpc-creation/) for where that number comes from and what it actually does to the sixteenths.
 
-Quantize one element, leave the rest loose. Rather than a beat that is all on the grid or all off it, he locks one part and lets the others sit where they land. That is the same principle a lot of people attribute to J Dilla, and it is a much more practical description than turning quantize off entirely.
+**Quantize one element, leave the rest loose.** Rather than a beat that is all on the grid or all off it, he locks one part and lets the others sit where they land. That is the same principle a lot of people attribute to [J Dilla](https://gazillionindustries.com/j-dilla/), and it is a much more practical description than turning quantize off entirely.
 
 ## How he builds one
 
@@ -45,7 +45,7 @@ His arrangement method is almost embarrassingly simple and it is the reason his 
 
 For chopping he leans on mute groups, so one chop cuts off the last, which is what stops a chopped loop turning into a wash of overlapping tails.
 
-Gazillion Industries makes plugins for exactly this speed of working: a knob, a result, and back to the next one.
+[Gazillion Industries](https://gazillionindustries.com/) makes plugins for exactly this speed of working: a knob, a result, and back to the next one.
 
 ## The drums question
 
@@ -77,7 +77,9 @@ Two bars, then four, then eight, then sixteen, building a structure for the rapp
 
 He has said he wanted to reach listeners who do not care about snares, and has described the approach as necessity turning into invention. He is perfectly capable of hard drums and often starts with them; the drumless records are a choice.
 
-We make DRUGS. DOSE 12. Most of the time the useful setting is far lower than it looks.
+**DOSE 12.** Most of the time the useful setting is far lower than it looks.
+
+We make [DRUGS](https://gazillionindustries.com/drugs.html). DOSE 12. Most of the time the useful setting is far lower than it looks.
 
 ## What to take from it
 

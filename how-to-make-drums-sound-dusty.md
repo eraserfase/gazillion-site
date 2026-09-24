@@ -25,6 +25,8 @@ Dusty drums are band-limited, compressed until the room comes up, slightly disto
 
 - **Time**: nudge hits 10–25 ms off the grid by hand
 
+**DOSE 88.** It dives on each hit and takes the bar to recover.
+
 ## What dust actually is
 
 Old drums sound old for reasons you can list. A limited top end, because tape, vinyl and cheap samplers all ran out of highs. A raised noise floor, because every stage in the chain added some. Compression, because everything in the path squeezed a little. Harmonic distortion, because nothing in 1972 was clean. And human timing, because a person played it.
@@ -53,23 +55,25 @@ Those are five separate faults, and modern drums have none of them. Add them bac
 
 Filter before you crush, or the crusher spends its resolution on highs you are about to throw away. Compress after the dirt, so the compressor reacts to what you actually made. Add noise last, so it does not get compressed into a pulsing wash by everything downstream.
 
-If the top end sounds harsh rather than dark after crushing, that is aliasing: content folded back down to frequencies that have no musical relationship to the source. It is a legitimate part of this sound and it is also the first thing to go too far. What aliasing is explains what you are hearing.
+If the top end sounds harsh rather than dark after crushing, that is aliasing: content folded back down to frequencies that have no musical relationship to the source. It is a legitimate part of this sound and it is also the first thing to go too far. [What aliasing is](https://gazillionindustries.com/what-is-aliasing-in-audio/) explains what you are hearing.
 
-DRUGS is our free one-knob bus compressor for drums, voiced for exactly this: dense, slightly crushed drums with the room pushed up under the hits, the way a break sounds once it has been through a sampler.
+[DRUGS](https://gazillionindustries.com/drugs.html) is our free one-knob bus compressor for drums, voiced for exactly this: dense, slightly crushed drums with the room pushed up under the hits, the way a break sounds once it has been through a sampler.
+
+**DOSE 88.** It dives on each hit and takes the bar to recover.
 
 ## Timing is half of it
 
 Grid-perfect drums announce themselves faster than any amount of top end. A human drummer varies by tens of milliseconds, and the variation is not random: hats rush slightly, snares sit back, kicks land early when the player is pushing. Move a few hits and vary the velocities by 10 to 15 percent and the kit starts to sound like it has a person behind it.
 
-The same applies to a sampled break, where the swing was already there and got quantized out of it. If you chopped it yourself, see how to chop a drum break for keeping the feel through the slicing.
+The same applies to a sampled break, where the swing was already there and got quantized out of it. If you chopped it yourself, see [how to chop a drum break](https://gazillionindustries.com/how-to-chop-a-drum-break/) for keeping the feel through the slicing.
 
 ## Where it costs you
 
 Dust is subtraction, and subtraction shows up on small speakers. A low-pass at 8 kHz that sounds warm on monitors can leave the hats inaudible on a phone, because the phone was relying on that range to tell you there was a hi-hat at all. Noise stacks too: one bed is texture, and the same bed on five busses is hiss. And heavy crushing eats the low end's definition, so check the kick against the bass after every step rather than at the end.
 
-See also how to make Dilla type beats, where the timing does as much work as the texture.
+See also [how to make Dilla type beats](https://gazillionindustries.com/how-to-make-dilla-type-beats/), where the timing does as much work as the texture.
 
-Much of this is one named effect - vinyl sim.
+Much of this is one named effect - [vinyl sim](https://gazillionindustries.com/vinyl-sim-plugin/).
 
 ## Questions people ask
 
@@ -87,7 +91,7 @@ Soften the transients rather than the tone: a compressor with a fast attack, or 
 
 ## What DRUGS does
 
-DRUGS is a bus compressor with one macro control, called DOSE, and it is free. Vinyl sim is shorthand for a particular kind of squash: dense, slightly crushed drums with the room pushed up under the hits. DRUGS goes at that sound directly, on the drum bus, with one knob and no setup. Turning DOSE up makes the bus denser rather than louder, because peak level barely moves across the whole range of the knob.
+DRUGS is a bus compressor with one macro control, called **DOSE**, and it is free. Vinyl sim is shorthand for a particular kind of squash: dense, slightly crushed drums with the room pushed up under the hits. DRUGS goes at that sound directly, on the drum bus, with one knob and no setup. Turning DOSE up makes the bus denser rather than louder, because peak level barely moves across the whole range of the knob.
 
 Take the gloves off. Nobody in the clean room ever made a record worth stealing.
 

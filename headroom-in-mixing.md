@@ -25,6 +25,8 @@ Headroom is the space between the loudest peak in your mix and the ceiling. The 
 
 - **Cost of ignoring**: a mix that can only be made quieter
 
+**BEEF at 96.** Past where most settings want to live.
+
 ## Why the old advice existed
 
 On tape and on early digital systems, running too hot really did degrade the signal: tape saturated and fixed-point digital clipped hard at a fixed ceiling with nothing above it. Leaving room was self-defense.
@@ -39,7 +41,9 @@ A mix bounced at −0.1 dBFS has already spent everything. Whoever masters it, i
 
 There is a second, subtler benefit: a mix that peaks at −6 dBFS is one you balanced by fader rather than by pushing everything up against a ceiling, which tends to produce better relative levels in the first place.
 
-BEEFY has JUICE for exactly this reason: it sets the level going in, so you can feed it harder or back it off independently of how hot the channel happens to be.
+[BEEFY](https://gazillionindustries.com/beefy.html) has JUICE for exactly this reason: it sets the level going in, so you can feed it harder or back it off independently of how hot the channel happens to be.
+
+**LIMIT** instead, everything else identical.
 
 ## How to actually do it
 
@@ -59,7 +63,7 @@ BEEFY has JUICE for exactly this reason: it sets the level going in, so you can 
 
 Chasing headroom for its own sake is a waste of time, and obsessing over gain staging every channel to some magic number is a habit borrowed from equipment nobody in a bedroom is using. A channel peaking at −3 dBFS inside a floating-point mixer is not a problem to solve.
 
-The genuine cost of too much headroom is only that you have to turn it up later, which is free. The cost of too little is that the record can only get quieter from here. Gain staging covers the per-channel version of this.
+The genuine cost of too much headroom is only that you have to turn it up later, which is free. The cost of too little is that the record can only get quieter from here. [Gain staging](https://gazillionindustries.com/gain-staging/) covers the per-channel version of this.
 
 ## Questions people ask
 
@@ -81,7 +85,7 @@ Practically, no, as long as you are working at 24-bit or in floating point. A mi
 
 ## What BEEFY does
 
-BEEFY is a saturation and loudness effect for making sounds thicker, punchier and more up front. JUICE sets the level going in, so you can feed it a little harder or back things off without touching your channel gain structure. BEEF brings weight, density and loudness; COOK changes the color and bite. SOFT CLIP opens switched on and takes care of the initial gain staging, helping the clipping find the sound without making you hunt for a magic input level.
+BEEFY is a saturation and loudness effect for making sounds thicker, punchier and more up front. **JUICE** sets the level going in, so you can feed it a little harder or back things off without touching your channel gain structure. **BEEF** brings weight, density and loudness; **COOK** changes the color and bite. **SOFT CLIP** opens switched on and takes care of the initial gain staging, helping the clipping find the sound without making you hunt for a magic input level.
 
 Six decibels, for the benefit of somebody downstream. Usually a slightly better-rested version of you.
 

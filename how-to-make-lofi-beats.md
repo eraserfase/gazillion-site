@@ -25,9 +25,13 @@ Lofi beats come from a few moves done with restraint: a slow tempo (usually some
 
 - **Mix**: warm, soft top end, nothing harsh
 
+**12 bit, full rate.** The quantisation is there but the top end is intact.
+
+**4 bit at 8 kHz.** Bits make it grainy; the rate is what makes it clang.
+
 ## What makes a beat sound lofi
 
-Lofi means low fidelity, and the sound is a deliberate list of flaws: a top end that stops early, a little noise underneath, pitch that drifts, drums that sound like they came off a record and not a sample pack. Its roots run through beat tapes and hip hop that sampled soul and jazz, and through producers like Nujabes, whose work on the Samurai Champloo soundtrack (2004) is a standard reference point for the mood. The trick is taste: flaws that sound chosen, not accidental.
+Lofi means low fidelity, and the sound is a deliberate list of flaws: a top end that stops early, a little noise underneath, pitch that drifts, drums that sound like they came off a record and not a sample pack. Its roots run through beat tapes and hip hop that sampled soul and jazz, and through producers like Nujabes, whose work on the *Samurai Champloo* soundtrack (2004) is a standard reference point for the mood. The trick is taste: flaws that sound chosen, not accidental.
 
 ## Chords and samples
 
@@ -35,17 +39,17 @@ Lofi harmony is soft and a little unresolved. Seventh and ninth chords on electr
 
 ## Drums
 
-The drums carry the whole mood. Keep patterns simple, swing them hard so the hats lean, and roll off the top so nothing clicks. A kick and snare that sound a little crushed and a little far away do more than a pristine kit ever will. The full method is in how to make lofi drums.
+The drums carry the whole mood. Keep patterns simple, swing them hard so the hats lean, and roll off the top so nothing clicks. A kick and snare that sound a little crushed and a little far away do more than a pristine kit ever will. The full method is in [how to make lofi drums](https://gazillionindustries.com/how-to-make-lofi-drums/).
 
 ## Texture: crush, noise and wobble
 
-Texture is what turns a chill beat into a lofi one. Reduce the bit depth or sample rate a little so the sound gets grainy and the top folds back on itself. Add a quiet noise bed. Let the pitch drift slowly, the way a worn tape or a warped record does. Each one should be subtle alone; together they make the whole beat sound like a memory. The details are in bitcrushing explained and how to make a sample sound old.
+Texture is what turns a chill beat into a lofi one. Reduce the bit depth or sample rate a little so the sound gets grainy and the top folds back on itself. Add a quiet noise bed. Let the pitch drift slowly, the way a worn tape or a warped record does. Each one should be subtle alone; together they make the whole beat sound like a memory. The details are in [bitcrushing explained](https://gazillionindustries.com/bitcrushing-explained/) and [how to make a sample sound old](https://gazillionindustries.com/how-to-make-a-sample-sound-old/).
 
-F(ilter)12 puts the crush, a filter and movement in one place. There's a demo on the page.
+[F(ilter)12](https://gazillionindustries.com/f12.html) puts the crush, a filter and movement in one place. There's a demo on the page.
 
 ## Movement
 
-Lofi breathes. A gentle sidechain from the kick on the chords makes them swell between hits; a slow filter moving on the pads keeps a four-bar loop from feeling static. See auto filter effect for the filter side.
+Lofi breathes. A gentle sidechain from the kick on the chords makes them swell between hits; a slow filter moving on the pads keeps a four-bar loop from feeling static. See [auto filter effect](https://gazillionindustries.com/auto-filter-effect/) for the filter side.
 
 ## How to make a lofi beat
 
@@ -109,7 +113,7 @@ Tempo in the eighties to low nineties, a short loop that does not develop much, 
 
 ## What F(ilter)12 does
 
-F(ilter)12 is our 12 bit sauce filter: a filter with a lo-fi section in front of it and an adaptive correction called AURA on top. SAMPLE RATE and BIT are the crush pair, and twelve bits is as clean as it gets. The filter has five shapes and six resonance shapes that travel with the knob, and AUTO FILTER moves it on a clock with SWING. AURA makes things sit better, invisible butter, air and lift, without sounding like anything was done.
+F(ilter)12 is our 12 bit sauce filter: a filter with a lo-fi section in front of it and an adaptive correction called AURA on top. **SAMPLE RATE** and **BIT** are the crush pair, and twelve bits is as clean as it gets. The filter has five shapes and six resonance shapes that travel with the knob, and **AUTO FILTER** moves it on a clock with **SWING**. **AURA** makes things sit better, invisible butter, air and lift, without sounding like anything was done.
 
 The cartoon girl is still at her desk. Now there's something new playing under her.
 

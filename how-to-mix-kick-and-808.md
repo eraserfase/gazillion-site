@@ -25,6 +25,8 @@ To mix a kick and an 808, give each one its own job and its own moment. Tune the
 
 - **Mono**: both, below the harmonics
 
+**LIMIT** instead, everything else identical.
+
 ## Why they fight
 
 They live in the same place. A kick's body and an 808's fundamental both sit low, and when two low sounds play at once their waveforms add. Where they line up, the result is a bigger peak that eats headroom; where they're out of phase, part of the low end cancels and the hit goes hollow. Which one you get changes with every note the 808 plays. That's why a beat can sound huge on one bar and weak on the next.
@@ -51,6 +53,8 @@ An 808 that's out of key clashes with the chords, and a kick with a strong pitch
 
 A volume-shaping or ducking plugin triggered by the kick does the same job with more control over the curve. Either way, the goal is the kick getting the door for a few milliseconds, not the 808 disappearing.
 
+**LIMIT** instead, everything else identical.
+
 ## Check the phase
 
 Solo the kick and the 808 together on a note where they overlap. Flip the polarity on one of them; if the low end gets fuller, keep it flipped. If neither setting sounds right, nudge the 808's start a few milliseconds later, or trim its attack so the two waveforms stop fighting. Then check other notes, since the answer can change with pitch.
@@ -59,11 +63,11 @@ Solo the kick and the 808 together on a note where they overlap. Flip the polari
 
 Sometimes the cleanest answer is no kick at all where they collide. An 808 with a strong attack, or a short click layered on its start, can be the hit and the bass at once. It's a common approach in trap, and it takes the collision off the table entirely.
 
-BEEFY puts harmonics above the 808's low end, so it's heard without taking more sub from the kick. The demo on the page is 28 seconds.
+[BEEFY](https://gazillionindustries.com/beefy.html) puts harmonics above the 808's low end, so it's heard without taking more sub from the kick. The demo on the page is 28 seconds.
 
 ## Balance on more than one speaker
 
-Headphones exaggerate the sub; phones barely play it. Set the balance on monitors or good headphones, then check on a phone and a laptop. If the 808 vanishes there, it needs harmonics, not more level. That part is in how to make 808s hit harder, and distorting it on purpose is in how to distort an 808.
+Headphones exaggerate the sub; phones barely play it. Set the balance on monitors or good headphones, then check on a phone and a laptop. If the 808 vanishes there, it needs harmonics, not more level. That part is in [how to make 808s hit harder](https://gazillionindustries.com/how-to-make-808s-hit-harder/), and distorting it on purpose is in [how to distort an 808](https://gazillionindustries.com/how-to-distort-808s/).
 
 ## Questions people ask
 
@@ -93,7 +97,7 @@ Tune them to the song, give them room from the kick, keep the sub in mono, add h
 
 ## What BEEFY does
 
-BEEFY is our saturation and loudness plugin. On the 808, SOFT CLIP, which opens switched on, adds harmonics above the low end so there's more to hear than just sub, which helps it read without more low-end level. On the kick, BEEF gives it more chest, or a pleasantly chewed-up edge. COOK moves the tone from rounder toward brighter and JUICE sets the level going in.
+BEEFY is our saturation and loudness plugin. On the 808, **SOFT CLIP**, which opens switched on, adds harmonics above the low end so there's more to hear than just sub, which helps it read without more low-end level. On the kick, **BEEF** gives it more chest, or a pleasantly chewed-up edge. **COOK** moves the tone from rounder toward brighter and **JUICE** sets the level going in.
 
 Same two roommates, same bathroom. They just made a schedule.
 

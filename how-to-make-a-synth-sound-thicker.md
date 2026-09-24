@@ -7,7 +7,7 @@ Published 2026-09-13, updated 2026-09-24. By Gazillion Industries, who make BEEF
 
 ---
 
-The synths on Vangelis's Blade Runner score hang in the air like fog over a city that never turns the lights off. The preset you just loaded hangs there like a single strand of dental floss.
+The synths on Vangelis's *Blade Runner* score hang in the air like fog over a city that never turns the lights off. The preset you just loaded hangs there like a single strand of dental floss.
 
 To make a synth sound thicker, stack more going on inside the sound, then add density and space around it. Use unison voices with a little detune, add a second oscillator an octave or a fifth away, use a sub oscillator kept in mono, add chorus, saturate it for harmonics, compress it for sustain, and widen it while keeping the low end centered. If it gets harsh, low-pass it and pull back the resonance.
 
@@ -25,6 +25,8 @@ To make a synth sound thicker, stack more going on inside the sound, then add de
 
 - **Harshness**: low-pass, less resonance, darker drive
 
+**LIMIT** instead, everything else identical.
+
 ## Thicken it at the source
 
 The synth itself is the best place to start. Turn on unison and add a few voices with a small amount of detune: the slight pitch differences beat against each other and the sound spreads out. Add a second oscillator an octave below or a fifth above for weight. A sub oscillator gives it a floor. Don't overdo the detune; past a point the synth sounds out of tune rather than thick.
@@ -35,9 +37,11 @@ Chorus copies the sound, delays the copies slightly and modulates them, which ad
 
 ## Saturate it
 
-Saturation adds harmonics and brings the quieter parts of the sound up toward its peaks, so the synth takes up more room. On a bright synth, use a darker setting or low-pass after it so the added harmonics don't turn fizzy. More in how to use saturation in a mix.
+Saturation adds harmonics and brings the quieter parts of the sound up toward its peaks, so the synth takes up more room. On a bright synth, use a darker setting or low-pass after it so the added harmonics don't turn fizzy. More in [how to use saturation in a mix](https://gazillionindustries.com/how-to-use-saturation/).
 
-Feed BEEFY a thin synth and turn up the big knob. The demo on the page is 28 seconds.
+Feed [BEEFY](https://gazillionindustries.com/beefy.html) a thin synth and turn up the big knob. The demo on the page is 28 seconds.
+
+**SOFT CLIP** as the out stage, BEEF at 62.
 
 ## How to make a synth sound thicker
 
@@ -85,7 +89,7 @@ A little does: slightly detuned unison voices beat against each other and spread
 
 ## What BEEFY does
 
-BEEFY is our saturation and loudness plugin, and there's no drum-only rule: feed it a thin synth. It adds body, squeezes some space out of the peaks and brings out harmonics that help a sound feel bigger. Use a little BEEF for weight and presence, or push it for an obviously saturated sound. COOK moves the color from rounder toward brighter, which on a synth decides how much edge you add.
+BEEFY is our saturation and loudness plugin, and there's no drum-only rule: feed it a thin synth. It adds body, squeezes some space out of the peaks and brings out harmonics that help a sound feel bigger. Use a little **BEEF** for weight and presence, or push it for an obviously saturated sound. **COOK** moves the color from rounder toward brighter, which on a synth decides how much edge you add.
 
 Nobody's asking for the whole fog bank. Just more than a strand of floss.
 

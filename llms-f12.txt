@@ -19,7 +19,9 @@ linking.
 
 ## Articles about F(ilter)12's subject area
 
+- [12 bit sampler plugins](https://gazillionindustries.com/12-bit-sampler-plugins.md): Bit depth and sample rate are two different knobs. Most writing treats them as one.
 - [How to use an auto filter](https://gazillionindustries.com/auto-filter-effect.md): LFO and envelope modes, sidechain filtering, and keeping it in the groove.
+- [Best bitcrusher plugins](https://gazillionindustries.com/best-bitcrusher-plugins.md): Crushing adds content above where you set it. That is the part the threads miss.
 - [Bitcrushing explained](https://gazillionindustries.com/bitcrushing-explained.md): Bit depth, quantization noise, sample rate reduction and what 12-bit and 8-bit sound like.
 - [Filter cutoff and resonance explained](https://gazillionindustries.com/filter-cutoff-and-resonance.md): The corner frequency, the slope, the resonant peak, and what each costs.
 - [How to make a filter sweep](https://gazillionindustries.com/how-to-make-a-filter-sweep.md): High-pass and low-pass builds, automation curve, resonance, and what to sweep.

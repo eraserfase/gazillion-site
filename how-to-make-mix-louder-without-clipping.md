@@ -25,13 +25,15 @@ A mix gets louder without clipping by lowering its peaks, not by pushing the fad
 
 - **Check**: references at matched loudness
 
+**LIMIT** instead, everything else identical.
+
 ## Why the mix won't get louder
 
 0 dBFS is the fire marshal, and the peaks got to the door first. A digital file has a hard ceiling, and your ears judge loudness by average level, not by peaks. When the peaks sit far above the average, the mix hits the ceiling while it still sounds quiet. Every technique below does the same thing: it brings the average up toward the peaks.
 
 ## Start with the low end
 
-Low frequencies carry the most energy, so in most beats the kick and the 808 decide where the peaks are. High-pass everything that isn't bass or kick, keep the sub in mono, and stop the kick and 808 from landing on top of each other. Two low notes summing at once make a peak neither makes alone. More in how to make 808s hit harder.
+Low frequencies carry the most energy, so in most beats the kick and the 808 decide where the peaks are. High-pass everything that isn't bass or kick, keep the sub in mono, and stop the kick and 808 from landing on top of each other. Two low notes summing at once make a peak neither makes alone. More in [how to make 808s hit harder](https://gazillionindustries.com/how-to-make-808s-hit-harder/).
 
 ## Balance before loudness
 
@@ -39,13 +41,15 @@ Masking makes you reach for the fader. When the vocal, the keys and the snare pi
 
 ## Raise the average
 
-Compression and saturation both lower peaks relative to the body of the sound. A bus compressor doing a couple of dB, a little saturation on the drums and 808: each one closes the gap a bit without anyone hearing a single move. The drum side is covered in how to saturate drums and drum bus compressor settings.
+Compression and saturation both lower peaks relative to the body of the sound. A bus compressor doing a couple of dB, a little saturation on the drums and 808: each one closes the gap a bit without anyone hearing a single move. The drum side is covered in [how to saturate drums](https://gazillionindustries.com/how-to-saturate-drums/) and [drum bus compressor settings](https://gazillionindustries.com/drum-bus-compressor-settings/).
+
+**LIMIT** instead, everything else identical.
 
 ## Shave the spikes
 
-A soft clipper rounds off the tallest transients instantly, with no attack or release to pump. Put one on the drums or the 808 before the master and the limiter at the end has much less to catch. The mechanics are in soft clipping explained.
+A soft clipper rounds off the tallest transients instantly, with no attack or release to pump. Put one on the drums or the 808 before the master and the limiter at the end has much less to catch. The mechanics are in [soft clipping explained](https://gazillionindustries.com/soft-clipping-explained/).
 
-Or put BEEFY on the drums and the 808: SOFT CLIP is on when it opens. The demo on the page is 28 seconds.
+Or put [BEEFY](https://gazillionindustries.com/beefy.html) on the drums and the 808: SOFT CLIP is on when it opens. The demo on the page is 28 seconds.
 
 ## Finish with a limiter
 
@@ -95,7 +99,7 @@ Usually the peaks, often from the kick and bass, reach the ceiling long before t
 
 ## What BEEFY does
 
-BEEFY is our saturation and loudness plugin, made for the parts that set your peaks: drums, 808s and bass. BEEF brings more weight, density and loudness as you turn it up. SOFT CLIP opens switched on and rounds off the loudest parts. LIMIT keeps output peaks in check instead, if you prefer, and the input and output clip lights show when either end is getting pushed.
+BEEFY is our saturation and loudness plugin, made for the parts that set your peaks: drums, 808s and bass. **BEEF** brings more weight, density and loudness as you turn it up. **SOFT CLIP** opens switched on and rounds off the loudest parts. **LIMIT** keeps output peaks in check instead, if you prefer, and the input and output clip lights show when either end is getting pushed.
 
 Same playlist, same record before it. This time the beat is in the room.
 

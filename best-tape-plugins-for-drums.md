@@ -25,13 +25,17 @@ The best tape plugin for drums is the one whose speed moves. Saturation thickens
 
 - **Our answer**: TRIPLE OG, cassette tape simulation with the transport on the face
 
-TRIPLE OG is our cassette sim for Mac and Windows, with the transport on the face rather than in a menu. There is a demo on the page.
+[TRIPLE OG](https://gazillionindustries.com/tripleog.html) is our cassette sim for Mac and Windows, with the transport on the face rather than in a menu. There is a demo on the page.
+
+The medium, as five controls.
 
 ## Why drums show tape more than anything else
 
 A drum hit is a transient followed by a decay, and both halves react to tape. The transient meets a medium that cannot follow it exactly, so the attack softens and the body gets denser. The decay picks up the noise floor, which is why a break through tape sounds like it is sitting in a room rather than in a file.
 
-Then there is the speed. Sustained material hides small speed variation; a synth pad drifting a few cents is atmosphere. Drums do not hide it, because the grid is exactly what you are listening to. A hi-hat pattern through a machine with a little wow and flutter stops being a metronome, and that is usually the difference between a loop that sounds programmed and one that sounds played.
+Then there is the speed. Sustained material hides small speed variation; a synth pad drifting a few cents is atmosphere. Drums do not hide it, because the grid is exactly what you are listening to. A hi-hat pattern through a machine with a little [wow and flutter](https://gazillionindustries.com/wow-and-flutter/) stops being a metronome, and that is usually the difference between a loop that sounds programmed and one that sounds played.
+
+Stereo VU against a 0 VU reference, with a peak lamp. Tape level is read here, not on a bar graph.
 
 ## Where to put it
 
@@ -39,39 +43,47 @@ On the drum bus, after whatever you use to glue the kit together and before the 
 
 On individual hits it is usually a waste, with one exception. A sampled break you have chopped and rebuilt often has each slice sitting slightly too clean at the edges. Running the rebuilt loop through tape as one piece glues the slices back together, because they all pick up the same noise and the same speed wobble, which is what they would have had coming off a record in the first place.
 
-TRIPLE OG is a cassette tape simulation for Mac and Windows. On a drum bus, WOW FLUT and AGE do most of the work, and SLAM is the transport stop. There's a demo on the page.
+[TRIPLE OG](https://gazillionindustries.com/tripleog.html) is a cassette tape simulation for Mac and Windows. On a drum bus, **WOW FLUT** and **AGE** do most of the work, and **SLAM** is the transport stop. There's a demo on the page.
+
+**WOW/FLUT on [TRIPLE OG](https://gazillionindustries.com/tripleog.html)** is composite instability, not one sine wave. Slow drift and fast warble at unrelated rates.
 
 ## Settings that work on a break
 
-- Start neutral. Get the tape in the path with everything low, and check the level match before you judge anything.
+- **Start neutral.** Get the tape in the path with everything low, and check the level match before you judge anything.
 
-- Drive until it thickens, then back off a little. The point where a break stops sounding thin is usually a long way before the point where it sounds distorted.
+- **Drive until it thickens, then back off a little.** The point where a break stops sounding thin is usually a long way before the point where it sounds distorted.
 
-- Add wear slowly. A small amount reads as a recording. A large amount reads as an effect. Both are useful, but decide which one you want.
+- **Add wear slowly.** A small amount reads as a recording. A large amount reads as an effect. Both are useful, but decide which one you want.
 
-- Set the speed movement by ear on the hats. They are the fastest thing in the loop and the first place instability becomes audible.
+- **Set the speed movement by ear on the hats.** They are the fastest thing in the loop and the first place instability becomes audible.
 
-- Check in mono. Noise and modulation that sound wide can collapse, and drums are usually the most mono-critical thing in the mix.
+- **Check in mono.** Noise and modulation that sound wide can collapse, and drums are usually the most mono-critical thing in the mix.
 
-- A-B against bypass at matched level. Tape makes almost anything sound better when it is also louder.
+- **A-B against bypass at matched level.** Tape makes almost anything sound better when it is also louder.
+
+The whole thing. Top half is the machine, bottom half is the tape, and the **SCRUB** strip along the bottom is played by hand.
 
 ## Lofi drums, specifically
 
 The lofi drum sound people are chasing is usually three things at once: a narrower bandwidth, a noise floor, and timing that is not quite locked. Tape supplies all three from one plug-in, which is why it turns up in every lofi chain.
 
-The bandwidth is the part most people overdo. Rolling the top off a break makes it duller, not older; what makes it sound like a cassette is that the top end goes soft rather than disappearing, and that the noise underneath comes up to meet it. That is tape hiss, and the full chain is in how to make music sound like a cassette tape.
+The bandwidth is the part most people overdo. Rolling the top off a break makes it duller, not older; what makes it sound like a cassette is that the top end goes soft rather than disappearing, and that the noise underneath comes up to meet it. That is [tape hiss](https://gazillionindustries.com/tape-hiss/), and the full chain is in [how to make music sound like a cassette tape](https://gazillionindustries.com/how-to-make-music-sound-like-cassette/).
 
 ## Breaks, programmed drums and live kits
 
 The three take tape completely differently, and a setting that suits one will usually embarrass another.
 
-A sampled break has already been through a chain once, often including tape, so it arrives with its own noise and its own top-end limit. Adding much more stacks two sets of the same artifacts and the result gets cloudy fast. Keep noise low, use the saturation for weight, and let the existing character carry the age.
+**A sampled break** has already been through a chain once, often including tape, so it arrives with its own noise and its own top-end limit. Adding much more stacks two sets of the same artifacts and the result gets cloudy fast. Keep noise low, use the saturation for weight, and let the existing character carry the age.
 
-Programmed drums are the opposite case, and they are where tape earns the most. They are perfectly quantized, perfectly repeated and perfectly clean, so every behavior the tape adds is doing something the source had none of. This is the one place where pushing the speed instability harder than feels sensible is usually right, because the machine timing has no variation to compete with it.
+**Programmed drums** are the opposite case, and they are where tape earns the most. They are perfectly quantized, perfectly repeated and perfectly clean, so every behavior the tape adds is doing something the source had none of. This is the one place where pushing the speed instability harder than feels sensible is usually right, because the machine timing has no variation to compete with it.
 
-A live kit already has air, bleed and a room in it. Tape on top mainly changes the top end and the noise floor, and the risk is losing the room rather than gaining a machine. Use less, and check the cymbals first — they are where a tape treatment on live drums shows its limits immediately.
+**A live kit** already has air, bleed and a room in it. Tape on top mainly changes the top end and the noise floor, and the risk is losing the room rather than gaining a machine. Use less, and check the cymbals first — they are where a tape treatment on live drums shows its limits immediately.
 
-Hear TRIPLE OG
+The readout is the speed, not a level. At **101.5%** the transport is running fast and the tape between the reels is under tension.
+
+**DRIVE at 0.** The medium, doing nothing to the level.
+
+**DRIVE at 92.** Soft asymmetric saturation, oversampled, with the level held flat across the travel.
 
 ## Tape and the low end
 
@@ -99,7 +111,17 @@ Neither is correct. The first is closer to how the material was originally made,
 
 ## Hear it
 
-Everything below is answered the same way we built TRIPLE OG — the tape is the easy half, the transport is the half almost nothing does.
+Drums show tape faster than anything else. Here is a loop clean, the same loop through a worn deck, and the noise bed on its own so you can hear what it adds under a break.
+
+- **Dry** — no processing — speed holds at 1.000 — https://gazillionindustries.com/tripleog/tog-dry.m4a
+
+- **Age 35, hiss 45, drive 30, wow 40** — a worn deck — speed 0.951 to 1.059 — https://gazillionindustries.com/tripleog/tog-aged.m4a
+
+- **Hiss 60, tone 45** — a noise bed, nothing else — https://gazillionindustries.com/tripleog/tog-hiss.m4a
+
+The same eleven seconds each time, rendered offline through [TRIPLE OG](https://gazillionindustries.com/tripleog.html) at the settings shown. No other processing, no master bus, no edits.
+
+Everything below is answered the same way we built [TRIPLE OG](https://gazillionindustries.com/tripleog.html) — the tape is the easy half, the transport is the half almost nothing does.
 
 ## Questions people ask
 
@@ -137,7 +159,7 @@ It solves most objections to tape on drums. A send to a driven tape bus returned
 
 ## What TRIPLE OG does
 
-TRIPLE OG is our cassette tape simulation. WOW FLUT is the speed instability, AGE runs from nought to sixty years and makes the tape darker, noisier and less stable as it climbs, and HISS is a continuous broadband bed under the whole thing. TONE sets the playback brightness and DRIVE the thickness. The transport is the other half: SLAM stops the tape and returns it to speed in sync, SCRUB runs the head backward and springs home, and CATCH makes it drag and then sprint to catch up.
+[TRIPLE OG](https://gazillionindustries.com/tripleog.html) is our cassette tape simulation. **WOW FLUT** is the speed instability, **AGE** runs from nought to sixty years and makes the tape darker, noisier and less stable as it climbs, and **HISS** is a continuous broadband bed under the whole thing. **TONE** sets the playback brightness and **DRIVE** the thickness. The transport is the other half: **SLAM** stops the tape and returns it to speed in sync, **SCRUB** runs the head backward and springs home, and **CATCH** makes it drag and then sprint to catch up.
 
 A break that came off a record was already on tape once. Putting it back is not nostalgia, it is just finishing the job.
 

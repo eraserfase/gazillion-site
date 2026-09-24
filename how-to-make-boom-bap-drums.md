@@ -25,6 +25,8 @@ To make boom bap drums, start with punchy, slightly dusty sounds (chopped breaks
 
 - **Texture**: filtered highs and lows, some room left in
 
+**LIMIT** instead, everything else identical.
+
 ## What boom bap drums are
 
 The name is the sound: the boom of the kick and the bap of the snare, heavy and upfront, usually over sampled music. The drums are typically either a break sampled from a record or individual hits taken from one, which is where the dust and character come from, and they sit at a relaxed tempo where the snare has room to crack.
@@ -45,11 +47,13 @@ Then break it: move a kick, drop a hat, add a ghost note before the snare. The b
 
 Straight eighths sound stiff. Push the offbeat hats late with your DAW's swing or groove setting until the beat leans back, then nudge individual hits by hand. Slightly late snares feel lazy in a good way; slightly early ones feel anxious. Chopped breaks bring their own swing, so match your programmed parts to the break rather than to the grid.
 
+**SOFT CLIP** as the out stage, BEEF at 62.
+
 ## Process the kit as one
 
-Boom bap drums sound like a single performance because they're treated like one. Route everything to a drum bus. Low-pass the samples a little to take the digital sheen off the top, and high-pass anything below the kick's body. Compress the bus until it squashes and the room comes up (drum bus compressor settings has the numbers), then add saturation for density (how to saturate drums).
+Boom bap drums sound like a single performance because they're treated like one. Route everything to a drum bus. Low-pass the samples a little to take the digital sheen off the top, and high-pass anything below the kick's body. Compress the bus until it squashes and the room comes up ([drum bus compressor settings](https://gazillionindustries.com/drum-bus-compressor-settings/) has the numbers), then add saturation for density ([how to saturate drums](https://gazillionindustries.com/how-to-saturate-drums/)).
 
-BEEFY is for a break that needs to stop being so polite. The demo on the page is 28 seconds.
+[BEEFY](https://gazillionindustries.com/beefy.html) is for a break that needs to stop being so polite. The demo on the page is 28 seconds.
 
 ## How to make boom bap drums, step by step
 
@@ -89,7 +93,7 @@ Build a four- or eight-bar loop, then arrange by taking things away: an intro wi
 
 ## What BEEFY does
 
-BEEFY is our saturation and loudness plugin. On a drum bus it pulls the hits and the body closer together, and it's there for a break that needs to stop being so polite. BEEF adds weight, density and loudness, COOK moves the tone from rounder toward brighter and more bitten, and SOFT CLIP, on by default, rounds off the loudest hits.
+BEEFY is our saturation and loudness plugin. On a drum bus it pulls the hits and the body closer together, and it's there for a break that needs to stop being so polite. **BEEF** adds weight, density and loudness, **COOK** moves the tone from rounder toward brighter and more bitten, and **SOFT CLIP**, on by default, rounds off the loudest hits.
 
 No carpet on your walls, probably. The drums can still sound like there is.
 

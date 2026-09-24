@@ -25,21 +25,25 @@ Weak drums are almost never a plugin problem. In order of how often it is the ac
 
 - **Test**: mute the drums: if the track survives, they are too quiet
 
+**SOFT CLIP** as the out stage, BEEF at 62.
+
 ## Work through it in order
 
-Level first, because it is free. Pull everything else down six decibels rather than turning the drums up, then listen. Most weak-drum problems in bedroom mixes are arrangement levels, not processing. The test: mute the drums and see whether the record collapses or carries on quite happily. It should collapse.
+**Level first, because it is free.** Pull everything else down six decibels rather than turning the drums up, then listen. Most weak-drum problems in bedroom mixes are arrangement levels, not processing. The test: mute the drums and see whether the record collapses or carries on quite happily. It should collapse.
 
-Then transients. Bypass every compressor on the drum path and listen to the attack. If the drums come alive with the processing off, your compressor attack is too fast and it is eating the stick. Slow the attack until the hit gets through, and let the compressor work on the body behind it. What a transient is covers why that single control decides so much.
+**Then transients.** Bypass every compressor on the drum path and listen to the attack. If the drums come alive with the processing off, your compressor attack is too fast and it is eating the stick. Slow the attack until the hit gets through, and let the compressor work on the body behind it. [What a transient is](https://gazillionindustries.com/what-is-a-transient/) covers why that single control decides so much.
 
-Then the clash. A kick and a bass occupying 60 to 120 Hz together do not add up, they cancel and smear. Decide which owns the bottom and which owns the body, and cut the other one there. How to mix kick and 808 is the whole conversation.
+**Then the clash.** A kick and a bass occupying 60 to 120 Hz together do not add up, they cancel and smear. Decide which owns the bottom and which owns the body, and cut the other one there. [How to mix kick and 808](https://gazillionindustries.com/how-to-mix-kick-and-808/) is the whole conversation.
 
-BEEFY is our saturation and loudness effect, and the page names this exact job: kicks that need more chest, snares that need more smack, a break that needs to stop being so polite.
+[BEEFY](https://gazillionindustries.com/beefy.html) is our saturation and loudness effect, and the page names this exact job: kicks that need more chest, snares that need more smack, a break that needs to stop being so polite.
 
 ## When it really is the sample
 
 Some samples are thin and cannot be rescued. The tells: no low mid at all, a click with no body behind it, or a kick whose entire energy sits above 200 Hz. You can layer something underneath, which is the usual fix, or you can replace it, which is the faster one.
 
-Layering is its own skill and it goes wrong through phase: two kicks whose attacks are not aligned cancel each other and produce something weaker than either. See how to layer kicks and phase cancellation.
+Layering is its own skill and it goes wrong through phase: two kicks whose attacks are not aligned cancel each other and produce something weaker than either. See [how to layer kicks](https://gazillionindustries.com/how-to-layer-kicks/) and [phase cancellation](https://gazillionindustries.com/phase-cancellation/).
+
+**BEEF at 8.** The reference you A/B against.
 
 ## The one nobody wants to hear
 
@@ -59,7 +63,7 @@ Usually level, then lost transients, then a frequency clash with the bass. Check
 
 ### How do I make my drums hit harder?
 
-Keep the transient with a slower compressor attack, add weight with saturation rather than low-end EQ, and clear space for them in the arrangement. See how to make drums hit harder.
+Keep the transient with a slower compressor attack, add weight with saturation rather than low-end EQ, and clear space for them in the arrangement. See [how to make drums hit harder](https://gazillionindustries.com/how-to-make-drums-hit-harder/).
 
 ### Why do my drums sound good soloed and weak in the mix?
 
@@ -71,7 +75,7 @@ Usually less, and with a slower attack. Punch comes from the contrast between a 
 
 ## What BEEFY does
 
-BEEFY is our saturation and loudness effect for making sounds thicker, punchier and more up front. The page is specific about where to start: kicks that need more chest, snares that need more smack, a break that needs to stop being so polite, and a whole drum bus to pull the hits and the body closer together. BEEF brings weight, density and attitude; COOK moves the color from rounder toward brighter; JUICE sets the level going in; SOFT CLIP rounds the loudest parts.
+BEEFY is our saturation and loudness effect for making sounds thicker, punchier and more up front. The page is specific about where to start: kicks that need more chest, snares that need more smack, a break that needs to stop being so polite, and a whole drum bus to pull the hits and the body closer together. **BEEF** brings weight, density and attitude; **COOK** moves the color from rounder toward brighter; **JUICE** sets the level going in; **SOFT CLIP** rounds the loudest parts.
 
 Five causes, in order, and the plugin is the fourth one. Check the first three first.
 

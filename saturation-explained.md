@@ -25,6 +25,8 @@ Saturation is distortion applied in small amounts, deliberately. Push a signal i
 
 - **How much**: the amount where bypassing it sounds worse, not louder
 
+**SOFT CLIP** as the out stage, BEEF at 62.
+
 ## The mechanism, once
 
 A perfectly linear device returns the waveform you gave it, scaled. A nonlinear device returns something slightly different, and the difference is always made of harmonics. Feed in a 100 Hz sine and you get 200, 300, 400 Hz and upward, at levels that depend on the curve.
@@ -35,19 +37,21 @@ The second thing that happens is level. Rounding the tops of the waveform lowers
 
 ## The types, and what actually differs
 
-- Tape: gentle compression, softened transients, a low-frequency lift near the head bump, and pitch instability from the transport. See tape vs tube.
+- **Tape:** gentle compression, softened transients, a low-frequency lift near the head bump, and pitch instability from the transport. See [tape vs tube](https://gazillionindustries.com/tape-vs-tube-saturation/).
 
-- Tube: asymmetric, so even harmonics dominate, and it gets progressively denser rather than suddenly harsh.
+- **Tube:** asymmetric, so even harmonics dominate, and it gets progressively denser rather than suddenly harsh.
 
-- Transformer: low-frequency saturation and a little ring, which is why it flatters bass and kick.
+- **Transformer:** low-frequency saturation and a little ring, which is why it flatters bass and kick.
 
-- Transistor and diode: harder edges, more odd harmonics, closer to clipping.
+- **Transistor and diode:** harder edges, more odd harmonics, closer to clipping.
 
-- Digital clipping: the hardest version, shearing the peak flat. Useful and unforgiving. See soft clipping explained.
+- **Digital clipping:** the hardest version, shearing the peak flat. Useful and unforgiving. See [soft clipping explained](https://gazillionindustries.com/soft-clipping-explained/).
 
-- Bitcrushing and sample-rate reduction: not saturation at all, but often used for the same reason. See bitcrushing explained.
+- **Bitcrushing and sample-rate reduction:** not saturation at all, but often used for the same reason. See [bitcrushing explained](https://gazillionindustries.com/bitcrushing-explained/).
 
-BEEFY is our saturation and loudness effect: BEEF for weight and density, COOK for how bright the edge gets, and SOFT CLIP on by default.
+[BEEFY](https://gazillionindustries.com/beefy.html) is our saturation and loudness effect: BEEF for weight and density, COOK for how bright the edge gets, and SOFT CLIP on by default.
+
+**BEEF at 8.** The reference you A/B against.
 
 ## Where it goes
 
@@ -61,13 +65,13 @@ BEEFY is our saturation and loudness effect: BEEF for weight and density, COOK f
 
 - On a mix bus, a decibel of drive is a lot. On a single drum, five is nothing.
 
-For the practical versions of this: how to use saturation in a mix, how to saturate drums, and parallel saturation for running it on a send.
+For the practical versions of this: [how to use saturation in a mix](https://gazillionindustries.com/how-to-use-saturation/), [how to saturate drums](https://gazillionindustries.com/how-to-saturate-drums/), and [parallel saturation](https://gazillionindustries.com/parallel-saturation/) for running it on a send.
 
 ## Where it costs you
 
 Harmonics are content, and content occupies space. Saturate everything and the upper mids fill with material that was not in the recording, which is why a session with a saturator on every channel sounds crowded and tiring without any single track sounding wrong. Transients suffer too: rounding peaks is the mechanism, so the snap goes before anything else does.
 
-And there is aliasing. Harmonics generated above the Nyquist frequency fold back down as inharmonic content, which sounds like harshness that gets worse the brighter the source. If a plugin offers oversampling, that is what it is for. See what aliasing is.
+And there is aliasing. Harmonics generated above the Nyquist frequency fold back down as inharmonic content, which sounds like harshness that gets worse the brighter the source. If a plugin offers oversampling, that is what it is for. See [what aliasing is](https://gazillionindustries.com/what-is-aliasing-in-audio/).
 
 ## Questions people ask
 
@@ -89,7 +93,7 @@ Usually after subtractive EQ and before or alongside compression, with the stron
 
 ## What BEEFY does
 
-BEEFY is a saturation and loudness effect for making sounds thicker, punchier and more up front. It adds body, squeezes some space out of the peaks, and brings out harmonics that help a sound feel bigger. BEEF is the main event: more weight, more density, more loudness and more attitude as you turn it up. COOK changes the color and bite, from a rounder feel toward a brighter, more cooked edge. JUICE sets the level going in. SOFT CLIP opens switched on and takes care of the initial gain staging, and LIMIT is the other choice when you want the output peaks held.
+BEEFY is a saturation and loudness effect for making sounds thicker, punchier and more up front. It adds body, squeezes some space out of the peaks, and brings out harmonics that help a sound feel bigger. **BEEF** is the main event: more weight, more density, more loudness and more attitude as you turn it up. **COOK** changes the color and bite, from a rounder feel toward a brighter, more cooked edge. **JUICE** sets the level going in. **SOFT CLIP** opens switched on and takes care of the initial gain staging, and **LIMIT** is the other choice when you want the output peaks held.
 
 Fifty years spent removing the failure, twenty spent buying it back. At least now you know which failure you are buying.
 

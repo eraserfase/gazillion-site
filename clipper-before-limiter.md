@@ -25,6 +25,10 @@ A clipper goes before the limiter. The clipper takes the fastest, tallest transi
 
 - **Check**: clipper only, limiter only, both, at matched loudness
 
+**SOFT CLIP as the out stage.** BEEF 62, JUICE +2.0. The clipper rounds the peak instead of holding a ceiling over it.
+
+**LIMIT as the out stage.** Identical settings otherwise. The choice is which one catches the peak, and they do not sound the same.
+
 ## Why the clipper goes first
 
 A limiter is fast but not instant. It turns the gain down over a short attack and lets it back up over a release, and when a mix is full of sharp drum hits, that movement is what you start to hear: pumping, dulled snares, a mix that breathes when it shouldn't. A clipper has no timing at all. It reshapes each sample on its own, so it can take the top off a snare without moving anything else.
@@ -35,7 +39,7 @@ Put it in front and the limiter receives a signal whose worst spikes are already
 
 The final stage has to guarantee the ceiling. A true-peak limiter estimates the peaks between samples, the ones that can appear after conversion or lossy encoding, and holds them under the ceiling you set. Put a clipper after it and the output can go back over. Streaming services ask for headroom there: Spotify recommends keeping true peaks below -1 dBTP, or below -2 dBTP for masters louder than -14 LUFS.
 
-Red Hot Chili Peppers' Californication (1999) is still the record people point to when a loud master tips over into audible clipping. Nobody wants to be the next example.
+Red Hot Chili Peppers' *Californication* (1999) is still the record people point to when a loud master tips over into audible clipping. Nobody wants to be the next example.
 
 ## How to set a clipper before a limiter
 
@@ -55,9 +59,9 @@ If the clipper is available with oversampling, use it on the master, where cymba
 
 ## Clip earlier and the master needs less
 
-The drums and the 808 create most of the fast peaks in a beat. Clip them on their own channels or bus and the master clipper has almost nothing to do, which is often the cleaner result. The detail is in soft clipping explained, and the full loudness chain is in how to make your mix louder without clipping.
+The drums and the 808 create most of the fast peaks in a beat. Clip them on their own channels or bus and the master clipper has almost nothing to do, which is often the cleaner result. The detail is in [soft clipping explained](https://gazillionindustries.com/soft-clipping-explained/), and the full loudness chain is in [how to make your mix louder without clipping](https://gazillionindustries.com/how-to-make-mix-louder-without-clipping/).
 
-BEEFY has SOFT CLIP and LIMIT as separate buttons, for the drums or 808 before they reach the master. The demo on the page is 28 seconds.
+BEEFY has [SOFT CLIP and LIMIT](https://gazillionindustries.com/beefy.html) as separate buttons, for the drums or 808 before they reach the master. The demo on the page is 28 seconds.
 
 ## What it costs
 
@@ -89,7 +93,7 @@ Not for streaming. A clipper after the limiter can push true peaks back over the
 
 ## What BEEFY does
 
-BEEFY is our saturation and loudness plugin, and it has both tools as separate choices. SOFT CLIP opens switched on, brings rounded, fuzzy edges to the loudest parts and takes care of the initial gain staging. LIMIT keeps output peaks in check. Or turn both buttons off and push it yourself, with input and output clip lights at either end.
+BEEFY is our saturation and loudness plugin, and it has both tools as separate choices. **SOFT CLIP** opens switched on, brings rounded, fuzzy edges to the loudest parts and takes care of the initial gain staging. **LIMIT** keeps output peaks in check. Or turn both buttons off and push it yourself, with input and output clip lights at either end.
 
 Most people will get the most from it on the drums, 808 and bass, so the master clipper and limiter have less to fix.
 

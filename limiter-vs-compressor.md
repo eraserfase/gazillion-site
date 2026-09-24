@@ -25,6 +25,8 @@ A limiter is a compressor with a very high ratio and a very fast attack, set to 
 
 - **Amount**: compressor 3–6 dB; limiter 1–3 dB on peaks only
 
+**DOSE 88.** Same source. The line dives on each hit and takes the whole bar to come back — that recovery is the pump.
+
 ## The line between them
 
 There is no hard border in the circuit, only in the setting. Traditionally anything above about 10:1 counts as limiting, and a true brickwall limiter behaves as if the ratio were infinite: nothing crosses the ceiling, ever. Below that you are compressing, which means the signal still gets louder as the input gets louder, just less so.
@@ -45,9 +47,9 @@ The practical distinction is what each is listening for. A compressor is reactin
 
 - If the limiter is doing more than 3 dB on average, the problem is upstream.
 
-For the loudness part of that chain in detail, see clipper before limiter and how loud should my master be.
+For the loudness part of that chain in detail, see [clipper before limiter](https://gazillionindustries.com/clipper-before-limiter/) and [how loud should my master be](https://gazillionindustries.com/how-loud-should-my-master-be/).
 
-DRUGS has both ends of this on one free panel: a compressor with one knob, and LIMIT, a soft ceiling on the output at −0.3 dBFS.
+[DRUGS](https://gazillionindustries.com/drugs.html) has both ends of this on one free panel: a compressor with one knob, and LIMIT, a soft ceiling on the output at −0.3 dBFS.
 
 ## Where each one costs you
 
@@ -55,7 +57,7 @@ A compressor costs you dynamics in exchange for consistency, and the cost shows 
 
 Both flatter themselves the same way, through make-up gain. Level-match before deciding.
 
-What to look for when the budget is nothing: best free compressor plugins.
+What to look for when the budget is nothing: [best free compressor plugins](https://gazillionindustries.com/best-free-compressor/).
 
 ## Questions people ask
 
@@ -77,7 +79,7 @@ When the drums lose their front edge and the quiet bars start moving with the lo
 
 ## What DRUGS does
 
-DRUGS is our free bus compressor for drums, and it carries both halves of this article. DOSE is the compression: it moves the transfer curve, the knee, the attack and the release together, making a drum bus denser rather than louder. GAIN adds 5 dB after the compressor and before the ceiling. LIMIT is a zero-latency soft ceiling at −0.3 dBFS on the output, with a clip indicator; it attenuates only, and it is transparent below about −0.9 dBFS. Both are on when it opens.
+DRUGS is our free bus compressor for drums, and it carries both halves of this article. **DOSE** is the compression: it moves the transfer curve, the knee, the attack and the release together, making a drum bus denser rather than louder. **GAIN** adds 5 dB after the compressor and before the ceiling. **LIMIT** is a zero-latency soft ceiling at −0.3 dBFS on the output, with a clip indicator; it attenuates only, and it is transparent below about −0.9 dBFS. Both are on when it opens.
 
 Two boxes, one number between them. Now you know which one belongs at the end.
 

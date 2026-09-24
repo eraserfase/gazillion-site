@@ -25,21 +25,23 @@ The best tape sim plugin is the one whose subset matches your use. Mastering wor
 
 - **Our answer**: TRIPLE OG for the character end, $29
 
-TRIPLE OG is our cassette sim for Mac and Windows, with the transport on the face rather than in a menu. There is a demo on the page.
+[TRIPLE OG](https://gazillionindustries.com/tripleog.html) is our cassette sim for Mac and Windows, with the transport on the face rather than in a menu. There is a demo on the page.
+
+The medium, as five controls.
 
 ## The six behaviors, and which ones you can hear
 
-- Saturation. The soft ceiling as level rises. Every plugin in the category has it and dozens outside the category do it as well, so it is the weakest reason to pick one.
+- **Saturation.** The soft ceiling as level rises. Every plugin in the category has it and dozens outside the category do it as well, so it is the weakest reason to pick one.
 
-- Compression. Tape reduces peaks before it distorts, so transients round off on the way in. Audible on drums, largely invisible on pads.
+- **Compression.** Tape reduces peaks before it distorts, so transients round off on the way in. Audible on drums, largely invisible on pads.
 
-- High-frequency loss. The top goes soft under level rather than getting cut. This is the behavior most often modeled as a filter, and the difference is obvious on cymbals.
+- **High-frequency loss.** The top goes soft under level rather than getting cut. This is the behavior most often modeled as a filter, and the difference is obvious on cymbals.
 
-- Noise. A floor under the quiet parts. Slower and narrower formats hiss more, which is why a cassette plugin should be noisier than a reel plugin.
+- **Noise.** A floor under the quiet parts. Slower and narrower formats hiss more, which is why a cassette plugin should be noisier than a reel plugin.
 
-- Speed instability. The one that cannot be faked with any other plugin you own. Wow and flutter.
+- **Speed instability.** The one that cannot be faked with any other plugin you own. [Wow and flutter](https://gazillionindustries.com/wow-and-flutter/).
 
-- Transport. Stopping, rewinding, dragging. Rare, and the only one that turns a processor into something you play.
+- **Transport.** Stopping, rewinding, dragging. Rare, and the only one that turns a processor into something you play.
 
 ## How to test one properly
 
@@ -49,19 +51,23 @@ Use three sources instead. A hi-hat pattern shows the speed instability and the 
 
 Then match the level. Every process in the list changes loudness, and an unmatched A-B measures which setting is louder, not which is better. This is the single biggest source of bad plugin decisions in the category.
 
-TRIPLE OG covers the character end of the list, including the one most plugins leave out: the transport. SLAM, SCRUB and CATCH are on the face, not in a menu. There's a demo on the page.
+[TRIPLE OG](https://gazillionindustries.com/tripleog.html) covers the character end of the list, including the one most plugins leave out: the transport. **SLAM**, **SCRUB** and **CATCH** are on the face, not in a menu. There's a demo on the page.
+
+The whole thing. Top half is the machine, bottom half is the tape, and the **SCRUB on [TRIPLE OG](https://gazillionindustries.com/tripleog.html)** strip along the bottom is played by hand.
 
 ## Reel simulations and cassette simulations are different products
 
 A studio reel runs fast and wide, and the machines were maintained. They are quiet, stable and bright, and a reel simulation that is noisy and unstable is modeling a broken machine. That is why reel plugins tend to lead on saturation and head bump.
 
-A cassette runs at 1⅞ inches per second on a strip of tape that everyone calls eighth-inch and that is actually 0.15 inches wide, carrying two stereo pairs so it can be played in both directions, through a consumer transport. Noise, bandwidth loss and instability are not faults to be minimized; they are the product. Picking a reel simulation for a lofi track is the most common wrong purchase in the category, and it is why people end up stacking a noise plugin on top of a tape plugin to get back what they should have bought in the first place. See how a tape machine works.
+A cassette runs at 1⅞ inches per second on a strip of tape that everyone calls eighth-inch and that is actually 0.15 inches wide, carrying two stereo pairs so it can be played in both directions, through a consumer transport. Noise, bandwidth loss and instability are not faults to be minimized; they are the product. Picking a reel simulation for a lofi track is the most common wrong purchase in the category, and it is why people end up stacking a noise plugin on top of a tape plugin to get back what they should have bought in the first place. See [how a tape machine works](https://gazillionindustries.com/how-does-a-tape-machine-work/).
 
 ## What "free" gets you, and what it does not
 
 Free tape plugins are genuinely good at the first three behaviors. Saturation, compression and high-frequency loss are well-understood and several free tools do them as well as paid ones.
 
 The gap is further down the list. Convincing speed instability is harder to get right than it looks, and a transport you can perform is rare at any price. If a free plugin covers what you need, use it; if you keep reaching for automation to fake movement, that is the gap you are paying to close.
+
+**AGE** is in years because that is what the quantity is. Nought to sixty, darker and noisier and less steady as it climbs.
 
 ## Reading the controls across plugins
 
@@ -71,17 +77,21 @@ A control called drive, input, saturation or hot almost always means the same th
 
 The upshot is that two plugins with completely different panels are often offering the same five or six behaviors. The real differences are how those behaviors interact, how far each one goes, and whether there is anything on the panel that is not a tape behavior at all.
 
-Hear TRIPLE OG
-
 ## What a tape sim cannot do
 
 Worth stating plainly, because most of the disappointment in this category comes from expecting one of these.
 
-It will not fix an arrangement. Tape is a finishing texture. If the parts are fighting for the same space, a tape sim makes a blurrier version of the same fight, because everything is still there and now shares a narrower window.
+**It will not fix an arrangement.** Tape is a finishing texture. If the parts are fighting for the same space, a tape sim makes a blurrier version of the same fight, because everything is still there and now shares a narrower window.
 
-It will not make a thin recording full. Saturation adds harmonics above what is already there, so it can suggest weight the recording never had. If the low end was not captured, tape does not supply it.
+**It will not make a thin recording full.** Saturation adds harmonics above what is already there, so it can suggest weight the recording never had. If the low end was not captured, tape does not supply it.
 
-It will not, by itself, sound like a record from the era. Those records went to tape through a room, a desk and a set of microphones, and got mastered and cut. The tape was one stage of many and rarely the one doing the most.
+**It will not, by itself, sound like a record from the era.** Those records went to tape through a room, a desk and a set of microphones, and got mastered and cut. The tape was one stage of many and rarely the one doing the most.
+
+The machine rather than the tape. **SLAM** is a stop you press, **SLAM RETURN** sets how long it takes to fall, and **CATCH** is the drag and the sprint back.
+
+**WOW/FLUT at 0.** The transport holds speed.
+
+**WOW/FLUT at 92.** Slow drift and fast warble at unrelated rates, not one sine.
 
 ## The behavior almost nobody simulates
 
@@ -90,6 +100,8 @@ Run through any list of tape sims and you will find the same six behaviors: satu
 A tape machine had a transport, and the transport made sounds that had nothing to do with magnetic particles. It dragged to a halt when you stopped it. It took a moment to come back up to speed. You could put a hand on the reel and hear the pitch sag. Those are performances rather than settings, they happen in time, and they cannot be approximated by automating a pitch control afterwards because the recovery behavior is the part that sells it.
 
 This is the one axis where the field is genuinely thin, and it is worth deciding whether you want it before comparing anything else, because it is the only item on the list you cannot add later.
+
+Stereo VU against a 0 VU reference, with a peak lamp. Tape level is read here, not on a bar graph.
 
 ## CPU, and how many you can actually run
 
@@ -111,7 +123,15 @@ The fix is dull and it works: match levels by ear before judging anything, and a
 
 ## Hear it
 
-Everything below is answered the same way we built TRIPLE OG — the tape is the easy half, the transport is the half almost nothing does.
+The null check described above, as audio. One loop at rest and the same loop with only the speed instability engaged, so you can hear what that behavior does on its own.
+
+- **Dry** — no processing — speed holds at 1.000 — https://gazillionindustries.com/tripleog/tog-dry.m4a
+
+- **Wow and flutter 65** — speed moves between 0.941 and 1.071 — https://gazillionindustries.com/tripleog/tog-wowflutter.m4a
+
+The same eleven seconds each time, rendered offline through [TRIPLE OG](https://gazillionindustries.com/tripleog.html) at the settings shown. No other processing, no master bus, no edits.
+
+Everything below is answered the same way we built [TRIPLE OG](https://gazillionindustries.com/tripleog.html) — the tape is the easy half, the transport is the half almost nothing does.
 
 ## Questions people ask
 
@@ -129,7 +149,7 @@ The individual behaviors are well understood and modeled closely. What varies is
 
 ### Where should a tape plugin go in the chain?
 
-On a bus rather than on every channel, after your compression, before the mix bus. On drums specifically, see tape plugins for drums.
+On a bus rather than on every channel, after your compression, before the mix bus. On drums specifically, see [tape plugins for drums](https://gazillionindustries.com/best-tape-plugins-for-drums/).
 
 ### What is the difference between a tape sim and a tape emulation?
 
@@ -153,7 +173,7 @@ Start from neutral. Presets are almost always louder and more extreme than anyth
 
 ## What TRIPLE OG does
 
-TRIPLE OG is our cassette tape simulation, so it sits at the character end of that list by design. DRIVE and TONE handle saturation and playback brightness, HISS the noise floor, AGE the wear from nought to sixty years, and WOW FLUT the speed instability. The transport is the other half: SLAM stops the tape and returns it in sync, SCRUB runs the head backward and springs home, and CATCH makes it drag and then sprint to catch up.
+[TRIPLE OG](https://gazillionindustries.com/tripleog.html) is our cassette tape simulation, so it sits at the character end of that list by design. **DRIVE** and **TONE** handle saturation and playback brightness, **HISS** the noise floor, **AGE** the wear from nought to sixty years, and **WOW FLUT** the speed instability. The transport is the other half: **SLAM** stops the tape and returns it in sync, **SCRUB** runs the head backward and springs home, and **CATCH** makes it drag and then sprint to catch up.
 
 Six behaviors. Most plugins pick three. The sixth is the one you can play.
 

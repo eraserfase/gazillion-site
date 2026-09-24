@@ -25,11 +25,15 @@ The Fletcher-Munson curves, published in 1933 and since refined into an internat
 
 - **Fix**: decide at a consistent moderate level, check at others
 
+**SOFT CLIP** as the out stage, BEEF at 62.
+
 ## Why loud always sounds better
 
 Turn any record up and the curve flattens: the low end and the air arrive in proportion, and the whole thing sounds bigger and more exciting. That is not the record improving. It is your hearing becoming more even.
 
 This is the mechanism behind the oldest trap in audio, which is that the louder of two things wins the comparison regardless of which is better. It is why level-matching before an A/B is not a nicety but the entire validity of the test, and it is why a mastering engineer turning your mix up by two decibels can appear to have improved it enormously.
+
+**LIMIT** instead, everything else identical.
 
 ## What to do about it
 
@@ -43,7 +47,7 @@ This is the mechanism behind the oldest trap in audio, which is that the louder 
 
 - Level-match every comparison you make, between plugins, between mixes, between your track and a reference.
 
-BEEFY is a saturation and loudness effect, which makes it exactly the kind of plugin that flatters itself in an unmatched comparison. Match the levels before you decide it is working.
+[BEEFY](https://gazillionindustries.com/beefy.html) is a saturation and loudness effect, which makes it exactly the kind of plugin that flatters itself in an unmatched comparison. Match the levels before you decide it is working.
 
 ## The part people get wrong
 
@@ -71,7 +75,7 @@ Because your hearing's frequency response changes with level. At low volume you 
 
 ## What BEEFY does
 
-BEEFY is a saturation and loudness effect for making sounds thicker, punchier and more up front. It adds body, squeezes some space out of the peaks, and brings out harmonics that help a sound feel bigger — and those harmonics land in the range your ears are most sensitive to, which is precisely why saturating a bass line makes it audible on a speaker that cannot reproduce the bass note at all. BEEF, COOK and JUICE are the three knobs; SOFT CLIP and LIMIT are the output choices.
+BEEFY is a saturation and loudness effect for making sounds thicker, punchier and more up front. It adds body, squeezes some space out of the peaks, and brings out harmonics that help a sound feel bigger — and those harmonics land in the range your ears are most sensitive to, which is precisely why saturating a bass line makes it audible on a speaker that cannot reproduce the bass note at all. **BEEF**, **COOK** and **JUICE** are the three knobs; **SOFT CLIP** and **LIMIT** are the output choices.
 
 Your monitors are consistent. You are the variable, and you have been all along.
 

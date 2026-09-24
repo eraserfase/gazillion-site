@@ -25,23 +25,27 @@ To make lofi drums, start with soft, simple hits or a drum loop, program them wi
 
 - **Noise**: a quiet bed under the kit
 
+**12 bit, full rate.** The quantisation is there but the top end is intact.
+
+**4 bit at 8 kHz.** Bits make it grainy; the rate is what makes it clang.
+
 ## Pick the right hits
 
 Lofi drums are quiet drums. Pick a kick with a soft, round thump instead of a click, a snare or rim with a dull crack, and hats that are more shuffle than sizzle. A sampled drum loop from an old record, or a loop that already sounds a little worn, gets you most of the way before any processing.
 
 ## Swing it and loosen it
 
-Straight timing kills the feel. Push the offbeat hats late with a strong swing setting, then vary velocities so no two hats hit the same. Nudge a snare or two a few milliseconds off the grid. The goal is a drummer who's a little tired and very good. The general groove advice in how to make boom bap drums applies here too, just slower and softer.
+Straight timing kills the feel. Push the offbeat hats late with a strong swing setting, then vary velocities so no two hats hit the same. Nudge a snare or two a few milliseconds off the grid. The goal is a drummer who's a little tired and very good. The general groove advice in [how to make boom bap drums](https://gazillionindustries.com/how-to-make-boom-bap-drums/) applies here too, just slower and softer.
 
 ## Take the shine off
 
-A low-pass filter on the drum bus is the fastest lofi move there is. Bring the cutoff down until the hats stop clicking and the snare loses its edge, then back it off slightly so the groove still reads. Then crush them a little: fewer bits for grit, a lower sample rate for that folded, metallic top. The mechanics are in bitcrushing explained.
+A low-pass filter on the drum bus is the fastest lofi move there is. Bring the cutoff down until the hats stop clicking and the snare loses its edge, then back it off slightly so the groove still reads. Then crush them a little: fewer bits for grit, a lower sample rate for that folded, metallic top. The mechanics are in [bitcrushing explained](https://gazillionindustries.com/bitcrushing-explained/).
 
-F(ilter)12 puts a filter and the crush pair on one panel, for drums and samples. There's a demo on the page.
+[F(ilter)12](https://gazillionindustries.com/f12.html) puts a filter and the crush pair on one panel, for drums and samples. There's a demo on the page.
 
 ## Glue and room
 
-Squash the drum bus gently with a compressor so the hits and their tails come together, add a little saturation for warmth (see how to saturate drums), and put the kit in a short, dark room. Lofi drums sound like they're in the next room, not in your face.
+Squash the drum bus gently with a compressor so the hits and their tails come together, add a little saturation for warmth (see [how to saturate drums](https://gazillionindustries.com/how-to-saturate-drums/)), and put the kit in a short, dark room. Lofi drums sound like they're in the next room, not in your face.
 
 ## How to make lofi drums
 
@@ -83,7 +87,7 @@ Roll off the high end, reduce the sample rate or bit depth a little, add saturat
 
 ## What F(ilter)12 does
 
-F(ilter)12 is our 12 bit sauce filter, built for drums and samples. Its lo-fi section is SAMPLE RATE, which rolls off the top and folds what was up there back down, and BIT, which rounds off quiet detail and gives what remains a hard edge. The filter behind it has five shapes, six resonance shapes and DRIVE, and AUTO FILTER can move it with swing. One producer's line on the page: it gave their drums some vintage dust.
+F(ilter)12 is our 12 bit sauce filter, built for drums and samples. Its lo-fi section is **SAMPLE RATE**, which rolls off the top and folds what was up there back down, and **BIT**, which rounds off quiet detail and gives what remains a hard edge. The filter behind it has five shapes, six resonance shapes and **DRIVE**, and **AUTO FILTER** can move it with swing. One producer's line on the page: it gave their drums some vintage dust.
 
 Two winters, one flood, and they still fit.
 

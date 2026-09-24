@@ -33,6 +33,8 @@ Beyond the frequency shaping, the plugin introduces noise. A steady hiss sits un
 
 The third thing a vinyl sim does is compress the signal in a nonlinear way. Transients get softened, peaks get tamed, and the overall dynamic range narrows without a traditional compressor doing the work. Harmonic distortion layers in, usually even-order, which thickens the sound and makes it feel denser. The combination of all these elements is what separates a convincing simulation from a thin one. A thin simulation applies only the frequency curve and the noise floor, leaving the signal otherwise untouched. A convincing one also handles the transient behavior, the saturation, and the pitch instability together, so the result reads as a single coherent artifact rather than a stack of unrelated processing.
 
+**DOSE 88.** It dives on each hit and takes the bar to come back.
+
 ## Why it works on drums
 
 Drums are the first thing most producers reach for when they want that vinyl character, and the reason is straightforward. A drum hit is a burst of energy that starts and stops abruptly, and the gentle compression built into a vinyl sim softens those edges without you having to dial in a compressor manually. The attack gets a little rounder, the tail gets a little thicker, and the whole kit starts to sit together in a way that feels physical rather than clinical. The noise floor fills the silence between hits, giving the track a sense of air and room that a clean digital recording often lacks.
@@ -48,6 +50,8 @@ A vinyl simulation plugin works by layering several distinct behaviors on top of
 The second part is noise. Surface noise, crackle, and a faint hiss sit underneath everything else, and they are not random in the way a white noise generator produces them. Real noise has a character tied to the physical medium, with pops that cluster and a floor that breathes. The third part is the dynamic behavior. A vinyl chain applies a gentle, program-dependent squash that rounds transients and pulls the mix together in a way that resembles compression but is not quite compression. It is more like the medium absorbing energy unevenly across the frequency spectrum.
 
 The fourth part is wear. Wow and flutter introduce slow pitch instability, and harmonic distortion adds a subtle thickness that no simple saturation model quite captures. These four elements interact. Bandwidth shapes how the noise sits in the mix, the squash changes how the distortion reads, and the wear ties everything into a sense of physical motion. A convincing sim handles all four as a system. A thin one treats them as independent toggles you can switch on and off, which is why it sounds like a filter with a noise gate rather than a record.
+
+**DOSE 95, MIX 45.** The squashed copy under the dry one, without a send.
 
 ## How to set one
 
@@ -81,7 +85,7 @@ Place it at the end of your processing chain, after your equalization, compressi
 
 ## What DRUGS does
 
-DRUGS is our bus compressor for drums, free for Mac and Windows. One control called DOSE, with MIX on the face for parallel without a send, GAIN on the way out and a soft ceiling after it. It has no threshold and no ratio, because the whole point is that you do not set them.
+DRUGS is our bus compressor for drums, free for Mac and Windows. One control called **DOSE**, with **MIX** on the face for parallel without a send, **GAIN** on the way out and a soft ceiling after it. It has no threshold and no ratio, because the whole point is that you do not set them.
 
 ---
 

@@ -25,6 +25,8 @@ A snare hits harder when its crack is sharp, its body has weight, and its peaks 
 
 - **Room**: a short reverb, not a wash
 
+**BEEF at 8.** The reference you A/B against.
+
 ## Body, crack and wires
 
 A snare is three sounds at once. The body is the drum's tone, usually somewhere in the low hundreds of hertz. The crack is the stick hitting the head, higher up in the low thousands. The wires add sizzle above that. A snare that sounds weak is almost always missing one of the three, and the fix is to find out which before touching anything. Solo it and ask: no weight, no snap, or no air?
@@ -39,13 +41,15 @@ A clap or a short burst of noise on top of the snare adds snap that cuts through
 
 ## Protect the transient
 
-A compressor with a fast attack flattens the stick hit. Set it around 10 to 30 ms so the crack gets through and the body comes up behind it. Or use a transient shaper and turn the attack up directly. The difference between the two approaches is in transient shaper vs saturation.
+A compressor with a fast attack flattens the stick hit. Set it around 10 to 30 ms so the crack gets through and the body comes up behind it. Or use a transient shaper and turn the attack up directly. The difference between the two approaches is in [transient shaper vs saturation](https://gazillionindustries.com/transient-shaper-vs-saturation/).
+
+**BEEF at 8.** The reference you A/B against.
 
 ## Saturate it
 
-Snares usually take more drive than kicks, because most of what makes a snare a snare lives in the mids. Drive it until the body fattens and the crack comes forward; stop before the crack turns papery. More in how to saturate drums.
+Snares usually take more drive than kicks, because most of what makes a snare a snare lives in the mids. Drive it until the body fattens and the crack comes forward; stop before the crack turns papery. More in [how to saturate drums](https://gazillionindustries.com/how-to-saturate-drums/).
 
-BEEFY is for snares that need more smack. The demo on the page is 28 seconds.
+[BEEFY](https://gazillionindustries.com/beefy.html) is for snares that need more smack. The demo on the page is 28 seconds.
 
 ## Clip the peaks, then turn it up
 
@@ -59,7 +63,7 @@ BEEFY is for snares that need more smack. The demo on the page is 28 seconds.
 
 - Compare with the clipper bypassed at matched loudness.
 
-The mechanics are in soft clipping explained.
+The mechanics are in [soft clipping explained](https://gazillionindustries.com/soft-clipping-explained/).
 
 ## Give it a room
 
@@ -89,7 +93,7 @@ On recorded drums, buzz is the snare wires ringing when other drums or bass play
 
 ## What BEEFY does
 
-BEEFY is our saturation and loudness plugin, for snares that need more smack. BEEF adds weight, density and loudness as you turn it up. COOK moves the tone from a rounder feel toward a brighter, more cooked edge, which on a snare is where the crack lives. SOFT CLIP, on by default, rounds off the loudest parts, and LIMIT holds the output peaks instead if you'd rather.
+BEEFY is our saturation and loudness plugin, for snares that need more smack. **BEEF** adds weight, density and loudness as you turn it up. **COOK** moves the tone from a rounder feel toward a brighter, more cooked edge, which on a snare is where the crack lives. **SOFT CLIP**, on by default, rounds off the loudest parts, and **LIMIT** holds the output peaks instead if you'd rather.
 
 Same starter's pistol. This time the race actually starts.
 

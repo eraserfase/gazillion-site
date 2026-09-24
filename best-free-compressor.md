@@ -33,6 +33,8 @@ The attack and release curves need to behave in a way that matches what you expe
 
 Metering is the other thing that separates a usable free compressor from a toy. You need to see gain reduction clearly, ideally with a scale that maps to the signal you are processing rather than an arbitrary range. If you cannot tell whether the compressor is doing two decibels of reduction or twelve, you are working blind, and no amount of clever circuitry behind the plugin compensates for that.
 
+**DOSE 12.** The line along the bottom is gain reduction; here it barely leaves the top.
+
 ## The jobs you actually need one for
 
 A drum bus is the first place most producers reach for a compressor, and for good reason. When you send a kit through a single channel, the transients from the kick and snare can punch through while the overheads sit too quiet, or the hi-hat pokes out at the wrong moment. A compressor with a medium attack and a moderate ratio tames those spikes and lets the kit sit as one unit rather than a collection of separate sounds. The trick is knowing whether you want the compressor to react to the whole bus or just the loudest hits, and that choice shapes how the drums feel in the mix.
@@ -48,6 +50,8 @@ Free compressors tend to fall short when the job demands transparency. Glue comp
 Sidechain routing is another common gap. Many free plugins accept only the main input as the detector source, which rules out ducking a pad against a vocal or triggering a gate from a separate track. Even when a sidechain input exists, there is rarely a filter on the detector path, so you cannot isolate the frequency band that should trigger the compression. This forces you to either accept a blunt response or route the signal through a separate equalizer before it reaches the compressor, adding steps that a paid plugin handles internally.
 
 The final limitation is one of consistency. Free compressors often behave differently at higher sample rates, introducing aliasing or phase shifts that a paid plugin corrects with oversampling. They also tend to lack built-in metering, so you are guessing at gain reduction by ear or relying on a separate utility plugin. None of this makes a free compressor useless, but it does mean that the more subtle and integrated your processing chain becomes, the more you will feel the absence of the features that paid tools take for granted.
+
+**DOSE 88.** It dives on each hit and takes the bar to come back.
 
 ## How to test one in five minutes
 
@@ -65,7 +69,7 @@ Avoid free compressors that are deliberately crippled versions of a paid product
 
 Avoid free compressors that impose a fixed character on every signal passing through them. Some plugins are designed to sound like a particular piece of vintage hardware, and that coloration is baked into the processing regardless of your settings. This is useful when you want that specific flavor, but it becomes a liability when you need a transparent glue compressor on a bus that already has a lot going on. You want a compressor that stays out of the way unless you tell it otherwise, one where the coloration is a choice rather than a default.
 
-The wider question of which categories are worth filling for free is in best free VST plugins.
+The wider question of which categories are worth filling for free is in [best free VST plugins](https://gazillionindustries.com/best-free-vst-plugins/).
 
 ## Questions people ask
 
@@ -83,7 +87,7 @@ One good compressor handles most of what you need day to day. That said, differe
 
 ## What DRUGS does
 
-DRUGS is our bus compressor for drums, free for Mac and Windows. One control called DOSE, with MIX on the face for parallel without a send, GAIN on the way out and a soft ceiling after it. It has no threshold and no ratio, because the whole point is that you do not set them.
+DRUGS is our bus compressor for drums, free for Mac and Windows. One control called **DOSE**, with **MIX** on the face for parallel without a send, **GAIN** on the way out and a soft ceiling after it. It has no threshold and no ratio, because the whole point is that you do not set them.
 
 ---
 

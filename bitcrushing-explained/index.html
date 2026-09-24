@@ -47,7 +47,7 @@ fbq('init', '1164684366890206');
 fbq('track', 'PageView');
 }
 </script>
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"TechArticle","@id":"https://gazillionindustries.com/bitcrushing-explained/#article","headline":"Bitcrushing explained","description":"What a bitcrusher does: bit depth, quantization noise, sample rate reduction and aliasing, what 16, 12 and 8 bits sound like, and how to use it on drums and samples.","image":"https://gazillionindustries.com/f12/og.jpg","inLanguage":"en","datePublished":"2026-09-14","dateModified":"2026-09-24","url":"https://gazillionindustries.com/bitcrushing-explained/","mainEntityOfPage":"https://gazillionindustries.com/bitcrushing-explained/","author":{"@id":"https://gazillionindustries.com/#gazillion"},"publisher":{"@id":"https://gazillionindustries.com/#gazillion"},"about":{"@type":"SoftwareApplication","name":"F(ilter)12","url":"https://gazillionindustries.com/f12.html"},"isPartOf":{"@id":"https://gazillionindustries.com/reading-material/#page"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Gazillion Industries","item":"https://gazillionindustries.com/"},{"@type":"ListItem","position":2,"name":"Reading material","item":"https://gazillionindustries.com/reading-material/"},{"@type":"ListItem","position":3,"name":"Bitcrushing explained","item":"https://gazillionindustries.com/bitcrushing-explained/"}]},{"@type":"Organization","@id":"https://gazillionindustries.com/#gazillion","name":"Gazillion Industries LLC","alternateName":"Gazillion Industries","url":"https://gazillionindustries.com/"},{"@type":"FAQPage","@id":"https://gazillionindustries.com/bitcrushing-explained/#faq","mainEntity":[{"@type":"Question","name":"What is the difference between distortion and a bitcrusher?","acceptedAnswer":{"@type":"Answer","text":"Distortion reshapes the waveform on a smooth curve and adds harmonics, so it sounds warm or gritty. A bitcrusher reduces bit depth and often sample rate, adding quantization noise and aliasing, so it sounds digital and crunchy."}},{"@type":"Question","name":"Is bitcrushing used on vocals?","acceptedAnswer":{"@type":"Answer","text":"Yes, as an effect: a little for a lo-fi or radio texture, a lot for a broken, robotic sound. It's usually blended or automated rather than left on a whole lead vocal."}},{"@type":"Question","name":"Does 12-bit sound better than 16-bit?","acceptedAnswer":{"@type":"Answer","text":"Not technically: 16-bit has more dynamic range and less noise. But 12-bit has a grain and warmth that many producers like, which is why vintage 12-bit samplers are still loved."}}]}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"TechArticle","@id":"https://gazillionindustries.com/bitcrushing-explained/#article","headline":"Bitcrushing explained","description":"What a bitcrusher does: bit depth, quantization noise, sample rate reduction and aliasing, what 16, 12 and 8 bits sound like, and how to use it on drums and samples.","image":"https://gazillionindustries.com/f12/og.jpg","inLanguage":"en","datePublished":"2026-09-14","dateModified":"2026-09-24","url":"https://gazillionindustries.com/bitcrushing-explained/","mainEntityOfPage":"https://gazillionindustries.com/bitcrushing-explained/","author":{"@id":"https://gazillionindustries.com/#gazillion"},"publisher":{"@id":"https://gazillionindustries.com/#gazillion"},"about":{"@type":"SoftwareApplication","name":"F(ilter)12","url":"https://gazillionindustries.com/f12.html"},"isPartOf":{"@id":"https://gazillionindustries.com/reading-material/#page"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Gazillion Industries","item":"https://gazillionindustries.com/"},{"@type":"ListItem","position":2,"name":"Reading material","item":"https://gazillionindustries.com/reading-material/"},{"@type":"ListItem","position":3,"name":"Bitcrushing explained","item":"https://gazillionindustries.com/bitcrushing-explained/"}]},{"@type":"Organization","@id":"https://gazillionindustries.com/#gazillion","name":"Gazillion Industries LLC","alternateName":"Gazillion Industries","url":"https://gazillionindustries.com/"},{"@type":"FAQPage","@id":"https://gazillionindustries.com/bitcrushing-explained/#faq","mainEntity":[{"@type":"Question","name":"What is the difference between distortion and a bitcrusher?","acceptedAnswer":{"@type":"Answer","text":"Distortion reshapes the waveform on a smooth curve and adds harmonics, so it sounds warm or gritty. A bitcrusher reduces bit depth and often sample rate, adding quantization noise and aliasing, so it sounds digital and crunchy."}},{"@type":"Question","name":"Is bitcrushing used on vocals?","acceptedAnswer":{"@type":"Answer","text":"Yes, as an effect: a little for a lo-fi or radio texture, a lot for a broken, robotic sound. It's usually blended or automated rather than left on a whole lead vocal."}},{"@type":"Question","name":"Does 12-bit sound better than 16-bit?","acceptedAnswer":{"@type":"Answer","text":"Not technically: 16-bit has more dynamic range and less noise. But 12-bit has a grain and warmth that many producers like, which is why vintage 12-bit samplers are still loved. 12 bit sampler plugins covers what the format does to a sample and what the second half of the sound is."}}]}]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Archivo+Black&display=swap">
@@ -135,6 +135,20 @@ h3{margin:28px 0 8px; font-size:17px; font-weight:600; line-height:1.4; color:va
 ul,ol{margin:0 0 16px; padding-left:1.2em}
 li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
 .cta{background:var(--accent); color:var(--field-deep)}
+
+/* ---- listen block -------------------------------------------------------
+   Every page that ranks for these terms explains how tape SOUNDS in words and
+   then shows a screenshot. None of them lets you hear it. These are real
+   renders of one loop through TRIPLE OG, labelled with the settings, so the
+   reader can check the description against the thing itself. */
+.listen{margin:0 0 8px}
+.listen figure{margin:0 0 18px}
+.listen figure:last-child{margin-bottom:0}
+.listen figcaption{font-size:12px; letter-spacing:.14em; text-transform:uppercase;
+                   color:var(--ink-faint); margin:0 0 8px}
+.listen figcaption b{color:var(--ink); font-weight:600; letter-spacing:.06em}
+.listen audio{width:100%; height:36px; display:block}
+.listen .src{font-size:13px; color:var(--ink-faint); margin:14px 0 0; line-height:1.5}
 
 .pframe{display:flex; flex-direction:column; align-items:center; gap:14px;
         margin:0 auto 30px; max-width:420px; text-align:center;
@@ -263,9 +277,13 @@ li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
   <h3>Does 12-bit sound better than 16-bit?</h3>
   <p>Not technically: 16-bit has more dynamic range and less noise. But 12-bit has a
   grain and warmth that many producers like, which is why vintage 12-bit samplers are
-  still loved.</p>
+  still loved. <a class="inline" href="/12-bit-sampler-plugins/">12 bit sampler plugins</a>
+  covers what the format does to a sample and what the second half of the sound is.</p>
 
   <h2>Stock plugins that do this</h2>
+  <p>Three of these are already installed. What to listen for when comparing them, and the
+  paid ones worth knowing, are in <a class="inline" href="/best-bitcrusher-plugins/">best
+  bitcrusher plugins</a>.</p>
   <div class="card">
     <dl>
       <dt>FL Studio</dt><dd>Fruity Squeeze (bit reduction)</dd>

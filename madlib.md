@@ -3,7 +3,7 @@
 > How Madlib actually works: the hotel-room rig behind Madvillainy, sampling whole records, ten minutes a beat, and how the Quasimoto voice is really made.
 
 Source: https://gazillionindustries.com/madlib/  
-Published 2026-09-20, updated 2026-09-24. By Gazillion Industries, who make Gazillion Industries.
+Published 2026-09-20, updated 2026-09-24. By Gazillion Industries.
 
 ---
 
@@ -29,7 +29,7 @@ Otis Jackson Jr., who records as Madlib, was born in 1973 in Oxnard, California,
 
 In late 2002 he went to Brazil for a Red Bull Music Academy session and took almost nothing with him. The tracks he made there fed into Madvillainy, released in 2004 with MF DOOM, and his own account of the setup is specific: a portable turntable, a BOSS SP-303 and a little tape deck. He has repeated the point every time anybody asks about equipment.
 
-That is not a story about minimalism as a virtue. It is a story about what a sampler is for. If your method is to find something in a record and get it into a loop quickly, the smallest box that can do that is the correct box, and everything else is a delay between hearing the thing and having it. Our piece on the SP-303 covers what that particular machine did to whatever went through it.
+That is not a story about minimalism as a virtue. It is a story about what a sampler is for. If your method is to find something in a record and get it into a loop quickly, the smallest box that can do that is the correct box, and everything else is a delay between hearing the thing and having it. Our piece on [the SP-303](https://gazillionindustries.com/sp-303/) covers what that particular machine did to whatever went through it.
 
 ## The whole record
 
@@ -43,11 +43,11 @@ He mixes to stereo as he goes. "I'd lay the beat straight out. To two channels."
 
 That creates a real engineering problem downstream, and there is a documented solution to it. Dave Cooley, the engineer who mixed and mastered a lot of this material, has described manufacturing stereo width out of Madlib's mono loops using gates, reverb and a signal generator — building a stereo field after the fact because the source did not have one. That is the cost of committing early, and someone has to pay it.
 
-Gazillion Industries builds plugins for this end of the process: commit, print, move on.
+[Gazillion Industries](https://gazillionindustries.com/) builds plugins for this end of the process: commit, print, move on.
 
 ## The Quasimoto voice
 
-The high-pitched character on his own records is not a pitch shifter. His explanation, given in several interviews over several years, is mechanical: he slows the tape down and raps slowly against it, so that at normal speed the voice comes back fast and high. The formants move with the pitch because the whole recording moved, which is why it sounds like a different creature rather than a processed human. See formant shifting for why that distinction matters and varispeed for the mechanism.
+The high-pitched character on his own records is not a pitch shifter. His explanation, given in several interviews over several years, is mechanical: he slows the tape down and raps slowly against it, so that at normal speed the voice comes back fast and high. The formants move with the pitch because the whole recording moved, which is why it sounds like a different creature rather than a processed human. See [formant shifting](https://gazillionindustries.com/formant-shifting/) for why that distinction matters and [varispeed](https://gazillionindustries.com/what-is-varispeed/) for the mechanism.
 
 ## The caveman and the iPad
 
@@ -57,9 +57,9 @@ Both statements are true and the change is smaller than it looks. An iPad runnin
 
 ## The catalog, briefly
 
-Lootpack got him onto Stones Throw. Quasimoto gave him a voice to rap in. Yesterdays New Quintet let him play every instrument on a jazz record under invented band names. Shades of Blue gave him the Blue Note archive to rebuild. Champion Sound with J Dilla in 2003 put two producers over each other's beats. Madvillainy with MF DOOM in 2004 is the one most people start with. Piñata in 2014 and Bandana in 2019 with Freddie Gibbs proved the method still worked on records that needed to sell. Sound Ancestors in 2021, assembled with Kieran Hebden, is the closest thing to an edited overview of what he does.
+Lootpack got him onto Stones Throw. Quasimoto gave him a voice to rap in. Yesterdays New Quintet let him play every instrument on a jazz record under invented band names. Shades of Blue gave him the Blue Note archive to rebuild. Champion Sound with [J Dilla](https://gazillionindustries.com/j-dilla/) in 2003 put two producers over each other's beats. Madvillainy with [MF DOOM](https://gazillionindustries.com/mf-doom/) in 2004 is the one most people start with. Piñata in 2014 and Bandana in 2019 with Freddie Gibbs proved the method still worked on records that needed to sell. Sound Ancestors in 2021, assembled with Kieran Hebden, is the closest thing to an edited overview of what he does.
 
-The working method, as things you can do rather than things to admire, is in how to make Madlib type beats.
+The working method, as things you can do rather than things to admire, is in [how to make Madlib type beats](https://gazillionindustries.com/how-to-make-madlib-type-beats/).
 
 ## Questions people ask
 
@@ -79,7 +79,9 @@ By his own account, about ten minutes on a beat before moving on, and he samples
 
 Nobody has published a number, including him. His own answers have ranged from a couple of rooms to four rooms and a wish for ten. Any specific figure you see is somebody's estimate.
 
-We make DRUGS. The bus compressor we make for exactly this material — breaks that arrived already dusty.
+The bus compressor we make for exactly this material — breaks that arrived already dusty.
+
+We make [DRUGS](https://gazillionindustries.com/drugs.html). The bus compressor we make for exactly this material — breaks that arrived already dusty.
 
 ## What to take from it
 

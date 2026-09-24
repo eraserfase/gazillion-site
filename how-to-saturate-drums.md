@@ -27,6 +27,10 @@ Saturating drums means driving them into gentle distortion so they pick up harmo
 
 - **Check**: at matched loudness, on a phone too
 
+**BEEF at 8.** Barely doing anything — useful as the reference you A/B against.
+
+**BEEF at 96.** Where the plug-in stops being polite. Most settings that sound right in solo are about half this.
+
 ## What saturation does to a drum
 
 Saturation adds and takes. It adds harmonics, new frequencies stacked above the ones the hit already has. And because the curve flattens as it's pushed, it takes a little off the peaks, which brings the body of each hit up toward its front edge.
@@ -45,7 +49,7 @@ Snares usually take more heat than kicks, because most of what makes a snare a s
 
 Bus saturation is a group decision. Every hit pushes the curve for everything playing at that moment, so when the kick lands, the snare and hats get driven with it. That shared push is the glue on a good day and the grit on a bad one.
 
-A little on the whole kit pulls the hits and the room closer together. A lot turns cymbals into sandpaper on every downbeat. If the top end gets harsh, keep the hats and cymbals out of the saturated bus, or darken what goes into it. For the compression side of the bus, see drum bus compressor settings.
+A little on the whole kit pulls the hits and the room closer together. A lot turns cymbals into sandpaper on every downbeat. If the top end gets harsh, keep the hats and cymbals out of the saturated bus, or darken what goes into it. For the compression side of the bus, see [drum bus compressor settings](https://gazillionindustries.com/drum-bus-compressor-settings/).
 
 ## Parallel saturation
 
@@ -61,7 +65,7 @@ Keep the clean drums and add the burnt ones.
 
 The front edge stays with the dry drums and the density comes from the return, so you can push the saturation further than an insert would allow.
 
-Or put BEEFY on the drum bus and turn up BEEF. The demo on the page is 28 seconds.
+Or put [BEEFY](https://gazillionindustries.com/beefy.html) on the drum bus and turn up BEEF. The demo on the page is 28 seconds.
 
 ## Before or after compression?
 
@@ -73,9 +77,9 @@ The name on the plugin matters less than the curve and how hard you hit it. Tape
 
 ## How much
 
-Until you hear it, then less. Saturation adds level, and louder always sounds better for a few seconds, so level-match against bypass before you judge. Then play it on a phone. If you notice the saturation before you notice the drums, back off.
+Until you hear it, then less. Saturation adds level, and louder always sounds better for a few seconds, so **level-match against bypass before you judge**. Then play it on a phone. If you notice the saturation before you notice the drums, back off.
 
-If you've crushed the drums already, soft clipping explained covers the peaks, and how to make drums hit harder covers everything around them.
+If you've crushed the drums already, [soft clipping explained](https://gazillionindustries.com/soft-clipping-explained/) covers the peaks, and [how to make drums hit harder](https://gazillionindustries.com/how-to-make-drums-hit-harder/) covers everything around them.
 
 ## A sampled break takes it differently
 
@@ -125,7 +129,7 @@ No, and it is the main reason one setting does not travel between beats. A break
 
 BEEFY is our saturation and loudness plugin. Put it on the whole drum bus to pull the hits and the body closer together, or give a kick or a snare its own helping.
 
-BEEF is the main control: more weight, density and loudness as it goes up. COOK changes the color and bite, from a rounder feel toward a brighter, more cooked edge. SOFT CLIP opens switched on and handles the initial gain staging, and LIMIT holds the output peaks instead if you prefer. For parallel saturation, run it on a return track like any other insert.
+**BEEF** is the main control: more weight, density and loudness as it goes up. **COOK** changes the color and bite, from a rounder feel toward a brighter, more cooked edge. **SOFT CLIP** opens switched on and handles the initial gain staging, and **LIMIT** holds the output peaks instead if you prefer. For parallel saturation, run it on a return track like any other insert.
 
 Same drums, same pack. They just don't sound like a hospital hallway anymore.
 

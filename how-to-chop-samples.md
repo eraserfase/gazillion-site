@@ -25,9 +25,11 @@ To chop a sample, set your session to the sample's tempo, cut it at musical poin
 
 - **Keep**: one chop that is obviously wrong: it usually earns its place
 
+**DOSE 95, MIX 45.** Parallel without a send.
+
 ## Find the tempo and the key before you cut
 
-Everything downstream depends on those two numbers. Tap the tempo across four bars or let your DAW detect it, then check it by playing a metronome underneath: if it drifts, the record was played by people and you should follow the drift rather than fight it. For the key, play the root against the sample until it stops arguing. How to pitch a sample goes through both, including what happens to the tempo when you move the pitch.
+Everything downstream depends on those two numbers. Tap the tempo across four bars or let your DAW detect it, then check it by playing a metronome underneath: if it drifts, the record was played by people and you should follow the drift rather than fight it. For the key, play the root against the sample until it stops arguing. [How to pitch a sample](https://gazillionindustries.com/how-to-pitch-a-sample/) goes through both, including what happens to the tempo when you move the pitch.
 
 ## How to chop a sample
 
@@ -51,13 +53,15 @@ Everything downstream depends on those two numbers. Tap the tempo across four ba
 
 A click at a slice edge is a jump in the waveform: the sample is at some value when you cut it, the next thing is silence, and the speaker has to get there instantly. Cutting at a zero crossing, where the waveform passes through the center line, removes most of them. A very short fade removes the rest and costs you nothing audible at 2 to 5 ms. If a chop still ticks, the problem is usually at the end, not the beginning.
 
-DRUGS is our free one-knob bus compressor. It was built for drums, and a bus of chopped drums is exactly what it was voiced on: turn DOSE up and the room behind the hits comes up with it.
+[DRUGS](https://gazillionindustries.com/drugs.html) is our free one-knob bus compressor. It was built for drums, and a bus of chopped drums is exactly what it was voiced on: turn DOSE up and the room behind the hits comes up with it.
+
+**DOSE 95, MIX 45.** Parallel without a send.
 
 ## Make the chops sound like a part
 
-Chopped pieces from one record share a room, a tape and a mastering chain, so they already belong together. What breaks the illusion is dynamics: one chop lands 4 dB louder than its neighbor because that is where the horn player leaned in. Ride the levels by hand, then put the whole chop bus through one compressor so they move together, which is the same trick as glue compression on a drum group.
+Chopped pieces from one record share a room, a tape and a mastering chain, so they already belong together. What breaks the illusion is dynamics: one chop lands 4 dB louder than its neighbor because that is where the horn player leaned in. Ride the levels by hand, then put the whole chop bus through one compressor so they move together, which is the same trick as [glue compression](https://gazillionindustries.com/glue-compression/) on a drum group.
 
-If the chops sound too clean next to your drums, take them the other way: a filter, some crush, a little noise. How to make a sample sound old has the settings.
+If the chops sound too clean next to your drums, take them the other way: a filter, some crush, a little noise. [How to make a sample sound old](https://gazillionindustries.com/how-to-make-a-sample-sound-old/) has the settings.
 
 ## Where it costs you
 
@@ -79,7 +83,7 @@ Fade the edges, keep the tails of chords instead of cutting them off, and let on
 
 ## What DRUGS does
 
-DRUGS is our free bus compressor with one macro control, called DOSE. It makes a drum bus denser rather than louder, because peak level barely moves across the range of the knob, and it brings the room up underneath the hits. MIX is dry/wet with zero latency, so you can blend it parallel against your chops without them smearing, and LIMIT is a soft ceiling at −0.3 dBFS on the output.
+DRUGS is our free bus compressor with one macro control, called **DOSE**. It makes a drum bus denser rather than louder, because peak level barely moves across the range of the knob, and it brings the room up underneath the hits. **MIX** is dry/wet with zero latency, so you can blend it parallel against your chops without them smearing, and **LIMIT** is a soft ceiling at −0.3 dBFS on the output.
 
 The bus route is still out there. You just stopped riding it round in circles.
 

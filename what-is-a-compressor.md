@@ -25,6 +25,10 @@ A compressor automatically turns a signal down when it gets louder than a level 
 
 - **Make-up**: gain added afterward, which is why it always sounds better
 
+**DOSE 12.** The curve at the bottom is gain reduction; here it hardly leaves the top.
+
+**DOSE 88.** Same source. The line dives on each hit and takes the whole bar to come back — that recovery is the pump.
+
 ## What it is actually doing
 
 Think of it as a hand on a fader that only moves in one direction. Below the threshold, no hand. Above it, the hand pulls the fader down, and the ratio decides how far: at 4:1, a signal arriving 8 dB over the threshold leaves 2 dB over it. The gain reduction meter shows you that hand moving, in decibels, and it is the only meter on the unit worth watching.
@@ -33,19 +37,19 @@ Attack and release are the part people get wrong, because they are what make a c
 
 ## Settings that are a reasonable place to start
 
-- Vocals: 3:1, attack 5–10 ms, release 60–150 ms, 3–6 dB of gain reduction on the loud words.
+- **Vocals:** 3:1, attack 5–10 ms, release 60–150 ms, 3–6 dB of gain reduction on the loud words.
 
-- Single drums: 4:1, attack 10–30 ms, release short enough to recover before the next hit.
+- **Single drums:** 4:1, attack 10–30 ms, release short enough to recover before the next hit.
 
-- Drum bus: 2:1, attack 30 ms, auto release, 1–3 dB.
+- **Drum bus:** 2:1, attack 30 ms, auto release, 1–3 dB.
 
-- Bass: 4:1, attack 10–20 ms, release matched to the tempo, so it breathes with the track rather than against it.
+- **Bass:** 4:1, attack 10–20 ms, release matched to the tempo, so it breathes with the track rather than against it.
 
-- Mix bus: 1.5:1 or 2:1, slow attack, auto release, 1–2 dB and no more.
+- **Mix bus:** 1.5:1 or 2:1, slow attack, auto release, 1–2 dB and no more.
 
 Those are starting points, not answers. The material decides: a shouted chorus and a whispered verse need different releases, and a sampled break that is already compressed on the record may need nothing at all.
 
-DRUGS is our free bus compressor for drums, built the other way round: one knob called DOSE, and no setup.
+[DRUGS](https://gazillionindustries.com/drugs.html) is our free bus compressor for drums, built the other way round: one knob called DOSE, and no setup.
 
 ## The level-matching trap
 
@@ -55,7 +59,7 @@ Make-up gain makes a compressor louder, and louder always wins a quick compariso
 
 Compression trades dynamics for consistency. That is the deal, and it is a good deal right up until the performance stops moving. Fast attacks eat transients, so the snare loses its crack. Long releases hold the gain down through the quiet parts, so the room noise rises and the track breathes at the wrong rate. And on a bus, the loudest element controls everything else, which is useful when you want glue and a problem when the kick starts operating the hi-hats.
 
-If you are choosing one rather than learning one, best free compressor plugins covers what to look for.
+If you are choosing one rather than learning one, [best free compressor plugins](https://gazillionindustries.com/best-free-compressor/) covers what to look for.
 
 ## Questions people ask
 
@@ -77,7 +81,7 @@ When you can hear the compressor working rather than the performance: pumping in
 
 ## What DRUGS does
 
-DRUGS is our free bus compressor for drums, with one macro control called DOSE. It moves the transfer curve, the knee, the attack and the release together, the way a single hardware macro would, so there is nothing to set up. Turning DOSE up makes a drum bus denser rather than louder, because peak level barely moves across the whole range of the knob. The release is adaptive: a hit gets the shorter time so gain recovers inside the gap, and sustained material gets the longer one. Auto-makeup is applied after the gain cell, so setting level cannot disturb the dynamics.
+DRUGS is our free bus compressor for drums, with one macro control called **DOSE**. It moves the transfer curve, the knee, the attack and the release together, the way a single hardware macro would, so there is nothing to set up. Turning DOSE up makes a drum bus denser rather than louder, because peak level barely moves across the whole range of the knob. The release is adaptive: a hit gets the shorter time so gain recovers inside the gap, and sustained material gets the longer one. Auto-makeup is applied after the gain cell, so setting level cannot disturb the dynamics.
 
 Forty places too quiet and three too loud. One hand on one fader, moving faster than yours.
 

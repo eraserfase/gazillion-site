@@ -7,7 +7,7 @@ Published 2026-09-14, updated 2026-09-14. By Gazillion Industries, who make TRIP
 
 ---
 
-In 1982 Bruce Springsteen recorded demos for Nebraska at home on a four-track cassette recorder, and the demos were the album. The studio versions couldn't beat the tape. Cassette has been making ordinary rooms sound like somewhere more honest ever since.
+In 1982 Bruce Springsteen recorded demos for *Nebraska* at home on a four-track cassette recorder, and the demos were the album. The studio versions couldn't beat the tape. Cassette has been making ordinary rooms sound like somewhere more honest ever since.
 
 To make music sound like a cassette tape, recreate what the format does: roll off the high end and the deepest lows, add gentle tape-style saturation, a steady hiss bed, slow wow and faster flutter, a slight mismatch between the left and right channels, and the occasional dropout. Keep each move subtle. Or simply record to a real cassette and back, which does all of it at once.
 
@@ -47,13 +47,13 @@ A cassette runs its tape at 1⅞ inches per second on narrow tracks, a fraction 
 
 ## The details that sell it
 
-The top end and the wobble do most of the work; hiss and dropouts sell it. Keep the wobble irregular rather than a steady sine, which just sounds like chorus. See wow and flutter and tape hiss. And don't forget saturation: cassette doesn't only lose detail, it squashes a little, which is part of why cassette mixes feel glued.
+The top end and the wobble do most of the work; hiss and dropouts sell it. Keep the wobble irregular rather than a steady sine, which just sounds like chorus. See [wow and flutter](https://gazillionindustries.com/wow-and-flutter/) and [tape hiss](https://gazillionindustries.com/tape-hiss/). And don't forget saturation: cassette doesn't only lose detail, it squashes a little, which is part of why cassette mixes feel glued.
 
-TRIPLE OG is a cassette transport in a plugin: tone, hiss, age, drive, wow and flutter. There's a demo on the page.
+[TRIPLE OG](https://gazillionindustries.com/tripleog.html) is a cassette transport in a plugin: tone, hiss, age, drive, wow and flutter. There's a demo on the page.
 
 ## Or use a real cassette
 
-Recording a mix to a cassette deck and back is the most honest version and still surprisingly easy. Records like Nebraska and Daniel Johnston's home-taped albums are proof that the format's limits can be the character of the work. Even some modern samplers ship a cassette simulation, because producers keep asking for the sound.
+Recording a mix to a cassette deck and back is the most honest version and still surprisingly easy. Records like *Nebraska* and Daniel Johnston's home-taped albums are proof that the format's limits can be the character of the work. Even some modern samplers ship a cassette simulation, because producers keep asking for the sound.
 
 ## Questions people ask
 
@@ -71,7 +71,7 @@ Roll off the highs and lows, add gentle saturation, a little wow and flutter and
 
 ## What TRIPLE OG does
 
-TRIPLE OG is our cassette tape simulation, a cassette transport rather than a single effect. TONE is the playback system's brightness. HISS is a broadband bed. AGE runs from nought to sixty years, darker, noisier, slightly more saturated, less speed-stable and less matched left to right, all on one knob. DRIVE is soft asymmetric saturation that gets dirtier without getting louder. WOW FLUT and CATCH make the transport drift and jam, SCRUB drags the head back by hand, and SLAM stops the tape.
+TRIPLE OG is our cassette tape simulation, a cassette transport rather than a single effect. **TONE** is the playback system's brightness. **HISS** is a broadband bed. **AGE** runs from nought to sixty years, darker, noisier, slightly more saturated, less speed-stable and less matched left to right, all on one knob. **DRIVE** is soft asymmetric saturation that gets dirtier without getting louder. **WOW FLUT** and **CATCH** make the transport drift and jam, **SCRUB** drags the head back by hand, and **SLAM** stops the tape.
 
 Springsteen's four-track didn't sound expensive. It sounded true, and that's what people are still chasing.
 

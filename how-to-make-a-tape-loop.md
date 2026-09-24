@@ -49,7 +49,7 @@ Nothing in a DAW does that on its own, because a file played twice is identical 
 
 - Record the output back into your session for as many passes as you can stand.
 
-TRIPLE OG is a cassette transport: AGE is in years, nought to sixty, and WOW FLUT is continuous, bounded instability built from several motions at once, which is the part a clean loop is missing.
+[TRIPLE OG](https://gazillionindustries.com/tripleog.html) is a cassette transport: AGE is in years, nought to sixty, and WOW FLUT is continuous, bounded instability built from several motions at once, which is the part a clean loop is missing.
 
 ## Doing it in the box
 
@@ -65,7 +65,7 @@ You can get most of the behavior without a splicing block, as long as you accept
 
 - Layer two versions of different lengths so they drift against each other.
 
-The drift is the part people leave out. Two loops of exactly the same length stacked on top of each other is a thicker loop; two loops eleven milliseconds apart is a piece of music that changes for the next ten minutes. See wow and flutter for the instability, and tape speed for what the transport speed costs you in top end.
+The drift is the part people leave out. Two loops of exactly the same length stacked on top of each other is a thicker loop; two loops eleven milliseconds apart is a piece of music that changes for the next ten minutes. See [wow and flutter](https://gazillionindustries.com/wow-and-flutter/) for the instability, and [tape speed](https://gazillionindustries.com/tape-speed/) for what the transport speed costs you in top end.
 
 ## Where it costs you
 
@@ -91,7 +91,7 @@ Divide the duration you want by the tape speed. At cassette speed, 1 7/8 inches 
 
 ## What TRIPLE OG does
 
-TRIPLE OG is a cassette transport with six controls for what the medium is and what it is doing. AGE is in years, nought to sixty: darker, noisier, slightly more saturated, less speed-stable and less perfectly matched left to right, all on one knob. HISS is a continuous broadband bed rather than clicks or crackle. CATCH is the machine failing on its own, dragging, jamming and recovering, on its own clock or from a trigger on the panel. MIX is on the face and defaults to 100 percent.
+TRIPLE OG is a cassette transport with six controls for what the medium is and what it is doing. **AGE** is in years, nought to sixty: darker, noisier, slightly more saturated, less speed-stable and less perfectly matched left to right, all on one knob. **HISS** is a continuous broadband bed rather than clicks or crackle. **CATCH** is the machine failing on its own, dragging, jamming and recovering, on its own clock or from a trigger on the panel. **MIX** is on the face and defaults to 100 percent.
 
 The loop is still going round. It is a little quieter than it was when you started reading.
 

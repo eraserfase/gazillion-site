@@ -49,7 +49,7 @@ The catch is that all four are baked in together and you cannot dial them separa
 
 - Line the returned file up to the grid and trim the tape noise at either end.
 
-TRIPLE OG is our cassette transport for when the garage deck is not available: TONE, HISS, AGE and DRIVE for the medium, and WOW FLUT, CATCH, SCRUB and SLAM for what it is doing.
+[TRIPLE OG](https://gazillionindustries.com/tripleog.html) is our cassette transport for when the garage deck is not available: TONE, HISS, AGE and DRIVE for the medium, and WOW FLUT, CATCH, SCRUB and SLAM for what it is doing.
 
 ## Levels, tape type and Dolby
 
@@ -81,7 +81,7 @@ Usually dirty or magnetized heads, a tape type mismatch, or Dolby decoding on pl
 
 ## What TRIPLE OG does
 
-TRIPLE OG is a cassette transport. TONE is the playback system's brightness, HISS is a continuous broadband bed with no clicks or crackle, and AGE is in years, nought to sixty. DRIVE is soft asymmetric saturation, oversampled, where even harmonics dominate across the whole travel and the level stays flat inside half a decibel from one end of the knob to the other, so it gets dirtier without getting louder. MIX is on the face and defaults to 100 percent, with nothing dry blended in behind your back.
+TRIPLE OG is a cassette transport. **TONE** is the playback system's brightness, **HISS** is a continuous broadband bed with no clicks or crackle, and **AGE** is in years, nought to sixty. **DRIVE** is soft asymmetric saturation, oversampled, where even harmonics dominate across the whole travel and the level stays flat inside half a decibel from one end of the knob to the other, so it gets dirtier without getting louder. **MIX** is on the face and defaults to 100 percent, with nothing dry blended in behind your back.
 
 The counter still reads 0187. Now it is reading it over your drums.
 

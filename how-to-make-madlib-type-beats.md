@@ -33,6 +33,8 @@ A usable loop in this approach does not need to be four bars long or perfectly i
 
 The practical test is simple. Put the loop on your sampler or in your DAW, leave it running, and start building drums underneath it. If the loop starts to feel like a bed rather than a solo, if your drums can sit under it without fighting for the same frequency space, you have found something workable. If you find yourself wanting to EQ it, compress it, or chop it into pieces before you even try to build around it, it is probably too polished. You want a loop that resists your control, that forces you to build around its imperfections rather than the other way around.
 
+**DOSE 12.** The line along the bottom is gain reduction; here it barely leaves the top.
+
 ## Leaving the loop alone
 
 When you find a loop that works, the hardest thing is to stop touching it. The instinct to chop it into six pieces, add a low-pass sweep, or retime the hits will feel productive in the moment. It is not. The loop already contains the feeling you are chasing. Every edit you make is a small subtraction from whatever made it interesting in the first place. Leave it running for eight bars, sixteen bars, however long the section needs. Let the listener settle into the groove before you introduce anything else.
@@ -48,6 +50,8 @@ In this approach, the drums are mixed below the sample rather than on top of it.
 Frequency-wise, the sample occupies the midrange and the drums are carved out of that space. The kick does not dominate the bottom the way a conventional hip-hop beat would. It sits lower in the mix, sometimes filtered, sometimes sidechained so lightly that the sample just dips a little when the kick hits. The snare is dry, short, and placed in a pocket where the sample has a gap. You are not fighting for headroom. You are making room for the loop to be the thing that carries the emotional weight.
 
 The overall effect is that the drums feel distant and unimportant, which is exactly the point. They are the pulse you notice second, after the sample has already grabbed you. A reverb on the snare should be short and dark, not bright and wide. The hi-hats, if present, are barely audible, tucked into the noise floor of the loop. Nothing about the drum arrangement should draw attention to itself. The drums exist to make the sample feel like it is moving forward through time, not to announce their own presence.
+
+**DOSE 88.** It dives on each hit and takes the bar to come back.
 
 ## How little processing is enough
 
@@ -89,7 +93,7 @@ Keep loops short and tight. A few bars of a chopped sample, repeated with slight
 
 ## What DRUGS does
 
-DRUGS is our bus compressor for drums, free for Mac and Windows. One control called DOSE, with MIX on the face for parallel without a send, GAIN on the way out and a soft ceiling after it. It has no threshold and no ratio, because the whole point is that you do not set them.
+DRUGS is our bus compressor for drums, free for Mac and Windows. One control called **DOSE**, with **MIX** on the face for parallel without a send, **GAIN** on the way out and a soft ceiling after it. It has no threshold and no ratio, because the whole point is that you do not set them.
 
 ---
 

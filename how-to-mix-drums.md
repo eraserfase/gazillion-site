@@ -25,6 +25,8 @@ Mix drums in this order: balance by ear with no processing, cut what is in the w
 
 - **Check**: phone speaker, mono, and at low volume
 
+**SOFT CLIP** as the out stage, BEEF at 62.
+
 ## Balance is the mix
 
 Before a single plugin, pull every drum fader down and bring them up one at a time: kick, snare, hats, percussion, room. Give yourself ten minutes on that alone. A balance that works at conversation volume with nothing on it will survive everything you do afterward, and a balance that does not will keep sending you back to the EQ for problems that are level problems wearing a disguise.
@@ -49,15 +51,17 @@ The kick and the snare are the anchor because they carry the rhythm and they occ
 
 - Check in mono, then on a phone, then at a volume where you could hold a conversation.
 
-Subtractive EQ first is not a superstition. Boosting adds level and level flatters, so a session mixed with boosts drifts louder and louder until nothing has room. Cut what is crowding, then raise the fader. For the per-element detail, how to make drums hit harder covers punch and how to compress drums covers the timings.
+Subtractive EQ first is not a superstition. Boosting adds level and level flatters, so a session mixed with boosts drifts louder and louder until nothing has room. Cut what is crowding, then raise the fader. For the per-element detail, [how to make drums hit harder](https://gazillionindustries.com/how-to-make-drums-hit-harder/) covers punch and [how to compress drums](https://gazillionindustries.com/how-to-compress-drums/) covers the timings.
 
-BEEFY is our saturation and loudness effect. On a drum bus it pulls the hits and the body closer together: BEEF for weight and density, COOK for how bright the edge gets.
+[BEEFY](https://gazillionindustries.com/beefy.html) is our saturation and loudness effect. On a drum bus it pulls the hits and the body closer together: BEEF for weight and density, COOK for how bright the edge gets.
+
+**BEEF at 8.** The reference you A/B against.
 
 ## Where drums sit in the mix
 
 It depends on the music, and in rap and beat-driven records the answer is usually "in front". The drums and the low end carry the song, the vocal sits on them rather than above them, and everything melodic gets arranged around that. In a band mix the kit supports and the vocal leads. Decide which one you are making before you start moving faders, because the two balances are 4 or 5 dB apart and no amount of processing splits the difference.
 
-Whatever you decide, the test is the same: mute the drums and the record should collapse. If it does not, they are too quiet or they are not doing enough. See how to make drums cut through the mix when the problem is other instruments rather than the kit.
+Whatever you decide, the test is the same: mute the drums and the record should collapse. If it does not, they are too quiet or they are not doing enough. See [how to make drums cut through the mix](https://gazillionindustries.com/how-to-make-drums-cut-through-the-mix/) when the problem is other instruments rather than the kit.
 
 ## Where it costs you
 
@@ -83,7 +87,7 @@ Quiet, most of the time. At low volume your ears are less sensitive to the extre
 
 ## What BEEFY does
 
-BEEFY is a saturation and loudness effect for making sounds thicker, punchier and more up front. BEEF is the main event: more weight, more density, more loudness and more attitude as you turn it up. COOK changes the color and bite, from a rounder feel toward a brighter, more cooked edge. JUICE sets the level going in. SOFT CLIP opens switched on and brings rounded, fuzzy edges to the loudest parts, and LIMIT is the other choice when you want the output peaks kept in check. Try it on a whole drum bus to pull the hits and the body closer together.
+BEEFY is a saturation and loudness effect for making sounds thicker, punchier and more up front. **BEEF** is the main event: more weight, more density, more loudness and more attitude as you turn it up. **COOK** changes the color and bite, from a rounder feel toward a brighter, more cooked edge. **JUICE** sets the level going in. **SOFT CLIP** opens switched on and brings rounded, fuzzy edges to the loudest parts, and **LIMIT** is the other choice when you want the output peaks kept in check. Try it on a whole drum bus to pull the hits and the body closer together.
 
 Same files, same order. The authority was in the first ten minutes all along.
 

@@ -25,6 +25,8 @@ Parallel saturation means blending a heavily saturated copy of a sound under the
 
 - **Best on**: drums, bass, vocals, full buses
 
+**BEEF at 8.** The reference you A/B against.
+
 ## Why blend instead of insert
 
 On an insert, saturation changes everything it touches: more drive means more density, but also softer transients and, on bass, a smeared sub. In parallel you get to pick. The dry signal keeps the front edge of every hit and the clean low end, and the return supplies the grit and weight. So you can push the saturator somewhere you'd never leave it on the track itself, and only use as much as the mix wants.
@@ -47,21 +49,23 @@ On an insert, saturation changes everything it touches: more drive means more de
 
 The return is where the harshness hides. Heavy saturation adds a lot of high harmonics and, on bass, a woolly low end, and both get added straight onto the clean signal. A high-pass keeps the dry sub in charge, and a low-pass or a gentle high shelf cut keeps cymbals and vocals from turning into sandpaper. Filtering after the saturator shapes what it added; filtering before changes what drives it. Both are useful.
 
+**LIMIT** instead, everything else identical.
+
 ## Keep it lined up
 
 Some saturators add latency, especially with oversampling on. Most DAWs compensate for plugin latency automatically; check that it's switched on in yours, or the blend smears, thins out, or combs. If a return makes the sound thinner instead of thicker, suspect timing or polarity before blaming the saturator.
 
 ## Where it works best
 
-- Drums: density without losing the hit. See how to saturate drums.
+- **Drums:** density without losing the hit. See [how to saturate drums](https://gazillionindustries.com/how-to-saturate-drums/).
 
-- Bass and 808s: harmonics on top, clean sub below.
+- **Bass and 808s:** harmonics on top, clean sub below.
 
-- Vocals: presence and edge that never fully takes over.
+- **Vocals:** presence and edge that never fully takes over.
 
-- Whole buses: a single return can thicken a group of parts together.
+- **Whole buses:** a single return can thicken a group of parts together.
 
-For parallel use, run BEEFY on a return track and blend it in. The demo on the page is 28 seconds.
+For parallel use, run [BEEFY](https://gazillionindustries.com/beefy.html) on a return track and blend it in. The demo on the page is 28 seconds.
 
 ## Parallel saturation vs parallel compression
 
@@ -83,7 +87,7 @@ Neither is better. Parallel compression lifts quiet detail and sustain; parallel
 
 ## What BEEFY does
 
-BEEFY is our saturation and loudness plugin. For parallel saturation, put it on a return track like any insert and blend the return under the dry signal. BEEF sets how far it goes, from weight and density toward something rude, and COOK moves the color from rounder toward brighter, which on a return decides how much top end you're adding. SOFT CLIP opens switched on and handles the initial gain staging.
+BEEFY is our saturation and loudness plugin. For parallel saturation, put it on a return track like any insert and blend the return under the dry signal. **BEEF** sets how far it goes, from weight and density toward something rude, and **COOK** moves the color from rounder toward brighter, which on a return decides how much top end you're adding. **SOFT CLIP** opens switched on and handles the initial gain staging.
 
 Stock and roux, same pot. Nobody at the table asks which one they're tasting.
 

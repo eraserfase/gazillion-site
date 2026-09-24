@@ -25,9 +25,11 @@ To make a sample sound old, narrow its frequency range, then add the flaws of ol
 
 - **Space**: narrower stereo, a small dark room
 
+**4 bit at 8 kHz.** Bits make it grainy; the rate is what makes it clang.
+
 ## Why old recordings sound old
 
-Old media couldn't hold much. Records, tape, early samplers and radios all lost some low end and a lot of top end, added noise, drifted in speed and blurred the stereo image, if they had one at all. Each of those is a separate move you can make, which is good news: you can choose which era of old you mean.
+Old media couldn't hold much. Records, tape, early samplers and radios all lost some low end and a lot of top end, added noise, drifted in speed and blurred the stereo image, if they had one at all. Each of those is a separate move you can make, which is good news: you can choose which era of old you mean. If the era you mean is the sampler rather than the medium, [12 bit sampler plugins](https://gazillionindustries.com/12-bit-sampler-plugins/) is the one to read.
 
 ## Narrow the range
 
@@ -35,9 +37,9 @@ This is most of the effect. A high-pass takes out the deep low end that old play
 
 ## Add warmth and grain
 
-Gentle saturation rounds the peaks and adds density, like a signal that went through old circuits. A little bit depth or sample rate reduction adds the grain of early digital samplers. Stack them lightly. The theory is in bitcrushing explained.
+Gentle saturation rounds the peaks and adds density, like a signal that went through old circuits. A little bit depth or sample rate reduction adds the grain of early digital samplers. Stack them lightly. The theory is in [bitcrushing explained](https://gazillionindustries.com/bitcrushing-explained/).
 
-F(ilter)12 puts a filter, the crush pair and drive in one place. There's a demo on the page.
+[F(ilter)12](https://gazillionindustries.com/f12.html) puts a filter, the crush pair and drive in one place. There's a demo on the page.
 
 ## Add movement and noise
 
@@ -61,7 +63,7 @@ Old media never ran at a perfectly steady speed. A slow, subtle pitch wobble mak
 
 - Send it to a small, dark room reverb, blended low.
 
-If the sample turns thin in the process, how to make a sample sound fuller covers getting the body back.
+If the sample turns thin in the process, [how to make a sample sound fuller](https://gazillionindustries.com/how-to-make-a-sample-sound-fuller/) covers getting the body back.
 
 ## Questions people ask
 
@@ -87,7 +89,7 @@ Less filtering than older eras: a slightly softened top end, some compression an
 
 ## What F(ilter)12 does
 
-F(ilter)12 is our 12 bit sauce filter for drums and samples. The filter sets where in the spectrum things sit, with five shapes and six resonance shapes, and DRIVE for warmth. The lo-fi section, SAMPLE RATE and BIT, adds the grain. AURA on top helps the result sit better in the mix without sounding processed.
+F(ilter)12 is our 12 bit sauce filter for drums and samples. The filter sets where in the spectrum things sit, with five shapes and six resonance shapes, and **DRIVE** for warmth. The lo-fi section, **SAMPLE RATE** and **BIT**, adds the grain. **AURA** on top helps the result sit better in the mix without sounding processed.
 
 Nobody believes the photo filter. A sample aged one flaw at a time, they believe.
 

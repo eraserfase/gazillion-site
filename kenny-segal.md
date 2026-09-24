@@ -3,7 +3,7 @@
 > How Kenny Segal makes records: live players over samples, the SP-404 used as an effects box, drums edited hit by hit, and sampling the spaces between the notes.
 
 Source: https://gazillionindustries.com/kenny-segal/  
-Published 2026-09-20, updated 2026-09-24. By Gazillion Industries, who make Gazillion Industries.
+Published 2026-09-20, updated 2026-09-24. By Gazillion Industries.
 
 ---
 
@@ -29,7 +29,7 @@ Kenny Segal is a Los Angeles producer best known for his records with billy wood
 
 The clearest public document of how he uses the machine is a sample pack he put out in 2017, because one of its folders is labeled for exactly what it contains: live drums processed through SP-404 effects. Not drums sequenced on a 404. Drums played, recorded, and then run through the box for what it does to them.
 
-The same pack includes a circuit-bent Omnichord, a hacked toy sampler, and a folder of vinyl noise, tape hiss and field recordings. That is a fair picture of the palette: acoustic sources and broken electronics, with a cheap sampler's effects as the glue. If you want to know what the 404's ancestors did to audio in that role, our piece on the SP-303 covers it, and the SP-404 story covers how the line got there.
+The same pack includes a circuit-bent Omnichord, a hacked toy sampler, and a folder of vinyl noise, tape hiss and field recordings. That is a fair picture of the palette: acoustic sources and broken electronics, with a cheap sampler's effects as the glue. If you want to know what the 404's ancestors did to audio in that role, our piece on [the SP-303](https://gazillionindustries.com/sp-303/) covers it, and [the SP-404 story](https://gazillionindustries.com/sp-404-history/) covers how the line got there.
 
 ## Sampling the spaces between the notes
 
@@ -37,7 +37,7 @@ That phrase is his, and it is the most useful idea in his published method. Able
 
 What that gives you is not a loop with variations. It is a performance you can edit at the level of the single hit, which is why his drums breathe in a way programmed drums usually do not and why they never quite repeat. The spaces are the material: the bar of room tone between two phrases, the breath before a horn line, the decay nobody else kept.
 
-Gazillion Industries makes plugins for records built this way, where the room and the noise are the content rather than the problem.
+[Gazillion Industries](https://gazillionindustries.com/) makes plugins for records built this way, where the room and the noise are the content rather than the problem.
 
 ## The room, from the people in it
 
@@ -69,7 +69,9 @@ In his words: start with the sample, get a vibe, then bring musicians in to play
 
 Hiding Places with billy woods (2019) and Maps (2023). Then the work with R.A.P. Ferreira, Armand Hammer and Open Mike Eagle.
 
-We make DRUGS. The drum bus end of it, in one control.
+The drum bus end of it, in one control.
+
+We make [DRUGS](https://gazillionindustries.com/drugs.html). The drum bus end of it, in one control.
 
 ## What to take from it
 

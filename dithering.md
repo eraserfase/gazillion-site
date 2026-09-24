@@ -25,6 +25,8 @@ Dither is a tiny amount of noise added deliberately before you reduce bit depth,
 
 - **Noise shaping**: moves the noise to where the ear cares less
 
+**BEEF at 96.** Past where most settings want to live.
+
 ## Why rounding is worse than noise
 
 A 24-bit sample has far more possible values than a 16-bit one. When you convert, every value has to move to the nearest available step, and the amount it moves is the error. That error is not random: it depends on the signal, so it tracks the music, and anything that tracks the music is heard as distortion rather than as background.
@@ -35,13 +37,15 @@ Dither breaks the correlation. Add a small amount of random noise before the con
 
 ## Types, briefly
 
-- Triangular (TPDF) is the standard choice and the one to use if you do not want to think about it. It fully decorrelates the error at the cost of a slightly higher noise floor.
+- **Triangular (TPDF)** is the standard choice and the one to use if you do not want to think about it. It fully decorrelates the error at the cost of a slightly higher noise floor.
 
-- Noise shaping adds the same total amount of noise but moves most of it into frequency ranges the ear is less sensitive to, usually the top octave. It measures worse and sounds better.
+- **Noise shaping** adds the same total amount of noise but moves most of it into frequency ranges the ear is less sensitive to, usually the top octave. It measures worse and sounds better.
 
-- Aggressive noise shaping pushes that further. On material destined for further processing it is a bad idea, because that shaped noise is now baked in.
+- **Aggressive noise shaping** pushes that further. On material destined for further processing it is a bad idea, because that shaped noise is now baked in.
 
-BEEFY lives much earlier in the chain than this: saturation and loudness, with SOFT CLIP holding the peaks long before anything gets exported.
+[BEEFY](https://gazillionindustries.com/beefy.html) lives much earlier in the chain than this: saturation and loudness, with SOFT CLIP holding the peaks long before anything gets exported.
+
+**LIMIT** instead, everything else identical.
 
 ## The rules
 
@@ -81,7 +85,7 @@ Adding low-level noise before a bit-depth reduction so that the rounding errors 
 
 ## What BEEFY does
 
-BEEFY is our saturation and loudness effect, and the reason it appears in an article about dither is the shape of the chain. BEEF, COOK and JUICE do their work on the source or the bus; SOFT CLIP opens switched on and rounds the loudest parts so the peaks are dealt with early; LIMIT holds the output when you want that instead. Dither is the very last thing that happens, after all of it, in the export dialog.
+BEEFY is our saturation and loudness effect, and the reason it appears in an article about dither is the shape of the chain. **BEEF**, **COOK** and **JUICE** do their work on the source or the bus; **SOFT CLIP** opens switched on and rounds the loudest parts so the peaks are dealt with early; **LIMIT** holds the output when you want that instead. Dither is the very last thing that happens, after all of it, in the export dialog.
 
 Add noise on purpose, at the end, to make the quiet parts sound cleaner. Engineering is not always intuitive.
 

@@ -3,7 +3,7 @@
 > How DJ Premier works: sampling into one machine and triggering from another, chops recombined from sections nobody else takes, and the SP-1200 correction.
 
 Source: https://gazillionindustries.com/dj-premier/  
-Published 2026-09-20, updated 2026-09-24. By Gazillion Industries, who make Gazillion Industries.
+Published 2026-09-20, updated 2026-09-24. By Gazillion Industries.
 
 ---
 
@@ -29,7 +29,7 @@ Christopher Martin, who produces as DJ Premier, was born on 21 March 1966 in Hou
 
 The sentence that explains his whole setup, given to Sound On Sound in 2007: "I don't sample with the MPC60, I just use it to trigger drums. Instead I sample in the S950 and trigger them from the MPC."
 
-The S950 is a rack sampler with about sixty seconds of memory. That constraint is not incidental; it is the reason the chops are short and the reason nothing in his records is a long borrowed passage. The MPC60 is there for its pads and its timing, which is a very deliberate way of dividing the work between a machine that stores sound well and a machine that plays it well. Our piece on the creation of the MPC covers why that second machine's timing was worth building a workflow around.
+The S950 is a rack sampler with about sixty seconds of memory. That constraint is not incidental; it is the reason the chops are short and the reason nothing in his records is a long borrowed passage. The MPC60 is there for its pads and its timing, which is a very deliberate way of dividing the work between a machine that stores sound well and a machine that plays it well. Our piece on [the creation of the MPC](https://gazillionindustries.com/mpc-creation/) covers why that second machine's timing was worth building a workflow around.
 
 His machine lineage, in his own account, runs from a Yamaha drum machine through an E-mu SP-12, an Alesis HR-11 and an Akai S900 to the MPC60, which he bought secondhand from an engineer and adopted around Gang Starr's Daily Operation in 1992.
 
@@ -43,7 +43,7 @@ The best outside description of his sampling comes from Adrian Younge, and it is
 
 That is why his loops feel composed rather than borrowed, and it is also why sample-spotting his records is so difficult. There is often no single bar in the original that sounds like what you are hearing.
 
-Gazillion Industries makes plugins for people who work in fragments: commit the chop, print it, keep going.
+[Gazillion Industries](https://gazillionindustries.com/) makes plugins for people who work in fragments: commit the chop, print it, keep going.
 
 ## The drums, and the quantize question
 
@@ -77,11 +77,13 @@ He takes several separate sections of a record, avoids the obvious break, recomb
 
 Sometimes. In his words, he programs his drums, but often turns the sixteenths off and plays the pads live so it sounds like live drumming.
 
-We make DRUGS. One knob on the drum bus, voiced for breaks rather than for a mix.
+One knob on the drum bus, voiced for breaks rather than for a mix.
+
+We make [DRUGS](https://gazillionindustries.com/drugs.html). One knob on the drum bus, voiced for breaks rather than for a mix.
 
 ## What to take from it
 
-The transferable idea is the recombination. Most producers loop the best bar; he takes the parts nobody wants, in three pieces, and builds a phrase that did not exist. It is slower, it is harder, and it is the reason nobody can find his samples. How to chop samples has the mechanics, and how to flip a sample has the argument.
+The transferable idea is the recombination. Most producers loop the best bar; he takes the parts nobody wants, in three pieces, and builds a phrase that did not exist. It is slower, it is harder, and it is the reason nobody can find his samples. [How to chop samples](https://gazillionindustries.com/how-to-chop-samples/) has the mechanics, and [how to flip a sample](https://gazillionindustries.com/how-to-flip-a-sample/) has the argument.
 
 Sixty seconds of sample memory, and thirty years of records that have never been mistaken for anybody else's.
 

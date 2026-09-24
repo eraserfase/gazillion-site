@@ -25,19 +25,23 @@ To make a slowed and reverb version, lower the playback speed with varispeed (of
 
 - **Rights**: use your own music, or get permission
 
+**PITCH −3.09 ST.** Pitch and tempo moving together, the way a machine does it.
+
 ## Where it comes from
 
-Slowing songs down isn't new. In the early 1990s Houston's DJ Screw built a whole sound on it, slowing records to a crawl on his screw tapes (see how to chop and screw a song). The slowed and reverb version is its internet-era cousin: less chopping, much more reverb, and a mood that's closer to nostalgia than to a car rolling slow down a Houston street.
+Slowing songs down isn't new. In the early 1990s Houston's DJ Screw built a whole sound on it, slowing records to a crawl on his screw tapes (see [how to chop and screw a song](https://gazillionindustries.com/how-to-chop-and-screw/)). The slowed and reverb version is its internet-era cousin: less chopping, much more reverb, and a mood that's closer to nostalgia than to a car rolling slow down a Houston street.
 
 ## Slow it down the right way
 
-Use varispeed or repitch, not time stretching, so the pitch drops along with the tempo. That drop is the sound: voices get deeper, the groove gets heavier, and the whole track sounds like it's playing on a tired machine. How far to go depends on the song, but a slowdown in the 10 to 20% range, roughly two to four semitones, is a common starting point. The math is in what is varispeed.
+Use varispeed or repitch, not time stretching, so the pitch drops along with the tempo. That drop is the sound: voices get deeper, the groove gets heavier, and the whole track sounds like it's playing on a tired machine. How far to go depends on the song, but a slowdown in the 10 to 20% range, roughly two to four semitones, is a common starting point. The math is in [what is varispeed](https://gazillionindustries.com/what-is-varispeed/).
 
 ## The reverb
 
 This is the other half of the name, so don't be shy with it. Choose a hall or plate with a long decay, give it a little pre-delay so the vocal stays readable, and low-pass the reverb so it's dark instead of glassy. Blend it higher than you would in a normal mix. High-pass the reverb too, so the low end stays tight under all that space.
 
-SKRUU gives you varispeed pitch and independent time, with shifts you can play.
+[SKRUU](https://gazillionindustries.com/skruu.html) gives you varispeed pitch and independent time, with shifts you can play.
+
+**SAMPLING GRADE at LO-FI 1.** 7.81 kHz rather than 31.25.
 
 ## How to make slowed and reverb
 
@@ -75,7 +79,7 @@ Altering and publishing someone else's recording involves their copyright, so up
 
 ## What SKRUU does
 
-SKRUU is our varispeed pitch and time stretch plugin. PITCH runs from −20% to +10% and moves speed and pitch together, reading out in semitones. TIME moves only the length, from −50% to +25%, so you can slow the groove without dropping the key, or the other way round. DRAG sets how long a new speed takes to arrive, from instant to a hand on the platter, and ELASTIC springs a shift back when you let go.
+SKRUU is our varispeed pitch and time stretch plugin. **PITCH** runs from −20% to +10% and moves speed and pitch together, reading out in semitones. **TIME** moves only the length, from −50% to +25%, so you can slow the groove without dropping the key, or the other way round. **DRAG** sets how long a new speed takes to arrive, from instant to a hand on the platter, and **ELASTIC** springs a shift back when you let go.
 
 Same song, same empty parking lot. It just got later.
 

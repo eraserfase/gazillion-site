@@ -25,6 +25,8 @@ Multiband compression splits a signal into frequency bands and compresses each o
 
 - **Worst at**: being left on every bus because it sounds clever
 
+**DOSE 95, MIX 45.** Parallel without a send.
+
 ## What it is really for
 
 A normal compressor sees one number: the level of everything at once. Feed it a track with a heavy kick and a bright vocal and the kick makes every decision, because it is the loudest thing in the room. The vocal gets turned down on every kick, forever, and nobody asked for that.
@@ -47,7 +49,9 @@ Split the signal at 200 Hz and the kick can only trigger the low band. The vocal
 
 - Bypass at matched level and confirm the problem is gone and nothing else changed.
 
-DRUGS is our free one-knob drum bus compressor. It is single-band and it stays that way on purpose: one gain cell for the whole kit is what makes a break sound like one thing.
+[DRUGS](https://gazillionindustries.com/drugs.html) is our free one-knob drum bus compressor. It is single-band and it stays that way on purpose: one gain cell for the whole kit is what makes a break sound like one thing.
+
+**DOSE 88.** It dives on each hit and takes the bar to recover.
 
 ## Multiband or dynamic EQ
 
@@ -81,7 +85,7 @@ Only if something specific is wrong, and then only a decibel or two in the band 
 
 ## What DRUGS does
 
-DRUGS is our free bus compressor for drums, with one macro control called DOSE and one gain cell for the whole signal. Turning DOSE up makes a drum bus denser rather than louder, because peak level barely moves across the range of the knob, and the release reacts to the transient in front of it. It is not a repair tool and it is not surgical: it is there to make a kit read as one block. MIX is dry/wet with zero latency, so you can blend it in parallel instead of splitting the spectrum.
+DRUGS is our free bus compressor for drums, with one macro control called **DOSE** and one gain cell for the whole signal. Turning DOSE up makes a drum bus denser rather than louder, because peak level barely moves across the range of the knob, and the release reacts to the transient in front of it. It is not a repair tool and it is not surgical: it is there to make a kit read as one block. **MIX** is dry/wet with zero latency, so you can blend it in parallel instead of splitting the spectrum.
 
 The bass player leans in. This time the rest of the record does not flinch.
 

@@ -25,29 +25,33 @@ A transient shaper and saturation push drums in opposite directions. A transient
 
 - **Both**: order decides whether the hit gets grit or stays clean
 
+**SOFT CLIP** as the out stage, BEEF at 62.
+
 ## What a transient shaper does
 
 A transient shaper follows the shape of each hit and splits it into the attack and what comes after. Turn the attack up and the front edge of every hit gets louder; turn the sustain down and the tail tightens. It works on the shape of the hit regardless of how loud it is, so there is no threshold to set. The result is a sharper, more pronounced hit, with taller peaks relative to the average level.
 
 ## What saturation does
 
-Saturation bends the waveform on a curve. The loudest parts bend most, so the peaks come down relative to the body, and the bending adds harmonics above the notes. The result is a thicker, denser, more present hit with a lower peak-to-average ratio. More in saturation vs distortion.
+Saturation bends the waveform on a curve. The loudest parts bend most, so the peaks come down relative to the body, and the bending adds harmonics above the notes. The result is a thicker, denser, more present hit with a lower peak-to-average ratio. More in [saturation vs distortion](https://gazillionindustries.com/saturation-vs-distortion/).
 
 ## They move in opposite directions
 
-That's the part that matters. A transient shaper raises the gap between peak and average; saturation and clipping shrink it. So a transient shaper makes drums punchier and uses up headroom, and saturation makes them denser and louder at the same ceiling. Neither is better. They fix different problems.
+That's the part that matters. A transient shaper raises the gap between peak and average; saturation and clipping shrink it. So a transient shaper makes drums punchier and uses up headroom, and saturation makes them denser and louder at the same ceiling. Neither is better. **They fix different problems.**
+
+**BEEF at 96.** Past where most settings want to live.
 
 ## Which one your drums need
 
-- Flat, soft, blurry hits that don't poke through: a transient shaper, attack up.
+- **Flat, soft, blurry hits** that don't poke through: a transient shaper, attack up.
 
-- Thin, small, weightless hits that poke through but sound cheap: saturation.
+- **Thin, small, weightless hits** that poke through but sound cheap: saturation.
 
-- Boomy, ringing hits that smear the groove: a transient shaper, sustain down.
+- **Boomy, ringing hits** that smear the groove: a transient shaper, sustain down.
 
-- Quiet drums that hit the ceiling early: saturation or soft clipping, then more level.
+- **Quiet drums** that hit the ceiling early: saturation or soft clipping, then more level.
 
-BEEFY is a saturation and loudness plugin, not a transient shaper: it squeezes some space out of the peaks and adds body. The demo on the page is 28 seconds.
+[BEEFY](https://gazillionindustries.com/beefy.html) is a saturation and loudness plugin, not a transient shaper: it squeezes some space out of the peaks and adds body. The demo on the page is 28 seconds.
 
 ## Using both
 
@@ -85,7 +89,7 @@ It makes them punchier, but boosting the attack raises the peaks, which uses up 
 
 ## What BEEFY does
 
-BEEFY is the saturation side of this page: a saturation and loudness effect that adds body, squeezes some space out of the peaks, and brings out harmonics that help a sound feel bigger. BEEF is the main control, COOK sets the color, and SOFT CLIP, on by default, rounds off the loudest parts. If your drums need a sharper front edge first, put a transient shaper ahead of it.
+BEEFY is the saturation side of this page: a saturation and loudness effect that adds body, squeezes some space out of the peaks, and brings out harmonics that help a sound feel bigger. **BEEF** is the main control, **COOK** sets the color, and **SOFT CLIP**, on by default, rounds off the loudest parts. If your drums need a sharper front edge first, put a transient shaper ahead of it.
 
 Hire the sprinter, hire the linebacker. Just don't ask either one to play the other's position.
 

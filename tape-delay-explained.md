@@ -47,7 +47,7 @@ Push the feedback past unity and the loop gains more than it loses. That is self
 
 - For the pitch bend, move the delay time while the repeats are sounding.
 
-TRIPLE OG is a cassette transport rather than a delay, which makes it a good place to send a delay return: the repeats come back with tape on them instead of arriving clean.
+[TRIPLE OG](https://gazillionindustries.com/tripleog.html) is a cassette transport rather than a delay, which makes it a good place to send a delay return: the repeats come back with tape on them instead of arriving clean.
 
 ## Slapback, and the other old trick
 
@@ -75,11 +75,11 @@ Each repeat is another pass through the tape chain, and tape's high-frequency re
 
 ### What causes the pitch bend when you change the delay time?
 
-Changing the time means changing the tape speed or the head position while audio is already on the tape, so the material plays back faster or slower than it was recorded, and pitch moves with speed. See varispeed.
+Changing the time means changing the tape speed or the head position while audio is already on the tape, so the material plays back faster or slower than it was recorded, and pitch moves with speed. See [varispeed](https://gazillionindustries.com/what-is-varispeed/).
 
 ## What TRIPLE OG does
 
-TRIPLE OG is a cassette transport: six controls for what the medium is and what it is doing, and one for your hand. TONE is the playback system's brightness, where 50 is a musically neutral cassette rather than a bypass. HISS is a continuous broadband bed, shaped and partly decorrelated across the channels. AGE is in years, nought to sixty. DRIVE is soft asymmetric saturation, oversampled, and the level stays flat inside half a decibel from one end of the knob to the other. WOW FLUT is continuous, bounded instability built from several motions at once.
+TRIPLE OG is a cassette transport: six controls for what the medium is and what it is doing, and one for your hand. **TONE** is the playback system's brightness, where 50 is a musically neutral cassette rather than a bypass. **HISS** is a continuous broadband bed, shaped and partly decorrelated across the channels. **AGE** is in years, nought to sixty. **DRIVE** is soft asymmetric saturation, oversampled, and the level stays flat inside half a decibel from one end of the knob to the other. **WOW FLUT** is continuous, bounded instability built from several motions at once.
 
 Four repeats, each one further from the word than the last. The room is still answering.
 

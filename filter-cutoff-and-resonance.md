@@ -25,6 +25,8 @@ Cutoff is the frequency where a filter starts removing content, conventionally t
 
 - **Trade**: resonance boosts at the corner and takes level either side
 
+**4 bit at 8 kHz.** Bits make it grainy, the rate makes it clang.
+
 ## What cutoff really marks
 
 A filter does not have a wall. Below the cutoff of a low-pass, material passes; above it, material is reduced by more and more the further up you go, at a rate set by the slope. The cutoff is simply the agreed measuring point: 3 dB down from the passband. At 12 dB per octave, a tone one octave above a 1 kHz cutoff comes out around 12 dB quieter; two octaves up, about 24 dB. At 24 dB per octave those numbers double, which is why the same cutoff frequency sounds far darker on a steeper filter.
@@ -36,6 +38,8 @@ This is also why sweeping a filter on a full mix sounds different from sweeping 
 Resonance feeds some of the filter's output back into its input. The feedback reinforces frequencies at the corner and cancels a little either side, which is why a resonant low-pass sounds thinner as well as louder at the peak. Push the feedback far enough and the loop sustains itself: the filter oscillates and produces a sine-like tone at the cutoff, playable from the cutoff knob, and loud enough to hurt if you get there by accident.
 
 The peak is the reason resonance is musical. A sweep with no resonance is a tone control moving. A sweep with resonance has a voice riding on top of it, and that voice is what your ear follows through a build.
+
+**4 bit at 8 kHz.** Bits make it grainy, the rate makes it clang.
 
 ## How to use them
 
@@ -53,13 +57,13 @@ The peak is the reason resonance is musical. A sweep with no resonance is a tone
 
 - Check on small speakers, where a resonant peak at 3 kHz goes from character to earache.
 
-F(ilter)12 splits those two ideas into three controls: RESO decides how much resonance, Q decides how narrow it is, and Q SHAPE decides what shape the peaks make.
+[F(ilter)12](https://gazillionindustries.com/f12.html) splits those two ideas into three controls: RESO decides how much resonance, Q decides how narrow it is, and Q SHAPE decides what shape the peaks make.
 
 ## Where it costs you
 
 Resonance is boost. Every dB of peak is level you have to give back somewhere, and a resonant filter on a bus will push a limiter around in ways that have nothing to do with the music. High resonance also gets close to self-oscillation faster than you expect on a steep slope, and a filter that rings on a quiet passage will keep ringing after the passage stops.
 
-The other cost is familiarity. A resonant sweep is one of the most recognizable gestures in electronic music, and if you use it on every transition the listener hears the gesture instead of the change. How to make a filter sweep covers the timing that keeps it from getting tired.
+The other cost is familiarity. A resonant sweep is one of the most recognizable gestures in electronic music, and if you use it on every transition the listener hears the gesture instead of the change. [How to make a filter sweep](https://gazillionindustries.com/how-to-make-a-filter-sweep/) covers the timing that keeps it from getting tired.
 
 ## Questions people ask
 
@@ -81,7 +85,7 @@ Resonance is how much the filter boosts at the corner; Q is how narrow that boos
 
 ## What F(ilter)12 does
 
-F(ilter)12 is a filter with a lo-fi section in front of it. POSITION sets where in the spectrum the filter sits, and the further it works, the more it drives and the more it sings, built in rather than dialed in. There are five shapes: low-pass, high-pass, band-pass, notch, and a morph that runs from a closing low-pass, through untouched in the middle, to an opening high-pass. SLOPE runs from 18 dB per octave up to a wall where almost nothing gets past. RESO decides how much resonance and Q decides how narrow, while Q SHAPE puts peaks and dips at fixed distances from wherever the filter is, so the whole shape travels with the knob.
+F(ilter)12 is a filter with a lo-fi section in front of it. **POSITION** sets where in the spectrum the filter sits, and the further it works, the more it drives and the more it sings, built in rather than dialed in. There are five shapes: low-pass, high-pass, band-pass, notch, and a morph that runs from a closing low-pass, through untouched in the middle, to an opening high-pass. **SLOPE** runs from 18 dB per octave up to a wall where almost nothing gets past. **RESO** decides how much resonance and **Q** decides how narrow, while **Q SHAPE** puts peaks and dips at fixed distances from wherever the filter is, so the whole shape travels with the knob.
 
 Stop wiggling. You now know which one is about to make the hollow whistle.
 

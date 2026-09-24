@@ -25,6 +25,8 @@ Formants are the fixed resonances of a voice's throat and mouth, and they are wh
 
 - **Shift up**: smaller, younger, cartoon at the extremes
 
+**Pitched up.** Same control, the other direction.
+
 ## What a formant is
 
 The vocal folds produce a buzz full of harmonics. The throat, mouth and nose then act as a set of resonant chambers that boost some of those harmonics and suppress others, and the peaks that result are the formants. The first two do most of the work of telling vowels apart: in a typical adult male voice the "ee" in "beet" sits around 270 and 2300 Hz, while the "ah" in "father" sits nearer 730 and 1100 Hz. The exact numbers vary with the speaker's size, which is the whole point.
@@ -47,11 +49,13 @@ Those peaks stay roughly where they are when a singer changes note. A tenor hold
 
 Going the other way is a production tool on its own. Formants down with the pitch untouched gives you the voice of somebody much larger without turning the melody into a drone, which is why it shows up on every villain ad-lib since about 2011. Up without pitch gives a thin, nasal, slightly uncanny read that sits well under a mix because it occupies almost no low end.
 
-SKRUU moves pitch and time independently: PITCH runs from −20% to +10% in 128 states and reads out in semitones as well as speed, so you can hear where the character starts to change and stop there.
+[SKRUU](https://gazillionindustries.com/skruu.html) moves pitch and time independently: PITCH runs from −20% to +10% in 128 states and reads out in semitones as well as speed, so you can hear where the character starts to change and stop there.
+
+**SAMPLING GRADE at LO-FI 1.** 7.81 kHz rather than 31.25.
 
 ## When you want the chipmunk
 
-Half the records people love are built on formants moving with the pitch. Soul vocals sped up until they stop being sung and start being an instrument have carried entire catalogs, and the small-throat artifact is the signature, not a mistake to be corrected. Chipmunk soul is the whole method, and it is worth knowing which of the two you are doing before you reach for a correction knob.
+Half the records people love are built on formants moving with the pitch. Soul vocals sped up until they stop being sung and start being an instrument have carried entire catalogs, and the small-throat artifact is the signature, not a mistake to be corrected. [Chipmunk soul](https://gazillionindustries.com/chipmunk-soul/) is the whole method, and it is worth knowing which of the two you are doing before you reach for a correction knob.
 
 ## Where it costs you
 
@@ -77,7 +81,7 @@ The one in your DAW is usually good for a couple of semitones, which covers most
 
 ## What SKRUU does
 
-SKRUU is two knobs that do not touch each other. PITCH moves the pitch and TIME moves the length: speed it up while pitching down, or the other way round, and lock either one while you play the other. PITCH runs from −20% to +10% in 128 states and reads out in semitones as well as speed, with unity marked; TIME runs from −50% to +25% and moves nothing but the length. The display is a pitch comparator in semitones, what went in against what came out, so how far off the record you are is a picture rather than a number you have to trust.
+SKRUU is two knobs that do not touch each other. **PITCH** moves the pitch and **TIME** moves the length: speed it up while pitching down, or the other way round, and lock either one while you play the other. PITCH runs from −20% to +10% in 128 states and reads out in semitones as well as speed, with unity marked; TIME runs from −50% to +25% and moves nothing but the length. The display is a pitch comparator in semitones, what went in against what came out, so how far off the record you are is a picture rather than a number you have to trust.
 
 The notes were always right. Now you get to decide who is singing them.
 

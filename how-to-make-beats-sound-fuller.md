@@ -25,31 +25,35 @@ To make beats sound fuller, cover the whole frequency range with parts that each
 
 - **Movement**: automation so it doesn't sit still
 
+**SOFT CLIP** as the out stage, BEEF at 62.
+
 ## Why beats sound thin
 
 Usually it's the arrangement, not the mix. A beat with drums, an 808 and one melody has a floor and a ceiling and nothing in between. Or everything sits in the same range, so four parts sound like one. Fullness is coverage: each part owning a different region, together filling the whole thing. Before reaching for a plugin, solo the elements and ask which range nobody is covering.
 
 ## Furnish every room
 
-- Lows: the 808 or bass, and the kick.
+- **Lows:** the 808 or bass, and the kick.
 
-- Low mids: the body of the sample, keys or a pad. This is the room thin beats leave empty.
+- **Low mids:** the body of the sample, keys or a pad. This is the room thin beats leave empty.
 
-- Mids: the melody, the lead, the vocal's space.
+- **Mids:** the melody, the lead, the vocal's space.
 
-- Top: hats, shakers, air, a bright texture or noise layer.
+- **Top:** hats, shakers, air, a bright texture or noise layer.
 
 You don't need more parts, you need parts in different places. A soft pad under a sample or a counter-melody an octave up often does more than a fourth drum layer.
 
 ## Layer and double
 
-Doubling a melody an octave down, quietly, gives it body. A pad holding the chords under a chopped sample fills the gaps between chops. Keep layers lower than the part they support and filter them to their own range so they add fullness, not mud. If a single sample is the thin part, see how to make a sample sound fuller.
+Doubling a melody an octave down, quietly, gives it body. A pad holding the chords under a chopped sample fills the gaps between chops. Keep layers lower than the part they support and filter them to their own range so they add fullness, not mud. If a single sample is the thin part, see [how to make a sample sound fuller](https://gazillionindustries.com/how-to-make-a-sample-sound-fuller/).
+
+**BEEF at 96.** Past where most settings want to live.
 
 ## Add density
 
-Saturation makes a sound take up more space by adding harmonics and bringing its quieter parts up. On a thin synth, a sample or the drum bus, a little goes a long way. Use it on the parts that need it rather than across the whole beat. More in how to use saturation in a mix.
+Saturation makes a sound take up more space by adding harmonics and bringing its quieter parts up. On a thin synth, a sample or the drum bus, a little goes a long way. Use it on the parts that need it rather than across the whole beat. More in [how to use saturation in a mix](https://gazillionindustries.com/how-to-use-saturation/).
 
-BEEFY makes sounds thicker, punchier and more up front, on drums and everything else. The demo on the page is 28 seconds.
+[BEEFY](https://gazillionindustries.com/beefy.html) makes sounds thicker, punchier and more up front, on drums and everything else. The demo on the page is 28 seconds.
 
 ## Width and space
 
@@ -73,7 +77,7 @@ A beat where everything is dead center sounds narrow. Spread pads, textures, dou
 
 - Only then work on loudness.
 
-For loudness, see how to make your mix louder without clipping.
+For loudness, see [how to make your mix louder without clipping](https://gazillionindustries.com/how-to-make-mix-louder-without-clipping/).
 
 ## Questions people ask
 
@@ -91,7 +95,7 @@ If they sound quiet, the peaks, often from the kick and 808, are hitting the cei
 
 ## What BEEFY does
 
-BEEFY is our saturation and loudness plugin, and there's no drum-only rule. Feed it a thin synth, a chopped sample or an electric piano and it adds body, squeezes some space out of the peaks, and brings out harmonics that help the sound feel bigger. A little can fill things out; a lot can get rude. BEEF is the main control, COOK sets the color, and SOFT CLIP, on by default, handles the initial gain staging.
+BEEFY is our saturation and loudness plugin, and there's no drum-only rule. Feed it a thin synth, a chopped sample or an electric piano and it adds body, squeezes some space out of the peaks, and brings out harmonics that help the sound feel bigger. A little can fill things out; a lot can get rude. **BEEF** is the main control, **COOK** sets the color, and **SOFT CLIP**, on by default, handles the initial gain staging.
 
 Same apartment, same rent. Somebody finally bought furniture.
 

@@ -25,6 +25,8 @@ To make a sample sound fuller, put back what the chopping and filtering took awa
 
 - **Space**: a little room; width on the mids only
 
+**SOFT CLIP** as the out stage, BEEF at 62.
+
 ## Why samples sound thin
 
 Most of the thinness is self-inflicted. Filtering out the old bass line takes body with it. Short chops cut off the sustain and the room. Pitching up shrinks the tone. Low-quality sources have little top and a lot of noise. Figure out which of those happened to your sample, because each has its own fix.
@@ -35,9 +37,11 @@ Muddy and thin can happen at the same time. If the sample sounds boxy, cut a lit
 
 ## Add harmonics and density
 
-Saturation is the fastest way to fill out a thin sample. It adds harmonics above the notes and brings the quieter parts of the sound up toward the peaks, so the sample takes up more space without getting much louder. Start gentle and check at matched loudness. The method is in how to use saturation in a mix.
+Saturation is the fastest way to fill out a thin sample. It adds harmonics above the notes and brings the quieter parts of the sound up toward the peaks, so the sample takes up more space without getting much louder. Start gentle and check at matched loudness. The method is in [how to use saturation in a mix](https://gazillionindustries.com/how-to-use-saturation/).
 
-Feed BEEFY a chopped sample and turn up the big knob. The demo on the page is 28 seconds.
+Feed [BEEFY](https://gazillionindustries.com/beefy.html) a chopped sample and turn up the big knob. The demo on the page is 28 seconds.
+
+**BEEF at 96.** Past where most settings want to live.
 
 ## How to make a sample sound fuller
 
@@ -87,7 +91,7 @@ Cover the low end, body, presence and top across the parts without piling them u
 
 ## What BEEFY does
 
-BEEFY is our saturation and loudness plugin for making sounds thicker, punchier and more up front, and there's no drum-only rule. Feed it a chopped sample and it adds body, squeezes some space out of the peaks, and brings out harmonics that help the sound feel bigger. BEEF sets how much, COOK sets how round or bright, and SOFT CLIP, on by default, handles the initial gain staging.
+BEEFY is our saturation and loudness plugin for making sounds thicker, punchier and more up front, and there's no drum-only rule. Feed it a chopped sample and it adds body, squeezes some space out of the peaks, and brings out harmonics that help the sound feel bigger. **BEEF** sets how much, **COOK** sets how round or bright, and **SOFT CLIP**, on by default, handles the initial gain staging.
 
 Same postcard. Now it's closer to the picture.
 

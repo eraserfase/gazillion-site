@@ -25,6 +25,8 @@ To distort an 808 without losing the low end, keep the sub clean and distort the
 
 - **Mono**: all of it, especially the sub
 
+**LIMIT** instead, everything else identical.
+
 ## Why distort an 808
 
 Presence. A clean 808 is almost all one low frequency, which phones and laptops barely reproduce. Distortion bends that wave and adds harmonics above it, and the ear rebuilds the low note from them. The result is an 808 people hear on any speaker, with an attitude the clean one never had.
@@ -51,11 +53,13 @@ Distortion doesn't only add. Push a sub hard and its peaks flatten, the harmonic
 
 Filtering before the distortion stops the sub from driving it; filtering after cleans up what it added. Try the high-pass in both places and keep whichever sounds tighter.
 
+**SOFT CLIP** as the out stage, BEEF at 62.
+
 ## Which kind of distortion
 
-Soft clipping and gentle saturation round the note and add weight, which suits melodic 808s and slower tempos. Harder clipping and overdrive add bite and aggression, which suits drill and faster trap. Very hard settings or wavefolding get close to a buzz, which is a choice, not a mistake, as long as the clean sub is still holding the floor. More on the differences in saturation vs distortion.
+Soft clipping and gentle saturation round the note and add weight, which suits melodic 808s and slower tempos. Harder clipping and overdrive add bite and aggression, which suits drill and faster trap. Very hard settings or wavefolding get close to a buzz, which is a choice, not a mistake, as long as the clean sub is still holding the floor. More on the differences in [saturation vs distortion](https://gazillionindustries.com/saturation-vs-distortion/).
 
-BEEFY can take a clean bass note toward a growl with one big knob. The demo on the page is 28 seconds.
+[BEEFY](https://gazillionindustries.com/beefy.html) can take a clean bass note toward a growl with one big knob. The demo on the page is 28 seconds.
 
 ## Glides and chords
 
@@ -85,7 +89,7 @@ It makes it sound louder, because harmonics land where ears are most sensitive, 
 
 ## What BEEFY does
 
-BEEFY is our saturation and loudness plugin, and 808s and bass are very much invited. SOFT CLIP opens switched on and brings rounded, fuzzy edges to the loudest parts, adding harmonics above the low end so there's more to hear than just sub. Push BEEF and a clean bass note moves toward a growl. COOK moves the tone from rounder toward brighter and more bitten. For the split method above, run it on the copy or the return.
+BEEFY is our saturation and loudness plugin, and 808s and bass are very much invited. **SOFT CLIP** opens switched on and brings rounded, fuzzy edges to the loudest parts, adding harmonics above the low end so there's more to hear than just sub. Push **BEEF** and a clean bass note moves toward a growl. **COOK** moves the tone from rounder toward brighter and more bitten. For the split method above, run it on the copy or the return.
 
 Same engine, new muffler. Now the whole block hears it coming.
 

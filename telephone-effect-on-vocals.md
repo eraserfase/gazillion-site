@@ -25,6 +25,8 @@ To make a telephone effect on vocals, band-pass the voice to roughly 300 Hz to 3
 
 - **Sell it**: cut the reverb: a phone has none of your room
 
+**4 bit at 8 kHz.** Bits make it grainy, the rate makes it clang.
+
 ## Where the sound comes from
 
 Analog telephone lines were built to carry intelligible speech in as little bandwidth as possible, and the usable channel ended up around 300 to 3400 Hz. Consonants survive in that range, which is all the phone company needed; chest, air and sibilance do not, which is what makes a voice sound like it is being described to you rather than happening to you.
@@ -49,15 +51,17 @@ Cell phones are a different animal. Modern wideband calls carry roughly 50 Hz to
 
 - For the handoff, automate the filters open on the downbeat when the full vocal returns.
 
-F(ilter)12 has a band-pass shape, a slope that goes from 18 dB per octave up to a wall, and SAMPLE RATE and BIT in front of it, which is the whole recipe on one panel.
+[F(ilter)12](https://gazillionindustries.com/f12.html) has a band-pass shape, a slope that goes from 18 dB per octave up to a wall, and SAMPLE RATE and BIT in front of it, which is the whole recipe on one panel.
+
+**4 bit at 8 kHz.** Bits make it grainy, the rate makes it clang.
 
 ## Two versions worth building
 
-Landline: narrow band, hard compression, light saturation, no noise. Clean and old, the sound of a voice on an answering machine.
+**Landline:** narrow band, hard compression, light saturation, no noise. Clean and old, the sound of a voice on an answering machine.
 
-Cell: wider band, a bitcrusher set low enough to hear the grain, a couple of short dropouts cut into the take by hand, and a hint of pitch instability. Add a clipped syllable at the start of a phrase and the listener will fill in the rest of the story.
+**Cell:** wider band, a bitcrusher set low enough to hear the grain, a couple of short dropouts cut into the take by hand, and a hint of pitch instability. Add a clipped syllable at the start of a phrase and the listener will fill in the rest of the story.
 
-If you want the voice to sound like it is in a different space rather than on a different device, that is a different chain: see how to make music sound like it is in another room.
+If you want the voice to sound like it is in a different space rather than on a different device, that is a different chain: see [how to make music sound like it is in another room](https://gazillionindustries.com/how-to-make-music-sound-like-another-room/).
 
 ## Where it costs you
 
@@ -83,7 +87,7 @@ Yes. A phone has one speaker, and a stereo image is the fastest way to break the
 
 ## What F(ilter)12 does
 
-F(ilter)12 is a filter with a lo-fi section in front of it. The filter has five shapes, including band-pass, and SLOPE runs from 18 dB per octave up to a wall where almost nothing gets past, which is the steepness this effect wants. SAMPLE RATE slows the rate the audio is sampled at, so the top goes and what was up there folds back down as new content, and BIT coarsens the steps it is measured in. DIRTY feeds the filter's own distortion back through itself, for when the line should sound bad as well as narrow.
+F(ilter)12 is a filter with a lo-fi section in front of it. The filter has five shapes, including **band-pass**, and **SLOPE** runs from 18 dB per octave up to a wall where almost nothing gets past, which is the steepness this effect wants. **SAMPLE RATE** slows the rate the audio is sampled at, so the top goes and what was up there folds back down as new content, and **BIT** coarsens the steps it is measured in. **DIRTY** feeds the filter's own distortion back through itself, for when the line should sound bad as well as narrow.
 
 Leave the message. Hang up before the reverb gets back.
 

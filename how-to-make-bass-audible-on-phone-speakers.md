@@ -25,25 +25,29 @@ To make bass audible on phone speakers, give it content the phone can actually p
 
 - **Test**: bounce it and play it on an actual phone
 
+**BEEF at 8.** The reference you A/B against.
+
 ## Why bass disappears on phones
 
 A phone speaker is tiny, and tiny speakers physically can't move enough air to reproduce low frequencies. Most phone speakers give back very little below a couple hundred hertz, and exactly where they fall off varies by model. A bass sound that lives mostly below that range, like a clean sub or a sine-like 808, arrives at the listener as almost nothing.
 
-The fix is the missing fundamental. When a sound has harmonics at whole-number multiples of a low note, the ear hears the low note even if the speaker never plays it. Your job is to give the phone harmonics to play.
+The fix is the missing fundamental. When a sound has harmonics at whole-number multiples of a low note, the ear hears the low note even if the speaker never plays it. **Your job is to give the phone harmonics to play.**
 
 ## Add harmonics
 
-Saturation, distortion and soft clipping all add harmonics above the notes going in. A little on the bass makes it audible on a phone without changing much on big speakers. To keep the sub clean, drive a copy with its low end filtered out and blend it under the original. The full method for 808s is in how to distort an 808, and the theory is in saturation vs distortion.
+Saturation, distortion and soft clipping all add harmonics above the notes going in. A little on the bass makes it audible on a phone without changing much on big speakers. To keep the sub clean, drive a copy with its low end filtered out and blend it under the original. The full method for 808s is in [how to distort an 808](https://gazillionindustries.com/how-to-distort-808s/), and the theory is in [saturation vs distortion](https://gazillionindustries.com/saturation-vs-distortion/).
 
 ## Layer a mid-bass
 
 A second bass sound an octave up, or a layer with more body in the low mids, gives small speakers something real to play. Keep it lower in level than the main bass and filter its bottom so it doesn't double the sub. On synth bass, mixing in a brighter oscillator does the same job at the source.
 
+**LIMIT** instead, everything else identical.
+
 ## EQ with intent
 
 Boosting the sub for phone listeners does nothing for them and costs everyone headroom. A gentle boost somewhere in the low mids, where the bass's upper harmonics and body sit, helps far more. Make the move on the bass, not the whole mix, and check that it doesn't turn the mix muddy on big speakers.
 
-BEEFY's SOFT CLIP adds harmonics above the low end, so there's more to hear than sub. The demo on the page is 28 seconds.
+[BEEFY](https://gazillionindustries.com/beefy.html)'s SOFT CLIP adds harmonics above the low end, so there's more to hear than sub. The demo on the page is 28 seconds.
 
 ## Write for small speakers
 
@@ -61,7 +65,7 @@ The arrangement matters too. A bassline that sits very low the whole time gives 
 
 - Recheck on your monitors or headphones so the big-speaker version still holds.
 
-A phone's speakers sit a few centimeters apart, so stereo width barely survives; check the mix in mono too, because stereo tricks on the bass can cancel there. More in how to make 808s hit harder.
+A phone's speakers sit a few centimeters apart, so stereo width barely survives; check the mix in mono too, because stereo tricks on the bass can cancel there. More in [how to make 808s hit harder](https://gazillionindustries.com/how-to-make-808s-hit-harder/).
 
 ## Questions people ask
 
@@ -79,7 +83,7 @@ Distort or saturate it so it has harmonics, layer a higher bass sound under it i
 
 ## What BEEFY does
 
-BEEFY is our saturation and loudness plugin. SOFT CLIP opens switched on and brings rounded, fuzzy edges to the loudest parts, adding harmonics above the low end so there's more to hear than just sub. BEEF adds weight and density as you turn it up, and COOK moves the tone from rounder toward brighter, which is where a phone listens.
+BEEFY is our saturation and loudness plugin. **SOFT CLIP** opens switched on and brings rounded, fuzzy edges to the loudest parts, adding harmonics above the low end so there's more to hear than just sub. **BEEF** adds weight and density as you turn it up, and **COOK** moves the tone from rounder toward brighter, which is where a phone listens.
 
 Nobody's widening the keyhole. You just put the show where it can see through.
 

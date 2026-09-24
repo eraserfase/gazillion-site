@@ -7,7 +7,7 @@ Published 2026-09-19, updated 2026-09-24. By Gazillion Industries, who make DRUG
 
 ---
 
-Every control on a drum bus compressor, what it actually changes, and a starting point that works on most material. Written by the people who then built a compressor with none of them.
+Every control on a drum bus compressor, what it actually changes, and a starting point that works on most material. Written by the people who then built [a compressor with none of them](https://gazillionindustries.com/drugs.html).
 
 ## The short version
 
@@ -29,7 +29,11 @@ That will glue a drum bus without hurting it. Everything below is why, and when 
 
 Attack is how long the compressor waits before it clamps down. A fast attack — under about 3 ms — catches the transient itself and flattens the stick. A slower one, 10 to 30 ms, lets the transient through and compresses the body behind it.
 
-That second behavior is why a compressed drum bus can sound bigger rather than smaller: the hit stays sharp and everything under it comes up. If your drums got weaker when you compressed them, attack is almost always the reason.
+That second behavior is why a compressed drum bus can sound *bigger* rather than smaller: the hit stays sharp and everything under it comes up. **If your drums got weaker when you compressed them, attack is almost always the reason.**
+
+**DOSE 12.** The line along the bottom is the gain reduction, and here it barely leaves the top.
+
+**DOSE 88.** Same source. It dives on each hit and takes the bar to come back — that recovery is what people mean by pump.
 
 ## Release decides whether it breathes
 
@@ -53,7 +57,7 @@ The threshold value on its own tells you nothing, because it depends entirely on
 
 If the needle is pinned and never returns, you are limiting, not compressing.
 
-Or don't watch the meter at all — there is an argument for a bus compressor with one control and none of these, which is what we ended up building. There is a demo on the page.
+Or don't watch the meter at all — there is an argument for a bus compressor with one control and none of these, which is [what we ended up building](https://gazillionindustries.com/drugs.html). There is a demo on the page.
 
 ## Questions people ask
 
@@ -75,11 +79,11 @@ The bus, first. It is the stage that makes separate hits sound like one kit, and
 
 ## Knee
 
-A soft knee eases compression in gradually as the signal approaches the threshold; a hard knee applies it all at once. Soft is more forgiving on drums and harder to hear. Hard is the right choice when you want to hear the compressor working.
+A soft knee eases compression in gradually as the signal approaches the threshold; a hard knee applies it all at once. Soft is more forgiving on drums and harder to hear. Hard is the right choice when you *want* to hear the compressor working.
 
 ## Make-up gain, and the only honest A/B
 
-Compression costs level, make-up gain gives it back, and louder always sounds better for the first few seconds. Match the bypassed and engaged loudness before you judge anything. A large share of "this plugin sounds incredible" moments are an unmatched level and nothing else.
+Compression costs level, make-up gain gives it back, and louder always sounds better for the first few seconds. **Match the bypassed and engaged loudness before you judge anything.** A large share of "this plugin sounds incredible" moments are an unmatched level and nothing else.
 
 ## Glue, specifically
 
@@ -95,7 +99,7 @@ The other difference is that mistakes compound. Everything already compressed on
 
 ## What DRUGS does instead
 
-Having written all of that: DRUGS has none of it. One knob, called DOSE.
+Having written all of that: **DRUGS has none of it.** One knob, called DOSE.
 
 Everything above — curve, knee, attack, release — moves underneath it, together, and you do not get a vote. There are no settings on this page to get right, which is either a relief or a problem depending on what kind of producer you are.
 

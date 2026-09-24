@@ -25,6 +25,8 @@ To make music sound like it is coming from another room, low-pass it steeply som
 
 - **Further away**: lower the cutoff and raise the reverb, together
 
+**4 bit at 8 kHz.** Bits make it grainy, the rate makes it clang.
+
 ## Why a wall only lets the bass through
 
 Sound loses energy passing through a partition, and it loses far more of it at high frequencies than at low ones. A door is a decent obstacle for a hi-hat and almost none for a kick, so what reaches you is the bottom two or three octaves plus whatever leaks round the frame. That is why you can identify a song through a wall by its rhythm and never its lyrics: consonants live in the range the wall is eating.
@@ -51,19 +53,21 @@ The second thing that happens is reflection. By the time the music reaches you i
 
 Do not high-pass the low end away. That is the instinct, because the result sounds muddy at first, and it is exactly backwards: the mud is the effect. Fix the mud by dropping the level and leaving room for whatever is in the foreground.
 
-F(ilter)12 does the filtering half of this with a slope that runs from 18 dB per octave up to a wall where almost nothing gets past, and a lo-fi section in front of it if you want the leak to sound cheap as well as distant.
+[F(ilter)12](https://gazillionindustries.com/f12.html) does the filtering half of this with a slope that runs from 18 dB per octave up to a wall where almost nothing gets past, and a lo-fi section in front of it if you want the leak to sound cheap as well as distant.
+
+**4 bit at 8 kHz.** Bits make it grainy, the rate makes it clang.
 
 ## Variations worth knowing
 
-- Through a phone: band-pass instead of low-pass, roughly 300 Hz to 3.4 kHz, with distortion. See the telephone effect.
+- **Through a phone:** band-pass instead of low-pass, roughly 300 Hz to 3.4 kHz, with distortion. See [the telephone effect](https://gazillionindustries.com/telephone-effect-on-vocals/).
 
-- In the next room, door open: cutoff up at 3 to 4 kHz, less reverb, keep some stereo.
+- **In the next room, door open:** cutoff up at 3 to 4 kHz, less reverb, keep some stereo.
 
-- Underwater: low-pass near 400 Hz plus slow modulation on the cutoff, so the muffling moves.
+- **Underwater:** low-pass near 400 Hz plus slow modulation on the cutoff, so the muffling moves.
 
-- Car outside: low-pass around 250 Hz, heavy compression, and a slow fade as it drives away.
+- **Car outside:** low-pass around 250 Hz, heavy compression, and a slow fade as it drives away.
 
-- Club from the smoking area: low-pass near 800 Hz, long reverb, and a door that opens: automate the cutoff up 2 kHz for one bar.
+- **Club from the smoking area:** low-pass near 800 Hz, long reverb, and a door that opens: automate the cutoff up 2 kHz for one bar.
 
 ## Where it costs you
 
@@ -85,7 +89,7 @@ Partitions attenuate high frequencies much more than low ones, so the top of the
 
 ## What F(ilter)12 does
 
-F(ilter)12 is a filter with a lo-fi section in front of it and an adaptive correction called AURA on top. For this job the parts that matter are the shape and the SLOPE: five shapes including low-pass and band-pass, and a slope that runs from 18 dB per octave up to a wall. POSITION sets where in the spectrum the filter sits, and the further it works the more it drives. SAMPLE RATE and BIT are the crush pair in front, for when the music on the other side of the wall should sound like it is coming out of something small.
+F(ilter)12 is a filter with a lo-fi section in front of it and an adaptive correction called AURA on top. For this job the parts that matter are the shape and the **SLOPE**: five shapes including low-pass and band-pass, and a slope that runs from 18 dB per octave up to a wall. **POSITION** sets where in the spectrum the filter sits, and the further it works the more it drives. **SAMPLE RATE** and **BIT** are the crush pair in front, for when the music on the other side of the wall should sound like it is coming out of something small.
 
 Now put it two floors down, where it always sounded better than it did in the room.
 

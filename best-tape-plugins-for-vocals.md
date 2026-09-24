@@ -25,7 +25,7 @@ The best tape plugin for vocals is the one you can set gently. Bandwidth loss an
 
 - **Our answer**: TRIPLE OG for lofi vocals, set low
 
-TRIPLE OG is our cassette sim for Mac and Windows, with the transport on the face rather than in a menu. There is a demo on the page.
+[TRIPLE OG](https://gazillionindustries.com/tripleog.html) is our cassette sim for Mac and Windows, with the transport on the face rather than in a menu. There is a demo on the page.
 
 ## Why a voice shows tape differently
 
@@ -35,29 +35,29 @@ What transfers well is the rest of it. Tape reduces peaks before it distorts, wh
 
 ## Settings that work on a lead
 
-- Start with the wear at nothing. Get the tape in the path clean and match the level before you judge a single control.
+- **Start with the wear at nothing.** Get the tape in the path clean and match the level before you judge a single control.
 
-- Bring drive up until the peaks stop poking, then stop. On a voice the useful range is short and it ends well before anything sounds distorted.
+- **Bring drive up until the peaks stop poking**, then stop. On a voice the useful range is short and it ends well before anything sounds distorted.
 
-- Take the top end down by feel, not by number. You are looking for the point where the sibilance stops being the loudest thing, which is usually a small move.
+- **Take the top end down by feel, not by number.** You are looking for the point where the sibilance stops being the loudest thing, which is usually a small move.
 
-- Leave speed instability alone on a lead, or use a fraction of what you would use elsewhere. Check it on the longest held note in the song, not on a busy phrase.
+- **Leave speed instability alone on a lead**, or use a fraction of what you would use elsewhere. Check it on the longest held note in the song, not on a busy phrase.
 
-- Judge the noise in the gaps, with the whole mix playing. What is inaudible in a chorus can be obvious in a verse.
+- **Judge the noise in the gaps**, with the whole mix playing. What is inaudible in a chorus can be obvious in a verse.
 
-TRIPLE OG is a cassette tape simulation, so on a lead vocal it wants AGE and WOW FLUT low and TONE doing the work. On a double or an ad-lib, open it up. There's a demo on the page.
+[TRIPLE OG](https://gazillionindustries.com/tripleog.html) is a cassette tape simulation, so on a lead vocal it wants **AGE** and **WOW FLUT** low and **TONE** doing the work. On a double or an ad-lib, open it up. There's a demo on the page.
 
 ## The move that actually gets used
 
 Put the tape on the double, not on the lead. A doubled vocal or a stacked harmony can take far more damage than the main take, because the lead underneath is carrying the intelligibility and the pitch reference. Push the wear and the noise on the double until it sounds like it came off a different recording, and the pair reads as depth rather than as an effect.
 
-The same logic applies to ad-libs, backgrounds and anything panned wide. These are the parts where a cassette reference earns its place, and where you can use the settings that would ruin a lead. For the fully committed version of this, see how to make music sound like a cassette tape.
+The same logic applies to ad-libs, backgrounds and anything panned wide. These are the parts where a cassette reference earns its place, and where you can use the settings that would ruin a lead. For the fully committed version of this, see [how to make music sound like a cassette tape](https://gazillionindustries.com/how-to-make-music-sound-like-cassette/).
 
 ## Tape, saturation and distortion are three different jobs
 
 They get used interchangeably and they are not the same. Saturation adds harmonics. Distortion adds a lot of them, deliberately. Tape does a little of both and adds bandwidth loss, compression and instability on top, which is why it reads as a medium rather than as an effect.
 
-On a vocal that distinction decides which one you want. If the voice needs to be louder and more present, that is saturation. If it needs to be an effect, that is distortion on vocals. If it needs to sound like it was recorded somewhere else, on something else, that is tape.
+On a vocal that distinction decides which one you want. If the voice needs to be louder and more present, that is [saturation](https://gazillionindustries.com/how-to-use-saturation/). If it needs to be an effect, that is [distortion on vocals](https://gazillionindustries.com/distortion-on-vocals/). If it needs to sound like it was recorded somewhere else, on something else, that is tape.
 
 ## Sibilance, and why tape makes it worse before better
 
@@ -67,7 +67,9 @@ Saturation generates harmonics above what it is given. Applied to a voice, that 
 
 The order that avoids it is de-ess first, tape second. Dealing with sibilance before the saturation stage means there is less for the harmonics to build on, and the tape then does the softening you wanted without amplifying the problem on the way. De-essing after tape works too but has to work harder, and heavy de-essing has a sound of its own.
 
-Hear TRIPLE OG
+The whole panel. On vocals almost everything happens in the **TAPE** half.
+
+A voice punishes level error more than anything else, so the meters matter here.
 
 ## Doubles, thirds and the tape stack
 
@@ -77,6 +79,10 @@ That drift is most of why a stack of real takes sounds wider and more alive than
 
 Keep the amount small. This is a case where the setting that works is well below what you would use for character, because the goal is difference between layers rather than an audible effect on any one of them.
 
+**WOW/FLUT at 0.** The transport holds speed.
+
+**HISS at 85.** Same panel, same everything else. The bed sits under the music rather than on top of it.
+
 ## Keeping the words
 
 Every decision on this page runs into the same constraint: a vocal has to be understood, and most of what makes it understandable is fragile.
@@ -85,9 +91,21 @@ Consonant definition lives in the upper midrange and the top, which is the first
 
 The practical rule is to check aged vocals quietly and in the mix, never loud and in solo. Solo playback flatters the character and hides the intelligibility cost; quiet playback in context is where words go missing, and it is the condition most listening actually happens in.
 
+On a voice, **MIX** is the control that matters most. Parallel keeps the clean take intact underneath whatever the tape is doing.
+
+Keep **WOW/FLUT on [TRIPLE OG](https://gazillionindustries.com/tripleog.html)** well below where you would set it on keys. A voice is the one source where the listener knows what the pitch was meant to be.
+
 ## Hear it
 
-Everything below is answered the same way we built TRIPLE OG — the tape is the easy half, the transport is the half almost nothing does.
+Two of the four behaviors on their own. The noise bed is the one that survives on a voice; the speed movement is the one to keep well down.
+
+- **Dry** — no processing — speed holds at 1.000 — https://gazillionindustries.com/tripleog/tog-dry.m4a
+
+- **Hiss 60, tone 45** — a noise bed, nothing else — https://gazillionindustries.com/tripleog/tog-hiss.m4a
+
+The same eleven seconds each time, rendered offline through [TRIPLE OG](https://gazillionindustries.com/tripleog.html) at the settings shown. No other processing, no master bus, no edits.
+
+Everything below is answered the same way we built [TRIPLE OG](https://gazillionindustries.com/tripleog.html) — the tape is the easy half, the transport is the half almost nothing does.
 
 ## Questions people ask
 
@@ -117,7 +135,7 @@ Depends what you want. One instance on the bus gives the whole stack a shared ch
 
 ## What TRIPLE OG does
 
-TRIPLE OG is our cassette tape simulation. On a lead, TONE and DRIVE do the useful work while AGE, HISS and WOW FLUT stay low. On a double, a stack or an ad-lib, open all five and let it sound like a different recording. The transport, SLAM, SCRUB and CATCH, is there when a vocal needs to fall apart on purpose at the end of a phrase.
+[TRIPLE OG](https://gazillionindustries.com/tripleog.html) is our cassette tape simulation. On a lead, **TONE** and **DRIVE** do the useful work while **AGE**, **HISS** and **WOW FLUT** stay low. On a double, a stack or an ad-lib, open all five and let it sound like a different recording. The transport, **SLAM**, **SCRUB** and **CATCH**, is there when a vocal needs to fall apart on purpose at the end of a phrase.
 
 The safest place for a cassette on a vocal is underneath another one.
 

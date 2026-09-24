@@ -31,6 +31,8 @@ The feel is a loosening of the relationship between the drums and the pulse unde
 
 What separates this from sloppy timing is intention. A drummer who is slightly off the grid in a live take has a reason for each displacement, even if they cannot articulate it. The kick lands late because the foot is heavy and the body is leaning back. The snare lands early because the wrist is snapping forward. When you program these offsets by hand, you are imitating the physics of a body moving through a groove. The result is a beat that sounds like it was played by someone who is slightly tired, slightly drunk, or slightly in love with the pocket, and that is exactly what people mean when they say they want the feel.
 
+**DOSE 88.** It dives on each hit and takes the bar to come back.
+
 ## Turning the quantise off and what happens
 
 When you turn quantize off, you stop letting the software decide where a hit lands and start deciding it yourself. The grid is still there visually, but nothing snaps to it anymore. You place each kick, snare, and hat by ear, dragging or pushing it against the grid line until it feels right under your hand. This is not the same as applying a swing percentage, because a swing percentage shifts every hit by the same amount in a predictable pattern. Here, each hit gets its own offset, and the offsets change from one bar to the next. The groove comes from the inconsistency, not from a formula.
@@ -46,6 +48,8 @@ The swing in these beats does not come from a swing control on a sequencer. It c
 What makes this feel organic rather than mechanical is that the offsets are not consistent. One snare hit might be late by a small amount, the next by a slightly different amount, the one after that pulled forward instead. The variation between hits is what gives the groove its human quality. If every snare in the pattern is nudged by the same value, the result sounds like a quantization preset with a weird name, not like a drummer playing slightly behind the beat.
 
 The interaction between elements matters as much as the individual offsets. A hat that lands just before a snare creates a sense of forward motion, while a hat that lands just after creates a laid-back drag. These relationships between neighboring hits are what the ear actually hears as swing. The grid is a reference you are deliberately ignoring, not a system you are modifying.
+
+**DOSE 95, MIX 45.** The squashed copy under the dry one, without a send.
 
 ## Chopping and how much to keep
 
@@ -87,7 +91,7 @@ These beats tend to sit at a slow, laid-back tempo, often hovering around the lo
 
 ## What DRUGS does
 
-DRUGS is our bus compressor for drums, free for Mac and Windows. One control called DOSE, with MIX on the face for parallel without a send, GAIN on the way out and a soft ceiling after it. It has no threshold and no ratio, because the whole point is that you do not set them.
+DRUGS is our bus compressor for drums, free for Mac and Windows. One control called **DOSE**, with **MIX** on the face for parallel without a send, **GAIN** on the way out and a soft ceiling after it. It has no threshold and no ratio, because the whole point is that you do not set them.
 
 ---
 

@@ -27,7 +27,7 @@ A four-track cassette recorder puts four separate mono tracks on a standard cass
 
 ## How four tracks fit on a cassette
 
-A normal cassette holds four tracks already: two for each side, so the tape can be flipped. A four-track machine ignores the flip and records all four in one direction at once, which is why a four-track tape played in a normal deck gives you your song with two parts backwards underneath it. Many of these machines also ran the tape at twice the standard speed, which extends the top end and halves your recording time. Tape speed explains that trade.
+A normal cassette holds four tracks already: two for each side, so the tape can be flipped. A four-track machine ignores the flip and records all four in one direction at once, which is why a four-track tape played in a normal deck gives you your song with two parts backwards underneath it. Many of these machines also ran the tape at twice the standard speed, which extends the top end and halves your recording time. [Tape speed](https://gazillionindustries.com/tape-speed/) explains that trade.
 
 ## How to work on four tracks
 
@@ -47,7 +47,7 @@ A normal cassette holds four tracks already: two for each side, so the tape can 
 
 - Mix down to a stereo recorder in real time, riding the faders as it plays.
 
-TRIPLE OG is a cassette transport with AGE in years and a DRIVE that gets dirtier without getting louder, which is most of what a bounced four-track pass was doing to your parts.
+[TRIPLE OG](https://gazillionindustries.com/tripleog.html) is a cassette transport with AGE in years and a DRIVE that gets dirtier without getting louder, which is most of what a bounced four-track pass was doing to your parts.
 
 ## What bouncing costs
 
@@ -57,7 +57,7 @@ The noise is cumulative in a specific way. Each pass adds the machine's own hiss
 
 ## Doing it now
 
-You can impose the same discipline in a DAW, and it is a better exercise than it sounds: limit yourself to four tracks, and every time you want a fifth, bounce three to one and commit. You get decisions instead of options, and arrangements that breathe because there was no room for the extra part. Run each bounce through tape processing if you want the generational loss as well as the constraint. See how to record to cassette for the real version.
+You can impose the same discipline in a DAW, and it is a better exercise than it sounds: limit yourself to four tracks, and every time you want a fifth, bounce three to one and commit. You get decisions instead of options, and arrangements that breathe because there was no room for the extra part. Run each bounce through tape processing if you want the generational loss as well as the constraint. See [how to record to cassette](https://gazillionindustries.com/how-to-record-to-cassette/) for the real version.
 
 ## Where it costs you
 
@@ -83,7 +83,7 @@ Limited top end, a raised noise floor, gentle saturation from hitting the tape h
 
 ## What TRIPLE OG does
 
-TRIPLE OG is a cassette transport: six controls for what the medium is and what it is doing, and one for your hand. AGE is in years, nought to sixty, and takes the machine darker, noisier, slightly more saturated, less speed-stable and less perfectly matched left to right at once. HISS is a continuous broadband bed, shaped and partly decorrelated across the channels. DRIVE is soft asymmetric saturation, oversampled, and the level stays flat inside half a decibel from one end of the knob to the other.
+TRIPLE OG is a cassette transport: six controls for what the medium is and what it is doing, and one for your hand. **AGE** is in years, nought to sixty, and takes the machine darker, noisier, slightly more saturated, less speed-stable and less perfectly matched left to right at once. **HISS** is a continuous broadband bed, shaped and partly decorrelated across the channels. **DRIVE** is soft asymmetric saturation, oversampled, and the level stays flat inside half a decibel from one end of the knob to the other.
 
 No case on the cassette, in a jacket pocket, all the way to the pressing plant.
 

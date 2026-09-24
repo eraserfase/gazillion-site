@@ -25,9 +25,11 @@ A limiter stops a signal exceeding a ceiling you set. Use it last, set the ceili
 
 - **Warning sign**: the meter never returning to zero
 
+**BEEF at 96.** Past where most settings want to live.
+
 ## What it actually is
 
-A limiter is a compressor with a very high ratio and a very fast attack, aimed at a ceiling rather than at a musical result. A brickwall limiter behaves as if the ratio were infinite: nothing gets past, ever. See limiter vs compressor for where the line sits between them.
+A limiter is a compressor with a very high ratio and a very fast attack, aimed at a ceiling rather than at a musical result. A brickwall limiter behaves as if the ratio were infinite: nothing gets past, ever. See [limiter vs compressor](https://gazillionindustries.com/limiter-vs-compressor/) for where the line sits between them.
 
 Most modern limiters use lookahead: they delay the audio by a few milliseconds so the detector can see a peak coming and start reducing gain before it arrives, rather than clamping down after it has already gone past. That is why a limiter can catch a transient that a compressor with the same attack time would miss, and it is why limiters report latency.
 
@@ -47,19 +49,21 @@ Most modern limiters use lookahead: they delay the audio by a few milliseconds s
 
 - Back off one decibel from wherever you stopped. You will not miss it tomorrow.
 
-BEEFY has LIMIT as one of two output choices, with SOFT CLIP as the other. They are separate switches and either can be off.
+[BEEFY](https://gazillionindustries.com/beefy.html) has LIMIT as one of two output choices, with SOFT CLIP as the other. They are separate switches and either can be off.
+
+**LIMIT** instead, everything else identical.
 
 ## Do the work before the limiter
 
 This is the whole article in one idea. A limiter asked to deliver eight decibels of loudness will pump, flatten and distort, because it is turning the entire mix down every time one snare arrives. Deal with the peaks before it sees them and the limiter has almost nothing left to do.
 
-The tools for that are clipping and saturation, both of which lower peaks without touching the rest of the track. Clipper before limiter covers the order and the amounts, and crest factor explains why it works.
+The tools for that are clipping and saturation, both of which lower peaks without touching the rest of the track. [Clipper before limiter](https://gazillionindustries.com/clipper-before-limiter/) covers the order and the amounts, and [crest factor](https://gazillionindustries.com/crest-factor/) explains why it works.
 
 ## Where it costs you
 
 Transients go first: the snare loses its crack, then the kick goes blunt. Then the sense of depth, because everything gets pushed toward the same level. Then, at the extreme, audible distortion on sustained low notes, where the limiter's release is moving fast enough to modulate the waveform itself.
 
-There is also a strategic cost. Streaming services normalize playback, so past a certain point you are giving up dynamics for loudness that the listener's player is going to take straight back off. How loud should my master be has the numbers.
+There is also a strategic cost. Streaming services normalize playback, so past a certain point you are giving up dynamics for loudness that the listener's player is going to take straight back off. [How loud should my master be](https://gazillionindustries.com/how-loud-should-my-master-be/) has the numbers.
 
 ## Questions people ask
 
@@ -81,7 +85,7 @@ As a safety catch after compression, taking a decibel or two off the few loudest
 
 ## What BEEFY does
 
-BEEFY is our saturation and loudness effect. SOFT CLIP opens switched on and brings rounded, fuzzy edges to the loudest parts, which is the upstream work that stops a limiter from having to do everything. LIMIT is the other choice when you want output peaks held in check instead, and both can be turned off so you can push it yourself. BEEF brings weight and density, COOK the color and bite, and JUICE the level going in. Input and output clip lights watch both ends.
+BEEFY is our saturation and loudness effect. **SOFT CLIP** opens switched on and brings rounded, fuzzy edges to the loudest parts, which is the upstream work that stops a limiter from having to do everything. **LIMIT** is the other choice when you want output peaks held in check instead, and both can be turned off so you can push it yourself. **BEEF** brings weight and density, **COOK** the color and bite, and **JUICE** the level going in. Input and output clip lights watch both ends.
 
 Last in the chain, and the least it has to do, the better it sounds.
 

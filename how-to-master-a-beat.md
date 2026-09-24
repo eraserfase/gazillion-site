@@ -25,6 +25,8 @@ To master a beat, start from a mix that peaks around −6 dBFS with nothing on t
 
 - **Rule**: if the mix needs saving, go back to the mix
 
+**BEEF at 96.** Past where most settings want to live.
+
 ## What mastering is doing here
 
 For a beat headed to a streaming service or a client, mastering is three jobs: fix anything the mix got broadly wrong, get the record to a competitive loudness without wrecking the transients, and make sure it holds up on the systems people actually use. It is not a rescue service. A mix with a boomy 200 Hz and a buried snare arrives at the end of this chain as a louder mix with a boomy 200 Hz and a buried snare.
@@ -49,15 +51,17 @@ The most useful thing you can do before any of it is leave headroom. A mix that 
 
 - Check on a phone, in mono, in the car, and at conversation volume.
 
-BEEFY is our saturation and loudness effect, with SOFT CLIP switched on when it opens and LIMIT as the other choice. Both, and the two clip lights, live on the same three-knob panel.
+[BEEFY](https://gazillionindustries.com/beefy.html) is our saturation and loudness effect, with SOFT CLIP switched on when it opens and LIMIT as the other choice. Both, and the two clip lights, live on the same three-knob panel.
 
 ## Clipping before the limiter
 
-The single biggest jump in perceived loudness comes from dealing with transients before the limiter rather than asking the limiter to do everything. A clipper rounds or shears the tops off the few samples that are far above everything else, which lowers the peak without touching the body, so the limiter has much less to pull down and the record stops pumping. Drums take this well because their peaks are short. Clipper before limiter covers the order and the amounts in detail.
+The single biggest jump in perceived loudness comes from dealing with transients before the limiter rather than asking the limiter to do everything. A clipper rounds or shears the tops off the few samples that are far above everything else, which lowers the peak without touching the body, so the limiter has much less to pull down and the record stops pumping. Drums take this well because their peaks are short. [Clipper before limiter](https://gazillionindustries.com/clipper-before-limiter/) covers the order and the amounts in detail.
+
+**BEEF at 8.** The reference you A/B against.
 
 ## How loud, honestly
 
-Streaming services turn loud masters down to a normalization target rather than rewarding them, so chasing the last decibel mostly costs you dynamics that nobody hears anyway. Competitive rap and beat masters still sit well above those targets, because the character of a heavily limited record is part of the genre, and that is a musical decision rather than a technical one. How loud should my master be has the numbers and what each platform does with them.
+Streaming services turn loud masters down to a normalization target rather than rewarding them, so chasing the last decibel mostly costs you dynamics that nobody hears anyway. Competitive rap and beat masters still sit well above those targets, because the character of a heavily limited record is part of the genre, and that is a musical decision rather than a technical one. [How loud should my master be](https://gazillionindustries.com/how-loud-should-my-master-be/) has the numbers and what each platform does with them.
 
 The practical version: level-match your master against a reference you admire, and stop when yours holds up. Loudness compared at unmatched volume is not a comparison, it is a trick, and it is the reason people master three decibels too hard.
 
@@ -85,7 +89,7 @@ Yes, and for beats sold or uploaded by the person who made them it is the normal
 
 ## What BEEFY does
 
-BEEFY is a saturation and loudness effect for making sounds thicker, punchier and more up front. It adds body, squeezes some space out of the peaks, and brings out harmonics that help a sound feel bigger. SOFT CLIP opens switched on and takes care of the initial gain staging, bringing rounded, fuzzy edges to the loudest parts, and you can switch to LIMIT to keep the output peaks in check instead, or turn both off and push it yourself. BEEF brings weight, density and loudness; COOK changes the color and bite; JUICE sets the level going in.
+BEEFY is a saturation and loudness effect for making sounds thicker, punchier and more up front. It adds body, squeezes some space out of the peaks, and brings out harmonics that help a sound feel bigger. **SOFT CLIP** opens switched on and takes care of the initial gain staging, bringing rounded, fuzzy edges to the loudest parts, and you can switch to **LIMIT** to keep the output peaks in check instead, or turn both off and push it yourself. **BEEF** brings weight, density and loudness; **COOK** changes the color and bite; **JUICE** sets the level going in.
 
 The gap between your room and the playlist was never a plugin you had not bought yet.
 

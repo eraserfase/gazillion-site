@@ -25,6 +25,8 @@ Saturation plugins do one job in different amounts: add harmonic content, round 
 
 - **Caveat**: we have measured none of the others. Demo them.
 
+**SOFT CLIP** as the out stage, BEEF at 62.
+
 ## Soundtoys Decapitator — $199
 
 The one most engineers name first, and the reason is workflow rather than sound: it is fast, it has auto-gain so level-matched comparison is the default, and the five style models cover a lot of ground from one control. Those models are labeled A, E, N, T and P. Worth knowing, because secondary write-ups get it wrong constantly: T and P are both settings from the same unit, a triode and a pentode mode, not two different machines.
@@ -39,17 +41,19 @@ The reviews agree on what it is and what it costs you: the most flexible saturat
 
 ## The free ones
 
-Softube Saturation Knob has been recommended by outlets continuously from 2016 through 2024, which for a free plugin is remarkable. One knob and a three-position mode switch. There is no reason not to have it installed.
+**Softube Saturation Knob** has been recommended by outlets continuously from 2016 through 2024, which for a free plugin is remarkable. One knob and a three-position mode switch. There is no reason not to have it installed.
 
-Klanghelm IVGI is also free and well regarded, with more control over the response curve than its size suggests. Klanghelm's paid SDRR is listed in euros only.
+**Klanghelm IVGI** is also free and well regarded, with more control over the response curve than its size suggests. Klanghelm's paid SDRR is listed in euros only.
 
-BEEFY is ours, it is $19, and there is a demo on its page with three without-and-with comparisons. Judge it there rather than here.
+[BEEFY](https://gazillionindustries.com/beefy.html) is ours, it is $19, and there is a demo on its page with three without-and-with comparisons. Judge it there rather than here.
+
+**BEEF at 96.** Past where most settings want to live.
 
 ## The others worth naming
 
-Waves Abbey Road Saturator models a specific piece of studio hardware and lists at $149, though Waves discounts aggressively and it is routinely far cheaper. Note that Waves' own manual and product page give two different years for the hardware it is based on, so treat the history loosely.
+**Waves Abbey Road Saturator** models a specific piece of studio hardware and lists at $149, though Waves discounts aggressively and it is routinely far cheaper. Note that Waves' own manual and product page give two different years for the hardware it is based on, so treat the history loosely.
 
-iZotope Trash is $99 and is a broader distortion instrument rather than a subtle saturator. Published reviews have been lukewarm, scoring it around three out of five, so demo it against the cheaper options before committing.
+**iZotope Trash** is $99 and is a broader distortion instrument rather than a subtle saturator. Published reviews have been lukewarm, scoring it around three out of five, so demo it against the cheaper options before committing.
 
 ## Where BEEFY fits, honestly
 
@@ -87,11 +91,11 @@ One broadband one you know well, and the free ones for variety. Harmonics stack 
 
 ### Does saturation make things louder?
 
-Yes, in two ways: it adds harmonics in ranges the ear is sensitive to, and it rounds peaks so the average level can rise. See saturation explained and crest factor.
+Yes, in two ways: it adds harmonics in ranges the ear is sensitive to, and it rounds peaks so the average level can rise. See [saturation explained](https://gazillionindustries.com/saturation-explained/) and [crest factor](https://gazillionindustries.com/crest-factor/).
 
 ## What BEEFY does
 
-BEEFY is our saturation and loudness effect for making sounds thicker, punchier and more up front. It adds body, squeezes some space out of the peaks, and brings out harmonics that help a sound feel bigger. BEEF is the main event: more weight, more density, more loudness and more attitude as you turn it up. COOK changes the color and bite, from a rounder feel toward a brighter, more cooked edge. JUICE sets the level going in. SOFT CLIP opens switched on and takes care of the initial gain staging; LIMIT is the other choice; both can be off.
+BEEFY is our saturation and loudness effect for making sounds thicker, punchier and more up front. It adds body, squeezes some space out of the peaks, and brings out harmonics that help a sound feel bigger. **BEEF** is the main event: more weight, more density, more loudness and more attitude as you turn it up. **COOK** changes the color and bite, from a rounder feel toward a brighter, more cooked edge. **JUICE** sets the level going in. **SOFT CLIP** opens switched on and takes care of the initial gain staging; **LIMIT** is the other choice; both can be off.
 
 Prices read on 20 September 2026 and all of them will have changed by the time you get there. Demo everything.
 

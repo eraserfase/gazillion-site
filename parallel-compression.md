@@ -25,6 +25,10 @@ Parallel compression means blending a heavily compressed copy of a signal undern
 
 - **Watch**: latency between the two paths, and mud below 100 Hz
 
+**DOSE 95, MIX 45.** Parallel without a send: the squashed copy sits under the dry one.
+
+**DOSE 88.** Same source. The line dives on each hit and takes the whole bar to come back — that recovery is the pump.
+
 ## Why the blend works when one compressor does not
 
 A compressor on its own can only trade. Push it hard and the quiet detail comes up, but the transient goes with it, because the same gain cell handles both. Two paths let you keep the spike on one and lose it on the other, which is why the technique got its reputation on drums, where the spike is the whole point.
@@ -55,11 +59,11 @@ Two paths only stay a blend if they stay in time. Any plugin that reports latenc
 
 Check it by inverting the polarity of the compressed copy with the compressor bypassed: the two should cancel to near silence. If they do not, the paths are not aligned, and no amount of fader is going to fix it.
 
-DRUGS has MIX on the face with zero latency anywhere in the path, so the dry signal stays sample-aligned with the wet one and parallel compression does not comb-filter at any setting. It is free.
+[DRUGS](https://gazillionindustries.com/drugs.html) has MIX on the face with zero latency anywhere in the path, so the dry signal stays sample-aligned with the wet one and parallel compression does not comb-filter at any setting. It is free.
 
 ## Where it costs you
 
-Parallel compression raises the average level of everything it touches, which means noise, bleed and the low hum under a sampled break come up with the drums. On a clean modern kit that can sound like someone left a preamp on. Kick and 808 territory gets crowded too, because the blended copy fills the gaps the kick was using; high-passing the copy or ducking it against the kick gives that space back. See how to mix kick and 808 if the low end is the part that stopped working.
+Parallel compression raises the average level of everything it touches, which means noise, bleed and the low hum under a sampled break come up with the drums. On a clean modern kit that can sound like someone left a preamp on. Kick and 808 territory gets crowded too, because the blended copy fills the gaps the kick was using; high-passing the copy or ducking it against the kick gives that space back. See [how to mix kick and 808](https://gazillionindustries.com/how-to-mix-kick-and-808/) if the low end is the part that stopped working.
 
 It is also easy to overdo on a whole mix. Weight on a drum bus reads as power; weight on the master reads as fatigue by the second chorus.
 
@@ -83,7 +87,7 @@ Yes. New York compression is the same blend under a different name, usually with
 
 ## What DRUGS does
 
-DRUGS is our free one-knob bus compressor for drums. DOSE moves the transfer curve, the knee, the attack and the release together, the way a single hardware macro would, and makes a drum bus denser rather than louder: peak level barely moves across the whole range of the knob. MIX is the dry/wet, with zero latency anywhere in the path, so the dry signal stays sample-aligned with the wet one. Auto-makeup is applied after the gain cell, so setting level cannot disturb the dynamics.
+DRUGS is our free one-knob bus compressor for drums. **DOSE** moves the transfer curve, the knee, the attack and the release together, the way a single hardware macro would, and makes a drum bus denser rather than louder: peak level barely moves across the whole range of the knob. **MIX** is the dry/wet, with zero latency anywhere in the path, so the dry signal stays sample-aligned with the wet one. Auto-makeup is applied after the gain cell, so setting level cannot disturb the dynamics.
 
 Two copies of the drums, one fader. That record you wore out was never doing anything else.
 

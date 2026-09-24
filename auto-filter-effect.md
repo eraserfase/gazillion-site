@@ -25,6 +25,8 @@ An auto filter is a filter whose cutoff moves on its own, usually driven by an L
 
 - **Resonance**: makes the movement audible
 
+**12 bit, full rate.** Quantisation without losing the top.
+
 ## How an auto filter works
 
 A filter removes frequencies above or below its cutoff. An auto filter moves that cutoff for you. In LFO mode, a low-frequency oscillator swings it up and down in a shape (sine for smooth, square for choppy, sample-and-hold for random steps) at a rate you set, usually in note values like quarter notes or bars. In envelope mode, the cutoff opens as the input gets louder and closes as it quiets, so the filter reacts to the performance.
@@ -49,43 +51,45 @@ Point the envelope follower at a different track and the filter moves with that 
 
 - Try a faster rate or a stepped shape for rhythm.
 
-F(ilter)12 has both: AUTO FILTER on a clock with swing, and SIDECHAIN that follows another signal. There's a demo on the page.
+[F(ilter)12](https://gazillionindustries.com/f12.html) has both: AUTO FILTER on a clock with swing, and SIDECHAIN that follows another signal. There's a demo on the page.
+
+**4 bit at 8 kHz.** Bits make it grainy, the rate makes it clang.
 
 ## Groove, not just movement
 
-A synced LFO moves in perfect time, which can sound mechanical against swung drums. If your auto filter offers swing or a grid, push its steps off the beat the same way the hats are swung, and the filter will sit in the pocket instead of marching over it. For one-time sweeps into a drop, automation is the better tool: see how to make a filter sweep.
+A synced LFO moves in perfect time, which can sound mechanical against swung drums. If your auto filter offers swing or a grid, push its steps off the beat the same way the hats are swung, and the filter will sit in the pocket instead of marching over it. For one-time sweeps into a drop, automation is the better tool: see [how to make a filter sweep](https://gazillionindustries.com/how-to-make-a-filter-sweep/).
 
 ## Where it works
 
-- Pads and chords: slow low-pass movement so a loop breathes.
+- **Pads and chords:** slow low-pass movement so a loop breathes.
 
-- Drum loops: band-pass or high-pass at a rhythmic rate for variation.
+- **Drum loops:** band-pass or high-pass at a rhythmic rate for variation.
 
-- Lofi textures: gentle movement on a crushed sample (see how to make lofi beats).
+- **Lofi textures:** gentle movement on a crushed sample (see [how to make lofi beats](https://gazillionindustries.com/how-to-make-lofi-beats/)).
 
-- Bass: envelope mode for funky, touch-sensitive movement.
+- **Bass:** envelope mode for funky, touch-sensitive movement.
 
 ## What to look for in an auto filter plugin
 
 Most hosts ship something that will move a filter. The differences between one of those and a plugin built for it come down to four things, and only one of them is the filter.
 
-What drives it. An LFO gives you movement locked to a rate; an envelope follower gives you movement that answers the material. A plugin with only an LFO can sound like a filter being swept at the music, which is a different effect and a much more obvious one.
+**What drives it.** An LFO gives you movement locked to a rate; an envelope follower gives you movement that answers the material. A plugin with only an LFO can sound like a filter being swept at the music, which is a different effect and a much more obvious one.
 
-What the resonance does at the top. Cheap resonance either squeals or disappears. On a moving filter you hear that constantly, because the resonant peak is sweeping across the material rather than sitting still, so anything ugly about it gets toured across the whole spectrum.
+**What the resonance does at the top.** Cheap resonance either squeals or disappears. On a moving filter you hear that constantly, because the resonant peak is sweeping across the material rather than sitting still, so anything ugly about it gets toured across the whole spectrum.
 
-How many shapes. Low-pass alone gets old. Band-pass moving across a loop is the sound most people are actually after, and notch and high-pass are what keep a filtered part from disappearing in a busy arrangement.
+**How many shapes.** Low-pass alone gets old. Band-pass moving across a loop is the sound most people are actually after, and notch and high-pass are what keep a filtered part from disappearing in a busy arrangement.
 
-Whether it aliases. A moving filter with resonance generates content well above the source, and without oversampling some of it folds back down as a metallic ring that moves in the opposite direction to the sweep. Once you have heard it you cannot unhear it.
+**Whether it aliases.** A moving filter with resonance generates content well above the source, and without oversampling some of it folds back down as a metallic ring that moves in the opposite direction to the sweep. Once you have heard it you cannot unhear it.
 
 ## Auto filter against the other ways to get movement
 
 Three techniques get confused with each other and produce noticeably different results.
 
-An auto filter changes the tone over time, so the part stays present and its color moves. Nothing disappears.
+**An auto filter** changes the tone over time, so the part stays present and its color moves. Nothing disappears.
 
-Sidechain compression changes the level over time, so the part ducks and returns. The tone is unaffected; the part goes away and comes back. Covered separately in sidechain compression.
+**Sidechain compression** changes the level over time, so the part ducks and returns. The tone is unaffected; the part goes away and comes back. Covered separately in [sidechain compression](https://gazillionindustries.com/sidechain-compression/).
 
-A filter driven from another signal is the hybrid: the tone moves, but it moves in answer to something else in the arrangement rather than to itself. That is a different setup with different uses, and it has its own guide.
+**A filter driven from another signal** is the hybrid: the tone moves, but it moves in answer to something else in the arrangement rather than to itself. That is a different setup with different uses, and it has its own guide.
 
 If a part is fighting the kick, the level technique is usually right. If a part is static and boring, the tone technique is. Reaching for the wrong one is why people end up with a mix that pumps and is still boring.
 
@@ -121,7 +125,7 @@ No. An auto filter changes tone over time and the part stays present. Sidechain 
 
 ## What F(ilter)12 does
 
-F(ilter)12 can move its filter two ways, one at a time. AUTO FILTER hands it to a clock: a shape, a division, a grid, and SWING to push it off the grid. SIDECHAIN hands it to a signal instead: what it follows, what it hears, which way it travels, how far, and how eagerly it makes up its mind. The filter itself has five shapes and six resonance shapes that travel with the knob.
+F(ilter)12 can move its filter two ways, one at a time. **AUTO FILTER** hands it to a clock: a shape, a division, a grid, and **SWING** to push it off the grid. **SIDECHAIN** hands it to a signal instead: what it follows, what it hears, which way it travels, how far, and how eagerly it makes up its mind. The filter itself has five shapes and six resonance shapes that travel with the knob.
 
 Same pad, same eight bars. Now people look out the window.
 

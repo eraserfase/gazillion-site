@@ -39,19 +39,19 @@ One catch worth knowing before you plan a chain around it: ChromaGlow is availab
 
 If saturation is what you wanted from tape, and you are on Apple silicon, you have it. Buying a tape plug-in for harmonic thickening in Logic is buying something you own.
 
-TRIPLE OG ships as an Audio Unit on macOS, so it appears in Logic's menu like any stock plug-in. WOW FLUT and the SLAM transport are the parts Logic has nothing for. There's a demo on the page.
+[TRIPLE OG](https://gazillionindustries.com/tripleog.html) ships as an Audio Unit on macOS, so it appears in Logic's menu like any stock plug-in. **WOW FLUT** and the **SLAM** transport are the parts Logic has nothing for. There's a demo on the page.
 
 ## The parts Logic has nothing for
 
-- Speed instability. Nothing in Logic's stock set varies playback speed slightly and continuously the way a tape transport does. That is wow and flutter, and it is the behavior you cannot assemble from other devices.
+- **Speed instability.** Nothing in Logic's stock set varies playback speed slightly and continuously the way a tape transport does. That is [wow and flutter](https://gazillionindustries.com/wow-and-flutter/), and it is the behavior you cannot assemble from other devices.
 
-- A cassette noise floor. Logic has noise generators; what a cassette needs is a filtered, level-matched, partly decorrelated bed that sits under the music rather than on top of it. See tape hiss.
+- **A cassette noise floor.** Logic has noise generators; what a cassette needs is a filtered, level-matched, partly decorrelated bed that sits under the music rather than on top of it. See [tape hiss](https://gazillionindustries.com/tape-hiss/).
 
-- A transport. Stopping, dragging, rewinding and coming back in sync. See tape stop plugins.
+- **A transport.** Stopping, dragging, rewinding and coming back in sync. See [tape stop plugins](https://gazillionindustries.com/best-tape-stop-plugins/).
 
 ## Tape Delay is not a tape machine
 
-Logic's Tape Delay is a delay whose design references tape echo units. It is a good delay and it is solving a different problem: repeats, feedback and the character of the repeats. It does not put your source signal on tape, and reaching for it to get a tape sound on a drum bus will not work. The distinction is in tape delay explained.
+Logic's Tape Delay is a delay whose design references tape echo units. It is a good delay and it is solving a different problem: repeats, feedback and the character of the repeats. It does not put your source signal on tape, and reaching for it to get a tape sound on a drum bus will not work. The distinction is in [tape delay explained](https://gazillionindustries.com/tape-delay-explained/).
 
 ## Questions people ask
 
@@ -73,7 +73,7 @@ An Audio Unit that supplies what Logic does not, rather than more saturation. We
 
 ## What TRIPLE OG does
 
-TRIPLE OG is our cassette tape simulation, and on macOS it ships as an Audio Unit alongside VST3 and a standalone app, so Logic finds it. WOW FLUT is the speed instability, HISS a continuous broadband bed, and AGE runs from nought to sixty years, taking wear, noise and stability together. TONE and DRIVE handle brightness and thickness. The transport is on the face: SLAM stops the tape and returns it in sync, SCRUB runs the head backward and springs home, and CATCH makes it drag and then sprint to catch up.
+TRIPLE OG is our cassette tape simulation, and on macOS it ships as an Audio Unit alongside VST3 and a standalone app, so Logic finds it. **WOW FLUT** is the speed instability, **HISS** a continuous broadband bed, and **AGE** runs from nought to sixty years, taking wear, noise and stability together. **TONE** and **DRIVE** handle brightness and thickness. The transport is on the face: **SLAM** stops the tape and returns it in sync, **SCRUB** runs the head backward and springs home, and **CATCH** makes it drag and then sprint to catch up.
 
 Logic will color a sound beautifully. It will not put one on a machine.
 

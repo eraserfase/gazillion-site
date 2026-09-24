@@ -25,6 +25,8 @@ A mix is muddy when too much energy is stacked between roughly 150 and 500 Hz, w
 
 - **Check**: mono, quiet, and on a small speaker
 
+**LIMIT** instead, everything else identical.
+
 ## Why that range and not another
 
 Almost everything has energy between 150 and 500 Hz. The body of a kick, the fundamentals of a bass line, the warmth of a piano, the chest of a voice, the low end of a guitar, the room tone in a sampled break. Individually every one of them sounds right. Added together they produce a broad hump nobody chose, and because the ear reads that range as weight, the mix sounds heavy and unclear at the same time.
@@ -47,17 +49,19 @@ It compounds. Each track you add contributes a little more, so a mix gets muddie
 
 - Check again in mono, then on a phone.
 
-BEEFY will not fix mud — saturation adds harmonics into the range you are trying to clear. Clean first, then reach for weight.
+[BEEFY](https://gazillionindustries.com/beefy.html) will not fix mud — saturation adds harmonics into the range you are trying to clear. Clean first, then reach for weight.
+
+**BEEF at 96.** Past where most settings want to live.
 
 ## The causes that are not EQ problems
 
-Too many parts. Three instruments playing the same chord in the same octave is a mud generator no equalizer will defeat. Move one of them up an octave or take it out.
+**Too many parts.** Three instruments playing the same chord in the same octave is a mud generator no equalizer will defeat. Move one of them up an octave or take it out.
 
-Reverb on everything. Reverb fills the gaps between notes, which is the definition of a less clear mix. Use fewer, shorter, and high-pass them.
+**Reverb on everything.** Reverb fills the gaps between notes, which is the definition of a less clear mix. Use fewer, shorter, and high-pass them.
 
-Mixing too loud, or in an untreated room. Your ears hear more low end at high volume, so a mix balanced loud comes out light on bass and heavy in the low mids. A small room with no treatment exaggerates specific frequencies and hides others, which is why the car test exists.
+**Mixing too loud, or in an untreated room.** Your ears hear more low end at high volume, so a mix balanced loud comes out light on bass and heavy in the low mids. A small room with no treatment exaggerates specific frequencies and hides others, which is why the car test exists.
 
-No high end. Sometimes the mix is not muddy at all: it is dull. If nothing above 8 kHz is happening, the low mids sound proportionally larger. Check before cutting.
+**No high end.** Sometimes the mix is not muddy at all: it is dull. If nothing above 8 kHz is happening, the low mids sound proportionally larger. Check before cutting.
 
 ## Where it costs you
 
@@ -75,7 +79,7 @@ Heavy, unclear and indistinct, with no separation between instruments and lyrics
 
 ### How do you clean up muddy bass?
 
-Decide which of the kick and the bass owns the bottom and which owns the body, then cut the other one there: commonly the kick keeps 60 to 90 Hz and the bass keeps 100 to 200 Hz. See how to mix kick and 808.
+Decide which of the kick and the bass owns the bottom and which owns the body, then cut the other one there: commonly the kick keeps 60 to 90 Hz and the bass keeps 100 to 200 Hz. See [how to mix kick and 808](https://gazillionindustries.com/how-to-mix-kick-and-808/).
 
 ### What frequency causes muddiness?
 
@@ -83,7 +87,7 @@ Most often 200 to 400 Hz, with the surrounding range from about 150 to 500 Hz co
 
 ## What BEEFY does
 
-BEEFY is our saturation and loudness effect, and it is worth being clear about what it is for here. It adds body, squeezes space out of the peaks and brings out harmonics that help a sound feel bigger: useful on a thin kick or a polite break, and the opposite of what a cluttered low mid needs. BEEF adds weight and density, COOK moves the color from rounder toward brighter, and JUICE sets the input. Clear the range first, then decide what deserves the weight.
+BEEFY is our saturation and loudness effect, and it is worth being clear about what it is for here. It adds body, squeezes space out of the peaks and brings out harmonics that help a sound feel bigger: useful on a thin kick or a polite break, and the opposite of what a cluttered low mid needs. **BEEF** adds weight and density, **COOK** moves the color from rounder toward brighter, and **JUICE** sets the input. Clear the range first, then decide what deserves the weight.
 
 Two in the morning is not a listening environment. The car, unfortunately, is.
 

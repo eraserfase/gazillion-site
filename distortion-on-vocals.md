@@ -7,7 +7,7 @@ Published 2026-09-13, updated 2026-09-24. By Gazillion Industries, who make BEEF
 
 ---
 
-When Kanye West released Yeezus in 2013, some of the vocals came through so blown out they sounded like they'd been recorded inside a furnace. It wasn't a mistake. It was the point.
+When Kanye West released *Yeezus* in 2013, some of the vocals came through so blown out they sounded like they'd been recorded inside a furnace. It wasn't a mistake. It was the point.
 
 To use distortion on vocals, decide first whether you want presence or an effect. For presence, add gentle saturation after EQ and compression. For aggression that stays intelligible, send the vocal to a return, distort it hard, band-limit the return and blend it under the clean vocal. For an obvious effect, distort the vocal directly on the parts that need it. De-ess before the distortion, and automate it so it hits where it matters.
 
@@ -24,6 +24,8 @@ To use distortion on vocals, decide first whether you want presence or an effect
 - **Clarity**: keep the clean vocal leading
 
 - **Automation**: more on the loud moments, less on the verses
+
+**BEEF at 8.** The reference you A/B against.
 
 ## Why distort a vocal
 
@@ -47,9 +49,11 @@ A little saturation on the lead vocal, usually after EQ and compression, brings 
 
 - Automate the return up on the loud lines and down on quiet ones.
 
-The clean vocal keeps the words; the return adds the teeth. The general method is in parallel saturation.
+The clean vocal keeps the words; the return adds the teeth. The general method is in [parallel saturation](https://gazillionindustries.com/parallel-saturation/).
 
-BEEFY works on a vocal that could use some attitude. The demo on the page is 28 seconds.
+[BEEFY](https://gazillionindustries.com/beefy.html) works on a vocal that could use some attitude. The demo on the page is 28 seconds.
+
+**LIMIT** instead, everything else identical.
 
 ## Obvious: distortion as an effect
 
@@ -57,15 +61,15 @@ Heavy distortion straight on the vocal is a statement. It works best in doses: a
 
 ## Watch these
 
-- Sibilance: "s" sounds distort into harsh noise. De-ess first.
+- **Sibilance:** "s" sounds distort into harsh noise. De-ess first.
 
-- Intelligibility: check that every word still reads in the full mix.
+- **Intelligibility:** check that every word still reads in the full mix.
 
-- Reverb: distort before reverb, not after, or the tail turns to mush.
+- **Reverb:** distort before reverb, not after, or the tail turns to mush.
 
-- Harshness: low-pass the distorted signal and use a darker setting.
+- **Harshness:** low-pass the distorted signal and use a darker setting.
 
-For which kind of drive to reach for, see saturation vs distortion.
+For which kind of drive to reach for, see [saturation vs distortion](https://gazillionindustries.com/saturation-vs-distortion/).
 
 ## Questions people ask
 
@@ -91,7 +95,7 @@ If the recording clipped, the best fix is re-recording with lower input gain. De
 
 ## What BEEFY does
 
-BEEFY is our saturation and loudness plugin, and there's no drum-only rule: it's for a vocal that could use some attitude too. Use a little BEEF for weight and presence, or push it for a more obviously saturated sound. COOK moves the tone from rounder toward brighter and more bitten, and SOFT CLIP, on by default, handles the initial gain staging. For the parallel method, run it on the return.
+BEEFY is our saturation and loudness plugin, and there's no drum-only rule: it's for a vocal that could use some attitude too. Use a little **BEEF** for weight and presence, or push it for a more obviously saturated sound. **COOK** moves the tone from rounder toward brighter and more bitten, and **SOFT CLIP**, on by default, handles the initial gain staging. For the parallel method, run it on the return.
 
 Nobody has to go all the way to the furnace. A little heat still gets heard.
 

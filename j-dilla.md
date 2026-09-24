@@ -3,7 +3,7 @@
 > Who J Dilla was and what he actually did: Conant Gardens, the sampler settings behind Dilla time, the records, Donuts, and what the sources do not support.
 
 Source: https://gazillionindustries.com/j-dilla/  
-Published 2026-09-20, updated 2026-09-24. By Gazillion Industries, who make Gazillion Industries.
+Published 2026-09-20, updated 2026-09-24. By Gazillion Industries.
 
 ---
 
@@ -49,9 +49,9 @@ By 2000 he was inside the Soulquarians circle working out of Electric Lady in Ne
 
 His own account of the chain, given in what turned out to be his last interview, runs: an SP-12, then an SP-1200, then an MPC60, then its successor, then the MPC3000, and he stayed there. R.J. Rice, who signed him in 1992, gave him the SP-1200 and an Akai S950. Two machines that get attached to his name in gear roundups, an Ensoniq ASR-10 and a Casio SK-1, have no source behind them at all, and a Moog Little Phatty is chronologically impossible: it launched the month after he died.
 
-The MPC3000 is the instrument the whole story runs through, and the reason is on one screen of its manual. The machine's internal resolution is 96 clock ticks per quarter note. Its Timing Correct page offers seven quantize values, and then three more parameters: swing percentage, shift direction and shift amount. Those three are set per track. Every drum voice in a pattern can be given its own swing and its own nudge, independently of every other voice.
+The MPC3000 is the instrument the whole story runs through, and the reason is on one screen of its manual. The machine's internal resolution is 96 clock ticks per quarter note. Its Timing Correct page offers seven quantize values, and then three more parameters: swing percentage, shift direction and shift amount. Those three are set *per track*. Every drum voice in a pattern can be given its own swing and its own nudge, independently of every other voice.
 
-Later there were two more instruments worth naming. A Minimoog Voyager, which he used for basslines and synth textures, now in the Smithsonian's National Museum of African American History and Culture along with his MPC3000 Limited Edition, both donated by his mother in 2014. And a BOSS SP-303, a cheap phrase sampler with a vinyl-simulation effect, which arrived in the last year of his life. Our pieces on the Voyager and the SP-303 cover both machines in detail.
+Later there were two more instruments worth naming. A Minimoog Voyager, which he used for basslines and synth textures, now in the Smithsonian's National Museum of African American History and Culture along with his MPC3000 Limited Edition, both donated by his mother in 2014. And a BOSS SP-303, a cheap phrase sampler with a vinyl-simulation effect, which arrived in the last year of his life. Our pieces on [the Voyager](https://gazillionindustries.com/minimoog-voyager/) and [the SP-303](https://gazillionindustries.com/sp-303/) cover both machines in detail.
 
 ## How the drums actually work
 
@@ -81,7 +81,7 @@ House Shoes watched him make A Tribe Called Quest's "Get a Hold" in a pre-produc
 
 The speed came out of the listening, not the machine. He started early and spent something like the first two hours of the day playing records end to end rather than needle-dropping for breaks, which is how a producer ends up sampling Stan Getz, Herbie Hancock, Philip Glass and Hall & Oates in the same career. What arrived at the end of those twelve minutes was usually an arrangement rather than a loop.
 
-The chopping itself got a name after he died: micro-chopping, cutting a sample into fragments small enough that the original phrase disappears and re-sequencing them across the pads. He also pulled individual kicks and snares out of breaks, layered them and programmed a new pattern rather than letting a break run. If you want the method rather than the mythology, we have a guide to chopping a drum break and one on flipping a sample.
+The chopping itself got a name after he died: micro-chopping, cutting a sample into fragments small enough that the original phrase disappears and re-sequencing them across the pads. He also pulled individual kicks and snares out of breaks, layered them and programmed a new pattern rather than letting a break run. If you want the method rather than the mythology, we have a guide to [chopping a drum break](https://gazillionindustries.com/how-to-chop-a-drum-break/) and one on [flipping a sample](https://gazillionindustries.com/how-to-flip-a-sample/).
 
 ## The mixes
 
@@ -103,21 +103,21 @@ On A Tribe Called Quest's Beats, Rhymes and Life, the printed credits carry a se
 
 ### His own records
 
-- Fan-Tas-Tic (Vol. 1) (Slum Village, 1997) — assembled by Waajeed in about a week out of songs that already existed, and first sold hand to hand.
+- **Fan-Tas-Tic (Vol. 1)** (Slum Village, 1997) — assembled by Waajeed in about a week out of songs that already existed, and first sold hand to hand.
 
-- Fantastic, Vol. 2 (Slum Village, 2000) — tracked in the Conant Gardens basement. He left the group after it.
+- **Fantastic, Vol. 2** (Slum Village, 2000) — tracked in the Conant Gardens basement. He left the group after it.
 
-- Welcome 2 Detroit (BBE, 2001) — his solo debut album, which opened BBE's Beat Generation series.
+- **Welcome 2 Detroit** (BBE, 2001) — his solo debut album, which opened BBE's Beat Generation series.
 
-- Ruff Draft (Groove Attack, 2003) — made in four or five days.
+- **Ruff Draft** (Groove Attack, 2003) — made in four or five days.
 
-- Champion Sound (Jaylib, with Madlib, Stones Throw, 2003) — each producer rapping over the other's beats. Per-track production splits for this record are folklore: no printed source gives them.
+- **Champion Sound** (Jaylib, with Madlib, Stones Throw, 2003) — each producer rapping over the other's beats. Per-track production splits for this record are folklore: no printed source gives them.
 
-- Donuts (Stones Throw, 2006).
+- **Donuts** (Stones Throw, 2006).
 
-- The Shining (BBE, 2006) — the record he was actually concentrating on, finished after his death by Karriem Riggins.
+- **The Shining** (BBE, 2006) — the record he was actually concentrating on, finished after his death by Karriem Riggins.
 
-- The Diary (Pay Jay, 2016) — the shelved major-label album. Worth knowing: he produced four of its fourteen tracks. The rest came from Madlib, Pete Rock, Hi-Tek, Nottz, Waajeed, House Shoes, Karriem Riggins and others.
+- **The Diary** (Pay Jay, 2016) — the shelved major-label album. Worth knowing: he produced four of its fourteen tracks. The rest came from Madlib, Pete Rock, Hi-Tek, Nottz, Waajeed, House Shoes, Karriem Riggins and others.
 
 ### For other people
 
@@ -151,23 +151,23 @@ Pitchfork gave Donuts a 7.9 the day after it was released. When the same publica
 
 More gets repeated about Dilla than about almost any producer, and a fair amount of it does not survive contact with the sources. These are the ones worth knowing, because each is load-bearing for somebody's argument.
 
-- "He never quantized." The biographer who spent four years and nearly two hundred interviews on him is blunt about this: it is not true. He used the machine's timing functions, per track, deliberately. Some tracks were quantized, some were swung by different amounts, some were played free.
+- **"He never quantized."** The biographer who spent four years and nearly two hundred interviews on him is blunt about this: it is not true. He used the machine's timing functions, per track, deliberately. Some tracks were quantized, some were swung by different amounts, some were played free.
 
-- "He made Donuts in his hospital bed." He worked in the hospital, on equipment carried in by his mother and Stones Throw, and that much is attested by everyone involved. But a beat tape of the material existed before the final hospitalization, and the album as released was expanded, edited and sequenced by Jeff Jank. Both halves of that are true, and the second half does not diminish the first.
+- **"He made Donuts in his hospital bed."** He worked in the hospital, on equipment carried in by his mother and Stones Throw, and that much is attested by everyone involved. But a beat tape of the material existed before the final hospitalization, and the album as released was expanded, edited and sequenced by Jeff Jank. Both halves of that are true, and the second half does not diminish the first.
 
-- "The track titles are his goodbye letter." Jank named the tracks.
+- **"The track titles are his goodbye letter."** Jank named the tracks.
 
-- "He produced Janet Jackson's 'Got 'Til It's Gone' and Jimmy Jam and Terry Lewis took the credit." Dilla himself told a version of this in a 2003 interview. Q-Tip was asked about it directly in 2009 and gave a different account: Janet's camp heard beats he and Dilla had made, and it inspired them to make their own record, which is why it sounded familiar. There are real Ummah remixes of the track, which is where some of the confusion lives.
+- **"He produced Janet Jackson's 'Got 'Til It's Gone' and Jimmy Jam and Terry Lewis took the credit."** Dilla himself told a version of this in a 2003 interview. Q-Tip was asked about it directly in 2009 and gave a different account: Janet's camp heard beats he and Dilla had made, and it inspired them to make their own record, which is why it sounded familiar. There are real Ummah remixes of the track, which is where some of the confusion lives.
 
-- "He played everything on Welcome 2 Detroit." He produced all but one track and played on several. Karriem Riggins played drums and produced "The Clapper"; Dwele played keys, bass and trumpet on "Think Twice", with his brother Antwan Gardener on trombone.
+- **"He played everything on Welcome 2 Detroit."** He produced all but one track and played on several. Karriem Riggins played drums and produced "The Clapper"; Dwele played keys, bass and trumpet on "Think Twice", with his brother Antwan Gardener on trombone.
 
-- "Bob Moog built him a custom Voyager and signed the faceplate." The Smithsonian's press release calls the instrument custom-made, and the story has grown from there. The museum's own catalog record notes no signature, and the serial number sits inside the 600-unit first run that shipped to everybody.
+- **"Bob Moog built him a custom Voyager and signed the faceplate."** The Smithsonian's press release calls the instrument custom-made, and the story has grown from there. The museum's own catalog record notes no signature, and the serial number sits inside the 600-unit first run that shipped to everybody.
 
-- "He died of lupus, at Cedars-Sinai." He died at home in Los Angeles. The blood disorder diagnosed in 2002 was TTP; the lupus label came later and the reporting closest to the family hedged it at the time.
+- **"He died of lupus, at Cedars-Sinai."** He died at home in Los Angeles. The blood disorder diagnosed in 2002 was TTP; the lupus label came later and the reporting closest to the family hedged it at the time.
 
-- "He produced 'Devil's Pie' on Voodoo." D'Angelo's Voodoo carries no Dilla production credit at all. He was part of the Soulquarians circle that made the record; that is a different claim.
+- **"He produced 'Devil's Pie' on Voodoo."** D'Angelo's Voodoo carries no Dilla production credit at all. He was part of the Soulquarians circle that made the record; that is a different claim.
 
-- The gear lists. An Ensoniq ASR-10 and a Casio SK-1 turn up in almost every roundup of his equipment with nothing behind them, and his own account of his machines does not include either. A Moog Little Phatty is impossible: it launched the month after he died.
+- **The gear lists.** An Ensoniq ASR-10 and a Casio SK-1 turn up in almost every roundup of his equipment with nothing behind them, and his own account of his machines does not include either. A Moog Little Phatty is impossible: it launched the month after he died.
 
 ## The person, as opposed to the saint
 
@@ -175,7 +175,9 @@ Almost every published portrait of him says shy, quiet, humble. That is true and
 
 The same book documents him falling out with his own label over a bootleg, with a friend over revealing he was in hospital, and with House Shoes over a crate of records, a fight that ended up as a diss on a Jaylib record. He was twenty-seven when he was told there was no cure. The canonization started immediately after he died and has not really stopped, and it is worth remembering that the person it happened to was not a monument.
 
-We make DRUGS. Drums that came off a record, squashed on the way out. DOSE 88, and the line along the bottom is the gain reduction recovering across the bar.
+Drums that came off a record, squashed on the way out. **DOSE 88**, and the line along the bottom is the gain reduction recovering across the bar.
+
+We make [DRUGS](https://gazillionindustries.com/drugs.html). Drums that came off a record, squashed on the way out. DOSE 88, and the line along the bottom is the gain reduction recovering across the bar.
 
 ## The afterlife
 
@@ -187,7 +189,7 @@ The estate took longer and went worse. He signed a will in September 2005 naming
 
 The critical apparatus arrived late but solidly. Dan Charnas's biography, published in 2022, reframed him as a rhythmic innovator rather than a cult producer, was reviewed everywhere from the New York Times to the LA Times, and won a PEN award the following year. Charnas teaches a course on him at New York University. There have been museum exhibitions at Wayne State, The Broad and Guild Hall. In 2024 Detroit's city council passed a resolution honoring him, sponsored by its president, and the city named a street after him near the house he grew up in.
 
-the drum programming behind it is a set of things you can actually do, collected in how to make Dilla type beats
+the drum programming behind it is a set of things you can actually do, collected in [how to make Dilla type beats](https://gazillionindustries.com/how-to-make-dilla-type-beats/)
 
 ## Questions people ask
 
@@ -209,7 +211,7 @@ Each voice sits in a consistent place that is not the grid, and the voices disag
 
 ### How do you make beats like J Dilla?
 
-Give the parts different timing instead of nudging the whole pattern. Set the hats to one swing value and the snare to another, or quantize one voice and play another by hand, then leave it alone so the displacement repeats. Choose samples that were played loosely to begin with. And start the loop somewhere other than the kick. Our guides to boom bap drums and chopping a drum break cover the mechanics.
+Give the parts different timing instead of nudging the whole pattern. Set the hats to one swing value and the snare to another, or quantize one voice and play another by hand, then leave it alone so the displacement repeats. Choose samples that were played loosely to begin with. And start the loop somewhere other than the kick. Our guides to [boom bap drums](https://gazillionindustries.com/how-to-make-boom-bap-drums/) and [chopping a drum break](https://gazillionindustries.com/how-to-chop-a-drum-break/) cover the mechanics.
 
 ### What equipment did J Dilla use?
 

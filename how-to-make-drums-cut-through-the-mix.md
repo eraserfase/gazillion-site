@@ -25,6 +25,8 @@ Drums cut through the mix when nothing else is covering their key frequencies an
 
 - **Reverb**: short, and not on everything
 
+**BEEF at 96.** Past where most settings want to live.
+
 ## Why turning them up doesn't work
 
 Masking. When two sounds share a frequency range, the louder one hides the quieter one, and your ear stops hearing the detail in both. Push the drum fader and the drums get louder, but so does the pile-up, and the mix hits the ceiling before the drums get clear. The fix is subtraction somewhere else.
@@ -35,13 +37,15 @@ Find the parts that step on the drums. Keys, guitars and pads often crowd the sn
 
 ## Keep the transients
 
-A clear front edge is what the ear locks onto first. Slow the attack on drum compression so the hit gets through, and don't bury drums in bus compression that flattens every stick. The details are in how to make drums hit harder.
+A clear front edge is what the ear locks onto first. Slow the attack on drum compression so the hit gets through, and don't bury drums in bus compression that flattens every stick. The details are in [how to make drums hit harder](https://gazillionindustries.com/how-to-make-drums-hit-harder/).
 
 ## Add presence with harmonics
 
-Saturation adds harmonics above what a drum already plays, including the upper mids where hearing is most sensitive. A little on the snare or the drum bus makes hits read clearly without an EQ boost that turns harsh. See how to saturate drums.
+Saturation adds harmonics above what a drum already plays, including the upper mids where hearing is most sensitive. A little on the snare or the drum bus makes hits read clearly without an EQ boost that turns harsh. See [how to saturate drums](https://gazillionindustries.com/how-to-saturate-drums/).
 
-BEEFY makes drums thicker, punchier and more up front. The demo on the page is 28 seconds.
+[BEEFY](https://gazillionindustries.com/beefy.html) makes drums thicker, punchier and more up front. The demo on the page is 28 seconds.
+
+**BEEF at 96.** Past where most settings want to live.
 
 ## Duck the busy parts
 
@@ -87,7 +91,7 @@ Usually masking: other parts share the drums' frequency ranges, or reverb blurs 
 
 ## What BEEFY does
 
-BEEFY is our saturation and loudness plugin for making sounds thicker, punchier and more up front. On a snare or the drum bus, BEEF adds weight and density and brings out harmonics that help a sound feel bigger; COOK moves the tone toward a brighter, more cooked edge when a drum needs to cut. SOFT CLIP, on by default, rounds off the loudest parts, and LIMIT holds output peaks instead if you prefer.
+BEEFY is our saturation and loudness plugin for making sounds thicker, punchier and more up front. On a snare or the drum bus, **BEEF** adds weight and density and brings out harmonics that help a sound feel bigger; **COOK** moves the tone toward a brighter, more cooked edge when a drum needs to cut. **SOFT CLIP**, on by default, rounds off the loudest parts, and **LIMIT** holds output peaks instead if you prefer.
 
 Same kitchen, same party. The drums just learned to talk in the gaps.
 

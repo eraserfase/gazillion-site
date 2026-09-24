@@ -25,6 +25,8 @@ The Amen break is a four-bar drum solo by Gregory C. Coleman, starting one minut
 
 - **Now**: added to the National Recording Registry in May 2026
 
+**DOSE 12.** The line along the bottom is gain reduction.
+
 ## Why this break and not another one
 
 There are thousands of drum breaks on soul records and only one of them ended up underneath three genres. The reasons are musical and they are worth knowing if you are looking for your own.
@@ -35,15 +37,17 @@ Who actually devised it is contested. Richard Lewis Spencer, the bandleader who 
 
 ## The detail almost nobody mentions
 
-What early hip hop actually sampled was not the record. It was the 1986 Ultimate Breaks and Beats compilation, and that version was pitched down from 45 rpm to 33 and a third. So the Amen that entered the canon was slower and lower than the one The Winstons played, and every producer who built on it was building on a copy that had already been altered. The break most people know is a second-generation object.
+What early hip hop actually sampled was not the record. It was the 1986 *Ultimate Breaks and Beats* compilation, and that version was pitched down from 45 rpm to 33 and a third. So the Amen that entered the canon was slower and lower than the one The Winstons played, and every producer who built on it was building on a copy that had already been altered. The break most people know is a second-generation object.
 
-DRUGS is our free one-knob bus compressor for drums, voiced for exactly this kind of material: a break, a room, and everything squashed into one block.
+[DRUGS](https://gazillionindustries.com/drugs.html) is our free one-knob bus compressor for drums, voiced for exactly this kind of material: a break, a room, and everything squashed into one block.
 
 ## What producers did to it
 
 In hip hop it was mostly looped and slowed. In jungle and drum and bass it was taken apart: sliced into individual hits, re-sequenced into patterns Coleman never played, time-stretched to tempos the recording was never near, and layered against itself. That second treatment is the reason the break outlived its own genre twice. A loop is a borrowing; a chopped break is an instrument.
 
-If you want to work that way, how to chop a drum break covers the method and how to make drums sound dusty covers getting a modern recording into the same territory.
+If you want to work that way, [how to chop a drum break](https://gazillionindustries.com/how-to-chop-a-drum-break/) covers the method and [how to make drums sound dusty](https://gazillionindustries.com/how-to-make-drums-sound-dusty/) covers getting a modern recording into the same territory.
+
+**DOSE 12.** The line along the bottom is gain reduction.
 
 ## The money
 
@@ -81,7 +85,7 @@ A ride cymbal instead of a hi-hat, a snare with a pitched tone, a crunchy room, 
 
 ## What DRUGS does
 
-DRUGS is a bus compressor for drums with one macro control, called DOSE, and it is free. Vinyl sim is shorthand for a particular kind of squash: dense, slightly crushed drums with the room pushed up under the hits, the way a break sounds once it has been through a sampler. Turning DOSE up makes a drum bus denser rather than louder, because peak level barely moves across the whole range of the knob, and the release reacts to the transient in front of it.
+DRUGS is a bus compressor for drums with one macro control, called **DOSE**, and it is free. Vinyl sim is shorthand for a particular kind of squash: dense, slightly crushed drums with the room pushed up under the hits, the way a break sounds once it has been through a sampler. Turning DOSE up makes a drum bus denser rather than louder, because peak level barely moves across the whole range of the knob, and the release reacts to the transient in front of it.
 
 Four bars, cut so the horn players could rest, on the back of a single nobody was supposed to flip over. In May 2026 the Library of Congress put it in the National Recording Registry.
 

@@ -25,6 +25,8 @@ Glue compression is gentle compression across a group of tracks, so one gain cel
 
 - **Test**: level-matched bypass, listening to the quiet parts
 
+**DOSE 88.** Same source. The line dives on each hit and takes the whole bar to come back — that recovery is the pump.
+
 ## What glue actually is
 
 Put a compressor across a group and every element now controls the gain of every other element. When the kick lands, the hats duck fractionally and come back. When the snare rings, the ring lifts the whole bus a hair as the gain recovers. Those movements are small, shared and rhythmic, and the ear reads them as one source in one space rather than several files in a spreadsheet.
@@ -47,13 +49,13 @@ The same mechanism explains why heavy bus compression goes wrong so fast. A litt
 
 At 90 bpm a quarter note is about 667 ms and an eighth is 333 ms, so a release of 200 to 300 ms on a drum bus is usually back in time for the next hit. Longer than the beat and the gain never recovers, which is the flat, permanently squashed sound people blame on the compressor rather than on the setting.
 
-DRUGS is a free one-knob bus compressor for drums, built for this job: DOSE makes the bus denser rather than louder, and the release reacts to what is in front of it instead of asking you for a number.
+[DRUGS](https://gazillionindustries.com/drugs.html) is a free one-knob bus compressor for drums, built for this job: DOSE makes the bus denser rather than louder, and the release reacts to what is in front of it instead of asking you for a number.
 
 ## Glue on the mix bus
 
 Same idea, less of it. On a full mix, 1 to 2 dB of gain reduction with a slow attack and an auto release is plenty, and it works best if it was there while you were balancing, not bolted on at the end. A compressor added after the mix is finished changes every decision you already made, and you will spend the evening re-balancing to match it.
 
-Loudness belongs further down the chain. Clipper before limiter covers the part where you are actually chasing level.
+Loudness belongs further down the chain. [Clipper before limiter](https://gazillionindustries.com/clipper-before-limiter/) covers the part where you are actually chasing level.
 
 ## Where it costs you
 
@@ -73,11 +75,11 @@ If a mix bus compressor is doing four or five decibels and the mix sounds like i
 
 Three things get blamed on missing glue that a compressor cannot supply.
 
-It is not a balance fix. If a part is too loud, it is too loud in a glued mix too. The compressor changes how things move together, not how they sit.
+**It is not a balance fix.** If a part is too loud, it is too loud in a glued mix too. The compressor changes how things move together, not how they sit.
 
-It is not a depth fix. Things sound pasted on because of reverb, arrangement and frequency masking. Compression across the sum can actually make that worse by pulling everything to a similar level.
+**It is not a depth fix.** Things sound pasted on because of reverb, arrangement and frequency masking. Compression across the sum can actually make that worse by pulling everything to a similar level.
 
-It is not loudness. Glue settings by definition barely reduce gain, so they contribute almost nothing to how loud a master can get. If loudness is the goal, that is a limiter or a clipper and it is a different stage with a different job.
+**It is not loudness.** Glue settings by definition barely reduce gain, so they contribute almost nothing to how loud a master can get. If loudness is the goal, that is a limiter or a clipper and it is a different stage with a different job.
 
 ## Questions people ask
 
@@ -103,7 +105,7 @@ They are different jobs. A drum bus can work hard because the kit is one instrum
 
 ## What DRUGS does
 
-DRUGS is our free bus compressor with one macro control. DOSE moves the transfer curve, the knee, the attack and the release together, so the density comes up without the peak level moving much across the range of the knob. The release is adaptive and has no user control: a hit gets the shorter time, so gain recovers inside the gap where pump is audible, and sustained material gets the longer one, so it holds still rather than breathing. Auto-makeup sits after the gain cell, so setting level cannot disturb the dynamics.
+DRUGS is our free bus compressor with one macro control. **DOSE** moves the transfer curve, the knee, the attack and the release together, so the density comes up without the peak level moving much across the range of the knob. The release is adaptive and has no user control: a hit gets the shorter time, so gain recovers inside the gap where pump is audible, and sustained material gets the longer one, so it holds still rather than breathing. Auto-makeup sits after the gain cell, so setting level cannot disturb the dynamics.
 
 Eight files, one gain cell, and a kit that finally sounds like it was in the room together.
 

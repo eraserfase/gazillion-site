@@ -7,7 +7,7 @@ Published 2026-09-13, updated 2026-09-24. By Gazillion Industries, who make BEEF
 
 ---
 
-The Beatles made Sgt. Pepper's on four-track tape, bouncing tracks together to free up room and letting every pass shave off a little top end and add a little glue. Fifty-odd years later, plugin menus sell that accident back to you as a feature, next to a picture of a glowing tube.
+The Beatles made *Sgt. Pepper's* on four-track tape, bouncing tracks together to free up room and letting every pass shave off a little top end and add a little glue. Fifty-odd years later, plugin menus sell that accident back to you as a feature, next to a picture of a glowing tube.
 
 Tape saturation and tube saturation both add harmonics and soften peaks, but in different ways. Tape tends to round off transients, compress the high end and add a low-frequency bump, with mostly odd harmonics: good for smoothing and gluing drums, buses and whole mixes. Tube saturation tends to add more even harmonics and a rounder, fuller color that keeps transients a little more intact: good for vocals, bass and anything that needs warmth up front.
 
@@ -25,6 +25,8 @@ Tape saturation and tube saturation both add harmonics and soften peaks, but in 
 
 - **Truth**: drive level matters more than the label
 
+**SOFT CLIP as the out stage.** BEEF 62, JUICE +2.0. The clipper rounds the peak instead of holding a ceiling over it.
+
 ## What tape does
 
 Magnetic tape can only take so much signal. Push it and the magnetization levels off gradually, which rounds the peaks. Because that curve is roughly symmetric, tape adds mostly odd harmonics. High frequencies saturate first, so a hard-hit tape darkens and softens the top; transients lose their sharpest edge; and many machines add a low-frequency bump, a "head bump", whose position depends on the tape speed and the heads. Wow, flutter and hiss come along if the emulation includes the transport.
@@ -35,21 +37,21 @@ A tube stage's response is often asymmetric: it bends the top and bottom of the 
 
 ## Which one for what
 
-- Drums and drum buses: tape, when you want the kit glued and the edges softened; a clipper, when you want the hits loud and aggressive.
+- **Drums and drum buses:** tape, when you want the kit glued and the edges softened; a clipper, when you want the hits loud and aggressive.
 
-- Vocals: tube, for warmth and presence without dulling the consonants; tape, for a smoother, older sound.
+- **Vocals:** tube, for warmth and presence without dulling the consonants; tape, for a smoother, older sound.
 
-- Bass and 808s: tube-style harmonics help them read on small speakers; tape's softening helps a busy bassline sit.
+- **Bass and 808s:** tube-style harmonics help them read on small speakers; tape's softening helps a busy bassline sit.
 
-- Mix bus: tape, lightly.
+- **Mix bus:** tape, lightly.
 
 The honest caveat: drive level changes these more than the label does. Hit a tape emulation gently and a tube emulation gently and they sound more alike than the artwork suggests.
 
 ## Where clipping fits
 
-Clipper-style saturation is the third option and the least polite. It leaves quiet signal alone and rounds peaks instantly, so it's the most obvious on transients and the most direct route to loudness. See soft clipping explained and saturation vs distortion.
+Clipper-style saturation is the third option and the least polite. It leaves quiet signal alone and rounds peaks instantly, so it's the most obvious on transients and the most direct route to loudness. See [soft clipping explained](https://gazillionindustries.com/soft-clipping-explained/) and [saturation vs distortion](https://gazillionindustries.com/saturation-vs-distortion/).
 
-Want actual cassette behavior, hiss, age and wow included? That's TRIPLE OG, our cassette tape simulation. For weight and loudness, it's BEEFY.
+Want actual cassette behavior, hiss, age and wow included? That's [TRIPLE OG](https://gazillionindustries.com/tripleog.html), our cassette tape simulation. For weight and loudness, it's [BEEFY](https://gazillionindustries.com/beefy.html).
 
 ## How to choose by ear
 
@@ -67,11 +69,11 @@ Want actual cassette behavior, hiss, age and wow included? That's TRIPLE OG, our
 
 Both words get used for things they do not describe, and the confusion costs people real time in a mix.
 
-Neither is a volume control. Both change the signal at every level, not only at the top. If you want peaks caught and nothing else touched, that is a clipper or a limiter, not a saturation stage.
+**Neither is a volume control.** Both change the signal at every level, not only at the top. If you want peaks caught and nothing else touched, that is a clipper or a limiter, not a saturation stage.
 
-Neither is a fix for a thin recording. Harmonics are generated above what is already there, so a saturation stage can imply weight a recording never captured, but it cannot supply a fundamental that was not recorded.
+**Neither is a fix for a thin recording.** Harmonics are generated above what is already there, so a saturation stage can imply weight a recording never captured, but it cannot supply a fundamental that was not recorded.
 
-Neither is automatically analog. A plugin named for tape or tubes may be a physical model, or a waveshaper with a name on it. The name tells you the intended flavor and nothing at all about the method, which is why judging these by ear on your own material beats reading the description.
+**Neither is automatically analog.** A plugin named for tape or tubes may be a physical model, or a waveshaper with a name on it. The name tells you the intended flavor and nothing at all about the method, which is why judging these by ear on your own material beats reading the description.
 
 ## On a track or on the bus
 
@@ -101,7 +103,7 @@ Both do different jobs. On a track it is a tone control that thickens one thing.
 
 ## What BEEFY does
 
-BEEFY is our saturation and loudness plugin, for making sounds thicker, punchier and more up front. It isn't sold as a tape or tube emulation: it's built around weight, density and loudness. BEEF is the main control, COOK moves the color from a rounder feel toward a brighter, more cooked edge, and SOFT CLIP, on by default, brings rounded, fuzzy edges to the loudest parts.
+BEEFY is our saturation and loudness plugin, for making sounds thicker, punchier and more up front. It isn't sold as a tape or tube emulation: it's built around weight, density and loudness. **BEEF** is the main control, **COOK** moves the color from a rounder feel toward a brighter, more cooked edge, and **SOFT CLIP**, on by default, brings rounded, fuzzy edges to the loudest parts.
 
 The four-track machine never had a preset menu. It had a limit, and the records were made by people who leaned on it.
 

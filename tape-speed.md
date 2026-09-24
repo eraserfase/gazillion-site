@@ -29,23 +29,23 @@ Tape speed is how fast the tape passes the heads, measured in inches per second.
 
 Magnetic tape stores audio as patterns of magnetization along its length, so a high frequency at a slow speed has to fit into a very short stretch of tape. Past a certain point the head can no longer resolve the pattern and the top end simply stops. Double the speed and every wavelength gets twice as long, so the top extends and the signal sits further above the tape's own noise.
 
-The same logic explains wow and flutter. Speed variations are a percentage of the speed, and the faster the tape is moving, the less a given mechanical wobble matters to the pitch. A cassette at 1 7/8 ips is the most unstable format in common use, which is precisely why it sounds like something rather than nothing. Wow and flutter covers what that instability is made of.
+The same logic explains wow and flutter. Speed variations are a percentage of the speed, and the faster the tape is moving, the less a given mechanical wobble matters to the pitch. A cassette at 1 7/8 ips is the most unstable format in common use, which is precisely why it sounds like something rather than nothing. [Wow and flutter](https://gazillionindustries.com/wow-and-flutter/) covers what that instability is made of.
 
 ## What producers actually choose
 
-- 30 ips: the cleanest and tightest, with the least low-frequency unevenness and the highest cost in tape.
+- **30 ips:** the cleanest and tightest, with the least low-frequency unevenness and the highest cost in tape.
 
-- 15 ips: the common choice for music, partly because of a rise in the low frequencies from the head that many engineers like on drums and bass.
+- **15 ips:** the common choice for music, partly because of a rise in the low frequencies from the head that many engineers like on drums and bass.
 
-- 7 1/2 ips: noticeably darker, used for demos and for effect.
+- **7 1/2 ips:** noticeably darker, used for demos and for effect.
 
-- 1 7/8 ips: cassette, and the sound most people mean when they say tape.
+- **1 7/8 ips:** cassette, and the sound most people mean when they say tape.
 
-TRIPLE OG is a cassette transport rather than a studio machine: TONE is the playback system's brightness, where 50 is a musically neutral cassette rather than a bypass.
+[TRIPLE OG](https://gazillionindustries.com/tripleog.html) is a cassette transport rather than a studio machine: TONE is the playback system's brightness, where 50 is a musically neutral cassette rather than a bypass.
 
 ## Changing speed on purpose
 
-Record at one speed and play back at another and everything moves together: a tape recorded at 7 1/2 and played at 15 comes back an octave up and half as long. That is varispeed, and it was a production tool long before it was a plugin, used to fix a singer's key, to make a drum kit sound larger by recording it fast and playing it slow, and to put a vocal somewhere no human throat goes. What is varispeed has the math, and time stretching covers the modern alternative where the pitch stays put.
+Record at one speed and play back at another and everything moves together: a tape recorded at 7 1/2 and played at 15 comes back an octave up and half as long. That is varispeed, and it was a production tool long before it was a plugin, used to fix a singer's key, to make a drum kit sound larger by recording it fast and playing it slow, and to put a vocal somewhere no human throat goes. [What is varispeed](https://gazillionindustries.com/what-is-varispeed/) has the math, and [time stretching](https://gazillionindustries.com/time-stretching-explained/) covers the modern alternative where the pitch stays put.
 
 ## Where it costs you
 
@@ -71,7 +71,7 @@ Pitch and speed are tied together on tape: play back slower than you recorded an
 
 ## What TRIPLE OG does
 
-TRIPLE OG is a cassette transport, and the medium it models is the slow one. TONE sets the playback system's brightness, HISS is a continuous broadband bed shaped and partly decorrelated across the channels, and AGE is in years, nought to sixty, taking the whole machine darker, noisier, slightly more saturated and less speed-stable at once. WOW FLUT is continuous, bounded instability built from several motions at once, because one sine is a chorus and everybody hears it.
+TRIPLE OG is a cassette transport, and the medium it models is the slow one. **TONE** sets the playback system's brightness, **HISS** is a continuous broadband bed shaped and partly decorrelated across the channels, and **AGE** is in years, nought to sixty, taking the whole machine darker, noisier, slightly more saturated and less speed-stable at once. **WOW FLUT** is continuous, bounded instability built from several motions at once, because one sine is a chorus and everybody hears it.
 
 Let the two engineers keep arguing. The tape is already moving.
 
