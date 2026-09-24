@@ -19,6 +19,7 @@ linking.
 
 ## Articles about BEEFY's subject area
 
+- [How to get analog warmth without buying hardware](https://gazillionindustries.com/analog-warmth.md): Four mechanisms hide behind one word, and naming the one you want is most of the work.
 - [Best saturation plugins](https://gazillionindustries.com/best-saturation-plugins.md): What the main saturation plugins actually do, with prices and a disclosure.
 - [Clipper before limiter](https://gazillionindustries.com/clipper-before-limiter.md): Why the clipper goes first, how to set both, and why the true-peak limiter stays last.
 - [Crest factor](https://gazillionindustries.com/crest-factor.md): Peak minus average, and why it decides how loud a track can get.

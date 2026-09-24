@@ -16,7 +16,141 @@ Every article listed here has a clean markdown twin at the same URL with .md
 instead of the trailing slash. Prefer the .md when you are reading rather than
 linking.
 
-137 articles follow.
+144 articles follow.
+
+---
+
+# How to get analog warmth without buying hardware
+
+> Analog warmth is four separate things: added harmonics, a softer top end, level-dependent compression, and noise. Here is how to get each one in a DAW.
+
+Source: https://gazillionindustries.com/analog-warmth/  
+Published 2026-09-24, updated 2026-09-24. By Gazillion Industries, who make BEEFY.
+
+---
+
+Warmth is the one word in audio that survives every argument about it. Nobody agrees what it means, everyone knows when a mix lacks it, and the plug-in industry keeps selling it next to a picture of a glowing tube.
+
+Warmth is four separate things people bundle under one word: added low-order harmonics, a gentle roll-off of the top end, compression that follows level, and a small amount of noise and pitch instability. Every one of them is reproducible in a DAW, and none of them needs hardware. The work is deciding which one you actually want, because the four sound nothing alike and the fix for one will not fix another. Name it first, then reach for the right tool.
+
+## The short version
+
+- **Harmonics**: a saturation or clipping stage, driven gently
+
+- **Softer top**: a high shelf cut, or a gentle low-pass
+
+- **Level dependence**: slow compression, soft knee, small ratio
+
+- **Noise and wobble**: hiss, drift, a transport plug-in
+
+- **Most common cause**: a mix that is too bright rather than one short of harmonics
+
+- **The real work**: naming which of the four you are after
+
+## Which of the four do you mean?
+
+Ask five producers what warmth is and you get five answers, all of them honest. One means the low mids feel filled in. One means the cymbals stopped hurting. One means the mix breathes instead of sitting still. One means it sounds like a record rather than a session. One means all of it at once and cannot break it down, which is the usual case.
+
+That is why "warmth" plug-ins disappoint so often. They are sold against a word, and the word covers four unrelated mechanisms, so about three quarters of the time you get a process that does something real to a problem you did not have. Take a mix that sounds cold and try to say which of the four is missing. If you can name it in one sentence, the fix is usually ten minutes of work with tools you already own.
+
+## Added harmonics
+
+This is the one people mean first. Run a signal through any stage that bends the waveform and you get new content at whole multiples of what went in. Feed it an A at 110 Hz and the second harmonic lands at 220 Hz, an octave up; the third at 330 Hz, an octave and a fifth; the fourth at 440 Hz, two octaves up and the A most people tune to. Those are consonant intervals, which is why a little of it reads as fullness rather than damage.
+
+In a DAW this comes from a saturation plug-in, a soft clipper, a tape-style or tube-style stage, or the input of almost any amp simulator turned down low. The mechanism is the same in all of them, and the useful detail is the shape of the curve, covered in [saturation vs distortion](https://gazillionindustries.com/saturation-vs-distortion/) and [tape vs tube saturation](https://gazillionindustries.com/tape-vs-tube-saturation/).
+
+The practical rule: use less than you think, and check it against the dry signal at matched loudness. Harmonics add level as well as color, so an unmatched comparison mostly measures which one was louder. Also worth knowing: harmonics are generated above what is already in the track, so this can imply weight but cannot supply a fundamental that was never recorded.
+
+## A softer top end
+
+A large share of what gets called warmth is subtraction. Less high frequency content reads as warmer, rounder, further away, older, all of those. It costs nothing and it is the first thing to try, because a cold mix is more often too bright than short of harmonics.
+
+Two ways to do it. A high shelf, 2 to 3 dB down from about 6 kHz, gives a broad darkening that leaves detail intact. A gentle low-pass gives a slope instead: a first-order filter is about 3 dB down at its corner and falls roughly 6 dB per octave above it, so a corner at 10 kHz still leaves plenty of air while taking the glare off the top. Steeper slopes start to sound like a lid, which is a different effect and usually not the one you want.
+
+Two things make this easier to judge. First, do it on the mix bus before you do it on twelve individual tracks; the individual moves add up to something you cannot undo. Second, turn the monitors down. Bright mixes very often come from mixing quietly and compensating, and a darker balance at a realistic level tends to solve itself.
+
+## Compression that follows level
+
+Analog circuits get less linear as you push them, which means the amount of processing changes with how loud the playing is. Quiet passages pass nearly untouched, loud ones get squeezed and colored. That coupling is a large part of why records made through hardware feel alive: the effect moves with the performance rather than sitting on top of it.
+
+You get the same behavior in a DAW from a compressor set the way people usually do not set it. Small ratio, around 2:1. Soft knee, as wide as the plug-in allows. Threshold high enough that quiet sections pass through and only the loud parts move the gain reduction meter. Attack slow enough to let transients through, 20 to 30 ms on a drum bus. Release timed to the track: at 120 BPM a quarter note is 500 ms and an eighth is 250 ms, and a release near one of those tends to pump with the music instead of against it.
+
+A saturation stage does some of this on its own, since the curve bends more as the signal gets louder, and that is a different flavor of the same idea. Using both gently beats using either one hard.
+
+## Noise, and a little instability
+
+The fourth ingredient is the one people leave out, and it does more than its share. Real machines add a noise floor and cannot hold perfect pitch. Both give the ear something to hold onto: a continuous bed under the music, and a top line that moves a few cents around where it should be instead of sitting on a grid.
+
+Noise is easy. A quiet layer of hiss or room tone under the whole mix, mixed low enough that you notice when you mute it and not before. Pitch instability is the more interesting half. A one percent speed change is about 17 cents, roughly a sixth of a semitone, which is plainly audible on a held pad and almost invisible on drums. Slow drift reads as a machine with a worn transport; fast flutter reads as damage.
+
+In our shelf this is TRIPLE OG, our cassette transport plug-in: wow, flutter, hiss, dropouts and speed instability, tuned by ear rather than measured off any particular machine. SKRUU handles the other case, where pitch and time move together the way they do when you change the speed of a playback deck. Neither is a saturation plug-in, and using either one for harmonics is the wrong tool pointed at the wrong problem.
+
+## An order that works
+
+- Fix the balance first. Nothing on this list rescues a mix where the parts are fighting.
+
+- Pull the top end down on the bus and listen for a minute. About half the time you are finished here.
+
+- Add harmonics, gently, on the parts that need weight: drums, bass, the thing that should feel present.
+
+- Set one slow, soft-knee compressor on the bus for the level-dependent part, and keep the gain reduction small.
+
+- Add noise or movement last, if the track still sounds too clean, and commit to it rather than leaving it at the edge of audibility.
+
+Do them one at a time and bypass each one before moving on. Stacked in a single pass, they all sound like "better" and you learn nothing about which one was doing the work.
+
+## What hardware is actually giving you
+
+Worth being straight about this. The four mechanisms above are all reproducible in software, and a plug-in can generate harmonics, roll off a top end and follow level as well as a box can. What a rack of hardware gives you that a DAW does not is mostly structural: one signal path instead of forty, a limited set of choices, a knob under your hand, and a commitment you cannot undo next week. Records made that way sound decided, and a lot of what people hear as warmth is that decisiveness.
+
+The other honest part is that a real machine drifts, ages, and behaves slightly differently at 10 a.m. than at midnight, and it applies all four ingredients at once in proportions nobody chose. You can approximate that in software by choosing the proportions yourself, which is more work and gives you a result you can actually repeat.
+
+## The test that settles it
+
+Take a record you think is warm. Put it in your session. Match its loudness to your mix, properly, by ear or with a meter. Then ask the four questions in order: does it have more low-order harmonic content, is its top end softer, does its processing move with the performance, is there a noise floor under it?
+
+You will usually find the answer is one of the four rather than all of them, and you will usually find it is the second one. Most people reaching for warmth are reaching for a darker balance and buying a saturation plug-in to get there.
+
+## Questions people ask
+
+### What actually makes a mix sound warm?
+
+Four things, in different combinations: added low-order harmonics, a softer high end, compression that follows the level of the performance, and a small amount of noise or pitch instability. Naming which one a given track is missing is most of the job, because the fix for each is different.
+
+### Can a plug-in sound as warm as hardware?
+
+Yes, for all four mechanisms. Harmonics, roll-off, level-dependent compression and noise all reproduce in software. What hardware adds is a narrower set of choices and a commitment you cannot undo, which shapes the record more than the circuit does.
+
+### Is warmth just rolling off the high end?
+
+Often, yes. A darker balance accounts for a large share of what people call warmth, and it costs nothing to test: a high shelf 2 to 3 dB down from about 6 kHz on the mix bus. Try that before buying anything.
+
+### Should I put saturation on every track for warmth?
+
+No. Harmonics stack, and a small amount on thirty tracks adds up to a harsh, crowded mix that no single plug-in is responsible for. Use it where you can name what it is fixing, and do the broad tone move once on the bus.
+
+### Does adding noise actually help?
+
+It can, at a low level. A continuous bed under the music gives the ear a reference and makes digital silence between phrases less stark. Set it so you notice its absence when you mute it, and no louder.
+
+### What settings give level-dependent compression?
+
+A small ratio near 2:1, the softest knee available, a threshold high enough that quiet sections pass untouched, an attack around 20 to 30 ms so transients survive, and a release timed to the tempo. At 120 BPM that means 250 ms for an eighth note or 500 ms for a quarter.
+
+## What BEEFY does
+
+BEEFY covers the first of the four: harmonics and weight, from a little density up to something plainly rude, with **BEEF** as the main control and **SOFT CLIP** rounding the loudest peaks. It is tuned by ear and sold as a saturation and loudness plug-in, with no claim to be any particular piece of gear. The clipping side is covered in [soft clipping explained](https://gazillionindustries.com/soft-clipping-explained/); the plug-in itself is [BEEFY](https://gazillionindustries.com/beefy.html).
+
+The other three are a shelf, a compressor and a noise floor. You already own all of them.
+
+---
+
+## About BEEFY
+
+BEEFY — saturation and loudness plugin for Mac and Windows. There is a 28-second demo with three without/with comparisons on the page.
+
+https://gazillionindustries.com/beefy.html
+
 
 ---
 
@@ -5848,6 +5982,300 @@ https://gazillionindustries.com/drugs.html
 
 ---
 
+# What order should the plug-ins on my drum bus go in?
+
+> Five plug-ins on a drum bus and it sounds worse than bypass. Here is the order each stage belongs in, why each position matters, and why removing two helps most.
+
+Source: https://gazillionindustries.com/drum-bus-chain-order/  
+Published 2026-09-24, updated 2026-09-24. By Gazillion Industries, who make DRUGS.
+
+---
+
+Five plug-ins went onto the drum bus one at a time, each sounding like an improvement on the way in. The bus now sounds smaller than the raw sum did.
+
+Order the chain by what each stage needs to hear. Corrective EQ first, so the compressor is not reacting to low mids you meant to remove anyway. Compression second, to make the kit move as one thing. Tone EQ third. Saturation fourth, for weight. A clipper or limiter last and alone at the top, catching the peaks that survived. Level-match every stage against its own bypass before deciding it helped. If the bus still sounds worse than it did empty, stop reordering: five processors is more than most drum buses need, and removing two fixes it faster than resequencing five.
+
+## The short version
+
+- **1. Corrective EQ**: cuts only — high-pass, and whatever mud would otherwise trigger the compressor
+
+- **2. Compressor**: small, shared movement, set against the tempo
+
+- **3. Tone EQ**: boosts here, where the compressor cannot pull them back down
+
+- **4. Saturation**: weight and harmonics, driven by a signal that is already even
+
+- **5. Clipper or limiter**: last, alone, one of them, catching what survived
+
+- **Every stage**: output matched so bypass does not change the loudness
+
+- **The real fix**: delete two of the five and re-listen
+
+## Why does the order change the sound at all?
+
+Two kinds of plug-in care where they sit, and one kind barely does.
+
+A compressor cares because its detector hears whatever arrives at its input. Move something in front of it and you have changed the thing it is reacting to, which changes when it pulls down, how far, and on which element of the kit. Saturation and clipping care because they are level-dependent: anything before them that raises or lowers level changes how hard they are driven, and therefore how much harmonic content comes out.
+
+An EQ mostly does not care. Cut 300 Hz at the top of the chain or the bottom and the filter does the same arithmetic either way. What changes is what the EQ is feeding. That is the whole of the order question: which stages are listening, and what you are letting them listen to.
+
+## Compression before saturation, or saturation before compression?
+
+Both are usable. They are different sounds, and the difference is not subtle once you know what to listen for.
+
+**Compressor first.** The compressor meets the full dynamic range, so gain reduction tracks the actual hits and the glue behaves the way the settings suggest. The saturator then receives a signal that is already even, so it gets driven to roughly the same place bar after bar. The color is consistent, the level is predictable, and the whole bus sits still. This is the safer order and the one that usually sounds tidier.
+
+**Saturation first.** The saturator meets the raw peaks. Loud hits get driven harder than quiet ones, so the color moves with the performance, and the loudest transients get rounded before anything else touches them. The compressor then sees a signal with less distance between peak and average, so at the same threshold it does less work and reacts more to the body of the kit than to the stick. The result is looser and more record-like, and harder to control.
+
+Choose by the complaint. If the bus is uneven, compress first and let the saturator work on the result. If the bus is thin, saturate first and let the compressor tidy up what comes out of it. Doing both at once and hoping is how you end up with five plug-ins.
+
+One practical note: saturation before a compressor moves the level going into the compressor, so the threshold you set earlier is no longer the threshold you wanted. Re-set it after any reorder. [How to compress drums](https://gazillionindustries.com/how-to-compress-drums/) covers getting the timings right once the signal in front is settled.
+
+## Where does EQ go, before or after the compressor?
+
+Before the compressor you are changing what it listens to. After it you are changing the result. Those are two different jobs and they want two different EQ moves.
+
+Cuts belong before. A high-pass in front of a drum bus compressor stops the lowest kick energy from operating the gain cell for the whole kit, which is the most common reason a hi-hat pattern ducks on every beat. A wide dip in the low mids before the compressor stops the mud from triggering gain reduction that then pulls down the snare as well. You are doing sidechain work with an ordinary EQ, and it is more effective than any timing adjustment you can make afterward.
+
+Boosts belong after. Add 6 kHz in front of a compressor and the compressor hears more top, reacts to it, and pulls some of it back down. You are paying for a boost and then paying a compressor to undo part of it, and the amount it undoes changes with every loud hit. Put the same boost after and it lands exactly where you put it.
+
+The exception is when the boost is the thing you want the compressor to react to, which happens more often than the rule suggests. Push the snare band before the compressor and the snare starts driving the gain movement for the whole bus. That is a deliberate effect, worth reaching for on purpose and worth removing when it arrived by accident.
+
+## Why a clipper or a limiter belongs last
+
+A clipper and a limiter both set a ceiling, and a ceiling only holds if nothing comes after it. An EQ boost after a limiter puts peaks straight back above the line. A saturator after a clipper rounds the flat tops and changes the level again. Whatever you place after your ceiling stage is quietly undoing the one job that stage exists to do.
+
+There is a second reason, and it matters more day to day. A clipper in the middle of a chain flattens transients, and every stage after it is then working on a signal whose peaks are already gone. The compressor has less to grab. The saturator has less to react to. You lose the ability to hear what those stages are actually doing, and you start turning them up to compensate.
+
+One ceiling stage, at the top, doing a small amount. A clipper and a limiter stacked on a drum bus is two solutions to a problem you probably only have once.
+
+[DRUGS](https://gazillionindustries.com/drugs.html) is our free one-knob bus compressor for drums. It is one stage, and it goes where any drum bus compressor goes: after the cuts, before the tone shaping and the weight.
+
+## How to rebuild the chain tonight
+
+- Bypass all five and match the bus level to where it was. Listen. Write down what is actually wrong in one sentence.
+
+- Turn the first plug-in back on. Set its output so bypassing it does not change loudness. Decide whether it earns its place on its own.
+
+- Add the next one. Match again. Judge again. Anything that does not survive a level-matched bypass comes off and stays off.
+
+- Stop when the sentence you wrote down has been answered, even if that happens at two plug-ins.
+
+- Put the ceiling stage on last, and only if the peaks still need it.
+
+- Leave it, come back, and check the quiet bars rather than the loudest one.
+
+Building upward like this is slower for one evening and faster for every evening after, because you find out which stage was the problem instead of guessing at an order.
+
+## Level-match, or none of this tells you anything
+
+Every stage in a drum chain has some way of making things louder: makeup gain, output trim, drive, a boost. Louder wins a quick comparison almost every time, and it wins it for about two seconds, which is exactly as long as an A/B lasts.
+
+Five plug-ins added one at a time, each judged without matching, is five consecutive decisions to be a little louder. The bus ends up hotter and flatter, and nothing in the chain looks guilty, because each stage only added a small amount.
+
+Match on the meter first, then trim by ear on a quiet bar. [Gain staging](https://gazillionindustries.com/gain-staging/) goes through the levels themselves, which is a separate question from the order and worth settling before you touch the order.
+
+## Five plug-ins is usually the problem
+
+Most drum buses want one processor, occasionally two. A compressor for movement, and sometimes something for weight or a ceiling on top. [Glue compression](https://gazillionindustries.com/glue-compression/) on its own does more for a kit than four stages arguing about the same three decibels.
+
+When there are five, they are usually overlapping rather than cooperating. Two compressors doing the same small amount of gain reduction. A saturator and a clipper both rounding the same transients. An EQ boost near the top of the chain undoing a cut near the bottom. Each stage was a reasonable idea in the moment and the chain as a whole has no argument behind it.
+
+Serial processing is not automatically wrong. Two gentle compressors, each doing a decibel, often sound better than one doing two. The test is whether each stage still earns its place with the level matched, judged on its own, in the order you settled. Two that do beat five that half do.
+
+## Where it costs you
+
+Reordering has a smaller effect than people expect, and it is always smaller than removing a stage. If the difference between two orders is hard to hear once the levels match, the order is not where your evening should go.
+
+Some stages have costs the order cannot fix. A linear-phase EQ adds latency and can smear a transient forward, which shows up on drums before anywhere else. Ordinary minimum-phase EQs shift phase around whatever they move, so a cut and a boost at nearby frequencies do not simply cancel.
+
+And every dynamic or nonlinear stage takes something from the transient. That cost is the reason the answer to a chain sounding worse is so often subtraction.
+
+## Questions people ask
+
+### Should compression go before or after saturation on a drum bus?
+
+Compression first gives an even, predictable result, because the saturator is driven to roughly the same place every bar. Saturation first gives a looser one, because the loudest hits get colored hardest and the compressor then reacts to the body of the kit rather than the transient. Pick by which complaint you are fixing.
+
+### Does EQ go before or after compression?
+
+Cuts before, boosts after. A cut before the compressor stops that frequency range from triggering gain reduction. A boost before the compressor gets partly pulled back down by the compressor reacting to it. Put a boost after the compressor and it stays where you set it.
+
+### Where does a transient shaper go in a drum chain?
+
+Before the compressor if you want the compressor to react to the shaped transients, which is usually the point. After the compressor it is repairing attack the compressor removed, and it is generally quicker to slow the compressor's attack down instead.
+
+### Should a clipper go before or after a limiter?
+
+Clipper first, limiter after, if you use both. The clipper takes the short peaks that would otherwise make the limiter work hard, and the limiter catches what is left. On a drum bus inside a mix, one of the two is nearly always enough.
+
+### How many plug-ins should be on a drum bus?
+
+One or two on most sessions. A compressor for movement, and optionally one stage for weight or a ceiling. If there are five, start by bypassing all of them, matching the level, and adding back only what survives on its own.
+
+### My chain sounds worse than bypass. What should I check first?
+
+Level. Match the output to bypass and compare again, because a chain that is 3 dB louder flatters itself. If it still loses with the levels matched, remove stages one at a time from the middle of the chain, not from the ends.
+
+## What DRUGS does
+
+[DRUGS](https://gazillionindustries.com/drugs.html) is a bus compressor with one macro control, called **DOSE**, which makes a drum bus denser rather than louder. There is no threshold to re-set when you change the order of the chain, and the release adapts to what is in front of it, so a reorder that changes the signal reaching it does not leave a timing setting stranded. It is one stage, and on most drum buses it is the only one that has to be there.
+
+Take the other four off and see how much of the sound you actually lose.
+
+---
+
+## About DRUGS
+
+DRUGS — a one-knob bus compressor for drums, free for Mac and Windows. One control called DOSE, with GAIN and a soft ceiling on the way out.
+
+https://gazillionindustries.com/drugs.html
+
+
+---
+
+# How to glue your drum bus in Ableton Live
+
+> Group your drums in Live, set the Glue Compressor's attack and release against the tempo, and use Makeup and Dry/Wet without flattening the transients.
+
+Source: https://gazillionindustries.com/drum-bus-compression-in-ableton-live/  
+Published 2026-09-24, updated 2026-09-24. By Gazillion Industries, who make DRUGS.
+
+---
+
+You made the group, put a Glue Compressor on it, pulled the threshold down, and the break went polite.
+
+In Live, select your drum tracks and press Cmd-G on a Mac or Ctrl-G on Windows to make a Group Track, then put a Glue Compressor first in the group's chain. Set Ratio to 2, Attack to 10 or 30 ms so the stick gets through before the gain falls, Release to Auto or a step shorter than the sixteenth note at your tempo, and lower Threshold until the needle shows 1 to 3 dB on the loudest hits. Match Makeup so bypassing the device does not change the loudness. If you want more compression than that, turn the Ratio up and pull Dry/Wet back to 70 or 80 percent instead.
+
+## The short version
+
+- **Group**: select the drum tracks, Cmd-G or Ctrl-G, balance the faders first
+
+- **Position**: Glue Compressor first in the group chain, saturation after it
+
+- **Ratio**: 2 for glue, 4 only if you are going to use Dry/Wet
+
+- **Attack**: 10 or 30 ms — the fast steps are where transients die
+
+- **Release**: 0.1 s or Auto on a busy break, 0.2 to 0.4 s on half-time
+
+- **Amount**: 1 to 3 dB on peaks, needle back at rest between hits
+
+- **Check**: Utility after the device, trimmed by the makeup, for a level-matched bypass
+
+## How do I set up the drum group?
+
+Select every drum track, including the ones you forgot about, and press Cmd-G on a Mac or Ctrl-G on Windows. Live makes a Group Track with the selected tracks inside it. Everything on that group processes the sum, and the child faders feed the sum, so the balance inside the group is part of what the compressor reacts to. Move a fader after you set the threshold and you have changed the compression as well.
+
+Balance first, then compress. A kick that is 4 dB too loud will hold the gain down for the whole bar and the hats will spend the track being pushed out of the way by it. Fix that with the fader, not with the threshold.
+
+Chain order on the group is short and worth being strict about. Corrective EQ first if a track inside the group needed it and you did not do it there. Glue Compressor next, because it should see the drums as they were mixed. Then Drum Buss, Saturator or Roar for weight and dirt. Nothing on the group needs to be a limiter; that belongs on the master, and the group is not the place to chase level.
+
+## What do the Glue Compressor's controls do?
+
+**Threshold** sets where the compressor starts working. On a drum group you are aiming it at the loudest hits only, so it should sit just under the peaks and above everything else in the bar.
+
+**Ratio** gives you 2, 4 and 10. Two is the glue setting. Four is usable if you are going to bring Dry/Wet back down afterward. Ten on a drum group turns the kick into a volume pedal for the rest of the kit.
+
+**Attack** is stepped: 0.01, 0.1, 0.3, 1, 3, 10 and 30 ms. There is nothing in between, which makes the decision simpler than it looks. The bottom four steps catch the front of the hit. The top two let it through.
+
+**Release** is stepped too: 0.1, 0.2, 0.4, 0.6, 0.8 and 1.2 s, plus Auto. Those are seconds, and on a drum group almost all of them are too long. Auto follows the material and is a reasonable default when the pattern varies.
+
+**Makeup** adds level after the gain cell, so it changes how loud the group is and not how the compressor behaves. **Dry/Wet** blends the uncompressed group back in. **Range** caps how much gain reduction the device will do, which is useful when one loud fill would otherwise duck an entire bar. **Peak Clip In** puts a soft clip on the output — leave it off while you are setting the timings, because it flatters everything.
+
+The sidechain section has its own EQ. High-passing the detector around 100 Hz stops the kick from driving the whole gain movement, which is the single most useful control on the device for a group that is mostly kick.
+
+## What attack and release keep the transients?
+
+Transients survive attack. If the drums sound soft, flat or further away after you engaged the compressor, the attack is too fast, and no other control will bring the front edge back. Start at 30 ms, and only come down to 10 ms if the group feels detached from the beat. The steps at 1 ms and below are for holding a peak down, not for making a kit sound like a kit. [How to compress drums](https://gazillionindustries.com/how-to-compress-drums/) works through the same two decisions without the Live specifics.
+
+Release is where the groove goes. The gain has to be back up before the next hit arrives, and the arithmetic is one division: 60000 divided by the tempo gives the quarter note in milliseconds, and you halve from there.
+
+- **70 bpm**: quarter 857 ms · eighth 429 ms · sixteenth 214 ms
+
+- **80 bpm**: quarter 750 ms · eighth 375 ms · sixteenth 188 ms
+
+- **90 bpm**: quarter 667 ms · eighth 333 ms · sixteenth 167 ms
+
+- **100 bpm**: quarter 600 ms · eighth 300 ms · sixteenth 150 ms
+
+- **120 bpm**: quarter 500 ms · eighth 250 ms · sixteenth 125 ms
+
+- **140 bpm**: quarter 429 ms · eighth 214 ms · sixteenth 107 ms
+
+- **170 bpm**: quarter 353 ms · eighth 176 ms · sixteenth 88 ms
+
+At 90 bpm the sixteenth is about 167 ms, and that is the ceiling on a busy break. Live's shortest step, 0.1 s, clears it. The next one up, 0.2 s, is already past the sixteenth and into the eighth, so it works on a pattern with space in it and drags on one without. If the hi-hats are in sixteenths, take 0.1 s or Auto and stop thinking about it.
+
+Half-time at the same tempo is a different bar. The gap between the kick and the snare is the half note, so 0.2 to 0.4 s recovers between events and holds the kit still through the decay rather than lifting the room on every eighth. The tempo tells you the ceiling, and the pattern tells you where under it to sit.
+
+## What do Makeup and Dry/Wet actually change?
+
+Makeup is the reason most drum groups end up over-compressed. It sits after the gain cell, so it makes the group louder without changing a single thing about how the compressor responds, and louder wins every quick A/B you run. Set it so the device switching off does not change the loudness, then decide.
+
+Dry/Wet is parallel compression built into the device. Instead of a second group and a send, you turn the Ratio to 4, set a threshold that would be far too much on its own, and then bring Dry/Wet back to 70 or 80 percent. The compressed signal supplies the body and the dry signal supplies the front edge, and the drums get denser without the hit getting shorter. On a sampled break, where the balance was committed long before you heard it, this is usually a better trade than gentler settings at 100 percent wet. [Glue compression](https://gazillionindustries.com/glue-compression/) covers what the gentle version is for.
+
+One habit worth keeping: move Dry/Wet before you move Threshold. If you are unhappy with the sound at 100 percent, the answer is often a blend rather than a smaller amount of the same thing.
+
+## How do I see gain reduction in Live?
+
+The Glue Compressor shows it on a needle that swings down from zero, in decibels. Watch the needle across a full bar rather than on one hit. For glue it should dip 1 to 3 dB on the loudest moments and come all the way back at rest. A needle that never returns to zero means the release is too long or the threshold is too low, and the result is the flat, permanently pressed sound people blame on the compressor.
+
+Live's other Compressor draws gain reduction over time instead of on a needle, which makes the release far easier to see: you can watch whether the line has recovered before the next transient lands. It is worth putting one on the group for five minutes purely as a meter while you set the release, then deleting it. It also offers a lookahead of 0, 1 or 10 ms, which catches peaks without forcing you into a fast attack.
+
+For level, use the numeric peak readout under the group's track meter, and put a Utility after the compressor trimmed by the same amount as the makeup. Toggle the two together and you get a bypass at a matched level, which is the only bypass that tells you anything.
+
+## Where does the rest of the drum chain go?
+
+After the compressor. Drum Buss interacts with everything you just set: Transients sharpens or softens the attacks, Drive and Crunch add distortion that a compressed signal feeds more evenly, and Boom adds low end, which is level, so it changes what the master sees.
+
+Saturator and Roar go in the same place and do the same structural thing — they trade peak height for density. Put them after the compressor and the compressor keeps reacting to your drums. Put them before and the compressor is reacting to the distortion instead, which is a valid choice, and a different one, so make it on purpose. [Drum bus compressor settings](https://gazillionindustries.com/drum-bus-compressor-settings/) goes through attack, release and ratio one control at a time.
+
+## Where it costs you
+
+Group compression trades separation for agreement. The kick pushing the group down is the effect working, and it is also a hi-hat pattern you programmed losing a little of its place. Room and bleed come up, which is a gift on a break and a problem on a close-miked kit.
+
+There is also a Live-specific trap. Because the group sums the child tracks, anything you change inside it later changes the compression, so a group compressor set early in a session gradually stops being the setting you chose. Check the needle again once the arrangement is done.
+
+## Questions people ask
+
+### Why do my drums get quieter and smaller when I compress the group?
+
+The attack is too fast. At 1 ms and below the compressor catches the front of every hit, which reads as softer and further away no matter how little gain reduction is showing. Move to 10 or 30 ms and the hits keep their edge while the body still gets pulled together.
+
+### Should I use Glue Compressor or Compressor on a drum group?
+
+Glue Compressor for the job in the name: low ratio, gentle knee, stepped timings that are hard to get wrong. Live's Compressor when you need a specific attack or release value, lookahead, or a view of gain reduction over time. The timings decide the sound far more than the choice of device does.
+
+### What release should the Glue Compressor use at my tempo?
+
+Short enough that the needle is back at rest before the next hit. Divide 60000 by the tempo for the quarter note in milliseconds and halve it twice for the sixteenth: at 90 bpm that is about 167 ms, so 0.1 s on a busy break. Use 0.2 to 0.4 s when the pattern has space in it.
+
+### Where should the compressor go in the group chain?
+
+First, before saturation and before Drum Buss, so it reacts to the drums as you balanced them. Any device that adds level or density in front of it is changing what the compressor hears, which is worth doing deliberately and easy to do by accident.
+
+### How much gain reduction should a drum group show?
+
+One to three decibels on the loudest hits for glue, and nothing in the quiet bars. If you want more density than that, use Ratio 4 with Dry/Wet around 70 percent rather than a lower threshold at 100 percent wet.
+
+## What DRUGS does
+
+[DRUGS](https://gazillionindustries.com/drugs.html) is our free bus compressor with one macro control, called DOSE, and it goes in the same slot: first in the group chain, before the saturation. There is no threshold and no ratio to set, and the release reacts to the transient in front of it rather than asking you for a number, so the tempo arithmetic stops being your problem on a drum group. MIX is there when you want the dry front edge back.
+
+Balance the faders, watch the needle for a bar, and stop when the kit starts agreeing with itself.
+
+---
+
+## About DRUGS
+
+DRUGS — a one-knob bus compressor for drums, free for Mac and Windows. One control called DOSE, with GAIN and a soft ceiling on the way out.
+
+https://gazillionindustries.com/drugs.html
+
+
+---
+
 # Drum bus compressor settings
 
 > Every control on a drum bus compressor, what it actually changes, and a starting point that works on most material without copying somebody else's numbers.
@@ -7084,6 +7512,126 @@ https://gazillionindustries.com/drugs.html
 
 ---
 
+# What is a one-knob compressor, and is one knob enough?
+
+> A one-knob compressor moves several linked parameters along a tuned curve. What that macro gives up, what it buys, and when you still want threshold and ratio.
+
+Source: https://gazillionindustries.com/one-knob-compressor/  
+Published 2026-09-24, updated 2026-09-24. By Gazillion Industries, who make DRUGS.
+
+---
+
+One knob, one decision, and no meter to read. Whether that is enough depends on the job.
+
+A one-knob compressor is a compressor whose threshold, ratio, knee and timing are fixed to a curve, with a single macro moving all of them together. One control, one decision. For a drum bus, a glue stage, or any job where you want the thing denser and you do not much care how, one knob is enough and it is faster. Reach for threshold and ratio when you have a specific problem on a specific source: the snare that jumps on one hit, a vocal that needs holding on the loud line and left alone on the quiet one, or any work where the fix is surgical.
+
+## The short version
+
+- **What it is**: several linked parameters moved along a curve someone already tuned
+
+- **What you give up**: setting the timing against your tempo and your source, and choosing character separately from amount
+
+- **What you get**: speed, and a floor under how badly it can be set
+
+- **Good enough for**: drum bus, glue, a parallel copy, holding a balance together while you write
+
+- **Not enough for**: one problem hit, ducking, de-essing, anything surgical
+
+- **The test**: match the level and bypass; louder is not the same as better
+
+## What is actually under the knob
+
+Every compressor has the same handful of decisions in it: when to start working, how hard to pull once it does, how abruptly to arrive at that, how long to wait before it moves and how long to take coming back. A full-control compressor hands you all five and lets you combine them any way you like. A macro fixes the relationship between them and gives you one position along it.
+
+So at a low setting the curve is shallow and only the loudest peaks touch it. Further up, the point at which it starts working has dropped, the slope has steepened and the knee has softened to keep the arrival from being obvious. You are not choosing those values. You are choosing a spot on a path that runs through them, and somebody picked that path by ear against real material. If none of the five terms mean anything yet, start with [what a compressor is](https://gazillionindustries.com/what-is-a-compressor/) and come back.
+
+That linkage is the whole design. A full-control compressor can be set to combinations that never occur in a good mix — a 2 ms attack with a 2 second release on a busy break, a hard knee at 20:1 on a room mic. Those settings exist because the parameters are independent, and most of them are wrong. A macro deletes them from the instrument.
+
+## What a single macro gives up
+
+Three real things, and it is worth being plain about each.
+
+**Your tempo.** Release is a tempo question before it is a taste question, and a fixed curve cannot know your bpm. The arithmetic is one division: 60000 divided by the tempo gives the quarter note in milliseconds, so at 90 bpm the quarter is 667 ms, the eighth 333 ms and the sixteenth 167 ms. On a busy break a release much longer than that sixteenth never gets back up before the next hit. A designer picking one release time is picking a compromise across every tempo you might use. Some one-knob designs answer this with an adaptive release that reacts to the signal in front of it, which gets close, though reacting to a transient and knowing where the bar is are different things.
+
+**Character separately from amount.** On a full compressor, 3 dB of gain reduction at a gentle ratio and 3 dB at a steep one sound different: same number on the meter, different behavior underneath. You can hold the amount and change the flavor, or hold the flavor and change the amount. On a macro the two travel together. More density comes with more of whatever character the curve has at that point, and you take both or neither.
+
+**The jobs that need a number.** Ducking a pad under a kick, holding dialogue at a known level, de-essing, keying off a different track, a lookahead you can set. All of those need a threshold you can place deliberately, and a macro has nowhere to put it.
+
+## What it buys
+
+Speed, first, and speed matters more than people admit. The compressor on a drum bus is usually a ten-second decision made forty times a week. A control set that takes a minute to get right gets skipped, or gets left at whatever the last session needed.
+
+Second, and this is the larger one: a macro cannot be set badly. The commonest way to hurt a drum bus is an attack fast enough to catch the stick, which makes a kit sound softer and further away while the meter says the compressor is working hard. That setting is reachable on every full-control compressor ever made, and a lot of people reach it. A tuned path does not pass through it at any position of the knob. The worst thing a macro can do is too much of a thing that was pointed the right way.
+
+Third, it keeps you listening. Watching gain reduction is a habit that survives long after it stops being useful, and a plug-in with nothing to read gives you nothing to watch. Turn it until the drums sit the way you want and stop. The judgment is the same one you were supposed to be making with the numbers.
+
+## When you want threshold and ratio
+
+Four cases, clearly.
+
+**A specific problem on a specific source.** One snare hit 4 dB above the others, a bass note that jumps on the open string, a singer who leans in on the chorus and backs off on the verse. You want the compressor to act on that and leave everything else alone, which means placing the threshold exactly where the problem starts and nowhere lower.
+
+**When the compressor is doing a job that is not tone.** Level for broadcast, a hard ceiling before a converter, a sidechain that has to open and close in time. These are engineering tasks with a right answer, and the right answer is expressed in numbers.
+
+**When you want it audible in a particular way.** Hard knee, high ratio, fast release, a room mic pumping on purpose. That is a sound you go after deliberately, and you need the controls to aim it.
+
+**Staging.** Two compressors with different timings, one catching peaks and one holding the body, is a real technique and it needs both sets of controls. A macro is one stage with one personality.
+
+None of that is an argument against one knob. It is an argument about which tool belongs on which insert. Most producers end up with both, and reach for the fast one far more often. [Drum bus compressor settings](https://gazillionindustries.com/drum-bus-compressor-settings/) goes through the full control set one at a time if you want to see what you are choosing between.
+
+## Is one knob enough on a drum bus?
+
+Usually, yes, and the reason is specific rather than sentimental. Bus compression has a narrow band of good answers: an attack slow enough to let the hit through, a release that recovers before the next accent, a modest ratio, a few dB on the loudest hits. Ask ten engineers and you get settings that cluster. A macro is a good fit exactly where the range of correct answers is small, because the curve can be aimed straight down the middle of it. [How to compress drums](https://gazillionindustries.com/how-to-compress-drums/) covers what that middle looks like.
+
+Where it gets thinner is material that has already been through the mill. A break lifted off a record arrives compressed, and a second stage on top does less than the meter suggests. And if one element dominates the detector — a kick far louder than everything else — a full-control compressor lets you filter the sidechain so it stops steering the whole bus. A macro does not give you that lever.
+
+## How do you set a compressor with no numbers?
+
+The same way you should have been setting one with numbers. Turn it up past where you think it should be, until the drums are obviously moving, then come back down until the movement stops being the thing you notice. Then match the level and bypass it, twice, listening to the tail and the room rather than the hit.
+
+The trap is unchanged from the full-control world: compression with make-up gain is louder, and louder wins any quick comparison for about three seconds. A macro does not protect you from that one. Nothing does except matching the loudness before you decide.
+
+## Questions people ask
+
+### Does a one-knob compressor have a threshold?
+
+Almost always, somewhere inside. The distinction is whether the panel gives you one to set. A macro design keeps the threshold and the ratio internal and moves them along a fixed relationship, so the behavior is there while the controls for it are not.
+
+### Is a one-knob compressor a real compressor?
+
+Yes. It does the same thing to the signal: it lowers the gain when the input gets loud and brings it back afterward. The simplification is in the interface, not in the processing.
+
+### Will using one knob stop me learning compression?
+
+Partly, and it is worth knowing which part. Full controls teach you what attack and release do, because you can hear each one move on its own. A macro teaches you what more and less sound like on a particular source, which is the judgment you use most. Learn attack and release once on a compressor that exposes them, then stop paying for that lesson every session.
+
+### Is one knob enough on a mix bus or a master?
+
+On a mix bus, often, if the amount available at the low end of the range is small enough to be subtle. On a master, most people want a threshold, because the job there is usually to hold a known level rather than to add density, and that is a number.
+
+### What does a macro control actually change?
+
+Several parameters at once, along a curve set by whoever tuned it. Moving it up typically lowers the point at which compression begins, steepens the slope, softens the knee and shortens the timing, all in a fixed relationship to each other. One position, several moves.
+
+### Can I get a one-knob compressor to do surgical work?
+
+Not really, and trying is the wrong use of it. Surgical work means acting on one part of the signal and leaving the rest, which requires placing a threshold. Put a full-control compressor on the offending track and keep the macro on the bus.
+
+## What DRUGS does
+
+[DRUGS](https://gazillionindustries.com/drugs.html) is our drum bus compressor with one macro, called DOSE. The curve, the knee, the attack and the release move together underneath it, and the controls do not expose a threshold or a ratio for you to set. It is free, so the cheapest way to settle the argument on your own material is to put it on a bus and turn it up until it sounds good.
+
+---
+
+## About DRUGS
+
+DRUGS — a one-knob bus compressor for drums, free for Mac and Windows. One control called DOSE, with GAIN and a soft ceiling on the way out.
+
+https://gazillionindustries.com/drugs.html
+
+
+---
+
 # Parallel compression
 
 > Parallel compression explained: how to blend a crushed copy under the dry drums, the settings to use, and the alignment problem that thins the result.
@@ -7636,6 +8184,168 @@ When you can hear the compressor working rather than the performance: pumping in
 DRUGS is our free bus compressor for drums, with one macro control called **DOSE**. It moves the transfer curve, the knee, the attack and the release together, the way a single hardware macro would, so there is nothing to set up. Turning DOSE up makes a drum bus denser rather than louder, because peak level barely moves across the whole range of the knob. The release is adaptive: a hit gets the shorter time so gain recovers inside the gap, and sustained material gets the longer one. Auto-makeup is applied after the gain cell, so setting level cannot disturb the dynamics.
 
 Forty places too quiet and three too loud. One hand on one fader, moving faster than yours.
+
+---
+
+## About DRUGS
+
+DRUGS — a one-knob bus compressor for drums, free for Mac and Windows. One control called DOSE, with GAIN and a soft ceiling on the way out.
+
+https://gazillionindustries.com/drugs.html
+
+
+---
+
+# What is a drum bus, and why put things on it?
+
+> A drum bus is one channel every drum track is routed into. How to build one in any DAW, what belongs on it, what does not, and why glue happens there.
+
+Source: https://gazillionindustries.com/what-is-a-drum-bus/  
+Published 2026-09-24, updated 2026-09-24. By Gazillion Industries, who make DRUGS.
+
+---
+
+Eight drum tracks, a compressor on each, and the kit still sounds like a pile of files. The fix is usually one channel they all arrive at first.
+
+A drum bus is a single channel that every drum is routed into before it reaches the master, so the kick, snare, hats and percussion pass through one fader and one set of plug-ins. People put things on it because processing the sum is a different operation from processing each part: one compressor reacting to the whole kit makes every drum move with every other drum, and that shared movement is what everyone means by glue. Build one in any DAW by making a group or aux channel, sending the drum tracks there instead of to the master, and putting your processing on that channel.
+
+## The short version
+
+- **What it is**: one channel that every drum track is routed into
+
+- **How to make one**: new group or aux channel; drum outputs point at it, it points at the master
+
+- **Why bother**: one fader for the whole kit, and one processor reacting to all of it at once
+
+- **Put on it**: 1–3 dB of gentle compression, saturation, broad EQ, a parallel copy
+
+- **Keep off it**: anything belonging to one drum: gating, tuning, surgical EQ, a fix for one bad hit
+
+- **Order**: balance the drums, then route, then process
+
+- **Test**: match the level and bypass the bus: louder is not the same as better
+
+## What a bus actually is
+
+A bus is a destination that audio can be sent to. In a DAW it appears as a channel with nothing recorded on it: signal arrives from other channels, gets added together, and leaves through one fader. A drum bus is that channel with the drums pointed at it.
+
+Summing is the whole mechanism. Once the kick, the snare, the hats and the shaker all arrive at the same place, anything sitting on that channel sees them added into a single signal. A compressor there has no idea which drum is which. It reads the sum, and it applies its gain change to the sum.
+
+Two things follow. One fader now moves the whole kit against the bass and the vocal, which is worth the routing on its own. And the processing is shared, which is the part people mean when they tell you to put things on the drum bus.
+
+## How do you make a drum bus in any DAW?
+
+- Create a channel that takes its audio from other channels rather than from an input. Different programs call it a bus, a group, an aux, a submix or a stem; the routing is the same in all of them.
+
+- Set the output of every drum track to that new channel instead of to the master.
+
+- Set the output of the new channel to the master.
+
+- Play the busiest bar. The drums should still sound, and the meter on the new channel should move. A silent meter means some tracks are still going straight to the master.
+
+- Pull the new fader down a few dB before you touch anything else. Eight channels summed into one arrive louder than any of them was on its own.
+
+- Balance the individual drums first. Then put processing on the bus.
+
+Some programs will do the first three steps for you if you select the drum tracks and choose the option about grouping them. Open the routing afterward and look at what it did.
+
+## Why is processing the sum different from processing each drum?
+
+A compressor on the snare track knows about the snare. It is a local decision: this hit jumped 4 dB, pull it down. Nothing else in the kit is affected, because nothing else in the kit is in that compressor.
+
+Put the same compressor on the bus and every element now controls the gain of every other element. When the kick lands, the hats duck a fraction and come back. When the snare rings, the ring holds the whole bus down a hair and then lets it up. Those movements are small, shared and locked to the bar, and the ear reads them as one source in one room rather than several files playing at once. That is glue, and there is nothing mystical in it. [Glue compression](https://gazillionindustries.com/glue-compression/) covers the settings; the routing above is what makes them possible.
+
+The same logic applies to anything nonlinear. Saturation across the sum works on the kick and the snare together, so the two interact inside the process instead of being colored separately on their own tracks. Whether you want that is a taste question. That it happens is a routing question, and the drum bus is where you decide it.
+
+## What belongs on a drum bus
+
+The test is simple: does this decision apply to the kit as a whole? If yes, the bus is the right place. If it applies to one drum, it belongs on that drum.
+
+**Gentle compression.** One to three dB of gain reduction on the loudest hits, a slow attack so the front of each hit survives, a release timed to the tempo. [How to compress drums](https://gazillionindustries.com/how-to-compress-drums/) goes through the controls one at a time. Keep it small here: the bus is where the kit agrees, not where problems get solved.
+
+**Saturation or soft clipping.** Weight and a little peak control at the same time, applied to everything so the kit thickens as one object. It also stops the kick from being the only thing that ever reaches the ceiling.
+
+**Broad EQ.** A shelf, a high-pass under the whole kit, a wide dip where the drums are covering the bass. Gentle, musical moves that you would otherwise have to repeat on six channels.
+
+**A parallel path.** Feed a copy of the bus into a second channel, crush it, and blend it underneath, so the transient stays intact on the dry path and the body comes up behind it. See [parallel compression](https://gazillionindustries.com/parallel-compression/) for the routing and the level matching.
+
+## What does not belong on it
+
+Most drum bus disasters are a per-track decision made in the wrong place.
+
+**A fix for one drum.** If the hi-hat is harsh, the bus makes the whole kit pay for the hi-hat. Take the harshness out on the hi-hat channel and let the bus do its job on a kit that already works.
+
+**Surgical EQ.** A narrow notch on a ringing tom takes that frequency out of the snare, the room and the cymbals as well. Narrow cuts are track work.
+
+**Gates, tuning and pitch.** Anything that has to be timed or tuned to one drum cannot be timed or tuned to five at once.
+
+**Reverb as an insert.** An insert wets everything, including the kick. Use a send from the bus to a reverb channel so you keep control of how much and of what.
+
+**Loudness processing.** A limiter pushed hard on the drum bus eats the transients that carry the groove, and it does that while the bass and the vocal are not even in the room yet. Loudness is a later stage with a different job.
+
+**Hard stereo widening.** Widening the sum takes the kick and the snare off the center along with everything else.
+
+## Bus, group, aux, send: which word means what?
+
+The terminology comes from consoles and every DAW kept a different piece of it. Three distinctions change what you hear.
+
+**Output routing versus a send.** Routing an output moves the entire signal to the new destination; the track no longer reaches the master any other way. A send copies the signal at a level you choose and leaves the original path alone. Drum busing is output routing. Reverb and parallel paths are sends.
+
+**Pre-fader versus post-fader sends.** A post-fader send follows the track fader, so the amount you send changes when you rebalance. A pre-fader send ignores the fader, which is what you want for a parallel path you plan to set once and leave.
+
+**A control group is not the same animal.** VCA faders and link groups move several faders together without summing the audio anywhere. Levels move; no shared processing happens, because there is no single channel for a compressor to sit on. If someone tells you to glue the drums and you build a control group, nothing will glue.
+
+## Do buses go into other buses?
+
+Routinely. The drum bus usually feeds a mix bus rather than the master, and inside the drums you can split further: kick and snare into one channel, room and overheads into another, both arriving at the drum bus. Each layer is one more place to treat things as a unit.
+
+Two rules keep it from becoming a maze. Every layer should earn a decision you would actually make there, or it is a channel you pass through and forget to check. And the further up you go, the less each stage should do, because movement created at the top is imposed on everything under it. A drum bus can work hard, since the kit is one instrument and the interaction is the point. A mix bus should barely move.
+
+## Where it costs you
+
+Summing raises level. Eight tracks that each peaked comfortably can arrive at the bus hot enough to change how everything on it responds, and saturation cares a great deal about input level. Set the fader before you judge the processing.
+
+The loudest element drives everything. On a drum bus that usually means the kick decides how much gain reduction the hats get, which is the mechanism behind glue and also the reason heavy bus compression can duck a hi-hat pattern you spent an hour programming.
+
+Parallel paths can drift. Mute and unmute the processed copy while both are playing: if the drums thin out when it comes in, the two paths are not aligned and blending will not fix it.
+
+And the oldest trap: a bus compressor with make-up gain is louder, and louder wins any quick A/B. Match the levels first, then listen to the quiet bars rather than the drops.
+
+## Questions people ask
+
+### What is a drum bus?
+
+A channel that all the drum tracks are routed into before the master, so the whole kit shares one fader and one chain of plug-ins. Anything on that channel treats the drums as a single signal rather than as separate tracks.
+
+### What is the difference between a drum bus and a group or an aux?
+
+In most DAWs, nothing that matters. The names come from different consoles: a group is usually fed by output routing, an aux by sends, and both are channels that sum other channels. A control group or VCA is the exception, because it moves faders without summing audio, so no processing can sit across the sum.
+
+### Do I need a drum bus if I am working from one sampled break?
+
+The loop is already a summed signal, so the routing buys you nothing until you add something to it. As soon as there is an extra kick, a clap layer or a shaker, route the loop and the added hits into one channel so they get compressed together and start behaving like one kit.
+
+### Should the drum bus go to the master or to a mix bus?
+
+To a mix bus if you use one, and to the master if you do not. Either way the point is that the drums arrive somewhere as one signal, with their internal balance already settled.
+
+### What should go on a drum bus first?
+
+Compression, because the shared gain movement is the effect everyone is after and it is the hardest one to get any other way. Saturation second, for weight and peak control. Broad EQ after that, and only where the kit as a whole needs it.
+
+### How much compression should a drum bus get?
+
+One to three dB of gain reduction on the loudest hits for glue, with the meter returning to zero in the quiet bars. More than that is a character decision rather than a cohesion one, and it is worth making deliberately: heavy bus compression trades separation for movement.
+
+### Why do my drums sound worse after I made a drum bus?
+
+Usually level. Summing raised the input to everything on that channel, so plug-ins are hitting harder than the settings suggest. Pull the bus fader down, match the level to bypass, and judge it again.
+
+## What DRUGS does
+
+DRUGS is our free bus compressor for drums, with one macro control called **DOSE** that moves the transfer curve, the knee, the attack and the release together. There is no threshold to find and no ratio to set, which is most of the work on a drum bus gone. The release is adaptive: a hit gets the shorter time so gain recovers inside the gap, and sustained material gets the longer one so it holds still. **MIX** gives you the parallel path without building one. It is free: [DRUGS](https://gazillionindustries.com/drugs.html).
+
+Route the kit into one channel, put one thing across it, and listen to the hats while the kick plays. Everything else on this page follows from that.
 
 ---
 
@@ -9295,6 +10005,10 @@ Bitcrushing reduces the bit depth of audio, so each sample is stored with fewer 
 
 - **8-bit**: about 48 dB; obvious crunch
 
+- **Fold rule**: new rate minus the partial's frequency; one subtraction
+
+- **Level matters**: a quiet signal into a crusher is crushed harder
+
 - **Use**: drums, samples, vocals, lofi textures; blend to taste
 
 **12 bit, full rate.** The quantisation is there but the top end is intact.
@@ -9305,15 +10019,61 @@ Bitcrushing reduces the bit depth of audio, so each sample is stored with fewer 
 
 Digital audio measures the wave thousands of times a second, and bit depth sets how many different levels each measurement can land on. Each bit doubles the steps and adds roughly 6 dB of dynamic range: 16 bits gives 65,536 steps and about 96 dB, 12 bits gives 4,096 and about 72 dB, 8 bits gives 256 and about 48 dB. Take bits away and the wave is forced onto a coarser staircase. The error between the real wave and the staircase is heard as noise and grit, loudest on the quiet parts, like reverb tails and fades.
 
+The size of one step is the number to keep in your head. Take full scale as plus or minus one. At 16 bits a single step is one part in 32,768, which sits about 90 dB below a full-scale peak. At 12 bits it is one part in 2,048, about 66 dB down. At 8 bits it is one part in 128, about 42 dB down — loud enough to hear from across a room. The grain you are buying is that step, and every bit you remove doubles its height.
+
+The error is not hiss, and that is why it sounds the way it does. Tape hiss sits there at a constant level whether the music plays or not. Quantization error is produced by the rounding itself, so it exists only while there is signal, and its shape is tied to the signal's shape. At low bit depths the error becomes correlated enough with the source to read as a buzzy edge welded to the note rather than a floor underneath it.
+
+## The arithmetic on one source
+
+Bit depth is measured from full scale, not from your track. That single fact explains most of what confuses people about crushers. The quantizer does not know how loud your drum loop is; it rounds to a fixed grid, so a quiet source lands on fewer steps of that grid and comes out more damaged than a loud one at the same setting.
+
+Work it through. Send a loop peaking at 0 dBFS into an 8-bit stage and it uses the whole 256-step grid. Pull the fader before the crusher down by 20 dB and the same loop now spans about 26 steps, which is under 5 bits of actual resolution. You did not touch the BIT control. You changed the input level, and the crush got three bits worse.
+
+- **Peak at 0 dBFS, 8-bit**: full 256-step grid; about 8 bits used
+
+- **Peak at −6 dBFS, 8-bit**: about 7 bits used
+
+- **Peak at −12 dBFS, 8-bit**: about 6 bits used
+
+- **Peak at −20 dBFS, 8-bit**: about 4.7 bits used
+
+Two things follow. First, input trim is a second crush control, and on plugins with a drive or input knob it is often the more musical of the two. Second, you cannot compare two crushers, or two settings, unless the levels going in match. See [gain staging](https://gazillionindustries.com/gain-staging/) for the habit that makes this automatic.
+
 ## What sample rate reduction does
 
 The sample rate sets the highest frequency audio can hold: half the sample rate. Lower it and the top end disappears. In a lofi effect the frequencies that no longer fit aren't filtered away first, so they fold back down as new, out-of-tune tones. That metallic shimmer is aliasing, and it's half the sound of a crushed drum. The full explanation is in [what is aliasing in audio](https://gazillionindustries.com/what-is-aliasing-in-audio/).
+
+In the time domain the same process is a staircase in width rather than height. Each sample is held until the next one arrives, so at 44.1 kHz a value stands for 22.7 microseconds, at 11.025 kHz for 90.7 microseconds, and at 8 kHz for a flat 125 microseconds. Hold a value that long and you have drawn a small square wave, which is where the extra harmonics come from before any folding happens.
+
+That hold also costs you top end on its own. A held staircase rolls off toward the new ceiling and arrives about 3.9 dB down at it, so the last octave before the fold line is already dulled before aliasing adds anything back. This is why a rate-reduced loop can sound simultaneously duller and harsher: the real high end is sagging while folded content piles into the mids.
+
+## Hear the two halves apart
+
+The same one-second source four times: clean, bit reduction alone, rate reduction alone, then both. Play them on whatever you are reading this on, then again on monitors, because the two halves do not survive small speakers equally.
+
+- **Clean** — no processing — https://gazillionindustries.com/f12/f12-clean.m4a
+
+- **Bit reduction only** — rate untouched — https://gazillionindustries.com/f12/f12-bitcrush.m4a
+
+- **Rate reduction only** — bits untouched — https://gazillionindustries.com/f12/f12-rate25.m4a
+
+- **Both** — the pair together — https://gazillionindustries.com/f12/f12-both.m4a
+
+We measured these four files rather than describing them from memory. Peaks fall between −2.3 and −2.9 dBFS, a spread of 0.6 dB, so nothing below is louder-sounds-better. Over the last fifth of the file, where the source has already decayed, the bit-reduced render measures 9.8 dB hotter than the clean one; the rate-reduced render measures within 0.2 dB of it. Run the same measurement the other way and it flips: the frequency below which 99 per cent of the energy sits climbs from 869 Hz clean to 3,348 Hz on the rate-reduced render. One process fills the gaps, the other moves the spectrum. Rendered through [F(ilter)12](https://gazillionindustries.com/f12.html).
 
 ## Bitcrushing vs distortion
 
 Distortion bends the waveform on a smooth curve and adds harmonics related to the notes, so it sounds warm or gritty but musical. Bitcrushing chops the wave into steps, so its noise depends on the level and doesn't follow the harmonic series as neatly, which is why it sounds digital. They stack well: a little saturation before a gentle crush often sounds better than either alone. See [saturation vs distortion](https://gazillionindustries.com/saturation-vs-distortion/).
 
+The order of that pair is a real decision. Saturation first compresses the crest factor, so the source arrives at the quantizer sitting higher above the step size and the grain lands further back. Crushing first hands the saturator a signal with a raised floor, and the nonlinear stage multiplies that floor into something much larger than you set. Both are usable. Only one is predictable.
+
 In [F(ilter)12](https://gazillionindustries.com/f12.html), twelve bits is as clean as it gets. It only goes down from there.
+
+## Dither changes the grain
+
+Dither is a small amount of noise added before the rounding, and it is the one control that changes the character of a crush rather than the amount. Without it the rounding error tracks the signal and you hear a buzz that moves with the notes. With it the error is broken up into a steadier floor that sits behind the music instead of riding on it.
+
+In mastering this is a correctness tool and the rules are strict, which [dithering](https://gazillionindustries.com/dithering/) covers. In a crusher it is a flavor switch. Dither on gives you a tape-like hiss with grain underneath, which suits sustained material, pads and vocals. Dither off gives you the buzzy, gated, falling-apart quality on decays that most people actually mean when they say 12-bit. If your plugin offers it, audition both on the same tail before you decide.
 
 ## How to bitcrush audio
 
@@ -9327,9 +10087,73 @@ In [F(ilter)12](https://gazillionindustries.com/f12.html), twelve bits is as cle
 
 - Blend with the dry signal or back the settings off, then compare at matched loudness.
 
+## How to check it in your own session
+
+Descriptions of grit are close to useless next to five minutes of listening on a file you already know. Run this once on a loop you have heard hundreds of times and you will stop guessing at settings.
+
+- Load a two-bar loop with a decaying element in it: a cymbal, a reverb tail or a held chord.
+
+- Insert the crusher and match the bypassed and processed levels to within 0.5 dB on your meters.
+
+- Bypass and unbypass during the decay, never on the transient, and note what moved.
+
+- Set bit depth to 12 and leave the rate alone. Listen to the space between hits, not the hits.
+
+- Return the bit depth to full and lower the rate until the top dulls. Listen for pitched tones that are not in the source.
+
+- Drop the fader feeding the crusher by 12 dB and make the output back up by 12 dB. The crush should get worse. If it does not, the plugin is trimming input for you.
+
+- Sweep the rate control by hand while it plays and listen for zipper noise on the move.
+
+- Sum to mono and check the low end survived — [mono compatibility](https://gazillionindustries.com/mono-compatibility/) has the reasons.
+
+- Bounce it and play it on a phone speaker. That is the test that decides it.
+
 ## Where it works
 
 Drums take crushing well, since the grit sits on transients and tails. Samples and chords get a worn, vintage texture. Vocals can take a little as an effect, or a lot for a robotic, radio-broken sound. On bass, go carefully: heavy crushing adds noise that muddies the low end, so crush a filtered copy instead.
+
+- **Drum bus**: 12 to 10 bits, rate around 22 kHz, low-pass after
+
+- **Chopped sample loop**: 12 bits, rate 16 to 11 kHz, dry/wet 60 to 80 per cent
+
+- **Lead vocal**: 12 bits, rate left alone, blended under 30 per cent
+
+- **Broken radio vocal**: 8 bits, rate 8 kHz, band-pass 400 Hz to 3 kHz
+
+- **Bass**: crush a high-passed copy only; leave the fundamental clean
+
+Those are starting points, not settings. The right number depends on how loud the source arrives, which is the whole argument above. [How to make lofi drums](https://gazillionindustries.com/how-to-make-lofi-drums/) puts the drum case in context, and [the telephone effect](https://gazillionindustries.com/telephone-effect-on-vocals/) covers the band-pass half of the vocal one.
+
+## Where it goes in the chain
+
+Position decides more than the settings do, because everything before the crusher changes what gets crushed and everything after decides whether you keep hearing it. Four placements cover almost every use.
+
+**After a filter, before compression.** Filtering first removes the content that would have folded, so you get grain without clang. Compressing after pulls the raised floor up with the music and welds the dirt on. This is the drum bus setting, and it is the one that sounds least like an effect.
+
+**Before a filter.** Crush wide open, then low-pass the result. The folded content is generated first and then cut, which leaves the mids dirty and the top clean. [Cutoff and resonance](https://gazillionindustries.com/filter-cutoff-and-resonance/) covers the control side.
+
+**On a parallel send.** Crush hard, bring it up underneath the dry signal, and the transients stay intact while the grain fills the space between them. Start here if you are unsure. [Parallel compression](https://gazillionindustries.com/parallel-compression/) explains why the blend works.
+
+**Before reverb.** Under-used. The reverb smears the folded content into a wash, and the result reads as a degraded recording of a room rather than a clean room with dirt sprayed over it.
+
+The one position to avoid is the master bus. Crushing a finished mix hits the quietest elements hardest, which is backwards, and it lands the grain on the reverb tails of everything at once.
+
+## What goes wrong, and what it sounds like
+
+Crushing fails in a small number of recognizable ways. Each one has a sound, and once you can name it you can fix it in a knob move.
+
+**Fizz on small speakers.** The mix sounds characterful on monitors and turns to sandpaper on a phone. Folded content sitting between 2 and 5 kHz is exactly where a small driver is most sensitive, and your monitors are hiding it. Low-pass after the crusher, or filter before it.
+
+**Mud you cannot EQ out.** A crushed hi-hat is putting energy into 1 to 2 kHz that did not exist in the source, so cutting there thins the snare and the hat stays dirty. Fix it at the crusher, not at the EQ.
+
+**Punch gone.** Heavy bit reduction squares off the top of a transient, and the peak that used to cut through is now a flat plateau. Blend dry signal back in, or move the crusher to a send. [What is a transient](https://gazillionindustries.com/what-is-a-transient/) has the anatomy.
+
+**Clicks on automation.** Bit depth and sample rate are steppy by nature, and a developer who has not smoothed them hands you a tick on every move. Automate dry/wet instead of the crush controls.
+
+**The stereo image pulls apart.** A crusher that processes channels independently makes folded content that does not match between them, so the loop spreads and the center loses weight. Check in mono before you commit.
+
+**Everything sounds the same.** Crushing hard flattens dynamic range, so a whole beat run through one crusher loses the differences between its parts. Crush elements individually, at different amounts.
 
 ## Where the folded content actually lands
 
@@ -9345,6 +10169,16 @@ Lower the sample rate and everything above half the new rate does not disappear.
 
 At 8 kHz that 6 kHz hat partial lands at 2 kHz, which is in the middle of where the vocal and snare live, and a 7 kHz one lands at 1 kHz. That is the whole reason a crushed hi-hat can make a mix sound cluttered in a region you never touched. Filtering before the rate reduction removes the content that would have folded; filtering after only attenuates it once it is already sitting on top of the music.
 
+The same arithmetic run in reverse is why oversampling exists. Lift the internal rate before a nonlinear stage and the fold line moves up out of the way, which is the right answer when you want distortion without the clang — [oversampling](https://gazillionindustries.com/oversampling/) covers when to spend the CPU. A crusher is the one place you turn that protection off on purpose.
+
+## What crushing costs you
+
+Three things, stated flatly. You lose dynamic range, and you do not get it back: the rounding is one-way and no amount of processing afterward reconstructs what the step size threw away. Commit late, and keep the clean file.
+
+You lose translation. Folded content concentrates in the band small speakers exaggerate, so a crushed mix is more likely to fall apart on a phone than almost anything else you can do to it — see [bass on phone speakers](https://gazillionindustries.com/how-to-make-bass-audible-on-phone-speakers/) for the other end of the same problem.
+
+And you lose room in the mix. A raised floor between hits is a decision to spend space that reverb, room tone or another element could have used. On one part that is character. On six parts it is a wash, and the beat stops breathing.
+
 ## Questions people ask
 
 ### What is the difference between distortion and a bitcrusher?
@@ -9358,6 +10192,40 @@ Yes, as an effect: a little for a lo-fi or radio texture, a lot for a broken, ro
 ### Does 12-bit sound better than 16-bit?
 
 Not technically: 16-bit has more dynamic range and less noise. But 12-bit has a grain and warmth that many producers like, which is why vintage 12-bit samplers are still loved. [12 bit sampler plugins](https://gazillionindustries.com/12-bit-sampler-plugins/) covers what the format does to a sample and what the second half of the sound is.
+
+### Is bitcrushing the same as downsampling?
+
+No. Downsampling lowers the sample rate, which drops the ceiling and folds content back down as aliasing. Bitcrushing lowers bit depth, which coarsens the volume steps and lifts a grain out of quiet parts. Most plugins labeled bitcrushers give you both on separate controls, which is why the two get confused.
+
+### What bit depth should I use for a lofi sound?
+
+Start at 12 bits and only go lower if you want the process to be obvious. Twelve is audible on decays and almost invisible on loud transients. Eight is a clear effect. Four is a sound in its own right rather than a treatment. Set the input level first, since a quiet source is crushed harder at any setting.
+
+### Why does my bitcrushed loop sound fizzy on phone speakers?
+
+Because rate reduction folds high content down into the 2 to 5 kHz region, and that is where a small driver is most sensitive and your monitors are least revealing. Low-pass after the crusher, or filter before it so the content never folds in the first place.
+
+### Does a bitcrusher make a track louder?
+
+Not in peak terms, and barely in average terms. On the four renders above, peak level moves 0.6 dB across all of them and full-file average moves under 0.2 dB. What changes is the quiet parts: the last fifth of the bit-reduced file measures 9.8 dB hotter than the clean one. It fills the gaps rather than raising the ceiling.
+
+### Does bitcrushing reduce the file size?
+
+No. A crusher inside a session still outputs at whatever depth and rate the project runs at, so the bounced file is the same size as it would have been. The plugin changes the shape of the waveform, not the container it is written into.
+
+### Can bitcrushing be undone?
+
+No. Rounding discards information and nothing recovers it, so there is no plugin that reverses a crush. Keep an unprocessed copy of anything you print, and do the crush on a duplicate track or a send if you expect to change your mind.
+
+## Bitcrushing in Ableton, FL Studio and Logic
+
+The stock devices differ more than their category name suggests, and the differences change what you can actually get out of them. Details below come from each maker's own manual.
+
+**Ableton Live.** Redux splits into downsampling on the left and bit reduction on the right. Rate sets the degraded sample rate and Jitter adds noise to the downsampler's clock, which widens and roughens the result. The filter section has separate Pre and Post buttons, and Ableton's manual is explicit that Pre reduces the bandwidth going into the downsampler while Post reduces the imaging afterward — the two positions described earlier, on one device. On the bit side, Bits sets the output depth, Shape bends the quantizer's curve so quiet components are affected less, and DC Shift offsets the signal before quantization, which changes the character of the grain noticeably at low Bits values.
+
+**FL Studio.** Fruity Squeeze is a bit reducer plus a filter plus something else. Squarize is the bit depth control. The Puncher section is not rate reduction: per Image-Line's manual it replaces a chosen number of samples with a fixed value, interleaved with samples it leaves alone, with Preserve, Impact, Relation and Amount setting the pattern. That gives a stuttering, gated grit rather than aliasing, and the manual notes low Amount settings work best. The low-pass filter has its own Pre/Post switch, plus Mix and Gain.
+
+**Logic Pro.** Apple lists Bitcrusher among Logic's distortion effects rather than its lofi utilities, which is the right place for it: treat it as a distortion stage and set the input level deliberately before you touch anything else.
 
 ## Stock plugins that do this
 
@@ -9488,6 +10356,152 @@ https://gazillionindustries.com/f12.html
 
 ---
 
+# How to get the sound of an old sampler without buying one
+
+> How to get the sound of an old sampler with plugins you have: bit depth, sample rate and its fold-back, narrow bandwidth, a hard input stage and short chops.
+
+Source: https://gazillionindustries.com/how-to-get-an-old-sampler-sound/  
+Published 2026-09-24, updated 2026-09-24. By Gazillion Industries, who make F(ilter)12.
+
+---
+
+The machines that made this sound were built to save memory. Every compromise that irritated their owners at the time is now the reason people go looking for them.
+
+The sound of an old sampler is a stack of limitations, and every one of them can be applied on purpose with plugins you already have. Reduce the bit depth for grain. Reduce the sample rate so the top end goes and what was above the new ceiling folds back down as inharmonic tones. Narrow the bandwidth at both ends. Drive the input hard enough that it clips on the way in. Chop short, because those machines counted their memory in seconds. Do those five and you have the sound without the hardware.
+
+## The short version
+
+- **Bit depth**: 12 bits for grain, 8 for obvious crunch
+
+- **Sample rate**: drop it until the top end dulls and starts to clang
+
+- **Fold-back**: a partial at f returns at the new rate minus f
+
+- **Bandwidth**: high-pass around 80 Hz, low-pass under the fold line
+
+- **Input stage**: hit it hard; let the peaks round off on the way in
+
+- **Length**: short chops, hard cuts, tails that stop early
+
+- **Pitch**: pitch and length move together, the way varispeed does
+
+- **Order**: filter before the rate reduction changes what folds back
+
+## Why does an old sampler sound like that?
+
+None of it was a design goal. Memory was the expensive part, so the engineers spent as little of it as possible per second of audio: fewer bits per sample, fewer samples per second, and a short ceiling on how long you could record. The converters and the input amplifier in front of them were built to a price. The anti-aliasing filtering was modest. The result was a machine that colored everything that went through it in the same way every time, which is the definition of a sound.
+
+That consistency is what makes it reproducible. You are not chasing a serial number. You are chasing five measurable behaviors, and each one has a control in a modern DAW. Apply them together and in the right order and the character arrives. Apply one of them alone and you get a thin imitation that producers describe as sounding digital rather than old.
+
+## How much does bit depth actually contribute?
+
+Less than most people assume, and it is the first thing everyone reaches for. Bit depth sets how many levels each measurement can land on. Each bit roughly doubles the steps and adds about 6 dB of dynamic range: 16 bits gives 65,536 steps and about 96 dB, 12 bits gives 4,096 and about 72 dB, 8 bits gives 256 and about 48 dB. Take bits away and the wave is forced onto a coarser staircase, and the error between the real wave and the staircase is heard as noise.
+
+The important part is where that noise sits. It rides the signal, so it is loudest under quiet material: reverb tails, room sound, the decay of a chord, the space between hits. A loud kick barely shows it. A sustained pad shows it immediately. This is why a crushed break sounds gritty in the gaps rather than on the transients, and why twelve bits reads as texture while eight reads as damage. The mechanism is covered in full in [bitcrushing explained](https://gazillionindustries.com/bitcrushing-explained/).
+
+## What the sample rate does, and where the fold-back lands
+
+This is the half of the sound that people miss. A sample rate can only describe frequencies up to half its value, and when you lower the rate, everything above that new ceiling does not quietly disappear. It mirrors down. A partial at frequency f comes back at the new rate minus f, which means the returning content has no harmonic relationship to the note that produced it. That is why the result reads as metallic instead of bright, and it is arithmetic you can do in advance:
+
+- **22.05 kHz — fold line at 11,025 Hz**: a 6 kHz hat partial passes through unchanged
+
+- **16 kHz — fold line at 8,000 Hz**: a 10 kHz partial comes back at 6,000 Hz
+
+- **11.025 kHz — fold line at 5,512 Hz**: a 6 kHz partial comes back at 5,025 Hz
+
+- **8 kHz — fold line at 4,000 Hz**: a 6 kHz partial comes back at 2,000 Hz
+
+At 8 kHz that 6 kHz hat partial lands at 2 kHz, in the middle of where the snare and the vocal live, and a 7 kHz one lands at 1 kHz. A crushed hi-hat can clutter a region you never touched, and no amount of EQ up top will move it, because the content is no longer up top. Sweep a bright note and you can hear the direction reverse: the note goes up, the folded tone comes down to meet it. The whole mechanism is in [what is aliasing in audio](https://gazillionindustries.com/what-is-aliasing-in-audio/).
+
+In [F(ilter)12](https://gazillionindustries.com/f12.html), SAMPLE RATE folds the top back down as new content on purpose. There is a demo on the page.
+
+## Does the order of the chain matter?
+
+More than any single setting. Filtering before the rate reduction removes the content that would have folded, so you get a dull, closed sound with a clean midrange. Filtering after the rate reduction only attenuates the folded tones once they are already sitting on top of the music, so the midrange keeps the clang and the top gets darker.
+
+Both are useful and they sound nothing alike. If a chopped loop is turning into mud, low-pass in front of the crusher. If a loop sounds too polite, move the filter behind it and let the fold-back through. Old machines did some of each, which is part of why they are hard to pin down with one setting, and why having the filter on either side of the crush is worth more than another decimal place of precision.
+
+## What about the bandwidth?
+
+A modern converter passes everything. Those machines did not. The bottom was loose and rolled away early, the top stopped well short of where a record stops, and the middle was where all the level was. Reproducing that is two filters and a decision about how far to push them.
+
+High-pass around 80 Hz and the sub content goes, which immediately makes a chop sound like it came off a machine rather than out of a session. Low-pass somewhere under the fold line and you are choosing how much of the metallic return survives. Then push a wide, gentle boost into the 1—3 kHz range, because that is the register these machines emphasized and it is the register a chopped loop needs to cut through a mix. Narrow bandwidth with a strong middle is most of the impression of age on its own.
+
+## How hard should the input stage be hit?
+
+Harder than feels correct. On those machines you set the record level by ear against a small row of lights, and everyone ran them hot, because a quiet sample wasted the bits you had paid for. The peaks rounded off on the way in and stayed rounded, baked into the recording before any bit reduction happened.
+
+In a DAW that means saturation or soft clipping in front of the crusher, not after it. Ours is BEEFY, and any soft clipper with a controllable input will get you there. Push until the transients stop growing and the body gets louder, then back off until the hits still move air. The effect is density: a loop that sits at one level and pushes forward, rather than one that spikes and hides. Doing this first also changes what the rate reduction has to work with, since clipping generates harmonics of its own that then fold back down as part of the character.
+
+## Why does the length of the chop matter so much?
+
+Because the memory limit shaped the music. If a machine gives you two seconds of recording time, a bar of 4/4 at 90 BPM already runs about 2.67 seconds (60,000 divided by 90 is 666.7 ms a beat, times four), so a whole bar does not fit. You chop tighter, you cut tails early, and you let the next hit cover the gap. That clipped decay is a signature. Producers spend real effort adding it back with a gate or an envelope after sampling a source that had no such limit.
+
+Pitch is the other half. On those machines, playing a sample higher meant reading it faster, so pitch and duration moved together. Pitch a two-second chop up an octave and it lasts one second. Up a fifth, a 3:2 ratio, and it lasts two thirds of that, about 1.33 seconds. Producers used that deliberately: pitching a break up to fit more of it into memory, then slowing the whole track to compensate. A modern time-stretch holds the length and breaks the link, which is exactly the thing that makes a chop sound new. If you want the old behavior, use varispeed, which is what our SKRUU does.
+
+## A working order
+
+- Chop shorter than feels comfortable and cut the tail hard.
+
+- Pitch with varispeed rather than time-stretch, so the length moves with the pitch.
+
+- Drive a saturator or soft clipper at the front until the peaks round off.
+
+- High-pass around 80 Hz to lose the sub.
+
+- Reduce bit depth to 12, then to 8 if you want it obvious.
+
+- Reduce the sample rate until the top dulls and the clang arrives.
+
+- Decide whether the filter goes before the rate reduction or after, and listen to both.
+
+- Compare against the dry loop at matched loudness, because all of this adds level.
+
+Run that on a clean source and the difference is not subtle. For the texture work that sits on top of it, including the noise, the wear and the timing, see [how to make a sample sound old](https://gazillionindustries.com/how-to-make-a-sample-sound-old/).
+
+## Questions people ask
+
+### Can you get the old sampler sound with stock plugins?
+
+Most of the way, yes. A bit reducer, a filter and a saturator will do the five jobs that matter: bit depth, sample rate, bandwidth, input drive and short chops. Stock bit reducers vary in whether they let the fold-back through or filter it away, and that difference is most of what separates one crusher from another.
+
+### Is 12-bit the right setting?
+
+It is the useful starting point. Twelve bits gives about 72 dB of dynamic range and a grain that reads as texture rather than damage. Eight bits, at about 48 dB, is an effect you notice. Most of the character people are chasing comes from the sample rate and the input stage rather than from the bits.
+
+### Why does my crushed loop sound thin instead of heavy?
+
+Usually the input stage was skipped. Those recordings were made hot, so the peaks rounded off before anything else happened. Saturate or soft clip in front of the crusher, then add a wide boost around 1—3 kHz. Weight in this sound comes from density in the midrange, and very little of it comes from the low end.
+
+### Should I filter before or after the sample rate reduction?
+
+Before, to remove the content that would fold down and muddy the midrange. After, to darken the folded tones while keeping the clang. They are different sounds, so try the same loop each way and keep the one that fits the track.
+
+### Does pitching a sample down make it sound older?
+
+It helps, if the pitch and the length move together. Varispeed pitching lengthens the sample as it lowers it and drags the whole spectrum down with it, which is the behavior those machines had. A time-stretch that holds the length keeps the sample sounding current.
+
+### Do I need a sampler plugin for this?
+
+No. You need a chop, a way to pitch it, and a processing chain that reduces bits and rate. Whether the chop lives in a sampler or on an audio track changes the workflow rather than the sound.
+
+## What F(ilter)12 does
+
+F(ilter)12 is our 12 bit sauce filter, and it covers three of the five jobs in one place. **BIT** coarsens the steps, **SAMPLE RATE** drops the ceiling so the top folds back down as new content, and the filter behind the crush has five shapes and six resonance shapes, so you can choose what reaches the rate reduction and what gets cleaned up afterward. **AURA** sits on top and helps the result hold its place in a mix. Nothing in it is modeled on a particular machine; it was tuned by ear until chops sounded right. See [F(ilter)12](https://gazillionindustries.com/f12.html).
+
+The engineers were rationing memory. You have as much as you want, which means every one of these limits is now a choice.
+
+---
+
+## About F(ilter)12
+
+F(ilter)12 — a 12 bit sauce filter for Mac and Windows: a lo-fi section, five filter shapes, six resonance shapes and AURA.
+
+https://gazillionindustries.com/f12.html
+
+
+---
+
 # How to make a filter sweep
 
 > How to make a filter sweep: high-pass and low-pass builds, automation length and curve, resonance, what to sweep and what to leave clean, and other uses.
@@ -9515,11 +10529,43 @@ A filter sweep is a change in a filter's cutoff over time, usually to build tens
 
 - **Target**: a group or return, not always the master
 
+- **Travel**: counted in octaves, never in hertz
+
+- **Slope**: steeper takes more away per octave of travel
+
+- **Cost**: level — the swept render below sits 4.1 dB under the open one
+
 **12 bit, full rate.** Quantisation without losing the top.
 
 ## What a filter sweep does
 
 A low-pass filter lets frequencies below its cutoff through; close it and the sound gets darker and further away. A high-pass lets frequencies above its cutoff through; raise it and the kick and bass drain out, leaving a thin, anxious version of the track. Either way, taking something away makes its return feel bigger, which is the whole point of a sweep.
+
+The number on the cutoff is a corner rather than a wall. The convention puts it where the output has fallen about 3 dB below the passband, and past that point level falls at a rate set by the slope, in decibels per octave. A 12 dB per octave low-pass parked at 1 kHz leaves 4 kHz sitting 24 dB down. At 24 dB per octave the same 4 kHz is 48 dB down. Two filters showing the same number can do completely different amounts of work.
+
+A sweep is therefore a level move as much as a tone move, and the amount is bigger than most people expect. Removing the top also costs more loudness than the meter admits, because hearing is least sensitive at the extremes of the range (see [Fletcher-Munson](https://gazillionindustries.com/fletcher-munson/)). A low-passed section reads quieter than its meter says, which is the effect you want in a build and the trap you fall into the moment you compensate for it with a fader.
+
+## Hear the level go
+
+Writing about filters is mostly adjectives. Here is one loop through one filter at three positions and then swept, so the numbers above can be checked against the thing itself. Peak and mean figures are measured off these four files.
+
+- **Open** — peak −5.4 dBFS, mean −15.7 dB — https://gazillionindustries.com/f12/f12-clean.m4a
+
+- **Filter 60** — peak −8.5, mean −17.0 — https://gazillionindustries.com/f12/f12-filter60.m4a
+
+- **Filter 30** — peak −13.7, mean −23.6 — https://gazillionindustries.com/f12/f12-filter30.m4a
+
+- **Swept** — peak −7.0, mean −19.8: the gesture, not the setting — https://gazillionindustries.com/f12/f12-filter-sweep.m4a
+
+Four renders of the same one-bar loop at 44.1 kHz, no other processing. Closing the filter to 30 took 8.3 dB off the peak and 7.9 dB off the mean, and no fader moved. The swept file lands between the open and the closed, which is exactly what a sweep is: an average of every position it passed through.
+
+## The arithmetic: count octaves, not hertz
+
+Frequency is heard in ratios, so the unit of a sweep is the octave. The audible range is roughly ten of them: start at 20 Hz, double ten times, and you land just past 20 kHz. A low-pass running from 18 kHz down to 200 Hz travels the base-two logarithm of 90, which is 6.5 octaves.
+
+Draw that as a straight line in hertz and half the automation does nothing. Halfway between 18,000 and 200 is 9,100 Hz, and almost nothing in a record lives above 9,100 Hz except air and cymbal wash. So the first half of a linear sweep covers about one octave. The second half dumps the remaining five and a half. That is the crawl-then-lurch shape everybody recognizes and nobody wants.
+
+Equal octaves per second is what sounds even. Over an eight-bar build at 120 BPM — sixteen seconds — 6.5 octaves works out at 0.41 octaves per second, so the cutoff halves roughly every 2.5 seconds, start to finish. Some filter knobs are already scaled that way, in which case a straight line in the automation lane is already exponential in hertz. Find out which kind you have before you start bending curves: draw a straight line, play it, and listen for whether the movement is even or back-loaded.
 
 ## How to make a filter sweep
 
@@ -9527,23 +10573,127 @@ A low-pass filter lets frequencies below its cutoff through; close it and the so
 
 - Choose high-pass for a draining build or low-pass for a muffled one.
 
+- Set the slope before you draw anything; a steeper slope removes more per octave and needs less travel.
+
 - Draw automation on the cutoff across two to eight bars before the drop.
 
 - Shape the curve so it moves slowly at first and faster at the end.
 
 - Add a little resonance so the sweep is audible.
 
+- Automate the resonance up into the drop and back off at the reset.
+
 - Reset the cutoff exactly on the downbeat of the drop.
 
 - Leave the kick or the vocal unfiltered if they need to carry through.
 
+- Loop the last two bars of the build and the first two of the drop, and fix the landing before anything else.
+
+Two details decide whether that reset lands. The first is automation resolution: hosts write control changes once per audio block, not once per sample, so a hard snap can arrive up to a buffer late. At 512 samples and 44.1 kHz that is 11.6 ms, enough to smear the move against a kick sitting on the same downbeat. Drop the buffer to 128 samples for the final pass and the same move lands within 2.9 ms.
+
+The second is smoothing. A filter that jumps its cutoff with no interpolation clicks; a filter that smooths heavily rounds your snap into a short fade. If the reset sounds soft when you wanted a cut, the smoothing is why, and the fix is to place the reset one grid step early so the fade finishes on the downbeat rather than starting there.
+
 **12 bit, full rate.** Quantisation without losing the top.
+
+## A worked eight-bar build
+
+Eight bars, 120 BPM, four-four. One bar is 2 seconds, the build is 16 seconds, and the low-pass runs from 18 kHz down to 200 Hz. Halving every 2.5 seconds puts the breakpoints where the card below has them. Write those five values into the lane and the straight lines between them are close enough to the curve that nobody will hear the difference.
+
+- **Bar 1, beat 1**: 18 kHz — filter open, nothing happening yet
+
+- **End of bar 2**: 5.8 kHz — the air goes, hats thin out
+
+- **End of bar 4**: 1.9 kHz — snare loses its crack, the room closes
+
+- **End of bar 6**: 620 Hz — everything is behind a door now
+
+- **End of bar 8**: 200 Hz — bass and kick only, muffled
+
+- **Drop**: back to 18 kHz inside one grid step
+
+Each two-bar step divides the cutoff by 3.1. That constant ratio is the whole trick. The sweep becomes an even slide instead of a long nothing followed by a lurch, and the reason it works is that the ear measures the same distance between every pair of numbers on that list.
+
+For the draining version, invert it. A high-pass from 40 Hz to 800 Hz over the same sixteen seconds is 4.3 octaves, multiplying by 2.1 every two bars: 40, 85, 179, 378, 800. The kick loses its weight first, then its body, and the last two bars leave you with a radio in the next room. Tempo takes care of itself as long as you write the sweep in bars: at 90 BPM a bar is 2.67 seconds, the eight-bar build runs 21.3 seconds, and the same 6.5 octaves simply travel at 0.30 octaves per second instead.
 
 ## Make it musical
 
 Frequency is heard logarithmically, so a straight-line sweep in hertz seems to crawl at the start and rush at the end. Curve the automation to compensate, or use a filter whose cutoff knob is already scaled musically. Resonance adds a whistle that follows the cutoff; a touch of it makes a sweep sing, too much makes it scream. And don't sweep everything: filtering the music while the drums keep playing clean often builds more tension than filtering the whole track.
 
+Resonance has a number attached to it, and it is worth holding. Q is the cutoff frequency divided by the width of the peak, so a high Q is a narrow boost and a low one is broad. At a Q of 0.707 a filter has no peak at all, which is where a clean corner lives. Push past that and you have a boost that tours the whole spectrum during a sweep, finding every loud partial on the way. Set resonance by playing the entire pass and listening for the worst moment, never by parking the cutoff somewhere flattering (there is more on the two knobs in [filter cutoff and resonance](https://gazillionindustries.com/filter-cutoff-and-resonance/)).
+
+You can also aim the peak. A resonant filter near self-oscillation traces an audible pitch at the cutoff, so land the sweep on the root of the track and the whistle becomes part of the harmony rather than a passenger. In A, that is 110 Hz for A2 or 220 Hz for A3 at concert pitch. Time the arrival for the bar before the drop and the build resolves instead of just stopping.
+
 [F(ilter)12](https://gazillionindustries.com/f12.html)'s resonance shapes travel with the knob, so a sweep carries its whole character with it. There's a demo on the page.
+
+## Where the sweep sits in the chain
+
+Order changes what a sweep does, and three placements go wrong often enough to name.
+
+**Before saturation, a low-pass barely reads.** Distortion generates harmonics above whatever you feed it, so the top you just removed comes back as new content, and an eight-bar close sounds like four. Put the filter after the drive stage unless that bloom is the point you are making.
+
+**Before a compressor, the level runs backward.** Drain the low end out of a compressor's input and it stops finding anything to work on, so gain reduction relaxes and the build gets louder as it empties. The same thing happens on a bus [limiter](https://gazillionindustries.com/how-to-use-a-limiter/) with a low-pass: take the top off and the limiter releases, so the section rises exactly where you wanted it to sink.
+
+**Before or after a reverb send is a real choice.** Filter pre-send and the tail stays bright while the dry part goes dark, so the section opens into a haze. Filter post-send and everything drains together. Both are useful; pick one deliberately rather than by accident of where you dropped the plug-in.
+
+One thing survives a sweep intact. [Sidechain compression](https://gazillionindustries.com/sidechain-compression/) already on the bus keeps pumping all the way down, because that is a level move and the filter is working on tone. The groove keeps ticking while the color drains out of it, which is usually the result you wanted anyway.
+
+## Test it in your own session
+
+- Loop the last two bars of the build and the first two of the drop, and listen only to the seam.
+
+- Put a spectrum display after the filter and check that the corner halves at even intervals.
+
+- Bypass the filter, match levels by ear, and only then decide whether the sweep helped.
+
+- Take the solo off. A sweep that is huge in solo often vanishes against live drums.
+
+- Bounce the loop and play it on your phone; the build should still read with the low end gone.
+
+- Render the same passage at two buffer sizes and compare how tight the reset is.
+
+- Watch the peak meter at the top of the build and at the drop. If the drop is not higher, the sweep is decoration.
+
+## What goes wrong, and what it sounds like
+
+**Stepping.** A fine gravel or a staircase riding along with the move. The cutoff is being updated once per block with nothing in between. Shorter buffer, or a filter that interpolates.
+
+**The screaming peak.** Resonance drags a narrow boost across everything, so sooner or later it parks on a loud partial and shouts. Six dB of resonance is six dB of boost on whatever the cutoff happens to be crossing at that instant.
+
+**A whistle that outlives the sweep.** Resonance close to self-oscillation leaves a tone sitting at the cutoff after the gesture ends. Stop at 110 Hz and you have an A2 drone under the drop that nobody asked for.
+
+**Metallic ring traveling the wrong way.** A resonant filter with drive on it makes content above the source material, and with no [oversampling](https://gazillionindustries.com/oversampling/) some of that folds back down and slides in the opposite direction to the sweep (see [aliasing](https://gazillionindustries.com/what-is-aliasing-in-audio/)). Once you hear it you cannot stop hearing it.
+
+**The sweep that never arrives.** High-passing a part with nothing much below 200 Hz. Look at what is actually down there before spending eight bars removing it.
+
+**Combing on the wet/dry.** Any minimum-phase filter shifts phase around its corner, so running it at 50% mix against the untouched signal sums the two into a comb that moves with the sweep (see [phase cancellation](https://gazillionindustries.com/phase-cancellation/)). Run full wet and use a fader if what you wanted was level.
+
+**The drop that punishes the master.** You turned the build up so you could hear it, the reset opened on top of that, and now the loudest bar of the record is the one after the drop. Build with the filter, not with the fader (see [gain staging](https://gazillionindustries.com/gain-staging/)).
+
+**Tapping.** Low-pass the drums past the kick's fundamental and the transients stay while the weight leaves, so the loop turns into somebody knocking. Worth doing once in a record. Never twice.
+
+## Per-DAW: where the sweep is stored
+
+Every host will move a cutoff for you. They disagree about where the move is kept, and that decides how easily you reuse it when the arrangement shifts by a bar.
+
+**Ableton Live.** Two places. Clip envelopes loop with the clip; arrangement automation does not. A one-time build belongs in the arrangement lane, and a repeating movement belongs in the clip or in an [auto filter](https://gazillionindustries.com/auto-filter-effect/). Mixing the two up is why a build sometimes restarts halfway through itself.
+
+**FL Studio.** The sweep becomes an automation clip, an object living in the playlist, so you can copy it to the next build and it keeps its shape. Each point carries a tension handle, and that handle is where you set the octave curve.
+
+**Logic Pro.** Decide between track automation and region automation before you draw. Region automation travels with the region, which is what saves you when a build gets nudged a bar later in the arrangement.
+
+**REAPER.** Automation items hold a stretch of envelope as its own object, so a build can be copied, looped and stretched onto a different bar count without redrawing it.
+
+**Anything else.** If the lane has no curve control at all, write the five breakpoints from the worked example above and let the straight lines do the work. Five points beats a perfect curve you never finish drawing.
+
+## What it costs
+
+**Level.** The renders put a number on it: 8.3 dB off the peak and 7.9 dB off the mean at the closed position, 4.1 dB of mean across the swept version. Everything downstream that reacts to level reacts to that, and it is why the compressor and limiter placements above matter.
+
+**Attention.** A sweep is a promise, and listeners learn the shape within about two choruses. Three builds in a row with the same eight-bar close and the fourth one is furniture. Change the length, change the target, or skip one and let the drums do the lifting.
+
+**Room to move.** You can only take a frequency away once. Filter the whole mix in the verse and the chorus has nowhere left to open from, which is why the sweep belongs on a group — the music without the drums, the loop without the vocal — more often than on the master (see [how to make drums cut through the mix](https://gazillionindustries.com/how-to-make-drums-cut-through-the-mix/)).
+
+**CPU,** if you are running a steep slope with oversampling on twelve tracks at once. That is the cheapest of the four to fix and the only one a faster machine solves.
 
 ## Beyond builds
 
@@ -9552,6 +10702,10 @@ Frequency is heard logarithmically, so a straight-line sweep in hertz seems to c
 - **Breakdowns:** close a low-pass on the drums so the vocal carries the section.
 
 - **Transitions:** a quick high-pass on the last beat before a new section.
+
+- **Endings:** close a low-pass over the last four bars instead of pulling the master fader, so the record recedes rather than turns down.
+
+- **Sends:** sweep the return rather than the source, so the dry part holds still and only the ambience moves.
 
 - **Repeating movement:** for sweeps that loop, use an [auto filter](https://gazillionindustries.com/auto-filter-effect/) instead of automation.
 
@@ -9569,6 +10723,42 @@ Commonly two to eight bars for a build, matched to the phrase length. Shorter sw
 
 Not always. Sweeping only the music or only the drums, while other parts stay clean, often creates more tension and keeps the energy from collapsing.
 
+### How do I make a filter sweep in FL Studio?
+
+Put a filter on the mixer insert, right-click its cutoff and create an automation clip. Place a point at the start of the build and one at the drop, then bend the line with the point's tension handle so the cutoff falls in even octaves rather than even hertz.
+
+### How do I make a filter sweep in Ableton Live?
+
+Use an arrangement automation lane rather than a clip envelope for a one-time build. Open the lane for the filter's cutoff, draw a breakpoint at the start of the build and one on the downbeat of the drop, then curve the segment between them.
+
+### Why does my filter sweep sound like nothing happens at first?
+
+The automation is straight in hertz. Halfway between 18 kHz and 200 Hz is 9,100 Hz, and almost nothing in a record lives above that, so half the move is inaudible. Curve it so the cutoff halves at even time intervals instead.
+
+### Why does my filter sweep click or crackle?
+
+The cutoff is being updated once per audio block with no interpolation between updates, which is heard as stepping. Lower the buffer size for the render, or use a filter that smooths its cutoff changes.
+
+### How much resonance should a filter sweep have?
+
+Enough to trace the movement and no more. Resonance is a boost that travels across the whole spectrum during a sweep, so set it by playing the entire pass and listening for the loudest moment, not by parking the cutoff at one flattering spot.
+
+### High-pass or low-pass for a build?
+
+A rising high-pass drains weight and leaves an anxious, thin version of the track, which suits a build that gets more frantic. A closing low-pass muffles everything and suits a build that pulls away from the listener. Some records use both at once from opposite ends.
+
+### Is a filter sweep the same as a riser?
+
+No. A riser is an added sound, usually noise or a synth, climbing into a transition. A filter sweep changes what is already playing. They stack well, and a riser is often the thing that keeps a heavily filtered build from feeling empty.
+
+### Why does my drop sound quieter than the build?
+
+Usually because the build was raised with a fader to compensate for the level the filter removed. Let the filter do the whole gesture and leave the fader still, or the loudest bar in the record ends up being the one before the drop.
+
+### How fast should the reset at the drop be?
+
+One grid step or less, so it reads as a snap rather than a short fade. If the filter smooths its cutoff, place the reset one step early so the smoothing finishes on the downbeat instead of starting there.
+
 ## Stock plugins that do this
 
 - **FL Studio**: Fruity Love Philter; automation clips
@@ -9577,9 +10767,13 @@ Not always. Sweeping only the music or only the drums, while other parts stay cl
 
 - **Logic Pro**: AutoFilter; track automation
 
+Stock is fine for the gesture. What separates a filter built for sweeping is how the resonance behaves at the top of its travel and whether the slope is adjustable, which is the ground covered in [the low-pass and high-pass plugin roundup](https://gazillionindustries.com/best-lowpass-highpass-filter-plugins/).
+
 ## What F(ilter)12 does
 
 F(ilter)12 is our 12 bit sauce filter. **POSITION** sets where in the spectrum the filter sits, and the further it works the more it drives and the more it sings. There are five shapes, including a morph that runs from a closing low-pass through untouched in the middle to an opening high-pass, which makes a single knob a full sweep. Six resonance shapes travel with it, and **SLOPE**, **DRIVE**, **RESO** and **Q** shape the edge.
+
+Three of those matter specifically for a sweep. **SLOPE** is a knob, running from 18 dB per octave up to a wall almost nothing gets past, so you set how much each octave of travel takes away. The six Q shapes ride the cutoff, so **WAH** drags one peak along the whole move and **VOWEL** drags four spaced like a voice. And the morph crosses its middle without clicking, which is what lets one gesture run from a closing low-pass through untouched to an opening high-pass. AURA works only on what the filter is letting through, so its range closes as the sweep does.
 
 Close it, let the room lean in, open it. It still works every time.
 
@@ -9857,6 +11051,12 @@ To make lofi drums, start with soft, simple hits or a drum loop, program them wi
 
 - **Noise**: a quiet bed under the kit
 
+- **Tempo**: slow enough that the swing has room, usually 70 to 90 BPM
+
+- **Order**: crush, filter, saturate, compress, room, noise
+
+- **Check it**: phone speaker, then a car, then mono
+
 **12 bit, full rate.** The quantisation is there but the top end is intact.
 
 **4 bit at 8 kHz.** Bits make it grainy; the rate is what makes it clang.
@@ -9865,19 +11065,67 @@ To make lofi drums, start with soft, simple hits or a drum loop, program them wi
 
 Lofi drums are quiet drums. Pick a kick with a soft, round thump instead of a click, a snare or rim with a dull crack, and hats that are more shuffle than sizzle. A sampled drum loop from an old record, or a loop that already sounds a little worn, gets you most of the way before any processing.
 
+Soft has a measurable side, and it saves you an hour of filtering. A hat that reads as sizzle carries most of its energy above about 6 kHz and rings for 150 ms or more. A hat that reads as shuffle carries its energy between roughly 2 and 6 kHz and is gone inside 40 ms. A clicky kick has a spike somewhere around 2 to 4 kHz sitting on top of the 50 to 100 Hz body; a thumpy kick has the body and almost nothing on top. Audition five kicks and keep the one that already lacks the spike. Filter a clicky kick and what you get is a dull click.
+
+This is why a loop off a record beats a folder of one-shots for the first pass. The loop arrives with the room, the bleed between mics and the tape already printed into it, and those three are the slow part to fake. You are buying a finished decision about how the kit sat in a space. Chop it, keep what you need, and treat the whole bar as one sound rather than four instruments — there is a longer walk through that in [how to chop a drum break](https://gazillionindustries.com/how-to-chop-a-drum-break/), and a famous worked case in [the amen break](https://gazillionindustries.com/amen-break/).
+
 ## Swing it and loosen it
 
 Straight timing kills the feel. Push the offbeat hats late with a strong swing setting, then vary velocities so no two hats hit the same. Nudge a snare or two a few milliseconds off the grid. The goal is a drummer who's a little tired and very good. The general groove advice in [how to make boom bap drums](https://gazillionindustries.com/how-to-make-boom-bap-drums/) applies here too, just slower and softer.
+
+Velocity does more of this work than swing does, and producers skip it because it is boring to draw in. Give the hats a range rather than a value: put the downbeat hats somewhere around 90 of 127, the offbeats around 55, and let two or three land near 40 so they read as a brush of the stick rather than a hit. Snares want less spread, maybe 100 on the backbeat and 65 on a ghost note. A kit where every hat is at 100 sounds like a kit where every hat is at 100, no matter what you put after it.
+
+Then loosen the grid itself, and loosen it unevenly. Ten milliseconds is the useful unit here: at 85 BPM a quarter note is 705.9 ms, so 10 ms is about 1.4 per cent of a beat, and on a 960-tick-per-quarter grid it is roughly 14 ticks. That is small enough that nobody hears a mistake and large enough that the pocket changes. Drag the snare late by 8 to 15 ms, leave the kick where it is, and let the hats scatter by 3 to 8 ms in both directions. Consistent drift reads as a player. Random drift reads as a bad take.
+
+## Swing in milliseconds, worked out
+
+Swing percentages are easier to trust once you convert them. A swing control moves the offbeat of a pair from the halfway point to wherever you set it, so the number is a position, not an amount. At 85 BPM a quarter note lasts 705.9 ms, an eighth lasts 352.9 ms and a sixteenth lasts 176.5 ms. Those four numbers are all you need.
+
+Take sixteenth-note swing, which is what most lofi kits use. The pair of sixteenths spans one eighth, 352.9 ms. Straight puts the offbeat at 176.5 ms. Set swing to 58 per cent and it moves to 0.58 × 352.9 = 204.7 ms, which is 28 ms late. Set it to 62 per cent and it lands at 218.8 ms, 42 ms late. Full triplet swing, 66.7 per cent, puts it at 235.3 ms, 59 ms late. Drop the tempo to 72 BPM and the same 62 per cent setting is worth 50 ms, because the beat got longer. The swing number stayed still and the groove moved, which is why a setting you loved on one beat feels wrong on the next.
+
+Somewhere between 56 and 63 per cent is where most of this music lives. Below 55 it reads as tight. Above 65 it reads as a shuffle, which is a different genre with its own rules. Set the number, then nudge individual hits away from it — the swing gets you the shape and the hand-nudges get you the person.
 
 ## Take the shine off
 
 A low-pass filter on the drum bus is the fastest lofi move there is. Bring the cutoff down until the hats stop clicking and the snare loses its edge, then back it off slightly so the groove still reads. Then crush them a little: fewer bits for grit, a lower sample rate for that folded, metallic top. The mechanics are in [bitcrushing explained](https://gazillionindustries.com/bitcrushing-explained/).
 
+Slope matters as much as cutoff, and it is the control people forget they have. A 2-pole filter falls 12 dB per octave, so a cutoff at 6 kHz leaves 12 kHz only 12 dB down — the sizzle is still audible, just pushed behind the mix. A 4-pole filter falls 24 dB per octave, so the same 6 kHz cutoff puts 12 kHz 24 dB down and the hats genuinely stop existing up there. Use the gentle slope when you want the kit dusty but present, and the steep one when you want it in another room.
+
+Three cutoff regions, and you can hear the difference between them inside a bar. Around 5 to 7 kHz the kit sounds like a record rather than a session: hats dulled, snare intact, kick untouched. Around 3 to 4 kHz it moves behind the vocal and starts to feel like a loop someone else made. Around 1.5 to 2 kHz it is through a wall, and the kick body is the only thing carrying the rhythm. Add 10 to 20 per cent resonance and the cutoff stops being a curtain and becomes a color, which is the whole subject of [filter cutoff and resonance](https://gazillionindustries.com/filter-cutoff-and-resonance/).
+
 [F(ilter)12](https://gazillionindustries.com/f12.html) puts a filter and the crush pair on one panel, for drums and samples. There's a demo on the page.
+
+## What the rate knob folds down
+
+Bit reduction and rate reduction sound different because they break different rules. Bit reduction rounds every sample to a coarser grid and leaves a noise floor behind it. You get roughly 6 dB of usable range per bit, so 16 bit gives you about 96 dB, 12 bit about 72 dB and 8 bit about 48 dB. That last number is the one that bites: a drum tail that decays to −55 dBFS is below an 8-bit floor sitting near −48 dB, so the tail does not decay any more, it turns into grain and stops. That grain is the dust people are describing.
+
+Rate reduction does something else entirely. Drop the rate to R and the highest frequency the signal can hold is R/2. Anything above that does not disappear, it folds back down to the difference. Reduce to 8 kHz and the ceiling is 4 kHz: a 6 kHz hat partial reappears at 8 − 6 = 2 kHz, a 7 kHz partial reappears at 1 kHz, and a 10 kHz partial wraps to 2 kHz. None of those new tones are related to the note underneath, which is why the result clangs instead of ringing. Reduce to 11.025 kHz instead and the ceiling is 5.5 kHz, so only the top of the hat folds and the snare survives. [What aliasing is](https://gazillionindustries.com/what-is-aliasing-in-audio/) covers the rest.
+
+Practically: set bits first, by ear, until the tails get gritty and stop. Then bring the rate down slowly and stop the moment the hats start to change pitch when you move them. Pitch change with position is the tell that you have gone past texture into artifact. Some records want that. Most drum busses do not.
 
 ## Glue and room
 
 Squash the drum bus gently with a compressor so the hits and their tails come together, add a little saturation for warmth (see [how to saturate drums](https://gazillionindustries.com/how-to-saturate-drums/)), and put the kit in a short, dark room. Lofi drums sound like they're in the next room, not in your face.
+
+Give the bus compressor a ratio near 2:1, an attack of 10 to 30 ms so the kick still arrives before the gain reduction does, and 2 to 4 dB of reduction on the loudest hits. The release is the setting that decides whether the kit breathes. At 85 BPM an eighth is 353 ms and a sixteenth is 176 ms, so a release somewhere between 150 and 300 ms lets the bus come back up before the next hit instead of holding the whole bar down. Longer than 400 ms and the kit stops pulsing and starts sagging. There are starting values for a handful of common cases in [drum bus compressor settings](https://gazillionindustries.com/drum-bus-compressor-settings/), and the why is in [glue compression](https://gazillionindustries.com/glue-compression/).
+
+The room should be small, dark and mostly inaudible on its own. Pre-delay of 15 to 25 ms, decay of 0.4 to 0.8 seconds, and then filter the return hard: high-pass it around 300 Hz so the kick does not smear, low-pass it around 3 kHz so the tail is duller than the kit feeding it. Sit the return 18 to 24 dB under the dry bus. A useful sanity check is that 20 ms of pre-delay is about seven meters of extra travel at room temperature, so you are describing a small room and you should not hear a space larger than one. More on the trick in [how to make music sound like another room](https://gazillionindustries.com/how-to-make-music-sound-like-another-room/).
+
+## The noise bed, and how loud to set it
+
+Noise is the cheapest part of this sound and the easiest to overdo. You want a continuous bed — vinyl surface noise, tape hiss, a room tone recorded on a phone, the hum of your own radiator — sitting far enough down that you notice it only when it stops. If your drums peak near −8 dBFS, put the bed somewhere around −45 dBFS. That is a gap of roughly 37 dB, which is quiet enough to read as the medium and loud enough to survive a streaming encode.
+
+Two details decide whether the bed sounds like part of the record or like a layer you bought. First, filter it the same way you filtered the kit: if the drums stop at 5 kHz and the crackle runs to 18 kHz, the crackle is now the brightest thing in the mix and the ear goes straight to it. Second, put the noise *inside* the bus compressor rather than after it, so it ducks under every hit and swells back in the gaps. That swell is the sound people are actually reaching for. [Tape hiss](https://gazillionindustries.com/tape-hiss/) goes into where the noise on real tape came from, and [how to make a sample sound old](https://gazillionindustries.com/how-to-make-a-sample-sound-old/) does the same job for melodic material.
+
+One honest warning. A noise bed under the drums is a noise bed under the whole song, and if you also put one under the keys and one under the bass you have three uncorrelated hiss layers adding up. Print one, put it on its own channel, and let the whole arrangement share it.
+
+## Where it goes in the chain, and what fights what
+
+Order changes the result more than any single setting here. Crush before filter and the filter cleans up the folded junk the rate reduction made, so you get grit without clang. Filter before crush and there is less content above the new ceiling to fold, so the crush sounds tamer and more like grain. Both are usable. Pick on purpose.
+
+The chain that behaves predictably, per drum bus: pitch or speed change first, then bit and rate reduction, then the low-pass, then saturation, then bus compression, then the room send, with the noise bed joining before the compressor. Saturation after the filter matters because saturation generates new harmonics above wherever you just filtered to — put it first and the filter removes the warmth you paid for. [How to mix drums](https://gazillionindustries.com/how-to-mix-drums/) covers the wider routing.
+
+Two interactions to watch. A heavy low-pass and a fast attack compressor fight each other: the filter softens the transient, so the compressor stops catching it, and your 2 dB of gain reduction quietly becomes zero. Check the meter, not the setting. And saturation plus a sub-heavy kick is where lofi drum busses go to die, because the harmonics stack in the 100 to 300 Hz region and the kit turns to mud. If that happens, high-pass the saturator's input at 120 Hz and let the fundamental bypass it. A parallel path does the same job with less collateral — see [parallel compression](https://gazillionindustries.com/parallel-compression/).
 
 ## How to make lofi drums
 
@@ -9895,6 +11143,78 @@ Squash the drum bus gently with a compressor so the hits and their tails come to
 
 - Put a quiet noise bed under the drums.
 
+- Nudge two or three hits off the grid by 8 to 15 ms and leave the rest.
+
+- Bounce the loop and play it on a phone speaker.
+
+- Come back and raise the cutoff by whatever the phone took away.
+
+## The same pass with numbers on it
+
+- **Tempo**: 70 to 90 BPM
+
+- **Swing**: sixteenths at 56 to 63 per cent
+
+- **Hat velocity**: a 40 to 95 spread, never one value
+
+- **Hand nudges**: snare 8 to 15 ms late, hats ±3 to 8 ms
+
+- **Low-pass**: 5 to 7 kHz dusty, 3 to 4 kHz next room
+
+- **Slope**: 12 dB/oct to suggest, 24 dB/oct to remove
+
+- **Bits**: 12 for texture, 8 when you want the tails to stop
+
+- **Rate**: 11 kHz folds the hats, 8 kHz folds the snare too
+
+- **Bus comp**: 2:1, attack 10 to 30 ms, release 150 to 300 ms, 2 to 4 dB
+
+- **Room**: pre-delay 15 to 25 ms, decay 0.4 to 0.8 s, return −20 dB
+
+- **Noise**: about 37 dB under the drum peaks, filtered to match
+
+## How to check it in your own session
+
+Every one of these moves can be verified in under a minute, and guessing is what makes lofi drum busses sound overcooked. Four tests, in the order they save you time.
+
+Bypass test, for the filter. Loop one bar, put a spectrum analyzer after the bus and watch where the curve leaves the noise floor with the filter in and out. If your cutoff is at 5 kHz and the curve still climbs past 10 kHz, something downstream is putting top end back — usually the saturator, occasionally the noise bed. Fix the order, not the cutoff.
+
+Solo-the-difference test, for the crush. Duplicate the drum bus, flip the polarity of the copy, and bypass the crusher on the copy only. What you hear is exactly what the crusher added, on its own. On a bit reduction it will sound like a steady gritty hiss that follows the tails. On a rate reduction it will sound like a separate clanging instrument playing its own melody, and that melody is the folded content. If you can hum it, your listeners will hear it.
+
+Gain-reduction test, for the compressor. Watch the meter for a full bar rather than trusting the knobs: you want the needle to reach 2 to 4 dB on the kick and snare and return most of the way to zero before the next hit. A needle that never comes back means the release is too long. A needle that never moves means the low-pass already ate the transient, which is covered in [what a transient is](https://gazillionindustries.com/what-is-a-transient/).
+
+Small-speaker test, for all of it. Bounce the loop, play it on a phone, and then play it in a car. A phone's driver gives you very little below a few hundred hertz, so a soft kick under a heavy low-pass can vanish entirely and leave you with hats and hiss — see [how to make bass audible on phone speakers](https://gazillionindustries.com/how-to-make-bass-audible-on-phone-speakers/). The car will tell you the opposite story about the low end. Split the difference and trust the phone about the top.
+
+## Where these controls live, by DAW
+
+The moves are the same everywhere; the labels are not. In Ableton Live the swing lives in the Groove Pool, applied per clip with a timing amount you can dial back below 100 per cent, and the Velocity MIDI device will randomize hat velocities faster than drawing them. Redux gives you bit and rate on one device, Auto Filter gives you the low-pass with selectable slopes, and Drum Buss puts light saturation and a dry-wet on the bus in one box.
+
+In FL Studio the swing slider sits on the Channel Rack and applies globally, so per- pattern feel means going into the piano roll and moving hits by hand. The graph editor under the step sequencer is the fastest way to give hats a velocity spread. Fruity Love Philter carries the filter with enough shapes to cover the whole job, and Fruity Blood Overdrive handles the dirt.
+
+In Logic Pro the region inspector holds quantize strength and quantize swing, and those two fields together do what the hand-nudging does elsewhere: set a tight grid, then pull strength down to 70 or 80 per cent so hits keep some of their played position. Bitcrusher covers bits and rate, AutoFilter covers the low-pass, and ChromaGlow (Logic Pro 11 and later) covers saturation. The MIDI Transform window has a humanize operation if you want the drift generated rather than drawn.
+
+Whatever the DAW, do the swing as MIDI and the crush as audio. Swing that lives in a groove template can be changed after the fact. A crushed audio file cannot.
+
+## What goes wrong, and what it sounds like
+
+Overcooked lofi drums have four distinct failure sounds, and each one points at a single control.
+
+The kit disappears under the bass. Cause: the low-pass went too far, so the only band the drums still occupy is the one the bass and the kick fundamental already own. You hear rhythm without articulation, and the groove reads as slower than it is. Raise the cutoff 400 Hz at a time until the snare comes back.
+
+The hats have a tune of their own. Cause: rate reduction past the point where folded content is louder than the source content up there. The giveaway is that the pitch of the clang changes when you move the hat in the bar, or when the sample under it changes note. Back the rate off or filter after the crusher rather than before it.
+
+The hiss pumps. Cause: a noise bed placed before a compressor with a fast release, so the bed lifts audibly in every gap. A little of this is the effect you want; a lot of it sounds like a gate misfiring. Lengthen the release, drop the bed 6 dB, or move it after the compressor and accept a flatter result.
+
+The kick has no thump left. Cause: saturation ahead of the filter, stacking harmonics into the 100 to 300 Hz region until the fundamental is masked by its own overtones. Solo the kick, bypass the saturator and listen for whether the pitch of the thump moves. If it does, high-pass into the saturator and put the low end back around it. [How to layer kicks](https://gazillionindustries.com/how-to-layer-kicks/) has the other half of that problem.
+
+## What it costs you
+
+Every move on this page removes something, and most of them remove it permanently. The low-pass takes the air that makes a kit sound close, and once the loop is bounced you cannot put air back — boosting 10 kHz on filtered drums raises noise, not cymbals. Bit reduction raises the noise floor for good, which matters more than it sounds like when eight crushed tracks stack up into a mix. Rate reduction writes new frequencies into the file that no later processing can separate from the real ones.
+
+The groove has costs too. Heavy swing on the drums means every other part has to swing with them or sit deliberately against them; a straight arpeggio over 62 per cent hats sounds broken rather than tense. And a dark kit pushes the vocal forward whether you planned that or not, because you just cleared the 4 to 10 kHz region the vocal's consonants live in. That can be the best thing that happens to the record. It is still a decision you made with a filter knob.
+
+The way to keep the cost down is to commit late. Keep the drum bus processing live until the arrangement is finished, print a crushed version only when you need the CPU back, and keep the clean stems. Nobody has ever regretted having the clean stems.
+
 ## Questions people ask
 
 ### How do I get a lofi drum sound?
@@ -9909,6 +11229,38 @@ Sample packs sell them, but you can make your own from any drum loop by filterin
 
 Roll off the high end, reduce the sample rate or bit depth a little, add saturation and a noise bed, and soften the transients with gentle compression. Dust is mostly missing top end plus a little noise.
 
+### What BPM are lofi drums?
+
+Most of this material sits between 70 and 90 BPM. The reason is arithmetic rather than taste: at 85 BPM a sixteenth lasts 176 ms, so a swing setting of 62 per cent moves the offbeat 42 ms late and you can hear the drag. Run the same setting at 140 BPM and the same percentage is worth 26 ms, which reads as tight instead of lazy.
+
+### How much swing should I use on lofi drums?
+
+Start at 58 per cent on sixteenths and adjust by ear. Below 55 per cent the kit reads as straight; above 65 per cent it turns into a shuffle. Then nudge two or three individual hits off the swung position by 8 to 15 ms, because a single percentage applied to everything still sounds like a setting.
+
+### Should I bitcrush before or after the filter?
+
+Crush first if you want grit without clang, because the filter then removes the folded content the rate reduction created. Filter first if you want the crush gentler, because there is less content above the new ceiling left to fold. Both are correct; the first order is safer on a full kit.
+
+### What bit depth should I use for lofi drums?
+
+12 bit gives you audible grain with the tails still decaying normally. 8 bit puts the noise floor around 48 dB below full scale, which is high enough that quiet tails stop decaying and turn to grit. Below 8 bit you are making an effect rather than a drum sound. There is more in [bitcrushing explained](https://gazillionindustries.com/bitcrushing-explained/).
+
+### How do I add vinyl crackle to my drums?
+
+Put a crackle or hiss loop on its own channel, filter it to the same ceiling as the drum bus, and route it into the bus compressor so it ducks under each hit. Set it roughly 37 dB below the drum peaks. One bed for the whole song, not one per instrument.
+
+### Can I make lofi drums with stock plugins?
+
+Yes, entirely. Every DAW ships a low-pass filter, a bitcrusher, a saturator, a compressor and a reverb, which is the complete list of what this needs. The card above names the specific stock devices in Live, FL Studio and Logic.
+
+### Why do my lofi drums sound weak?
+
+Usually the low-pass and the compressor are cancelling each other out. A heavy filter softens the transient, the compressor then stops catching it, and you get a dull kit with no movement. Check the gain reduction meter: if it never reaches 2 dB, raise the cutoff or lengthen the attack until it does.
+
+### Why do my lofi drums disappear on phone speakers?
+
+A soft kick under a heavy low-pass leaves almost nothing in the band a small driver can reproduce. Add a little saturation to generate harmonics an octave or two above the kick fundamental, which small speakers can play and the ear reads as the missing low end.
+
 ## Stock plugins that do this
 
 - **FL Studio**: Fruity Love Philter; Fruity Blood Overdrive
@@ -9920,6 +11272,10 @@ Roll off the high end, reduce the sample rate or bit depth a little, add saturat
 ## What F(ilter)12 does
 
 F(ilter)12 is our 12 bit sauce filter, built for drums and samples. Its lo-fi section is **SAMPLE RATE**, which rolls off the top and folds what was up there back down, and **BIT**, which rounds off quiet detail and gives what remains a hard edge. The filter behind it has five shapes, six resonance shapes and **DRIVE**, and **AUTO FILTER** can move it with swing. One producer's line on the page: it gave their drums some vintage dust.
+
+On a drum bus that means one instance instead of three, which matters for the order question above: the crush pair and the filter are already arranged so the filter is cleaning up after the rate reduction rather than feeding it. Start with BIT, then SAMPLE RATE, then bring the cutoff down until the hats stop clicking, then add DRIVE last. AURA is there when the kit reads dull rather than dusty and you want some definition back without undoing the filter.
+
+It runs on Mac and Windows as AU, VST3 and standalone, and it is $49 with DRUGS included free. There is a demo on the page, and it is the honest way to decide whether the panel suits how you work.
 
 Two winters, one flood, and they still fit.
 
@@ -10588,6 +11944,146 @@ Anti-aliasing means removing or preventing frequencies above the Nyquist limit b
 F(ilter)12 is our 12 bit sauce filter, and its lo-fi section uses this on purpose. **SAMPLE RATE** slows the rate the audio is sampled at, so the top goes and what was up there folds back down as new content. **BIT** coarsens the steps, so quiet detail rounds off. A filter with five shapes sits behind the crush to shape what comes out, and **AURA** helps the result sit in the mix.
 
 The wagon wheels are still spinning backward. Now you get to decide how fast.
+
+---
+
+## About F(ilter)12
+
+F(ilter)12 — a 12 bit sauce filter for Mac and Windows: a lo-fi section, five filter shapes, six resonance shapes and AURA.
+
+https://gazillionindustries.com/f12.html
+
+
+---
+
+# Why does my beat sound like a computer made it?
+
+> Five reasons a beat sounds like a computer made it: grid timing, identical velocities, no noise floor, full bandwidth and no variation, each with a fix.
+
+Source: https://gazillionindustries.com/why-does-my-beat-sound-digital/  
+Published 2026-09-24, updated 2026-09-24. By Gazillion Industries, who make F(ilter)12.
+
+---
+
+Nothing in the beat is wrong on its own. The kick is a good kick, the snare is a good snare, the pattern is the one you wrote down. Played back it still sounds like software playing back a pattern.
+
+A beat sounds like a computer made it for five reasons, and each one has a fix. Every hit sits exactly on the grid. Every hit has the same velocity, so the same sample plays the same way every time. There is no noise floor, so the gaps are perfectly silent. Every element runs full bandwidth, so everything is present everywhere at once. And bar two is a copy of bar one. Work through them in that order.
+
+## The short version
+
+- **Timing**: pull hits off the grid, consistently, per element
+
+- **Velocity**: a real range, with something other than gain responding to it
+
+- **Silence**: one noise bed under the whole beat, never gated
+
+- **Bandwidth**: give every element a band and take the rest away
+
+- **Variation**: make bar four and bar eight differ from bar one
+
+- **Order**: timing first; the rest lands better once the beat moves
+
+**4 bit at 8 kHz.** Bits make it grainy; the rate is what makes it clang.
+
+## Why does everything land so hard on the grid?
+
+Quantization puts every hit at a mathematically exact moment, and nothing played by hand has ever done that. A drummer's hats drift, the snare leans behind the beat, the kick stays put because the kick is the anchor. A grid flattens all of that into one timing, applied to everything equally.
+
+The arithmetic is worth knowing, because the amounts involved are small. At 90 BPM a quarter note lasts 667 ms and a sixteenth lasts 167 ms. Moving a hat 12 ms late is about seven percent of a sixteenth — far too small to read as a wrong position, large enough to change the feel. Full triplet swing at the same tempo moves the offbeat sixteenth from 167 ms after the beat out to 222 ms, a shift of 55 ms, which is why heavy swing announces itself and a nudge never does.
+
+What works is a consistent bias per element rather than a random spread over everything. Randomizing every hit by a few milliseconds reads as a mistake, because mistakes are what random timing is. Pushing the whole snare track a few milliseconds late and leaving the kick where it is reads as a player. Pick one element to lag, maybe one to sit early, and keep the kick on the grid so the beat holds its anchor.
+
+If you have a controller, play the part in and quantize at partial strength rather than full. The hits get pulled toward the grid without arriving on it, and the relationships you played survive.
+
+## Why does every hit sound the same?
+
+Trigger the same sample at the same velocity twice and the second hit is identical to the first, sample for sample. An exactly repeating waveform is the thing ears catch fastest, faster than they catch anything about the pattern. Sixteen identical closed hats in a bar read as one hat printed sixteen times.
+
+Give velocity a real range first: accents high, ghost notes far down, and no two consecutive hits on the same number. Then give velocity something to do besides gain. Mapped to filter cutoff, a hard hit opens and a soft one stays dull, which is how a struck object behaves. Mapped to sample start, a hard hit catches more of the transient. A few cents of pitch movement per hit, up and down, stops the waveform from repeating exactly even when the level matches.
+
+Alternate samples wherever you can. Two or three closed hats cycling, a second snare under the accents only, a rimshot standing in for every fourth backbeat. Ghost notes carry more than any of it: quiet snare hits between the backbeats, down at the bottom of the range, are most of what a hand does that a grid does not.
+
+This is also why chopped breaks feel alive with no work at all. A break carries a real player's timing, a real room and a different waveform on every hit, so three of the five problems arrive already solved. Chopping one and rebuilding your pattern out of its pieces is the shortest way out of this particular hole.
+
+[F(ilter)12](https://gazillionindustries.com/f12.html) puts the band limiting, the crush pair and a filter in one place. There's a demo on the page.
+
+## Why is the silence so silent?
+
+Between the hits, a programmed beat sits at digital zero. Nothing ever recorded does. There is always a room, a preamp, a medium: hiss, hum, the noise of the surface the sound came off. That floor sits below the level of everything you are actually listening to, and taking it away is immediately noticeable even though nobody can name what is missing.
+
+Put one noise bed under the whole beat. One track, running the full length, well below everything else, unprocessed. Vinyl crackle, tape hiss, or room tone you record yourself with a phone in the room you are sitting in. The last of those is the most specific, because it is an actual space rather than a sample of one.
+
+Two rules about it. Do not gate it, and do not sidechain it. The moment the noise ducks with the kick or cuts out in the gaps, the ear hears the process instead of the floor, and a floor that comes and goes is worse than no floor. Also, do not put noise on each element separately. Several noise beds starting and stopping at different moments sound like several plug-ins, which is the impression you are trying to get rid of.
+
+Set the level by ear at listening volume. If you can hear it as a sound, it is too loud. The test is muting it: the beat should get smaller and flatter, and you should not be able to say why. [how to make a sample sound old](https://gazillionindustries.com/how-to-make-a-sample-sound-old/) covers the noise and wobble side in more detail.
+
+## Why does everything sit in the same place?
+
+Every sample in a modern pack runs the full band, and so does everything you add to it. Stack ten of those and each element is present everywhere at once, none of them has an edge that defines it, and the whole thing arrives as one flat sheet. Any real signal chain narrows things on the way through. A microphone, a preamp, a record, a converter and an old pad-based sampler all take something off the top and something off the bottom, and they take different amounts, which is most of what puts elements in different places.
+
+So do it on purpose. High-pass everything except the kick and the bass, pushing until the element starts to thin out, then back off. Low-pass whatever should sit behind: hats, a sample, a pad. Give each one a home band and accept that it loses something at both ends.
+
+Sample rate reduction does the same job with a harder edge. Halve the rate and the top of the band goes with it — a 22 kHz rate can only carry content up to 11 kHz — and whatever was above that ceiling folds back down into the audible band instead of quietly disappearing. That fold is the grain people are reaching for when they say a beat is too clean. [bitcrushing explained](https://gazillionindustries.com/bitcrushing-explained/) covers how bit depth and sample rate differ, because they do different things and get used as though they were one control.
+
+Then width. Mono the low end, and narrow at least one mid element so the stereo field has somewhere to be wide by comparison. Everything wide is the same problem as everything full bandwidth.
+
+## Why does bar two sound exactly like bar one?
+
+Copy and paste is exact. A four bar loop repeated eight times is the same four bars, eight times, with no difference anywhere in it. A player cannot do that, and after two passes a listener stops hearing the loop as music and starts hearing it as a file.
+
+The variation does not have to be interesting. It has to exist. Mute one hat in bar four. Move a single snare by a sixteenth. Drop the hat line entirely for bar eight and bring it back. Change which closed hat sample plays on the last beat of every second bar. None of that is a fill and none of it gets noticed, which is the point of it.
+
+Above that, put one thing on a slow automation line. A filter opening across sixteen bars, a noise bed creeping up through the verse, a send moving. Long automation does more for a loop than any number of fills, because it makes the same material arrive differently each time around. If the beat is meant to be a background rather than an event, that is the whole game, and [how to make lofi beats](https://gazillionindustries.com/how-to-make-lofi-beats/) goes further into loops built to repeat.
+
+## A pass that fixes all five
+
+- Play the drums in from a controller if you have one, and quantize at partial strength.
+
+- Push one element consistently late and leave the kick on the grid.
+
+- Spread the velocities, add ghost notes, and map velocity to filter cutoff or sample start.
+
+- Alternate two or three samples on the hats and move each hit a few cents in pitch.
+
+- High-pass everything except the kick and bass; low-pass whatever sits behind.
+
+- Reduce the sample rate on one or two elements until the top end has a ceiling.
+
+- Run one continuous noise bed under the whole beat, ungated, just under audible.
+
+- Break bar four and bar eight, and put one slow automation move across sixteen.
+
+## Should I turn quantize off?
+
+No. With quantize off, most people drift in ways that read as sloppy rather than loose, and the two are different: sloppy is inconsistent, loose is consistently behind. Quantize at partial strength, or quantize fully and then move whole tracks by a fixed offset. Both keep the anchor and let the parts lean around it.
+
+## Questions people ask
+
+### Why does my beat sound so stiff?
+
+Because every hit is on the grid at the same velocity. Push one element a few milliseconds late and leave the kick alone, spread the velocities across a real range, and add quiet ghost notes between the backbeats. Consistent lateness reads as a player; randomized timing reads as a mistake.
+
+### How do I make programmed drums sound human?
+
+Vary three things per hit: when it lands, how hard, and which sample plays. Map velocity to filter cutoff or sample start so a hard hit sounds different rather than just louder, cycle two or three samples on the hats, and move each hit a few cents in pitch.
+
+### Does adding noise actually help?
+
+Yes, as long as it never stops. One continuous bed under the whole beat, below the level you can consciously hear, gives the silence a texture. Gated or sidechained noise does the opposite, because a floor that ducks with the kick gives away the process.
+
+### What is the single fastest fix?
+
+Chop a break and rebuild the pattern from its pieces. A break arrives with a player's timing, a room, a noise floor and a different waveform on every hit, which covers most of the problem before you touch a plug-in.
+
+### Why do chopped breaks sound more human than one-shots?
+
+Because no two hits in a break are the same audio. The drummer struck the drum differently each time, the room answered differently, and the medium added its own noise. A one-shot repeats one moment exactly, and the ear hears the repetition before it hears anything else.
+
+## What F(ilter)12 does
+
+F(ilter)12 handles the bandwidth half of this in one place. The lo-fi section puts a ceiling on the top end and brings up the grain that folds under it, the filter decides where in the spectrum an element lives, and **AURA** settles the result so the narrowing reads as placement rather than loss. It is tuned by ear, for drums and samples, which is where this problem usually starts: [F(ilter)12](https://gazillionindustries.com/f12.html).
+
+The kick is still a good kick. Now something happened to it on the way out.
 
 ---
 
@@ -14129,25 +15625,91 @@ Varispeed changes playback speed and pitch together, the way a tape machine or a
 
 - **Semitone**: about a 6% speed change
 
+- **One percent**: about 17 cents, a sixth of a semitone
+
+- **What moves**: everything in the file: voice, room, hiss, vibrato, reverb tail
+
 - **vs pitch shifting**: varispeed keeps them linked; pitch shifting separates them
 
 **SAMPLING GRADE at LO-FI 1.** 7.81 kHz rather than 31.25.
+
+## Hear it
+
+A definition is cheap. Here is one loop at three speeds, then the same slowed pass with the sampling rate stepped down, so you can hear how small a percentage has to be before your ear calls it a different key. The figures are the renderer's own readout.
+
+- **Unity** — PITCH 93 — rate 1.0000, +0.00 semitones — https://gazillionindustries.com/skruu/skruu-dry.m4a
+
+- **Slowed** — PITCH 64 — rate 0.9275, −7.25%, −1.30 semitones — https://gazillionindustries.com/skruu/skruu-down.m4a
+
+- **Sped up** — PITCH 120 — rate 1.0779, +7.79%, +1.30 semitones — https://gazillionindustries.com/skruu/skruu-up.m4a
+
+- **Slowed, LO-FI 2** — PITCH 64 with SAMPLING GRADE at 3.9 kHz — https://gazillionindustries.com/skruu/skruu-down-lofi2.m4a
+
+One source loop, rendered offline through the same engine the plug-in runs, no other processing.
 
 ## Where it comes from
 
 Tape machines and turntables have always had speed controls, and engineers used them creatively long before plugins. Recording a part with the tape running slow makes it sound faster and higher on normal playback; slowing a record down makes a voice deep and a groove heavy. Hip hop producers learned the same lesson sampling records: play a 45 at 33 and everything drops about five semitones and gets heavier.
 
+The reason it was everywhere is that the speeds were fixed and few. Reel machines ran at standard rates that doubled as you climbed — 7.5 inches per second to 15, 15 to 30 — so a tape played at the next speed up is exactly an octave higher and exactly half as long, no arithmetic required. Records offered two speeds and one ratio between them. Every era of sample-based music inherited those intervals from the machines, not from a decision anyone made at a desk. The mechanics are in [how does a tape machine work](https://gazillionindustries.com/how-does-a-tape-machine-work/), and the speed side alone in [tape speed](https://gazillionindustries.com/tape-speed/).
+
+It still happens by accident, and the accident is instructive. Hand a 44.1 kHz file to a session running at 48 kHz with no conversion and it plays 8.8% fast, which is +1.47 semitones and a length 8.1% short. That is varispeed with nobody's hand on a knob: the same samples, read out at a rate they were not written at. Every deliberate use of the effect is that mistake, made on purpose and by a chosen amount.
+
 ## The math, once
 
 Pitch follows speed on a curve. A speed ratio of 2 is exactly +12 semitones, 0.5 is exactly −12, and one semitone is a ratio of about 1.059. So −20% speed (a ratio of 0.8) lowers the pitch by about 3.9 semitones, and +10% raises it about 1.7. A 45 rpm record played at 33⅓ runs at about 74% speed, roughly 5.2 semitones down. **You don't need the numbers to use it, but they explain why small speed changes sound so big.**
 
+Work in cents if you are chasing tuning rather than character. A cent is a hundredth of a semitone, and near unity one percent of speed is about 17 cents — call it a sixth of a semitone. Half a percent is under nine cents, which is roughly the width of a good chorus detune and small enough that most people hear it as thickness rather than as a key change. Three percent is about half a semitone and is already an argument with the bass player. That narrow band between five and twenty cents is where the effect stops sounding like a pitch move at all; see [best detune plugins](https://gazillionindustries.com/best-detune-plugins/) for what lives there.
+
 **Pitched up.** Same control, the other direction.
+
+## What is actually happening to the samples
+
+Digital varispeed is resampling, and resampling is one idea: move the read pointer through the file at a rate other than one stored sample per output sample. At 44.1 kHz the stored samples sit 22.7 microseconds apart. Ask for 74.1% speed and the pointer advances 0.741 of a sample each tick, so almost every read lands between two stored values and has to be estimated from the neighbors. That estimate is the interpolator, and the quality of a speed change is mostly the quality of that guess.
+
+What comes out is the original spectrum multiplied by the ratio. Every partial, every resonance, every piece of noise moves by the same factor, which is why nothing has to be invented and nothing can be invented badly. At 74.1% a 440 Hz A lands at 326 Hz, an 8 kHz hat lands at 5.9 kHz, and a 60 Hz hum lands at 44 Hz where it is harder to notch and easier to feel. Nothing in the file is exempt.
+
+The two directions fail differently, and it is worth knowing which one you are in. Speeding up pushes content toward and past the ceiling: at 44.1 kHz the ceiling is 22.05 kHz, so a 20 kHz partial played 10% fast sits at 22 kHz and just survives, while the same partial played 20% fast wants to be at 24 kHz, which the format cannot hold, and it folds back down into the audible range as a tone that has nothing to do with the music. That is [aliasing](https://gazillionindustries.com/what-is-aliasing-in-audio/), and it is the reason a good speed-up filters before it reads. Slowing down cannot alias, because everything moves away from the ceiling; its failure is interpolation error, heard as a thin gritty layer that rides the loudest sustained material and disappears the moment the audio stops.
 
 ## Varispeed vs pitch shifting and time stretching
 
 Modern pitch shifting and time stretching pull pitch and length apart with DSP, so you can raise a vocal without changing its tempo. That's powerful, but it adds artifacts and loses the natural character of a speed change. Varispeed doesn't cheat: the whole sound, including its formants and its room, moves together. Voices get chipmunk-bright or molasses-deep, and drums get snappier or heavier in a way that sounds like a machine, not an algorithm. The other approach is covered in [how to change pitch without changing tempo](https://gazillionindustries.com/how-to-change-pitch-without-changing-tempo/).
 
+The tell is the singer's body. Formants are the fixed resonances of a throat and mouth, and a listener reads them as size. Varispeed drags them with the pitch, so a vocal pulled down five semitones does not sound like the same person singing lower — it sounds like a larger person, in a larger room, because the room moved too. A formant-aware shifter holds them still and keeps the singer the same size at a new pitch. Neither is the correct one. [Formant shifting](https://gazillionindustries.com/formant-shifting/) has the mechanism, and [chipmunk soul](https://gazillionindustries.com/chipmunk-soul/) is a whole subgenre built on choosing the first answer on purpose.
+
+Here is the practical split. Reach for varispeed when the movement is the point, when the source is a full mix or a record you want to stay a record, and when you would rather have a real transformation than a transparent one. Reach for pitch shifting when one element has to change key inside an arrangement that cannot move. Reach for [time stretching](https://gazillionindustries.com/time-stretching-explained/) when a loop has to meet a tempo and the key is already right. The first has no artifacts and no freedom; the other two buy freedom with artifacts.
+
 [SKRUU](https://gazillionindustries.com/skruu.html) does both: varispeed pitch, and time that moves independently of it.
+
+## A worked example, eight bars at 74.1%
+
+Take an eight-bar 4/4 loop at 90 bpm. It is 21.3 seconds long. Now play it at 74.1% speed, the ratio between the two speeds on a turntable, and read off what happens to every quantity in the file at once:
+
+- **Tempo**: 90 bpm becomes 66.7 bpm
+
+- **Length**: 21.3 seconds becomes 28.8
+
+- **Pitch**: down 5.20 semitones — a fourth and a bit
+
+- **A 440 Hz vocal note**: lands at 326 Hz
+
+- **A 220 Hz bass note**: lands at 163 Hz
+
+- **A 50 Hz kick fundamental**: lands at 37 Hz
+
+- **An 8 kHz hat**: lands at 5.9 kHz
+
+- **A 1.8 s reverb tail**: becomes 2.43 s
+
+- **A 12 ms slap in the recording**: becomes 16.2 ms
+
+- **A 5 Hz vibrato**: slows to 3.7 Hz
+
+Read that list again and notice what is not on it: nothing. One control moved and ten things followed. The reverb got longer, so the record sounds like it was cut in a bigger room. The vibrato slowed, so the singer sounds calmer. The kick fell to 37 Hz, which is under the point where most phones give up entirely — see [how to make bass audible on phone speakers](https://gazillionindustries.com/how-to-make-bass-audible-on-phone-speakers/) before you decide the low end got better. That bundle of consequences is the sound people are after when they slow something down, and it is why a pitch shifter set to −5.20 semitones does not give it to them.
+
+Going the other way is the same arithmetic with the signs flipped. At +10% the loop runs 99 bpm, finishes in 19.4 seconds and sits 1.65 semitones up, which is enough to take the weight out of a drum break and put a nervous edge on a vocal. Producers who chop breaks live in this region; it is most of what [how to pitch a sample](https://gazillionindustries.com/how-to-pitch-a-sample/) is about.
+
+**PITCH −3.09 ST.** Read out as a percentage and as an interval, because they are the same number twice.
 
 ## What producers use it for
 
@@ -14158,6 +15720,72 @@ Modern pitch shifting and time stretching pull pitch and length apart with DSP, 
 - **Sampling:** pitching a sample by speed keeps it sounding like a record.
 
 - **Transitions:** a speed ramp at the end of a section, or a slow-down to a stop.
+
+- **Getting a break to a tempo:** a loop that is 4% too slow can be pulled into the grid by speed alone, and the two-thirds of a semitone it costs you is often cheaper than the smear a stretch would add. [How to chop a drum break](https://gazillionindustries.com/how-to-chop-a-drum-break/) works through the case.
+
+- **Hiding a source:** a few semitones of speed moves the formants as well as the notes, which changes who the voice sounds like, not only what note it is on.
+
+- **Doubling:** a copy detuned five to fifteen cents by speed drifts against the original in time as well as pitch, so the double breathes instead of sitting still.
+
+- **Riding it as a performance:** a hand on the control through a chorus is a part, and it is the one thing a global project setting cannot give you.
+
+## Test it in your own session in ten minutes
+
+Do not take any of this on faith. Nine steps, one loop, your own monitors.
+
+- Load an eight-bar full-mix loop on an audio track and note the project tempo.
+
+- Insert the varispeed device first in the chain, before every other plugin.
+
+- Set the amount to −6% and play one full pass without touching anything.
+
+- Count the bars against the grid and find where the loop has fallen behind.
+
+- Return to unity and confirm the loop lines up again.
+
+- Write an automation ramp from unity to −12% across four bars.
+
+- Write a second ramp covering the same range in half a bar.
+
+- Swap the loop for a held synth pad and play both ramps again.
+
+- Bounce the section and compare the bounce against what you heard live.
+
+Steps six and seven separate a tool from a toy. A slow ramp forgives almost any interpolator; a fast one on a sustained pad does not, and the pad is where you will hear the grit first. Step nine matters because some hosts render at a different quality than they play, and a bounce that does not match what you approved is the worst kind of surprise: it only shows up after you have moved on.
+
+## Where it goes in the chain
+
+Put it first on the track, ahead of anything that reacts to level or to time. A compressor after a speed dip hears a quieter, longer signal and responds to the music. A compressor before one has its attack and release times dragged around by a control it cannot see, which sounds like a fault in the compressor rather than a move in the song.
+
+Reverb and delay are a real decision rather than a rule. Put them after and the tail moves with the source, so the whole thing reads as one machine slowing down. Put them before, or print them into the file, and the tail moves too — it was recorded, so it is part of the audio. What you cannot do by accident is a dry source sagging into a stationary tail, which reads as two recordings glued together. Make that choice with a send, on purpose. The slowed case is worked all the way through in [how to make slowed and reverb](https://gazillionindustries.com/how-to-make-slowed-and-reverb/).
+
+Two more interactions catch people. A tempo-synced delay placed after a slowed track stays locked to the host grid while the audio no longer is, so the repeats land in a place the performance never suggested — sometimes wonderful, never neutral. And a sidechain keyed off a slowed track will drift off the grid with it, because the transients it triggers on have moved. Key the compressor off something that did not move, or accept the drift as the part.
+
+Saturation is worth putting on both sides once. Distort before the speed change and the harmonics you generated travel down with everything else, so they stay in the new key's series and sound like part of the recording. Distort after and the harmonics are generated at the new pitch, which is brighter and more obviously a plugin. Both are usable. They are not interchangeable.
+
+**TIME −35%, PITCH at unity.** Length without pitch — the half varispeed will never give you.
+
+## The failure modes, and what each one sounds like
+
+Six ways it goes wrong. Each has a sound, and knowing the sound is faster than reading a manual.
+
+- **Grit on a held tone.** A thin, sandy layer that appears on sustained material while the control is moving and vanishes in the gaps. That is the interpolator running out of accuracy. Test it on a pad, never on drums, because drums hide it.
+
+- **A whistle that follows nothing.** On a fast speed-up, a tone that moves the wrong way against the music. Content has crossed the sampling ceiling and folded back. Higher internal rates or a filter before the read is the only fix; EQ afterward cannot separate it from the music because it is now inside the music.
+
+- **Stepping on a ramp.** Small audible jumps during a slow move, like a zipper. The control is quantized — usually to semitones or to a coarse table — and a quantized control can transpose but cannot slide.
+
+- **Drift you did not order.** Slow one track by 4% at 90 bpm and it is 111 ms late by the end of a single bar. Over eight bars it is a different song. Nothing has gone wrong; the drift is the definition of the effect, and it is why a per-track speed move has to be either committed or automated back to unity.
+
+- **Air that will not come back.** Drop a mix an octave and a 10 kHz cymbal is now a 5 kHz cymbal. There is no content above the old ceiling to boost. A high shelf here lifts hiss, not air, and the mix gets duller and noisier at the same time.
+
+- **Low end that disappears on the way down.** The fundamentals fell with everything else. A kick that read as weight at 50 Hz is at 37 Hz after a 5.2-semitone drop, where a laptop and a phone both produce approximately nothing. Check it on the small speaker before you commit, every time.
+
+## How each DAW spells it
+
+The operation is one thing and the menus are five things, which is most of why the question gets asked at all. Logic Pro calls it Varispeed and puts it in the control bar as a project-wide setting. Ableton Live calls it Re-Pitch and makes it a warp mode chosen on each clip. FL Studio calls it Resample and hides it in the stretch mode menu inside Channel Settings. Pro Tools calls it Varispeed and puts it in the Elastic Audio slot rather than an insert. GarageBand has no varispeed at all; its Audio Editor transposes, which moves pitch and leaves length alone.
+
+The shared gap is worth naming, because it explains the search that brings most people here. Four of those five are settings rather than controls: they apply to a project or a clip, they are set and then left, and none of them is a continuous knob on a track that you can automate, perform and record. That is the thing an insert plugin adds, and the reason people go looking for one after they have already found the feature. Every menu path, with the ranges and the traps, is in [varispeed in every DAW](https://gazillionindustries.com/varispeed-in-every-daw/), and the plugins that fill the gap are in [best varispeed plugins](https://gazillionindustries.com/best-varispeed-plugins/).
 
 ## Speed to semitones, as a lookup
 
@@ -14199,6 +15827,16 @@ Varispeed ties pitch and duration together, so any speed change is also an inter
 
 The two record-speed rows are the reason so much sample-based music sits near five semitones from where it started. That interval is not a choice anyone made; it falls out of the two speeds a turntable offers.
 
+The same table read from the other end gives you tempo, because tempo scales with speed exactly as pitch does. A 96 bpm break taken down one semitone arrives at 90.6 bpm. Taken down two, 85.5. Down five, 71.9. If you have ever wondered why a particular slowed tempo keeps turning up in a genre, it is usually because a common source tempo met a common interval.
+
+## What it costs you
+
+It costs you the ability to choose. Pitch and length arrive as one decision, so getting a sample into your key means accepting whatever tempo comes with it, and getting it to your tempo means accepting the key. That is the whole trade, and every plugin that promises otherwise is doing something else — usually well, always with artifacts.
+
+It costs you top end on the way down and headroom on the way up, and neither is recoverable after the bounce. It costs you sync on any track you move and do not move back. On a global setting it costs you your monitoring reference, because the numbers on screen stop describing the record in the room, and a mix approved at the wrong speed is a mix approved for nobody. And it costs you a generation: once it is printed, undoing it is another resampling pass on material that has already been resampled once.
+
+Set against that, it costs almost no processing power, it has no minimum latency in principle, and it cannot produce the smeared, glassy artifacts that a stretch produces, because it never has to invent a sample that was not recorded. For a great deal of sample-based music that is not a compromise. It is the sound.
+
 ## Questions people ask
 
 ### Did the Beatles use varispeed?
@@ -14213,9 +15851,45 @@ It changes playback speed and pitch together: faster playback is shorter and hig
 
 Logic Pro has a Varispeed feature that changes the playback speed of the whole project, with a choice between changing speed only or changing speed and pitch together.
 
+### Why is it called varispeed?
+
+Short for variable speed. It was the name on the control that let a tape machine or a turntable run faster or slower than its nominal rate, and the name traveled to software along with the behavior. Nothing in the word refers to pitch, which is the point: pitch is a consequence, not a parameter.
+
+### Is varispeed the same as pitch shifting?
+
+No. Pitch shifting moves pitch and holds length, which takes analysis and resynthesis and comes with artifacts. Varispeed moves the playback rate and lets pitch and length move together, which invents nothing and therefore smears nothing. If a tool offers a pitch control that does not change the tempo, it is not doing varispeed.
+
+### Does varispeed change the tempo?
+
+Always, and by the same proportion as the pitch. At 74.1% speed a 90 bpm loop plays at 66.7 bpm and takes a third longer to finish. There is no setting that separates the two; separating them is what pitch shifting and time stretching are for.
+
+### How much pitch change is one percent of speed?
+
+About 17 cents, a sixth of a semitone, near unity. One semitone is a speed change of about 5.95%, which most people round to 6%. Half a percent is under nine cents, which is chorus-width detune rather than a key change.
+
+### What speed is a 45 played at 33?
+
+About 74.1% of the original, which is 5.20 semitones down and about a third longer. The reverse, a 33⅓ record played at 45, is 135% and 5.20 semitones up. Those two numbers account for an enormous amount of sample-based music sitting a fourth-and-a-bit from where it started.
+
+### Does varispeed lose quality?
+
+Slowing down cannot alias, so the only loss is interpolation error, and on a decent implementation it sits far below the music. Speeding up can push content past the sampling ceiling, where it folds back as tones that have nothing to do with the music. The audible cost of a big slow-down is not distortion at all: it is lost high end, because the highs moved down with everything else.
+
+### Why do slowed samples sound like they are in a bigger room?
+
+Because the room is in the file and the room slowed down too. A 1.8-second tail at 74.1% speed becomes 2.43 seconds, and the early reflections spread with it, which your ear reads as more distance between the walls. Nothing was added. The space that was recorded simply got played back longer.
+
+### Can you do varispeed in real time?
+
+Yes, and that is the argument for a plugin over a project setting. Resampling needs no analysis window, so a speed control can be automated, performed and recorded like any other parameter. The features built into most hosts are settings applied to a project or a clip rather than controls you can ride while the track runs.
+
 ## What SKRUU does
 
 SKRUU is our varispeed pitch and time stretch plugin, and it keeps the two on separate knobs. **PITCH** runs from −20% to +10% in 128 states and reads out in semitones as well as speed. **TIME** runs from −50% to +25% and moves nothing but the length. Lock either one and play the other, or run both, and with **ELASTIC** on the knob springs back along one of sixteen return shapes. **DRAG** sets how long a new speed takes to arrive; turned up, it's a hand on the platter.
+
+Two things follow from that layout. Because PITCH reads out in both units at once, the lookup table above stops being something you consult — the interval and the percentage are the same number twice, and the panel shows you both while you move. And because ELASTIC returns the knob for you, a dip is a gesture rather than an automation drawing job: push, let go, and the **SLOPE** you chose decides the shape of the road back, which is sixteen different ways for the same dip to land. **SAMPLING GRADE** steps the rate down underneath all of it, with LO-FI 2 running at 3.9 kHz, which is a separate decision from speed and stacks with it. Mac and Windows, VST3, AU and standalone, $29.
+
+**The whole panel.** Top half is the two rates, bottom half is what happens when you let go.
 
 George Martin had two tape machines and a deadline. The trick still sounds like magic.
 

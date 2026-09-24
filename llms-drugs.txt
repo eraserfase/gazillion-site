@@ -22,6 +22,8 @@ linking.
 - [The Amen break](https://gazillionindustries.com/amen-break.md): Where it came from, why it works, and why nobody in the band was ever paid.
 - [Best free compressor plugins](https://gazillionindustries.com/best-free-compressor.md): What to look for, and the jobs you actually need one for.
 - [Best free VST plugins](https://gazillionindustries.com/best-free-vst-plugins.md): Which categories free fills well, and what it costs you later.
+- [What order should the plug-ins on my drum bus go in?](https://gazillionindustries.com/drum-bus-chain-order.md): Cuts, then compression, then tone, then weight, then a ceiling — level-matched at every step.
+- [How to glue your drum bus in Ableton Live](https://gazillionindustries.com/drum-bus-compression-in-ableton-live.md): Glue a drum bus in Ableton Live without squashing the transients.
 - [Drum bus compressor settings](https://gazillionindustries.com/drum-bus-compressor-settings.md): What each control actually changes, and where to start.
 - [Glue compression](https://gazillionindustries.com/glue-compression.md): What a bus compressor does to a group, and where to start.
 - [How to chop a drum break](https://gazillionindustries.com/how-to-chop-a-drum-break.md): Finding a break, slicing it, keeping the swing, making it sit.
@@ -33,8 +35,10 @@ linking.
 - [How to make Madlib type beats](https://gazillionindustries.com/how-to-make-madlib-type-beats.md): Loops left long, drums underneath, very little cleanup.
 - [Limiter vs compressor](https://gazillionindustries.com/limiter-vs-compressor.md): Where the line sits between them, and which one goes last.
 - [Multiband compression](https://gazillionindustries.com/multiband-compression.md): What it is for, how to set it, and why most problems need one band.
+- [What is a one-knob compressor, and is one knob enough?](https://gazillionindustries.com/one-knob-compressor.md): What a single macro gives up, what it buys, and when a specific problem still needs threshold and ratio.
 - [Parallel compression](https://gazillionindustries.com/parallel-compression.md): Blending a crushed copy under the dry track, and the alignment trap.
 - [Sidechain compression](https://gazillionindustries.com/sidechain-compression.md): Ducking one track with another: routing, settings, and when not to.
 - [The SP-303 and the vinyl sim sound](https://gazillionindustries.com/sp-303.md): What the 2001 sampler was, what its Vinyl Simulator does, and who used it.
 - [Vinyl sim, and what a vinyl sim plugin does](https://gazillionindustries.com/vinyl-sim-plugin.md): The effect taken apart: bandwidth, noise, the squash and the wear.
 - [Compression explained](https://gazillionindustries.com/what-is-a-compressor.md): Threshold, ratio, attack, release, and settings that are a fair place to start.
+- [What is a drum bus, and why put things on it?](https://gazillionindustries.com/what-is-a-drum-bus.md): One channel for the whole kit: how to build it, what to put on it, and why the sum behaves differently.

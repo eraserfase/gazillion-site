@@ -497,6 +497,8 @@ the people who make the plugins.
   — What separates a real tape stop from a pitch bend, and what to look for.
 - [Best tape plugins for drums](https://gazillionindustries.com/best-tape-plugins-for-drums.md)
   — Why drums show tape more than anything else, and where to put it.
+- [How to get analog warmth without buying hardware](https://gazillionindustries.com/analog-warmth.md)
+  — Four mechanisms hide behind one word, and naming the one you want is most of the work.
 - [Vinyl sim, and what a vinyl sim plugin does](https://gazillionindustries.com/vinyl-sim-plugin.md)
   — The effect taken apart: bandwidth, noise, the squash and the wear.
 - [Best free VST plugins](https://gazillionindustries.com/best-free-vst-plugins.md)
@@ -507,6 +509,14 @@ the people who make the plugins.
   — Loops left long, drums underneath, very little cleanup.
 - [How to make Dilla type beats](https://gazillionindustries.com/how-to-make-dilla-type-beats.md)
   — The feel, taken apart into things you can actually do.
+- [What is a one-knob compressor, and is one knob enough?](https://gazillionindustries.com/one-knob-compressor.md)
+  — What a single macro gives up, what it buys, and when a specific problem still needs threshold and ratio.
+- [What is a drum bus, and why put things on it?](https://gazillionindustries.com/what-is-a-drum-bus.md)
+  — One channel for the whole kit: how to build it, what to put on it, and why the sum behaves differently.
+- [What order should the plug-ins on my drum bus go in?](https://gazillionindustries.com/drum-bus-chain-order.md)
+  — Cuts, then compression, then tone, then weight, then a ceiling — level-matched at every step.
+- [How to glue your drum bus in Ableton Live](https://gazillionindustries.com/drum-bus-compression-in-ableton-live.md)
+  — Glue a drum bus in Ableton Live without squashing the transients.
 - [Best low pass and high pass filter plugins](https://gazillionindustries.com/best-lowpass-highpass-filter-plugins.md)
   — Slope, resonance, drive and sync: what separates filter plugins, plus free picks.
 - [Telephone effect plugins](https://gazillionindustries.com/telephone-effect-plugins.md)
@@ -519,6 +529,10 @@ the people who make the plugins.
   — What 12 bit really does, how to test one, and the free options worth trying.
 - [Best bitcrusher plugins](https://gazillionindustries.com/best-bitcrusher-plugins.md)
   — What bit and rate reduction do, how to audition one, free and paid picks.
+- [Why does my beat sound like a computer made it?](https://gazillionindustries.com/why-does-my-beat-sound-digital.md)
+  — Grid timing, identical velocities, silent gaps, full bandwidth and copy-pasted bars, with a concrete fix for each.
+- [How to get the sound of an old sampler without buying one](https://gazillionindustries.com/how-to-get-an-old-sampler-sound.md)
+  — The old sampler sound is a stack of specific limitations, and you can apply each one on purpose.
 - [Best pitch shifter plugins](https://gazillionindustries.com/best-pitch-shifter-plugins.md)
   — Which family to use, what formant control buys, and the free options worth having.
 - [Best time stretch plugins](https://gazillionindustries.com/best-time-stretch-plugins.md)

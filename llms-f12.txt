@@ -27,6 +27,7 @@ linking.
 - [Best low pass and high pass filter plugins](https://gazillionindustries.com/best-lowpass-highpass-filter-plugins.md): Slope, resonance, drive and sync: what separates filter plugins, plus free picks.
 - [Bitcrushing explained](https://gazillionindustries.com/bitcrushing-explained.md): Bit depth, quantization noise, sample rate reduction and what 12-bit and 8-bit sound like.
 - [Filter cutoff and resonance explained](https://gazillionindustries.com/filter-cutoff-and-resonance.md): The corner frequency, the slope, the resonant peak, and what each costs.
+- [How to get the sound of an old sampler without buying one](https://gazillionindustries.com/how-to-get-an-old-sampler-sound.md): The old sampler sound is a stack of specific limitations, and you can apply each one on purpose.
 - [How to make a filter sweep](https://gazillionindustries.com/how-to-make-a-filter-sweep.md): High-pass and low-pass builds, automation curve, resonance, and what to sweep.
 - [How to make a sample sound old](https://gazillionindustries.com/how-to-make-a-sample-sound-old.md): Narrow the range, add warmth and grain, wobble, noise and a small room.
 - [How to make lofi beats](https://gazillionindustries.com/how-to-make-lofi-beats.md): Tempo, chords, swung drums, crush, noise, wobble and a gentle pump.
@@ -36,3 +37,4 @@ linking.
 - [How to make a telephone effect on vocals](https://gazillionindustries.com/telephone-effect-on-vocals.md): The band-pass, the compression, and the modern cell-phone version.
 - [Telephone effect plugins](https://gazillionindustries.com/telephone-effect-plugins.md): The band, the slope, the compression and the grit, plus free and paid options.
 - [What is aliasing in audio](https://gazillionindustries.com/what-is-aliasing-in-audio.md): What it is, what it sounds like, how to prevent it, and how to use it on purpose.
+- [Why does my beat sound like a computer made it?](https://gazillionindustries.com/why-does-my-beat-sound-digital.md): Grid timing, identical velocities, silent gaps, full bandwidth and copy-pasted bars, with a concrete fix for each.
