@@ -249,6 +249,10 @@ One broadband one you know well, and the free ones for variety. Harmonics stack 
 
 Yes, in two ways: it adds harmonics in ranges the ear is sensitive to, and it rounds peaks so the average level can rise. See [saturation explained](https://gazillionindustries.com/saturation-explained/) and [crest factor](https://gazillionindustries.com/crest-factor/).
 
+### What is the best saturation plugin for 808s?
+
+The question is better answered by what the part needs than by a product name. An 808-style sub is close to a sine, so a phone speaker reproduces almost none of the fundamental — what reaches the listener is the harmonics you add above it. So you want two things: harmonics landing high enough to survive a small speaker, and control over how much of the original low end comes through unchanged. Anything that gives you both will work. Note choice changes the answer too, because the harmonic series moves with the fundamental, and a part written low needs more help than one written a fourth above it.
+
 ## What BEEFY does
 
 BEEFY is our saturation and loudness effect for making sounds thicker, punchier and more up front. It adds body, squeezes some space out of the peaks, and brings out harmonics that help a sound feel bigger. **BEEF** is the main event: more weight, more density, more loudness and more attitude as you turn it up. **COOK** changes the color and bite, from a rounder feel toward a brighter, more cooked edge. **JUICE** sets the level going in. **SOFT CLIP** opens switched on and takes care of the initial gain staging; **LIMIT** is the other choice; both can be off.
@@ -6383,6 +6387,14 @@ Look for a compressor that gives you threshold, ratio, attack, release, and a mi
 
 One good compressor handles most of what you need day to day. That said, different plugins behave differently under the same settings, and having a couple on hand lets you reach for the right tool without rethinking your chain. A fast one for transients, a slower one for glue, and maybe a vintage-style one for color covers the ground without overcomplicating things.
 
+### Is there a free drum bus compressor that works in FL Studio?
+
+Yes, and two of them are already installed. Fruity Limiter has a compressor mode that does ordinary bus duty perfectly well, and Maximus will do it with more control than most people need. Any free VST3 loads in FL Studio the same as it does anywhere else, so the real question is not the format, it is whether you want to learn another interface. Start with what is in the browser and move on only when it stops giving you what you want.
+
+### Is there a free drum bus compressor that gets that old sampler crunch?
+
+No, because that is not what a compressor does. The crunch is bit depth and sample rate reduction, and no amount of compression produces it — [bitcrushing explained](https://gazillionindustries.com/bitcrushing-explained/) covers that half. What a compressor does contribute is the density people hear alongside it: the room and the decay pulled up, the gaps between hits filled, the whole loop reading as one block rather than separate drums. Run the two in series and it is the pair that sounds like the record.
+
 ## What DRUGS does
 
 DRUGS is our bus compressor for drums, free for Mac and Windows. One control called **DOSE**, with **MIX** on the face for parallel without a send, **GAIN** on the way out and a soft ceiling after it. It has no threshold and no ratio, because the whole point is that you do not set them.
@@ -8222,6 +8234,14 @@ If the compressed copy arrives later than the dry one and nothing compensates fo
 - **512 samples (11.6 ms at 44.1 kHz)**: first null near 43 Hz · at 48 kHz, 47 Hz
 
 Those are all in the range a drum bus lives in, which is why the symptom reads as "thinner" rather than as an obvious filter. To check it, invert the parallel channel and solo the pair: aligned copies cancel to silence, and whatever is left is the misalignment.
+
+## How to set it up in FL Studio
+
+Route your drums to a mixer track as usual, then pick an empty mixer track for the compressed copy. Select the drum track, and click the small arrow at the bottom of the empty track to enable a send into it. The drum track still reaches the master on its own path, so what you have now is the dry signal going where it always went plus a copy arriving on the second track. The arrow doubles as the send level.
+
+Put the compressor on the second track and set it far harder than you would ever use in series, then bring the send level up from silence until the drums thicken. Judge it by muting the compressed track, not by bypassing the compressor, because bypassing leaves the copy summing with the dry signal at unity and that is a different sound entirely.
+
+FL Studio compensates for plugin latency on its own, so a plug-in that reports its delay honestly will stay aligned. One that does not report it will not, and the symptom is the one described above — the low end going thin rather than anything sounding obviously late. The test is the same: invert the compressed track and pull the send up with the compressor bypassed. Aligned copies cancel toward silence.
 
 ## Questions people ask
 
@@ -12318,6 +12338,10 @@ Not globally. Magnitude scales the depth of the whole chain, and individual mix 
 ### Is RC-20 in series or parallel?
 
 Series. The manual describes the signal passing from left to right through the six modules, so each one processes what the previous one produced.
+
+### Do I need another tape plugin if I already have RC-20?
+
+Probably not, if what you want is a bit of everything. Six modules covering noise, wobble, distortion, digital degradation, reverb and volume drops will get you most of the way to most worn-tape sounds, and owning a second tool that does the same spread again buys you very little. Where a dedicated one earns its place is depth in a single area: a transport that models speed instability across its whole range rather than as one wobble control, or a filter with real control over shape and resonance rather than a degradation amount. Buy for the thing you keep running out of, not for the category.
 
 ## What F(ilter)12 does
 

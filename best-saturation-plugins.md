@@ -93,6 +93,10 @@ One broadband one you know well, and the free ones for variety. Harmonics stack 
 
 Yes, in two ways: it adds harmonics in ranges the ear is sensitive to, and it rounds peaks so the average level can rise. See [saturation explained](https://gazillionindustries.com/saturation-explained/) and [crest factor](https://gazillionindustries.com/crest-factor/).
 
+### What is the best saturation plugin for 808s?
+
+The question is better answered by what the part needs than by a product name. An 808-style sub is close to a sine, so a phone speaker reproduces almost none of the fundamental — what reaches the listener is the harmonics you add above it. So you want two things: harmonics landing high enough to survive a small speaker, and control over how much of the original low end comes through unchanged. Anything that gives you both will work. Note choice changes the answer too, because the harmonic series moves with the fundamental, and a part written low needs more help than one written a fourth above it.
+
 ## What BEEFY does
 
 BEEFY is our saturation and loudness effect for making sounds thicker, punchier and more up front. It adds body, squeezes some space out of the peaks, and brings out harmonics that help a sound feel bigger. **BEEF** is the main event: more weight, more density, more loudness and more attitude as you turn it up. **COOK** changes the color and bite, from a rounder feel toward a brighter, more cooked edge. **JUICE** sets the level going in. **SOFT CLIP** opens switched on and takes care of the initial gain staging; **LIMIT** is the other choice; both can be off.

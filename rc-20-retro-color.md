@@ -87,6 +87,10 @@ Not globally. Magnitude scales the depth of the whole chain, and individual mix 
 
 Series. The manual describes the signal passing from left to right through the six modules, so each one processes what the previous one produced.
 
+### Do I need another tape plugin if I already have RC-20?
+
+Probably not, if what you want is a bit of everything. Six modules covering noise, wobble, distortion, digital degradation, reverb and volume drops will get you most of the way to most worn-tape sounds, and owning a second tool that does the same spread again buys you very little. Where a dedicated one earns its place is depth in a single area: a transport that models speed instability across its whole range rather than as one wobble control, or a filter with real control over shape and resonance rather than a degradation amount. Buy for the thing you keep running out of, not for the category.
+
 ## What F(ilter)12 does
 
 F(ilter)12 is a filter with a lo-fi section in front of it and an adaptive correction called AURA on top. **SAMPLE RATE** and **BIT** are the crush pair. **POSITION** sets where in the spectrum the filter sits, and the further it works the more it drives and the more it sings. There are five shapes — low-pass, high-pass, band-pass, notch and a morph — and **SLOPE** runs from 18 dB per octave to a wall. **Q SHAPE** puts peaks and dips at fixed distances from the cutoff so the whole shape travels with the knob: WAH, VOWEL, COMB, SCOOP, PLAIN, or DRAW your own.

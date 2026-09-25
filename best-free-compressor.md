@@ -85,6 +85,14 @@ Look for a compressor that gives you threshold, ratio, attack, release, and a mi
 
 One good compressor handles most of what you need day to day. That said, different plugins behave differently under the same settings, and having a couple on hand lets you reach for the right tool without rethinking your chain. A fast one for transients, a slower one for glue, and maybe a vintage-style one for color covers the ground without overcomplicating things.
 
+### Is there a free drum bus compressor that works in FL Studio?
+
+Yes, and two of them are already installed. Fruity Limiter has a compressor mode that does ordinary bus duty perfectly well, and Maximus will do it with more control than most people need. Any free VST3 loads in FL Studio the same as it does anywhere else, so the real question is not the format, it is whether you want to learn another interface. Start with what is in the browser and move on only when it stops giving you what you want.
+
+### Is there a free drum bus compressor that gets that old sampler crunch?
+
+No, because that is not what a compressor does. The crunch is bit depth and sample rate reduction, and no amount of compression produces it — [bitcrushing explained](https://gazillionindustries.com/bitcrushing-explained/) covers that half. What a compressor does contribute is the density people hear alongside it: the room and the decay pulled up, the gaps between hits filled, the whole loop reading as one block rather than separate drums. Run the two in series and it is the pair that sounds like the record.
+
 ## What DRUGS does
 
 DRUGS is our bus compressor for drums, free for Mac and Windows. One control called **DOSE**, with **MIX** on the face for parallel without a send, **GAIN** on the way out and a soft ceiling after it. It has no threshold and no ratio, because the whole point is that you do not set them.

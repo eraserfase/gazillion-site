@@ -83,6 +83,14 @@ If the compressed copy arrives later than the dry one and nothing compensates fo
 
 Those are all in the range a drum bus lives in, which is why the symptom reads as "thinner" rather than as an obvious filter. To check it, invert the parallel channel and solo the pair: aligned copies cancel to silence, and whatever is left is the misalignment.
 
+## How to set it up in FL Studio
+
+Route your drums to a mixer track as usual, then pick an empty mixer track for the compressed copy. Select the drum track, and click the small arrow at the bottom of the empty track to enable a send into it. The drum track still reaches the master on its own path, so what you have now is the dry signal going where it always went plus a copy arriving on the second track. The arrow doubles as the send level.
+
+Put the compressor on the second track and set it far harder than you would ever use in series, then bring the send level up from silence until the drums thicken. Judge it by muting the compressed track, not by bypassing the compressor, because bypassing leaves the copy summing with the dry signal at unity and that is a different sound entirely.
+
+FL Studio compensates for plugin latency on its own, so a plug-in that reports its delay honestly will stay aligned. One that does not report it will not, and the symptom is the one described above — the low end going thin rather than anything sounding obviously late. The test is the same: invert the compressed track and pull the send up with the compressor bypassed. Aligned copies cancel toward silence.
+
 ## Questions people ask
 
 ### What is the purpose of parallel compression?
