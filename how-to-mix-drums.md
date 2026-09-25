@@ -39,7 +39,7 @@ Watch the sum while you do it. Two identical signals played together add 6 dB; t
 
 ## Build the drum bus before you process it
 
-Route every drum to one bus first, then decide what is allowed in. Kick, snare, hats, percussion and room always belong. The 808 or sub is the judgement call: put it in and the bus compressor hears the loudest thing in the record on every downbeat, which means the hats duck to the 808 rather than to the kick. Keep it out and the sub stays steady while the kit moves. [What a drum bus is](https://gazillionindustries.com/what-is-a-drum-bus/) has the routing in full.
+Route every drum to one bus first, then decide what is allowed in. Kick, snare, hats, percussion and room always belong. The 808 or sub is the judgment call: put it in and the bus compressor hears the loudest thing in the record on every downbeat, which means the hats duck to the 808 rather than to the kick. Keep it out and the sub stays steady while the kit moves. [What a drum bus is](https://gazillionindustries.com/what-is-a-drum-bus/) has the routing in full.
 
 Order on the bus matters more than the settings on any one box. Corrective EQ, then compression, then saturation, then whatever catches the peak. Put the saturation before the compressor and you are compressing harmonics you just invented; put the peak catcher first and everything after it works on a signal that has already been squared off. [Drum bus chain order](https://gazillionindustries.com/drum-bus-chain-order/) is the long version.
 

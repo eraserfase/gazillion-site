@@ -79,9 +79,9 @@ Demos are all mixed to flatter the plugin, so audition on your own material and 
 
 The medium, as five controls. **AGE** reads in years rather than a percentage, because that is what the quantity is — here it is set to 22.
 
-## What component-level modelling actually changes
+## What component-level modeling actually changes
 
-Some plugins describe themselves as modelling a machine at component level, others as applying an effect. The difference is not marketing, and it is also not a straightforward ranking.
+Some plugins describe themselves as modeling a machine at component level, others as applying an effect. The difference is not marketing, and it is also not a straightforward ranking.
 
 A physical model computes the machine's behavior from its parts, so its controls interact the way the hardware's did: change the speed and the frequency response moves, the noise moves and the saturation moves, because on a real deck those were never separate. That is why a model can surprise you, and why a setting that worked on one source can behave differently on another.
 

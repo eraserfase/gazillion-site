@@ -127,7 +127,7 @@ Hiss is one of the quickest ways to make a clean digital production feel like a 
 
 - Start the bed a bar before the music and give the render a tail, so it is already running at the top and is not chopped off at the end.
 
-Step five sounds arbitrary and is not. Judged alone a bed always ends up too loud, because in isolation you are listening *to* it rather than *under* it, and 6 dB is about the distance between those two judgements.
+Step five sounds arbitrary and is not. Judged alone a bed always ends up too loud, because in isolation you are listening *to* it rather than *under* it, and 6 dB is about the distance between those two judgments.
 
 ## Where the hiss goes in the chain
 

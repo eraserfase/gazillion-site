@@ -3,7 +3,7 @@
 > What clipping is, the difference between hard and soft clipping, why it is the most efficient loudness tool on transients, and where it starts to do damage.
 
 Source: https://gazillionindustries.com/what-is-clipping/  
-Published 2026-09-20, updated 2026-09-24. By Gazillion Industries, who make BEEFY.
+Published 2026-09-20, updated 2026-09-25. By Gazillion Industries, who make BEEFY.
 
 ---
 
@@ -45,7 +45,7 @@ Hard clipping puts a right angle in the waveform and generates a long series of 
 
 Less than the word suggests. A clipper alters only the samples that are over the line, and on drum material there are hardly any of them. Do the geometry on a sine first, because a sine is the worst case: it loiters near its own peak, so a little drive flattens a lot of the cycle.
 
-Drive a sine until its peak sits 1 dB above the ceiling. The clip angle is arcsin(10−1/20) = arcsin(0.8913) = 63.0°, so the flat part spans 180 − 2 × 63.0 = 53.9° of each half cycle. That is 30 percent of the period, and 0.150 ms of every millisecond at 1 kHz. At 3 dB in the angle is 45.1° and the flat part is 89.9° — half the waveform is now a straight line. Three decibels, and half the wave is gone.
+Drive a sine until its peak sits 1 dB above the ceiling. The clip angle is arcsin(10−1/20) = arcsin(0.8913) = 63.0°, so the flat part spans 180 − 2 × 63.0 = 53.9° of each half cycle. That is 30 percent of the period — two flat stretches of 0.150 ms in every millisecond at 1 kHz. At 3 dB in the angle is 45.1° and the flat part is 89.9°. Three decibels, and half the cycle is a horizontal line.
 
 Drums behave nothing like that, because their peaks are spikes rather than plateaus. The loop used for the measurements on this page is two bars at 90 BPM: a 55 Hz kick with a 90 ms decay constant and a 3 ms click, a snare of noise plus a 190 Hz body, eighth-note hats made of noise between 4 kHz and 18 kHz, the whole thing band-limited at 18 kHz and normalized so the loudest sample sits at exactly 0 dBFS. That is 235,200 samples, 5.333 seconds, RMS −23.92 dBFS, crest factor 23.92 dB. Hard clip it and count what moved.
 
@@ -113,7 +113,7 @@ The efficiency claim is testable, so here it is tested. Same loop, driven by the
 
 - **+6 dB**: clipper +5.91 — limiter +3.12
 
-At 3 dB in the clipper handed back 2.99 of the 3 dB it was given. The limiter handed back 1.77, which is 59 percent of it. The reason is in the release time: the limiter pulls gain down before each hit and lets it back up over the following 50 ms, so everything living in that window comes down with the transient. The clipper never touches the window. It removes 18 samples and leaves the other 235,182 where they were.
+At 3 dB in the clipper handed back 2.99 of the 3 dB it was given. The limiter handed back 1.77, which is 59 percent of it. The reason is in the release time: the limiter pulls gain down before each hit and lets it back up over the following 50 ms, so everything living in that window comes down with the transient. The clipper never touches the window. It alters 18 samples and leaves the other 235,182 exactly where they were.
 
 Crest factor tells the same story from the other side. The loop started at 23.92 dB between peak and average; after 3 dB of clipping it read 20.93 dB, and after 6 it read 18.01. [Crest factor](https://gazillionindustries.com/crest-factor/) is the number that decides how loud a master can be, and clipping is the cheapest way to move it.
 
@@ -163,7 +163,7 @@ A clipper on the master applies to the sum, so a loud drum modulates every quiet
 
 - **+6 dB**: 37.5 dB below
 
-Three decibels of drive raised those sidebands by nearly twenty. That is the mechanism behind the complaint that a vocal went hard and grainy only after the master clipper went on, when nothing was done to the vocal. The vocal was collateral.
+Two more decibels of drive raised those sidebands by nearly twenty. That is the mechanism behind the complaint that a vocal went hard and grainy only after the master clipper went on, when nothing was done to the vocal. The vocal was collateral.
 
 Density changes the arithmetic too. Adding a sustained bass and a four-note pad to the same loop took its crest factor from 23.92 dB to 12.79 dB, and at 6 dB in the clipper altered 5,825 samples, 2.477 percent of the file, against 204 samples for the drums alone. The level returned was almost identical, +5.87 dB against +5.91. What changed by a factor of twenty-eight is how much of the record got touched to get it.
 
@@ -233,7 +233,7 @@ Five things go wrong, and they sound nothing alike, so learning to tell them apa
 
 ## Where the ceiling actually is in your DAW
 
-Inside a modern mixer, going over 0 dBFS does no damage at all. The engine works in 32-bit floating point, whose largest value is about 3.4 × 1038, which is 20 log₁₀ of that, or roughly 771 dB above full scale. A signal at +20 dBFS between two plugins is intact. Pull the fader down afterward and it comes back exactly.
+Inside a modern mixer, going over 0 dBFS does no damage at all. The engine works in 32-bit floating point, whose largest value is about 3.4 × 1038. That is 20 log₁₀(3.4 × 1038) = 771 dB above full scale. A signal at +20 dBFS between two plugins is intact. Pull the fader down afterward and it comes back exactly.
 
 The ceiling becomes real at three places, and only three. The first is a fixed-point file: a 16-bit sample cannot exceed its range, and each bit is worth 20 log₁₀(2) = 6.02 dB, giving 6.02 × 16 = 96.3 dB between full scale and the smallest step, with nothing above the top. The second is the converter feeding your speakers, which has a fixed voltage it can produce. The third is any plugin that clamps its own output on the way out.
 
@@ -305,13 +305,13 @@ Their third harmonic is above the sample rate's ceiling. Anything above 7,350 Hz
 
 ### Does clipping make a track louder on streaming?
 
-It raises average level against a fixed peak, which is the thing that lets a master be turned up before it hits its ceiling. Services that normalize by loudness will turn the result back down, so what survives the round trip is the density and the harmonics, not the volume. See [how loud should my master be](https://gazillionindustries.com/how-loud-should-my-master-be/).
+It raises average level against a fixed peak, which is the thing that lets a master be turned up before it hits its ceiling. Services that normalize by loudness will turn the result back down, so what survives the round trip is density and harmonic content rather than volume. See [how loud should my master be](https://gazillionindustries.com/how-loud-should-my-master-be/).
 
 ## What BEEFY does
 
 BEEFY is our saturation and loudness effect. **SOFT CLIP** opens switched on and brings rounded, fuzzy edges to the loudest parts, adding harmonics above the low end so there is more to hear than just sub. **LIMIT** is the other choice when you want the output peaks held in check instead, and the two are separate decisions you can both turn off. **BEEF** brings weight and density, **COOK** changes the color and bite, and **JUICE** sets the level going in. Input and output clip lights watch both ends.
 
-For the job on this page it goes on the element or the bus making the peak, which on a kit is usually the snare and the hats rather than the kick. SOFT CLIP opens switched on because it handles the initial gain staging, so the clipping finds the sound without you hunting for a magic input level, and you can still add BEEF on top. COOK is the control to watch here: brighter is the direction that moves energy into the region where the folding lives, so if the residue test starts buzzing, COOK is the first thing to pull back.
+For the job on this page it goes on the element or the bus making the peak, which on a kit is usually the snare and the hats rather than the kick. SOFT CLIP opens switched on because it handles the initial gain staging, so the clipping finds the sound without you hunting for a magic input level, and you can still add BEEF on top. COOK is the control to watch here, because brighter is the direction that puts more energy into the range this page has been measuring, so if the residue test starts buzzing, COOK is the first thing to pull back.
 
 Run the residue test on it the way this page describes. Two copies of the same bounce, one through BEEFY, matched by peak, one polarity flipped, and listen to what is left. Short bursts on the hits means the harmonics are landing where they should. It is $19, one payment, Mac and Windows, with AU, VST3 and a Mac standalone. The panel resizes and remembers its size, it opens at 80 percent, and the cow reacts to the audio, which is not a metering feature and is not going anywhere.
 

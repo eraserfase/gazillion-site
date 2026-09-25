@@ -105,7 +105,7 @@ The rule cuts both ways and nobody checks the quiet side. Trim a channel 18 dB b
 
 Here is what the last one sounds like, with the numbers attached. Two renders of the same loop, one clean and one with a steady floor added underneath. Measured off the two files this session: the loudest 200 ms window differs by 0.06 dB between them, so it is the same performance at the same level, while the quietest 200 ms window goes from digital silence to -61.45 dBFS.
 
-Level the gaps, not the hits. The difference between these two files lives entirely in the parts where nothing is playing.
+Listen to the gaps, not the hits. The difference between these two files lives entirely in the parts where nothing is playing.
 
 - **Silent gaps** — quietest 200 ms window is digital silence — https://gazillionindustries.com/tripleog/tog-dry.m4a
 
@@ -299,7 +299,7 @@ BEEFY is our saturation and loudness plugin, and it is built so gain staging doe
 
 **BEEF** adds weight, density and loudness from there, and **LIMIT** holds the output peaks if you'd rather have that.
 
-Either output switch is a stage like any other, so the same rule applies to it: level-match before you judge it. Turn SOFT CLIP on, bring the output back to where it was, and listen to what changed about the sound rather than to how much louder it got. That comparison is the only one worth making, on our plugin or anybody's. It is $19, Mac and Windows, AU and VST3 and standalone.
+Either output switch is a stage like any other, so the same rule applies to it: level-match before you judge it. Turn SOFT CLIP on, bring the output back to where it was, and listen to what changed about the sound rather than to how much louder it got. That comparison is the only one worth making, on our plugin or anybody's. It is $19 for Mac and Windows; the Mac build includes VST3, Audio Unit and standalone, and Windows is the 64-bit VST3.
 
 Same forty tracks. The limiter is off, the master meter is green, and the beat finally has somewhere to go.
 
