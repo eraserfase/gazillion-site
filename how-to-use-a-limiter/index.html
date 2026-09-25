@@ -47,7 +47,7 @@ fbq('init', '1164684366890206');
 fbq('track', 'PageView');
 }
 </script>
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"TechArticle","@id":"https://gazillionindustries.com/how-to-use-a-limiter/#article","headline":"How to use a limiter","description":"How to set a limiter: where it goes, what ceiling to use, how much gain reduction is normal, and why doing the work upstream is what keeps it from pumping.","image":"https://gazillionindustries.com/beefy/cover.png","inLanguage":"en","datePublished":"2026-09-20","dateModified":"2026-09-24","url":"https://gazillionindustries.com/how-to-use-a-limiter/","mainEntityOfPage":"https://gazillionindustries.com/how-to-use-a-limiter/","author":{"@id":"https://gazillionindustries.com/#gazillion"},"publisher":{"@id":"https://gazillionindustries.com/#gazillion"},"about":{"@type":"SoftwareApplication","name":"BEEFY","url":"https://gazillionindustries.com/beefy.html"},"isPartOf":{"@id":"https://gazillionindustries.com/reading-material/#page"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Gazillion Industries","item":"https://gazillionindustries.com/"},{"@type":"ListItem","position":2,"name":"Reading material","item":"https://gazillionindustries.com/reading-material/"},{"@type":"ListItem","position":3,"name":"How to use a limiter","item":"https://gazillionindustries.com/how-to-use-a-limiter/"}]},{"@type":"Organization","@id":"https://gazillionindustries.com/#gazillion","name":"Gazillion Industries LLC","alternateName":"Gazillion Industries","url":"https://gazillionindustries.com/"},{"@type":"FAQPage","@id":"https://gazillionindustries.com/how-to-use-a-limiter/#faq","mainEntity":[{"@type":"Question","name":"What does a limiter actually do?","acceptedAnswer":{"@type":"Answer","text":"It prevents a signal exceeding a set ceiling, by reducing gain very quickly whenever the signal would cross it. Used with make-up gain, that lets the whole track sit louder under the same ceiling."}},{"@type":"Question","name":"How much gain reduction should a limiter do?","acceptedAnswer":{"@type":"Answer","text":"One to three decibels on the loudest peaks for most material. If the meter is showing six or more on average, move that work upstream to a clipper, a compressor or the mix itself."}},{"@type":"Question","name":"Should I use a limiter before mastering?","acceptedAnswer":{"@type":"Answer","text":"Take it off the mix bus before you bounce for mastering. Leave headroom instead. If you are mastering it yourself, the limiter belongs at the end of the mastering chain, not on the mix you are feeding into it."}},{"@type":"Question","name":"When should I use a limiter on vocals?","acceptedAnswer":{"@type":"Answer","text":"As a safety catch after compression, taking a decibel or two off the few loudest words, not as the main dynamics control. Compression shapes the performance; the limiter just stops the occasional spike from running away."}},{"@type":"Question","name":"What ceiling should I set my limiter to?","acceptedAnswer":{"@type":"Answer","text":"&minus;1&nbsp;dBTP for anything that will be encoded or streamed, which puts your loudest instant at 0.8913 of full scale. Only go tighter, to &minus;0.3 or &minus;0.5&nbsp;dBTP, for a file that will be played back exactly as bounced."}},{"@type":"Question","name":"What attack and release should a limiter use?","acceptedAnswer":{"@type":"Answer","text":"Set release no shorter than one cycle of the lowest note in the track: 25&nbsp;ms at 40&nbsp;Hz, 20&nbsp;ms at 50&nbsp;Hz, 12.5&nbsp;ms at 80&nbsp;Hz. On a lookahead limiter the attack chooses how much transient survives rather than whether the peak is caught, so set it by listening to the snare."}},{"@type":"Question","name":"How do I stop my limiter from pumping?","acceptedAnswer":{"@type":"Answer","text":"Lengthen the release until the track stops swelling back up between hits, then reduce how much you are asking for. Pumping is depth plus duty, so cutting the amount of reduction fixes it even when the release is already right."}},{"@type":"Question","name":"Is 6 dB of gain reduction too much?","acceptedAnswer":{"@type":"Answer","text":"It depends entirely on how often, and that is the part nobody measures. Six decibels on two per cent of the program costs 0.07&nbsp;dB of average level and is inaudible. Six decibels held for eighty per cent of it costs 3.97&nbsp;dB and sounds exactly as squashed as that number suggests."}},{"@type":"Question","name":"Should the limiter go before or after EQ?","acceptedAnswer":{"@type":"Answer","text":"After. EQ changes peak levels, so any EQ move after the limiter puts the signal back over the ceiling you set. The limiter is the last processor in the chain, with only dither allowed after it."}},{"@type":"Question","name":"Can I use a clipper instead of a limiter?","acceptedAnswer":{"@type":"Answer","text":"For the loudness, largely yes; for the guarantee, no. A clipper lowers peaks by bending the waveform and adds harmonics instead of moving gain over time, which is why it is the more efficient loudness tool. Most people end up using both, with the clipper doing the decibels and the limiter catching what slips past. What is clipping has the shapes."}},{"@type":"Question","name":"What is the difference between a limiter and a maximizer?","acceptedAnswer":{"@type":"Answer","text":"A maximizer is a limiter with the input gain and the ceiling linked, so one knob pushes the signal up and holds the ceiling down at the same time. The processing is the same; the control layout hides one of the two decisions from you."}},{"@type":"Question","name":"Does a limiter add latency?","acceptedAnswer":{"@type":"Answer","text":"Any limiter with lookahead does, because the delay line is the lookahead. A 1.5&nbsp;ms window is 66 samples at 44.1&nbsp;kHz and 72 at 48&nbsp;kHz. Your DAW compensates on playback, but you will feel it while monitoring a live input through the same chain, so bypass it while tracking."}},{"@type":"Question","name":"Why does my track still distort with a limiter on it?","acceptedAnswer":{"@type":"Answer","text":"Two usual causes. Either something sits after the limiter &mdash; a gain utility or a master fader above 0 &mdash; or the limiter is set to sample peak and the intersample peaks are going over anyway, which can be up to 3.01&nbsp;dB higher than the meter shows. Turn on true-peak detection and check the chain below the limiter."}},{"@type":"Question","name":"Do I need a limiter on every track?","acceptedAnswer":{"@type":"Answer","text":"No. One at the end of the master is the job. A limiter on an individual channel is a safety catch for a source that genuinely spikes, and a limiter on every channel means every channel is quietly removing transients before the mix bus ever hears them."}},{"@type":"Question","name":"Why does my mix get quieter after I upload it?","acceptedAnswer":{"@type":"Answer","text":"Playback normalization, not the limiter. The service turns loud masters down to its own target, so the decibels you fought the limiter for get taken straight back off while the dynamics you traded away stay gone. How loud should my master be has the argument in full."}}]}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"TechArticle","@id":"https://gazillionindustries.com/how-to-use-a-limiter/#article","headline":"How to use a limiter","description":"How to set a limiter: where it goes, what ceiling to use, how much gain reduction is normal, and why doing the work upstream is what keeps it from pumping.","image":"https://gazillionindustries.com/beefy/cover.png","inLanguage":"en","datePublished":"2026-09-20","dateModified":"2026-09-24","url":"https://gazillionindustries.com/how-to-use-a-limiter/","mainEntityOfPage":"https://gazillionindustries.com/how-to-use-a-limiter/","author":{"@id":"https://gazillionindustries.com/#gazillion"},"publisher":{"@id":"https://gazillionindustries.com/#gazillion"},"about":{"@type":"SoftwareApplication","name":"BEEFY","url":"https://gazillionindustries.com/beefy.html"},"isPartOf":{"@id":"https://gazillionindustries.com/reading-material/#page"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Gazillion Industries","item":"https://gazillionindustries.com/"},{"@type":"ListItem","position":2,"name":"Reading material","item":"https://gazillionindustries.com/reading-material/"},{"@type":"ListItem","position":3,"name":"How to use a limiter","item":"https://gazillionindustries.com/how-to-use-a-limiter/"}]},{"@type":"Organization","@id":"https://gazillionindustries.com/#gazillion","name":"Gazillion Industries LLC","alternateName":"Gazillion Industries","url":"https://gazillionindustries.com/"},{"@type":"FAQPage","@id":"https://gazillionindustries.com/how-to-use-a-limiter/#faq","mainEntity":[{"@type":"Question","name":"What does a limiter actually do?","acceptedAnswer":{"@type":"Answer","text":"It prevents a signal exceeding a set ceiling, by reducing gain very quickly whenever the signal would cross it. Used with make-up gain, that lets the whole track sit louder under the same ceiling."}},{"@type":"Question","name":"How much gain reduction should a limiter do?","acceptedAnswer":{"@type":"Answer","text":"One to three decibels on the loudest peaks for most material. If the meter is showing six or more on average, move that work upstream to a clipper, a compressor or the mix itself."}},{"@type":"Question","name":"Should I use a limiter before mastering?","acceptedAnswer":{"@type":"Answer","text":"Take it off the mix bus before you bounce for mastering. Leave headroom instead. If you are mastering it yourself, the limiter belongs at the end of the mastering chain, not on the mix you are feeding into it."}},{"@type":"Question","name":"When should I use a limiter on vocals?","acceptedAnswer":{"@type":"Answer","text":"As a safety catch after compression, taking a decibel or two off the few loudest words, not as the main dynamics control. Compression shapes the performance; the limiter just stops the occasional spike from running away."}},{"@type":"Question","name":"What ceiling should I set my limiter to?","acceptedAnswer":{"@type":"Answer","text":"&minus;1&nbsp;dBTP for anything that will be encoded or streamed, which puts your loudest instant at 0.8913 of full scale. Only go tighter, to &minus;0.3 or &minus;0.5&nbsp;dBTP, for a file that will be played back exactly as bounced."}},{"@type":"Question","name":"What attack and release should a limiter use?","acceptedAnswer":{"@type":"Answer","text":"Set release no shorter than one cycle of the lowest note in the track: 25&nbsp;ms at 40&nbsp;Hz, 20&nbsp;ms at 50&nbsp;Hz, 12.5&nbsp;ms at 80&nbsp;Hz. On a lookahead limiter the attack chooses how much transient survives rather than whether the peak is caught, so set it by listening to the snare."}},{"@type":"Question","name":"How do I stop my limiter from pumping?","acceptedAnswer":{"@type":"Answer","text":"Lengthen the release until the track stops swelling back up between hits, then reduce how much you are asking for. Pumping is depth plus duty, so cutting the amount of reduction fixes it even when the release is already right."}},{"@type":"Question","name":"Is 6 dB of gain reduction too much?","acceptedAnswer":{"@type":"Answer","text":"It depends entirely on how often, and that is the part nobody measures. Six decibels on two per cent of the program costs 0.07&nbsp;dB of average level and is inaudible. Six decibels held for eighty per cent of it costs 3.97&nbsp;dB and sounds exactly as squashed as that number suggests."}},{"@type":"Question","name":"Should the limiter go before or after EQ?","acceptedAnswer":{"@type":"Answer","text":"After. EQ changes peak levels, so any EQ move after the limiter puts the signal back over the ceiling you set. The limiter is the last processor in the chain, with only dither allowed after it."}},{"@type":"Question","name":"Can I use a clipper instead of a limiter?","acceptedAnswer":{"@type":"Answer","text":"For the loudness, largely yes; for the guarantee, no. A clipper lowers peaks by bending the waveform and adds harmonics instead of moving gain over time, which is why it is the more efficient loudness tool. Most people end up using both, with the clipper doing the decibels and the limiter catching what slips past. What is clipping has the shapes."}},{"@type":"Question","name":"What is the difference between a limiter and a maximizer?","acceptedAnswer":{"@type":"Answer","text":"A maximizer is a limiter with the input gain and the ceiling linked, so one knob pushes the signal up and holds the ceiling down at the same time. The processing is the same; the control layout hides one of the two decisions from you."}},{"@type":"Question","name":"Does a limiter add latency?","acceptedAnswer":{"@type":"Answer","text":"Any limiter with lookahead does, because the delay line is the lookahead. A 1.5&nbsp;ms window is 66 samples at 44.1&nbsp;kHz and 72 at 48&nbsp;kHz. Your DAW compensates on playback, but you will feel it while monitoring a live input through the same chain, so bypass it while tracking."}},{"@type":"Question","name":"Why does my track still distort with a limiter on it?","acceptedAnswer":{"@type":"Answer","text":"Two usual causes. Either something sits after the limiter &mdash; a gain utility or a master fader above 0 &mdash; or the limiter is set to sample peak and the intersample peaks are going over anyway, which can be up to 3.01&nbsp;dB higher than the meter shows. Turn on true-peak detection and check the chain below the limiter."}},{"@type":"Question","name":"Do I need a limiter on every track?","acceptedAnswer":{"@type":"Answer","text":"No. One at the end of the master is the job. A limiter on an individual channel is a safety catch for a source that genuinely spikes, and a limiter on every channel means every channel is quietly removing transients before the mix bus ever hears them."}},{"@type":"Question","name":"Why does my mix get quieter after I upload it?","acceptedAnswer":{"@type":"Answer","text":"Playback normalization, not the limiter. The service turns loud masters down to its own target, so the decibels you fought the limiter for get taken straight back off while the dynamics you traded away stay gone. How loud should my master be has the argument in full."}},{"@type":"Question","name":"What does lookahead do on a limiter?","acceptedAnswer":{"@type":"Answer","text":"It delays the audio by a few milliseconds so the detector sees a peak before the audio does, and starts reducing gain on the way in rather than after the fact. That delay is the plugin's reported latency: 1.5&nbsp;ms is 66 samples at 44.1&nbsp;kHz, 72 at 48&nbsp;kHz and 144 at 96&nbsp;kHz."}},{"@type":"Question","name":"Should I turn on oversampling on my limiter?","acceptedAnswer":{"@type":"Answer","text":"If you are chasing a true-peak ceiling, yes, because the intersample peaks live between the samples and a detector running at the session rate cannot see them. The cost is CPU and a little more latency. Oversampling explains what it is doing."}},{"@type":"Question","name":"How many limiters should I use on a master?","acceptedAnswer":{"@type":"Answer","text":"One, unless you have a reason for two. Two works when each has a different release time and a moderate amount to do. Two identical limiters stacked because one was not enough just doubles the depth and the duty, and doubles the damage with it."}},{"@type":"Question","name":"Why is my limiter not making my track louder?","acceptedAnswer":{"@type":"Answer","text":"Because the duty has run away. Once the reduction is more or less constant, the limiter is pulling back everything you push in, which is a volume knob with extra distortion. Bounce two versions and measure the integrated loudness of each: if 3&nbsp;dB more drive bought less than a decibel, stop and go upstream."}},{"@type":"Question","name":"Should I limit before or after saturation?","acceptedAnswer":{"@type":"Answer","text":"After. Saturation reshapes peaks, so anything you saturate after the limiter puts the signal back over the ceiling. The useful order is saturate, clip, then limit, so each stage hands the next one a smaller job. How to use saturation has that stage on its own."}},{"@type":"Question","name":"How do I know if my limiter is working too hard?","acceptedAnswer":{"@type":"Answer","text":"Watch where the needle rests rather than how far it swings. A meter that returns to zero between events is doing peak work; a meter that never quite gets home is doing level work, and level work is what flattens a record. Then null-test it against the bypassed bounce: hearing the bass line in the difference is the answer."}},{"@type":"Question","name":"What is the difference between a limiter and a brickwall limiter?","acceptedAnswer":{"@type":"Answer","text":"A brickwall limiter guarantees the ceiling absolutely, usually with lookahead, and nothing passes it. Anything else called a limiter is a very high ratio compressor that will let a fast enough transient through. For a master you want the guarantee; for tone you might not. Limiter vs compressor has the line between them."}},{"@type":"Question","name":"Should a stereo limiter be linked or unlinked?","acceptedAnswer":{"@type":"Answer","text":"Linked on a master. An unlinked detector reduces one channel without the other, and a level difference between channels is what a pan control produces, so a hard-panned hit drags the image every time it lands. Unlinked has uses on wide stereo sources; a master is not one."}},{"@type":"Question","name":"Can a limiter fix a bad mix?","acceptedAnswer":{"@type":"Answer","text":"No, and it will tell you which part is bad. Whatever is loudest and least controlled is what drives the gain reduction, so if the meter slams on every kick, the kick is the mix problem. The limiter is a very expensive diagnostic in that mode. Why is my mix muddy is the usual next stop."}},{"@type":"Question","name":"What LUFS should I set my limiter to?","acceptedAnswer":{"@type":"Answer","text":"A limiter does not set loudness, it sets a ceiling; the loudness comes from how hard you drive it. Set the ceiling at &minus;1&nbsp;dBTP, then drive until the integrated reading hits your target and check the gain reduction is still in range. How loud should my master be takes the target apart."}},{"@type":"Question","name":"Why does my limiter sound worse on headphones than on speakers?","acceptedAnswer":{"@type":"Answer","text":"Headphones hand you the bottom two octaves and the stereo picture in full, so both of the things a limiter damages first are audible. Reduction inside a bass cycle and an image that wanders on a hard-panned hit are nearly invisible on small speakers and obvious in a pair of cans. Check both, and a phone, before you call it."}},{"@type":"Question","name":"Why does my kick disappear when I turn the limiter up?","acceptedAnswer":{"@type":"Answer","text":"Because the kick is what is triggering the reduction, and a broadband detector turns the whole record down every time the kick arrives &mdash; including the kick. High-pass the detector, use a multiband split, or take the peak off the kick upstream with a clipper. How to make drums hit harder covers the upstream version."}}]}]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&display=swap">
@@ -212,6 +212,28 @@ h3{margin:28px 0 8px; font-size:17px; font-weight:600; line-height:1.4; color:va
   sees a bass note coming in the same sense; it sees the front of it and then spends the rest of
   the note deciding what to do, which is where almost every audible limiter artifact is born.</p>
 
+  <h2>Threshold, input gain, and which knob you are turning</h2>
+  <p>Every limiter hides the same two decisions behind one of three layouts. There are only ever
+  two quantities in play: how hard the signal is driven into the detector, and where the ceiling
+  sits. Everything printed on the panel is a way of tying those two together, and knowing which
+  way yours does it saves an hour of turning the wrong control.</p>
+
+  <p>A threshold-style limiter keeps them separate. Lower the threshold and you get more reduction
+  while the ceiling stays where you put it, so the output does not get louder unless the plugin is
+  adding make-up gain behind your back. Find out whether it is. Automatic make-up means one knob
+  is doing two jobs, and that makes an honest A/B at matched loudness impossible by ear.</p>
+
+  <p>An input-gain-style limiter parks the threshold on the ceiling and hands you a drive control
+  instead. Push 3&nbsp;dB in and you get roughly 3&nbsp;dB of reduction at the peaks, with the
+  output 3&nbsp;dB denser under the same ceiling. The maximizer layout links the pair, so one knob
+  raises the input and lowers the ceiling at once &mdash; convenient right up to the moment you
+  want one without the other.</p>
+
+  <p>One subtraction translates between them. Material peaking at &minus;0.5&nbsp;dBFS with the
+  threshold at &minus;6.5&nbsp;dBFS is a request for 6&nbsp;dB at the loudest instant, which is
+  the same request as pushing 6&nbsp;dB of input into a limiter whose threshold sits on a
+  &minus;0.5 ceiling. Identical arithmetic, different word above the knob.</p>
+
   <h2>The ceiling, and the decibel you give up</h2>
   <p>The ceiling is the one control on a limiter that has a correct answer. A sample-peak meter
   reads only the stored points. The converter draws a curve through those points on the way out,
@@ -231,6 +253,42 @@ h3{margin:28px 0 8px; font-size:17px; font-weight:600; line-height:1.4; color:va
   file that will only ever be played exactly as bounced, &minus;0.3 to &minus;0.5 dBTP is
   defensible. <a class="inline" href="/true-peak/">True peak</a> has the measurement side of
   this.</p>
+
+  <h2>Four meters, and the four different questions they answer</h2>
+  <p>Most arguments about limiters are two people reading different meters at each other. Four
+  numbers describe the same file and each one answers something else. Get them straight once and
+  the rest of this page is arithmetic.</p>
+
+  <div class="card">
+    <dl>
+      <dt>Sample peak</dt><dd>the largest stored sample, blind to what happens between samples</dd>
+      <dt>True peak</dt><dd>the largest value of the reconstructed wave, up to 3.01 dB higher</dd>
+      <dt>RMS</dt><dd>average power over a window, with no ear model in front of it</dd>
+      <dt>LUFS</dt><dd>average power through a hearing-shaped filter, integrated over the program</dd>
+    </dl>
+  </div>
+
+  <p>The gap between the peak number and the loudness number is the whole game, and it has a name
+  and a subtraction. Peak-to-loudness ratio is peak minus loudness. A mix at &minus;0.5&nbsp;dBFS
+  and &minus;16&nbsp;LUFS has a PLR of &minus;0.5&nbsp;&minus;&nbsp;(&minus;16) = 15.5&nbsp;dB. A
+  master at &minus;1&nbsp;dBTP and &minus;10&nbsp;LUFS has 9.0&nbsp;dB. One at &minus;1 and
+  &minus;8 has 7.0. Every decibel you take out of that gap upstream is a decibel of loudness you
+  never have to ask the limiter for.</p>
+
+  <p>Plain waveforms fix the floor of that gap, and you can compute all three. A sine peaks at 1.0
+  with an RMS of 1&nbsp;/&nbsp;&radic;2 = 0.7071, so its crest factor is
+  20&nbsp;log&#8321;&#8320;(1&nbsp;/&nbsp;0.7071) = 3.01&nbsp;dB. A triangle has an RMS of
+  1&nbsp;/&nbsp;&radic;3 = 0.5774, giving
+  20&nbsp;log&#8321;&#8320;(1&nbsp;/&nbsp;0.5774) = 4.77&nbsp;dB. A square wave sits at 1.0 the
+  entire time, so its crest factor is 0&nbsp;dB and there is nothing left for a limiter to
+  remove.</p>
+
+  <p>That last figure is where the loudness argument ends, written as a number. Drive a record far
+  enough and you are walking it toward 0&nbsp;dB of crest factor, which is a square wave: the
+  loudest and the least interesting thing a file can hold. <a class="inline"
+  href="/crest-factor/">Crest factor</a> has the measurement, and the
+  <a class="inline" href="/vu-meter/">VU meter</a> is the same argument in its older,
+  slower form.</p>
 
   <h2>How to set one</h2>
   <ol>
@@ -300,6 +358,29 @@ h3{margin:28px 0 8px; font-size:17px; font-weight:600; line-height:1.4; color:va
   ceiling is already guaranteed by the delay line, so a slower attack lets a few samples of the
   transient through the softer part of the curve before the reduction settles. Use it to choose
   how much crack survives, not to decide whether the peak is caught.</p>
+  <p>Release is also slower than the number printed next to it, which catches everybody once. Most
+  release controls set a time constant, and a first-order envelope closes 63.2&nbsp;per cent of
+  the remaining distance in one of those. From 6&nbsp;dB down, one time constant still holds
+  2.21&nbsp;dB, two holds 0.81, three holds 0.30. Full recovery takes four to five of them, not
+  one.</p>
+
+  <div class="card">
+    <dl>
+      <dt>1 &times; release</dt><dd>2.21 dB of the 6 still held down</dd>
+      <dt>2 &times;</dt><dd>0.81 dB</dd>
+      <dt>3 &times;</dt><dd>0.30 dB</dd>
+      <dt>4 &times;</dt><dd>0.11 dB</dd>
+      <dt>5 &times;</dt><dd>0.04 dB &mdash; call that home</dd>
+    </dl>
+  </div>
+
+  <p>Now put that clock against a tempo. At 120&nbsp;BPM a sixteenth note lasts
+  60000&nbsp;/&nbsp;120&nbsp;/&nbsp;4 = 125&nbsp;ms. A 100&nbsp;ms release has had
+  125&nbsp;/&nbsp;100 = 1.25 time constants between hits and is still holding 1.72&nbsp;dB when
+  the next one lands. Set it to 40&nbsp;ms and it has had 3.13, arriving with 0.26&nbsp;dB left.
+  The second one breathes between hits. The first one never gets back up, and that is the
+  flattening further down this page arriving by the clock rather than by the meter.</p>
+
 
   <h2>What the gain reduction meter is telling you</h2>
   <p>The meter shows one number and the important quantity needs two. Depth is how far it drops.
@@ -340,6 +421,25 @@ h3{margin:28px 0 8px; font-size:17px; font-weight:600; line-height:1.4; color:va
   </figure>
 
 
+  <h2>Two limiters, or one working twice as hard</h2>
+  <p>Splitting the work across two limiters is ordinary practice on a master, and the reason is
+  time constants rather than decibels. A slow first stage catches the long overshoots. The second
+  stage sees a signal with those already removed, so what reaches it is short and sparse, and it
+  can run a fast release without ever being asked to hold gain down through a bass cycle.</p>
+
+  <p>Run the duty formula twice and the average-level side of it is real but modest. Say the loud
+  sections push 6&nbsp;dB over the ceiling on 30&nbsp;per cent of the program. One limiter doing
+  all of it costs (1&nbsp;&minus;&nbsp;0.30)&nbsp;+&nbsp;0.30&nbsp;&times;&nbsp;10<sup>&minus;6/10</sup>
+  = 0.7754, which is 1.11&nbsp;dB. Split it so a slow stage takes 4&nbsp;dB at that same
+  30&nbsp;per cent and a fast stage mops up 2&nbsp;dB on the 5&nbsp;per cent that still gets
+  through, and you pay 0.87 plus 0.08 = 0.95&nbsp;dB.</p>
+
+  <p>Sixteen hundredths of a decibel. Say that out loud before you build a two-stage chain for the
+  loudness, because the loudness is not why it works. It works because neither stage is ever
+  combining a large reduction with a short release, which is the pairing that produces every
+  sound in the failure list below. Two moderate stages, two different release times, one job
+  each.</p>
+
   <h2>Do the work before the limiter</h2>
   <p>This is the whole article in one idea. A limiter asked to deliver eight decibels of loudness
   will pump, flatten and distort, because it is turning the entire mix down every time one snare
@@ -374,6 +474,31 @@ h3{margin:28px 0 8px; font-size:17px; font-weight:600; line-height:1.4; color:va
   and <a class="inline" href="/how-loud-should-my-master-be/">how loud should my master be</a> take
   the target itself apart.</p>
 
+  <h2>Linking, and what an unlinked detector does to the picture</h2>
+  <p>A stereo limiter has to decide whether the two channels share one gain envelope. Linked, both
+  are reduced by whatever the louder one demands. Unlinked, each is reduced on its own. The choice
+  shows up as movement in the stereo picture, and you can predict the size of it.</p>
+
+  <p>Take a hard-panned hit peaking 3&nbsp;dB over the ceiling in the left channel only. Unlinked,
+  the limiter removes 3&nbsp;dB from the left and nothing from the right, so for the length of
+  that reduction the two channels sit 3&nbsp;dB apart in a direction nobody wrote. An interchannel
+  level difference is precisely what a pan control makes, so the limiter has just panned your
+  record, briefly, on every hit.</p>
+
+  <p>Linked, both channels lose the same 3&nbsp;dB: the picture holds still, and the right channel
+  gets ducked by an event that never happened in it. That is the trade, whole. On a master, link.
+  On a wide source with genuinely independent sides, a partial link is the compromise, and
+  <a class="inline" href="/mono-compatibility/">mono compatibility</a> is where you check what you
+  chose.</p>
+
+  <p>Mid/side limiting asks the same question from the other end. Hold the mid down and let the
+  sides run, and the record widens as it gets louder &mdash; widening, specifically, the part of
+  it that a phone speaker cannot reproduce, which is most listening.
+  <a class="inline" href="/how-to-make-bass-audible-on-phone-speakers/">Bass on phone
+  speakers</a> covers what survives that trip, and
+  <a class="inline" href="/phase-cancellation/">phase cancellation</a> covers what happens to a
+  wide master when a club sums it.</p>
+
   <h2>Where the limiter sits in the chain</h2>
   <p>Last, and then dither, and then nothing. The order that works on a master bus is: everything
   musical, then the peak work, then the ceiling, then the word-length reduction if you are
@@ -396,6 +521,50 @@ h3{margin:28px 0 8px; font-size:17px; font-weight:600; line-height:1.4; color:va
   &plus;1.0&nbsp;dB puts a &minus;1&nbsp;dBTP master back at 0&nbsp;dBTP with the limiter none the
   wiser. Check both before every bounce. <a class="inline" href="/gain-staging/">Gain staging</a>
   covers the rest of the path.</p>
+
+  <h2>Limiting something that is not the master</h2>
+  <p>Almost all limiter advice assumes a master bus, and most of the limiters in a session are not
+  on one. The job changes when a single source is underneath, because a channel limiter is a catch
+  rather than a loudness tool, and different settings follow from that.</p>
+
+  <ul>
+    <li><strong>Vocals.</strong> Compress for the performance first, then limit only the two or
+    three loudest words, a decibel or two each. Ask a vocal limiter for six and the consonants
+    flatten into the vowels. <a class="inline" href="/how-to-mix-vocals/">How to mix vocals</a>
+    covers the stage before it.</li>
+    <li><strong>Bass and 808s.</strong> The worst place for one. The release floor above sets a
+    minimum of 24.3&nbsp;ms at 41.2&nbsp;Hz, and a channel limiter left on a default of a few
+    milliseconds is inside the waveform from the first note. Bend the peaks instead.
+    <a class="inline" href="/how-to-distort-808s/">How to distort 808s</a> has the alternative.</li>
+    <li><strong>Drum bus.</strong> A limiter here removes the exact transients you spent the
+    session building. If the bus needs to be louder, that is a compressor or a clipper doing it.
+    <a class="inline" href="/how-to-mix-drums/">How to mix drums</a> and
+    <a class="inline" href="/what-is-a-transient/">what is a transient</a>.</li>
+    <li><strong>Loops and one-shots.</strong> Legitimate, and the cleanest use there is: a limiter
+    on a loop with one rogue hit takes 4&nbsp;dB off one event and nothing off the rest of the
+    bar.</li>
+    <li><strong>A live input you are monitoring.</strong> Bypass it while tracking, and the reason
+    is the clock. A 128-sample buffer at 48&nbsp;kHz is 128&nbsp;/&nbsp;48000 = 2.67&nbsp;ms each
+    way, 5.33&nbsp;ms round trip, and a 1.5&nbsp;ms lookahead window pushes that to 6.83&nbsp;ms.
+    Singers hear that, and they compensate for it, and you get the take twice.</li>
+  </ul>
+
+  <h2>When the limiter works one band at a time</h2>
+  <p>A broadband limiter turns the whole record down when one part of it goes over, and that part
+  is almost always the bottom. Split the signal into bands and each gets its own detector, so a
+  kick stops taking the hi-hats with it. That is the argument for multiband limiting, and it is a
+  good one.</p>
+
+  <p>The cost arrives in the same box. Bands that move independently stop holding their balance,
+  so the tonal shape of the record now changes with level, and the crossovers shift phase around
+  every split point whether anything is being reduced or not.
+  <a class="inline" href="/multiband-compression/">Multiband compression</a> has the mechanism in
+  full.</p>
+
+  <p>There is a cheaper move that solves most of the same problem with none of that. High-pass the
+  limiter's detector, or take a decibel off the sub band before the limiter sees it, so the bottom
+  two octaves stop driving the gain envelope for everything above them. The balance stays put and
+  the kick stops acting as a volume pedal on your cymbals.</p>
 
   <h2>Doing it in Ableton, Logic and FL Studio</h2>
   <p>The method does not change and only the device names do. In Ableton Live, the Limiter goes at
@@ -455,6 +624,17 @@ h3{margin:28px 0 8px; font-size:17px; font-weight:600; line-height:1.4; color:va
     <li><strong>Image wander.</strong> A hard-panned hit moves the whole stereo picture. Cause: an
     unlinked detector reducing one side only. Link the channels, and check the result in
     <a class="inline" href="/mono-compatibility/">mono</a>.</li>
+    <li><strong>Ticking in the quiet bars.</strong> A faint click on isolated hits in an otherwise
+    empty passage. Cause: a release so short that the gain envelope has a corner in it rather than
+    a curve. Where to hear it: intros and fade-outs, monitored louder than you normally would.</li>
+    <li><strong>Glassy highs.</strong> Cymbals and air take on a hard edge that no EQ move removes.
+    Cause: gain-modulation products landing above the program, and fold-back if the detector path
+    is running without <a class="inline" href="/oversampling/">oversampling</a>. Where to hear it:
+    a ride pattern, on headphones.</li>
+    <li><strong>Loudness that stops arriving.</strong> You push another 3&nbsp;dB in and almost
+    nothing changes. Cause: the duty has reached the far end of the table above and the limiter is
+    working as a volume knob. Where to hear it: nowhere, which is the tell. Measure the integrated
+    loudness of two bounces instead of trusting your ears on it.</li>
   </ul>
 
   <h2>Where it costs you</h2>
@@ -541,6 +721,68 @@ h3{margin:28px 0 8px; font-size:17px; font-weight:600; line-height:1.4; color:va
   dynamics you traded away stay gone. <a class="inline" href="/how-loud-should-my-master-be/">How
   loud should my master be</a> has the argument in full.</p>
 
+  <h3>What does lookahead do on a limiter?</h3>
+  <p>It delays the audio by a few milliseconds so the detector sees a peak before the audio does,
+  and starts reducing gain on the way in rather than after the fact. That delay is the plugin's
+  reported latency: 1.5&nbsp;ms is 66 samples at 44.1&nbsp;kHz, 72 at 48&nbsp;kHz and 144 at
+  96&nbsp;kHz.</p>
+  <h3>Should I turn on oversampling on my limiter?</h3>
+  <p>If you are chasing a true-peak ceiling, yes, because the intersample peaks live between the
+  samples and a detector running at the session rate cannot see them. The cost is CPU and a little
+  more latency. <a class="inline" href="/oversampling/">Oversampling</a> explains what it is
+  doing.</p>
+  <h3>How many limiters should I use on a master?</h3>
+  <p>One, unless you have a reason for two. Two works when each has a different release time and a
+  moderate amount to do. Two identical limiters stacked because one was not enough just doubles
+  the depth and the duty, and doubles the damage with it.</p>
+  <h3>Why is my limiter not making my track louder?</h3>
+  <p>Because the duty has run away. Once the reduction is more or less constant, the limiter is
+  pulling back everything you push in, which is a volume knob with extra distortion. Bounce two
+  versions and measure the integrated loudness of each: if 3&nbsp;dB more drive bought less than a
+  decibel, stop and go upstream.</p>
+  <h3>Should I limit before or after saturation?</h3>
+  <p>After. Saturation reshapes peaks, so anything you saturate after the limiter puts the signal
+  back over the ceiling. The useful order is saturate, clip, then limit, so each stage hands the
+  next one a smaller job. <a class="inline" href="/how-to-use-saturation/">How to use
+  saturation</a> has that stage on its own.</p>
+  <h3>How do I know if my limiter is working too hard?</h3>
+  <p>Watch where the needle rests rather than how far it swings. A meter that returns to zero
+  between events is doing peak work; a meter that never quite gets home is doing level work, and
+  level work is what flattens a record. Then null-test it against the bypassed bounce: hearing the
+  bass line in the difference is the answer.</p>
+  <h3>What is the difference between a limiter and a brickwall limiter?</h3>
+  <p>A brickwall limiter guarantees the ceiling absolutely, usually with lookahead, and nothing
+  passes it. Anything else called a limiter is a very high ratio compressor that will let a fast
+  enough transient through. For a master you want the guarantee; for tone you might not.
+  <a class="inline" href="/limiter-vs-compressor/">Limiter vs compressor</a> has the line between
+  them.</p>
+  <h3>Should a stereo limiter be linked or unlinked?</h3>
+  <p>Linked on a master. An unlinked detector reduces one channel without the other, and a level
+  difference between channels is what a pan control produces, so a hard-panned hit drags the image
+  every time it lands. Unlinked has uses on wide stereo sources; a master is not one.</p>
+  <h3>Can a limiter fix a bad mix?</h3>
+  <p>No, and it will tell you which part is bad. Whatever is loudest and least controlled is what
+  drives the gain reduction, so if the meter slams on every kick, the kick is the mix problem. The
+  limiter is a very expensive diagnostic in that mode.
+  <a class="inline" href="/why-is-my-mix-muddy/">Why is my mix muddy</a> is the usual next
+  stop.</p>
+  <h3>What LUFS should I set my limiter to?</h3>
+  <p>A limiter does not set loudness, it sets a ceiling; the loudness comes from how hard you drive
+  it. Set the ceiling at &minus;1&nbsp;dBTP, then drive until the integrated reading hits your
+  target and check the gain reduction is still in range.
+  <a class="inline" href="/how-loud-should-my-master-be/">How loud should my master be</a> takes
+  the target apart.</p>
+  <h3>Why does my limiter sound worse on headphones than on speakers?</h3>
+  <p>Headphones hand you the bottom two octaves and the stereo picture in full, so both of the
+  things a limiter damages first are audible. Reduction inside a bass cycle and an image that
+  wanders on a hard-panned hit are nearly invisible on small speakers and obvious in a pair of
+  cans. Check both, and a phone, before you call it.</p>
+  <h3>Why does my kick disappear when I turn the limiter up?</h3>
+  <p>Because the kick is what is triggering the reduction, and a broadband detector turns the
+  whole record down every time the kick arrives &mdash; including the kick. High-pass the
+  detector, use a multiband split, or take the peak off the kick upstream with a clipper.
+  <a class="inline" href="/how-to-make-drums-hit-harder/">How to make drums hit harder</a> covers
+  the upstream version.</p>
   <h2>What BEEFY does</h2>
   <p>BEEFY is our saturation and loudness effect. <strong>SOFT CLIP</strong> opens switched on and
   brings rounded, fuzzy edges to the loudest parts, which is the upstream work that stops a limiter
@@ -555,6 +797,15 @@ h3{margin:28px 0 8px; font-size:17px; font-weight:600; line-height:1.4; color:va
   demo so you can hear the difference between rounding a peak and holding a ceiling over it before
   you decide. <a class="inline" href="/how-to-master-a-beat/">How to master a beat</a> puts both
   stages in order.</p>
+
+  <p>Those two switches are the two halves of this page, and they are separate choices.
+  SOFT CLIP is the upstream half: rounded edges on the loudest parts, which is how decibels come
+  out of the peak-to-loudness gap before any ceiling gets involved. LIMIT is the downstream half,
+  holding the output peaks in check. Turn both off and you are pushing it yourself, which is the
+  setting to use when a limiter you already trust lives at the end of your master chain. $19, Mac
+  and Windows, and the product page has a 28-second demo with three without/with comparisons on
+  it. <a class="inline" href="/cheapest-way-to-make-beats-louder/">The cheapest way to make beats
+  louder</a> puts the same argument in money.</p>
 
   <p>Last in the chain, and the least it has to do, the better it sounds.</p>
 

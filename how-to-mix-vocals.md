@@ -57,6 +57,28 @@ Work in whole decibels and expect a long list. Two dB is about the smallest move
 
 Verify it with a meter rather than with optimism. Put a level meter after the rides with everything else bypassed, run the verse, and watch the peak hold. If the loudest words land inside a 4 to 5 dB window, the rides are finished. If the window is still ten dB wide you stopped early, and the compressor downstream is about to do that work badly and audibly. A [VU meter](https://gazillionindustries.com/vu-meter/) is the friendlier tool here, because it reads something close to what your ear weighs rather than the peaks your ear ignores.
 
+## What the recording already decided
+
+Some takes fight the rides, and the reason sits upstream of the session. Two things are fixed at the microphone and no fader undoes either: how much room came in with the voice, and how steady the distance was while the rapper moved.
+
+Distance is arithmetic. Level from a source falls as the square of distance, so halving the gap from 30 cm to 15 cm raises the direct sound by 20 × log10(30 / 15) = 6.02 dB. The reflection off the wall behind the singer travels almost the same path either way and arrives at the level it always did. Move in by half and the ratio of voice to room improves by that whole 6.02 dB, which is a larger change than anything else on this page will make. A directional microphone also thickens as it closes in, which is a property of the pattern rather than a fault, and it is one reason the right high-pass corner depends on how the take was sung as well as on the voice.
+
+The room arrives as a comb filter, and you can write the nulls down. A reflection whose path is 0.6 m longer than the direct path lands 0.6 / 343 = 1.75 ms late. Nulls fall at (2k + 1) / (2d), so 286 Hz, then 857 Hz, then 1,429 Hz, with peaks between them at 572 and 1,143 Hz. That pattern is baked into the file. EQ can lower a peak. Nothing refills a null. [Phase cancellation](https://gazillionindustries.com/phase-cancellation/) is the same mechanism you will meet again between two doubles.
+
+Converter headroom is the one resource nobody has to ration. A 24-bit file carries 6.02 × 24 = 144.5 dB of theoretical range, so a take peaking at −18 dBFS still sits 126.5 dB above the floor of the box that recorded it. Set the input gain once, put the peaks near −18 dBFS, and leave it there for the session. Chasing a hot input buys nothing measurable and costs you the one take where the performance actually went somewhere.
+
+## Tuning belongs ahead of step one
+
+If the take is getting tuned, tune it before anything else touches it. A corrector tracks the fundamental, and every stage below either changes the balance between that fundamental and its harmonics or manufactures new harmonics outright. Hand a tracker a saturated signal and you have given it five extra components to argue with.
+
+Put the correction in numbers before you set the speed. One semitone is a frequency ratio of 21/12 = 1.059463, which is 5.95 percent. A note 30 cents flat sits at a ratio of 230/1200 = 1.01748, so an A4 that should be 440.00 Hz arrives at 440.00 / 1.01748 = 432.4 Hz, seven and a half hertz low. Thirty cents is just under a third of a semitone, and it is around where a listener starts calling the note out.
+
+Retune speed is a time constant, and what it competes with is vibrato. Measure the singer's own rate: count the wobbles in one held note against the grid. At 5.5 Hz a cycle lasts 1 / 5.5 = 182 ms, so a retune faster than about 91 ms is inside the vibrato and starts ironing it into a straight line, while a retune slower than 182 ms never catches a short note at all. Everything audible about the effect lives between those two numbers, and both of them come from the performance rather than from a preset.
+
+Large intervals carry the formants with them when the tool is the simple kind. Push a note up a semitone and a 2,800 Hz formant goes to 2,800 × 1.059463 = 2,966 Hz, which is the sound people describe as a smaller singer standing further away. [Formant shifting](https://gazillionindustries.com/formant-shifting/) is the control that separates the two, and [changing pitch without changing tempo](https://gazillionindustries.com/how-to-change-pitch-without-changing-tempo/) covers the wider case.
+
+Print the tuned take to a new file before you start the rides. Forty clip-gain moves drawn against audio you are about to replace is forty moves drawn twice.
+
 ## The chain
 
 - Set the vocal level against the beat with everything bypassed.
@@ -112,6 +134,38 @@ Compression makes sibilance worse, which decides its place in the chain. A compr
 Find the frequency rather than trusting a default. Put a bell at +9 dB with a Q around 6 and sweep it from 4 kHz to 10 kHz over a line with a hard s in it. Stop where it becomes unbearable and read the number. Remove the boost, put a de-esser or a narrow band compressor at that frequency, and take 3 to 6 dB off only while the s is happening. Keep the sweep quick: a parked boost retunes your ear in about twenty seconds and then it starts lying to you.
 
 Check a held vowel afterward. A de-esser working over too wide a band takes the top off the whole voice, and the signature is a singer who seems to turn away from the microphone on every word containing an s. [Multiband compression](https://gazillionindustries.com/multiband-compression/) is the same idea with more bands.
+
+## Breaths, room noise and why a gate usually loses
+
+Compression is what turns a breath into a problem, and the arithmetic says by exactly how much. Take a breath sitting 20 dB under the words. Six decibels of reduction lands on the words and none of it on the breath, so the gap closes to 14 dB. Add the 6 dB of makeup that puts the words back where they were and the breath rides up with it: the same 14 dB gap, and a breath that is now 6 dB louder in absolute terms than when you started. That is the plugin doing exactly what you asked it to do.
+
+The meter will not help you here. A breath 20 dB down adds 10 × log10(1 + 10−2) = 0.043 dB to the channel, which is nothing. The ear catches it anyway, because it arrives in a gap with no word on top of it.
+
+A gate is the obvious tool and it usually loses. At six syllables a second a syllable lasts 167 ms, and the silent closure inside a hard consonant is shorter than that, so any hold time quick enough to shut between lines is also quick enough to shut inside single words. You hear that as chattering. Raise the hold above roughly 150 ms to stop the chatter and the gate no longer closes anywhere you wanted it to.
+
+- Set the rides and the compressor first, so you edit breaths at the level they will have.
+
+- Pull each breath down 6 to 10 dB with clip gain and leave it audible.
+
+- Delete a breath only where the beat covers the hole.
+
+- Crossfade every deletion by 5 to 10 ms so the room tone does not step.
+
+- Play the verse against the beat and check the rapper still sounds like he inhales.
+
+Silence is the tell. A verse with every breath stripped reads as manufactured before a listener can say why, because a voice that never takes air is a thing nobody has heard in a room.
+
+## Parallel compression, and the arithmetic of a blend
+
+Parallel compression raises the quiet detail in a voice without flattening the loud words. Send the vocal to a bus, compress that copy hard — 10:1, fast attack, 10 dB or more of reduction — and blend it underneath the dry channel.
+
+Blend level adds coherently, because both paths carry the same performance, and that makes it louder per decibel than the double arithmetic further down this page. A return sitting 6 dB under the dry adds 1 + 10−6/20 = 1.501, which is 20 × log10(1.501) = 3.52 dB. At 3 dB under it is 1 + 0.708 = 1.708, or 4.65 dB. Two separate takes summing incoherently give you 3.01 dB for the same fader position, and the gap between 3.52 and 3.01 is the reason a blend gets loud faster than a stack does. [Parallel compression](https://gazillionindustries.com/parallel-compression/) has the general case.
+
+Latency is the failure everybody meets. If the parallel chain carries a delay the host has not compensated, the two paths comb: 1 ms of offset puts the first null at 1 / (2 × 0.001) = 500 Hz, and 2 ms puts it at 250 Hz, straight through the chest of the voice. Test it in ten seconds. Bypass the compressor on the return, match its level to the dry, flip the polarity, and listen. An aligned pair cancels to silence. Whatever is left over is offset, and it was being added to your mix as tone.
+
+Filter the return before you judge the blend. High-pass it at 200 to 300 Hz and it brings presence, consonants and breath without stacking more of the chest you already set with the channel high-pass. [Parallel saturation](https://gazillionindustries.com/parallel-saturation/) is the same routing with a different device in it.
+
+The cost is specific and it is not small. A parallel path raises exactly the quiet material it was built to raise, which on a rap vocal means mouth noise, chair, air conditioning and every breath you had just finished taming. Budget an editing pass for it or use less of it.
 
 ## Saturation on a vocal, counted
 
@@ -175,6 +229,16 @@ Above roughly 30 ms the ear stops fusing the two and starts hearing a second voi
 
 Ad-libs take the lead's treatment and then go further — more delay, more filtering, less level. A quiet ad-lib sitting 10 dB under the lead adds 10 × log10(1 + 10−1) = 0.41 dB to the channel. It is there for content rather than for level, which is the permission you needed to keep it low.
 
+## The vocal bus, and what belongs on it
+
+Route the lead, the doubles and the ad-libs to one bus and the group starts acting like a single instrument against the beat. One fader then moves the whole vocal, which is the move you will make twenty times before the mix is finished, and it is the move that keeps a chorus from drifting 2 dB away from the verse.
+
+Keep the bus gentle and keep it general. One to two decibels of reduction on a slow compressor is the entire job. The bus is there to tie the parts together, and every decibel it takes is a decibel off a crest that three earlier stages have already been spending. [Glue compression](https://gazillionindustries.com/glue-compression/) is the name for that small amount.
+
+Three things stay on the channel. De-essing, because a lead and a filtered ad-lib do not share a sibilance frequency and one detector cannot serve both. Rides, because they were written against one specific performance. And heavy saturation, because a nonlinear stage acting on a sum lets the loud part modulate the quiet one: the lead pushes the ad-libs down on every word and drags them back up in the gaps, which is a kind of ducking nobody asked for.
+
+Print it when the decisions stop changing. Bounce the finished vocal bus to one file at the project rate and depth and keep the session beside it. A printed vocal loads instantly on the device you are checking it on, it survives the plugin you uninstall next month, and it forces the decision that a chain full of live plugins lets you postpone for weeks.
+
 ## Host by host
 
 The arithmetic is identical in every DAW and the controls are not. Four differences are worth knowing before you start drawing lines.
@@ -186,6 +250,48 @@ Logic Pro carries region gain in the Region inspector for the same job, and DeEs
 FL Studio does the rides with automation clips on a Fruity Balance volume placed first in the channel, or by slicing the take in the playlist and setting each clip's gain. Fruity Limiter in COMP mode is the compressor, Maximus with a single high band is the de-esser, and Fruity Soft Clipper takes the peaks. Mixer inserts run top down, so the chain order above is simply which slot you drop each one into.
 
 Pro Tools has Clip Gain, which is the cleanest expression of this whole page: the rides live on the clip as a visible line, ahead of every insert, and they survive when you rebuild the chain above them.
+
+REAPER puts the same control on the take rather than on the track. Take volume and take volume envelopes sit ahead of the track FX chain, so a ride drawn there reaches ReaComp already corrected. ReaEQ handles the high-pass and ReaXcomp with only the top band active does the de-essing.
+
+Studio One keeps Event Volume and an event volume envelope on the audio event itself, both ahead of the channel inserts, so the rides live on the clip in the arrangement where you can see them. Fat Channel carries the high-pass, the gate and the compressor in one insert slot if you would rather not stack four plugins on a vocal.
+
+Cubase carries clip gain in the Info Line and a volume handle on every audio event, and VariAudio does the tuning inside the sample editor. Both of those keep the pitch work and the level work ahead of the inserts, which is where this page has been arguing they belong.
+
+Bitwig Studio sets gain per audio event in the clip editor, and a Tool device dropped first in the chain gives you an automatable trim in front of the compressor when you want the line drawn on the timeline instead of inside the clip.
+
+One thing worth checking in whichever you use: delay compensation on a parallel path. All of these compensate plugin latency across an ordinary insert chain. Sends into a bus are where hosts and plugins differ, and the polarity test above settles it for your setup in the time it takes to read this sentence.
+
+## A whole verse, with the numbers written down
+
+Here is one pass end to end at 88 BPM, so every setting on this page arrives with a figure attached. Sixteen bars at 88 BPM runs 16 × 4 × 60 / 88 = 43.6 seconds. A quarter is 60000 / 88 = 681.8 ms, an eighth 340.9 ms, a sixteenth 170.5 ms. Every time constant below comes out of those three numbers.
+
+- **Tune.** Retune speed 100 ms, just above half of this singer's 182 ms vibrato cycle. Print to a new file.
+
+- **Ride.** Loudest word to quietest measures 16 dB. Around thirty clip-gain moves in 2 dB steps close it to 4 dB. Peak now reads −6.0 dBFS.
+
+- **High-pass.** The voice bottoms out on A2, 110.00 Hz. Corner at 90 Hz, 24 dB per octave. The fundamental sits 1200 × log2(110 / 90) = 347 cents above the corner, where the filter is 0.79 dB down, less than half the 2 dB that reads as a change on a word.
+
+- **Cut.** One bell, −3 dB at 240 Hz, Q 4, on the single note that booms.
+
+- **Compress.** 3:1, attack 8 ms, release 120 ms, under the 170.5 ms sixteenth. Threshold set for 5 dB on the loud words, so those words are arriving 7.5 dB over it: 7.5 − 7.5 / 3 = 5.
+
+- **De-ess.** The sweep found the sting at 6.8 kHz. Take 4 dB, only while the s happens.
+
+- **Saturate.** The 110 Hz fundamental gets company at 220, 330, 440, 550 and 660 Hz. The 550 Hz one is the first a handset can really move.
+
+- **Clip.** Three decibels off the tallest consonants, 3 dB back on the output. Peak returns to −6.0 dBFS, average rises 3 dB, crest falls from 15 dB to 12 dB.
+
+- **Duck the beat.** 2 dB of reduction on the instrumental bus keyed from the vocal, attack 5 ms, release 150 ms so it lifts again inside the sixteenth.
+
+- **Delay.** Dotted eighth, 1.5 × 340.9 = 511.4 ms, which is exactly three sixteenths. Feedback at 10−3/20 = 0.708, about 70 percent on a dial marked in percent, giving 3 dB per repeat and ten repeats before it is 30 dB down.
+
+- **Reverb.** Pre-delay 30 ms, high-pass the return at 300 Hz, low-pass at 8 kHz, ducked from the dry vocal.
+
+- **Check.** Bounce it, play it off a phone at arm's length, and write down what you cannot follow.
+
+Add up what the chain spent. Three decibels at the clipper, plus at most the 5 dB the compressor took if all of it came off peaks, which it never quite does. Starting from a raw take with 20 dB of crest you are handing the mix bus something around 12 dB, and that remainder is the entire budget the master has to work with. [Getting a mix louder without clipping](https://gazillionindustries.com/how-to-make-mix-louder-without-clipping/) is an argument about this number, and [how loud a master should be](https://gazillionindustries.com/how-loud-should-my-master-be/) is the other half of it.
+
+**BEEF at 96.** Past where a lead vocal usually wants to live.
 
 ## How to check it in your own session
 
@@ -226,6 +332,20 @@ Step two is the cheapest improvement available to anybody reading this. Your ear
 - **Harsh on earbuds**: drive landing in the 2 to 5 kHz range — see [why a mix sounds harsh](https://gazillionindustries.com/why-is-my-mix-harsh/)
 
 - **Cloudy under the verse**: 200 to 400 Hz stacking up across doubles — see [why a mix sounds muddy](https://gazillionindustries.com/why-is-my-mix-muddy/)
+
+- **Tuning audible as a slide between notes**: retune speed faster than half the singer's vibrato cycle
+
+- **Breath louder than the word before it**: makeup gain raised the breath by the same amount it raised the words
+
+- **Gate chattering inside words**: hold shorter than a syllable — edit the breaths by hand instead
+
+- **Parallel blend comes out thinner**: uncompensated offset on the send — bypass, flip polarity, listen for the null
+
+- **Ad-libs ducking whenever the lead sings**: a nonlinear stage on the vocal bus letting the loud part modulate the quiet one
+
+- **Chorus and verse at different levels**: no vocal bus — you have been balancing four faders against each other
+
+- **Room arriving with the voice**: microphone distance, not EQ — halving it buys 6.02 dB of direct sound
 
 - **Great soloed, lost in the mix**: you mixed the vocal instead of mixing the record
 
@@ -291,6 +411,70 @@ There is no universal number, and the check beats the number anyway: bounce the 
 
 Only where the arrangement wants weight. Two real takes sum for about 3.01 dB and sound wide; a copied track sums for 6.02 dB and sounds louder in the middle. Watch the timing, because 15 ms of slip puts a null at 100 Hz, right in the chest of the voice.
 
+### How do I mix vocals for beginners?
+
+Two moves, and ignore everything else until they are done. Set the vocal level against the beat with every plugin bypassed. Then go through the take with clip gain and raise the words that disappear and lower the ones that jump. Those two get most of the distance. Add one compressor at 3:1 taking 3 dB once the take is already even.
+
+### Where does autotune go in the vocal chain?
+
+First, ahead of everything, on the raw take. A corrector tracks the fundamental, and compression, saturation and clipping all change the relationship between the fundamental and its harmonics. Print the tuned take to a new file before you start the rides.
+
+### Should I tune vocals before or after mixing?
+
+Before. Tuning replaces the audio, so any rides or edits drawn against the old audio have to be drawn again. Doing it first costs nothing, because pitch correction changes nothing about level.
+
+### How do I get rid of breaths in vocals?
+
+Pull them down 6 to 10 dB with clip gain rather than deleting them, after the compressor is set, because the compressor's makeup gain is what made them loud in the first place. A breath 20 dB under the words adds 0.043 dB to the channel, so no meter is going to help. Strip them all out and the verse reads as manufactured.
+
+### Is parallel compression worth it on vocals?
+
+When you want the quiet detail up and the loud words left alone, yes. Both paths carry the same signal, so they add coherently: a return 6 dB under the dry adds 3.52 dB, against the 3.01 dB two separate takes would give you. Check the send for latency first, because 1 ms of uncompensated offset puts a comb null at 500 Hz.
+
+### Do I need a de-esser?
+
+Only if the s is stabbing after the compressor. Sweep a +9 dB bell with a Q around 6 from 4 kHz to 10 kHz to find the frequency first. Plenty of takes turn out to want 3 dB at one spot rather than a plugin with a preset on it.
+
+### Why do my vocals sound muffled?
+
+Look at the reverb return before you look at the voice. A tail that has not been high-passed stacks 200 to 400 Hz behind every word, and a de-esser working over too wide a band takes the top off the whole take. Then check you are not answering a 1 to 4 kHz shortage by adding low mids, which buries it further.
+
+### How do I mix vocals in Ableton?
+
+Same order, Ableton's controls. Rides go in Clip View as clip gain, which sits ahead of the device chain, so Compressor receives the corrected level. Multiband Dynamics with only the high band active is the de-esser, Saturator is the drive, and Compressor's sidechain tab does the duck on the beat bus.
+
+### Should reverb go on the vocal channel or on a send?
+
+A send. The dry vocal keeps its own path, one reverb serves the lead, the doubles and the ad-libs at three different amounts, and you can key a compressor on the return from the dry vocal so the tail is held down while the words happen and blooms in the gaps.
+
+### Should the vocal be in mono or stereo?
+
+The lead sits in the middle on almost every record you like. Width comes from the doubles and ad-libs placed around it and from the delay and reverb returns. Sum to mono and check: a lead that changes level when you do has a stereo effect sitting on the channel that belongs on a send.
+
+### What sample rate should I mix vocals at?
+
+The project rate. The only number on this page it moves is the ceiling: at 44.1 kHz digital audio carries nothing above 22,050 Hz and at 48 kHz nothing above 24,000 Hz, and whatever a saturator makes past the ceiling folds back down. Handle that at the saturator rather than by rebuilding the session.
+
+### How loud should the vocal be for streaming?
+
+Loudness normalization applies one gain change to the whole file, so it moves the vocal and the beat by the same amount and changes nothing about the balance between them. Set the balance for the record and let the platform set the level.
+
+### Why does my vocal sound different in headphones and on speakers?
+
+Headphones hand each ear one channel with no crosstalk and no room, so a double or a wide reverb reads far wider than it will over speakers. Decide the width on speakers, confirm it in headphones, and sum to mono for the verdict.
+
+### What is the best compressor setting for rap vocals?
+
+3:1, attack 8 to 10 ms so the consonant burst survives, release under a quarter of a beat so it recovers between syllables, and threshold set for 3 to 6 dB on the loud words. At 90 BPM that release ceiling is 60000 / 90 / 4 = 166.7 ms.
+
+### How many plugins should be on a vocal?
+
+Fewer than are on it now, in most sessions. The chain on this page is a high-pass, one compressor, a de-esser and a saturator, with a delay and a reverb on sends. A second compressor earns its slot when the first one is being asked for more than 6 dB.
+
+### How far from the microphone should the vocal be?
+
+Close, and steady. Halving the distance from 30 cm to 15 cm raises the direct sound by 6.02 dB while the reflection off the back wall arrives at the level it always did, so the voice gains that whole 6.02 dB on the room. The cost is that a directional microphone thickens as it closes in, and that every head movement becomes a level move you will be drawing back out later.
+
 ## What BEEFY does
 
 BEEFY is a saturation and loudness effect for making sounds thicker, punchier and more up front. There is no drum-only rule: the page invites a thin synth, a chopped sample, an electric piano, a guitar or a vocal that could use some attitude. **BEEF** brings weight, density and loudness; **COOK** changes the color and bite from rounder toward brighter; **JUICE** sets the level going in. **SOFT CLIP** opens switched on and brings rounded, fuzzy edges to the loudest parts.
@@ -300,6 +484,10 @@ On a vocal, placement decides most of the result. Put it after the compressor an
 SOFT CLIP and LIMIT are two answers to the same loudest consonant, and on a voice they do not sound alike. Soft clipping rounds the top of the waveform and leaves the word feeling immediate. Limiting pulls the level down around the peak, which can take the front edge of the consonant with it — the exact thing this page spent a section protecting. [Soft clipping explained](https://gazillionindustries.com/soft-clipping-explained/) and [how to use a limiter](https://gazillionindustries.com/how-to-use-a-limiter/) cover the choice. The product page says SOFT CLIP opens switched on and takes care of the initial gain staging, so the first move is to raise BEEF and listen rather than to hunt for a magic input level. BEEFY runs on Mac and Windows as AU, VST3 and standalone, and it is $19.
 
 **LIMIT** instead, everything else identical.
+
+Two practical notes for a vocal session. The panel opens at 80 percent and remembers whatever size you leave it at, which counts for something when it is sharing a laptop screen with a de-esser, a delay and the arrangement. And the input and output clip lights are the quickest read on whether JUICE is feeding it too hard, before you have decided anything at all about BEEF.
+
+You can also run it alongside the dry voice rather than across it. Put BEEFY on a send, blend it under the channel, and the arithmetic from the parallel section applies unchanged: a return 6 dB under the dry adds 3.52 dB, a return 3 dB under adds 4.65 dB. Bypass the plugin rather than winding BEEF down when you A/B it, match the levels to a tenth of a dB, and keep it only if the words got clearer. [Parallel saturation](https://gazillionindustries.com/parallel-saturation/) has the routing, and [saturation plugins](https://gazillionindustries.com/best-saturation-plugins/) lists what else is in the category, free and paid.
 
 If the beat underneath is the part that needs holding together rather than the voice on top, [DRUGS](https://gazillionindustries.com/drugs.html) is our free one-knob bus compressor for drums, Mac and Windows, with a DOSE control, a GAIN control and a soft ceiling on the way out. Judge it by bypassing the plugin rather than by turning DOSE down, because DOSE at zero is not unity and is still part of the sound.
 

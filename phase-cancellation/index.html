@@ -47,7 +47,7 @@ fbq('init', '1164684366890206');
 fbq('track', 'PageView');
 }
 </script>
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"TechArticle","@id":"https://gazillionindustries.com/phase-cancellation/#article","headline":"Phase cancellation","description":"Why two versions of one sound cancel each other, the difference between polarity and phase, what comb filtering actually is, and how to find and fix it.","image":"https://gazillionindustries.com/beefy/cover.png","inLanguage":"en","datePublished":"2026-09-20","dateModified":"2026-09-24","url":"https://gazillionindustries.com/phase-cancellation/","mainEntityOfPage":"https://gazillionindustries.com/phase-cancellation/","author":{"@id":"https://gazillionindustries.com/#gazillion"},"publisher":{"@id":"https://gazillionindustries.com/#gazillion"},"about":{"@type":"SoftwareApplication","name":"BEEFY","url":"https://gazillionindustries.com/beefy.html"},"isPartOf":{"@id":"https://gazillionindustries.com/reading-material/#page"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Gazillion Industries","item":"https://gazillionindustries.com/"},{"@type":"ListItem","position":2,"name":"Reading material","item":"https://gazillionindustries.com/reading-material/"},{"@type":"ListItem","position":3,"name":"Phase cancellation","item":"https://gazillionindustries.com/phase-cancellation/"}]},{"@type":"Organization","@id":"https://gazillionindustries.com/#gazillion","name":"Gazillion Industries LLC","alternateName":"Gazillion Industries","url":"https://gazillionindustries.com/"},{"@type":"FAQPage","@id":"https://gazillionindustries.com/phase-cancellation/#faq","mainEntity":[{"@type":"Question","name":"How do I get rid of phase issues?","acceptedAnswer":{"@type":"Answer","text":"Check in mono, find the pair of tracks that gets thinner together, try polarity inversion, and if that does not do it, time-align the tracks by nudging one until the low end returns."}},{"@type":"Question","name":"What happens when you invert the phase of audio?","acceptedAnswer":{"@type":"Answer","text":"The polarity button flips the waveform upside down at all frequencies. Against an identical copy it produces silence; against a related signal it can either fix or worsen the cancellation."}},{"@type":"Question","name":"How can you tell if microphones are out of phase?","acceptedAnswer":{"@type":"Answer","text":"Sum them to mono and flip the polarity of one. Whichever setting gives you more low end and a bigger sound is the correct one. If neither sounds right, you have a timing offset rather than a polarity problem."}},{"@type":"Question","name":"Does phase cancellation affect bass the most?","acceptedAnswer":{"@type":"Answer","text":"Low frequencies have long wavelengths, so they survive small offsets that destroy the top end. But when low frequencies do cancel, you lose the part of the record carrying the weight, which is why it feels like a bass problem."}}]}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"TechArticle","@id":"https://gazillionindustries.com/phase-cancellation/#article","headline":"Phase cancellation","description":"Why two versions of one sound cancel each other, the difference between polarity and phase, what comb filtering actually is, and how to find and fix it.","image":"https://gazillionindustries.com/beefy/cover.png","inLanguage":"en","datePublished":"2026-09-20","dateModified":"2026-09-24","url":"https://gazillionindustries.com/phase-cancellation/","mainEntityOfPage":"https://gazillionindustries.com/phase-cancellation/","author":{"@id":"https://gazillionindustries.com/#gazillion"},"publisher":{"@id":"https://gazillionindustries.com/#gazillion"},"about":{"@type":"SoftwareApplication","name":"BEEFY","url":"https://gazillionindustries.com/beefy.html"},"isPartOf":{"@id":"https://gazillionindustries.com/reading-material/#page"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Gazillion Industries","item":"https://gazillionindustries.com/"},{"@type":"ListItem","position":2,"name":"Reading material","item":"https://gazillionindustries.com/reading-material/"},{"@type":"ListItem","position":3,"name":"Phase cancellation","item":"https://gazillionindustries.com/phase-cancellation/"}]},{"@type":"Organization","@id":"https://gazillionindustries.com/#gazillion","name":"Gazillion Industries LLC","alternateName":"Gazillion Industries","url":"https://gazillionindustries.com/"},{"@type":"FAQPage","@id":"https://gazillionindustries.com/phase-cancellation/#faq","mainEntity":[{"@type":"Question","name":"How do I get rid of phase issues?","acceptedAnswer":{"@type":"Answer","text":"Check in mono, find the pair of tracks that gets thinner together, try polarity inversion, and if that does not do it, time-align the tracks by nudging one until the low end returns."}},{"@type":"Question","name":"What happens when you invert the phase of audio?","acceptedAnswer":{"@type":"Answer","text":"The polarity button flips the waveform upside down at all frequencies. Against an identical copy it produces silence; against a related signal it can either fix or worsen the cancellation."}},{"@type":"Question","name":"How can you tell if microphones are out of phase?","acceptedAnswer":{"@type":"Answer","text":"Sum them to mono and flip the polarity of one. Whichever setting gives you more low end and a bigger sound is the correct one. If neither sounds right, you have a timing offset rather than a polarity problem."}},{"@type":"Question","name":"Does phase cancellation affect bass the most?","acceptedAnswer":{"@type":"Answer","text":"Low frequencies have long wavelengths, so they survive small offsets that destroy the top end. But when low frequencies do cancel, you lose the part of the record carrying the weight, which is why it feels like a bass problem."}},{"@type":"Question","name":"What does phase cancellation sound like?","acceptedAnswer":{"@type":"Answer","text":"Below about 3&nbsp;ms of offset it sounds hollow and slightly metallic, like a fixed flanger that never moves. Past 5&nbsp;ms it sounds thin and weightless. Past about 25&nbsp;ms it stops sounding like a filter and starts sounding like a short echo."}},{"@type":"Question","name":"Is phase cancellation the same as comb filtering?","acceptedAnswer":{"@type":"Answer","text":"Comb filtering is what partial phase cancellation from a time offset produces: a series of evenly spaced notches at (2k+1)&nbsp;/&nbsp;2&tau; hertz. Full cancellation, where two identical signals of opposite polarity sum to silence, is the special case with no notches because nothing survives."}},{"@type":"Question","name":"How many samples should I nudge a track?","acceptedAnswer":{"@type":"Answer","text":"Measure rather than guess. Read the spacing between two adjacent notches on an analyzer, take its reciprocal for the delay in seconds, and multiply by the sample rate. Notches 500&nbsp;Hz apart mean 2&nbsp;ms, which is 88 samples at 44.1&nbsp;kHz and 96 at 48&nbsp;kHz."}},{"@type":"Question","name":"Can I fix phase cancellation with EQ?","acceptedAnswer":{"@type":"Answer","text":"No. At the bottom of a null there is no signal to boost, and the notch from a 1&nbsp;ms offset is only 101&nbsp;Hz wide at its 10&nbsp;dB points, needing a Q near 5 &mdash; and there is another one every 1,000&nbsp;Hz above it. Move the track in time instead."}},{"@type":"Question","name":"Does saturation fix phase cancellation?","acceptedAnswer":{"@type":"Answer","text":"It hides some of it. Harmonics created after the cancellation land at multiples of what survived and partially refill the notches, so the spectrum flattens out while the recording's original content at those frequencies stays gone. Align first."}},{"@type":"Question","name":"Why do my layered kicks lose low end?","acceptedAnswer":{"@type":"Answer","text":"Their attacks are not aligned. A 5&nbsp;ms offset puts the first null at 100&nbsp;Hz, which is where the weight lives. Snap both attacks to the same sample and the two layers add instead of fighting."}},{"@type":"Question","name":"Why does my mix sound thin in mono?","acceptedAnswer":{"@type":"Answer","text":"Something in it is built from left-against-right offsets or opposed polarity, which stays audible while the channels are separate and cancels the moment they sum. Wideners, Haas delays and mid/side tricks are the usual culprits."}},{"@type":"Question","name":"Why does flipping polarity make my bass disappear?","acceptedAnswer":{"@type":"Answer","text":"Because the two sources were already in polarity with each other. Inverting swaps the sum from a cosine shape to a sine shape, and a sine is nought at nought hertz, so everything the two share at the bottom cancels. The flip is right only when the sources genuinely oppose, such as a top and bottom microphone on the same drum."}},{"@type":"Question","name":"Is 180 degrees out of phase the same as inverted polarity?","acceptedAnswer":{"@type":"Answer","text":"Only for a single steady frequency. A polarity invert flips every frequency at once; a 180-degree phase shift applies at one frequency and a different angle at every other one. For broadband material they are different operations with different results."}},{"@type":"Question","name":"Does phase cancellation only happen with microphones?","acceptedAnswer":{"@type":"Answer","text":"No. Layered samples, duplicated tracks, stereo wideners, detuned unison, multiband crossovers, parallel chains with uncompensated latency and reamped bass all produce it, and none of them involve a room."}},{"@type":"Question","name":"Does plugin latency cause phase problems?","acceptedAnswer":{"@type":"Answer","text":"It can. Hosts compensate reported latency automatically, and the failure cases are the ones where latency goes unreported &mdash; external hardware inserts, certain send configurations, some sample-rate-converting plugins. Test the rig by nulling a bypassed instance against a bare copy of the same print before you blame the take."}},{"@type":"Question","name":"What is the 3 to 1 rule?","acceptedAnswer":{"@type":"Answer","text":"Place the second microphone at least three times as far from the source as the first one is. The spill then arrives about 9.5&nbsp;dB down, which limits the comb ripple to roughly 6&nbsp;dB &mdash; audible, but not ruinous. At twice the distance the ripple is 9.5&nbsp;dB; at five times it is 3.5&nbsp;dB."}},{"@type":"Question","name":"Does phase cancellation affect loudness?","acceptedAnswer":{"@type":"Answer","text":"Directly. Two aligned copies sum to +6.02&nbsp;dB, at 90 degrees apart to +3.01&nbsp;dB, and at 120 degrees apart to nothing at all over one source alone. Half your stacking can vanish with no hollowness to warn you."}},{"@type":"Question","name":"Should I use a phase alignment plugin?","acceptedAnswer":{"@type":"Answer","text":"Try the free route first, because it solves most of it: polarity invert, then a sample-accurate nudge measured off an analyzer. Paid alignment tools earn their place on sources where the offset changes across the spectrum, such as a speaker plus a direct feed, which a single delay cannot correct."}},{"@type":"Question","name":"Does EQ cause phase shift?","acceptedAnswer":{"@type":"Answer","text":"A minimum-phase EQ does, around every band you move. That matters here because EQ-ing one of two layered tracks changes their alignment near the corner frequency, so a sweetening move can make a stack worse. Align first, then EQ."}},{"@type":"Question","name":"Is linear-phase EQ the fix for phase problems?","acceptedAnswer":{"@type":"Answer","text":"No. It avoids adding phase shift of its own, which is a different thing from removing an existing time offset between two tracks. It also introduces latency and pre-ringing, so it is a tool with a cost rather than a repair."}},{"@type":"Question","name":"Can you hear phase cancellation on headphones?","acceptedAnswer":{"@type":"Answer","text":"You hear less of it, which is the trap. Headphones keep the channels apart, so left-against-right cancellation never happens at your ears. Check on a mono speaker, or fold to mono and listen there."}},{"@type":"Question","name":"How do I check phase in my DAW?","acceptedAnswer":{"@type":"Answer","text":"Sum to mono, solo pairs, and use the polarity invert to compare. A correlation meter helps as a warning light &mdash; sustained negative readings mean something is opposed &mdash; but the notch spacing on a spectrum analyzer is what tells you the actual delay."}},{"@type":"Question","name":"What delay is too long to be phase cancellation?","acceptedAnswer":{"@type":"Answer","text":"Somewhere between 4 and 13&nbsp;ms the comb stops being audible as a filter, because the teeth become narrower than the ear's resolving bandwidth &mdash; 133&nbsp;Hz at 1&nbsp;kHz, so a spacing under that, meaning a delay past 7.5&nbsp;ms, gets averaged away. Past about 25&nbsp;ms you are hearing an echo instead."}},{"@type":"Question","name":"Can two different sounds cancel each other?","acceptedAnswer":{"@type":"Answer","text":"They can subtract at frequencies they share, and often do around a kick and a bass note. What they cannot produce is the evenly spaced notch pattern, because that requires the same waveform arriving twice. A regular comb means a duplicate exists somewhere."}}]}]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&display=swap">
@@ -180,6 +180,8 @@ h3{margin:28px 0 8px; font-size:17px; font-weight:600; line-height:1.4; color:va
       <dt>Total</dt><dd>identical signals, opposite polarity, cancel to nothing</dd>
       <dt>Partial</dt><dd>a delay removes a comb of frequencies, evenly spaced</dd>
       <dt>1 ms offset</dt><dd>nulls at 500 Hz, 1.5 kHz, 2.5 kHz and upward</dd>
+      <dt>The formula</dt><dd>gain = 2&nbsp;|cos(&pi;&nbsp;f&nbsp;&tau;)| for a delay of &tau; seconds</dd>
+      <dt>Distance</dt><dd>1 ms of delay is 34.3 cm of air at 343 m/s</dd>
       <dt>Where</dt><dd>multi-mic sources, layered samples, stereo wideners, room reflections</dd>
       <dt>Test</dt><dd>listen in mono; cancellation is loudest there</dd>
     </dl>
@@ -189,6 +191,35 @@ h3{margin:28px 0 8px; font-size:17px; font-weight:600; line-height:1.4; color:va
     <figcaption><b>BEEF at 96.</b> Past where most settings want to live.</figcaption>
   </figure>
 
+
+  <h2>The arithmetic behind every null</h2>
+  <p>One line covers the entire subject. Sum a signal with a copy of itself delayed by &tau;
+  seconds and the gain at frequency f is 2&nbsp;|cos(&pi;&nbsp;f&nbsp;&tau;)|. That is
+  +6.02&nbsp;dB where the cosine equals one, silence where it equals nought, and every value
+  between. Peaks land at f&nbsp;=&nbsp;k&nbsp;/&nbsp;&tau;, nulls at
+  f&nbsp;=&nbsp;(2k+1)&nbsp;/&nbsp;2&tau;, and the teeth repeat every 1&nbsp;/&nbsp;&tau; hertz all
+  the way up.</p>
+
+  <p>Convert the delay to distance and the table stops being theory. Sound covers 343 meters per
+  second at 20&nbsp;&deg;C, so one millisecond is 34.3&nbsp;cm &mdash; about the distance from a
+  snare batter head to the rim of the kick beside it.</p>
+
+  <div class="card">
+    <dl>
+      <dt>1 sample at 44.1 kHz</dt><dd>22.68&nbsp;&micro;s &mdash; first null 22.05&nbsp;kHz, and 2.42&nbsp;dB down at 10&nbsp;kHz</dd>
+      <dt>0.1 ms &mdash; 3.4 cm</dt><dd>first null 5&nbsp;kHz, teeth every 10&nbsp;kHz</dd>
+      <dt>0.5 ms &mdash; 17 cm</dt><dd>first null 1&nbsp;kHz, teeth every 2&nbsp;kHz</dd>
+      <dt>1 ms &mdash; 34 cm</dt><dd>first null 500&nbsp;Hz, teeth every 1&nbsp;kHz</dd>
+      <dt>3 ms &mdash; 1.03 m</dt><dd>first null 167&nbsp;Hz, teeth every 333&nbsp;Hz</dd>
+      <dt>10 ms &mdash; 3.43 m</dt><dd>first null 50&nbsp;Hz, teeth every 100&nbsp;Hz</dd>
+    </dl>
+  </div>
+
+  <p>Read the top row twice. A single sample of misalignment at 44.1&nbsp;kHz puts its first null
+  above the range of human hearing, so nobody hears a hollow tone &mdash; but the slope leading to
+  that null is already 2.42&nbsp;dB down at 10&nbsp;kHz and 6.35&nbsp;dB down at 15&nbsp;kHz. One
+  sample out and your cymbals are quietly missing a top octave. That is why the phrase
+  "sample-accurate" gets used by people who otherwise never talk in samples.</p>
 
   <h2>Polarity is not phase</h2>
   <p>The button on your channel strip marked with a circle and a slash flips polarity: every
@@ -202,6 +233,19 @@ h3{margin:28px 0 8px; font-size:17px; font-weight:600; line-height:1.4; color:va
   makes things better, sometimes worse, and frequently neither: it is not the control that
   addresses a time offset.</p>
 
+  <p>The snare pair is worth working through, because it is the one case where the button is the
+  whole answer and the arithmetic says why. Top and bottom microphones see opposite pressure: the
+  head moves toward one diaphragm and away from the other. Un-flipped, the sum behaves like
+  2&nbsp;|sin(&pi;&nbsp;f&nbsp;&tau;)| rather than the cosine, and a sine is nought at nought hertz.
+  Every bit of low end the two microphones share cancels completely. Flip one and you swap back to
+  the cosine, the bottom fills in, and the first null moves up to wherever the shell depth puts it
+  &mdash; for a 14&nbsp;cm path difference, 0.408&nbsp;ms, which is 1,225&nbsp;Hz, right in the
+  crack of the drum.</p>
+
+  <p>So the folk rule works, and now it has a reason attached. Whichever polarity gives more weight
+  is the one where the shared low frequencies are adding rather than subtracting, and the residual
+  notch has moved somewhere you can live with.</p>
+
   <h2>What a comb filter actually is</h2>
   <p>Mix a sound with a delayed copy of itself and you get reinforcement at frequencies whose
   wavelength fits the delay, and cancellation at the ones that fall between. Plot it and it looks
@@ -213,6 +257,26 @@ h3{margin:28px 0 8px; font-size:17px; font-weight:600; line-height:1.4; color:va
   larger offsets reach down into the body of the sound, and past about 25 or 30 milliseconds the
   ear stops hearing a filter and starts hearing an echo.</p>
 
+  <p>How deep the teeth cut is a separate question from where they sit, and it is set entirely by
+  the level of the second copy. Two copies at matched level give an infinite null and a
+  +6.02&nbsp;dB peak. Drop the second copy and the damage collapses fast.</p>
+
+  <div class="card">
+    <dl>
+      <dt>Second copy at 0 dB</dt><dd>peak +6.02&nbsp;dB, null total</dd>
+      <dt>&minus;6 dB</dt><dd>peak +3.52&nbsp;dB, trough &minus;6.02&nbsp;dB, ripple 9.54&nbsp;dB</dd>
+      <dt>&minus;9.5 dB</dt><dd>peak +2.50&nbsp;dB, trough &minus;3.52&nbsp;dB, ripple 6.02&nbsp;dB</dd>
+      <dt>&minus;12 dB</dt><dd>peak +1.94&nbsp;dB, trough &minus;2.50&nbsp;dB, ripple 4.44&nbsp;dB</dd>
+      <dt>&minus;20 dB</dt><dd>peak +0.83&nbsp;dB, trough &minus;0.92&nbsp;dB, ripple 1.74&nbsp;dB</dd>
+    </dl>
+  </div>
+
+  <p>That table is the three-to-one rule, derived. Put the second microphone three times as far
+  from the source and the spill arrives at a third of the amplitude, which is 9.54&nbsp;dB down,
+  which holds the comb ripple to 6.02&nbsp;dB. Nobody chose three because it sounded tidy. Go to
+  five times the distance and the ripple falls to 3.52&nbsp;dB; drop to twice and it climbs to
+  9.54&nbsp;dB, which you will hear on every source with sustain in it.</p>
+
   <p class="aside">
   <a href="/beefy.html" data-umami-event="guide_phase_to_beefy" data-umami-event-spot="mid">BEEFY</a> is a
   saturation and loudness effect, so it will make a thin, combed drum louder and still thin. Fix
@@ -222,6 +286,66 @@ h3{margin:28px 0 8px; font-size:17px; font-weight:600; line-height:1.4; color:va
     <figcaption><b>LIMIT</b> instead, everything else identical.</figcaption>
   </figure>
 
+
+  <h2>Why small offsets spare the bass and big ones eat it</h2>
+  <p>Every producer has been told low frequencies are forgiving. Here is the exchange rate. Phase
+  difference in degrees is 360&nbsp;&times;&nbsp;f&nbsp;&times;&nbsp;&tau;, and the sum of two
+  equal signals at that angle is 2&nbsp;cos(half the angle).</p>
+
+  <p>Take a one-millisecond offset and walk up the spectrum. At 40&nbsp;Hz the two copies are
+  14&nbsp;degrees apart and you lose 0.07&nbsp;dB against a perfect sum. At 50&nbsp;Hz, 18 degrees
+  and 0.11&nbsp;dB. At 100&nbsp;Hz, 36 degrees and 0.44&nbsp;dB. At 200&nbsp;Hz, 72 degrees and
+  1.84&nbsp;dB. At 300&nbsp;Hz, 108 degrees and 4.62&nbsp;dB. At 500&nbsp;Hz the copies are exactly
+  opposed and there is nothing left. Under half a decibel below 100&nbsp;Hz, total annihilation at
+  500&nbsp;Hz, and the whole journey took 400&nbsp;Hz.</p>
+
+  <p>Two numbers are worth memorizing from that walk. At 120 degrees of separation the sum equals
+  one source alone: two faders up, no gain at all, which is the moment a layer stops paying rent.
+  At 90 degrees you get +3.01&nbsp;dB where you expected +6.02&nbsp;dB, so half your stacking is
+  gone and nothing sounds obviously broken. That second one does most of the damage in real
+  sessions, because a loss with no hollowness attached gets blamed on the sample.</p>
+
+  <p>Now scale it. A 5&nbsp;ms offset between two layered kicks puts the first null at 100&nbsp;Hz,
+  which is the fundamental of the part you layered them for. Same drums, same plugins, one
+  decision about timing, and the low end either exists or does not.
+  <a class="inline" href="/how-to-mix-kick-and-808/">Mixing a kick and an 808</a> is mostly this
+  problem wearing a different hat.</p>
+
+  <h2>Where the comb stops being a filter and becomes an echo</h2>
+  <p>The transition is not a matter of taste, and you can compute roughly where it sits. Comb teeth
+  are spaced 1&nbsp;/&nbsp;&tau; hertz apart. The ear resolves detail in bands whose width grows
+  with frequency &mdash; about 79&nbsp;Hz wide at 500&nbsp;Hz, 133&nbsp;Hz at 1&nbsp;kHz and
+  241&nbsp;Hz at 2&nbsp;kHz, by the standard equivalent-rectangular-bandwidth estimate. When the
+  teeth are wider than the band, you hear each one as timbre. When they are narrower, the ear
+  averages across several and hears no filtering at all.</p>
+
+  <p>Set spacing equal to bandwidth and solve. Around 1&nbsp;kHz the crossover falls at
+  &tau;&nbsp;=&nbsp;1000&nbsp;/&nbsp;133, or 7.5&nbsp;ms. Around 2&nbsp;kHz it is 4.2&nbsp;ms;
+  around 500&nbsp;Hz it is 12.7&nbsp;ms. So there is no single boundary, only a band of delays
+  between roughly 4 and 13&nbsp;ms where the comb dissolves from the top down. Below that you hear
+  a filter. Above about 25&nbsp;ms you hear two events. In between you hear something worse than
+  either: a sound that is neither wide nor tight, which is where most accidental double-tracking
+  lands.</p>
+
+  <h2>Measure the offset instead of guessing it</h2>
+  <p>Nudging by feel takes twenty minutes. Measuring takes two, and it needs only a spectrum
+  analyzer, which every DAW ships.</p>
+  <ol>
+    <li>Sum the two offending tracks to mono and route them, alone, into an analyzer with a long
+    averaging window.</li>
+    <li>Play a sustained passage, or send pink noise through the same two paths if the source is
+    recorded material you can re-print.</li>
+    <li>Look for the regular notches. Read off the spacing between two adjacent ones in hertz.</li>
+    <li>Invert it. Spacing of 1,000&nbsp;Hz means &tau;&nbsp;=&nbsp;1&nbsp;ms. 500&nbsp;Hz means
+    2&nbsp;ms. 333&nbsp;Hz means 3&nbsp;ms. 200&nbsp;Hz means 5&nbsp;ms.</li>
+    <li>Multiply by the sample rate for the nudge. 1&nbsp;ms is 44.1 samples at 44.1&nbsp;kHz and
+    48 samples at 48&nbsp;kHz; 3&nbsp;ms is 132 and 144.</li>
+    <li>Move one track by that many samples in the direction that makes the notches disappear, then
+    re-measure. Two moves at once and you learn nothing.</li>
+  </ol>
+  <p>The notches are the honest readout because they are absolute: a null is in the same place
+  whatever the source material is doing, while a peak can be hidden by a quiet passage. Count
+  teeth, not levels.</p>
 
   <h2>How to find and fix it</h2>
   <ol>
@@ -237,17 +361,204 @@ h3{margin:28px 0 8px; font-size:17px; font-weight:600; line-height:1.4; color:va
     <li>On layered samples, align the attacks before you do anything else.</li>
     <li>When recording, use the three-to-one rule: put the second microphone at least three times
     as far from the source as the first one is.</li>
+    <li>Check both polarities again after you have time-aligned. Alignment changes which answer is
+    correct, and the button you ruled out in step three may now be the right one.</li>
+    <li>Watch the level meter on the summed pair while you nudge. The correct alignment is almost
+    always the loudest one, and a meter settles an argument two ears will keep having.</li>
+    <li>If one of the two tracks carries a plugin the other does not, bypass everything on both
+    before you judge the offset. You are measuring the chain, not the recording.</li>
+    <li>Fix it at the source where you can. Moving a microphone 10&nbsp;cm costs nothing and
+    survives every later decision; a sample nudge has to be redone on every re-take.</li>
   </ol>
+
+  <h2>Prove it in your own session: the null test</h2>
+  <p>Three minutes, no plugins, and it converts an opinion into a number.</p>
+  <ol>
+    <li>Duplicate a mono track. Leave both at the same level and do not touch anything else.</li>
+    <li>Invert the polarity of the copy. The pair should go silent. If it does not, something in
+    one of the two paths is altering the signal and you have found it.</li>
+    <li>Put the copy back in polarity and delay it by exactly 44 samples at 44.1&nbsp;kHz. Play it.
+    That is the 1&nbsp;ms comb from the table, with a first null at 500&nbsp;Hz.</li>
+    <li>Sweep the delay from 1 sample to 500 samples while the loop runs. You will hear the hollow
+    tone descend through the material and then dissolve into a slapback somewhere past about
+    1,100&nbsp;samples.</li>
+    <li>Now do it with the real pair. Print both tracks, line them up, invert one, and listen to
+    what survives. Whatever is left is the part of the two recordings that differs &mdash; the
+    room, the bleed, the offset.</li>
+    <li>Note the summed level at your best alignment and at your worst. The difference is what the
+    problem was costing you, in decibels, with no opinion in it.</li>
+  </ol>
+  <p>One thing will break this, so rule it out first. Any plugin that reports latency has to be
+  compensated by the host, and a single sample of uncompensated offset turns a clean null into a
+  bright ghost that looks exactly like a phase problem. Test the rig before you test the take.</p>
+
+  <h2>Why you cannot EQ a null back</h2>
+  <p>The instinct is to find the missing frequency and boost it. Run the numbers on that and the
+  instinct dies quickly.</p>
+
+  <p>A 1&nbsp;ms comb is 10&nbsp;dB down across a span from 449.5&nbsp;Hz to 550.5&nbsp;Hz, which is
+  101&nbsp;Hz wide, which is a bell with a Q of 4.95. At the center of that span there is no signal
+  at all, and a boost applied to nothing returns nothing &mdash; you raise the noise floor and the
+  neighboring content, and the hole stays. Then remember the teeth repeat: the same offset has
+  another null at 1,500&nbsp;Hz, another at 2,500&nbsp;Hz, another at 3,500&nbsp;Hz. You would need
+  a bell at Q&nbsp;5 on every one of them, and the first time anybody moves a fader the whole comb
+  shifts and your curve is wrong.</p>
+
+  <p>A minimum-phase EQ makes it worse in a small, specific way: a bell boost carries its own phase
+  shift, so EQ-ing one of two layered tracks moves the alignment between them near the corner
+  frequency. That is a real effect and it explains sessions where a kick got worse the moment
+  somebody sweetened it. Align first, then EQ. <a class="inline" href="/why-is-my-mix-muddy/">Mud
+  in a mix</a> is often this: energy piling up at the comb's peaks while its nulls hollow out the
+  space between them.</p>
+
+  <h2>What saturation does to a combed sound</h2>
+  <p>This is the part that makes phase problems hard to catch, and it is the part that concerns a
+  page about a saturation plugin.</p>
+
+  <p>Saturation generates harmonics of whatever reaches it. Those harmonics are created
+  <em>after</em> the cancellation has already happened, so they are not subject to the comb &mdash;
+  they land at integer multiples of the surviving fundamentals and partially refill the notches.
+  Work one case: a 100&nbsp;Hz kick through a 3&nbsp;ms comb loses its 5th harmonic at 500&nbsp;Hz,
+  its 15th at 1,500&nbsp;Hz and its 25th at 2,500&nbsp;Hz, because those are exactly the odd
+  multiples of the 167&nbsp;Hz first null. Saturate the result and the fundamental regenerates
+  harmonics at all of those frequencies, from scratch.</p>
+
+  <p>The hole gets covered. It does not get fixed. What refills is a harmonic series belonging to
+  the saturator, not the original recording's noise, room and transient content, and everything
+  inharmonic that fell in a notch stays gone. In practice you get a sound that measures flatter and
+  still feels hollow, and you spend the next hour looking for the wrong problem. Align, then
+  saturate, and the saturation buys you something instead of hiding something.
+  <a class="inline" href="/saturation-explained/">Saturation</a> and
+  <a class="inline" href="/what-is-a-transient/">transient behavior</a> both sit downstream of
+  this.</p>
+  <figure class="shot">
+    <a href="/beefy.html" data-umami-event="guide_phase_to_beefy" data-umami-event-spot="figimg" class="imglink"><img src="/beefy/beefy-softclip.jpg" width="550" height="410" loading="lazy" alt="BEEFY with SOFT CLIP as the output stage."></a>
+    <figcaption><b>SOFT CLIP as the out stage.</b> Worth reaching for after the alignment, never instead of it.</figcaption>
+  </figure>
+
+
+  <h2>Where alignment sits in the chain</h2>
+  <p>Before everything, and the reason is that every stage after it measures the wrong signal.</p>
+  <ul>
+    <li><strong>Before EQ,</strong> because a comb moves when the alignment moves, and any curve
+    you drew against the old comb is now a curve against nothing.</li>
+    <li><strong>Before compression,</strong> because a detector follows the summed envelope. A
+    combed pair has a smaller, differently shaped peak, so the compressor makes a different
+    decision about a hit that has not actually changed.</li>
+    <li><strong>Before saturation and clipping,</strong> because both trade peak level for
+    harmonics, and a canceled peak gives them less to work with. See
+    <a class="inline" href="/crest-factor/">crest factor</a> for the ledger.</li>
+    <li><strong>Before any width processing,</strong> because wideners usually work by creating
+    exactly the offsets described here. Stacking a deliberate one on an accidental one produces
+    results nobody can reason about.</li>
+    <li><strong>Before you print the stems,</strong> because an alignment error is cheap to fix now
+    and expensive to fix after somebody else has the files.</li>
+  </ul>
+
+  <h2>Where it bites when there is no microphone in the room</h2>
+  <p>Most people meet this on a drum kit and then assume programming exempts them. It does not.</p>
+  <ul>
+    <li><strong>Layered one-shots.</strong> Two kicks whose attacks land 132 samples apart at
+    44.1&nbsp;kHz are 3&nbsp;ms out, first null 167&nbsp;Hz. See
+    <a class="inline" href="/how-to-layer-kicks/">how to layer kicks</a>.</li>
+    <li><strong>The same sample twice.</strong> Copying a hi-hat to a second track for parallel
+    processing, then using a plugin whose latency the host cannot report, leaves you summing a
+    delayed duplicate at full level. That is the worst case in the table.</li>
+    <li><strong>Stereo wideners and short delays.</strong> Anything that offsets one side against
+    the other sums to a comb in mono. <a class="inline" href="/mono-compatibility/">Mono
+    compatibility</a> is the whole of this problem stated as a checkbox.</li>
+    <li><strong>Detuned unison.</strong> Two oscillators drifting past each other sweep through
+    every phase angle repeatedly, which is what the movement in a
+    <a class="inline" href="/best-detune-plugins/">detuned patch</a> is. Gorgeous in stereo, and it
+    can lose you several decibels at the moments the two are opposed.</li>
+    <li><strong>Multiband anything.</strong> Crossover filters shift phase around their corner
+    frequencies. Recombining the bands is a sum of phase-shifted copies, which is why an untouched
+    multiband instance can still change the sound.</li>
+    <li><strong>Reamped or DI-plus-amp bass.</strong> Speaker, air, microphone and cable arrive at
+    different times. A 0.5&nbsp;m path is 1.46&nbsp;ms and a first null at 343&nbsp;Hz, straight
+    through the note's second harmonic.</li>
+    <li><strong>Room reflections in an untreated space.</strong> A microphone 0.5&nbsp;m from a
+    hard wall gets a 1&nbsp;m round trip, 2.92&nbsp;ms, first null 172&nbsp;Hz, teeth every
+    343&nbsp;Hz. Move the stand, not the EQ.</li>
+  </ul>
+
+  <h2>Failure modes, and what each one sounds like</h2>
+  <p>Diagnose by ear first and you get to the right measurement faster.</p>
+  <ul>
+    <li><strong>Hollow, tubed, slightly metallic.</strong> An offset in the 0.5 to 3&nbsp;ms range,
+    nulls landing in the midrange where the ear is sharpest.</li>
+    <li><strong>Thin, with no weight at all.</strong> A polarity error on two close microphones, or
+    an offset past about 5&nbsp;ms pushing the first null down under 100&nbsp;Hz.</li>
+    <li><strong>Enormous in the room, gone on a phone.</strong> Width built from offsets, folding
+    down in mono. The most expensive one, because it sounds like a win until it ships.</li>
+    <li><strong>Soft attack, correct tone.</strong> A one- or two-sample offset. No audible comb in
+    the midrange, a couple of decibels off the top octave, and a hit that has lost its edge without
+    losing its color.</li>
+    <li><strong>Swirling, restless, like a slow flanger.</strong> A moving offset &mdash; drifting
+    unison, tape-style modulation, or two takes with human timing.</li>
+    <li><strong>Boxy rather than hollow.</strong> A single strong reflection at 3 to 8&nbsp;ms,
+    which is a wall or a desk one to three meters away.</li>
+    <li><strong>Two events instead of one.</strong> Past roughly 25&nbsp;ms the ear stops combining
+    and starts counting, and you have a slapback you did not order.</li>
+  </ul>
+
+  <h2>Doing it in your DAW</h2>
+  <p>They all have the two tools you need &mdash; a polarity invert and a way to shift by samples
+  &mdash; and they all hide them somewhere different.</p>
+  <ul>
+    <li><strong>Ableton Live.</strong> Utility carries a phase invert per channel. Track Delay,
+    in the track's Delay field, shifts a whole track in milliseconds and needs Delay Compensation
+    left on. To move audio itself, switch snapping off and drag the clip, or use the clip's start
+    offset.</li>
+    <li><strong>Logic Pro.</strong> The Gain plugin has a phase invert per side. Sample Delay
+    shifts by whole samples, which is the one to use for this work because the units match the
+    measurement. Track Delay lives in the track inspector.</li>
+    <li><strong>FL Studio.</strong> Fruity Stereo Shaper inverts either side and offsets one
+    against the other. For a whole part, move the audio clip in the playlist with snapping
+    off.</li>
+    <li><strong>Pro Tools.</strong> Time Adjuster delays in samples and carries a polarity invert
+    in the same window, which makes it the fastest place to try both answers on one source.</li>
+    <li><strong>Reaper.</strong> Item properties carry an Invert Phase checkbox and a start offset,
+    and the Nudge dialog will move a selection by a set number of samples, typed in.</li>
+  </ul>
+  <p>Whichever one you use, do the shift in samples rather than milliseconds if the choice is
+  offered. Milliseconds round, and at 44.1&nbsp;kHz the rounding is up to 22.68&nbsp;&micro;s, which
+  is exactly the error that costs you the top octave.</p>
+  <figure class="shot">
+    <a href="/beefy.html" data-umami-event="guide_phase_to_beefy" data-umami-event-spot="figimg" class="imglink"><img src="/beefy/beefy-beef-8.jpg" width="550" height="410" loading="lazy" alt="BEEFY with BEEF at 8."></a>
+    <figcaption><b>BEEF at 8.</b> The reference you A/B against.</figcaption>
+  </figure>
+
 
   <h2>Where it is not a problem</h2>
   <p>Some of it is the sound. Room reflections comb-filter every recording ever made and that is
   what a room is. Deliberate short delays are how chorus, flanging and most stereo widening work.
-  The distinction is whether you chose it: a wideners that sounds huge in stereo and disappears in
-  mono has canceled the thing you were widening, and that one is not a choice, it is a bill
-  arriving later.</p>
+  The distinction is whether you chose it: a widener that sounds huge in stereo and disappears in
+  mono has canceled the thing you were widening, and that one is a bill arriving later.</p>
+
+  <p>There is a second exemption worth naming. Two <em>different</em> sounds do not comb-filter each
+  other in any meaningful way, because comb filtering needs the same waveform twice. A kick and a
+  bass note at the same frequency can still add or subtract at that frequency, and often do, but
+  they will not produce the evenly spaced notches described here. If you are hearing a regular comb,
+  there is a duplicate somewhere and it is findable.</p>
 
   <p>See <a class="inline" href="/how-to-layer-kicks/">how to layer kicks</a> for the version of
   this problem that eats low end specifically.</p>
+
+  <h2>What the fix costs</h2>
+  <p>Nothing, for almost all of it. Every DAW in the list above ships a polarity invert, a sample
+  delay and a spectrum analyzer, and those three are the complete kit for the measurement, the null
+  test and the fix. Alignment is the rare mix problem where spending money is genuinely optional,
+  and it is worth saying plainly before anybody goes shopping for a plugin to solve it.</p>
+
+  <p>The paid part comes after, once the sum is coherent and you want it bigger.
+  <a href="/drugs.html" data-umami-event="guide_phase_to_beefy" data-umami-event-spot="drugs">DRUGS</a> is our
+  one-knob bus compressor for drums, free on Mac and Windows: DOSE does the work, with GAIN and a
+  soft ceiling on the way out, and it does not sit at unity with DOSE at nought, so match levels
+  before you judge it. <a href="/beefy.html" data-umami-event="guide_phase_to_beefy"
+  data-umami-event-spot="cost">BEEFY</a> is $19, one payment, Mac and Windows, AU, VST3 and
+  standalone. Neither of them &mdash; nor anything else in the category &mdash; can return a
+  frequency that two tracks removed from each other.</p>
 
   <h2>Questions people ask</h2>
   <h3>How do I get rid of phase issues?</h3>
@@ -265,6 +576,92 @@ h3{margin:28px 0 8px; font-size:17px; font-weight:600; line-height:1.4; color:va
   <p>Low frequencies have long wavelengths, so they survive small offsets that destroy the top end.
   But when low frequencies do cancel, you lose the part of the record carrying the weight, which is
   why it feels like a bass problem.</p>
+  <h3>What does phase cancellation sound like?</h3>
+  <p>Below about 3&nbsp;ms of offset it sounds hollow and slightly metallic, like a fixed flanger
+  that never moves. Past 5&nbsp;ms it sounds thin and weightless. Past about 25&nbsp;ms it stops
+  sounding like a filter and starts sounding like a short echo.</p>
+  <h3>Is phase cancellation the same as comb filtering?</h3>
+  <p>Comb filtering is what partial phase cancellation from a time offset produces: a series of
+  evenly spaced notches at (2k+1)&nbsp;/&nbsp;2&tau; hertz. Full cancellation, where two identical
+  signals of opposite polarity sum to silence, is the special case with no notches because nothing
+  survives.</p>
+  <h3>How many samples should I nudge a track?</h3>
+  <p>Measure rather than guess. Read the spacing between two adjacent notches on an analyzer, take
+  its reciprocal for the delay in seconds, and multiply by the sample rate. Notches 500&nbsp;Hz
+  apart mean 2&nbsp;ms, which is 88 samples at 44.1&nbsp;kHz and 96 at 48&nbsp;kHz.</p>
+  <h3>Can I fix phase cancellation with EQ?</h3>
+  <p>No. At the bottom of a null there is no signal to boost, and the notch from a 1&nbsp;ms offset
+  is only 101&nbsp;Hz wide at its 10&nbsp;dB points, needing a Q near 5 &mdash; and there is another
+  one every 1,000&nbsp;Hz above it. Move the track in time instead.</p>
+  <h3>Does saturation fix phase cancellation?</h3>
+  <p>It hides some of it. Harmonics created after the cancellation land at multiples of what
+  survived and partially refill the notches, so the spectrum flattens out while the recording's
+  original content at those frequencies stays gone. Align first.</p>
+  <h3>Why do my layered kicks lose low end?</h3>
+  <p>Their attacks are not aligned. A 5&nbsp;ms offset puts the first null at 100&nbsp;Hz, which is
+  where the weight lives. Snap both attacks to the same sample and the two layers add instead of
+  fighting.</p>
+  <h3>Why does my mix sound thin in mono?</h3>
+  <p>Something in it is built from left-against-right offsets or opposed polarity, which stays
+  audible while the channels are separate and cancels the moment they sum. Wideners, Haas delays
+  and mid/side tricks are the usual culprits.</p>
+  <h3>Why does flipping polarity make my bass disappear?</h3>
+  <p>Because the two sources were already in polarity with each other. Inverting swaps the sum from
+  a cosine shape to a sine shape, and a sine is nought at nought hertz, so everything the two share
+  at the bottom cancels. The flip is right only when the sources genuinely oppose, such as a top
+  and bottom microphone on the same drum.</p>
+  <h3>Is 180 degrees out of phase the same as inverted polarity?</h3>
+  <p>Only for a single steady frequency. A polarity invert flips every frequency at once; a
+  180-degree phase shift applies at one frequency and a different angle at every other one. For
+  broadband material they are different operations with different results.</p>
+  <h3>Does phase cancellation only happen with microphones?</h3>
+  <p>No. Layered samples, duplicated tracks, stereo wideners, detuned unison, multiband crossovers,
+  parallel chains with uncompensated latency and reamped bass all produce it, and none of them
+  involve a room.</p>
+  <h3>Does plugin latency cause phase problems?</h3>
+  <p>It can. Hosts compensate reported latency automatically, and the failure cases are the ones
+  where latency goes unreported &mdash; external hardware inserts, certain send configurations, some
+  sample-rate-converting plugins. Test the rig by nulling a bypassed instance against a bare copy
+  of the same print before you blame the take.</p>
+  <h3>What is the 3 to 1 rule?</h3>
+  <p>Place the second microphone at least three times as far from the source as the first one is.
+  The spill then arrives about 9.5&nbsp;dB down, which limits the comb ripple to roughly
+  6&nbsp;dB &mdash; audible, but not ruinous. At twice the distance the ripple is 9.5&nbsp;dB; at
+  five times it is 3.5&nbsp;dB.</p>
+  <h3>Does phase cancellation affect loudness?</h3>
+  <p>Directly. Two aligned copies sum to +6.02&nbsp;dB, at 90 degrees apart to +3.01&nbsp;dB, and at
+  120 degrees apart to nothing at all over one source alone. Half your stacking can vanish with no
+  hollowness to warn you.</p>
+  <h3>Should I use a phase alignment plugin?</h3>
+  <p>Try the free route first, because it solves most of it: polarity invert, then a sample-accurate
+  nudge measured off an analyzer. Paid alignment tools earn their place on sources where the offset
+  changes across the spectrum, such as a speaker plus a direct feed, which a single delay cannot
+  correct.</p>
+  <h3>Does EQ cause phase shift?</h3>
+  <p>A minimum-phase EQ does, around every band you move. That matters here because EQ-ing one of
+  two layered tracks changes their alignment near the corner frequency, so a sweetening move can
+  make a stack worse. Align first, then EQ.</p>
+  <h3>Is linear-phase EQ the fix for phase problems?</h3>
+  <p>No. It avoids adding phase shift of its own, which is a different thing from removing an
+  existing time offset between two tracks. It also introduces latency and pre-ringing, so it is a
+  tool with a cost rather than a repair.</p>
+  <h3>Can you hear phase cancellation on headphones?</h3>
+  <p>You hear less of it, which is the trap. Headphones keep the channels apart, so left-against-right
+  cancellation never happens at your ears. Check on a mono speaker, or fold to mono and listen
+  there.</p>
+  <h3>How do I check phase in my DAW?</h3>
+  <p>Sum to mono, solo pairs, and use the polarity invert to compare. A correlation meter helps as a
+  warning light &mdash; sustained negative readings mean something is opposed &mdash; but the notch
+  spacing on a spectrum analyzer is what tells you the actual delay.</p>
+  <h3>What delay is too long to be phase cancellation?</h3>
+  <p>Somewhere between 4 and 13&nbsp;ms the comb stops being audible as a filter, because the teeth
+  become narrower than the ear's resolving bandwidth &mdash; 133&nbsp;Hz at 1&nbsp;kHz, so a spacing
+  under that, meaning a delay past 7.5&nbsp;ms, gets averaged away. Past about 25&nbsp;ms you are
+  hearing an echo instead.</p>
+  <h3>Can two different sounds cancel each other?</h3>
+  <p>They can subtract at frequencies they share, and often do around a kick and a bass note. What
+  they cannot produce is the evenly spaced notch pattern, because that requires the same waveform
+  arriving twice. A regular comb means a duplicate exists somewhere.</p>
 
   <h2>What BEEFY does</h2>
   <p>BEEFY is our saturation and loudness effect: it adds body, squeezes some space out of the
@@ -273,6 +670,16 @@ h3{margin:28px 0 8px; font-size:17px; font-weight:600; line-height:1.4; color:va
   going in, and <strong>SOFT CLIP</strong> rounds the loudest parts. What it cannot do is put back
   a frequency that two tracks removed from each other. Alignment is upstream of tone,
   always.</p>
+
+  <p>Read against this article, the panel has one honest place in the order of work: after the
+  sum is coherent. Drive a combed pair with JUICE and you raise a spectrum with holes in it; the
+  harmonics BEEF and COOK bring out will land on top of the notches and flatten the measurement
+  without returning the recording. Do the nudge, confirm it on a meter, then come back and set the
+  drive. <strong>LIMIT</strong> and <strong>SOFT CLIP</strong> are the two output switches, and
+  both of them are working on a peak that alignment has already decided the height of.</p>
+
+  <p>BEEFY is $19, one payment, and runs on Mac and Windows as AU, VST3 and standalone. There is a
+  28-second demo with three without/with comparisons on the page.</p>
 
   <p>Two good microphones, one drum, and a subtraction nobody asked for.</p>
 

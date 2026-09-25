@@ -47,7 +47,7 @@ fbq('init', '1164684366890206');
 fbq('track', 'PageView');
 }
 </script>
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"TechArticle","@id":"https://gazillionindustries.com/true-peak/#article","headline":"True peak","description":"What true peak means, why a file can read 0 dBFS and still clip on playback, how it is measured, and what ceiling to use for anything that will be encoded.","image":"https://gazillionindustries.com/beefy/cover.png","inLanguage":"en","datePublished":"2026-09-20","dateModified":"2026-09-24","url":"https://gazillionindustries.com/true-peak/","mainEntityOfPage":"https://gazillionindustries.com/true-peak/","author":{"@id":"https://gazillionindustries.com/#gazillion"},"publisher":{"@id":"https://gazillionindustries.com/#gazillion"},"about":{"@type":"SoftwareApplication","name":"BEEFY","url":"https://gazillionindustries.com/beefy.html"},"isPartOf":{"@id":"https://gazillionindustries.com/reading-material/#page"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Gazillion Industries","item":"https://gazillionindustries.com/"},{"@type":"ListItem","position":2,"name":"Reading material","item":"https://gazillionindustries.com/reading-material/"},{"@type":"ListItem","position":3,"name":"True peak","item":"https://gazillionindustries.com/true-peak/"}]},{"@type":"Organization","@id":"https://gazillionindustries.com/#gazillion","name":"Gazillion Industries LLC","alternateName":"Gazillion Industries","url":"https://gazillionindustries.com/"},{"@type":"FAQPage","@id":"https://gazillionindustries.com/true-peak/#faq","mainEntity":[{"@type":"Question","name":"What does true peak mean?","acceptedAnswer":{"@type":"Answer","text":"The highest level the analog waveform reaches after conversion, including the points between samples. It is estimated by oversampling and reported in dBTP."}},{"@type":"Question","name":"What true peak should I master to?","acceptedAnswer":{"@type":"Answer","text":"&minus;1 dBTP for anything that will be encoded or streamed. Tighter ceilings are fine for uncompressed files that will be played directly."}},{"@type":"Question","name":"What is the difference between sample peak and true peak?","acceptedAnswer":{"@type":"Answer","text":"Sample peak is the largest value stored in the file. True peak is the largest value of the waveform the converter reconstructs from those values, which can be higher. The difference is typically a fraction of a decibel and can be more on dense, heavily limited material."}},{"@type":"Question","name":"What is the difference between LUFS and true peak?","acceptedAnswer":{"@type":"Answer","text":"LUFS measures perceived loudness over time, which is what streaming normalization responds to. True peak measures the single highest instantaneous level, which is what causes clipping. You need to satisfy both, and they are unrelated numbers."}},{"@type":"Question","name":"What does dBTP stand for?","acceptedAnswer":{"@type":"Answer","text":"Decibels true peak. Same scale as dBFS, with 0 meaning full scale, but measured on the reconstructed waveform instead of on the stored samples."}},{"@type":"Question","name":"Is &minus;1 dBTP too quiet?","acceptedAnswer":{"@type":"Answer","text":"No. Playback normalization sets a single gain offset from your integrated LUFS, and your peak ceiling has no part in that calculation unless it is so low that a quiet master cannot be lifted all the way. On a loud master, the decibel is invisible."}},{"@type":"Question","name":"Should I use &minus;1 dBTP or &minus;0.1 dBTP?","acceptedAnswer":{"@type":"Answer","text":"&minus;0.1 dBTP survives nothing. A four-times meter can under-read by up to 0.56&nbsp;dB on content at 20&nbsp;kHz, and encoders add their own overshoot on top of that, so a tenth of a decibel is inside the measurement error before the file has left your machine. Use &minus;1&nbsp;dBTP, or &minus;2 if the master is louder than &minus;14&nbsp;LUFS."}},{"@type":"Question","name":"Can true peak ever be lower than sample peak?","acceptedAnswer":{"@type":"Answer","text":"No. A true-peak meter reports the highest value it finds among the real samples and the interpolated ones, so its answer is the sample peak or something above it. If a meter shows you a lower number, it is measuring something else, such as short-term loudness."}},{"@type":"Question","name":"Why does my master distort after uploading?","acceptedAnswer":{"@type":"Answer","text":"Three candidates, in order of likelihood: the file was over 0 dBTP before it left, so the encoder had nothing to work with; the file was near 0 dBTP and the encoder's own overshoot took it over; or the playback setting on the listener's end applied gain. The first two are fixed by the ceiling. Bounce, convert to eight times the rate, and read the peak before you argue with anybody."}},{"@type":"Question","name":"Does a higher sample rate fix intersample peaks?","acceptedAnswer":{"@type":"Answer","text":"It shrinks them a lot. The same tone at 11,025&nbsp;Hz hides 3.01&nbsp;dB at 44.1&nbsp;kHz and 0.58&nbsp;dB at 96&nbsp;kHz. But the delivery file is usually 44.1 or 48, and the conversion down brings the problem back, so a high session rate helps the processing rather than the delivery."}},{"@type":"Question","name":"Do I need true-peak limiting on individual tracks?","acceptedAnswer":{"@type":"Answer","text":"No. Intersample peaks only cause a problem at the point of conversion or encoding, and inside a session everything is running in floating point, where going over full scale costs nothing until something writes a file. Watch it on the master and on any stem you are handing to somebody else."}},{"@type":"Question","name":"My limiter says &minus;1 dBTP and my meter says something else. Which is right?","acceptedAnswer":{"@type":"Answer","text":"Probably neither, and the difference is oversampling factor. A four-times estimate and a sixteen-times estimate of the same file legitimately differ by up to about half a decibel on bright material. Settle it offline: convert the bounced file to eight times its rate and read the sample peak, which is the answer both plugins are approximating."}},{"@type":"Question","name":"Does clipping help or hurt true peak?","acceptedAnswer":{"@type":"Answer","text":"Measured on the loop above, hard clipping at the file's own rate hurt it: +3&nbsp;dB of clipping took a loop from +0.26&nbsp;dBTP to +2.64&nbsp;dBTP at the same sample peak. The same clipping done at 176.4&nbsp;kHz landed at +0.42&nbsp;dBTP. Clipping is still the most efficient way to lower crest factor; it just needs to happen at a finer time resolution than the file's own."}},{"@type":"Question","name":"Does true peak matter for WAV files sent to a beat store or an engineer?","acceptedAnswer":{"@type":"Answer","text":"For an engineer, leave real headroom and do not limit at all. For a store that will stream previews, the preview is encoded, so it matters exactly as much as anywhere else. For a file somebody will only ever play from disk, &minus;0.3 dBTP is fine."}},{"@type":"Question","name":"Does dither push me over the ceiling?","acceptedAnswer":{"@type":"Answer","text":"No, by four orders of magnitude. Triangular dither at two 16-bit least significant bits peak to peak moves a &minus;1&nbsp;dBFS peak by 0.0003&nbsp;dB."}}]}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"TechArticle","@id":"https://gazillionindustries.com/true-peak/#article","headline":"True peak","description":"What true peak means, why a file can read 0 dBFS and still clip on playback, how it is measured, and what ceiling to use for anything that will be encoded.","image":"https://gazillionindustries.com/beefy/cover.png","inLanguage":"en","datePublished":"2026-09-20","dateModified":"2026-09-24","url":"https://gazillionindustries.com/true-peak/","mainEntityOfPage":"https://gazillionindustries.com/true-peak/","author":{"@id":"https://gazillionindustries.com/#gazillion"},"publisher":{"@id":"https://gazillionindustries.com/#gazillion"},"about":{"@type":"SoftwareApplication","name":"BEEFY","url":"https://gazillionindustries.com/beefy.html"},"isPartOf":{"@id":"https://gazillionindustries.com/reading-material/#page"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Gazillion Industries","item":"https://gazillionindustries.com/"},{"@type":"ListItem","position":2,"name":"Reading material","item":"https://gazillionindustries.com/reading-material/"},{"@type":"ListItem","position":3,"name":"True peak","item":"https://gazillionindustries.com/true-peak/"}]},{"@type":"Organization","@id":"https://gazillionindustries.com/#gazillion","name":"Gazillion Industries LLC","alternateName":"Gazillion Industries","url":"https://gazillionindustries.com/"},{"@type":"FAQPage","@id":"https://gazillionindustries.com/true-peak/#faq","mainEntity":[{"@type":"Question","name":"What does true peak mean?","acceptedAnswer":{"@type":"Answer","text":"The highest level the analog waveform reaches after conversion, including the points between samples. It is estimated by oversampling and reported in dBTP."}},{"@type":"Question","name":"What true peak should I master to?","acceptedAnswer":{"@type":"Answer","text":"&minus;1 dBTP for anything that will be encoded or streamed. Tighter ceilings are fine for uncompressed files that will be played directly."}},{"@type":"Question","name":"What is the difference between sample peak and true peak?","acceptedAnswer":{"@type":"Answer","text":"Sample peak is the largest value stored in the file. True peak is the largest value of the waveform the converter reconstructs from those values, which can be higher. The difference is typically a fraction of a decibel and can be more on dense, heavily limited material."}},{"@type":"Question","name":"What is the difference between LUFS and true peak?","acceptedAnswer":{"@type":"Answer","text":"LUFS measures perceived loudness over time, which is what streaming normalization responds to. True peak measures the single highest instantaneous level, which is what causes clipping. You need to satisfy both, and they are unrelated numbers."}},{"@type":"Question","name":"What does dBTP stand for?","acceptedAnswer":{"@type":"Answer","text":"Decibels true peak. Same scale as dBFS, with 0 meaning full scale, but measured on the reconstructed waveform instead of on the stored samples."}},{"@type":"Question","name":"Is &minus;1 dBTP too quiet?","acceptedAnswer":{"@type":"Answer","text":"No. Playback normalization sets a single gain offset from your integrated LUFS, and your peak ceiling has no part in that calculation unless it is so low that a quiet master cannot be lifted all the way. On a loud master, the decibel is invisible."}},{"@type":"Question","name":"Should I use &minus;1 dBTP or &minus;0.1 dBTP?","acceptedAnswer":{"@type":"Answer","text":"&minus;0.1 dBTP survives nothing. A four-times meter can under-read by up to 0.56&nbsp;dB on content at 20&nbsp;kHz, and encoders add their own overshoot on top of that, so a tenth of a decibel is inside the measurement error before the file has left your machine. Use &minus;1&nbsp;dBTP, or &minus;2 if the master is louder than &minus;14&nbsp;LUFS."}},{"@type":"Question","name":"Can true peak ever be lower than sample peak?","acceptedAnswer":{"@type":"Answer","text":"No. A true-peak meter reports the highest value it finds among the real samples and the interpolated ones, so its answer is the sample peak or something above it. If a meter shows you a lower number, it is measuring something else, such as short-term loudness."}},{"@type":"Question","name":"Why does my master distort after uploading?","acceptedAnswer":{"@type":"Answer","text":"Three candidates, in order of likelihood: the file was over 0 dBTP before it left, so the encoder had nothing to work with; the file was near 0 dBTP and the encoder's own overshoot took it over; or the playback setting on the listener's end applied gain. The first two are fixed by the ceiling. Bounce, convert to eight times the rate, and read the peak before you argue with anybody."}},{"@type":"Question","name":"Does a higher sample rate fix intersample peaks?","acceptedAnswer":{"@type":"Answer","text":"It shrinks them a lot. The same tone at 11,025&nbsp;Hz hides 3.01&nbsp;dB at 44.1&nbsp;kHz and 0.58&nbsp;dB at 96&nbsp;kHz. But the delivery file is usually 44.1 or 48, and the conversion down brings the problem back, so a high session rate helps the processing rather than the delivery."}},{"@type":"Question","name":"Do I need true-peak limiting on individual tracks?","acceptedAnswer":{"@type":"Answer","text":"No. Intersample peaks only cause a problem at the point of conversion or encoding, and inside a session everything is running in floating point, where going over full scale costs nothing until something writes a file. Watch it on the master and on any stem you are handing to somebody else."}},{"@type":"Question","name":"My limiter says &minus;1 dBTP and my meter says something else. Which is right?","acceptedAnswer":{"@type":"Answer","text":"Probably neither, and the difference is oversampling factor. A four-times estimate and a sixteen-times estimate of the same file legitimately differ by up to about half a decibel on bright material. Settle it offline: convert the bounced file to eight times its rate and read the sample peak, which is the answer both plugins are approximating."}},{"@type":"Question","name":"Does clipping help or hurt true peak?","acceptedAnswer":{"@type":"Answer","text":"Measured on the loop above, hard clipping at the file's own rate hurt it: +3&nbsp;dB of clipping took a loop from +0.26&nbsp;dBTP to +2.64&nbsp;dBTP at the same sample peak. The same clipping done at 176.4&nbsp;kHz landed at +0.42&nbsp;dBTP. Clipping is still the most efficient way to lower crest factor; it just needs to happen at a finer time resolution than the file's own."}},{"@type":"Question","name":"Does true peak matter for WAV files sent to a beat store or an engineer?","acceptedAnswer":{"@type":"Answer","text":"For an engineer, leave real headroom and do not limit at all. For a store that will stream previews, the preview is encoded, so it matters exactly as much as anywhere else. For a file somebody will only ever play from disk, &minus;0.3 dBTP is fine."}},{"@type":"Question","name":"Does dither push me over the ceiling?","acceptedAnswer":{"@type":"Answer","text":"No. Triangular dither at two 16-bit least significant bits peak to peak moves a &minus;1&nbsp;dBFS peak by 0.0003&nbsp;dB, three ten-thousandths of a decibel, which is three and a half orders of magnitude below the smallest step a meter will show you."}},{"@type":"Question","name":"What is intersample clipping?","acceptedAnswer":{"@type":"Answer","text":"Clipping that happens to the waveform between the stored samples rather than to the samples themselves. The file is legal, every value in it is inside full scale, and the reconstruction the converter or the decoder builds from those values goes over. It is the same event as an intersample peak; the word clipping gets attached once something downstream has nowhere to put it."}},{"@type":"Question","name":"Why is my sample peak 0 dBFS but my true peak +2 dBTP?","acceptedAnswer":{"@type":"Answer","text":"Because something flattened the tops. A band-limited reconstruction rings 17.90 percent, or 1.430&nbsp;dB, above a clean flat top, and dense material stacks those rings. The clipped test loop on this page sits at +1.971&nbsp;dBTP with a sample peak of exactly 0.000&nbsp;dBFS."}},{"@type":"Question","name":"Does MP3 or AAC encoding raise true peak?","acceptedAnswer":{"@type":"Answer","text":"Barely. Measured here on one loop across five encoders, the largest true-peak increase was 0.122&nbsp;dB, by AAC at 256&nbsp;kbit. What the encoders did do was turn hidden peak into visible samples: a file with no sample over full scale decoded with sample peaks up to +1.515&nbsp;dBFS. The encoder is the messenger."}},{"@type":"Question","name":"Why does my song sound distorted on streaming but fine in my DAW?","acceptedAnswer":{"@type":"Answer","text":"Your session is floating point and forgives everything above full scale; the decode on the listener's end is often not. If the file went out at 0&nbsp;dBFS sample peak with two decibels hiding between the samples, the decoder writes those two decibels into real samples and whatever comes next clamps them."}},{"@type":"Question","name":"Do I need to re-check true peak after converting 48 kHz to 44.1?","acceptedAnswer":{"@type":"Answer","text":"Check the file, but the ceiling itself will not have moved much. Measured, a loop pinned at &minus;1.000&nbsp;dBTP at 48&nbsp;kHz reads &minus;0.997 at 44.1, and &minus;0.978 on heavily clipped material. What moves is the sample peak, by more than a decibel, so the conversion is worth checking for a fixed-point delivery even though the dBTP number is stable."}},{"@type":"Question","name":"Is &minus;0.3 dBTP enough?","acceptedAnswer":{"@type":"Answer","text":"For a file that will be played straight off disk, yes. For anything encoded, it leaves 0.3&nbsp;dB against measurement error of up to 0.56&nbsp;dB from a four-times meter on bright content, plus whatever the encoder adds. The margin is negative before the file leaves your machine."}},{"@type":"Question","name":"Can I skip true-peak limiting and just set the ceiling to &minus;1 dBFS?","acceptedAnswer":{"@type":"Answer","text":"Only if you know your gap. A sample-peak ceiling of &minus;1&nbsp;dBFS on the clean loop above lands at &minus;0.67&nbsp;dBTP, which is fine. The same ceiling on the clipped version lands at +0.97&nbsp;dBTP, which is not. The whole point of the true-peak reading is that the gap is not a constant you can budget for in advance."}},{"@type":"Question","name":"Does true peak matter for 32-bit float files?","acceptedAnswer":{"@type":"Answer","text":"Not until something writes a fixed-point file or feeds a converter. Float stores values above full scale intact, which is why your bus can run six decibels over and recover. It also means a float bounce can be two decibels over and sound perfect on your machine right up to the moment somebody else renders it."}},{"@type":"Question","name":"Why do my hi-hats distort and my kick never does?","acceptedAnswer":{"@type":"Answer","text":"Frequency. Normalized to the same 0.00&nbsp;dBFS sample peak, the kick in the test loop hides 0.003&nbsp;dB and the hats hide 0.226&nbsp;dB, because a 50&nbsp;Hz wave gets about 880 samples per cycle at 44.1&nbsp;kHz and a 15&nbsp;kHz one gets three. Below roughly 2&nbsp;kHz there is less than a tenth of a decibel in it."}},{"@type":"Question","name":"How much loudness does a &minus;1 dBTP ceiling actually cost?","acceptedAnswer":{"@type":"Answer","text":"On a normalized platform, none. Playback gain is set from integrated LUFS, so a master at &minus;8&nbsp;LUFS gets 6&nbsp;dB taken off whatever its ceiling was, and your &minus;1 and somebody else's &minus;0.1 arrive at the same loudness with a tenth of a decibel between their peaks. Off a normalized platform you lose one decibel of absolute level and gain a clean decode."}},{"@type":"Question","name":"Is true peak the same as peak normalization?","acceptedAnswer":{"@type":"Answer","text":"No. Peak normalization scales a file so its highest sample hits a target, which is an operation. True peak is a measurement of the reconstructed waveform. Normalizing to 0&nbsp;dBFS is in fact one of the reliable ways to end up over 0&nbsp;dBTP, which is why the normalize box in an export dialog belongs unticked."}},{"@type":"Question","name":"What true peak should I use for other platforms?","acceptedAnswer":{"@type":"Answer","text":"Where a platform publishes a figure, use theirs. Where it does not, the ceiling is set by the encode rather than by the logo on the page, and the encode behaves the same everywhere: &minus;1&nbsp;dBTP, or &minus;2 if the master is louder than &minus;14&nbsp;LUFS. One file at &minus;1 or &minus;2&nbsp;dBTP is a correct delivery for every destination that encodes."}},{"@type":"Question","name":"Should my true-peak meter go before or after the master fader?","acceptedAnswer":{"@type":"Answer","text":"After everything, including the fader, because the fader is part of what makes the file. A meter anywhere earlier is measuring a signal that no longer exists by the time the bounce is written. The safest reading is not on a meter at all: bounce the file and measure the file."}},{"@type":"Question","name":"Can a true-peak limiter make my master sound worse?","acceptedAnswer":{"@type":"Answer","text":"Yes, if you are asking it for gain it should never have been asked for. It catches peaks that are not in the samples, so it pulls earlier and slightly harder than the waveform looks like it needs, and the first casualty is hat and cymbal edge. The measured extra it asked for here was 0.33&nbsp;dB on a clean loop and 1.97&nbsp;dB on a clipped one."}}]}]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&display=swap">
@@ -250,6 +250,38 @@ h3{margin:28px 0 8px; font-size:17px; font-weight:600; line-height:1.4; color:va
   <a class="inline" href="/oversampling/">Oversampling in audio plugins</a> covers the same
   mechanism where it does the other job.</p>
 
+  <h2>How often the worst case actually lands</h2>
+  <p>That table is a bound on one crest, not a forecast. At most frequencies the sample grid
+  walks through the cycle instead of sitting still, so sooner or later a sample lands near the
+  top and the hidden part collapses. A Hann-gated tone burst, normalized so its loudest
+  sample sits at exactly 0.00&nbsp;dBFS, three thousand random start phases at each frequency,
+  true peak read at thirty-two times the rate. Two milliseconds long, which is about the length
+  of the top end of a hat:</p>
+
+  <div class="card">
+    <dl>
+      <dt>2 kHz</dt><dd>median +0.02 dBTP, worst of 3,000 +0.09 &mdash; bound +0.09</dd>
+      <dt>5 kHz</dt><dd>median +0.08, worst +0.26 &mdash; bound +0.56</dd>
+      <dt>8 kHz</dt><dd>median +0.10, worst +0.35 &mdash; bound +1.49</dd>
+      <dt>11,025 Hz</dt><dd>median +0.65, worst +3.01 &mdash; bound +3.01</dd>
+      <dt>15 kHz</dt><dd>median +0.18, worst +0.74 &mdash; bound +6.35</dd>
+    </dl>
+  </div>
+
+  <p>One row behaves nothing like the others, and it is the quarter-rate one. At exactly a
+  quarter of the sample rate the pattern repeats every four samples, so whichever phase the
+  burst starts on is the phase it keeps, and the full 3.01&nbsp;dB is reachable, and three hundred
+  of the three thousand tries came in above +2.39. At 15&nbsp;kHz the grid drifts a little
+  every cycle, some sample lands near a crest within the first millisecond, and the median
+  reading is 0.18&nbsp;dB against a bound of 6.35.</p>
+
+  <p>Stretch the burst to ten milliseconds and everything except the quarter-rate case falls to
+  about two hundredths of a decibel &mdash; 0.023 at 2&nbsp;kHz, 0.022 at 5, 0.025 at 8, 0.021
+  at 15 &mdash; while 11,025&nbsp;Hz stays at a median of 0.67. Give a sustained tone enough
+  cycles and it gives its peak up to the sampler. Sustained tones are not what puts a master
+  over. Short, dense, broadband events and flattened tops are, which is the rest of this
+  page.</p>
+
   <h2>What to do about it</h2>
   <ol>
     <li>Use a limiter with true-peak detection and turn it on.</li>
@@ -323,6 +355,23 @@ h3{margin:28px 0 8px; font-size:17px; font-weight:600; line-height:1.4; color:va
   <a class="inline" href="/how-to-use-a-limiter/">how to use a limiter</a> cover the two halves of
   that chain.</p>
 
+  <h2>Why flattening a peak raises it</h2>
+  <p>There is a mechanism under that table, and it is the oldest result in the subject. A
+  band-limited reconstruction of a flat top rings above the flat top, and the size of the ring
+  is set by the shape of the edge rather than by how loud you made it. Compute it on the clean
+  case. Sum the odd harmonics of a 100&nbsp;Hz square wave up to
+  22,050&nbsp;Hz and scale so the ideal top is 1.0; the reconstructed peak comes out at 1.1790.
+  That is 17.90&nbsp;percent over the line the clipper drew, and
+  20&nbsp;log&#8321;&#8320;&nbsp;1.1790&nbsp;=&nbsp;<strong>+1.430&nbsp;dB</strong>. Set a
+  clipper to 0&nbsp;dBFS and the waveform that comes out of the converter reaches about a
+  decibel and a half above zero wherever the flat sections are long and clean.</p>
+
+  <p>Real clipped drums go further than that, which the loop already showed: +4.08&nbsp;dBTP at
+  +6&nbsp;dB of clipping, against +1.43 for the idealized single edge. Each flattened top has
+  ringing on both sides of it, the tops arrive milliseconds apart in dense material, and the
+  rings add. Clip harder and you are not making the ring bigger so much as making more of
+  them.</p>
+
   <h2>Clip at a higher rate and most of it goes away</h2>
   <p>Take the identical loop and apply the identical +3&nbsp;dB of hard clipping, but do the
   clipping at a higher internal rate, band-limit the result and bring it back to 44.1&nbsp;kHz.
@@ -343,6 +392,136 @@ h3{margin:28px 0 8px; font-size:17px; font-weight:600; line-height:1.4; color:va
   swears their master is fine because the meter reads zero. Working at 96&nbsp;kHz for the whole
   session gets you the same benefit for free: the column in the table above shows the same content
   hiding 0.58&nbsp;dB at 96&nbsp;kHz where it hid 3.01&nbsp;dB at 44.1.</p>
+
+  <h2>A second loop, and which part of the kit is guilty</h2>
+  <p>Whole-master numbers hide which element is paying. So, a second test file, built for this
+  section and kept deliberately plain: two bars at 92&nbsp;BPM at 44.1&nbsp;kHz, a
+  50&nbsp;Hz kick with a 90&nbsp;ms decay constant and a 4&nbsp;ms click, a snare of noise
+  band-passed between 900&nbsp;Hz and 9&nbsp;kHz over a 185&nbsp;Hz body, sixteenth hats of
+  noise between 5&nbsp;kHz and 16&nbsp;kHz, everything low-passed at 17&nbsp;kHz. Solo each
+  part, normalize it so its loudest sample sits at exactly 0.00&nbsp;dBFS, and measure the
+  reconstruction at thirty-two times.</p>
+
+  <div class="card">
+    <dl>
+      <dt>Kick alone</dt><dd>+0.003 dBTP</dd>
+      <dt>Snare alone</dt><dd>+0.221 dBTP</dd>
+      <dt>Hats alone</dt><dd>+0.226 dBTP</dd>
+      <dt>All three together</dt><dd>+0.331 dBTP</dd>
+    </dl>
+  </div>
+
+  <p>The kick hides three thousandths of a decibel. Normalize it to 0.00&nbsp;dBFS, press it to
+  anything, and nobody will ever complain, because its energy sits far below where this problem
+  starts. The snare and the hats hide two tenths each, and the three together hide more than any
+  of them alone, because the hat that lands on the snare adds its top end to a waveform already
+  near the line.</p>
+
+  <p>Then ask how long the record is actually in trouble, which nobody ever does. Push that
+  loop through +6&nbsp;dB of hard clipping, renormalize to 0.00&nbsp;dBFS sample peak, and its
+  reconstruction sits above 0&nbsp;dBTP for <strong>52.37&nbsp;ms out of 5,217&nbsp;ms</strong>, which
+  is 1.004&nbsp;percent of the file, spread across 2,381 separate excursions averaging about
+  22&nbsp;microseconds each. Above &minus;1&nbsp;dBTP it is 130.91&nbsp;ms, 2.509&nbsp;percent.</p>
+
+  <p>Fifty-two milliseconds. That is the whole argument for a stage that acts at those moments
+  and leaves the other 99&nbsp;percent alone, and it is the same argument for
+  <a class="inline" href="/soft-clipping-explained/">rounding the peaks</a> before anything has
+  to make the decision at all.</p>
+
+  <h2>What the encoder does to it, measured</h2>
+  <p>The usual telling is that the encoder adds peak. Measured, it does something more specific
+  and more useful to know: it takes the peak that was hiding between your samples and writes it
+  into samples. Same loop, encoded five ways, each decoded back to floating point and measured
+  at thirty-two times the rate &mdash; Apple's AAC encoder, LAME for the MP3s, libopus for the
+  Opus. First the version an impatient master hands over, clipped +6&nbsp;dB and renormalized to
+  0.00&nbsp;dBFS sample peak, sitting at +1.971&nbsp;dBTP before anybody touches it:</p>
+
+  <div class="card">
+    <dl>
+      <dt>MP3 320</dt><dd>decoded sample peak <strong>+0.624 dBFS</strong>, true +1.996 dBTP</dd>
+      <dt>MP3 128</dt><dd>decoded sample peak <strong>+1.237 dBFS</strong>, true +1.924 dBTP</dd>
+      <dt>AAC 256</dt><dd>decoded sample peak <strong>+0.907 dBFS</strong>, true +2.085 dBTP</dd>
+      <dt>AAC 128</dt><dd>decoded sample peak <strong>+1.037 dBFS</strong>, true +1.991 dBTP</dd>
+      <dt>Opus 128</dt><dd>decoded sample peak <strong>+1.515 dBFS</strong>, true +1.963 dBTP,
+      decoded at 48 kHz</dd>
+    </dl>
+  </div>
+
+  <p>Read the left-hand column twice. The file that went in had no sample over full scale, not
+  one. Every decode came back with samples up to a decibel and a half over it, and any playback
+  path that drops those into a fixed-point buffer shears them flat before reconstruction is
+  involved at all. The true peak barely moved. The encoder just made it visible.</p>
+
+  <p>Now the same loop with the ceiling done properly, pinned at &minus;1.000&nbsp;dBTP, which
+  puts its sample peak down at &minus;2.971&nbsp;dBFS:</p>
+
+  <div class="card">
+    <dl>
+      <dt>MP3 320</dt><dd>decoded sample &minus;2.335 dBFS, true &minus;0.996 dBTP</dd>
+      <dt>MP3 128</dt><dd>decoded sample &minus;1.360 dBFS, true &minus;1.226 dBTP</dd>
+      <dt>AAC 256</dt><dd>decoded sample &minus;2.305 dBFS, true &minus;0.878 dBTP</dd>
+      <dt>AAC 128</dt><dd>decoded sample &minus;1.987 dBFS, true &minus;0.981 dBTP</dd>
+      <dt>Opus 128</dt><dd>decoded sample &minus;1.494 dBFS, true &minus;0.985 dBTP</dd>
+    </dl>
+  </div>
+
+  <p>Nothing over, anywhere, in either column. The largest overshoot any encoder added on its
+  own account was <strong>0.122&nbsp;dB</strong>, by AAC at 256&nbsp;kbit, taking &minus;1.000
+  to &minus;0.878. On the clean, unclipped loop the same five came back between &minus;1.42 and
+  &minus;1.00&nbsp;dBTP; MP3 at 128 lost 0.42&nbsp;dB rather than gaining any, because at that
+  rate it is discarding the top octave that carried the overshoot.</p>
+
+  <p>One decibel covered every case here, and 0.878 of it went unused. Encoder overshoot is
+  real and small. The reason masters break after upload is almost never the encoder's own
+  contribution &mdash; it is the two decibels you had already hidden.</p>
+
+  <h2>What sample-rate conversion does to the number, measured</h2>
+  <p>True peak survives a sample-rate conversion almost exactly. Sample peak does not, and the
+  distance between those two facts is where careful masters still get ruined.</p>
+
+  <p>Take the loop pinned at exactly &minus;1.000&nbsp;dBTP at 48&nbsp;kHz and convert it to
+  44.1. It reads <strong>&minus;0.997&nbsp;dBTP</strong>. Run it the other way, 44.1 up to 48,
+  and it reads &minus;0.999. On the loud, clipped version of the same loop the worst shift
+  measured was 0.022&nbsp;dB, &minus;1.000 becoming &minus;0.978. Three thousandths of a
+  decibel on ordinary material, two hundredths on hard material.</p>
+
+  <p>That follows from what the two numbers are. True peak describes the reconstructed
+  waveform, and preserving that waveform is the whole job of a competent rate converter. What
+  the conversion changes is which points of it get stored, and that is where it bites.</p>
+
+  <p> Convert the clipped loop that was left at 0.00&nbsp;dBFS sample
+  peak from 44.1 up to 48&nbsp;kHz and the new file reads <strong>+1.508&nbsp;dBFS sample
+  peak</strong>, with <strong>2,254 samples over full scale</strong>. Down to 32&nbsp;kHz it
+  reads +1.061&nbsp;dBFS. Nothing was added; the sample grid simply moved to where the
+  waveform already was. Write that to anything fixed-point and every one of those 2,254 samples
+  is clamped, by a clipper you did not choose, at a ceiling you did not set.</p>
+
+  <p>So the order is: get the true peak right, convert, then read the converted file's sample
+  peak before it is written to anything fixed-point.</p>
+
+  <h2>How big the number can get, in principle</h2>
+  <p>There is no upper bound on an intersample peak, and the arithmetic is two lines. The
+  reconstructed value halfway between two samples is a weighted sum of every sample in the
+  file, with weights sinc(n&nbsp;+&nbsp;0.5). Set each sample to plus or minus full scale
+  matching the sign of its own weight, and the value at that point becomes the sum of the
+  absolute weights:</p>
+
+  <div class="card">
+    <dl>
+      <dt>8 samples</dt><dd>2.1342 &times; full scale = +6.58 dB</dd>
+      <dt>64 samples</dt><dd>3.4564 = +10.77 dB</dd>
+      <dt>512 samples</dt><dd>4.7802 = +13.59 dB</dd>
+      <dt>4,096 samples</dt><dd>6.1040 = +15.71 dB</dd>
+      <dt>44,100 samples, one second</dt><dd>7.6169 = +17.64 dB</dd>
+    </dl>
+  </div>
+
+  <p>The weights fall off as 1&nbsp;/&nbsp;n, so the sum grows forever, slowly, at roughly
+  1.9&nbsp;dB per doubling of length. Every sample in that construction is legal, every meter
+  reads 0.00&nbsp;dBFS, and the converter is asked for seven and a half times full scale. No
+  music looks remotely like it. What it settles is whether some fixed number of decibels is
+  enough in the abstract: none is. A decibel works because of what music is, not because of
+  what the arithmetic allows.</p>
 
   <h2>Where the decibel goes</h2>
   <p>People resist the &minus;1 dBTP ceiling because it looks like giving away a decibel of
@@ -395,17 +574,44 @@ h3{margin:28px 0 8px; font-size:17px; font-weight:600; line-height:1.4; color:va
   content at 16&nbsp;kHz and 0.56&nbsp;dB at 20&nbsp;kHz, which is enough to matter on the exact
   material you would be testing. Do the eight.</p>
 
+  <h2>A test signal whose answer you already know</h2>
+  <p>Grading a meter is easier with a signal whose true peak can be written down in advance,
+  and there is exactly one that is trivial to build. A sine at a quarter of the sample rate,
+  shifted 45&nbsp;degrees, lands its samples at &plusmn;0.7071 of the crest and never on it, so
+  its true peak is 20&nbsp;log&#8321;&#8320;&radic;2&nbsp;=&nbsp;3.010&nbsp;dB above its sample
+  peak, on every cycle, for as long as it runs.</p>
+  <ol>
+    <li>Generate a sine at 11,025 Hz in a 44.1 kHz session, or 12,000 Hz in a 48 kHz one.</li>
+    <li>Offset its start by an eighth of a cycle: 11.34&nbsp;&micro;s at 11,025 Hz,
+    10.42&nbsp;&micro;s at 12,000 Hz.</li>
+    <li>Normalize so the loudest sample reads exactly 0.00 dBFS.</li>
+    <li>Read it with the meter you are grading. A true-peak meter says +3.0 dBTP. A sample-peak
+    meter says 0.0.</li>
+    <li>Read it with your limiter's own display, at a ceiling of &minus;1 dBTP, and watch
+    whether it pulls 4 dB or 1.</li>
+  </ol>
+  <p>I ran that file here to check the arithmetic against the measurement: +3.010&nbsp;dBTP at
+  thirty-two times oversampling, against a closed form of +3.010. One caveat before you
+  over-read the result. At this frequency every oversampling factor from two upward puts a
+  calculated point exactly on the crest, so the test separates a true-peak meter from a
+  sample-peak meter cleanly and says nothing about the factor. For that, use the eight-times
+  conversion above on real music.</p>
+
   <h2>Where it sits in the chain</h2>
   <p>True-peak limiting is the last processing decision on the master, and the order of the
   handful of things around it is not arbitrary.</p>
-  <p>Sample-rate conversion goes before the limiter, never after. Converting a file changes the
-  samples, so a file that was pinned at &minus;1&nbsp;dBTP at 48&nbsp;kHz is at some other number
-  once it has been converted to 44.1. If you owe a 44.1&nbsp;kHz delivery, convert and then limit,
-  and check the converted file.</p>
+  <p>Sample-rate conversion goes before the limiter, never after &mdash; though not for the
+  reason usually given. Measured, the ceiling itself survives the trip: pinned at
+  &minus;1.000&nbsp;dBTP at 48&nbsp;kHz, the test loop reads &minus;0.997 after conversion to
+  44.1, and &minus;0.978 on the loud version. What moves is the sample peak, by more than a
+  decibel, and with it the number of samples sitting over full scale. If you owe a
+  44.1&nbsp;kHz delivery, convert and then limit, and check the converted file &mdash; not
+  because the ceiling drifted, but because the file underneath it is a different file.</p>
   <p>Dither goes after the limiter and cannot hurt you. A 16-bit least significant bit is
   1&nbsp;/&nbsp;32768, which is &minus;90.31&nbsp;dBFS. Add triangular dither at two of those peak
-  to peak on top of a peak sitting at &minus;1&nbsp;dBFS and the peak moves by 0.0003&nbsp;dB. It
-  is not a rounding error, it is four orders of magnitude below one.
+  to peak on top of a peak sitting at &minus;1&nbsp;dBFS and the peak moves by 0.0003&nbsp;dB
+  &mdash; three ten-thousandths of a decibel, three and a half orders of magnitude below the
+  smallest step any meter in the session will show you.
   <a class="inline" href="/dithering/">Dithering explained</a> has the rest of that decision.</p>
   <p>Anything that changes the waveform goes before the true-peak stage: EQ, mid/side width, a
   final tilt, a fade. Put a half-decibel shelf after the limiter and you have invalidated the
@@ -417,6 +623,34 @@ h3{margin:28px 0 8px; font-size:17px; font-weight:600; line-height:1.4; color:va
   perform a rescue. <a class="inline" href="/headroom-in-mixing/">Headroom in mixing</a> and
   <a class="inline" href="/how-to-master-a-beat/">how to master a beat</a> cover the rest of the
   order.</p>
+
+  <h2>Float, fixed, and what the file can actually hold</h2>
+  <p>Where this bites depends on the number format the audio is sitting in, and the two behave
+  nothing alike. A 32-bit float file stores values above full scale without complaint and hands
+  them back intact, which is also why a channel can run six decibels over inside the session,
+  sound perfect, and recover when you pull the fader. The overs are stored, not destroyed.</p>
+
+  <p>A fixed-point file has nowhere to put them. Sixteen bits runs from &minus;32768 to +32767
+  and twenty-four from &minus;8388608 to +8388607; there is no value above full scale in the
+  format, so the write clamps and the clamp is permanent. The least significant bit is
+  1&nbsp;/&nbsp;32768 at sixteen bits, which is &minus;90.31&nbsp;dBFS, and 1&nbsp;/&nbsp;8388608
+  at twenty-four, which is &minus;138.47&nbsp;dBFS.</p>
+
+  <ul>
+    <li>A 32-bit float bounce can sit at +2 dBTP and 0 dBFS and play back perfectly on your
+    machine. It is still two decibels over, and the machine that converts it decides what that
+    means.</li>
+    <li>Handing a float file to an engineer moves the problem into their render rather than
+    solving it. Leave real headroom instead and let them work.</li>
+    <li>A 24-bit delivery clamps for you, silently, without a light coming on anywhere.</li>
+    <li>Float is why every meter inside the session can read green while the file you wrote is
+    over. Most master meters are watching the bus, not the file.</li>
+  </ul>
+
+  <p>Which is the short answer to why this problem survives at all: everything upstream of the
+  file forgives it. <a class="inline" href="/gain-staging/">Gain staging</a> and
+  <a class="inline" href="/headroom-in-mixing/">headroom in mixing</a> are the two habits that
+  keep it from getting that far.</p>
 
   <h2>What each failure sounds like</h2>
   <p>Four different problems get described with the same word, and they are distinguishable by ear
@@ -433,6 +667,14 @@ h3{margin:28px 0 8px; font-size:17px; font-weight:600; line-height:1.4; color:va
   harder than the visible waveform suggests it should, and the first thing you lose is hat and
   cymbal edge. If switching the true-peak option on made the master duller rather than quieter, you
   were leaning on the limiter for gain you should have taken upstream.</p>
+  <p><strong>Decoded sample clipping</strong> is the encoder failure's uglier cousin, and the
+  tell is that it is identical on every play. The decode handed the player samples above full
+  scale &mdash; measured above, up to +1.515&nbsp;dBFS from a file with none &mdash; and a
+  fixed-point playback path clamped them. Converter clipping wanders from device to device;
+  this does not move at all, because it happened before any converter was involved.</p>
+  <p><strong>Conversion clipping</strong> happens on your own machine and is fully repeatable.
+  The master was fine at 48&nbsp;kHz and the 44.1 version crackles, or the other way round. Bounce
+  both, read both sample peaks, and the one that is higher tells you which render did it.</p>
   <p><strong>A ceiling set too low</strong> sounds like nothing at all. That is the point. One
   decibel of peak on a normalized platform is a decibel the platform was going to take back
   anyway.</p>
@@ -443,6 +685,15 @@ h3{margin:28px 0 8px; font-size:17px; font-weight:600; line-height:1.4; color:va
   so it pulls down slightly more and slightly earlier. On heavily limited material that is
   audible. The fix is the same as always, which is to do less of the work in the limiter.</p>
 
+  <p>Put a size on it rather than a feeling. The extra gain reduction a true-peak ceiling asks
+  for, against the same ceiling in dBFS, is exactly the gap between the two readings on your
+  own material: 0.33&nbsp;dB on the clean loop above, 1.97&nbsp;dB on the clipped one. A clean,
+  dark mix pays a third of a decibel for the insurance. A bright master that has already been
+  hammered pays two, and pays it because it already owed it.</p>
+  <p>Some of the cost is literally arithmetic. Estimating the peak between samples means building those
+  points, so a detector running at four times does four times the filtering of a sample-peak
+  detector. On one master bus nobody notices; on forty channels you would. One more reason this
+  belongs on the master and not on everything.</p>
   <p>There is a second cost worth naming. Doing this properly means bouncing, converting,
   measuring and sometimes going back, which is minutes per master rather than seconds, and it is
   the least interesting work in the building. The trade is that the failure it prevents is the one
@@ -511,9 +762,83 @@ h3{margin:28px 0 8px; font-size:17px; font-weight:600; line-height:1.4; color:va
   previews, the preview is encoded, so it matters exactly as much as anywhere else. For a file
   somebody will only ever play from disk, &minus;0.3 dBTP is fine.</p>
   <h3>Does dither push me over the ceiling?</h3>
-  <p>No, by four orders of magnitude. Triangular dither at two 16-bit least significant bits peak
-  to peak moves a &minus;1&nbsp;dBFS peak by 0.0003&nbsp;dB.</p>
+  <p>No. Triangular dither at two 16-bit least significant bits peak to peak moves a
+  &minus;1&nbsp;dBFS peak by 0.0003&nbsp;dB, three ten-thousandths of a decibel, which is three
+  and a half orders of magnitude below the smallest step a meter will show you.</p>
 
+  <h3>What is intersample clipping?</h3>
+  <p>Clipping that happens to the waveform between the stored samples rather than to the
+  samples themselves. The file is legal, every value in it is inside full scale, and the
+  reconstruction the converter or the decoder builds from those values goes over. It is the
+  same event as an intersample peak; the word clipping gets attached once something downstream
+  has nowhere to put it.</p>
+  <h3>Why is my sample peak 0 dBFS but my true peak +2 dBTP?</h3>
+  <p>Because something flattened the tops. A band-limited reconstruction rings 17.90 percent,
+  or 1.430&nbsp;dB, above a clean flat top, and dense material stacks those rings. The clipped
+  test loop on this page sits at +1.971&nbsp;dBTP with a sample peak of exactly
+  0.000&nbsp;dBFS.</p>
+  <h3>Does MP3 or AAC encoding raise true peak?</h3>
+  <p>Barely. Measured here on one loop across five encoders, the largest true-peak increase was
+  0.122&nbsp;dB, by AAC at 256&nbsp;kbit. What the encoders did do was turn hidden peak into
+  visible samples: a file with no sample over full scale decoded with sample peaks up to
+  +1.515&nbsp;dBFS. The encoder is the messenger.</p>
+  <h3>Why does my song sound distorted on streaming but fine in my DAW?</h3>
+  <p>Your session is floating point and forgives everything above full scale; the decode on the
+  listener's end is often not. If the file went out at 0&nbsp;dBFS sample peak with two
+  decibels hiding between the samples, the decoder writes those two decibels into real samples
+  and whatever comes next clamps them.</p>
+  <h3>Do I need to re-check true peak after converting 48 kHz to 44.1?</h3>
+  <p>Check the file, but the ceiling itself will not have moved much. Measured, a loop pinned
+  at &minus;1.000&nbsp;dBTP at 48&nbsp;kHz reads &minus;0.997 at 44.1, and &minus;0.978 on
+  heavily clipped material. What moves is the sample peak, by more than a decibel, so the
+  conversion is worth checking for a fixed-point delivery even though the dBTP number is
+  stable.</p>
+  <h3>Is &minus;0.3 dBTP enough?</h3>
+  <p>For a file that will be played straight off disk, yes. For anything encoded, it leaves
+  0.3&nbsp;dB against measurement error of up to 0.56&nbsp;dB from a four-times meter on bright
+  content, plus whatever the encoder adds. The margin is negative before the file leaves your
+  machine.</p>
+  <h3>Can I skip true-peak limiting and just set the ceiling to &minus;1 dBFS?</h3>
+  <p>Only if you know your gap. A sample-peak ceiling of &minus;1&nbsp;dBFS on the clean loop
+  above lands at &minus;0.67&nbsp;dBTP, which is fine. The same ceiling on the clipped version
+  lands at +0.97&nbsp;dBTP, which is not. The whole point of the true-peak reading is that the
+  gap is not a constant you can budget for in advance.</p>
+  <h3>Does true peak matter for 32-bit float files?</h3>
+  <p>Not until something writes a fixed-point file or feeds a converter. Float stores values
+  above full scale intact, which is why your bus can run six decibels over and recover. It also
+  means a float bounce can be two decibels over and sound perfect on your machine right up to
+  the moment somebody else renders it.</p>
+  <h3>Why do my hi-hats distort and my kick never does?</h3>
+  <p>Frequency. Normalized to the same 0.00&nbsp;dBFS sample peak, the kick in the test loop
+  hides 0.003&nbsp;dB and the hats hide 0.226&nbsp;dB, because a 50&nbsp;Hz wave gets about 880
+  samples per cycle at 44.1&nbsp;kHz and a 15&nbsp;kHz one gets three. Below roughly
+  2&nbsp;kHz there is less than a tenth of a decibel in it.</p>
+  <h3>How much loudness does a &minus;1 dBTP ceiling actually cost?</h3>
+  <p>On a normalized platform, none. Playback gain is set from integrated LUFS, so a master at
+  &minus;8&nbsp;LUFS gets 6&nbsp;dB taken off whatever its ceiling was, and your &minus;1 and
+  somebody else's &minus;0.1 arrive at the same loudness with a tenth of a decibel between
+  their peaks. Off a normalized platform you lose one decibel of absolute level and gain a
+  clean decode.</p>
+  <h3>Is true peak the same as peak normalization?</h3>
+  <p>No. Peak normalization scales a file so its highest sample hits a target, which is an
+  operation. True peak is a measurement of the reconstructed waveform. Normalizing to
+  0&nbsp;dBFS is in fact one of the reliable ways to end up over 0&nbsp;dBTP, which is why the
+  normalize box in an export dialog belongs unticked.</p>
+  <h3>What true peak should I use for other platforms?</h3>
+  <p>Where a platform publishes a figure, use theirs. Where it does not, the ceiling is set by
+  the encode rather than by the logo on the page, and the encode behaves the same everywhere:
+  &minus;1&nbsp;dBTP, or &minus;2 if the master is louder than &minus;14&nbsp;LUFS. One file at
+  &minus;1 or &minus;2&nbsp;dBTP is a correct delivery for every destination that encodes.</p>
+  <h3>Should my true-peak meter go before or after the master fader?</h3>
+  <p>After everything, including the fader, because the fader is part of what makes the file.
+  A meter anywhere earlier is measuring a signal that no longer exists by the time the bounce
+  is written. The safest reading is not on a meter at all: bounce the file and measure the
+  file.</p>
+  <h3>Can a true-peak limiter make my master sound worse?</h3>
+  <p>Yes, if you are asking it for gain it should never have been asked for. It catches peaks
+  that are not in the samples, so it pulls earlier and slightly harder than the waveform looks
+  like it needs, and the first casualty is hat and cymbal edge. The measured extra it asked for
+  here was 0.33&nbsp;dB on a clean loop and 1.97&nbsp;dB on a clipped one.</p>
   <h2>What BEEFY does</h2>
   <p>BEEFY is a saturation and loudness effect for making sounds thicker, punchier and more up
   front. It adds body, squeezes some space out of the peaks, and brings out harmonics that help a
@@ -529,6 +854,23 @@ h3{margin:28px 0 8px; font-size:17px; font-weight:600; line-height:1.4; color:va
   brighter is the direction that costs you true peak. It is $19, one payment, Mac and Windows, with
   AU, VST3 and a Mac standalone. Whatever you use for the last stage, the decibel it does not have
   to catch is the cheapest one on the record.</p>
+
+  <figure class="shot">
+    <a href="/beefy.html" data-umami-event="guide_truepeak_to_beefy" data-umami-event-spot="figimg" class="imglink"><img src="/beefy/beefy-softclip.jpg" width="550" height="410" loading="lazy" alt="BEEFY with SOFT CLIP as the output stage."></a>
+    <figcaption><b>SOFT CLIP</b> on, which is how it opens.</figcaption>
+  </figure>
+
+  <p>The reason SOFT CLIP opens switched on is that it handles the initial gain staging, so the
+  clipping finds the sound without you hunting for a magic input level; you can still add more
+  BEEF on top of it. The panel resizes, remembers its size, and starts at 80&nbsp;percent, and
+  the cow reacts to the audio, which is not a mastering feature and is not going anywhere.</p>
+
+  <p>Use it the way this page measures things. Put it on the element causing the overshoot
+  &mdash; on the second test loop that is the hats and the snare, never the kick &mdash; then
+  bounce, convert to eight times the rate and read the sample peak, once before and once after.
+  The difference between those two readings is the gap between what your meter told you and what
+  the converter will do, and a quarter of a decibel taken off it upstream is a quarter of a
+  decibel the last stage never has to find. Mac 1.1.1, Windows 1.1.2.</p>
 
   <p>The meter was not lying. It was answering a different question from the one the converter
   asks.</p>

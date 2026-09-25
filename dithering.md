@@ -81,6 +81,26 @@ At 16 bits the error is too quiet to put on a web page. Pull the depth down far 
 
 Both files come from [F(ilter)12](https://gazillionindustries.com/f12.html), where the reduction is the point rather than the problem. The hash sitting on top of the loop is rounding error, and it moves with the music instead of under it. At 16 bits it is the same thing, far quieter, sitting on your fade. More on the mechanism in [bitcrushing explained](https://gazillionindustries.com/bitcrushing-explained/).
 
+## Why triangular, and not just any noise
+
+Any noise breaks the correlation. Only one width holds the floor still. The distinction turns up in export dialogs as RPDF against TPDF, and it is worth ten seconds of your attention, because the wrong one leaves a fault that is harder to hear and much harder to diagnose than plain grain.
+
+Rectangular dither is one step wide, drawn flat between minus half a step and plus half. Its variance is one twelfth of a step squared, the same as the rounding it is treating, so the two add to one sixth and the error floor lands at a step over the square root of six: −98.09 dBFS. Triangular is two steps wide, the sum of two independent rectangular draws, so its variance is one sixth on its own, and with the rounding on top the total is one quarter — half a step, −96.33 dBFS. Triangular therefore costs 10 log10(3/2) = 1.76 dB more than rectangular.
+
+That 1.76 dB buys the thing rectangular cannot give you. Rectangular dither randomizes the average error but leaves its *size* a function of the signal, so the hiss swells and shrinks with the music instead of sitting under it. The name for that is noise modulation, and it sounds like a background that breathes.
+
+Measured here this session: a 997 Hz tone fading from −60 to −100 dBFS over six seconds, reduced to 16-bit three ways, the error isolated and its level taken in 250 ms blocks.
+
+- **No dither.** Block level wanders across a 3.49 dB range over the fade.
+
+- **Rectangular.** 1.76 dB range. Better, and still tied to the music.
+
+- **Triangular.** 0.17 dB range. Flat enough to call constant.
+
+Go further down and the two part company altogether. Steady tones from −20 to −100 dBFS leave the triangular floor inside 0.05 dB of −96.33 dBFS at every level. Hand rectangular dither a tone at −140 dBFS, far below a single step, and its floor collapses to −116.85 dBFS, because signal plus dither stops reaching the rounding boundary often enough to keep generating noise. Triangular reads −96.31 dBFS on that same file, unmoved.
+
+So: triangular by default, and where a host offers a width in steps, two is the number. One step is the setting that sounds nearly right and measures wrong.
+
 ## Types, briefly
 
 - **Triangular (TPDF)** is the standard choice and the one to use if you do not want to think about it. It fully decorrelates the error at the cost of a slightly higher noise floor.
@@ -98,6 +118,50 @@ For a causal, minimum-phase shaper the log-average of the noise spectrum is fixe
 In absolute terms that moves the floor from a flat −96.33 dBFS to −111.33 dBFS below 15 kHz and −64.41 dBFS above it. A meter reading total RMS noise reports the shaped file as roughly 27 dB worse. Your ears report it as quieter, because almost none of that 27 dB lands anywhere they are working. Both readings are honest and they are answering different questions.
 
 That arithmetic also explains the warning attached to the aggressive settings. −64.41 dBFS of hash sitting just under Nyquist is harmless on its way to a speaker and anything but harmless on its way into a saturator, a sample rate conversion or an encoder. See [aliasing](https://gazillionindustries.com/what-is-aliasing-in-audio/) and [oversampling](https://gazillionindustries.com/oversampling/) for what becomes of it there.
+
+## The simplest shaper, worked all the way through
+
+One line of arithmetic runs the most common noise shaper there is, and working it yourself is the fastest way to stop treating the feature as a mystery. Take the quantizer's error from the previous sample and subtract it from the current input. That is a first-order error feedback loop, and its effect on the noise is the filter 1 − z⁻¹.
+
+The gain that filter applies to the noise at any frequency is 2 sin(πf/fs). At 44.1 kHz that works out as:
+
+- **50 Hz**: −42.95 dB
+
+- **100 Hz**: −36.93 dB
+
+- **1 kHz**: −16.93 dB
+
+- **3 kHz**: −7.45 dB
+
+- **7,350 Hz**: 0.00 dB, the crossover
+
+- **15 kHz**: +4.88 dB
+
+- **22,050 Hz**: +6.02 dB
+
+Read the crossover first. 2 sin(πf/fs) equals one when f is exactly fs/6, which is 7,350 Hz at 44.1 kHz, 8,000 Hz at 48 kHz and 16,000 Hz at 96 kHz. Below that point the shaper takes noise away. Above it the shaper puts noise back, and every decibel removed from the midrange lands in the top two octaves.
+
+Now the total. Averaged across the band the squared gain of 1 − z⁻¹ comes out at exactly 2, so the shaper adds 10 log10(2) = 3.01 dB of noise power while handing you 16.93 dB of relief at 1 kHz and 36.93 dB at 100 Hz. Its log-average is zero, the same constraint that governed the aggressive example above. Modest shaping is a bargain. The arithmetic only turns punitive when you ask for 15 dB across the whole midband.
+
+In absolute terms, against a flat dithered density of −139.76 dBFS in any one hertz, a first-order shaper reads −156.69 dBFS in a hertz at 1 kHz and −133.74 dBFS at Nyquist. A meter that sums noise power across the band reports it 3.01 dB worse than flat dither. All 3.01 dB of that sits above 7,350 Hz, while the region your hearing is sharpest in has dropped by more than 15 dB. See [fletcher munson](https://gazillionindustries.com/fletcher-munson/) for why those two statements agree with each other.
+
+## What changes at 48 and 96 kHz
+
+Sample rate has nothing to do with whether you dither and everything to do with what shaping can buy. Depth sets the floor. Rate sets how much room sits above the audible band to push noise into. Take the two export settings one at a time and the confusion goes away: depth decides the dither, rate decides none of it.
+
+Total noise is identical at every rate, because it depends on step size alone. What moves is the density, since the same power is spread across a wider band.
+
+- **44.1 kHz**: −139.76 dBFS in any one hertz
+
+- **48 kHz**: −140.13 dBFS
+
+- **88.2 kHz**: −142.77 dBFS
+
+- **96 kHz**: −143.14 dBFS
+
+Now run the aggressive shaping example again at each rate: 15 dB of relief across 0 to 15,000 Hz, paid for above. At 44.1 kHz the quiet band is 68.03% of everything available, the rest has to rise 31.91 dB, and total noise power climbs 26.96 dB. At 48 kHz the quiet band is 62.50%, the rise is 25.00 dB and the total is 20.74 dB. At 96 kHz the quiet band is 31.25%, the rise is 6.82 dB, and the total climbs 5.20 dB.
+
+Read the last figure against the first. Identical relief costs 26.96 dB of total noise at 44.1 kHz and 5.20 dB at 96 kHz, because 96 kHz leaves 33,000 hertz above 15 kHz to absorb it where 44.1 kHz leaves 7,050. That is the argument for shaping hard at high rates, and it is also why 16-bit 44.1 kHz — the one delivery that actually obliges you to dither — is the worst place to be aggressive about it.
 
 [BEEFY](https://gazillionindustries.com/beefy.html) lives much earlier in the chain than this: saturation and loudness, with SOFT CLIP holding the peaks long before anything gets exported.
 
@@ -134,6 +198,28 @@ Playback loudness normalization on a streaming service runs on their side, in th
 A 32-bit float export needs none of this. A float sample carries a 24-bit mantissa and an exponent that moves with the value, so its rounding error stays around 144.5 dB below whatever that sample happens to be, at every level. An error that scales with the signal can never sit underneath the music as a fixed floor, and it can never turn into grain on a fade. Export float, or export 24-bit, and walk past the checkbox.
 
 Lossy encoding is the last case worth knowing. An encoder discards what it judges you cannot hear, and a flat floor at −96 dBFS is near the front of that queue, so dithering on the way into an encoder spends 4.77 dB on something the encoder is likely to throw out. Hand the encoder the deepest file you have and let it work from that.
+
+## What each delivery needs
+
+One question answers all of them. Is this file's bit depth lower than the depth you worked at? Everything below follows from that, and none of it depends on genre, loudness or who is receiving the file.
+
+- **CD master, 16-bit 44.1 kHz**: dither, triangular, once, last
+
+- **Distributor or aggregator upload**: 24-bit, no dither
+
+- **To a mastering engineer**: 24-bit or 32-bit float, no dither, headroom left
+
+- **Stems coming back into a session**: session depth or float, no dither
+
+- **Sample pack at 24-bit**: no dither
+
+- **Sample pack a spec insists on at 16-bit**: dither once, per file, at the end
+
+- **Reference bounce for the car**: whatever is quickest, and nobody will hear it
+
+- **Archive**: the deepest file you have, no dither
+
+The sample pack row catches people out, because a pack is two hundred files rather than one. Batch-convert a folder of 24-bit one-shots down to 16-bit with dither on and every file carries its own independent floor, which is correct. Send that same folder through the converter a second time and every file carries two floors, 3.01 dB for nothing. Convert from the masters, never from the last export.
 
 ## Where the control lives, by DAW
 
@@ -174,6 +260,32 @@ Take none of this on trust. Ten minutes and you will never have to read about it
 At +60 dB a −96.33 dBFS floor arrives at −36.33 dBFS, which is audible on anything, including a laptop. The undithered tail gives a grainy, buzzing edge that changes as the note changes. The triangular one gives steady hiss that sits still. The shaped one gives quieter hiss with a thin, airy top to it. On the null test, the residual measured −95.25 dBFS in the version rendered for this page, and that residual is the whole disagreement, at full size.
 
 **BEEF at 8.** The reference you A/B against.
+
+## Put a number on it instead of an opinion
+
+Ears settle this argument slowly and a meter settles it in a minute. If the listening test above left you unsure, measure the three files rather than replaying them. Every figure on this page is reproducible at your own desk with a level meter, a spectrum analyzer and a phase invert.
+
+- Solo the last two seconds of the undithered export, after the music has gone. A reading near −101 dBFS is the rounded error floor. This session measured −100.96 dBFS on a −60 dBFS tone and −102.25 dBFS on a tone peaking at one step.
+
+- Do the same on the triangular export. It should read −96.33 dBFS, and it should read that on every file you try, whatever the music was doing. The constancy is the result.
+
+- Invert one against the other and measure the sum. Around −95 dBFS is correct. This session measured between −95.06 and −95.24 dBFS depending on the tone level.
+
+- Put a spectrum analyzer on the undithered residual and look for peaks at exact multiples of your test tone. On a tone at −80 dBFS, 64.1% of the error energy sat on those multiples. The same measurement on the dithered residual read 0.2%.
+
+If your meter bottoms out before it reaches −96 dBFS, put a +60 dB gain plugin ahead of it and subtract 60 from whatever it says.
+
+## What a constant floor sounds like
+
+The hard part of hearing dither is that it works by being ignorable. A floor that holds still disappears into the background within a couple of seconds of listening, which is precisely the property you are buying. Here is that property at a level a phone speaker can show you.
+
+Dither at 16 bits sits far too low to demonstrate on a web page, so this is the same principle raised about 35 dB. A loop with silence in its gaps, then the same loop with a steady floor underneath and nothing else changed. Measured off these two files: the loudest 200 ms window differs by 0.06 dB between them, while the gaps go from digital silence to −61.45 dBFS.
+
+- **No floor** — the gaps are silent — https://gazillionindustries.com/tripleog/tog-dry.m4a
+
+- **Steady floor** — gaps at −61.45 dBFS, loud parts within 0.06 dB — https://gazillionindustries.com/tripleog/tog-hiss.m4a
+
+Both come from [TRIPLE OG](https://gazillionindustries.com/tripleog.html), where a floor like that is something you dial in rather than something you inherit. Play the second one twice and notice how quickly you stop hearing the noise while the music runs. The dithered 16-bit floor is the same trick 34.88 dB further down, which is why nobody complains about it. [Tape hiss](https://gazillionindustries.com/tape-hiss/) is the long version of that argument.
 
 ## The five ways it goes wrong, and what each sounds like
 
@@ -275,11 +387,73 @@ No, and the two are unrelated. Clipping happens at the top of the range and dith
 
 Steady, featureless hiss that holds still while the music moves. That constancy is the whole point. The ear discounts a background that stays put and fastens onto anything that tracks the note.
 
+### Do I need to dither if I export at 44.1 kHz?
+
+Sample rate has nothing to do with it. Dither answers a question about bit depth. A 24-bit 44.1 kHz export needs none, and a 16-bit 96 kHz export needs it. Look at the depth field, not the rate field.
+
+### What is the difference between RPDF and TPDF dither?
+
+Width. Rectangular is one step wide and lands its floor at −98.09 dBFS. Triangular is two steps wide and lands at −96.33 dBFS, 1.76 dB higher. The extra 1.76 dB buys a floor that holds still: measured over a fade this session, the rectangular error level moved across a 1.76 dB range, while the triangular one moved across 0.17 dB. That the measured range and the cost come to the same figure is a coincidence, and a memorable one.
+
+### Does dither remove noise?
+
+The opposite. It adds a small amount of noise in order to remove a distortion. Anything sold as dither that reduces your noise floor is doing something else.
+
+### Does dither add latency?
+
+No. Dither is one addition per sample, and even a noise shaper only looks at errors it has already made, so neither needs to see into the future. Nothing about it delays your export or shifts your file in time.
+
+### Should I dither going from 32-bit float to 24-bit?
+
+Only if the material genuinely lives down near the bottom of 24 bits, which almost nothing does. A 24-bit step is −138.47 dBFS. The rounding distortion you would be treating is already 52.94 dB below the floor of a dithered 16-bit file. In practice, export 24-bit with dither off.
+
+### Does dither affect true peak?
+
+By an amount no meter will show you. Dither adds noise peaking around one step, −90.31 dBFS, to a signal peaking near 0 dBFS. It cannot push a compliant master over a ceiling. For what does, see [true peak](https://gazillionindustries.com/true-peak/).
+
+### What dither should I use for a CD master?
+
+Triangular, once, on the 16-bit 44.1 kHz render, with nothing after it. CD is the one delivery format that forces the decision, since its depth is fixed at 16 bits. Noise shaping is legitimate here if the record has real quiet in it, and unnecessary on anything loud.
+
+### Does my DAW dither automatically?
+
+Some do on a 16-bit export and some do not, and the ones that do are not always loud about it. Set bit depth to 16 in your export dialog and watch which control becomes available. If a dither menu wakes up, the host is waiting for you to choose. If nothing wakes up, check the manual before assuming either way.
+
+### Is truncation the same as no dither?
+
+Close enough to make no practical difference and not quite identical. Truncation throws away the low bits and always errs in one direction, which adds a tiny DC offset of half a step on top of the distortion. Rounding to nearest, which is what most hosts do, errs both ways. Both are signal-dependent and both are what dither exists to fix.
+
+### Can there be too much dither?
+
+Yes, and stacking is how it happens. Two passes add 3.01 dB, four add 6.02 dB. Widening the dither beyond two steps also raises the floor with no further benefit, because two steps already fully decorrelates the error. Two steps, once.
+
+### Should I dither a sample pack?
+
+Not at 24-bit, which is how packs should ship. If a spec forces 16-bit, dither each file once on the conversion from your 24-bit masters, and never by re-converting files that were already converted.
+
+### Does dither matter for vinyl?
+
+Not at your end. Send the cutting engineer 24-bit and let them handle the transfer. A record lathe is fed an analog signal, so there is no 16-bit step anywhere in the chain for dither to be treating.
+
+### Why does my 16-bit export sound thinner than the 24-bit one?
+
+Almost certainly not the depth. A properly dithered 16-bit file measures a noise floor at −96.33 dBFS and is otherwise sample-for-sample the same record. Look instead at sample rate conversion, a normalization step you forgot, or a limiter still engaged on one export and not the other. See [why does my beat sound digital](https://gazillionindustries.com/why-does-my-beat-sound-digital/).
+
+### Does dither help a podcast or a voiceover?
+
+More than it helps a loud record, and still not much. Spoken word has real gaps in it, so the quantization grain has somewhere to show, but speech is almost always delivered as a lossy file where an encoder discards a −96 dBFS floor immediately. Deliver the deepest file the platform takes and skip the checkbox.
+
+### How loud is dither in decibels?
+
+Triangular dither at 16 bits produces a floor of −96.33 dBFS, which is half of one 16-bit step. Undithered rounding sits at −101.10 dBFS. The difference between those two numbers, 4.77 dB, is the entire cost of the technique.
+
 ## What BEEFY does
 
 BEEFY is our saturation and loudness effect, and the reason it appears in an article about dither is the shape of the chain. **BEEF**, **COOK** and **JUICE** do their work on the source or the bus; **SOFT CLIP** opens switched on and rounds the loudest parts so the peaks are dealt with early; **LIMIT** holds the output when you want that instead. Dither is the very last thing that happens, after all of it, in the export dialog.
 
 Three controls shape the sound, **JUICE**, **BEEF** and **COOK**, and two switches handle the output, **SOFT CLIP** and **LIMIT**. $19, Mac and Windows, AU, VST3 and standalone. None of it has any bearing on the checkbox in your export dialog, which is the point worth carrying away: by the time you reach that dialog, every decision that changes how the record sounds has already been made. Dither only keeps them intact on the way out. If you want the rest of that sequence, [how to master a beat](https://gazillionindustries.com/how-to-master-a-beat/) walks the chain from the top.
+
+One number puts the two ends of the chain in proportion. A master peaking at −1 dBFS sits 95.33 dB above a dithered 16-bit floor. Saturation and loudness are jobs you do at the top of that range, where the music is; dither is a job you do in the bottom decibel of it. BEEFY — JUICE, BEEF and COOK, with SOFT CLIP or LIMIT on the output — belongs to the first job and the export checkbox to the second. They never meet, which is why the checkbox can be an afterthought and the saturation cannot.
 
 Add noise on purpose, at the end, to make the quiet parts sound cleaner. Engineering is not always intuitive.
 

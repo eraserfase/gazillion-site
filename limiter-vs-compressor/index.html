@@ -47,7 +47,7 @@ fbq('init', '1164684366890206');
 fbq('track', 'PageView');
 }
 </script>
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"TechArticle","@id":"https://gazillionindustries.com/limiter-vs-compressor/#article","headline":"Limiter vs compressor","description":"The difference between a limiter and a compressor, where the line sits, which order they go in, and how much of each is too much on a mix or a master.","image":"https://gazillionindustries.com/og.jpg","inLanguage":"en","datePublished":"2026-09-20","dateModified":"2026-09-24","url":"https://gazillionindustries.com/limiter-vs-compressor/","mainEntityOfPage":"https://gazillionindustries.com/limiter-vs-compressor/","author":{"@id":"https://gazillionindustries.com/#gazillion"},"publisher":{"@id":"https://gazillionindustries.com/#gazillion"},"about":{"@type":"SoftwareApplication","name":"DRUGS","url":"https://gazillionindustries.com/drugs.html"},"isPartOf":{"@id":"https://gazillionindustries.com/reading-material/#page"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Gazillion Industries","item":"https://gazillionindustries.com/"},{"@type":"ListItem","position":2,"name":"Reading material","item":"https://gazillionindustries.com/reading-material/"},{"@type":"ListItem","position":3,"name":"Limiter vs compressor","item":"https://gazillionindustries.com/limiter-vs-compressor/"}]},{"@type":"Organization","@id":"https://gazillionindustries.com/#gazillion","name":"Gazillion Industries LLC","alternateName":"Gazillion Industries","url":"https://gazillionindustries.com/"},{"@type":"FAQPage","@id":"https://gazillionindustries.com/limiter-vs-compressor/#faq","mainEntity":[{"@type":"Question","name":"Should I use a compressor or a limiter?","acceptedAnswer":{"@type":"Answer","text":"Both, in that order, for different reasons. The compressor shapes how the performance moves. The limiter stops the output exceeding a ceiling. A limiter used as a compressor will flatten the life out of a track, and a compressor used as a limiter will let peaks through."}},{"@type":"Question","name":"At what point does a compressor become a limiter?","acceptedAnswer":{"@type":"Answer","text":"Conventionally around a 10:1 ratio, with a fast attack. A brickwall limiter behaves as though the ratio were infinite, so nothing at all passes the ceiling."}},{"@type":"Question","name":"Should the compressor come before the limiter?","acceptedAnswer":{"@type":"Answer","text":"Yes. Shape first, catch what is left afterward. A limiter in front of a compressor gives the compressor a signal whose peaks have already been flattened, so its timings no longer relate to the performance."}},{"@type":"Question","name":"How much limiting is too much?","acceptedAnswer":{"@type":"Answer","text":"When the drums lose their front edge and the quiet bars start moving with the loud ones. One to three decibels of gain reduction on peaks is normal; anything much past that is a mix problem being solved in the wrong place."}},{"@type":"Question","name":"Is a limiter just a compressor with a high ratio?","acceptedAnswer":{"@type":"Answer","text":"Almost. The ratio is the definition, but the attack is what makes it work: a limiter has to catch a peak that lasts a handful of samples, which is why most of them delay the audio so the detector sees the peak first. Set a compressor to 20:1 with a 0.1 ms attack and you have something close, minus the lookahead and minus the guarantee."}},{"@type":"Question","name":"What ceiling should I set on a limiter?","acceptedAnswer":{"@type":"Answer","text":"&minus;1 dBTP for anything that will be encoded for streaming or sent as a lossy file. If the destination is a WAV that nobody will re-encode, &minus;0.3 to &minus;0.5 dBFS is fine. Set the ceiling once and leave it; the control you actually work with is the input."}},{"@type":"Question","name":"Does a limiter add latency?","acceptedAnswer":{"@type":"Answer","text":"Usually, because lookahead is a delay. A 1.5 ms lookahead is 66 samples at 44.1 kHz. Your DAW compensates for it during playback, so the only time it bites is tracking through the plug-in while you monitor. Turn lookahead off or bypass the limiter while recording."}},{"@type":"Question","name":"What is the difference between a limiter and a clipper?","acceptedAnswer":{"@type":"Answer","text":"A limiter turns the gain down for as long as the peak lasts, so the shape of the waveform survives and the level around it moves. A clipper cuts the top off and leaves everything else alone, so nothing moves and the peak itself is replaced by harmonics. Clipping buys more level per decibel and costs distortion instead of movement, which on drums is often the better trade. See soft clipping explained ."}},{"@type":"Question","name":"How much gain reduction should a compressor do?","acceptedAnswer":{"@type":"Answer","text":"Three to six decibels on the loudest parts, on most material, with the meter returning to zero between them. Less than 2 dB and you may as well not have it in; more than about 8 dB and you are making a sound rather than controlling one, which is legitimate but should be a decision."}},{"@type":"Question","name":"Is a maximizer the same as a limiter?","acceptedAnswer":{"@type":"Answer","text":"It is a limiter with the input gain and the output ceiling linked, so one control pushes harder into a fixed lid. Same processing, fewer decisions, and easier to overdo because turning it up never makes anything read over."}},{"@type":"Question","name":"Can a compressor stop clipping?","acceptedAnswer":{"@type":"Answer","text":"Not reliably. A compressor at a musical ratio still lets the signal rise as the input rises, so a peak 6 dB over at 4:1 still comes out 1.5 dB over. It reduces how often you clip and how badly. Only a brickwall guarantees the ceiling."}},{"@type":"Question","name":"Do I need a limiter if I am not mastering?","acceptedAnswer":{"@type":"Answer","text":"On a mix bus while you work, no, and it is better left off so you hear the real dynamics. On anything you export and send to somebody, yes, if only as insurance against an unnoticed over. Set it to &minus;1 dBTP and let it do nothing most of the time."}},{"@type":"Question","name":"Should I put a limiter on the drum bus?","acceptedAnswer":{"@type":"Answer","text":"Only to catch strays. One or two decibels on the very loudest hits keeps the bus from feeding the mix something stupid, and that is the whole job. Anything more and you are competing with the compressor that should be shaping the kit, and the two of them will pull in different directions all session."}},{"@type":"Question","name":"Why does my limiter make the drums sound smaller?","acceptedAnswer":{"@type":"Answer","text":"Because it is removing the part that made them sound big. The front edge of a hit is a few milliseconds long and 6 to 12 dB above everything around it, and shaving it flattens the crest factor that your ear reads as impact. Get the peaks down with saturation or a clipper first, so the limiter has less to take."}},{"@type":"Question","name":"Compressor or limiter on vocals?","acceptedAnswer":{"@type":"Answer","text":"Compressor, nearly always, and often two in series: one with a slow attack and a gentle ratio holding the overall level, one faster catching the consonants. A limiter on a vocal is for the one shouted line that jumps 8 dB, not for the performance."}}]}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"TechArticle","@id":"https://gazillionindustries.com/limiter-vs-compressor/#article","headline":"Limiter vs compressor","description":"The difference between a limiter and a compressor, where the line sits, which order they go in, and how much of each is too much on a mix or a master.","image":"https://gazillionindustries.com/og.jpg","inLanguage":"en","datePublished":"2026-09-20","dateModified":"2026-09-24","url":"https://gazillionindustries.com/limiter-vs-compressor/","mainEntityOfPage":"https://gazillionindustries.com/limiter-vs-compressor/","author":{"@id":"https://gazillionindustries.com/#gazillion"},"publisher":{"@id":"https://gazillionindustries.com/#gazillion"},"about":{"@type":"SoftwareApplication","name":"DRUGS","url":"https://gazillionindustries.com/drugs.html"},"isPartOf":{"@id":"https://gazillionindustries.com/reading-material/#page"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Gazillion Industries","item":"https://gazillionindustries.com/"},{"@type":"ListItem","position":2,"name":"Reading material","item":"https://gazillionindustries.com/reading-material/"},{"@type":"ListItem","position":3,"name":"Limiter vs compressor","item":"https://gazillionindustries.com/limiter-vs-compressor/"}]},{"@type":"Organization","@id":"https://gazillionindustries.com/#gazillion","name":"Gazillion Industries LLC","alternateName":"Gazillion Industries","url":"https://gazillionindustries.com/"},{"@type":"FAQPage","@id":"https://gazillionindustries.com/limiter-vs-compressor/#faq","mainEntity":[{"@type":"Question","name":"Should I use a compressor or a limiter?","acceptedAnswer":{"@type":"Answer","text":"Both, in that order, for different reasons. The compressor shapes how the performance moves. The limiter stops the output exceeding a ceiling. A limiter used as a compressor will flatten the life out of a track, and a compressor used as a limiter will let peaks through."}},{"@type":"Question","name":"At what point does a compressor become a limiter?","acceptedAnswer":{"@type":"Answer","text":"Conventionally around a 10:1 ratio, with a fast attack. A brickwall limiter behaves as though the ratio were infinite, so nothing at all passes the ceiling."}},{"@type":"Question","name":"Should the compressor come before the limiter?","acceptedAnswer":{"@type":"Answer","text":"Yes. Shape first, catch what is left afterward. A limiter in front of a compressor gives the compressor a signal whose peaks have already been flattened, so its timings no longer relate to the performance."}},{"@type":"Question","name":"How much limiting is too much?","acceptedAnswer":{"@type":"Answer","text":"When the drums lose their front edge and the quiet bars start moving with the loud ones. One to three decibels of gain reduction on peaks is normal; anything much past that is a mix problem being solved in the wrong place."}},{"@type":"Question","name":"Is a limiter just a compressor with a high ratio?","acceptedAnswer":{"@type":"Answer","text":"Almost. The ratio is the definition, but the attack is what makes it work: a limiter has to catch a peak that lasts a handful of samples, which is why most of them delay the audio so the detector sees the peak first. Set a compressor to 20:1 with a 0.1 ms attack and you have something close, minus the lookahead and minus the guarantee."}},{"@type":"Question","name":"What ceiling should I set on a limiter?","acceptedAnswer":{"@type":"Answer","text":"&minus;1 dBTP for anything that will be encoded for streaming or sent as a lossy file. If the destination is a WAV that nobody will re-encode, &minus;0.3 to &minus;0.5 dBFS is fine. Set the ceiling once and leave it; the control you actually work with is the input."}},{"@type":"Question","name":"Does a limiter add latency?","acceptedAnswer":{"@type":"Answer","text":"Usually, because lookahead is a delay. A 1.5 ms lookahead is 66 samples at 44.1 kHz. Your DAW compensates for it during playback, so the only time it bites is tracking through the plug-in while you monitor. Turn lookahead off or bypass the limiter while recording."}},{"@type":"Question","name":"What is the difference between a limiter and a clipper?","acceptedAnswer":{"@type":"Answer","text":"A limiter turns the gain down for as long as the peak lasts, so the shape of the waveform survives and the level around it moves. A clipper cuts the top off and leaves everything else alone, so nothing moves and the peak itself is replaced by harmonics. Clipping buys more level per decibel and costs distortion instead of movement, which on drums is often the better trade. See soft clipping explained ."}},{"@type":"Question","name":"How much gain reduction should a compressor do?","acceptedAnswer":{"@type":"Answer","text":"Three to six decibels on the loudest parts, on most material, with the meter returning to zero between them. Less than 2 dB and you may as well not have it in; more than about 8 dB and you are making a sound rather than controlling one, which is legitimate but should be a decision."}},{"@type":"Question","name":"Is a maximizer the same as a limiter?","acceptedAnswer":{"@type":"Answer","text":"It is a limiter with the input gain and the output ceiling linked, so one control pushes harder into a fixed lid. Same processing, fewer decisions, and easier to overdo because turning it up never makes anything read over."}},{"@type":"Question","name":"Can a compressor stop clipping?","acceptedAnswer":{"@type":"Answer","text":"Not reliably. A compressor at a musical ratio still lets the signal rise as the input rises, so a peak 6 dB over at 4:1 still comes out 1.5 dB over. It reduces how often you clip and how badly. Only a brickwall guarantees the ceiling."}},{"@type":"Question","name":"Do I need a limiter if I am not mastering?","acceptedAnswer":{"@type":"Answer","text":"On a mix bus while you work, no, and it is better left off so you hear the real dynamics. On anything you export and send to somebody, yes, if only as insurance against an unnoticed over. Set it to &minus;1 dBTP and let it do nothing most of the time."}},{"@type":"Question","name":"Should I put a limiter on the drum bus?","acceptedAnswer":{"@type":"Answer","text":"Only to catch strays. One or two decibels on the very loudest hits keeps the bus from feeding the mix something stupid, and that is the whole job. Anything more and you are competing with the compressor that should be shaping the kit, and the two of them will pull in different directions all session."}},{"@type":"Question","name":"Why does my limiter make the drums sound smaller?","acceptedAnswer":{"@type":"Answer","text":"Because it is removing the part that made them sound big. The front edge of a hit is a few milliseconds long and 6 to 12 dB above everything around it, and shaving it flattens the crest factor that your ear reads as impact. Get the peaks down with saturation or a clipper first, so the limiter has less to take."}},{"@type":"Question","name":"Compressor or limiter on vocals?","acceptedAnswer":{"@type":"Answer","text":"Compressor, nearly always, and often two in series: one with a slow attack and a gentle ratio holding the overall level, one faster catching the consonants. A limiter on a vocal is for the one shouted line that jumps 8 dB, not for the performance."}},{"@type":"Question","name":"Can I skip the compressor and just use a limiter?","acceptedAnswer":{"@type":"Answer","text":"You can, and the track will get louder and stop moving. A limiter acts only on what crosses the ceiling, so pulling 5 dB out of one means the ceiling is deep inside the performance and every peak in the bar is being held down by a fast detector. The same 5 dB taken as 3 dB of compression plus 2 dB of limiting keeps the shape of the hits, because most of the work happened slowly."}},{"@type":"Question","name":"What does 4:1 actually mean?","acceptedAnswer":{"@type":"Answer","text":"Four decibels of input above the threshold produce one decibel of output above it. A peak 8 dB over comes out 2 dB over, which the meter reports as 6 dB of gain reduction. The general form is: gain reduction = decibels over &times; (1 &minus; 1 &divide; ratio). Every marking on the dial is that same division."}},{"@type":"Question","name":"Where should I set the threshold?","acceptedAnswer":{"@type":"Answer","text":"Low enough that the hits you want handled cross it and the rest do not. In practice, bring it down until the meter moves 3 to 6 dB on the loudest hits and comes back to zero between them. If it never reaches zero, either the threshold is too low or the release is too long; shorten the release first, because that tells you which."}},{"@type":"Question","name":"Should the compressor go before or after EQ?","acceptedAnswer":{"@type":"Answer","text":"Cuts before, boosts after, as a default. A low cut in front stops rumble steering the gain every bar. A boost in front gets partly undone, because you just made louder the thing the compressor is already pulling down: 4 dB of boost landing above the threshold at 4:1 survives as 1 dB. The same boost after the compressor keeps all four."}},{"@type":"Question","name":"What attack and release should I use on drums?","acceptedAnswer":{"@type":"Answer","text":"Start at 30 ms attack, and take the release from the tempo: 60000 &divide; bpm gives the quarter note in milliseconds, then halve it twice. At 92 bpm that is 652, 326 and 163 ms; at 140 bpm it is 429, 214 and 107 ms. Then move the attack by ear until the stick returns, and keep the release longer than one cycle of your lowest content &mdash; 20 ms at 50 Hz, 25 ms at 40 Hz."}},{"@type":"Question","name":"Why did my mix get quieter when I added a limiter?","acceptedAnswer":{"@type":"Answer","text":"Because a limiter only attenuates. Put the ceiling below your peaks, touch nothing else, and the output can only come down. Level arrives from the input or gain control pushing the signal into a fixed ceiling, and on plug-ins where the two are linked a single knob does both. If your peaks were already under the ceiling, the limiter is doing nothing at all, which is the right state for it most of the time."}},{"@type":"Question","name":"What is the difference between peak and RMS compression?","acceptedAnswer":{"@type":"Answer","text":"What the detector measures. Peak detection follows the instantaneous value and catches the spike at the front of a hit. RMS averages over a window of a few milliseconds upward and answers to the body behind it. On a sine the two readings differ by 3.01 dB, because RMS sits at 0.7071 of peak and 20 &times; log&#8321;&#8320;(0.7071) = &minus;3.01; on drums the gap is wider, so the same threshold does less work in RMS mode."}},{"@type":"Question","name":"How many compressors is too many?","acceptedAnswer":{"@type":"Answer","text":"Count the gain reduction rather than the plug-ins. Two stages at 3 dB each is an ordinary chain and sounds gentler than one at 6, because ratios multiply in series while each detector decides with less at stake. Past about three stages nothing is really in control: each one is reacting to the last one's output, and a change at the front re-times everything behind it."}},{"@type":"Question","name":"Should the limiter go on the master or the mix bus?","acceptedAnswer":{"@type":"Answer","text":"One limiter, last, wherever the chain ends. Two in series is the common accident &mdash; one on the mix bus and one on the master &mdash; and the second gets a signal whose peaks have already been flattened, so it works on the body of the mix instead of the peaks it was put there to catch. If you want one on the bus while you work, set its ceiling high enough that it never engages."}},{"@type":"Question","name":"Compressor or limiter on bass?","acceptedAnswer":{"@type":"Answer","text":"Compressor, with a release long enough to stay outside the waveform. One cycle of 40 Hz lasts 1 &divide; 40 = 25 ms, so a 5 ms release travels up and down five times inside a single cycle and you get distortion instead of level control. A release of 80 to 150 ms clears that cycle three times over. High-pass the detector if it offers one, and leave the ceiling to the end of the chain."}},{"@type":"Question","name":"Does a limiter make a track louder by itself?","acceptedAnswer":{"@type":"Answer","text":"No. It makes room for you to make it louder. The limiter removes the peaks that were stopping you raising the level, and the level itself comes from input or output gain. The number to watch while you do it is crest factor, peak minus average: if the average climbs and the peak holds, it is working, and if both climb you are only turning it up."}}]}]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Archivo+Black&display=swap">
@@ -135,6 +135,18 @@ h3{margin:28px 0 8px; font-size:17px; font-weight:600; line-height:1.4; color:va
 ul,ol{margin:0 0 16px; padding-left:1.2em}
 li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
 .cta{background:var(--accent); color:var(--field-deep)}
+
+/* ---- listen block -------------------------------------------------------
+   Rendered audio examples, so a reader can check a description against the
+   thing itself. Same rules the other collections use. */
+.listen{margin:0 0 8px}
+.listen figure{margin:0 0 18px}
+.listen figure:last-child{margin-bottom:0}
+.listen figcaption{font-size:12px; letter-spacing:.14em; text-transform:uppercase;
+                   color:var(--ink-faint); margin:0 0 8px}
+.listen figcaption b{color:var(--ink); font-weight:600; letter-spacing:.06em}
+.listen audio{width:100%; height:36px; display:block}
+.listen .src{font-size:13px; color:var(--ink-faint); margin:14px 0 0; line-height:1.5}
 
 .pframe{display:flex; flex-direction:column; align-items:center; gap:14px;
         margin:0 auto 30px; max-width:420px; text-align:center;
@@ -251,6 +263,25 @@ li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
   <a class="inline" href="/what-is-a-compressor/">Compression explained</a> takes all five controls
   one at a time.</p>
 
+  <h2>Threshold: the number that decides how often</h2>
+  <p>Ratio decides what happens to a peak. Threshold decides which peaks it happens to. The two
+  reach the meter as a single figure, and that figure is one multiplication: gain reduction equals
+  the decibels over the threshold times (1 &minus; 1 &divide; ratio).</p>
+
+  <p>Work it on a drum bus peaking at &minus;4 dBFS. A threshold at &minus;12 dBFS puts the
+  loudest hits 8 dB over, and at 4:1 that is 8 &times; (1 &minus; 1 &divide; 4) = 6 dB of
+  reduction. Move the threshold down 3 dB to &minus;15 and the same hits sit 11 dB over:
+  11 &times; 0.75 = 8.25 dB. Three decibels of threshold bought 2.25 dB of gain reduction.</p>
+
+  <p>That exchange rate is fixed by the slope, and it is worth carrying in your head. One decibel
+  of threshold buys 0.5 dB of reduction at 2:1, 0.75 dB at 4:1 and 0.9 dB at 10:1. Which is why a
+  limiter's input knob feels twitchy and a bus compressor's threshold feels vague: at a gentle
+  slope the control has to travel a long way to do anything at all.</p>
+
+  <p>Set it by how often, not by how much. Watch which hits move the needle &mdash; the loudest
+  three in the bar, or every sixteenth. Those are two different effects, and one control chooses
+  between them.</p>
+
   <h2>Attack and release, in milliseconds</h2>
   <p>Attack is how long the gain cell takes to arrive at its target, and it is the control that
   decides whether a drum keeps its front. A compressor set to 30 ms lets the stick through and
@@ -277,6 +308,67 @@ li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
   enough to be back up by the next sixteenth, long enough to stay above one cycle of your lowest
   content: on a break at 92 bpm that lands somewhere between about 60 and 160 ms.</p>
 
+  <h2>Time constants: what the attack number means</h2>
+  <p>Gain travels toward its target along an exponential, and the number printed on the control is
+  usually one time constant: the time to cover 63.2 percent of the distance, since
+  1 &minus; 1 &divide; e = 0.6321. The remainder arrives after the printed number has gone by.</p>
+
+  <div class="card">
+    <dl>
+      <dt>1 time constant</dt><dd>63.2% of the travel &middot; 2.53 dB of a 4 dB target</dd>
+      <dt>2</dt><dd>86.5% &middot; 3.46 dB</dd>
+      <dt>3</dt><dd>95.0% &middot; 3.80 dB</dd>
+      <dt>5</dt><dd>99.3% &middot; 3.97 dB</dd>
+    </dl>
+  </div>
+
+  <p>Read the top line again with a snare in mind. A 10 ms attack aiming at 4 dB has taken 2.53 dB
+  at 10 ms, 3.46 dB at 20 ms and is still tightening at 30 ms, by which point the stick has been
+  and gone. That lag is the whole reason a slow attack keeps transients: the front of the hit
+  escapes through a gain cell that has not finished moving.</p>
+
+  <p>Release behaves the same way, which sharpens the tempo arithmetic above. At 92 bpm the
+  sixteenth is 163 ms, and a 160 ms release is 1.02 time constants by the time the next hit lands,
+  so it is 63.9 percent recovered and not 100. Two-thirds of the way home is usually what you want
+  on drums, because the third that is left reads as glue. To get the gain genuinely back to zero
+  between hits, use about a third of the gap: 163 &divide; 3 = 54 ms puts you at 95 percent.</p>
+
+  <p>One caution when comparing two plug-ins by their printed numbers. A maker who specifies the
+  10 to 90 percent time rather than one time constant prints a figure 2.2 times larger for the
+  same circuit, since the natural log of 9 is 2.197. A 10 ms attack and a 22 ms attack can be the
+  same attack.</p>
+
+  <h2>What the detector hears</h2>
+  <p>Before any of that, something has to decide how loud the signal is right now. Peak detection
+  follows the instantaneous sample value. RMS detection averages over a window, from a few
+  milliseconds to a few tens of them. On drums the two disagree by a wide margin.</p>
+
+  <p>The size of the disagreement is computable on simple waves. A sine's RMS sits at 0.7071 of
+  its peak, and 20 &times; log&#8321;&#8320;(0.7071) = &minus;3.01 dB, so it reads 3.01 dB down. A square wave's RMS sits at its
+  peak, 0 dB below. Two signals reading the same on a peak meter, 3.01 dB apart the moment you
+  average them. A stick hit &mdash; a few milliseconds of spike over a long decay &mdash; reads
+  lower still to an averaging detector, so the same threshold does visibly less work in RMS mode
+  and lets the front of the kit through.</p>
+
+  <p>Then the frequency question. Low content carries the energy, so it writes the gain for
+  everything above it. A kick with its weight at 50 Hz holds a full-band detector down for a whole
+  cycle, and one cycle is 1 &divide; 50 = 20 ms, longer than any attack you would pick for a
+  snare. High-pass the detector at 100 Hz, where one cycle is 1 &divide; 100 = 10 ms, and the hats
+  get their gain back from the kick. This is the same control as
+  <a class="inline" href="/sidechain-compression/">sidechain compression</a>, keyed from the track
+  itself.</p>
+
+  <p>Where the detector taps the signal changes the feel as well. Tapped before the gain cell, the
+  compressor reacts to what is arriving. Tapped after, it reacts to what it has already done, so
+  the reduction feeds back on itself, the effective slope softens as it works harder, and the box
+  sounds rounder and slower at identical printed settings.</p>
+
+  <p>Last detector question: linking. Linked, both channels take one gain figure derived from the
+  pair, and the image holds still. Unlinked, a hard-panned hit pulls down only its own side
+  &mdash; 2 dB of one-sided reduction is an amplitude ratio of 1.26 between the channels &mdash;
+  and the center of the kit drifts toward the side that was not hit, for as long as the gain takes
+  to come back. On a drum bus, link it.</p>
+
   <h2>Crest factor: the number both of them move</h2>
   <p>Crest factor is peak level minus average level, in decibels, and it is the single number that
   describes what either box did. A snare bus peaking at &minus;1 dBFS with an RMS of &minus;13 dBFS
@@ -295,6 +387,36 @@ li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
   close to a decibel of average level. That efficiency is the temptation. It is also the reason a
   limiter pushed for 6 dB leaves a track with a crest factor low enough that nothing in it has
   anywhere to go.</p>
+
+  <h2>Two gentle stages, or one hard one</h2>
+  <p>Ratios multiply in series. Two 2:1 compressors, both working, pass a 6 dB peak along in
+  stages: 6 &divide; 2 = 3 dB over the first threshold, then 3 &divide; 2 = 1.5 dB over the
+  second, which is exactly where a single 4:1 would have left it. On steady material the pair and
+  the single are the same slope.</p>
+
+  <p>The timings are where they separate. Each stage has its own attack and release, so two can
+  work on two time scales at once: a slow one riding the arrangement at 2 dB, a fast one
+  catching the hits for another 2. Four decibels split across two meters also reads as less
+  of an effect than 4 dB on one, because each detector is deciding with less at stake.</p>
+
+  <p>Two caveats, both practical. The multiplication holds only while both stages are in
+  reduction; below the second threshold the first one's slope is all you have, which makes a
+  two-stage chain more program-dependent than either stage alone. And the second detector is
+  looking at the first one's output, so any change upstream re-times everything downstream. Set
+  them front to back, then go back and re-check the first.</p>
+
+  <figure class="shot">
+    <a href="/drugs.html" data-umami-event="guide_limitervcomp_to_drugs" data-umami-event-spot="figimg3" class="imglink"><img src="/drugs/drugs-parallel.jpg" width="471" height="686" loading="lazy" alt="DRUGS at DOSE 95 with MIX at 45 per cent."></a>
+    <figcaption><b>MIX at 45.</b> The wet path squashed hard, the dry path still carrying the
+    peaks, both arriving together.</figcaption>
+  </figure>
+
+  <p>Parallel is the other direction entirely, and nothing stacks: keep an uncompressed copy in
+  the balance and the peaks survive in the dry path while the density arrives in the wet one. A
+  wet/dry control inside the plug-in does the same job without a second track, as long as the dry
+  path is not delayed against the wet one &mdash; a few samples of offset between them is a comb
+  filter. <a class="inline" href="/parallel-compression/">Parallel compression</a> has the routing
+  and the phase check.</p>
 
   <h2>How to use each</h2>
   <ol>
@@ -418,6 +540,18 @@ li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
   separate limiting stage &mdash; Limiter, Maximizer, Peak Limiter, depending on the host. Names
   vary; the two jobs do not.</p>
 
+  <p><strong>What actually differs between hosts</strong> is the latency handling rather than the
+  plug-ins. A limiter with lookahead reports a delay and the host slides everything else to match
+  it, which is invisible on playback and audible the instant you play into it: 1.5 ms of lookahead
+  is 72 samples at 48 kHz and 144 at 96 kHz, and while tracking you hear all of it. Most hosts
+  have a low-latency monitoring mode that drops the offenders off armed tracks. Use it while you
+  record, switch it off before you judge anything.</p>
+
+  <p>The other difference is the master meter. A meter reading sample peak cannot tell you what a
+  true-peak meter reads, for the reason in the section above: the loudest part of the wave usually
+  falls between two samples. A host meter showing &minus;0.2 dBFS and a true-peak reading over
+  0 dBTP can be describing the same file. Believe the measurement that says dBTP.</p>
+
   <h2>How to check any of this in your own session</h2>
   <p>Four tests, none of which take longer than the argument about them.</p>
 
@@ -440,6 +574,22 @@ li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
   <p>Then play it on a phone and in a car, at the same volume as the version you started with.
   Small speakers punish a flattened crest factor faster than anything in the room, because there
   is no low end left to carry the weight and the only thing selling the hit is its front edge.</p>
+
+  <h2>If the destination turns everything down</h2>
+  <p>Level is only yours until something normalizes it. If the thing playing your track measures
+  loudness and matches every track to the same one, the decibels you bought come straight back off
+  at playback, and the peaks you spent on them do not come back. Say you pushed 3 dB harder and
+  got 3 dB louder. Turned down 3 dB at the other end, a file that left you at &minus;1 dBTP with a
+  6 dB crest factor now plays at &minus;4 dBTP with a 6 dB crest factor. The transients are still
+  missing and the loudness has been taken back.</p>
+
+  <p>So run the comparison that implies, before you decide how hard to push. Bounce the same mix
+  twice, once limited hard and once limited lightly, then pull the loud one down until the two
+  measure the same average level. Whatever difference survives that is the only difference anybody
+  on a normalized system will ever hear. Sometimes it is denser and better. Often it is flatter,
+  and the transients went for nothing.
+  <a class="inline" href="/how-loud-should-my-master-be/">How loud should my master be</a> takes
+  that decision end to end.</p>
 
   <h2>Where each one costs you</h2>
   <p>A compressor costs you dynamics in exchange for consistency, and the cost shows up as a
@@ -481,6 +631,20 @@ li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
   A limiter chasing a 40 Hz cycle has to move within 25 ms or distort it, and at that speed it is
   rewriting the waveform. A high-pass on the detector, or less low end into it, fixes what more
   limiting will not.</p>
+
+  <h2>When neither one is the tool</h2>
+  <p>Some level problems answer to an edit rather than a detector. One shouted word jumping 8 dB
+  above the line is a clip-gain job: pull that region down 6 dB and the compressor never sees it,
+  and the setting that suits the rest of the take survives intact. A kick that wanders across
+  eight bars is the same job done eight times, and it takes about a minute.</p>
+
+  <p>A hit with no front is a shaping problem rather than a level one, and a transient designer
+  adds attack where a compressor can only fail to remove it &mdash;
+  <a class="inline" href="/transient-shaper-vs-saturation/">transient shaper vs saturation</a>
+  sets those two against each other. A section that is loudest because it is fullest is an
+  arrangement problem, and no detector can hear how many parts are playing. Get the levels sane on
+  the way in with <a class="inline" href="/gain-staging/">gain staging</a> and there is less for
+  either box to repair.</p>
 
   <h2>What each one costs</h2>
   <p>Nothing, if you want it to. Every DAW named above includes a compressor and a limiter that
@@ -565,6 +729,67 @@ li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
   holding the overall level, one faster catching the consonants. A limiter on a vocal is for the
   one shouted line that jumps 8 dB, not for the performance.</p>
 
+  <h3>Can I skip the compressor and just use a limiter?</h3>
+  <p>You can, and the track will get louder and stop moving. A limiter acts only on what crosses
+  the ceiling, so pulling 5 dB out of one means the ceiling is deep inside the performance and
+  every peak in the bar is being held down by a fast detector. The same 5 dB taken as 3 dB of
+  compression plus 2 dB of limiting keeps the shape of the hits, because most of the work happened
+  slowly.</p>
+  <h3>What does 4:1 actually mean?</h3>
+  <p>Four decibels of input above the threshold produce one decibel of output above it. A peak
+  8 dB over comes out 2 dB over, which the meter reports as 6 dB of gain reduction. The general
+  form is: gain reduction = decibels over &times; (1 &minus; 1 &divide; ratio). Every marking on
+  the dial is that same division.</p>
+  <h3>Where should I set the threshold?</h3>
+  <p>Low enough that the hits you want handled cross it and the rest do not. In practice, bring it
+  down until the meter moves 3 to 6 dB on the loudest hits and comes back to zero between them. If
+  it never reaches zero, either the threshold is too low or the release is too long; shorten the
+  release first, because that tells you which.</p>
+  <h3>Should the compressor go before or after EQ?</h3>
+  <p>Cuts before, boosts after, as a default. A low cut in front stops rumble steering the gain
+  every bar. A boost in front gets partly undone, because you just made louder the thing the
+  compressor is already pulling down: 4 dB of boost landing above the threshold at 4:1 survives as
+  1 dB. The same boost after the compressor keeps all four.</p>
+  <h3>What attack and release should I use on drums?</h3>
+  <p>Start at 30 ms attack, and take the release from the tempo: 60000 &divide; bpm gives the
+  quarter note in milliseconds, then halve it twice. At 92 bpm that is 652, 326 and 163 ms; at 140
+  bpm it is 429, 214 and 107 ms. Then move the attack by ear until the stick returns, and keep the
+  release longer than one cycle of your lowest content &mdash; 20 ms at 50 Hz, 25 ms at 40 Hz.</p>
+  <h3>Why did my mix get quieter when I added a limiter?</h3>
+  <p>Because a limiter only attenuates. Put the ceiling below your peaks, touch nothing else, and
+  the output can only come down. Level arrives from the input or gain control pushing the signal
+  into a fixed ceiling, and on plug-ins where the two are linked a single knob does both. If your
+  peaks were already under the ceiling, the limiter is doing nothing at all, which is the right
+  state for it most of the time.</p>
+  <h3>What is the difference between peak and RMS compression?</h3>
+  <p>What the detector measures. Peak detection follows the instantaneous value and catches the
+  spike at the front of a hit. RMS averages over a window of a few milliseconds upward and answers
+  to the body behind it. On a sine the two readings differ by 3.01 dB,
+  because RMS sits at 0.7071 of peak and 20 &times; log&#8321;&#8320;(0.7071) = &minus;3.01; on drums the gap is wider, so the same threshold
+  does less work in RMS mode.</p>
+  <h3>How many compressors is too many?</h3>
+  <p>Count the gain reduction rather than the plug-ins. Two stages at 3 dB each is an ordinary
+  chain and sounds gentler than one at 6, because ratios multiply in series while each detector
+  decides with less at stake. Past about three stages nothing is really in control: each one is
+  reacting to the last one's output, and a change at the front re-times everything behind it.</p>
+  <h3>Should the limiter go on the master or the mix bus?</h3>
+  <p>One limiter, last, wherever the chain ends. Two in series is the common accident &mdash; one
+  on the mix bus and one on the master &mdash; and the second gets a signal whose peaks have
+  already been flattened, so it works on the body of the mix instead of the peaks it was put there
+  to catch. If you want one on the bus while you work, set its ceiling high enough that it never
+  engages.</p>
+  <h3>Compressor or limiter on bass?</h3>
+  <p>Compressor, with a release long enough to stay outside the waveform. One cycle of 40 Hz lasts
+  1 &divide; 40 = 25 ms, so a 5 ms release travels up and down five times inside a single cycle
+  and you get distortion instead of level control. A release of 80 to 150 ms clears that cycle
+  three times over. High-pass the detector if it offers one, and leave the ceiling to the end of
+  the chain.</p>
+  <h3>Does a limiter make a track louder by itself?</h3>
+  <p>No. It makes room for you to make it louder. The limiter removes the peaks that were stopping
+  you raising the level, and the level itself comes from input or output gain. The number to watch
+  while you do it is crest factor, peak minus average: if the average climbs and the peak holds,
+  it is working, and if both climb you are only turning it up.</p>
+
   <h2>What DRUGS does</h2>
   <p>DRUGS is our free bus compressor for drums, and it carries both halves of this article.
   <strong>DOSE</strong> is the compression: it moves the transfer curve, the knee, the attack and
@@ -579,6 +804,14 @@ li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
   itself in bounds on the way to the mix, which is a smaller job than the last plug-in on a
   master. <a class="inline" href="/one-knob-compressor/">One-knob compressors</a> covers what a
   single macro gives up in exchange for that speed.</p>
+
+
+  <p>Three details from that panel matter for this page. MIX is dry/wet with zero latency anywhere
+  in the path, so the dry copy stays sample-aligned with the wet one and a parallel blend does not
+  comb-filter at any setting. Release is adaptive with no user control: a transient gets the
+  shorter time, so gain recovers inside the gap where pump would be audible, and sustained
+  material gets the longer one. Auto-makeup is applied after the gain cell, so setting level
+  cannot disturb the dynamics.</p>
 
   <p>Two boxes, one number between them. Now you know which one belongs at the end.</p>
 
