@@ -41,9 +41,9 @@ Run the two doublings that matter. A reel at 15 ips is eight times cassette spee
 
 ## Why the hiss is tilted rather than flat
 
-The noise leaves the tape roughly even across the spectrum and does not reach your ear that way. Recording pre-emphasizes the top end and playback applies a matching boost to restore it. The hiss was added by the tape itself, so it goes through the second stage without ever having been through the first. Whatever the replay curve lifts, it lifts the hiss with it.
+The noise leaves the tape roughly even across the spectrum and does not reach your ear that way. A playback head responds to the rate of change of magnetism, so its output climbs 6 dB per octave all by itself. The replay curve cancels that climb up to a turnover frequency and then stops cancelling. Above the turnover, whatever the tape itself contributes arrives climbing, and the hiss is contributed by the tape. The music comes out level because the recording side was shaped for this trip. The hiss never went through that stage.
 
-The cassette curves are defined by time constants, and a time constant is a corner frequency in disguise: f = 1 / (2πτ). At τ = 120 µs the corner sits at 1,326 Hz; at τ = 70 µs it sits at 2,274 Hz. Above the corner the curve rises 6 dB per octave, so the lower corner has been climbing longer by the top of the band. Put 10 kHz through both: the 120 µs curve is up 17.6 dB, the 70 µs curve up 13.1 dB. That 4.5 dB goes straight to the hiss, because the music was compensated on the way in and the hiss was not. Formulations that accept more high-frequency level buy the shorter time constant, which buys the quieter top octave. A quieter tape and a brighter tape are the same purchase.
+The turnovers are published as time constants, and a time constant is a corner frequency in disguise: f = 1 / (2πτ). At τ = 120 µs the corner sits at 1,326 Hz; at τ = 70 µs it sits at 2,274 Hz. The lower corner has been climbing longer by the time you reach the top of the band. Put 10 kHz through both curves: one is up 17.6 dB, the other up 13.1 dB. That 4.5 dB goes straight to the hiss. Formulations that accept more high-frequency level are what buy the shorter time constant, which is what buys the quieter top octave. A quieter tape and a brighter tape are the same purchase.
 
 So tape hiss is not white. It climbs through the mids, peaks in the top two octaves, then rolls off where the head gap runs out of high end. Leave a bed flat and it sounds like a synthesizer with the noise oscillator up.
 
@@ -229,7 +229,7 @@ Before, and on the individual source if you can reach it. A master chain lifts t
 
 ### Is tape hiss the same as white noise?
 
-It starts close to it on the tape and does not arrive that way. Playback boosts the top end to undo the pre-emphasis applied at record, and the hiss gets that boost without ever having had the cut, so it reaches you tilted upward before head losses roll it off again.
+It starts close to it on the tape and does not arrive that way. A playback head's output rises 6 dB per octave with frequency, and the replay curve only cancels that rise up to a turnover around 1.3 or 2.3 kHz. Above there the hiss climbs, so it reaches you tilted upward until head losses roll it off again.
 
 ### Can I add hiss to one track instead of the whole mix?
 
