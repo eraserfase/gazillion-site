@@ -366,19 +366,21 @@ h3{margin:28px 0 8px; font-size:17px; font-weight:600; line-height:1.4; color:va
   twelfth lands at 300 Hz, down in the body.</p>
 
   <p>That is the metallic fizz people report on a heavily driven snare, and it
-  explains why more drive makes the problem worse instead of simply making the hit
-  brighter: every decibel you add creates more of the orders that have nowhere to
-  sit. Oversampling
-  is the general remedy: the nonlinear stage runs at a multiple of the session rate,
-  so the new harmonics have room above the audible band, and a filter clears them
-  before the signal comes back down. It costs CPU and a little latency.
-  <a class="inline" href="/oversampling/">Oversampling</a> and
+  explains why more drive makes the problem worse rather than simply making the hit
+  brighter. Every decibel you add generates more of the high orders, and the high
+  orders are the ones with nowhere to sit.</p>
+
+  <p>Oversampling is the general remedy. The nonlinear stage runs at a multiple of
+  the session rate, so the new harmonics have room above the audible band, and a
+  filter clears them out before the signal comes back down. It costs CPU and a little
+  latency. <a class="inline" href="/oversampling/">Oversampling</a> and
   <a class="inline" href="/what-is-aliasing-in-audio/">what aliasing is</a> have the
   detail.</p>
 
   <p>You can test for it in your own session without a meter, because folded content
-  moves when the sample rate moves and real harmonics do not. That same seventh
-  harmonic at 25,900 Hz comes back at 18,200 Hz in a 44.1 kHz session and at
+  moves when the sample rate moves and real harmonics do not. The seventh harmonic,
+  at 7&thinsp;&times;&thinsp;3,700 = 25,900 Hz, comes back at
+  44,100&thinsp;&minus;&thinsp;25,900 = 18,200 Hz in a 44.1 kHz session and at
   48,000&thinsp;&minus;&thinsp;25,900 = 22,100 Hz in a 48 kHz one. Render the loop at
   both rates with nothing else changed and compare the top end. If its character
   shifts, you found it, and the answer is less drive or an oversampled stage.</p>

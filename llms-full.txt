@@ -1537,13 +1537,69 @@ On a loud passage the error is minuscule compared to the signal and nobody will 
 
 Dither breaks the correlation. Add a small amount of random noise before the conversion and the errors stop following the signal, because the thing being rounded is now signal plus noise. You trade a distortion that appears when the music is quiet for a constant noise floor a few decibels above where it would otherwise be. In every listening test that matters, that is the better trade.
 
+## The numbers, exactly
+
+A 16-bit file has 65,536 available values and a 24-bit file has 16,777,216, so one 16-bit step spans 256 of the 24-bit ones. In a file scaled to plus or minus one, a 16-bit step is 1/32768 of full scale, which is −90.31 dBFS. The whole argument turns on that one number.
+
+Round to the nearest step with nothing added and the error lands anywhere inside half a step with roughly equal likelihood, which gives a root-mean-square error of the step divided by the square root of twelve: −101.10 dBFS. Add triangular dither two steps wide and the total error becomes exactly half a step, −96.33 dBFS. The gap between those two figures is 10 log10(3), or 4.77 dB. That is the entire price of dither, and it covers every quiet passage on the record.
+
+−96.33 dBFS is the familiar 6.02 dB per bit times sixteen, which is why a properly dithered 16-bit file measures at the textbook floor for its depth and never below it.
+
+- **One 16-bit step**: 1/32768 of full scale, −90.31 dBFS
+
+- **Rounded, no dither**: error floor at −101.10 dBFS, correlated
+
+- **Triangular dither**: error floor at −96.33 dBFS, random
+
+- **What dither costs**: 4.77 dB of floor, once
+
+- **One 24-bit step**: −138.47 dBFS, error floor −149.27 dBFS
+
+- **Flat noise density**: −139.76 dBFS in any single hertz at 44.1 kHz
+
+Put that in a room. If your playback is set so 0 dBFS reads 105 dB SPL, which is loud, the dithered 16-bit floor sits at 8.7 dB SPL, under the noise of an empty room with the air conditioning off. Spread flat from 0 Hz to the 22,050 Hz Nyquist of a 44.1 kHz file, that same floor works out at −139.76 dBFS in any one hertz. The thing everybody argues about is that quiet.
+
+## What the error does as a fade gets quiet
+
+The rounded error holds at roughly one level all the way down. What moves is where that energy sits in the spectrum, and that is the part you hear. Measured here this session: a 997 Hz tone, eight seconds, reduced to 16-bit both ways, the error isolated and its spectrum split into energy sitting on harmonics of the tone against everything else.
+
+- **Tone at −60 dBFS.** Rounded: error at −100.96 dBFS, 5.7% of it on harmonics. Dithered: −96.32 dBFS, 0.25% on harmonics.
+
+- **Tone at −80 dBFS.** Rounded: error at −101.81 dBFS, 64.1% on harmonics. Dithered: −96.33 dBFS, 0.23%.
+
+- **Tone at −90.31 dBFS**, a peak of exactly one step. Rounded: error at −102.25 dBFS, 76.8% on harmonics. Dithered: −96.33 dBFS, 0.17%.
+
+Read those two columns against each other. Across a 30 dB drop in the music the rounded error barely moves in level, while the share of it locked to the note climbs from one twentieth to three quarters. Dither holds that share under 0.3% at every level tested. That is what decorrelated means in practice: the error stops being a function of the signal.
+
+The reason is arithmetic. A waveform peaking at −40 dBFS reaches 328 steps, about 9.4 bits of description. At −60 dBFS it reaches 33 steps, 6.0 bits. At −80 dBFS, 3.3 steps, 2.7 bits. At −90.31 dBFS it has become a three-level staircase, up one, back to zero, down one, and a staircase of that shape carries harmonics the way a square wave does.
+
+Now a case you meet every session. A reverb tail with an RT60 of 2.5 seconds decays at 24 dB per second. Start it at −10 dBFS and it crosses −60 dBFS at 2.08 seconds and −90.31 dBFS at 3.35 seconds. That leaves 1.26 seconds of every tail running on fewer than six bits. Hang a tail like that off every snare in a four-minute record and the grain stops being an edge case.
+
+At 16 bits the error is too quiet to put on a web page. Pull the depth down far enough and the same error becomes the loudest thing in the file, which is the only honest way to demonstrate it. Here is a clean loop, then the same loop with bit depth reduced and nothing else touched. Measured off these two files: relative to each one's own internal balance, the reduced version carries 19.8 dB more energy from 6 to 12 kHz and 40.0 dB more above 12 kHz.
+
+- **Full depth** — no reduction — https://gazillionindustries.com/f12/f12-clean.m4a
+
+- **Depth reduced** — +19.8 dB from 6 to 12 kHz, +40.0 dB above 12 kHz — https://gazillionindustries.com/f12/f12-bitcrush.m4a
+
+Both files come from [F(ilter)12](https://gazillionindustries.com/f12.html), where the reduction is the point rather than the problem. The hash sitting on top of the loop is rounding error, and it moves with the music instead of under it. At 16 bits it is the same thing, far quieter, sitting on your fade. More on the mechanism in [bitcrushing explained](https://gazillionindustries.com/bitcrushing-explained/).
+
 ## Types, briefly
 
 - **Triangular (TPDF)** is the standard choice and the one to use if you do not want to think about it. It fully decorrelates the error at the cost of a slightly higher noise floor.
 
-- **Noise shaping** adds the same total amount of noise but moves most of it into frequency ranges the ear is less sensitive to, usually the top octave. It measures worse and sounds better.
+- **Noise shaping** adds more total noise than flat dither but moves most of it into frequency ranges the ear is less sensitive to, usually the top octave. It measures worse and sounds better.
 
 - **Aggressive noise shaping** pushes that further. On material destined for further processing it is a bad idea, because that shaped noise is now baked in.
+
+## What noise shaping actually trades
+
+Noise shaping feeds the quantizer's own error back through a filter so the error spectrum comes out tilted: down where the ear is sharp, up where it is dull. The catch lives in the total, and the total does not hold still.
+
+For a causal, minimum-phase shaper the log-average of the noise spectrum is fixed, so every decibel taken out of one part of the band has to be paid back somewhere else. Because the accounting runs in logs while the power adds linearly, the bill is larger than the saving. Work it through at 44.1 kHz, where Nyquist is 22,050 Hz. Cut 15 dB across 0 to 15,000 Hz, which is 68.0% of the band. The remaining 7,050 Hz then has to rise by 15 x 0.680 / 0.320 = 31.91 dB to keep the log-average where it was, and total noise power goes up by 26.96 dB.
+
+In absolute terms that moves the floor from a flat −96.33 dBFS to −111.33 dBFS below 15 kHz and −64.41 dBFS above it. A meter reading total RMS noise reports the shaped file as roughly 27 dB worse. Your ears report it as quieter, because almost none of that 27 dB lands anywhere they are working. Both readings are honest and they are answering different questions.
+
+That arithmetic also explains the warning attached to the aggressive settings. −64.41 dBFS of hash sitting just under Nyquist is harmless on its way to a speaker and anything but harmless on its way into a saturator, a sample rate conversion or an encoder. See [aliasing](https://gazillionindustries.com/what-is-aliasing-in-audio/) and [oversampling](https://gazillionindustries.com/oversampling/) for what becomes of it there.
 
 [BEEFY](https://gazillionindustries.com/beefy.html) lives much earlier in the chain than this: saturation and loudness, with SOFT CLIP holding the peaks long before anything gets exported.
 
@@ -1560,6 +1616,78 @@ Dither breaks the correlation. Add a small amount of random noise before the con
 - If you are delivering 24-bit masters to a distributor, let them dither when they encode. Do not do it for them.
 
 - Triangular unless you have a reason. The reason is usually quiet classical or acoustic material, where noise shaping earns its keep.
+
+## Where dither sits in the export chain
+
+Last means last, and the order is worth spelling out because two of these steps get swapped constantly.
+
+- Mix and master processing, including [gain staging](https://gazillionindustries.com/gain-staging/) and anything else that changes a sample value.
+
+- Sample rate conversion, if the delivery rate differs from the session rate. Conversion calculates entirely new sample values, so it re-quantizes, and dither placed before it is thrown away.
+
+- The final ceiling, set with a limiter or a clipper. See [true peak](https://gazillionindustries.com/true-peak/) for what that ceiling should be and [how loud should my master be](https://gazillionindustries.com/how-loud-should-my-master-be/) for how hard to drive it.
+
+- Dither.
+
+- Nothing.
+
+Playback loudness normalization on a streaming service runs on their side, in the player's own floating-point path, long after your file has been decoded, so it has no bearing on where dither goes. Neither does the listener's volume knob.
+
+A 32-bit float export needs none of this. A float sample carries a 24-bit mantissa and an exponent that moves with the value, so its rounding error stays around 144.5 dB below whatever that sample happens to be, at every level. An error that scales with the signal can never sit underneath the music as a fixed floor, and it can never turn into grain on a fade. Export float, or export 24-bit, and walk past the checkbox.
+
+Lossy encoding is the last case worth knowing. An encoder discards what it judges you cannot hear, and a flat floor at −96 dBFS is near the front of that queue, so dithering on the way into an encoder spends 4.77 dB on something the encoder is likely to throw out. Hand the encoder the deepest file you have and let it work from that.
+
+## Where the control lives, by DAW
+
+The rule is identical in every host. The control sits in a different place in each, and one of them handles it differently enough to cause most of the accidental double-dithering in the world.
+
+- **Ableton Live** — Export Audio/Video, a Dither Options menu. It only becomes selectable once Bit Depth is set to 16. Choose the depth first, then the dither.
+
+- **Logic Pro** — the Bounce dialog, a Dither menu beside file format and resolution. Leave it off for 24-bit bounces.
+
+- **Reaper** — the Render dialog, with dither and noise shaping as separate checkboxes, and a second set for stem output. Two sets of boxes is two chances to do it twice.
+
+- **FL Studio** — the export dialog, near the depth selector.
+
+- **Pro Tools** — a plugin on the last insert of the master rather than a checkbox in the bounce window. It stays there between bounces and it has no idea what depth you picked, which makes it the easiest place in any host to dither a 24-bit file by accident.
+
+- **Anything else** — open the export dialog, set bit depth to 16, and watch which control wakes up. That is the dither. If nothing wakes up, read the manual before assuming the host has quietly done it for you.
+
+One check covers all of them. If the dither control is dimmed or has no effect, your export is not reducing bit depth, and you do not need it.
+
+## Test it in your own session
+
+Take none of this on trust. Ten minutes and you will never have to read about it again.
+
+- Render ten seconds of one sustained note, or a reverb tail decaying from about −10 dBFS into silence. Keep the session at 24-bit or higher.
+
+- Export that file to 16-bit three times: dither off, triangular, and whichever noise shaping your host offers.
+
+- Import all three into a fresh 24-bit session, lined up on separate tracks.
+
+- Turn your monitors down before you unmute anything.
+
+- Put a gain plugin set to +60 dB on each of the three tracks.
+
+- Play the last two seconds of each and compare them.
+
+- Invert the triangular file against the undithered one and play the sum.
+
+At +60 dB a −96.33 dBFS floor arrives at −36.33 dBFS, which is audible on anything, including a laptop. The undithered tail gives a grainy, buzzing edge that changes as the note changes. The triangular one gives steady hiss that sits still. The shaped one gives quieter hiss with a thin, airy top to it. On the null test, the residual measured −95.25 dBFS in the version rendered for this page, and that residual is the whole disagreement, at full size.
+
+**BEEF at 8.** The reference you A/B against.
+
+## The five ways it goes wrong, and what each sounds like
+
+- **Dithering twice.** Two independent noise floors add in power, so the total climbs by 10 log10(2) = 3.01 dB. Once is inaudible. Four bounces through the same chain is 6.02 dB, and by then it is hiss you can pick out on headphones in a quiet room.
+
+- **Dither, then sample rate conversion.** The conversion invents new sample values and quantizes them afresh, so the correlated error returns while the old dither noise gets smeared across the band by the interpolation. Sounds like the grain coming back with hiss on top of it.
+
+- **Dithering a file that gets processed again.** Everything downstream re-quantizes at its own output, so your dither is now a signal being compressed, equalized and limited along with the music. On a heavy master chain that noise gets pumped up under the quiet parts with everything else, which is audible long before the dither itself would be.
+
+- **Aggressive shaping into something nonlinear.** The worked example above put −64.41 dBFS between 15 kHz and Nyquist. Saturate that, or convert its rate carelessly, and it folds back into the audible band as tones unrelated to the music, moving the wrong way when the pitch moves. Compare [crest factor](https://gazillionindustries.com/crest-factor/), where the arithmetic is similarly unforgiving.
+
+- **Dithering a 24-bit export.** This raises a floor from −149.27 dBFS to −144.49 dBFS. It sounds like absolutely nothing, which is why nobody has ever caught anybody doing it.
 
 ## Where it costs you
 
@@ -1585,9 +1713,75 @@ If the master is being delivered as a 16-bit file, yes, on the final export only
 
 Adding low-level noise before a bit-depth reduction so that the rounding errors become random noise rather than signal-dependent distortion.
 
+### Should I dither when exporting 24-bit?
+
+No. A 24-bit step is −138.47 dBFS and the undithered error floor lands at −149.27 dBFS, which is 52.94 dB below the floor of a dithered 16-bit file. There is no audible distortion down there to convert into anything.
+
+### What bit depth should I export at?
+
+24-bit for masters going to a distributor, a mastering engineer or an archive, with no dither. 16-bit with dither when something specifically calls for 16-bit. 32-bit float for anything that is coming back into a session.
+
+### Do I need dither for streaming?
+
+No. Upload the deepest file the service accepts, normally 24-bit, and let their encoder work from that. Dither belongs on a 16-bit delivery.
+
+### Does dither change LUFS or loudness?
+
+Not measurably. Triangular dither puts 4.77 dB onto a floor sitting near −96 dBFS, which is more than 80 dB under any integrated loudness figure you are likely to deliver. It changes nothing about how loud the record sounds.
+
+### Is dither audible?
+
+On a loud master at normal listening levels, no. Raise the file by 60 dB and it is obvious. The people who hear it unaided are working on material with genuine silence in it — solo piano, classical, spoken word — where the tail of a note runs down into the last few bits.
+
+### What is TPDF dither?
+
+Triangular probability density function: noise two steps wide whose values cluster around zero and taper toward the edges. That shape is what fully decorrelates the rounding error. It is the default in most hosts and the right answer whenever you do not want to think about it.
+
+### What is the difference between dither and noise shaping?
+
+Dither decides whether the error comes out as noise or as distortion. Noise shaping decides where in the spectrum that noise sits. You can have dither with no shaping, and shaping with no dither is a poor idea, because it tilts a correlated error rather than a random one.
+
+### Should dither go before or after the limiter?
+
+After. A limiter changes sample values, and anything that changes sample values after dither re-quantizes and undoes it. Dither is the last plugin in the chain, or the export dialog's own checkbox, with nothing following it.
+
+### Dither before or after sample rate conversion?
+
+After. Conversion calculates new samples from old ones, which is a fresh quantization, so dither applied before it gets discarded and replaced by exactly the error you were avoiding.
+
+### Does 32-bit float need dither?
+
+No. A float sample's rounding error stays around 144.5 dB below that sample's own value at every level, because the exponent tracks the signal. There is no fixed floor to raise and no grain to appear on a fade.
+
+### What happens if I dither twice?
+
+The two noise floors add in power and the total goes up 3.01 dB. Once, that is inaudible. It accumulates, though, so a workflow that bounces through three or four stages with dither left on each time gives away 4.77 to 6.02 dB of floor for nothing.
+
+### Which dither should I use for beats?
+
+Triangular, and only on a 16-bit delivery. A loud rap or electronic master never approaches the bottom of the 16-bit range, so noise shaping has nothing to buy you there, and its ultrasonic peak is a liability if anything downstream is nonlinear.
+
+### Why is the dither option dimmed in my DAW?
+
+Because the export is not reducing bit depth. Set bit depth to 16 and the control becomes available. If it stays dimmed at 16-bit, you are looking at the wrong dialog.
+
+### Can I dither a stem or a bounce I will use again?
+
+No. Export stems at the session depth or higher with no dither. Every later stage re-quantizes anyway, and dithering each stem separately stacks noise floors that all end up summed together in the same mix.
+
+### Does dither fix clipping?
+
+No, and the two are unrelated. Clipping happens at the top of the range and dither works at the bottom of it. For the top, see [what is clipping](https://gazillionindustries.com/what-is-clipping/) and [how to use a limiter](https://gazillionindustries.com/how-to-use-a-limiter/). For the room you leave above the mix, [headroom in mixing](https://gazillionindustries.com/headroom-in-mixing/).
+
+### What does dither sound like?
+
+Steady, featureless hiss that holds still while the music moves. That constancy is the whole point. The ear discounts a background that stays put and fastens onto anything that tracks the note.
+
 ## What BEEFY does
 
 BEEFY is our saturation and loudness effect, and the reason it appears in an article about dither is the shape of the chain. **BEEF**, **COOK** and **JUICE** do their work on the source or the bus; **SOFT CLIP** opens switched on and rounds the loudest parts so the peaks are dealt with early; **LIMIT** holds the output when you want that instead. Dither is the very last thing that happens, after all of it, in the export dialog.
+
+Three controls shape the sound, **JUICE**, **BEEF** and **COOK**, and two switches handle the output, **SOFT CLIP** and **LIMIT**. $19, Mac and Windows, AU, VST3 and standalone. None of it has any bearing on the checkbox in your export dialog, which is the point worth carrying away: by the time you reach that dialog, every decision that changes how the record sounds has already been made. Dither only keeps them intact on the way out. If you want the rest of that sequence, [how to master a beat](https://gazillionindustries.com/how-to-master-a-beat/) walks the chain from the top.
 
 Add noise on purpose, at the end, to make the quiet parts sound cleaner. Engineering is not always intuitive.
 
@@ -2067,13 +2261,13 @@ https://gazillionindustries.com/beefy.html
 > How much headroom to leave on a mix bus, why the usual technical explanation no longer applies in a modern DAW, and the reason that still holds.
 
 Source: https://gazillionindustries.com/headroom-in-mixing/  
-Published 2026-09-20, updated 2026-09-24. By Gazillion Industries, who make BEEFY.
+Published 2026-09-20, updated 2026-09-25. By Gazillion Industries, who make BEEFY.
 
 ---
 
 Somebody told you to leave six decibels of headroom and you have been doing it ever since without anyone explaining why. The reason is real, but it is not the one usually given, and in a modern DAW half the original argument no longer applies.
 
-Headroom is the space between the loudest peak in your mix and the ceiling. The practical advice is to aim for peaks around −6 dBFS on the mix bus before you send anything to mastering. The reason is not that your DAW will distort otherwise: internally it almost certainly will not. The reason is that every stage after you needs room to work, and a mix that arrives already touching the ceiling gives the next person nothing to work with.
+Headroom is the space between the loudest peak in your mix and the ceiling. The practical advice is to aim for peaks around −6 dBFS on the mix bus before you send anything to mastering. Your DAW will almost certainly not distort without it: internally it has room to spare. What matters is that every stage after you needs somewhere to go, and a mix that arrives already touching the ceiling gives the next person nothing to work with.
 
 ## The short version
 
@@ -2101,13 +2295,57 @@ What has not changed: converters clip at a hard ceiling, some plugins model fixe
 
 ## The reason that still holds
 
-A mix bounced at −0.1 dBFS has already spent everything. Whoever masters it, including you tomorrow, has no room to add a compressor, no room to drive a saturator, and no option but to turn it down before doing anything at all. Six decibels of headroom is not a technical requirement. It is a courtesy to the next stage, and most of the time the next stage is you.
+A mix bounced at −0.1 dBFS has already spent everything. Whoever masters it, including you tomorrow, has no room to add a compressor, no room to drive a saturator, and no option but to turn it down before doing anything at all. Six decibels of headroom works as a courtesy to the next stage rather than as a technical requirement, and most of the time the next stage is you.
 
 There is a second, subtler benefit: a mix that peaks at −6 dBFS is one you balanced by fader rather than by pushing everything up against a ceiling, which tends to produce better relative levels in the first place.
 
 [BEEFY](https://gazillionindustries.com/beefy.html) has JUICE for exactly this reason: it sets the level going in, so you can feed it harder or back it off independently of how hot the channel happens to be.
 
 **LIMIT** instead, everything else identical.
+
+## Six decibels, in numbers
+
+Six is a specific amount of room and it helps to know exactly how much. Amplitude in decibels is 20 log₁₀ of the ratio, so 20 log₁₀(2) = 6.0206 dB. A peak sitting 6 dB below full scale is at 50.1% of full scale in amplitude and a quarter of the power, since 10 log₁₀(4) comes to the same 6.02 dB. Half the swing your converter can produce is parked above your loudest hit, unused. That unused half is workspace for the next stage rather than a safety margin against damage.
+
+What it costs you in resolution is nothing you can measure. In a 24-bit file the smallest step sits 20 log₁₀(223) = 138.5 dB below full scale, and the theoretical signal-to-noise figure for a full-scale sine at 24 bits is 6.02 × 24 + 1.76 = 146.2 dB. Bounce with peaks at −6 dBFS and there are still 132.5 dB between your loudest moment and the quantization floor.
+
+Nothing in the room can use that. A quiet home studio sits somewhere around 30 dB SPL of background noise and a loud playback peak is around 100 dB SPL, so the physical world gives you about 70 dB to play with. You could bounce 68 dB down — a mix peaking at −68 dBFS, which looks broken on a meter — and the file would still hold 70.5 dB of range above its own noise. Six is free.
+
+Sixteen bits is the case where the arithmetic bites. There the smallest step sits 20 log₁₀(215) = 90.3 dB below full scale, so a bounce 20 dB quiet leaves 70 dB, which is the point where you start hearing the floor on long fades. That is an argument for working at 24-bit or in float, and for [dithering](https://gazillionindustries.com/dithering/) when you finally deliver 16.
+
+## What floating point actually gives you
+
+Single-precision floating point stores a 24-bit mantissa and an 8-bit exponent, and the exponent is the part that buys the headroom. The largest normal value is close to 2128, which is 128 × 6.0206 = 770.6 dB above unity, and the smallest normal value sits 758.6 dB below it. A channel reading +18 dBFS in a float mixer is about 750 dB away from the nearest wall.
+
+The mantissa is the part that decides quality, and it does not care where the signal sits. Precision is relative: 24 significant bits at every exponent, so the same waveform at +30 dBFS and at −90 dBFS is stored with the same accuracy. That is the whole reason pulling the master fader down recovers an over-scale bus intact, and the reason the same move on tape or in a fixed-point mixer did not.
+
+You can prove it in thirty seconds rather than take it on faith. Put a gain plugin on the mix bus set to +40 dB, a second gain plugin straight after it set to −40 dB, and play. If your mixer is floating point the signal comes back sounding exactly as it did, with the intermediate meter reading absurd numbers. Anywhere that test produces crunch, you have found a stage with a real ceiling in it.
+
+## Why the mix bus goes hot on its own
+
+Nobody sets out to bury the master meter. Levels do it by themselves, and the arithmetic says how fast. Take twenty-four tracks, each averaging −20 dBFS RMS, none of them related to each other. Uncorrelated sources sum in power, so the total is −20 + 10 log₁₀(24) = −20 + 13.8 = −6.2 dBFS RMS. Give that arrangement a [crest factor](https://gazillionindustries.com/crest-factor/) of 12 dB, which is ordinary for a full mix, and the peaks land at +5.8 dBFS.
+
+Nothing went wrong there. Twenty-four sensible channels put the mix bus 11.8 dB above where you want it, and the answer is one fader move of −11.8 dB, not thirty trim adjustments that destroy the balance you spent the afternoon on.
+
+Correlated material climbs faster. Two copies of the same signal in phase sum at 20 log₁₀(2) = 6.02 dB rather than 3.01, and three copies at 20 log₁₀(3) = 9.54 dB. Stack three kicks in phase and you have added nearly 10 dB to the loudest 30 ms of every bar while the average barely moves. [Layering kicks](https://gazillionindustries.com/how-to-layer-kicks/) is where most surprise peaks come from, and [phase cancellation](https://gazillionindustries.com/phase-cancellation/) is why the sum is sometimes smaller than either part instead.
+
+## Where the ceiling is genuinely hard
+
+Float saves you almost everywhere, so it is worth knowing the handful of places it does not.
+
+- **The converter**: a DAC has a fixed number range and stops dead at the top of it; monitoring can clip while the file is clean
+
+- **The delivered file**: 16- and 24-bit integer formats have no values above full scale, so anything over is flattened on write
+
+- **Fixed-point and analog-style stages**: inside plugins that have a ceiling wherever the designer put one, audible as crunch on the loudest hits only
+
+- **Calibrated analog levels**: with 0 dBFS calibrated to +24 dBu, −18 dBFS is +6 dBu and −20 dBFS is +4 dBu — gear designed for a nominal +4 dBu is at its design level when your meter says −20
+
+- **Sample rate conversion and encoding**: both can reconstruct a waveform higher than the samples you wrote; see [true peak](https://gazillionindustries.com/true-peak/)
+
+That last row is the one most likely to catch a finished record. A file measuring exactly 0.0 dBFS on a sample-peak meter can genuinely exceed zero on playback, because the reconstructed curve passes between the samples. A ceiling of −1 dBTP removes the problem.
+
+**SOFT CLIP as the out stage.** Rounding a peak is one way to buy room; holding a ceiling over it is the other.
 
 ## How to actually do it
 
@@ -2122,6 +2360,82 @@ There is a second, subtler benefit: a mix that peaks at −6 dBFS is one you bal
 - Bounce at 24-bit or higher so the lower level costs you nothing at all.
 
 - If you are mastering it yourself, still do this, and then do the loudness stage deliberately.
+
+- Measure the loudest eight bars, not the intro, and use a peak-hold meter so a single hit cannot slip past while you are reading.
+
+- Leave the master fader wherever the arithmetic puts it; there is no credit for 0.0.
+
+- Deal with a plugin that is clipping at the plugin, by lowering its own input, rather than at the master fader after it.
+
+- Write the peak value into the bounce filename, so tomorrow you know what arrived without opening it.
+
+## How to check it in your own session
+
+Every claim above can be tested on the project already open in front of you, and testing takes less time than arguing about it online.
+
+- Reset the peak-hold on the mix bus meter, play the loudest section start to finish, and read the held number. That is your actual peak, not the one you remember.
+
+- Run the +40 / −40 gain test described above to find out whether your summing is floating point.
+
+- Bounce the mix twice, once as it stands and once with the master fader 6 dB lower. Import both, raise the quiet one by exactly 6 dB, flip the polarity of one, and play them together. If the result is silence, headroom cost you nothing.
+
+- Find out whether your master bus inserts come before or after the fader: put a heavily driven plugin on the mix bus, then pull the fader 12 dB. If the distortion changes, the insert is before the fader. If it does not, the fader is not protecting that plugin at all.
+
+- Bounce once at 32-bit float. Anything that went over is still in the file and can be recovered by lowering the level after the fact, which makes it a safe emergency copy.
+
+- Open the bounced file in an editor and look at the sample peak and the true peak side by side. A gap of 0.3 to 1.5 dB on limited material is normal, and it is the gap that decides your final ceiling.
+
+## Where headroom sits in the chain
+
+Headroom works as a running total rather than a single setting, and it gets spent at five points along the way. Channel gain feeds a group bus, the group feeds the mix bus, the mix bus feeds the master chain, the master chain feeds the converter or the file. Each stage adds level or takes some away, and only the last two have a wall in them.
+
+The order of processing decides how much room each stage needs. Saturation and clipping reduce peaks and raise average level, so a stage that follows them sees a smaller crest and needs less headroom. A compressor with a slow attack lets the transient through untouched and can leave the peak exactly where it was while raising everything around it, which eats room. Put the peak control before the level control and the numbers stay tidy; [clipper before limiter](https://gazillionindustries.com/clipper-before-limiter/) covers the specific case, and [drum bus chain order](https://gazillionindustries.com/drum-bus-chain-order/) covers the general one.
+
+The per-channel version of all of this is [gain staging](https://gazillionindustries.com/gain-staging/), and it is a genuinely different problem: on the way in, a quiet signal is fighting analog preamp noise, so recording at −40 dBFS costs you something real. On the way out, inside the box, a quiet bus costs you nothing at all. Do not carry the input rule into the mix bus.
+
+## Headroom and the loudness you are aiming at
+
+The two numbers are related by one subtraction. Peak-to-loudness is the true peak minus the integrated loudness, so a master reading −1 dBTP and −14 LUFS has 13 dB of it, and a mix peaking at −6 dBFS with an integrated loudness of −18 LUFS has 12 dB. That second pair is a healthy place for a mix to arrive: loud enough to hear what it will become, 12 dB of peak left for the master stage to spend.
+
+Work out what the master stage then has to find. Going from −18 LUFS to a −14 LUFS delivery is 4 dB of loudness, and going from −6 dBTP to −1 dBTP is 5 dB of ceiling. Those are small, comfortable moves. Hand over a mix already at −0.1 dBFS and −8 LUFS and the same target requires taking 6 dB away, which is the sound of a record getting quieter and flatter for no gain. [How loud should my master be](https://gazillionindustries.com/how-loud-should-my-master-be/) works through the delivery end.
+
+Streaming normalization is the reason none of this costs you competitive loudness. Playback is level-matched, so the mix that arrives with room and gets mastered properly plays back next to everything else at the same loudness, with its transients intact.
+
+## Failure modes and what each one sounds like
+
+Headroom problems have distinct symptoms, and naming the sound saves you an hour of turning knobs at random.
+
+- **Crunch only on the biggest hits**: a stage with a hard ceiling somewhere in the chain; pull its input down 6 dB and see whether the crunch goes with it
+
+- **Distortion in the room, clean in the file**: the converter or the monitor path is clipping, not the mix; bounce and look at the file before touching anything
+
+- **Mix sounds fine, master comes back small**: you arrived with nothing to spend, so the only available move was downward
+
+- **Grit on long fades and reverb tails**: a quiet bounce delivered at 16-bit without [dither](https://gazillionindustries.com/dithering/)
+
+- **Meter says −6, file reads over**: the meter is reading RMS or is placed before the fader; check [true peak](https://gazillionindustries.com/true-peak/) on the bounced file
+
+- **Quiet version sounds worse**: almost always [loudness bias](https://gazillionindustries.com/fletcher-munson/); match levels and listen again
+
+- **Peaks over with every channel under**: correlated material summing; find the layered low end before you touch the master
+
+- **Pulling the master down changes the tone**: there is a level-dependent plugin after the fader, or the fader is post-insert
+
+## What actually differs from one DAW to the next
+
+Less than the arguments suggest, and the differences that exist are worth ten minutes of checking rather than reading about. Three of them matter.
+
+Where the meter is tapped. Some mix bus meters read after the fader and some read before it, so the same session shows two different numbers depending on the program. Move the master fader 6 dB and watch: if the reading follows, the meter is post-fader and you can trust it as a picture of what leaves. If it does not move, that meter is telling you about the sum, not the output.
+
+Where the inserts sit. On some master and mix bus channels the inserts come after the fader, which means pulling the fader does nothing to protect a plugin on that bus. The driven-plugin test above settles it in one pass, and the answer changes where you put your trim.
+
+What the bounce dialog does on its own. Bit depth, dither and any normalize option are all decided there, and a normalize step will undo the headroom you just left. Turn normalize off, set 24-bit or 32-bit float, and leave dither off until the 16-bit delivery.
+
+## The monitor knob, not the fader
+
+The hardest part of leaving headroom is that the mix gets quieter and quieter mixes sound worse. That is an ear, not a mix. Equal-loudness curves mean the low end and the top both recede as level drops, so a mix pulled down 6 dB will genuinely sound thinner until you turn the monitors up to compensate.
+
+Turn up the monitor control and leave the master fader where the numbers want it. If the comparison matters, match levels before judging: a 1 dB advantage is enough to win a blind test on its own, and 0.1 dB is a change in amplitude of 1.2%, which is below the point of caring. [Fletcher-Munson](https://gazillionindustries.com/fletcher-munson/) is the mechanism, and a [VU meter](https://gazillionindustries.com/vu-meter/) is a cheap way to keep an average in view while the peak meter shouts.
 
 ## Where it costs you
 
@@ -2141,15 +2455,61 @@ Around 6 dB of peak headroom on the mix bus is the common convention and works w
 
 ### Does more headroom mean better audio quality?
 
-Not by itself. In a floating-point mixer, more headroom does not make the audio cleaner. It gives later stages room to work, which usually produces a better final result for a different reason.
+Not by itself. In a floating-point mixer, more headroom does not make the audio cleaner. What it buys is room for later stages, which usually produces a better final result for a different reason.
 
 ### Is there such a thing as too much headroom?
 
 Practically, no, as long as you are working at 24-bit or in floating point. A mix bounced 20 dB down simply gets turned up. At 16-bit it would start to matter, which is a good reason not to work at 16-bit.
 
+### Is −6 dB headroom enough for mastering?
+
+Yes, comfortably. A mix arriving at −6 dBFS peak with roughly 12 dB of peak-to-loudness gives a mastering stage 5 dB of ceiling and 4 dB of loudness to find before it hits a −1 dBTP, −14 LUFS delivery. Neither of those is a strain.
+
+### Is −3 dBFS enough headroom?
+
+It is workable. Three decibels is an amplitude ratio of 1.41, so there is still real room above the peaks. Six is the convention because it survives one careless boost later without anybody having to ask you for a new bounce.
+
+### Should I leave headroom on every channel?
+
+No. Inside a floating-point mixer a channel at −2 dBFS is not damaged and a channel at −30 dBFS is not cleaner. The only reasons to trim a channel are to stop a plugin with an internal ceiling from clipping, and to keep the faders in a range where they are easy to ride.
+
+### Why does my mix clip when no individual channel is clipping?
+
+Because the channels add up. Twenty-four uncorrelated tracks at −20 dBFS RMS sum to −20 + 10 log₁₀(24) = −6.2 dBFS RMS, and ordinary peaks on top of that land above zero. Pull the master, not the channels.
+
+### Should I remove the limiter before sending a mix to mastering?
+
+Yes, and bounce a second version with it on if you want the mastering engineer to hear what you were aiming at. A limited mix bus gives them a decision already made and no way to undo it.
+
+### Should I bounce at 32-bit float?
+
+It is a good safety copy, because anything that went over full scale is still recoverable in the file. For delivery to a person or a service, send 24-bit, which every stage handles without comment.
+
+### How do I add headroom to a finished mix?
+
+Lower the master fader, or put a gain trim at the very end of the chain and set it negative. In a floating-point project both are exact and lossless. If the mix has a limiter on it, raise the limiter's ceiling or take it off rather than turning the whole thing down underneath it.
+
+### Does leaving headroom make my track quieter on streaming?
+
+No. Playback is loudness-normalized, so the ceiling you bounced at has no bearing on how loud it plays next to anything else. What the headroom buys is a master stage that had options.
+
+### What is the difference between headroom and dynamic range?
+
+Headroom is the distance from your loudest peak up to the ceiling. Dynamic range is the distance from your loudest peak down to the quietest thing you can still hear over the noise floor. One is space above, the other is space below.
+
+### Does headroom matter if I master my own tracks?
+
+It matters more, because you are the next stage. Bounce the mix, leave it overnight, and start the master on a file that still has room in it rather than pushing the loudness inside the mix session where every fader move changes it again.
+
+### Why does my peak meter read differently from the bounced file?
+
+Usually the meter is tapped before the fader or before the last insert, or it is reading RMS instead of peak. Sometimes it is a sample-peak reading against a true-peak one, which will differ by a few tenths of a decibel on limited material.
+
 ## What BEEFY does
 
 BEEFY is a saturation and loudness effect for making sounds thicker, punchier and more up front. **JUICE** sets the level going in, so you can feed it a little harder or back things off without touching your channel gain structure. **BEEF** brings weight, density and loudness; **COOK** changes the color and bite. **SOFT CLIP** opens switched on and takes care of the initial gain staging, helping the clipping find the sound without making you hunt for a magic input level.
+
+The two output switches are the part that touches this article. **SOFT CLIP** rounds the loudest parts, which buys room by making the tallest peak shorter. **LIMIT** keeps the output peaks in check instead, which buys room by holding a ceiling over them. They are separate choices, and both can be off if you would rather push it yourself. The input and output clip lights are there so you can see which end of the plugin is running out of room before you can hear it.
 
 Six decibels, for the benefit of somebody downstream. Usually a slightly better-rested version of you.
 
@@ -7267,7 +7627,7 @@ Published 2026-09-20, updated 2026-09-24. By Gazillion Industries, who make BEEF
 
 The beat is finished, the rapper is good, and the vocal is either sitting on top of the track like a sticker or buried somewhere behind the hats. There is no in-between setting, and no plugin fixes it, because the problem happened before the plugins.
 
-Mix vocals in this order: get the level right against the beat with no processing, cut the problems with EQ, control the performance with compression, add saturation or clipping if it needs weight, then place it in space with delay and reverb. The single biggest improvement for most people is not a plugin at all: it is riding the level line by line so the words are all the same size before a compressor ever sees them.
+Mix vocals in this order: get the level right against the beat with no processing, cut the problems with EQ, control the performance with compression, add saturation or clipping if it needs weight, then place it in space with delay and reverb. The single biggest improvement for most people comes before any plugin: riding the level line by line so the words are all the same size before a compressor ever sees them.
 
 ## The short version
 
@@ -7290,6 +7650,30 @@ Mix vocals in this order: get the level right against the beat with no processin
 A vocal take has a 15 dB range between the quietest word and the loudest, and no compressor handles that gracefully on its own. If you ask one to, it will pump on the loud words and let the quiet ones vanish. Draw the level line instead: go through the take and raise the words that disappear and lower the ones that jump, until the waveform looks roughly even. Then compress what is left, which will be a few decibels rather than fifteen.
 
 This is boring and it is the difference between an amateur vocal and a professional one. It is also how it was done before plugins, by hand, on a fader.
+
+Put the range in numbers before you decide how much work it needs. Fifteen decibels is an amplitude ratio of 1015/20 = 5.62, so the loudest word is pushing the meter more than five times as far as the quietest one. Get that down to 4 dB, a ratio of 1.58, and the take has gone from something a compressor has to rescue to something it only has to finish.
+
+Rides belong in front of the fader. Clip gain, region gain or an automated trim plugin placed first all change the level arriving at the first insert; the channel fader changes the level leaving the last one. Ride on the fader and the compressor still sees the original fifteen decibels, still grabs four dB off the loud words, and you have automated the symptom while the cause sits upstream untouched. [Gain staging](https://gazillionindustries.com/gain-staging/) is the same argument applied to a whole channel.
+
+Work in whole decibels and expect a long list. Two dB is about the smallest move that reads as a change on a single word; anything under one dB is mostly you persuading yourself. A sixteen-bar verse at 90 BPM lasts 16 × 4 × 60 / 90 = 42.7 seconds, and forty seconds of rap holds enough words that twenty to forty individual moves is an ordinary count. Nobody enjoys this part. It is still the part that shows.
+
+## Drawing the level line, move by move
+
+- Bypass every plugin on the vocal channel.
+
+- Play the verse against the beat at conversation volume.
+
+- Mark every word you cannot make out and every word that jumps out.
+
+- Change those words with clip gain, in 2 dB steps, not with the fader.
+
+- Play it again and repeat until nothing disappears and nothing jumps.
+
+- Edit the breaths that the rides just brought up, before inserting anything.
+
+- Insert the compressor last, once the take is already even.
+
+Verify it with a meter rather than with optimism. Put a level meter after the rides with everything else bypassed, run the verse, and watch the peak hold. If the loudest words land inside a 4 to 5 dB window, the rides are finished. If the window is still ten dB wide you stopped early, and the compressor downstream is about to do that work badly and audibly. A [VU meter](https://gazillionindustries.com/vu-meter/) is the friendlier tool here, because it reads something close to what your ear weighs rather than the peaks your ear ignores.
 
 ## The chain
 
@@ -7315,15 +7699,161 @@ This is boring and it is the difference between an amateur vocal and a professio
 
 **SOFT CLIP** as the out stage, BEEF at 62.
 
+## Set the high-pass by measuring the voice
+
+A high-pass filter answers one question: where does this particular voice stop? Find the lowest sustained note in the take with a tuner. With A4 at 440 Hz and equal temperament, A2 is 110.00 Hz, G2 is 98.00 Hz and E2 is 82.41 Hz. Put the corner under that note and the rumble still goes.
+
+The slope decides what that corner actually does, and the standard maximally flat response gives exact figures. Cornered at 100 Hz, a 12 dB per octave filter is 3.01 dB down at 100 Hz, 12.30 dB down at 50 Hz and 24.10 dB down at 25 Hz. A 24 dB per octave filter at the same corner is also 3.01 dB down at 100 Hz, then 24.10 dB down at 50 Hz and 48.16 dB down at 25 Hz. Every order meets at the corner and separates below it.
+
+Above the corner the steeper filter is the gentler one, which catches people out. At 120 Hz the 12 dB per octave filter is 1.71 dB down while the 24 dB per octave filter is only 0.91 dB down. A steep slope set at the right corner disturbs the voice less and clears more rumble. A steep slope only does damage when the corner has been set too high, and then it does a lot.
+
+Work one through. The voice bottoms out on G2, 98.00 Hz. Set the corner at 120 Hz and the fundamental sits 1200 × log2(120 / 98) = 351 cents — three and a half semitones — inside the filter's working range, so you are pulling down the note the singer is actually on. Set it at 80 Hz and everything the voice produced survives while the desk rumble and the chair go. The 80 to 120 Hz range gets recommended because most voices land above it; measure once and you will know instead of guessing.
+
+Plosives need a different tool. A hard p or b pushes a slug of air at the capsule and makes a low thump with almost no pitch, much of it under 40 Hz. Forty hertz sits log2(100 / 40) = 1.32 octaves below a 100 Hz corner, where a 12 dB per octave filter is 16.03 dB down and a 24 dB per octave filter is 31.84 dB down. Sixteen decibels of attenuation still leaves a thump you can hear. Draw a short clip-gain dip over the plosive rather than steepening the filter up into the voice. The rest of the frequency work is in [how to EQ vocals](https://gazillionindustries.com/how-to-eq-vocals/).
+
+## Compression in milliseconds you can count
+
+Attack and release are arithmetic against the rate of the words. Six syllables a second is 1 / 6 = 167 ms a syllable. At 90 BPM a sixteenth note is 60000 / 90 / 4 = 166.7 ms, which is the same number, and that is why rap phrasing and sixteenths keep landing on top of each other. At 140 BPM a sixteenth drops to 107.1 ms.
+
+Release shorter than the gap between syllables lets the compressor recover between words. Release longer than the gap means it never lets go: word two arrives with the gain still pulled down from word one, and the verse sags in a way that sounds like the rapper running out of breath. Divide 60000 by the tempo, quarter it, and stay under that number. At rap tempos that lands you in the 60 to 150 ms range on the dial.
+
+Attack decides how much consonant survives. The burst at the front of a hard consonant is over in 5 to 20 ms. An attack of 1 ms is inside all of it and rounds the front of every word; an attack of 10 ms lets the burst through and clamps the vowel behind it, which is where the level lives anyway. [What a transient is](https://gazillionindustries.com/what-is-a-transient/) covers the shape you are protecting.
+
+Ratio and threshold are one decision spread across two boxes. At 3:1, a word arriving 9 dB over threshold leaves 3 dB over, so the meter reads 6 dB of reduction. At 4:1 the same 6 dB needs only 8 dB over. Pick the ratio whose sound you like and then move the threshold until the meter shows the reduction you wanted, rather than the other way round. [What a compressor does](https://gazillionindustries.com/what-is-a-compressor/) has the mechanism in full.
+
+Two gentle stages beat one hard one. A compressor pulling 3 dB is close to invisible; the same unit pulling 8 dB is audibly working on every syllable. Two in series at 3 dB each give you 6 dB total from two small gestures, and they can hold different jobs — a slow one riding the overall level across a bar, a fast one catching the single consonant that got away.
+
+## De-essing, and why it comes after the compressor
+
+Compression makes sibilance worse, which decides its place in the chain. A compressor turns down the loud vowels and leaves the s where it was, so the s ends up relatively louder than it started. Saturation makes it worse again: harmonics of a 3 kHz component land at 6 kHz and 9 kHz, directly on top of the range that was already stabbing.
+
+Find the frequency rather than trusting a default. Put a bell at +9 dB with a Q around 6 and sweep it from 4 kHz to 10 kHz over a line with a hard s in it. Stop where it becomes unbearable and read the number. Remove the boost, put a de-esser or a narrow band compressor at that frequency, and take 3 to 6 dB off only while the s is happening. Keep the sweep quick: a parked boost retunes your ear in about twenty seconds and then it starts lying to you.
+
+Check a held vowel afterward. A de-esser working over too wide a band takes the top off the whole voice, and the signature is a singer who seems to turn away from the microphone on every word containing an s. [Multiband compression](https://gazillionindustries.com/multiband-compression/) is the same idea with more bands.
+
+## Saturation on a vocal, counted
+
+Saturation manufactures harmonics at whole-number multiples of what went in, and on a vocal that is worth counting. A voice with a 110 Hz fundamental comes out with content at 220, 330, 440, 550 and 660 Hz. A phone speaker is a few millimeters across with almost no enclosure behind it, and its output falls away fast below roughly 500 Hz, so the fundamental and the first three harmonics are barely reproduced at all. The fifth, at 550 Hz, is the first component the handset can really move.
+
+That arithmetic settles a common argument. Adding low mids on monitors to fix a thin vocal on a phone changes nothing on the phone and eats headroom everywhere else. Adding harmonics puts energy where the small speaker works, and it arrives only when the voice arrives, because it is manufactured out of the voice. [Saturation explained](https://gazillionindustries.com/saturation-explained/) and [harmonic distortion](https://gazillionindustries.com/harmonic-distortion/) go further into it.
+
+The orders have characters, and the intervals say why. The second harmonic is 12 × log2(2) = 12 semitones up, a plain octave, and reads as weight. The third is 12 × log2(3) = 19.02 semitones, an octave and a fifth, and reads as edge. On a voice the edge turns into harshness before the weight turns into mud, because the odd orders pile into the 2 to 5 kHz range the ear already treats as loud. [Why a mix sounds harsh](https://gazillionindustries.com/why-is-my-mix-harsh/) is mostly this.
+
+Two cautions belong to vocals specifically. Drive lands on sibilance, so either de-ess after the saturation or de-ess twice. And every nonlinear stage makes content above what you fed it: digital audio carries frequencies below half the sample rate and nothing above, so at 44.1 kHz the ceiling is 22,050 Hz and anything past it folds back down to a frequency with no musical relationship to the voice. [Aliasing](https://gazillionindustries.com/what-is-aliasing-in-audio/) and [oversampling](https://gazillionindustries.com/oversampling/) have the rest, and [distortion on vocals](https://gazillionindustries.com/distortion-on-vocals/) has the heavier end of the treatment.
+
+## Clip the peaks, and count what it buys
+
+A rap vocal is mostly peaks nobody hears. Take a ridden, compressed vocal peaking at −3.0 dBFS with an RMS of −18.0 dBFS: crest factor 15 dB. Shave 3 dB off the tallest consonants and raise the output 3 dB. The peak reads −3.0 dBFS again, exactly where it began, and the RMS is now −15.0 dBFS, so the crest is 12 dB. The vocal is 3 dB louder on every average-reading meter and never went above where it already sat. [Crest factor](https://gazillionindustries.com/crest-factor/) is the number to watch.
+
+The tallest part is also the shortest part, and that asymmetry is the whole trick. One sample lasts 1 / 44100 = 22.68 microseconds at 44.1 kHz and 20.83 microseconds at 48 kHz, and the absolute peak of a consonant is a handful of those. Removing 3 dB from it takes away almost nothing you hear as tone, and takes away a great deal that the mix limiter was about to spend its entire budget on.
+
+- Put a soft clipper after the compressor and the de-esser.
+
+- Raise its input one dB at a time until the loudest consonants start to flatten.
+
+- Back off one dB.
+
+- Match the bypassed level to within a tenth of a dB.
+
+- A/B, and keep it only if the words got clearer rather than merely louder.
+
+Past about 3 dB the round-off stops being peak control and becomes the sound. On a rap vocal that is frequently the point; on a sung ballad it rarely is. The mechanics are in [soft clipping explained](https://gazillionindustries.com/soft-clipping-explained/), the running order against a limiter is in [clipper before limiter](https://gazillionindustries.com/clipper-before-limiter/), and [true peak](https://gazillionindustries.com/true-peak/) explains why a clipped vocal can still trip a meter after encoding.
+
 ## Making it fit rather than sit on top
 
 A vocal that sounds stuck on the front is usually competing with the beat rather than sharing with it. Three things fix it. Carve a small dip in the instrumental where the voice lives, around 1 to 3 kHz, using a compressor on the beat bus triggered by the vocal if you want it automatic. Match the spaces: a dry vocal over a wet beat always sounds pasted on. And commit to a level choice: in rap the vocal usually sits further forward than in almost any other genre, and trying to split the difference produces something that reads as neither.
 
 For the beat side of that conversation, see [how to make drums cut through the mix](https://gazillionindustries.com/how-to-make-drums-cut-through-the-mix/).
 
+Put a number on the dip. Two to three decibels across 1 to 3 kHz on the instrumental is usually the whole job, and it is a better trade than adding the same 3 dB to the vocal. Both moves change the distance between the two by 3 dB. Only one of them raises the peak arriving at the master. [Headroom](https://gazillionindustries.com/headroom-in-mixing/) is the account that gets charged.
+
+If you do the dip with a sidechained compressor on the beat bus, the time constants matter more than the amount. Attack around 5 ms so the duck arrives with the word. Release matched to the syllable rate, so under 167 ms at 90 BPM, so the beat lifts again in the gaps instead of staying down for the bar. Two decibels of reduction is usually enough to hear the vocal get clearer without hearing the beat move at all. [Sidechain compression](https://gazillionindustries.com/sidechain-compression/) has the routing.
+
+Matching the spaces is a measurement as well as a taste. If the beat's reverb decays in 1.2 seconds, that is 1200 / 166.7 = 7.2 sixteenths at 90 BPM. A vocal in a 0.4 second room is standing 2.4 sixteenths deep, in a different building from the track, and turning it up never fixes an address.
+
+## Delay and reverb, timed to the tempo
+
+Calculate the delay times rather than twisting a knob until it sounds vaguely right. At 90 BPM a quarter is 60000 / 90 = 666.7 ms, an eighth 333.3 ms, a dotted eighth 500.0 ms, a sixteenth 166.7 ms and an eighth triplet 222.2 ms. At 140 BPM the same list reads 428.6, 214.3, 321.4, 107.1 and 142.9 ms.
+
+The dotted eighth is the rap default because it sits across the grid: 500.0 ms at 90 BPM is three sixteenths, so the repeat lands in the hole between phrases instead of doubling the next word. Set the feedback so each repeat falls about 3 dB, which gives ten repeats before it reaches −30 dB and vanishes under the beat.
+
+A slapback is a different animal and it ignores the grid entirely. 80 to 120 ms, one repeat, no feedback. A hundred milliseconds is the arrival gap you would get from a surface 343 × 0.100 / 2 = 17.2 m away, which is why it reads as a room the singer is standing in rather than as an effect somebody switched on.
+
+Reverb gets pre-delay so the words land before the room does. Thirty milliseconds of pre-delay is the same gap as a wall 343 × 0.030 / 2 = 5.1 m away, and it hands every syllable a clear 30 ms window in which to be understood. Then filter the return hard: high-pass the reverb bus around 300 Hz so the tail carries no chest, and low-pass it around 8 kHz so it stops rebuilding the sibilance you just spent a plugin removing. [Making something sound like another room](https://gazillionindustries.com/how-to-make-music-sound-like-another-room/) is the extreme version of the same controls.
+
+Both effects on sends, both ducked under the dry vocal, is the arrangement that keeps a rap vocal intelligible at any wetness. Key a compressor on the reverb bus from the dry vocal and the tail is held down while the words happen and blooms in the gaps, which is the only way to have a big space and a clear verse at the same time.
+
+## Doubles, stacks, and the flam you can hear
+
+A doubled vocal means two performances. Copy one track and pan the copy and you get 20 × log10(2) = 6.02 dB of level in the middle and no width at all; two separate takes sum incoherently for 10 × log10(2) = 3.01 dB and sound wide, because the differences between them are the width.
+
+Timing slip between two takes is a comb filter nobody ordered. With an offset of d seconds the nulls land at (2k + 1) / (2d) and the peaks at k / d. Fifteen milliseconds of slip puts nulls at 1 / (2 × 0.015) = 33.3 Hz, then 100 Hz, then 166.7 Hz, with peaks between them at 66.7 and 133.3 Hz. The second null sits exactly in the chest of the voice. That is how a double ends up thinner than the single it came from, and EQ cannot fill the hole, because the hole moves whenever the slip does. [Phase cancellation](https://gazillionindustries.com/phase-cancellation/) has the full picture.
+
+Above roughly 30 ms the ear stops fusing the two and starts hearing a second voice, so useful slip is either under about 10 ms and tightened, or over 30 ms and deliberate. Sum to mono before you commit: a stack that sounds wide in stereo and disappears in mono is a stack full of nulls, and most listening happens on one small speaker. [Mono compatibility](https://gazillionindustries.com/mono-compatibility/) is the check.
+
+Ad-libs take the lead's treatment and then go further — more delay, more filtering, less level. A quiet ad-lib sitting 10 dB under the lead adds 10 × log10(1 + 10−1) = 0.41 dB to the channel. It is there for content rather than for level, which is the permission you needed to keep it low.
+
+## Host by host
+
+The arithmetic is identical in every DAW and the controls are not. Four differences are worth knowing before you start drawing lines.
+
+Ableton Live does the rides as clip gain in Clip View, which sits ahead of the device chain, so the compressor sees the ridden level exactly as it should. Compressor's sidechain tab handles the beat-bus duck, Multiband Dynamics does the de-essing with only the high band active, and Saturator covers the drive. Automate a Utility placed first if you would rather see the rides on the timeline than inside the clip.
+
+Logic Pro carries region gain in the Region inspector for the same job, and DeEsser 2 for sibilance, where the detector frequency and the suppressor frequency are separate controls, so you can trigger on one band and reduce another. Logic's Compressor offers several circuit styles inside one plugin, so the two-stage approach can be built without leaving it. ChromaGlow, in Logic Pro 11 and later, is the saturation stage.
+
+FL Studio does the rides with automation clips on a Fruity Balance volume placed first in the channel, or by slicing the take in the playlist and setting each clip's gain. Fruity Limiter in COMP mode is the compressor, Maximus with a single high band is the de-esser, and Fruity Soft Clipper takes the peaks. Mixer inserts run top down, so the chain order above is simply which slot you drop each one into.
+
+Pro Tools has Clip Gain, which is the cleanest expression of this whole page: the rides live on the clip as a visible line, ahead of every insert, and they survive when you rebuild the chain above them.
+
+## How to check it in your own session
+
+- Bounce the verse and play it from a phone speaker at arm's length. If the words are hard to follow, look between 500 Hz and 4 kHz rather than at the low end.
+
+- Turn the monitors down to conversation level and listen again.
+
+- Sum the whole mix to mono and check the stacks survive it.
+
+- Solo the beat, then unsolo, and ask whether the vocal came forward or the beat just went quiet.
+
+- Bypass the entire vocal chain with the output level matched to a tenth of a dB, and decide honestly which version you prefer.
+
+- Sleep on it and check in the morning.
+
+Step two is the cheapest improvement available to anybody reading this. Your ear's response flattens as the level rises, so a balance set loud hands you bass and top you never actually mixed, and the vocal you placed perfectly at 95 dB arrives thin on a laptop. [Fletcher–Munson](https://gazillionindustries.com/fletcher-munson/) is the curve underneath that.
+
+## What each failure sounds like
+
+- **Words vanishing under the beat**: level line not drawn — rides, not more compression
+
+- **Loud and still unclear**: energy piled below 500 Hz; intelligibility lives from 1 to 4 kHz
+
+- **Pumping on the loud words**: release longer than the gap between syllables
+
+- **Front of every word rounded off**: compressor attack under 5 ms
+
+- **Breaths and room noise arriving**: the compressor is doing too much — ride first, compress less
+
+- **Sibilance stabbing**: de-esser placed before the compressor, or saturation placed after it
+
+- **Thin in mono, wide in stereo**: comb nulls between doubles — align them or spread them past 30 ms
+
+- **Sitting on top like a sticker**: dry vocal over a wet beat, or no room made in the instrumental
+
+- **Great on monitors, gone on a phone**: all fundamental, nothing above 500 Hz
+
+- **Harsh on earbuds**: drive landing in the 2 to 5 kHz range — see [why a mix sounds harsh](https://gazillionindustries.com/why-is-my-mix-harsh/)
+
+- **Cloudy under the verse**: 200 to 400 Hz stacking up across doubles — see [why a mix sounds muddy](https://gazillionindustries.com/why-is-my-mix-muddy/)
+
+- **Great soloed, lost in the mix**: you mixed the vocal instead of mixing the record
+
 ## Where it costs you
 
 Every stage here takes something. High-passing takes weight off a deep voice if you go too far. Compression brings up breaths, room noise and mouth sounds, all of which you then have to edit. Saturation adds harmonics in exactly the range where sibilance lives. And reverb buys space at the cost of clarity, which is why a rap vocal usually gets a short delay rather than a long reverb.
+
+The dynamics bill is the one that compounds. Take 3 dB off the peaks on the vocal channel, 3 dB again on the vocal bus and 3 dB again at the master and you have spent 9 dB of crest, and nothing downstream can give any of it back. A vocal with a 15 dB crest that arrives at the master with 6 dB has nowhere left to go. [Mastering a beat](https://gazillionindustries.com/how-to-master-a-beat/) assumes you left some behind.
+
+The money cost is small and worth saying plainly. Every step on this page runs on tools already installed: clip gain, a stock EQ, a stock compressor, a stock de-esser, a stock delay and a stock reverb. Nothing here requires a purchase. What a paid saturation or clipping plugin buys is a particular character and a quicker route to it, and the only honest test is a level-matched bypass against whatever came with the DAW. [Soft clippers](https://gazillionindustries.com/best-soft-clipper-plugins/) and [saturation plugins](https://gazillionindustries.com/best-saturation-plugins/) list both kinds.
 
 ## Questions people ask
 
@@ -7343,9 +7873,53 @@ Make decisions at conversation volume, where your ears are flattest, and check l
 
 Three to six decibels on the loudest words, or two stages of about three decibels each if the take is uneven. If you need more than that, ride the level first and compress afterward.
 
+### What high-pass frequency should I use on vocals?
+
+Below the lowest note the voice actually sings. Find it with a tuner: A2 is 110.00 Hz, G2 is 98.00 Hz, E2 is 82.41 Hz. A corner at 120 Hz on a voice bottoming out at 98.00 Hz is 351 cents up into the fundamental, which thins the take. 80 to 120 Hz suits most voices, and measuring beats the range.
+
+### Should I use clip gain or volume automation for vocal rides?
+
+Clip gain, because it sits ahead of the inserts, so the compressor receives the corrected level. Fader automation happens after the plugins, so the compressor still reacts to the original fifteen-decibel spread.
+
+### Where should saturation go in a vocal chain?
+
+After compression and after de-essing. Saturation generates harmonics of everything it is given, including sibilance, so driving an s at 3 kHz puts new content at 6 and 9 kHz. Order it last among the level tools and before the sends.
+
+### How do I stop vocals sounding harsh?
+
+Back off the drive before reaching for EQ. Odd harmonic orders land 19.02 semitones above the source, an octave and a fifth, which piles into the 2 to 5 kHz range the ear treats as loudest. Then narrow the de-esser: a wide band takes the top off the entire voice rather than off the s.
+
+### Why do my vocals sound thin on my phone?
+
+A handset speaker rolls off fast below roughly 500 Hz. A 110 Hz voice has harmonics at 220, 330, 440 and 550 Hz, and the 550 Hz one is the first the phone can really move. Add harmonics with saturation rather than low mids with EQ; the low mids never arrive and they cost headroom on the way past.
+
+### What delay time should I use on a rap vocal?
+
+A dotted eighth, which is 500.0 ms at 90 BPM and 321.4 ms at 140 BPM, with feedback set so each repeat drops about 3 dB. It lands across the grid, so the repeat fills the gap between phrases instead of blurring the next word.
+
+### Should I compress before or after EQ on vocals?
+
+Cut with EQ first, so the compressor is not being triggered by a resonance you were about to remove. Any tone-shaping boosts go after the compressor, where they will not change how hard it works.
+
+### How loud should the vocal be against the beat?
+
+There is no universal number, and the check beats the number anyway: bounce the loop, play it from a phone at arm's length, and see whether you can follow every word. Rap sits further forward than most genres, so if it feels slightly too loud on monitors it is often right on a handset.
+
+### Do I need to double my vocals?
+
+Only where the arrangement wants weight. Two real takes sum for about 3.01 dB and sound wide; a copied track sums for 6.02 dB and sounds louder in the middle. Watch the timing, because 15 ms of slip puts a null at 100 Hz, right in the chest of the voice.
+
 ## What BEEFY does
 
 BEEFY is a saturation and loudness effect for making sounds thicker, punchier and more up front. There is no drum-only rule: the page invites a thin synth, a chopped sample, an electric piano, a guitar or a vocal that could use some attitude. **BEEF** brings weight, density and loudness; **COOK** changes the color and bite from rounder toward brighter; **JUICE** sets the level going in. **SOFT CLIP** opens switched on and brings rounded, fuzzy edges to the loudest parts.
+
+On a vocal, placement decides most of the result. Put it after the compressor and after the de-esser, so it is driving a signal that already has an even level and no stabbing s. JUICE sets what arrives, BEEF decides how much weight gets built, and COOK decides whether that weight reads as body or as bite. On a voice, bite is the setting that turns into harshness first, so move COOK last and in small steps, with the beat playing.
+
+SOFT CLIP and LIMIT are two answers to the same loudest consonant, and on a voice they do not sound alike. Soft clipping rounds the top of the waveform and leaves the word feeling immediate. Limiting pulls the level down around the peak, which can take the front edge of the consonant with it — the exact thing this page spent a section protecting. [Soft clipping explained](https://gazillionindustries.com/soft-clipping-explained/) and [how to use a limiter](https://gazillionindustries.com/how-to-use-a-limiter/) cover the choice. The product page says SOFT CLIP opens switched on and takes care of the initial gain staging, so the first move is to raise BEEF and listen rather than to hunt for a magic input level. BEEFY runs on Mac and Windows as AU, VST3 and standalone, and it is $19.
+
+**LIMIT** instead, everything else identical.
+
+If the beat underneath is the part that needs holding together rather than the voice on top, [DRUGS](https://gazillionindustries.com/drugs.html) is our free one-knob bus compressor for drums, Mac and Windows, with a DOSE control, a GAIN control and a soft ceiling on the way out. Judge it by bypassing the plugin rather than by turning DOSE down, because DOSE at zero is not unity and is still part of the sound.
 
 The sticker or the basement. Neither, once the level line is drawn.
 
@@ -7705,6 +8279,18 @@ A limiter is a compressor with a very high ratio and a very fast attack, aimed a
 
 Most modern limiters use lookahead: they delay the audio by a few milliseconds so the detector can see a peak coming and start reducing gain before it arrives, rather than clamping down after it has already gone past. That is why a limiter can catch a transient that a compressor with the same attack time would miss, and it is why limiters report latency.
 
+Put a number on that delay, because it decides what the limiter can and cannot see. At 44.1 kHz one millisecond is 44.1 samples, so a 1.5 ms lookahead window holds 0.0015 × 44100 = 66 samples. At 48 kHz the same window is 72 samples, and at 96 kHz it is 144. A 10 kHz transient edge rises in a quarter period of 1 / (4 × 10000) = 25 microseconds, so 1.5 ms is roughly sixty such edges of warning. Nothing in the top of the spectrum can outrun it.
+
+The low end is the opposite story. One cycle of a 30 Hz note lasts 1000 / 30 = 33.3 ms, which is more than twenty times that window. A limiter never sees a bass note coming in the same sense; it sees the front of it and then spends the rest of the note deciding what to do, which is where almost every audible limiter artifact is born.
+
+## The ceiling, and the decibel you give up
+
+The ceiling is the one control on a limiter that has a correct answer. A sample-peak meter reads only the stored points. The converter draws a curve through those points on the way out, and between any two of them the curve can rise above both.
+
+The worst case is computable and it is larger than people expect. Take a tone at a quarter of the sample rate whose peaks land exactly halfway between two samples. Both neighboring samples sit at cos 45° = 0.7071, which a peak meter reports as 20 log₁₀(0.7071) = −3.01 dBFS. The reconstructed waveform reaches 1.0, or 0 dBFS. Three decibels of peak that never appeared on the meter, and the converter or the encoder finds them anyway.
+
+So treat the ceiling as cover for a known error rather than as a rounding allowance. Setting it at −1 dBTP puts your loudest instant at 10−1/20 = 0.8913 of full scale, holding back 10.87 per cent of the available amplitude. In loudness terms you are giving up one decibel, about a tenth of the 10 dB step most listeners hear as twice as loud. For a file that will only ever be played exactly as bounced, −0.3 to −0.5 dBTP is defensible. [True peak](https://gazillionindustries.com/true-peak/) has the measurement side of this.
+
 ## How to set one
 
 - Put it last. Anything after it can push the signal back over the ceiling you just set.
@@ -7721,9 +8307,67 @@ Most modern limiters use lookahead: they delay the audio by a few milliseconds s
 
 - Back off one decibel from wherever you stopped. You will not miss it tomorrow.
 
+- Bounce the file and measure the bounce, rather than trusting the plugin's own display.
+
+- Play that bounce on a phone speaker and in a car before you call it finished.
+
 [BEEFY](https://gazillionindustries.com/beefy.html) has LIMIT as one of two output choices, with SOFT CLIP as the other. They are separate switches and either can be off.
 
 **LIMIT** instead, everything else identical.
+
+## Release, in numbers rather than adjectives
+
+Release has a floor, and the floor is one cycle of the lowest note you care about. Below that the gain envelope is moving inside the waveform instead of above it, and the limiter stops controlling level and starts rewriting shape.
+
+- **20 Hz**: one cycle = 50.0 ms
+
+- **30 Hz**: 33.3 ms
+
+- **40 Hz**: 25.0 ms
+
+- **50 Hz**: 20.0 ms
+
+- **60 Hz**: 16.7 ms
+
+- **80 Hz**: 12.5 ms
+
+- **100 Hz**: 10.0 ms
+
+Here is why crossing that floor sounds like distortion rather than like level. Multiplying a signal by a moving gain is amplitude modulation, and amplitude modulation puts new energy at the carrier frequency plus and minus the modulation rate. A detector that follows the rectified waveform of a 50 Hz note ripples at 100 Hz, so the products land at |50 − 100| = 50 Hz and 50 + 100 = 150 Hz. Both are on that note's own harmonic series, which is why a too-fast release reads as growl and grit.
+
+Move the ripple rate off the harmonic series and the same arithmetic gives you a different complaint. A release retriggered by eighth notes at 100 BPM moves at 1 / 0.3 = 3.33 Hz, putting sidebands around that 50 Hz note at 46.67 and 53.33 Hz. Three and a third beats a second, right underneath the bass line. That is the wobble you cannot find in the EQ.
+
+The depth of the dip is worth the same treatment. A 1 dB reduction is an amplitude factor of 0.8913, so it shaves 10.87 per cent off every cycle it touches. At 3 dB the factor is 0.7079 and you are removing 29.21 per cent. Those are large numbers to apply and remove twenty to a hundred times a second, and the bottom octave is where you hear it first: a low E at 41.2 Hz has a 24.3 ms cycle, A at 55 Hz has 18.2 ms, C at 65.4 Hz has 15.3 ms.
+
+Attack, on a limiter with lookahead, is a shape control rather than a catch control. The ceiling is already guaranteed by the delay line, so a slower attack lets a few samples of the transient through the softer part of the curve before the reduction settles. Use it to choose how much crack survives, not to decide whether the peak is caught.
+
+## What the gain reduction meter is telling you
+
+The meter shows one number and the important quantity needs two. Depth is how far it drops. Duty is what fraction of the time it is down at all, and no plugin puts a figure on that — you read it by watching the needle rest rather than flick.
+
+Take the simplest honest approximation: the limiter holds back GR decibels for a fraction d of the program and does nothing for the rest. Average power comes out as (1 − d) + d × 10−GR/10, and the loudness you lose is −10 log₁₀ of that. Run it at a fixed six decibels of depth and vary only the duty.
+
+- **2% of the time**: 0.07 dB lost — you keep 5.93 of the 6 you pushed in
+
+- **5%**: 0.17 dB — keep 5.83
+
+- **10%**: 0.34 dB — keep 5.66
+
+- **20%**: 0.70 dB — keep 5.30
+
+- **40%**: 1.55 dB — keep 4.45
+
+- **60%**: 2.59 dB — keep 3.41
+
+- **80%**: 3.97 dB — keep 2.03
+
+- **100%**: 6.00 dB — keep nothing; the limiter is a volume knob
+
+Read the two ends of that table against each other. Six decibels of reduction on two per cent of the record costs you seven hundredths of a decibel and buys almost the whole push. The same six decibels held down for four fifths of the record returns two. Identical meter readings, completely different masters, and the only thing separating them is how often the needle comes home.
+
+This is the arithmetic behind the advice everybody repeats without the reason attached. The instruction points at the rest of the record rather than at the number on the meter, because the rest is where the loudness comes from and the rest is what disappears first.
+
+**BEEF at 8.** The reference you A/B against.
 
 ## Do the work before the limiter
 
@@ -7731,11 +8375,77 @@ This is the whole article in one idea. A limiter asked to deliver eight decibels
 
 The tools for that are clipping and saturation, both of which lower peaks without touching the rest of the track. [Clipper before limiter](https://gazillionindustries.com/clipper-before-limiter/) covers the order and the amounts, and [crest factor](https://gazillionindustries.com/crest-factor/) explains why it works.
 
+## A worked master, with the numbers
+
+Abstract advice about headroom stops being abstract the moment you write the decibels down. Here is one master, twice, with the only difference being where the peak work happened.
+
+The mix bounces at −0.5 dBFS peak and −16 LUFS integrated, so its peak-to-loudness ratio is −0.5 − (−16) = 15.5 dB. You want −10 LUFS under a −1 dBTP ceiling. Straight into the limiter, that means driving it about 6 dB, which puts the incoming peak at −0.5 + 6 = +5.5 dBTP. To hold that under −1 the limiter has to remove 6.5 dB at the loudest instant. At an 8 per cent duty the average gives back 0.28 dB, landing you at −10.28 LUFS. You got the loudness.
+
+You also asked for six and a half decibels where the short version at the top of this page says one to three. Everything the limiter is blamed for lives in that gap.
+
+Now move four of those decibels upstream. Clip or saturate until the peak sits 4 dB closer to the average, taking the peak-to-loudness ratio from 15.5 to 11.5 dB. Push the same 6 dB in and the incoming peak is now +1.5 dBTP, so the limiter removes 2.5 dB instead of 6.5. Same target, same ceiling, same loudness, and the limiter is back inside the range where it is inaudible. [How to make a mix louder without clipping](https://gazillionindustries.com/how-to-make-mix-louder-without-clipping/) and [how loud should my master be](https://gazillionindustries.com/how-loud-should-my-master-be/) take the target itself apart.
+
+## Where the limiter sits in the chain
+
+Last, and then dither, and then nothing. The order that works on a master bus is: everything musical, then the peak work, then the ceiling, then the word-length reduction if you are bouncing to 16-bit.
+
+- **Mix moves and bus EQ** — anything that changes tone changes the peak, so it has to be settled before the peak tools are set.
+
+- **Clipper or saturation** — shears the crest factor, which is the work that keeps the limiter honest. [Soft clipping explained](https://gazillionindustries.com/soft-clipping-explained/) has the shapes.
+
+- **Limiter** — the ceiling, and only the ceiling.
+
+- **Dither** — last of all, and only when reducing bit depth. See [dithering](https://gazillionindustries.com/dithering/).
+
+Two things break this constantly. The first is a gain utility left after the limiter at +0.5 dB from an experiment three days ago. The second is the channel fader itself: on every DAW the master fader sits after the plugin chain, so a master fader nudged to +1.0 dB puts a −1 dBTP master back at 0 dBTP with the limiter none the wiser. Check both before every bounce. [Gain staging](https://gazillionindustries.com/gain-staging/) covers the rest of the path.
+
+## Doing it in Ableton, Logic and FL Studio
+
+The method does not change and only the device names do. In Ableton Live, the Limiter goes at the end of the Master chain, and the thing to watch is that nothing sits after it: Utility is the usual offender. Choose dither in the export dialog rather than adding a dither device as well, because doing both means dithering twice.
+
+In Logic Pro, both Limiter and Adaptive Limiter live on the Stereo Out, and the Stereo Out fader is downstream of them. Leave it at 0.0 and do your level changes with the plugin. In FL Studio, Fruity Limiter and Maximus both do the job on the master mixer track; Fruity Limiter also has a compressor mode on a separate tab, so check which one you are looking at before you decide the controls are behaving strangely.
+
+Wherever you are, the useful habit is identical: bounce the file, drag the bounce back into a fresh project, and meter that. A limiter reporting its own output is reporting on a signal that has not yet been through the export path.
+
+## How to check your own limiter in ten minutes
+
+You can settle every argument in this article inside your own session, with your own material, in one sitting. Do it once and you will stop guessing.
+
+- Bounce eight bars with the limiter bypassed.
+
+- Bounce the same eight bars with it in, at the settings you were about to ship.
+
+- Import both, and pull the limited one down until the two read the same integrated loudness within 0.1 LU.
+
+- A/B them at that match. Louder sounds better to everyone, so a preference that survives matched loudness is a real one — see [Fletcher-Munson](https://gazillionindustries.com/fletcher-munson/).
+
+- Invert one against the other and listen to what is left. Isolated transient edges are healthy. Hearing the bass line in the difference means the release is inside the cycle.
+
+- Send a 40 Hz sine through on its own and watch the reduction meter. Ripple in time with the tone means the release is under that note's 25 ms cycle.
+
+- Play the bounce on a phone speaker, where the bottom two octaves are missing and the flattening is at its most obvious. [Bass on phone speakers](https://gazillionindustries.com/how-to-make-bass-audible-on-phone-speakers/) covers what survives that trip.
+
+## What goes wrong, and what each one sounds like
+
+Limiter damage is not one sound, and naming which one you have is most of the fix. Each has a different cause and a different place in the track where it shows itself first.
+
+- **Pumping.** The whole track dips after each kick and swells back up. Cause: release too slow, or too much depth, or both. Where to hear it: the two quiet bars before a drop, never in the busy section.
+
+- **Bass growl.** Sustained low notes acquire a buzz that was not there. Cause: release shorter than one cycle, per the table above. Where to hear it: a held 808 or a long sub note, solo the low band if you have one.
+
+- **Flattening.** The record loses front and back; everything sits at the same distance. Cause: sustained high duty. Where to hear it: the reverb tails, which stop receding and start sitting level with the dry signal.
+
+- **Sibilance ducking.** A hard consonant pulls the entire mix down for a syllable. Cause: one narrow band peaking far above everything else. Fix it with a de-esser or a clip on that channel, upstream.
+
+- **Image wander.** A hard-panned hit moves the whole stereo picture. Cause: an unlinked detector reducing one side only. Link the channels, and check the result in [mono](https://gazillionindustries.com/mono-compatibility/).
+
 ## Where it costs you
 
 Transients go first: the snare loses its crack, then the kick goes blunt. Then the sense of depth, because everything gets pushed toward the same level. Then, at the extreme, audible distortion on sustained low notes, where the limiter's release is moving fast enough to modulate the waveform itself.
 
 There is also a strategic cost. Streaming services normalize playback, so past a certain point you are giving up dynamics for loudness that the listener's player is going to take straight back off. [How loud should my master be](https://gazillionindustries.com/how-loud-should-my-master-be/) has the numbers.
+
+In money it costs nothing, which is worth saying plainly. Every DAW ships a limiter, the stock ones hit a ceiling accurately, and no purchase will make six decibels of reduction sound like two. If you want to spend something, spend it on the stage before the limiter, because that is the stage doing the work that changes the result.
 
 ## Questions people ask
 
@@ -7755,9 +8465,55 @@ Take it off the mix bus before you bounce for mastering. Leave headroom instead.
 
 As a safety catch after compression, taking a decibel or two off the few loudest words, not as the main dynamics control. Compression shapes the performance; the limiter just stops the occasional spike from running away.
 
+### What ceiling should I set my limiter to?
+
+−1 dBTP for anything that will be encoded or streamed, which puts your loudest instant at 0.8913 of full scale. Only go tighter, to −0.3 or −0.5 dBTP, for a file that will be played back exactly as bounced.
+
+### What attack and release should a limiter use?
+
+Set release no shorter than one cycle of the lowest note in the track: 25 ms at 40 Hz, 20 ms at 50 Hz, 12.5 ms at 80 Hz. On a lookahead limiter the attack chooses how much transient survives rather than whether the peak is caught, so set it by listening to the snare.
+
+### How do I stop my limiter from pumping?
+
+Lengthen the release until the track stops swelling back up between hits, then reduce how much you are asking for. Pumping is depth plus duty, so cutting the amount of reduction fixes it even when the release is already right.
+
+### Is 6 dB of gain reduction too much?
+
+It depends entirely on how often, and that is the part nobody measures. Six decibels on two per cent of the program costs 0.07 dB of average level and is inaudible. Six decibels held for eighty per cent of it costs 3.97 dB and sounds exactly as squashed as that number suggests.
+
+### Should the limiter go before or after EQ?
+
+After. EQ changes peak levels, so any EQ move after the limiter puts the signal back over the ceiling you set. The limiter is the last processor in the chain, with only dither allowed after it.
+
+### Can I use a clipper instead of a limiter?
+
+For the loudness, largely yes; for the guarantee, no. A clipper lowers peaks by bending the waveform and adds harmonics instead of moving gain over time, which is why it is the more efficient loudness tool. Most people end up using both, with the clipper doing the decibels and the limiter catching what slips past. [What is clipping](https://gazillionindustries.com/what-is-clipping/) has the shapes.
+
+### What is the difference between a limiter and a maximizer?
+
+A maximizer is a limiter with the input gain and the ceiling linked, so one knob pushes the signal up and holds the ceiling down at the same time. The processing is the same; the control layout hides one of the two decisions from you.
+
+### Does a limiter add latency?
+
+Any limiter with lookahead does, because the delay line is the lookahead. A 1.5 ms window is 66 samples at 44.1 kHz and 72 at 48 kHz. Your DAW compensates on playback, but you will feel it while monitoring a live input through the same chain, so bypass it while tracking.
+
+### Why does my track still distort with a limiter on it?
+
+Two usual causes. Either something sits after the limiter — a gain utility or a master fader above 0 — or the limiter is set to sample peak and the intersample peaks are going over anyway, which can be up to 3.01 dB higher than the meter shows. Turn on true-peak detection and check the chain below the limiter.
+
+### Do I need a limiter on every track?
+
+No. One at the end of the master is the job. A limiter on an individual channel is a safety catch for a source that genuinely spikes, and a limiter on every channel means every channel is quietly removing transients before the mix bus ever hears them.
+
+### Why does my mix get quieter after I upload it?
+
+Playback normalization, not the limiter. The service turns loud masters down to its own target, so the decibels you fought the limiter for get taken straight back off while the dynamics you traded away stay gone. [How loud should my master be](https://gazillionindustries.com/how-loud-should-my-master-be/) has the argument in full.
+
 ## What BEEFY does
 
 BEEFY is our saturation and loudness effect. **SOFT CLIP** opens switched on and brings rounded, fuzzy edges to the loudest parts, which is the upstream work that stops a limiter from having to do everything. **LIMIT** is the other choice when you want output peaks held in check instead, and both can be turned off so you can push it yourself. **BEEF** brings weight and density, **COOK** the color and bite, and **JUICE** the level going in. Input and output clip lights watch both ends.
+
+In the worked example above, the four decibels moved upstream are exactly the job SOFT CLIP is there for: round the peaks first, then let the ceiling catch the two and a half that are left. BEEFY is $19, Mac and Windows, AU and VST3 with a standalone on Mac, and the product page has a demo so you can hear the difference between rounding a peak and holding a ceiling over it before you decide. [How to master a beat](https://gazillionindustries.com/how-to-master-a-beat/) puts both stages in order.
 
 Last in the chain, and the least it has to do, the better it sounds.
 
@@ -10745,7 +11501,11 @@ True peak is the highest level the waveform actually reaches once it is converte
 
 - **Ceiling**: −1 dBTP for anything that will be encoded
 
+- **Louder than −14 LUFS**: −2 dBTP, which is what Spotify's own artist pages ask for
+
 - **Worst offenders**: heavily limited material and bright transients
+
+- **Worst case, a tone**: 3.01 dB hidden, at a quarter of the sample rate
 
 **LIMIT** instead, everything else identical.
 
@@ -10757,11 +11517,35 @@ A true-peak meter estimates that by oversampling: it calculates extra points bet
 
 Encoding makes it worse. Lossy formats do not reproduce the waveform exactly, and the decoded result can peak higher than the file you uploaded. That is the mechanism behind the specific complaint that a master sounded fine locally and crunchy on a streaming service.
 
+## The arithmetic, and how much is hiding
+
+You can calculate the worst case exactly, and it is worth doing once because the answer explains every rule of thumb you have been handed. Take a tone at frequency f, sampled at rate fs, positioned so the crest of the wave falls exactly halfway between two samples. Those two samples sit a phase angle of πf / fs either side of the crest, so each reads A cos(πf / fs) where A is the real peak. The overshoot your meter misses is therefore −20 log₁₀ cos(πf / fs).
+
+Run it at 44.1 kHz. At 1 kHz the angle is 4.08°, the cosine is 0.99746, and the hidden overshoot is 0.02 dB — nothing. At 5 kHz it is 0.56 dB. At 8 kHz, 1.49 dB. At 11,025 Hz, exactly a quarter of the sample rate, the samples land at ±0.7071 of the peak and the overshoot is 20 log₁₀√2 = 3.01 dB. At 15 kHz it is 6.35 dB.
+
+- **1 kHz**: 0.02 dB hidden at 44.1 kHz — 0.005 dB at 96 kHz
+
+- **5 kHz**: 0.56 dB — 0.12 dB at 96 kHz
+
+- **8 kHz**: 1.49 dB — 0.30 dB at 96 kHz
+
+- **11,025 Hz**: 3.01 dB — 0.58 dB at 96 kHz
+
+- **15 kHz**: 6.35 dB — 1.09 dB at 96 kHz
+
+- **16 kHz**: 7.58 dB — 1.25 dB at 96 kHz
+
+Two things fall out of that column. The first is that intersample peaks are a top-end problem and only a top-end problem: below about 2 kHz there is less than a tenth of a decibel in it, which is why a bass-heavy, dark master rarely surprises anybody. The second is that the number has no ceiling you can quote. There is no fixed amount of headroom that covers intersample peaks in the abstract. What makes −1 dBTP work is that music has very little energy sitting at 15 kHz with a flat top on it.
+
+The same arithmetic grades the meter doing the measuring. A meter oversampling four times is looking at points 1 / 4fs apart, so its own worst-case miss is −20 log₁₀ cos(πf / 4fs): 0.36 dB for content at 16 kHz, 0.56 dB at 20 kHz, 0.69 dB right at the Nyquist limit. Eight times oversampling takes those to 0.09, 0.14 and 0.17 dB. The four-times minimum is a floor, not a promise, and the gap between a four-times meter and the truth is most of the reason the recommended ceiling is a whole decibel rather than three tenths of one. [Oversampling in audio plugins](https://gazillionindustries.com/oversampling/) covers the same mechanism where it does the other job.
+
 ## What to do about it
 
 - Use a limiter with true-peak detection and turn it on.
 
 - Set the ceiling to −1 dBTP for anything that will be encoded or streamed.
+
+- Set it to −2 dBTP if the master is louder than −14 LUFS integrated, which most rap and beat masters are.
 
 - For a file that will only ever be played as-is, −0.3 to −0.5 dBTP is defensible.
 
@@ -10769,9 +11553,49 @@ Encoding makes it worse. Lossy formats do not reproduce the waveform exactly, an
 
 - If you are over, do not simply pull the output down: find the transient causing it and deal with it upstream, with a clipper or with saturation.
 
+- Turn off any normalize option in your export dialog before you bounce, or it will rescale the file after the limiter has finished and hand you a different peak than the one you approved.
+
 [BEEFY](https://gazillionindustries.com/beefy.html) is our saturation and loudness effect, and its SOFT CLIP is the upstream answer: round the peaks before the limiter ever sees them.
 
 **BEEF at 96.** Past where most settings want to live.
+
+## What clipping does to the number, measured
+
+Here is the part nobody tells you, and it is easy to demonstrate. A clipper working on the samples does not remove intersample peaks. It can make them considerably worse.
+
+For this page I built a two-bar loop at 90 BPM: a 55 Hz kick with a 90 ms decay constant and a 3 ms click, a snare of noise plus a 190 Hz body, eighth-note hats made of noise between 4 kHz and 18 kHz. The whole thing was band-limited at 18 kHz and normalized so the loudest sample sat exactly at 0 dBFS. True peak was measured by zero-padding the spectrum out to thirty-two times the rate, which is accurate to well under a hundredth of a decibel. Undisturbed, that loop reads **+0.26 dBTP** with a sample peak of 0.00 dBFS. A quarter of a decibel over, and nothing has been done to it yet.
+
+Then hard clip it at 44.1 kHz and renormalize each result so the sample peak is again exactly 0 dBFS.
+
+- **No clipping**: +0.26 dBTP
+
+- **+1 dB into the clipper**: +0.84 dBTP
+
+- **+2 dB**: +1.88 dBTP
+
+- **+3 dB**: +2.64 dBTP
+
+- **+6 dB**: +4.08 dBTP
+
+Read that again with the sample peaks in mind: every one of those files reads 0.0 dBFS on an ordinary peak meter, and their real peaks are four decibels apart. The clipper shears every sample above the line, and the reconstruction between those flattened samples bulges right back up, because flattening the tops is exactly the operation that puts energy up where the overshoot lives.
+
+The same loop with the hats rolled off above 12 kHz reached only **+1.40 dBTP** at that same +6 dB of clipping, against +4.08 for the bright one. Top end is where this lives, so a bright master and a dark master clipped by the same amount are not the same risk.
+
+And the arithmetic of trying to fix it with the output fader alone is brutal, because pulling the fader down moves true peak and sample peak together. To get the +3 dB version under −1 dBTP you would have to sit at −3.64 dBFS sample peak; the +6 dB version needs −5.08 dBFS. That is the case for a limiter that detects true peak and reduces gain only at the offending moments, instead of taxing the whole record for four bad milliseconds. [Clipper before limiter](https://gazillionindustries.com/clipper-before-limiter/) and [how to use a limiter](https://gazillionindustries.com/how-to-use-a-limiter/) cover the two halves of that chain.
+
+## Clip at a higher rate and most of it goes away
+
+Take the identical loop and apply the identical +3 dB of hard clipping, but do the clipping at a higher internal rate, band-limit the result and bring it back to 44.1 kHz. Normalized so every version has the same 0 dBFS sample peak:
+
+- **Clipped at 44.1 kHz**: +2.64 dBTP
+
+- **Clipped at 88.2 kHz**: +0.51 dBTP
+
+- **Clipped at 176.4 kHz**: +0.42 dBTP
+
+- **Clipped at 352.8 kHz**: +0.44 dBTP
+
+Two point two decibels of hidden peak removed by nothing but doing the arithmetic at a finer spacing, and the curve flattens after the first doubling. That is the whole argument for an oversampled clipping stage, stated in one number, and it is also the answer to the producer who swears their master is fine because the meter reads zero. Working at 96 kHz for the whole session gets you the same benefit for free: the column in the table above shows the same content hiding 0.58 dB at 96 kHz where it hid 3.01 dB at 44.1.
 
 ## Where the decibel goes
 
@@ -10779,9 +11603,61 @@ People resist the −1 dBTP ceiling because it looks like giving away a decibel 
 
 If you want the loudness conversation rather than the ceiling conversation, that is [how loud should my master be](https://gazillionindustries.com/how-loud-should-my-master-be/) and [clipper before limiter](https://gazillionindustries.com/clipper-before-limiter/).
 
+## What the services do with the number
+
+This part is published, so you can stop guessing. Spotify's artist support pages state that playback is adjusted to −14 dB LUFS according to the ITU 1770 standard, applied at playback rather than baked into your file. Louder masters get negative gain, which their page is explicit costs you no extra distortion. Quieter masters get positive gain, and here is where true peak reaches into your pocket: the page says they consider the headroom of the track and leave 1 dB of headroom for lossy encodings, and gives the example of a track at −20 LUFS with a true-peak maximum of −5 dBFS being lifted only as far as −16 LUFS rather than the full −14.
+
+Their mastering guidance on the same page asks for −14 dB integrated LUFS, true peak kept below −1 dBTP, and — the line people miss — true peak below −2 dB if the master is louder than −14 LUFS, because louder tracks are more susceptible to extra distortion when encoded. Almost every rap and beat master is louder than −14 LUFS. If yours is, the number on this page is two, not one.
+
+The page also documents the Loud listening setting at −11 LUFS, with a limiter engaged at −1 dB on sample values, 5 ms attack and 100 ms decay, applied regardless of your true peak. Somebody else's limiter, on your record, in a listening mode you do not control. Leaving room is cheaper than arguing with it.
+
+## Check it in your own session
+
+You do not need to take any of this on faith, and you do not need a specific plugin to test it. Sample-rate conversion is a true-peak meter you already own.
+
+- Bounce the master at its native rate as a 24-bit WAV, with every normalize option off.
+
+- Note the sample peak of that file.
+
+- Open a copy in an editor and convert the sample rate to eight times the original: 352.8 kHz from 44.1, 384 kHz from 48.
+
+- Read the sample peak of the converted file. That is the true peak, accurate to within 0.09 dB for content up to 16 kHz.
+
+- Subtract step 2 from step 4. The difference is your overshoot.
+
+- Run the same file past your own meter. If it reports the step 4 number, it is measuring true peak. If it reports the step 2 number, it is not, and every ceiling you have ever set with it was a sample-peak ceiling.
+
+Four times conversion works too and is quicker, but it under-reads by up to 0.36 dB for content at 16 kHz and 0.56 dB at 20 kHz, which is enough to matter on the exact material you would be testing. Do the eight.
+
+## Where it sits in the chain
+
+True-peak limiting is the last processing decision on the master, and the order of the handful of things around it is not arbitrary.
+
+Sample-rate conversion goes before the limiter, never after. Converting a file changes the samples, so a file that was pinned at −1 dBTP at 48 kHz is at some other number once it has been converted to 44.1. If you owe a 44.1 kHz delivery, convert and then limit, and check the converted file.
+
+Dither goes after the limiter and cannot hurt you. A 16-bit least significant bit is 1 / 32768, which is −90.31 dBFS. Add triangular dither at two of those peak to peak on top of a peak sitting at −1 dBFS and the peak moves by 0.0003 dB. It is not a rounding error, it is four orders of magnitude below one. [Dithering explained](https://gazillionindustries.com/dithering/) has the rest of that decision.
+
+Anything that changes the waveform goes before the true-peak stage: EQ, mid/side width, a final tilt, a fade. Put a half-decibel shelf after the limiter and you have invalidated the measurement, quietly, in a way no meter in the session will flag because most master meters are reading the bus, not the file.
+
+And the cheapest decibel of all is the one you never had to catch. Lowering [crest factor](https://gazillionindustries.com/crest-factor/) with saturation upstream, or moving a kick and an 808 off the same sixteenth, gets you loudness without asking the last stage to perform a rescue. [Headroom in mixing](https://gazillionindustries.com/headroom-in-mixing/) and [how to master a beat](https://gazillionindustries.com/how-to-master-a-beat/) cover the rest of the order.
+
+## What each failure sounds like
+
+Four different problems get described with the same word, and they are distinguishable by ear if you know what you are listening for.
+
+**Converter clipping** is a short dry crackle, present only on the loudest hits, and its signature is that it moves. The same file from the same folder crackles on one device and plays clean on another, because the two converters have different amounts of internal headroom. If a client hears it and you cannot, that is this.
+
+**Encoder overshoot** is the same crackle that only exists after the upload. Local file clean, streamed version crunchy on hats and snare tops. The tell is that it appears on the brightest, shortest events and never on the bass.
+
+**Over-tight true-peak limiting** sounds like dullness rather than distortion. The limiter is catching peaks that are not in the samples, so it pulls down earlier and slightly harder than the visible waveform suggests it should, and the first thing you lose is hat and cymbal edge. If switching the true-peak option on made the master duller rather than quieter, you were leaning on the limiter for gain you should have taken upstream.
+
+**A ceiling set too low** sounds like nothing at all. That is the point. One decibel of peak on a normalized platform is a decibel the platform was going to take back anyway.
+
 ## Where it costs you
 
 True-peak limiting is more computationally expensive and, at aggressive settings, can sound different from sample-peak limiting: the limiter is catching peaks that are not in the samples, so it pulls down slightly more and slightly earlier. On heavily limited material that is audible. The fix is the same as always, which is to do less of the work in the limiter.
+
+There is a second cost worth naming. Doing this properly means bouncing, converting, measuring and sometimes going back, which is minutes per master rather than seconds, and it is the least interesting work in the building. The trade is that the failure it prevents is the one you cannot hear on your own system and will only learn about from somebody else, weeks later, about a record you have already stopped thinking about.
 
 ## Questions people ask
 
@@ -10801,9 +11677,55 @@ Sample peak is the largest value stored in the file. True peak is the largest va
 
 LUFS measures perceived loudness over time, which is what streaming normalization responds to. True peak measures the single highest instantaneous level, which is what causes clipping. You need to satisfy both, and they are unrelated numbers.
 
+### What does dBTP stand for?
+
+Decibels true peak. Same scale as dBFS, with 0 meaning full scale, but measured on the reconstructed waveform instead of on the stored samples.
+
+### Is −1 dBTP too quiet?
+
+No. Playback normalization sets a single gain offset from your integrated LUFS, and your peak ceiling has no part in that calculation unless it is so low that a quiet master cannot be lifted all the way. On a loud master, the decibel is invisible.
+
+### Should I use −1 dBTP or −0.1 dBTP?
+
+−0.1 dBTP survives nothing. A four-times meter can under-read by up to 0.56 dB on content at 20 kHz, and encoders add their own overshoot on top of that, so a tenth of a decibel is inside the measurement error before the file has left your machine. Use −1 dBTP, or −2 if the master is louder than −14 LUFS.
+
+### Can true peak ever be lower than sample peak?
+
+No. A true-peak meter reports the highest value it finds among the real samples and the interpolated ones, so its answer is the sample peak or something above it. If a meter shows you a lower number, it is measuring something else, such as short-term loudness.
+
+### Why does my master distort after uploading?
+
+Three candidates, in order of likelihood: the file was over 0 dBTP before it left, so the encoder had nothing to work with; the file was near 0 dBTP and the encoder's own overshoot took it over; or the playback setting on the listener's end applied gain. The first two are fixed by the ceiling. Bounce, convert to eight times the rate, and read the peak before you argue with anybody.
+
+### Does a higher sample rate fix intersample peaks?
+
+It shrinks them a lot. The same tone at 11,025 Hz hides 3.01 dB at 44.1 kHz and 0.58 dB at 96 kHz. But the delivery file is usually 44.1 or 48, and the conversion down brings the problem back, so a high session rate helps the processing rather than the delivery.
+
+### Do I need true-peak limiting on individual tracks?
+
+No. Intersample peaks only cause a problem at the point of conversion or encoding, and inside a session everything is running in floating point, where going over full scale costs nothing until something writes a file. Watch it on the master and on any stem you are handing to somebody else.
+
+### My limiter says −1 dBTP and my meter says something else. Which is right?
+
+Probably neither, and the difference is oversampling factor. A four-times estimate and a sixteen-times estimate of the same file legitimately differ by up to about half a decibel on bright material. Settle it offline: convert the bounced file to eight times its rate and read the sample peak, which is the answer both plugins are approximating.
+
+### Does clipping help or hurt true peak?
+
+Measured on the loop above, hard clipping at the file's own rate hurt it: +3 dB of clipping took a loop from +0.26 dBTP to +2.64 dBTP at the same sample peak. The same clipping done at 176.4 kHz landed at +0.42 dBTP. Clipping is still the most efficient way to lower crest factor; it just needs to happen at a finer time resolution than the file's own.
+
+### Does true peak matter for WAV files sent to a beat store or an engineer?
+
+For an engineer, leave real headroom and do not limit at all. For a store that will stream previews, the preview is encoded, so it matters exactly as much as anywhere else. For a file somebody will only ever play from disk, −0.3 dBTP is fine.
+
+### Does dither push me over the ceiling?
+
+No, by four orders of magnitude. Triangular dither at two 16-bit least significant bits peak to peak moves a −1 dBFS peak by 0.0003 dB.
+
 ## What BEEFY does
 
 BEEFY is a saturation and loudness effect for making sounds thicker, punchier and more up front. It adds body, squeezes some space out of the peaks, and brings out harmonics that help a sound feel bigger. **SOFT CLIP** opens switched on and brings rounded, fuzzy edges to the loudest parts, which lowers peaks before a limiter has to. **LIMIT** is the other choice, a straight-ahead way to keep the output peaks in check, and the two are separate decisions. Input and output clip lights show you both ends.
+
+For the job on this page it sits upstream, on the drum bus or the element that is causing the overshoot, not on the master after the limiter. **JUICE** sets the level going in, **BEEF** is the weight and density, and **COOK** moves the color from rounder toward brighter and more cooked — worth watching on this particular page, since brighter is the direction that costs you true peak. It is $19, one payment, Mac and Windows, with AU, VST3 and a Mac standalone. Whatever you use for the last stage, the decibel it does not have to catch is the cheapest one on the record.
 
 The meter was not lying. It was answering a different question from the one the converter asks.
 
@@ -11149,6 +12071,40 @@ Take a recording of a piano note, cut off the first thirty milliseconds, and mos
 
 That is why a drum that has been heavily compressed can be measurably louder and feel weaker. The body is bigger and the event is gone, so it reads as a sound rather than as something being struck.
 
+## How long a transient is, in samples
+
+Put units on it, because at this timescale the units are the whole argument. One sample at 44.1 kHz lasts 1 / 44100 = 22.68 microseconds. At 48 kHz it is 20.83 µs, at 96 kHz 10.42 µs. So a five-millisecond attack is 220.5 samples at 44.1 kHz, 240 at 48 kHz, 480 at 96 kHz. Not a moment. A few hundred numbers, each of which you could draw by hand.
+
+The edge inside that attack is faster still, and it has a hard ceiling. For a first-order system the 10-to-90 percent rise time multiplied by the −3 dB bandwidth comes to 0.349, so with 20 kHz at the top of the band the steepest edge anything can produce is 0.349 / 20000 = 17.45 µs. That is shorter than one sample at 44.1 kHz. The front of a hit is already as sharp as the bandwidth permits, which is worth knowing before you go shopping for something to sharpen it.
+
+Run the same relation the other way and it explains the tone of an attack rather than its speed. A burst lasting T seconds has its first spectral null at 1 / T, so the shorter the event the wider it spreads. A 0.2 ms tick reaches out to about 5 kHz, a 1 ms one to 1 kHz, a 5 ms one only to 200 Hz. The click of stick on head is the widest-band thing in your record and the thud beneath it is comparatively narrow, which is why a high-pass filter can take the weight out of a kick and leave the beater completely audible.
+
+And the reason none of this shows up on a grid: at 90 BPM a beat lasts 60 / 90 = 666.7 ms, so five milliseconds is 0.75 percent of one beat. You are arguing about less than one percent of the time between two kicks, and it is the one percent the listener uses to name the instrument.
+
+- **44.1 kHz**: one sample = 22.68 µs — 5 ms is 220.5 samples
+
+- **48 kHz**: one sample = 20.83 µs — 5 ms is 240 samples
+
+- **96 kHz**: one sample = 10.42 µs — 5 ms is 480 samples
+
+- **Fastest edge in a 20 kHz band**: 17.45 µs, under one sample at 44.1 kHz
+
+- **0.2 ms burst**: energy out to roughly 5 kHz
+
+- **5 ms burst**: energy out to roughly 200 Hz
+
+- **5 ms at 90 BPM**: 0.75 percent of a single beat
+
+## Why your peak meter and your loudness meter disagree about it
+
+Two meters watch the same hit and tell you two different stories. The gap between them is the reason anybody argues about transients at all. A peak meter reports the tallest sample. A loudness meter averages over a window, and EBU Tech 3341 sets momentary loudness to a sliding window of 0.4 seconds and short-term loudness to 3 seconds.
+
+Do the arithmetic on one hit. Take a body sitting at a steady level and put a 5 ms spike 12 dB above it inside a 400 ms window. Twelve decibels is 15.85× in power, so the mean power across the window is (0.395 × 1 + 0.005 × 15.85) / 0.400 = 1.1856, and 10 log₁₀(1.1856) = 0.74 dB.
+
+Read that twice. The peak meter jumped twelve decibels. The loudness meter moved three quarters of one. That spike took twelve decibels of your ceiling and handed back 0.74 dB of loudness, and every loudness tool ever sold exists to renegotiate the exchange rate.
+
+Now the direction you actually act in. Bring the same spike down from 12 dB above the body to 9 dB and its contribution to the window falls from 0.74 dB to 0.36 dB. You surrendered 0.38 dB of average and freed 3 dB of ceiling, which you take straight back on the output fader. Three decibels louder at the same peak, bought for 0.38 dB of the stick. [Crest factor](https://gazillionindustries.com/crest-factor/) is that subtraction given a name, and [true peak](https://gazillionindustries.com/true-peak/) covers why the tallest sample is not quite the tallest the signal gets.
+
 ## What happens to transients in a mix
 
 - **Compression with a fast attack** catches the transient itself and turns it down. Useful for control, expensive in impact.
@@ -11165,6 +12121,28 @@ That is why a drum that has been heavily compressed can be measurably louder and
 
 **LIMIT** instead, everything else identical.
 
+## What a compressor attack time actually catches
+
+The list above says a fast attack catches the transient and a slow one lets it through. Here is how much, in decibels, so the dial stops being a guess. Gain reduction approaches its target on an exponential: GR(t) = GRfinal × (1 − e−t/τ). One time constant gets you 63.2 percent of the way there, three get you 95.0 percent.
+
+Set the eventual gain reduction to 10 dB and start the clock. With a 10 ms attack, one millisecond in you have 10 × (1 − e−0.1) = 0.95 dB of gain reduction. At 3 ms, 2.59 dB. At 5 ms, 3.93 dB. The stick is through the door before the compressor has taken a whole decibel off it, and everything behind the stick eventually gets the full ten.
+
+Change one number. With a 0.1 ms attack the gain reduction at 1 ms is already 9.9996 dB. The compressor has the entire transient, all ten decibels of it, before the head has finished moving. Same ratio, same threshold, same reading on the gain-reduction meter, and a completely different drum.
+
+- **0.1 ms attack**: 10.00 dB of GR by 1 ms — the attack is gone
+
+- **1 ms attack**: 6.32 dB by 1 ms, 9.50 dB by 3 ms
+
+- **3 ms attack**: 2.83 dB by 1 ms, 6.32 by 3 ms, 8.11 by 5 ms
+
+- **10 ms attack**: 0.95 dB by 1 ms, 3.93 by 5 ms, 6.32 by 10 ms
+
+- **30 ms attack**: 0.33 dB by 1 ms, 1.54 by 5 ms, 2.83 by 10 ms
+
+One warning about the engraving. Attack is not defined the same way everywhere: some makers quote the time to reach 63.2 percent of the target, others the time to reach 90 percent, and 90 percent takes 2.3026 time constants. A dial marked 10 ms under the second definition has a time constant of 10 / 2.3026 = 4.34 ms, and it will take more than twice as much off your first millisecond as a 10 ms dial under the first. Trust the gain-reduction meter on a single hit, never the number printed next to the knob. [How to compress drums](https://gazillionindustries.com/how-to-compress-drums/) has the settings side of this.
+
+**SOFT CLIP as the out stage.** The clipper rounds the peak rather than holding a ceiling over it.
+
 ## How to hear what you are doing to them
 
 - Solo a drum and bypass everything. Listen to the attack alone, not the whole hit.
@@ -11177,9 +12155,79 @@ That is why a drum that has been heavily compressed can be measurably louder and
 
 - If you need both, use two paths: one with the attack intact and one squashed, blended. That is [parallel compression](https://gazillionindustries.com/parallel-compression/).
 
+## Prove it in your own session: the null test
+
+Everything above is checkable in about four minutes, and the check is worth more than the reading. Listening tells you whether you like it. Nulling tells you what changed.
+
+- Print the drum bus twice over the same eight bars: once with the processor bypassed, once with it on.
+
+- Level-match the two prints by their average, on a loudness meter, over the same section. Matching by peak will lie to you here, because the peak is the thing under test.
+
+- Put both prints on tracks, line them up sample-accurately, and invert the polarity of one.
+
+- Play the pair. What remains is exactly what the processor added or removed. Nothing else.
+
+- Turn the residue up and listen to where it sits in time. A click at the front of every hit means the work is happening on the transient. A steady fuzz under the whole loop means the work is happening on the body. Most processors give you some of each, and the balance is the setting.
+
+- Note peak and average for both prints and subtract each pair. The change in that difference is your transient reduction in decibels, with no opinion in it.
+
+- Move one control, print again, repeat. Two controls at once and you learn nothing.
+
+One thing will break this, so rule it out first. Any processor that reports latency has to be compensated, and a single sample of misalignment turns a clean null into a bright high-frequency ghost that looks exactly like transient damage. Test the rig before you test the plugin: null a bypassed instance against a bare copy of the same print. If that does not go silent, your alignment is wrong and nothing you conclude afterward is about the plugin.
+
+## Where transient work sits in a chain
+
+Order decides what each stage sees, so the same three plugins in two orders are two different records. Work outward from the cheapest move.
+
+Before any processing at all, there is the sample, the tuning, the pattern and the length of the tail. Those are free and they add no harmonics. A decaying hit repeating every T seconds with a decay constant τ has a crest factor of 10 log₁₀(4T / τ), so shortening a tail or doubling a pattern moves the same number a clipper moves, at no cost. [Crest factor](https://gazillionindustries.com/crest-factor/) runs those numbers out.
+
+Then shaping, ahead of dynamics, so that the compressor sees the envelope you want rather than the one you inherited. Then EQ, which cuts both ways here. A high-pass ahead of a clipper removes low-frequency energy that was pushing the waveform into the ceiling, so the clipper spends its work on the stick instead of the rumble. A shelf boost placed after a clipper puts peaks back that the clipper just paid to remove, which is the single most common reason a chain stops getting louder no matter what you do to it.
+
+Resonant EQ has its own transient cost, and it is calculable. A bell filter behaves like a resonator with a decay time constant of Q / πf₀. At 3 kHz with a Q of 8 that is 8 / (π × 3000) = 0.85 ms, and roughly 5.9 ms to fall 60 dB — longer than the transient you boosted it to sharpen. Drop the Q to 2 and the ring is down to 1.5 ms. Wide boosts sharpen attacks; narrow ones smear them and then get blamed on the compressor.
+
+Saturation and clipping come late, and the limiter comes last with almost nothing left to catch. [Clipper before limiter](https://gazillionindustries.com/clipper-before-limiter/) covers that handoff, [drum bus chain order](https://gazillionindustries.com/drum-bus-chain-order/) covers the drum end, and [parallel saturation](https://gazillionindustries.com/parallel-saturation/) is the way out of the ordering question entirely: process a copy hard, keep the original attack, blend.
+
+## Failure modes, and what each one sounds like
+
+- **Attack too fast on the bus.** The kick becomes a thud with no beater and the snare reads like a magazine being slapped. Loudness holds or improves, which is why this one survives so many sessions.
+
+- **Fast attack plus a fast release.** The body swells back up in the gaps between hits. Cymbal wash and room breathe in and out on the pattern, and the whole kit sounds like it is being inflated once a beat.
+
+- **Clipper pushed past the stick.** The snap turns into a buzz. Hats gain a fizz that rides on top of everything, because the harmonics a clipper generates land high and do not decay with the hit. [What is clipping](https://gazillionindustries.com/what-is-clipping/) has the mechanism.
+
+- **Transient designer pushed too far.** An audible pop arrives ahead of the note, and on anything with room in it the tail gets yanked up with the attack. Close mics tolerate this; a stereo room recording does not.
+
+- **The limiter doing the mix's job.** Loud sections shrink and quiet ones do not, so the record loses size exactly where it was supposed to grow. On a phone it reads as flat rather than as loud.
+
+- **Aligned peaks.** Kick, bass and a stab on the same sixteenth sum in voltage, so the peak jumps while the average barely moves. This is an arrangement failure wearing a processing costume. [How to mix kick and 808](https://gazillionindustries.com/how-to-mix-kick-and-808/) covers the worst offender.
+
+- **Nothing touched at all.** Every element keeps its full attack, the meters jump, the parts sit apart from each other, and the track never gets near a competitive level. Full preservation is a failure mode too.
+
+## Finding transients in your DAW
+
+Every major DAW detects transients, they all expose a sensitivity control, and none of them agrees with the others about how many your loop contains. That disagreement is the most useful thing in this section: a transient is a perceptual boundary, not a line already drawn in the file.
+
+- **Ableton Live** places warp markers on detected attacks. In Beats warp mode the Transient Loop Mode and Transient Envelope settings govern what happens after each detected attack, and pulling the envelope short is the fastest way to hear the attacks of a loop separated from their bodies.
+
+- **Logic Pro** writes transient markers when you enable Flex Time on a track, with a detection sensitivity you raise and lower in the Flex view. The Slicing algorithm cuts at exactly those markers, so the marker count is the honest answer to how many events Logic thinks are there.
+
+- **FL Studio** slices at detected attacks and hands you the pieces on separate pads, which turns the question into an audible one: play the slices and hear where it split a flam into two hits or merged two into one.
+
+- **Pro Tools** analyzes for event markers under Elastic Audio, and it has a navigation mode that jumps the cursor from one detected transient to the next. Tabbing through a bar counts the events for you.
+
+- **Reaper** exposes transient sensitivity and a threshold directly in its dynamic split dialog, with a live preview of where the cuts would fall. It is the quickest of the five for watching the detector change its mind as you move one slider.
+
+Take one loop through two of them at the default sensitivity and compare the counts. A ghost note on a snare will register in one and not the other, and once you have seen that you will stop treating "the transient" as a thing with edges and start treating it as a region a few milliseconds wide that you are choosing to act on.
+
+**BEEF at 8.** The reference you A/B against.
+
 ## Where it costs you
 
 Preserving every transient is not a virtue either. A mix where every element keeps its full attack has no glue: the parts sit apart from each other, the meters jump around, and the record never reaches a competitive level because the peaks are eating all the ceiling. Some of the transient has to go. The craft is deciding which ones, and on which elements, rather than letting a limiter make that decision for you at the very end.
+
+Price the trade before you make it. Start with a drum bus whose crest factor is 15 dB. Shave 3 dB off the peaks alone and make it up on the fader: same ceiling, 3 dB more average, crest factor now 12 dB. That is what you bought. What you paid was three decibels of every attack on the bus, and the earlier window arithmetic says those three decibels were only worth 0.38 dB of loudness on their own — the gain came from being allowed to raise everything else, not from the spike itself.
+
+Which is the argument for taking it in pieces. Six decibels removed in one place is a different record from six decibels removed two at a time across the drum bus, a saturator and a clipper ahead of the limiter, because each stage reshapes the hit in a way the next one no longer has to. Re-measure between stages. If the crest factor stops falling while the gain-reduction meter keeps moving, you are past the transients and into the body, and the body is where flatness comes from. [How to make a mix louder without clipping](https://gazillionindustries.com/how-to-make-mix-louder-without-clipping/) works the same ground from the loudness side.
 
 ## Questions people ask
 
@@ -11199,9 +12247,69 @@ No. A compressor reacts to level: it acts when the signal crosses a threshold. A
 
 For most percussive sounds, a few milliseconds up to perhaps twenty. Which is why compressor attack times in that range are the ones that change the character of a drum.
 
+### How many samples is a transient?
+
+Five milliseconds is 220.5 samples at 44.1 kHz, 240 at 48 kHz and 480 at 96 kHz, because one sample lasts 22.68, 20.83 and 10.42 microseconds respectively. Zoom in that far and you can see the whole event.
+
+### What is a transient in music production?
+
+The attack portion of any sound: the stick, the pick, the hammer, the consonant at the front of a word. Producers use the word for the part of a hit a processor gets to first, which in practice means the first two to twenty milliseconds.
+
+### What compressor attack time preserves transients?
+
+Long enough that very little gain reduction has built up while the attack is passing. For 10 dB of eventual gain reduction, a 10 ms attack has applied 0.95 dB at the one-millisecond mark and 3.93 dB at five. A 0.1 ms attack has applied 9.9996 dB by one millisecond. Start at 10 to 30 ms on drums and come down until the hit stops poking out.
+
+### Does saturation kill transients?
+
+It rounds them rather than removing them, and it raises the level of everything underneath with added harmonics. That double action is why a decibel of peak taken with saturation usually sounds less obvious than a decibel taken with a clipper. [Saturation explained](https://gazillionindustries.com/saturation-explained/) has the harmonic detail.
+
+### Does clipping destroy transients?
+
+Clipping only touches samples above the ceiling, which on a drum loop means the attacks and nothing else. In small amounts that is the most efficient loudness available, because the averaging window barely notices the loss. Pushed further it is the fastest way to turn a snap into a buzz. [What is clipping](https://gazillionindustries.com/what-is-clipping/) covers the shapes.
+
+### Why does my peak meter jump but my loudness meter barely move?
+
+Because they measure over different spans. A 5 ms spike 12 dB above the body raises the peak reading by 12 dB and raises a 400 ms momentary loudness window by 0.74 dB, since the spike occupies 1.25 percent of the window. That gap is the whole reason loudness processing exists.
+
+### Why do my drums sound weak after compression?
+
+Almost always a fast attack catching the stick while the body gets turned up to compensate, so the loop measures louder and lands softer. Level-match, bypass, and listen for the attack rather than the level. [Why do my drums sound weak](https://gazillionindustries.com/why-do-my-drums-sound-weak/) goes through the rest of the causes.
+
+### Can you get a transient back once it is gone?
+
+Partly. A transient designer can lift the front of an envelope that is still there in reduced form, and it will read as sharper. What it cannot do is invent the high-frequency content a clipper converted to harmonics, so a heavily flattened hit comes back as a louder version of itself rather than as the original. Fix it upstream where the copy still has one.
+
+### Should a transient shaper go before or after a compressor?
+
+Before, in most chains, so the compressor sees the envelope you actually want and reacts to it. Putting it after means shaping something the compressor has already reshaped, and the two will fight over the same few milliseconds every hit.
+
+### Does EQ affect transients?
+
+Yes, in both directions. A high-pass ahead of a clipper frees the clipper to work on the attack rather than on low-frequency energy. A resonant boost rings: a bell at 3 kHz with a Q of 8 has a decay time constant of 8 / (π × 3000) = 0.85 ms and takes about 5.9 ms to fall 60 dB, which is longer than the attack it was boosting. Lower Q, shorter ring.
+
+### Do transients matter on phone speakers?
+
+More than anywhere else. A small driver cannot reproduce the low end that carries weight on a big system, so the attack is most of what survives the trip. A loop with its attacks flattened has very little left by the time it reaches a phone. [Making bass audible on phone speakers](https://gazillionindustries.com/how-to-make-bass-audible-on-phone-speakers/) covers the other half of that problem.
+
+### Do transients cause true-peak overs?
+
+They are the usual source. Sample peaks sit on the grid and the reconstructed waveform does not, so a signal whose highest samples are short and steep can exceed the tallest sample between them. A half-sample shift on a tone at a quarter of the sample rate under-reads by −20 log₁₀(cos 45°) = 3.01 dB, and that is the reason ceilings get set below zero. [True peak](https://gazillionindustries.com/true-peak/) has the measurement.
+
+### What is transient detection in a DAW?
+
+An analysis pass that marks where the software believes each attack starts, used for warping, flexing, slicing and dynamic splitting. Every one of them exposes a sensitivity control, and two DAWs at their defaults will disagree about how many events a loop contains, which is a fair reminder that the boundary is a judgement rather than a fact in the file.
+
+### Is a transient the same as an attack?
+
+In practice, yes for recorded sound. The distinction worth keeping is that "attack" also names a control on a synthesizer envelope and a control on a compressor, and those set times rather than describe the signal. When somebody says the transient is gone, they mean the event; when they say the attack is too slow, they usually mean the knob.
+
 ## What BEEFY does
 
 BEEFY is a saturation and loudness effect for making sounds thicker, punchier and more up front. It adds body, squeezes some space out of the peaks, and brings out harmonics that help a sound feel bigger. **SOFT CLIP** opens switched on and rounds the loudest parts, which is the transient-facing control; **BEEF** adds weight and density behind the hit; **COOK** changes the color and bite from rounder toward brighter; and **JUICE** sets how hard you are feeding it in the first place.
+
+Read against this article, the panel is two questions. JUICE and BEEF decide how much signal reaches the bend, which is how far the average comes up. SOFT CLIP and LIMIT are the two ways of handling what is still standing at the top: one rounds the peak, the other holds a ceiling over it, and they are separate switches so you can hear the difference on one hit rather than reason about it. Both off is also an option, and it is the honest starting point for the null test above.
+
+BEEFY is $19, one payment, and runs on Mac and Windows as AU, VST3 and standalone. There is a 28-second demo with three without/with comparisons on the page, which is the fastest way to hear what rounding a peak does to an attack.
 
 Five milliseconds, almost no energy, and the whole difference between a snare and a slap.
 
@@ -14055,6 +15163,12 @@ A limiter is a compressor with a very high ratio and a very fast attack, set to 
 
 - **Amount**: compressor 3–6 dB; limiter 1–3 dB on peaks only
 
+- **Latency**: compressor usually none; limiter often a lookahead delay
+
+- **Set by**: compressor, your ears and your tempo; limiter, a number you decide once
+
+**DOSE 12.** A break with the loudest hits just touching the curve. The line twitches and settles before the next one.
+
 **DOSE 88.** Same source. The line dives on each hit and takes the whole bar to come back — that recovery is the pump.
 
 ## The line between them
@@ -14062,6 +15176,48 @@ A limiter is a compressor with a very high ratio and a very fast attack, set to 
 There is no hard border in the circuit, only in the setting. Traditionally anything above about 10:1 counts as limiting, and a true brickwall limiter behaves as if the ratio were infinite: nothing crosses the ceiling, ever. Below that you are compressing, which means the signal still gets louder as the input gets louder, just less so.
 
 The practical distinction is what each is listening for. A compressor is reacting to the body of a performance, and its timings are musical decisions. A limiter is reacting to a handful of samples, and its timings are technical ones: it exists so the converter or the encoder does not receive something it cannot represent.
+
+## What the ratio number actually does
+
+Ratio is a slope, and the arithmetic fits in your head. A 4:1 setting means four decibels of input above the threshold buy one decibel of output above it. Feed it a peak sitting 6 dB over: 6 ÷ 4 = 1.5 dB out above the threshold, so the meter shows 6 − 1.5 = 4.5 dB of gain reduction. Every ratio is that one division.
+
+Run the same 6 dB peak through the whole range and the returns collapse fast.
+
+- **2:1**: 3.0 dB out over the threshold · 3.0 dB of gain reduction
+
+- **4:1**: 1.5 dB over · 4.5 dB of gain reduction
+
+- **8:1**: 0.75 dB over · 5.25 dB
+
+- **10:1**: 0.6 dB over · 5.4 dB
+
+- **20:1**: 0.3 dB over · 5.7 dB
+
+- **100:1**: 0.06 dB over · 5.94 dB
+
+- **infinite**: 0 dB over · 6.0 dB: the ceiling
+
+Look at the gap between 10:1 and infinity. Six-tenths of a decibel of output separates a 10:1 compressor from an absolute ceiling. That is why the two words exist as separate tools: past about 10:1, changing the number stops changing the sound of the level and starts only changing how absolutely the lid holds. Everything interesting that a high ratio does to a track is done by its attack and release, not by the slope.
+
+The knee softens that corner. A 6 dB soft knee starts bending the curve 3 dB below the threshold and reaches full slope 3 dB above it, so nothing snaps on at a single level. Hard knee is audible on sparse material and useful when you want the compression to be a sound. [Compression explained](https://gazillionindustries.com/what-is-a-compressor/) takes all five controls one at a time.
+
+## Attack and release, in milliseconds
+
+Attack is how long the gain cell takes to arrive at its target, and it is the control that decides whether a drum keeps its front. A compressor set to 30 ms lets the stick through and grabs the body behind it. The same compressor at 1 ms catches the stick, and the kit sounds softer and further away while the meter insists the plug-in is working hard.
+
+A limiter has no equivalent choice, because it is not allowed to miss. Most get there with lookahead: delay the audio by a fixed number of samples so the detector sees a peak before the audio reaches the gain cell. A 1.5 ms lookahead is 1.5 ÷ 1000 × 44100 = 66 samples at 44.1 kHz, or 72 at 48 kHz. That delay is the plug-in's reported latency. Your DAW compensates it on playback and cannot compensate it while you are monitoring a live input.
+
+Release is where both tools meet physics. Gain that moves faster than the waveform underneath it stops being gain control and becomes waveform shaping, which is another word for distortion. One cycle of 50 Hz lasts 1 ÷ 50 = 20 ms; 30 Hz lasts 33.3 ms. Put a 5 ms release on a kick with its weight at 50 Hz and the gain travels up and down four times inside a single cycle. You hear that as a growl or a buzz riding the low end, and [harmonic distortion](https://gazillionindustries.com/harmonic-distortion/) is exactly what it is.
+
+Release is also a tempo question, and the arithmetic is one division: 60000 divided by the tempo gives the quarter note in milliseconds. At 92 bpm that is 652 ms, the eighth is 326 ms and the sixteenth is 163 ms. A release longer than the gap between hits never recovers before the next one arrives, so the gain sags downward through the bar and the whole kit sinks. Short enough to be back up by the next sixteenth, long enough to stay above one cycle of your lowest content: on a break at 92 bpm that lands somewhere between about 60 and 160 ms.
+
+## Crest factor: the number both of them move
+
+Crest factor is peak level minus average level, in decibels, and it is the single number that describes what either box did. A snare bus peaking at −1 dBFS with an RMS of −13 dBFS has a crest factor of −1 − (−13) = 12 dB. Twelve decibels of distance between the loudest instant and the general loudness.
+
+Now compress it. Say the compressor takes 4 dB off the peaks and 1 dB off the average, and you add 4 dB of make-up. Peak returns to −1 dBFS. Average goes from −13 to −13 − 1 + 4 = −10 dBFS. Crest factor is now 9 dB, and the track is 3 dB louder at the identical peak reading. No fader moved. That 3 dB is the entire trick, and it is why [crest factor](https://gazillionindustries.com/crest-factor/) is worth more attention than the gain reduction meter.
+
+A limiter does the same arithmetic with a crueler shape. It removes only the top, so the average barely drops and the peak drops a lot, and each decibel of ceiling you claw back buys close to a decibel of average level. That efficiency is the temptation. It is also the reason a limiter pushed for 6 dB leaves a track with a crest factor low enough that nothing in it has anywhere to go.
 
 ## How to use each
 
@@ -14077,15 +15233,103 @@ The practical distinction is what each is listening for. A compressor is reactin
 
 - If the limiter is doing more than 3 dB on average, the problem is upstream.
 
+- Set the compressor release against the tempo before you touch anything else: 60000 divided by the bpm, then take the eighth or the sixteenth.
+
+- Check the finished bounce on a phone speaker and in a car, at the same volume as the version you started with.
+
 For the loudness part of that chain in detail, see [clipper before limiter](https://gazillionindustries.com/clipper-before-limiter/) and [how loud should my master be](https://gazillionindustries.com/how-loud-should-my-master-be/).
 
 [DRUGS](https://gazillionindustries.com/drugs.html) has both ends of this on one free panel: a compressor with one knob, and LIMIT, a soft ceiling on the output at −0.3 dBFS.
+
+## A worked example, start to finish
+
+A loop at 92 bpm: kick, snare, hats, a little room. It peaks at −2.4 dBFS, its average sits around −15 dBFS, and it sounds thin next to the reference. Crest factor is −2.4 − (−15) = 12.6 dB, which tells you before you touch anything that there is room to work.
+
+- Compressor on the drum bus. Ratio 4:1, attack 30 ms, release 160 ms, which is the sixteenth note at this tempo (60000 ÷ 92 = 652; 652 ÷ 4 = 163).
+
+- Lower the threshold until the loudest hits pull 4 dB and the quieter ones pull nothing. The meter should return to zero between hits, not hover.
+
+- Add make-up until the bypassed and engaged levels match on a meter, then judge. If it does not sound better at matched level, it is not better.
+
+- Saturation or a soft clipper next, taking a decibel or two off the sharpest transients. Peaks come down; average does not.
+
+- Limiter last. Ceiling −1 dBTP. Raise the input until it reads 1.5 to 2 dB of reduction on the loudest hits and nothing at all in the quiet bar.
+
+- Bounce. Measure peak and average again.
+
+On material like that you should end up around −1 dBTP peak and roughly −9 to −10 dBFS average: a crest factor near 8 or 9 dB, the drums 5 dB louder than they started, and the room still audible under the hits. If the crest factor has fallen below about 6 dB, back the limiter off. Something is being held down that used to move.
+
+## Why the limiter ceiling is not 0 dBFS
+
+Because your peak meter is only looking at the samples, and the loudest part of the waveform usually falls between two of them. Here is the cleanest case, and you can work it out on paper. Take a sine at a quarter of the sample rate — 11,025 Hz at 44.1 kHz — and line the samples up at 45 degrees into each cycle. Every sample lands on ±0.7071 of the peak. The meter reads 20 × log₁₀(0.7071) = −3.01 dBFS. The wave that comes back out of the converter touches full scale. Your meter was wrong by 3 dB and never blinked.
+
+Real music is less extreme than that, but the direction is always the same: true peak is equal to or higher than sample peak, never lower. Then a lossy encoder gets hold of it, throws away data, and reconstructs something with peaks in slightly different places and slightly different heights. A file mastered dead on 0 dBFS reliably comes back over. That is the whole argument for −1 dBTP, and [true peak](https://gazillionindustries.com/true-peak/) goes through the measurement properly. [Headroom](https://gazillionindustries.com/headroom-in-mixing/) and [clipping](https://gazillionindustries.com/what-is-clipping/) cover what happens when you ignore it.
+
+A limiter that oversamples its detector can see those between-sample peaks and hold the true ceiling rather than the sample ceiling, at the cost of CPU and a little more latency. If yours has a true-peak switch, that is what it does. [Oversampling](https://gazillionindustries.com/oversampling/) explains the mechanism.
+
+## Where each one sits in the chain
+
+Cuts first, then the compressor, then tone and weight, then the ceiling. Each stage changes what the next one sees, which makes the order structural rather than a matter of preference. A low cut placed before the compressor stops a 30 Hz rumble from steering the gain on every bar, and moving that same cut after it changes nothing about the rumble and everything about the compression.
+
+The interactions worth knowing: an EQ boost before a compressor gets partly undone by the compressor, because you made the thing louder that it is already pulling down. A clipper or saturator before the limiter shortens the peaks the limiter would have had to chase, so the limiter works less and the average comes up more — [clipper before limiter](https://gazillionindustries.com/clipper-before-limiter/) has the numbers. A compressor after a limiter gets a signal whose peaks have already been flattened, so its detector no longer relates to the performance at all.
+
+Two more. Parallel routing sidesteps the trade entirely by keeping an uncompressed copy in the balance, which is the subject of [parallel compression](https://gazillionindustries.com/parallel-compression/). And a compressor keyed from another track is a different job again, with its own timing rules, covered in [sidechain compression](https://gazillionindustries.com/sidechain-compression/). For the full stack on a drum bus in order, see [drum bus chain order](https://gazillionindustries.com/drum-bus-chain-order/), and get the levels right on the way in with [gain staging](https://gazillionindustries.com/gain-staging/).
+
+## The stock compressor and limiter in your DAW
+
+Every DAW ships both, and in several of them the distinction is drawn differently enough to confuse people who move between hosts.
+
+**Ableton Live.** Compressor for the general job, Glue Compressor for the bus, Limiter for the ceiling. Live's Limiter has a ceiling control and a lookahead selector, and it reports its latency to the transport. [Glueing a drum bus in Live](https://gazillionindustries.com/drum-bus-compression-in-ableton-live/) walks the settings.
+
+**Logic Pro.** Compressor, with switchable circuit types that change the timings and the knee under the same controls. Two separate limiters: Limiter for a plain ceiling, Adaptive Limiter for the louder, more processed result.
+
+**FL Studio.** Fruity Limiter is both tools in one plug-in, with COMP and LIMIT as separate tabs, which is why FL users often insert it twice. Maximus is the multiband version when one band will not do the job — see [multiband compression](https://gazillionindustries.com/multiband-compression/) before you reach for it.
+
+**Reaper.** ReaComp for the shaping, ReaLimit for the ceiling, and ReaComp's ratio goes high enough to limit if you want it to.
+
+**Cubase, Studio One, Bitwig, GarageBand.** All carry a Compressor and a separate limiting stage — Limiter, Maximizer, Peak Limiter, depending on the host. Names vary; the two jobs do not.
+
+## How to check any of this in your own session
+
+Four tests, none of which take longer than the argument about them.
+
+- **Match the level before you judge.** Bypass, note the average on a meter, engage, and pull the output down until it reads the same. Then compare. Make-up gain flatters everything for about three seconds and fools everyone for about three years.
+
+- **Watch the meter return.** On a compressor the gain reduction should come back to zero between hits at the tempo you are working at. If it never gets home, the release is too long for the material.
+
+- **Bounce and measure.** Render eight bars, drop the file back in, and read peak and average off a meter. Compare them against the same eight bars with the chain bypassed. Crest factor before set against crest factor after is the whole story in two numbers.
+
+- **Look at the waveform.** Zoom in on a snare. If the front of the hit has gone square-topped and the body has swollen, the limiter is doing what the compressor should have done.
+
+Then play it on a phone and in a car, at the same volume as the version you started with. Small speakers punish a flattened crest factor faster than anything in the room, because there is no low end left to carry the weight and the only thing selling the hit is its front edge.
 
 ## Where each one costs you
 
 A compressor costs you dynamics in exchange for consistency, and the cost shows up as a performance that stops moving. A limiter costs you transients in exchange for level, and the cost shows up first on drums: the snare goes flat, then the kick, then everything develops a soft ceiling you can hear. Limiters also pump when pushed, because a fast attack and a slow release hold the whole mix down after every peak.
 
 Both flatter themselves the same way, through make-up gain. Level-match before deciding.
+
+## What each failure sounds like
+
+Six of them, and each has a signature you can learn to name.
+
+**Attack too fast on a compressor.** The kit gets smaller and moves backward in the room while the meter says it is working hard. Sticks lose their tick; the kick loses the click on the beater. The fix is upward: 20, 30, 50 ms until the front comes back. [What a transient is](https://gazillionindustries.com/what-is-a-transient/) covers the part you are protecting.
+
+**Release too long.** The bar sags. Gain never gets back up between hits, so the second half of every phrase sits lower than the first and the hats disappear behind the snare. Do the tempo division and set it by arithmetic first, then adjust by ear.
+
+**Release too short on low content.** A growl or a buzz that arrives with the kick and leaves with it. The gain is tracking inside the waveform instead of over it.
+
+**Too much compression.** The room comes up and keeps coming up. Cymbal tails breathe, the noise floor rises between hits, and a live kit starts to sound like it was recorded in a corridor. Pleasant for one bar, exhausting for three minutes.
+
+**Limiter over-pushed.** First the snare loses its crack. Then the kick gets shorter. Then the entire mix develops a lid you can hear as a flat, stationary top edge, and turning it up makes it worse instead of louder. [How to use a limiter](https://gazillionindustries.com/how-to-use-a-limiter/) goes further into where the line sits.
+
+**Limiter distortion on bass.** The low end thickens and smears, the kick loses its definition, and the whole bottom becomes one continuous tone rather than separate events. A limiter chasing a 40 Hz cycle has to move within 25 ms or distort it, and at that speed it is rewriting the waveform. A high-pass on the detector, or less low end into it, fixes what more limiting will not.
+
+## What each one costs
+
+Nothing, if you want it to. Every DAW named above includes a compressor and a limiter that can finish a record, and plenty of records have been finished on them. What the paid market mostly sells on top is character, metering and speed, and those are real things to want — just not things you need before you can start. [Best free compressor plugins](https://gazillionindustries.com/best-free-compressor/) covers what to look for when the budget is nothing.
+
+From us: [DRUGS](https://gazillionindustries.com/drugs.html) is free, and it is the compressor half of this page. [BEEFY](https://gazillionindustries.com/beefy.html) is $19 and covers the stage between them — saturation and soft clipping, with SOFT CLIP and LIMIT as its two output switches.
 
 What to look for when the budget is nothing: [best free compressor plugins](https://gazillionindustries.com/best-free-compressor/).
 
@@ -14107,9 +15351,55 @@ Yes. Shape first, catch what is left afterward. A limiter in front of a compress
 
 When the drums lose their front edge and the quiet bars start moving with the loud ones. One to three decibels of gain reduction on peaks is normal; anything much past that is a mix problem being solved in the wrong place.
 
+### Is a limiter just a compressor with a high ratio?
+
+Almost. The ratio is the definition, but the attack is what makes it work: a limiter has to catch a peak that lasts a handful of samples, which is why most of them delay the audio so the detector sees the peak first. Set a compressor to 20:1 with a 0.1 ms attack and you have something close, minus the lookahead and minus the guarantee.
+
+### What ceiling should I set on a limiter?
+
+−1 dBTP for anything that will be encoded for streaming or sent as a lossy file. If the destination is a WAV that nobody will re-encode, −0.3 to −0.5 dBFS is fine. Set the ceiling once and leave it; the control you actually work with is the input.
+
+### Does a limiter add latency?
+
+Usually, because lookahead is a delay. A 1.5 ms lookahead is 66 samples at 44.1 kHz. Your DAW compensates for it during playback, so the only time it bites is tracking through the plug-in while you monitor. Turn lookahead off or bypass the limiter while recording.
+
+### What is the difference between a limiter and a clipper?
+
+A limiter turns the gain down for as long as the peak lasts, so the shape of the waveform survives and the level around it moves. A clipper cuts the top off and leaves everything else alone, so nothing moves and the peak itself is replaced by harmonics. Clipping buys more level per decibel and costs distortion instead of movement, which on drums is often the better trade. See [soft clipping explained](https://gazillionindustries.com/soft-clipping-explained/).
+
+### How much gain reduction should a compressor do?
+
+Three to six decibels on the loudest parts, on most material, with the meter returning to zero between them. Less than 2 dB and you may as well not have it in; more than about 8 dB and you are making a sound rather than controlling one, which is legitimate but should be a decision.
+
+### Is a maximizer the same as a limiter?
+
+It is a limiter with the input gain and the output ceiling linked, so one control pushes harder into a fixed lid. Same processing, fewer decisions, and easier to overdo because turning it up never makes anything read over.
+
+### Can a compressor stop clipping?
+
+Not reliably. A compressor at a musical ratio still lets the signal rise as the input rises, so a peak 6 dB over at 4:1 still comes out 1.5 dB over. It reduces how often you clip and how badly. Only a brickwall guarantees the ceiling.
+
+### Do I need a limiter if I am not mastering?
+
+On a mix bus while you work, no, and it is better left off so you hear the real dynamics. On anything you export and send to somebody, yes, if only as insurance against an unnoticed over. Set it to −1 dBTP and let it do nothing most of the time.
+
+### Should I put a limiter on the drum bus?
+
+Only to catch strays. One or two decibels on the very loudest hits keeps the bus from feeding the mix something stupid, and that is the whole job. Anything more and you are competing with the compressor that should be shaping the kit, and the two of them will pull in different directions all session.
+
+### Why does my limiter make the drums sound smaller?
+
+Because it is removing the part that made them sound big. The front edge of a hit is a few milliseconds long and 6 to 12 dB above everything around it, and shaving it flattens the crest factor that your ear reads as impact. Get the peaks down with saturation or a clipper first, so the limiter has less to take.
+
+### Compressor or limiter on vocals?
+
+Compressor, nearly always, and often two in series: one with a slow attack and a gentle ratio holding the overall level, one faster catching the consonants. A limiter on a vocal is for the one shouted line that jumps 8 dB, not for the performance.
+
 ## What DRUGS does
 
 DRUGS is our free bus compressor for drums, and it carries both halves of this article. **DOSE** is the compression: it moves the transfer curve, the knee, the attack and the release together, making a drum bus denser rather than louder. **GAIN** adds 5 dB after the compressor and before the ceiling. **LIMIT** is a zero-latency soft ceiling at −0.3 dBFS on the output, with a clip indicator; it attenuates only, and it is transparent below about −0.9 dBFS. Both are on when it opens.
+
+In the order this page describes, it is the early stage. Put it on the drum bus, turn DOSE up until the room comes up under the hits, and set your own true-peak ceiling at the end of the chain, where the decision belongs. The soft ceiling on its own output is there to keep the bus itself in bounds on the way to the mix, which is a smaller job than the last plug-in on a master. [One-knob compressors](https://gazillionindustries.com/one-knob-compressor/) covers what a single macro gives up in exchange for that speed.
 
 Two boxes, one number between them. Now you know which one belongs at the end.
 
@@ -23375,19 +24665,93 @@ To make a slowed and reverb version, lower the playback speed with varispeed (of
 
 - **Rights**: use your own music, or get permission
 
+- **The formula**: semitones = 12 × log₂(speed)
+
+- **−10%**: −1.82 semitones; 140 bpm becomes 126
+
+- **−20%**: −3.86 semitones; 140 bpm becomes 112
+
+- **Exact semitones**: −10.91% is two down, −15.91% is three
+
+- **Decay**: 3 to 6 s — 4 s is 60 dB of fall at 15 dB per second
+
+- **Pre-delay**: 20 to 60 ms; 30 ms is a 10.3 m longer path
+
+- **Return filters**: high-pass 200–400 Hz, low-pass 3–5 kHz
+
+- **Wet**: 30 to 50%; at 50/50 each side sits 6 dB down
+
+- **Order**: speed first, reverb after — never the other way
+
 **PITCH −3.09 ST.** Pitch and tempo moving together, the way a machine does it.
+
+## Hear the drop, then measure it
+
+One loop at three speeds, rendered offline through the same engine SKRUU runs, no other processing. The captions are the renderer's own readout. We then ran the files through an FFT to check the readout was telling the truth.
+
+- **Unity** — PITCH 93 — rate 1.0000, +0.00 semitones — https://gazillionindustries.com/skruu/skruu-dry.m4a
+
+- **Slowed** — PITCH 64 — rate 0.9275, −7.25%, −1.30 semitones — https://gazillionindustries.com/skruu/skruu-down.m4a
+
+- **Sped up** — PITCH 120 — rate 1.0779, +7.79%, +1.30 semitones — https://gazillionindustries.com/skruu/skruu-up.m4a
+
+- **Slowed, LO-FI 2** — PITCH 64 with SAMPLING GRADE at 3.9 kHz — https://gazillionindustries.com/skruu/skruu-down-lofi2.m4a
+
+Measured here: the strongest partial sits at 161.96 Hz dry, 150.33 Hz slowed, 175.14 Hz sped up. Ratios of 0.9282 and 1.0814, or −1.29 and +1.36 semitones, against the −1.30 and +1.30 printed on the panel. A 0.8-second window resolves to about 1.9 Hz, near 20 cents at these frequencies, so both agree inside the measurement's own error.
 
 ## Where it comes from
 
 Slowing songs down isn't new. In the early 1990s Houston's DJ Screw built a whole sound on it, slowing records to a crawl on his screw tapes (see [how to chop and screw a song](https://gazillionindustries.com/how-to-chop-and-screw/)). The slowed and reverb version is its internet-era cousin: less chopping, much more reverb, and a mood that's closer to nostalgia than to a car rolling slow down a Houston street.
 
+Both live off the same fact. A recording read out slower is a recording moved down in pitch, and everything in it moves together — the voice, the snare, the hiss, the reverb that was already on the record. A screw tape spends its second move on chops. A slowed and reverb upload spends it on space.
+
 ## Slow it down the right way
 
 Use varispeed or repitch, not time stretching, so the pitch drops along with the tempo. That drop is the sound: voices get deeper, the groove gets heavier, and the whole track sounds like it's playing on a tired machine. How far to go depends on the song, but a slowdown in the 10 to 20% range, roughly two to four semitones, is a common starting point. The math is in [what is varispeed](https://gazillionindustries.com/what-is-varispeed/).
 
+Time stretching is the other operation, and it is the one that gives the job away. A stretcher holds the pitch and invents the extra time, so a 20% slowdown means about one frame in five was reconstructed rather than played. On pads you may never hear it. On a close vocal you get a faint chorus around the consonants, and on hats a flutter where the transient used to be. Varispeed reconstructs nothing — see [time stretching explained](https://gazillionindustries.com/time-stretching-explained/).
+
+## How far to slow it, in numbers
+
+Speed and pitch are one number in two units. Semitones = 12 × log₂(speed), and speed = 2^(semitones/12). Half speed is exactly twelve semitones down. One semitone down is a speed of 0.9439, near enough 5.6%.
+
+- **−5%**: −0.89 st — 140 bpm → 133.0
+
+- **−7.5%**: −1.35 st — 140 bpm → 129.5
+
+- **−10%**: −1.82 st — 140 bpm → 126.0
+
+- **−15%**: −2.81 st — 140 bpm → 119.0
+
+- **−20%**: −3.86 st — 140 bpm → 112.0
+
+- **−25%**: −4.98 st — 140 bpm → 105.0
+
+- **−33⅓%**: −7.02 st — 140 bpm → 93.3
+
+Length follows the same ratio. A 3:30 record at −20% runs 262.5 seconds, which is 4:22.5. Bounce the slowed pass and look at the length: if it is still 3:30, your DAW stretched the time instead of changing the speed.
+
+The percentages in common use do not land on semitones, and that matters the moment you play something new over the top. At −10% an A at 440 Hz becomes 396 Hz, which is G plus 17.6 cents. At −15% it is 374 Hz, F sharp plus 18.6 cents. At −20% it is 352 Hz, F plus 13.7 cents. Either detune the new part by that offset, or pick a percentage that lands clean: −10.91% is exactly two semitones down, −15.91% exactly three, −20.63% exactly four.
+
+## Why the top end dies before you touch a filter
+
+Every frequency in the file divides by the same ratio. At −20% a 1 kHz tone lands at 800 Hz, a 6 kHz sibilant at 4.8 kHz, an 8 kHz air band at 6.4 kHz, a hi-hat peaking near 10 kHz at 8 kHz. Nothing was filtered. The spectrum moved down, and the ear reads that as dull. Which is why the last low-pass on the master should be a smaller move than people expect — take another 6 dB out at 5 kHz and you are behind a door rather than far away, which is [a different effect](https://gazillionindustries.com/how-to-make-music-sound-like-another-room/).
+
+The low end moves in the direction nobody plans for. A 60 Hz kick fundamental at −20% is 48 Hz and a 40 Hz sub is 32 Hz, under the point where most phones give you anything at all. The formants move too, 3.86 semitones down with the note, which is why a slowed voice reads as a physically bigger person. If you want the depth without the ventriloquism, that separation is what a formant control is for — [formant shifting](https://gazillionindustries.com/formant-shifting/).
+
 ## The reverb
 
 This is the other half of the name, so don't be shy with it. Choose a hall or plate with a long decay, give it a little pre-delay so the vocal stays readable, and low-pass the reverb so it's dark instead of glassy. Blend it higher than you would in a normal mix. High-pass the reverb too, so the low end stays tight under all that space.
+
+## Setting the reverb by the numbers
+
+Decay first, because it decides whether the track reads as a song or as a wash. RT60 is the time the tail takes to fall 60 dB, so a 4-second decay is 15 dB per second: 20 dB down at 1.33 s, 40 dB down at 2.67 s. Set it against the harmony. At 112 bpm a beat is 535.7 ms and a bar is 2.14 s, so a 4-second tail runs 7.5 beats — almost two full bars into whatever comes next. Chords moving every bar means two chords sounding at once, and 2 to 3 seconds is the honest ceiling. Chords moving every four bars, and six seconds is free.
+
+Pre-delay next. Sound travels about 343 m/s in room air, so 30 ms of pre-delay is a reflection arriving off a path 10.3 m longer than the direct one, and 60 ms is 20.6 m. Under about 10 ms the voice and the room fuse, and the words go first.
+
+Then the filters on the return, which separate a dark reverb from a loud one. A 12 dB/octave low-pass at 4 kHz puts 8 kHz 12 dB down and 16 kHz 24 dB down; the same filter at 3 kHz costs 17 dB at 8 kHz. Somewhere in 3 to 5 kHz is the whole argument. High-pass the return at 200 to 400 Hz so the kick and the bass never enter the tail; they lose nothing by being kept out of it.
+
+Blend last, and blend in dB rather than in percent. A 30% wet control puts the wet path 10.5 dB down and the dry 3.1 dB down, a 7.4 dB gap. At 50/50 both sit 6 dB down and the gap is zero, roughly where the style announces itself. Past 60% the wet is louder than the dry and the lyrics stop arriving.
 
 [SKRUU](https://gazillionindustries.com/skruu.html) gives you varispeed pitch and independent time, with shifts you can play.
 
@@ -23399,7 +24763,15 @@ This is the other half of the name, so don't be shy with it. Choose a hall or pl
 
 - Slow it with varispeed or repitch so the pitch drops with the tempo.
 
+- Set the amount by number: −10% for −1.82 semitones, −20% for −3.86.
+
+- Bounce a few seconds and check the length ratio matches the speed you set.
+
 - Add a reverb on a return: long decay, some pre-delay.
+
+- Set decay against the harmony — under three seconds if the chords move every bar.
+
+- Set pre-delay to 20 to 60 ms so the words stay in front of the room.
 
 - Low-pass and high-pass the reverb return.
 
@@ -23407,11 +24779,57 @@ This is the other half of the name, so don't be shy with it. Choose a hall or pl
 
 - Add a gentle low-pass on the whole track if the top end is still bright.
 
+- Check the true peak; a long tail adds to peaks you already balanced.
+
 - Export and compare with the original to make sure it still hits.
+
+## Where it goes in the chain
+
+Speed first, everything else after. Slow the source, then feed the slowed signal to the reverb. Do it the other way and the tail gets slowed with everything else: a 4-second decay at −20% becomes 5 seconds and drops 3.86 semitones, so every nudge of the speed changes the shape of the room under you. Usable if you chose it, a nuisance if you did not.
+
+The order that works: varispeed as an insert on the track or the master, reverb on a return fed after it, tape noise or crackle after the speed change as well (noise slowed 20% stops sounding like noise), compression after the reverb rather than before so the tail does not pump the dry, master low-pass last. One thing to watch on the insert is latency, because a host only compensates for what a plugin reports. SKRUU's page states zero samples of it, which is one less thing to line up when the varispeed sits on one track out of thirty.
+
+## Doing it in your DAW
+
+Four of the five big hosts already have varispeed and none put it in the same place. Ableton Live: the Re-Pitch warp mode, per clip, driven by the Set tempo — see [varispeed in Ableton Live](https://gazillionindustries.com/varispeed-in-ableton-live/). Logic Pro: the Varispeed readout in the control bar, −50% to +100%, in Varispeed (Speed and Pitch) mode rather than Speed Only, which pitch-corrects the output back. FL Studio: Mode set to Resample in the Channel Settings stretch panel. Pro Tools: the Varispeed plug-in inside Elastic Audio, which has no controls of its own. GarageBand has none; its Transpose slider moves pitch and leaves the length alone, which is the opposite operation.
+
+Two of those are global and one is per clip, which is the limitation for this style. If you want the speed to sag into a chorus and come back, it has to be on an insert where it is an ordinary automation lane. Full rundown in [varispeed in every DAW](https://gazillionindustries.com/varispeed-in-every-daw/), and the plugin side in [best varispeed plugins](https://gazillionindustries.com/best-varispeed-plugins/).
+
+**TIME −35%, PITCH at unity.** The other operation, for when the key has to stay put.
 
 ## How to make a sped-up version
 
 Do the opposite: raise the speed with varispeed so the pitch climbs. Sped-up and nightcore-style edits usually skip the big reverb and keep the mix bright and punchy. Check the vocal: the higher you go, the more cartoonish it gets, which is the style up to a point and a joke past it.
+
+Same formula, other direction. Plus 10% is +1.65 semitones and takes 140 bpm to 154. Plus 20% is +3.16 and takes it to 168. Most uploads sit between 8 and 15%, one to two and a half semitones up: far enough to hear, near enough that the singer still sounds like a person. The cost inverts too. A 6 kHz sibilant at +20% is 7.2 kHz, so a bright mix turns harsh — de-ess after the speed change, not before, because the frequency you need to catch has moved. The formants climb with the note, which is the mechanism behind pitched-up soul vocals: [chipmunk soul](https://gazillionindustries.com/chipmunk-soul/).
+
+**Pitched up.** Same knob, other direction, and the direction that exposes a bad resampler.
+
+## What goes wrong, and what each one sounds like
+
+**Stretched instead of slowed.** A faint chorus around the consonants, doubled sibilants, a hi-hat that flutters where it used to snap. The key did not move, which is the giveaway. Put the clip in a repitch mode, or take the speed change off the timeline and onto an insert.
+
+**Bright reverb.** The "s" sounds get their own long tail and the top of the mix hisses for two seconds after every line. Low-pass the return; 4 kHz at 12 dB/octave is 12 dB off at 8 kHz and usually enough.
+
+**No high-pass on the return.** The kick loses its front edge and the bass turns into one continuous note. High-pass at 200 to 400 Hz and the low end comes back without the dry signal being touched.
+
+**Clipping you did not put there.** Crackle on the loudest chord, worst after encoding to a streaming format. A long tail sums with the next transient, so the peaks you balanced before the reverb are not the peaks you have now — [true peak](https://gazillionindustries.com/true-peak/) and [headroom in mixing](https://gazillionindustries.com/headroom-in-mixing/).
+
+**A tail that disappears on a phone.** A wide stereo reverb can partly cancel when the sides fold in, and most listening for this style happens on one small speaker — [mono compatibility](https://gazillionindustries.com/mono-compatibility/).
+
+## How to check it in your own session
+
+- Length. Divide the slowed bounce's duration by the original's. That ratio is your speed; 1.000 means you time-stretched.
+
+- Pitch. Put an analyzer on the output, hold a sustained low note, read the strongest partial before and after, and take 12 × log₂ of the ratio. That is what we did to the demo files above: 161.96 Hz to 150.33 Hz is 0.9282, which is −1.29 semitones.
+
+- Cents. A tuner on the master says how far off a semitone you landed, which is the number you detune any new part by.
+
+- Words. Solo the reverb return. If you can make out the lyric in the tail, the pre-delay is too short or the low-pass is too high.
+
+## What it costs
+
+Three things, worth saying flatly. You lose top end, because the whole spectrum moved down before you filtered what was left. You lose punch, because a long tail fills the gaps that made the drums feel fast. And you land between keys unless you did the arithmetic, so anything added later has to be tuned in cents. The tools cost nothing extra if your DAW has a repitch mode and a hall, which four of the five do; a plugin earns its $29 when you want to ride the speed while the track runs rather than set it once per clip.
 
 ## Questions people ask
 
@@ -23427,9 +24845,45 @@ Use time stretching instead of varispeed: set the audio to follow the project te
 
 Altering and publishing someone else's recording involves their copyright, so uploading those versions can get removed or claimed. Making slowed versions of your own music, or with permission, avoids the problem.
 
+### What percentage should I slow a song down by?
+
+Between 10 and 20% for most material. Ten percent is 1.82 semitones down and takes 140 bpm to 126; twenty is 3.86 semitones and takes it to 112. Below 5% it reads as a mistake rather than a version; past 30% the drums stop sounding like drums.
+
+### How many semitones is slowed and reverb?
+
+Usually two to four down. Semitones = 12 × log₂(speed), so 0.90 speed is −1.82 and 0.80 speed is −3.86. For a round number, slow by 10.91% for exactly two semitones or 15.91% for exactly three.
+
+### What reverb settings do I use for slowed and reverb?
+
+A hall or plate at 3 to 6 seconds of decay, 20 to 60 ms of pre-delay, the return high-passed at 200 to 400 Hz and low-passed at 3 to 5 kHz, blended 30 to 50% wet. Cut the decay to two or three seconds if the chords change every bar.
+
+### Should I add reverb before or after slowing the song?
+
+After. Reverb applied first gets slowed with everything else, so a 4-second tail becomes 5 seconds at −20% and shifts down 3.86 semitones with the track.
+
+### Why does my slowed song sound muddy?
+
+The low end moved down with everything else and then went into the reverb. A 60 Hz kick fundamental at −20% is 48 Hz. High-pass the reverb return at 200 to 400 Hz first; that alone fixes most of it and costs the dry signal nothing.
+
+### Why does my slowed vocal sound watery or flangy?
+
+You time-stretched rather than repitched. A stretcher invents the extra time, and on consonants the invented material reads as a light chorus. Check the key: if it did not move, the speed did not either.
+
+### Does slowing a song change the key?
+
+Yes, and usually to somewhere between two keys. At −10% an A at 440 Hz lands at 396 Hz, which is G plus 17.6 cents. Tune anything you add by that offset, or choose a percentage that lands on a semitone.
+
+### What is the difference between slowed and reverb and chopped and screwed?
+
+The first move is the same and the second is not. Screwed material is chopped, doubled and cut by hand and kept fairly dry; slowed and reverb leaves the arrangement alone and puts the work into the space. Method in [how to chop and screw a song](https://gazillionindustries.com/how-to-chop-and-screw/).
+
 ## What SKRUU does
 
 SKRUU is our varispeed pitch and time stretch plugin. **PITCH** runs from −20% to +10% and moves speed and pitch together, reading out in semitones. **TIME** moves only the length, from −50% to +25%, so you can slow the groove without dropping the key, or the other way round. **DRAG** sets how long a new speed takes to arrive, from instant to a hand on the platter, and **ELASTIC** springs a shift back when you let go.
+
+PITCH LOCK and TIME LOCK hold one while you play the other. **SLOPE** is the road a sprung knob takes home, and there are sixteen — six smooth, five stepped, five that overshoot and come back — with RETURN for how long the trip takes, free or quantized to the bar. **SAMPLING GRADE** is the grid underneath it all: 31.25 kHz, 15.62, 7.81 and 3.91. The display is a pitch comparator in semitones, what went in against what came out, with the octaves marked.
+
+AU, VST3 and a standalone on macOS 10.13 or later, VST3 on 64-bit Windows 10 or later, zero samples of latency, any session rate, $29. There is a demo on the [product page](https://gazillionindustries.com/skruu.html).
 
 Same song, same empty parking lot. It just got later.
 

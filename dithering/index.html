@@ -47,7 +47,7 @@ fbq('init', '1164684366890206');
 fbq('track', 'PageView');
 }
 </script>
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"TechArticle","@id":"https://gazillionindustries.com/dithering/#article","headline":"Dithering","description":"What dither actually does, why rounding errors are worse than noise, which type to use, and the three rules that cover every case you will meet in practice.","image":"https://gazillionindustries.com/beefy/cover.png","inLanguage":"en","datePublished":"2026-09-20","dateModified":"2026-09-24","url":"https://gazillionindustries.com/dithering/","mainEntityOfPage":"https://gazillionindustries.com/dithering/","author":{"@id":"https://gazillionindustries.com/#gazillion"},"publisher":{"@id":"https://gazillionindustries.com/#gazillion"},"about":{"@type":"SoftwareApplication","name":"BEEFY","url":"https://gazillionindustries.com/beefy.html"},"isPartOf":{"@id":"https://gazillionindustries.com/reading-material/#page"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Gazillion Industries","item":"https://gazillionindustries.com/"},{"@type":"ListItem","position":2,"name":"Reading material","item":"https://gazillionindustries.com/reading-material/"},{"@type":"ListItem","position":3,"name":"Dithering","item":"https://gazillionindustries.com/dithering/"}]},{"@type":"Organization","@id":"https://gazillionindustries.com/#gazillion","name":"Gazillion Industries LLC","alternateName":"Gazillion Industries","url":"https://gazillionindustries.com/"},{"@type":"FAQPage","@id":"https://gazillionindustries.com/dithering/#faq","mainEntity":[{"@type":"Question","name":"Should dithering be on or off?","acceptedAnswer":{"@type":"Answer","text":"On, if the export is reducing bit depth, usually to 16-bit. Off if you are exporting at the same bit depth you worked at, or handing a 24-bit file to someone who will process it further."}},{"@type":"Question","name":"Does dither lower quality?","acceptedAnswer":{"@type":"Answer","text":"It raises the noise floor very slightly and removes a distortion that would otherwise appear on quiet material. By any measure that matters musically, it improves the result."}},{"@type":"Question","name":"Should I add dither to my master?","acceptedAnswer":{"@type":"Answer","text":"If the master is being delivered as a 16-bit file, yes, on the final export only. If you are delivering 24-bit, no."}},{"@type":"Question","name":"What does dithering mean in music?","acceptedAnswer":{"@type":"Answer","text":"Adding low-level noise before a bit-depth reduction so that the rounding errors become random noise rather than signal-dependent distortion."}}]}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"TechArticle","@id":"https://gazillionindustries.com/dithering/#article","headline":"Dithering","description":"What dither actually does, why rounding errors are worse than noise, which type to use, and the three rules that cover every case you will meet in practice.","image":"https://gazillionindustries.com/beefy/cover.png","inLanguage":"en","datePublished":"2026-09-20","dateModified":"2026-09-24","url":"https://gazillionindustries.com/dithering/","mainEntityOfPage":"https://gazillionindustries.com/dithering/","author":{"@id":"https://gazillionindustries.com/#gazillion"},"publisher":{"@id":"https://gazillionindustries.com/#gazillion"},"about":{"@type":"SoftwareApplication","name":"BEEFY","url":"https://gazillionindustries.com/beefy.html"},"isPartOf":{"@id":"https://gazillionindustries.com/reading-material/#page"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Gazillion Industries","item":"https://gazillionindustries.com/"},{"@type":"ListItem","position":2,"name":"Reading material","item":"https://gazillionindustries.com/reading-material/"},{"@type":"ListItem","position":3,"name":"Dithering","item":"https://gazillionindustries.com/dithering/"}]},{"@type":"Organization","@id":"https://gazillionindustries.com/#gazillion","name":"Gazillion Industries LLC","alternateName":"Gazillion Industries","url":"https://gazillionindustries.com/"},{"@type":"FAQPage","@id":"https://gazillionindustries.com/dithering/#faq","mainEntity":[{"@type":"Question","name":"Should dithering be on or off?","acceptedAnswer":{"@type":"Answer","text":"On, if the export is reducing bit depth, usually to 16-bit. Off if you are exporting at the same bit depth you worked at, or handing a 24-bit file to someone who will process it further."}},{"@type":"Question","name":"Does dither lower quality?","acceptedAnswer":{"@type":"Answer","text":"It raises the noise floor very slightly and removes a distortion that would otherwise appear on quiet material. By any measure that matters musically, it improves the result."}},{"@type":"Question","name":"Should I add dither to my master?","acceptedAnswer":{"@type":"Answer","text":"If the master is being delivered as a 16-bit file, yes, on the final export only. If you are delivering 24-bit, no."}},{"@type":"Question","name":"What does dithering mean in music?","acceptedAnswer":{"@type":"Answer","text":"Adding low-level noise before a bit-depth reduction so that the rounding errors become random noise rather than signal-dependent distortion."}},{"@type":"Question","name":"Should I dither when exporting 24-bit?","acceptedAnswer":{"@type":"Answer","text":"No. A 24-bit step is &minus;138.47 dBFS and the undithered error floor lands at &minus;149.27 dBFS, which is 52.94 dB below the floor of a dithered 16-bit file. There is no audible distortion down there to convert into anything."}},{"@type":"Question","name":"What bit depth should I export at?","acceptedAnswer":{"@type":"Answer","text":"24-bit for masters going to a distributor, a mastering engineer or an archive, with no dither. 16-bit with dither when something specifically calls for 16-bit. 32-bit float for anything that is coming back into a session."}},{"@type":"Question","name":"Do I need dither for streaming?","acceptedAnswer":{"@type":"Answer","text":"No. Upload the deepest file the service accepts, normally 24-bit, and let their encoder work from that. Dither belongs on a 16-bit delivery."}},{"@type":"Question","name":"Does dither change LUFS or loudness?","acceptedAnswer":{"@type":"Answer","text":"Not measurably. Triangular dither puts 4.77 dB onto a floor sitting near &minus;96 dBFS, which is more than 80 dB under any integrated loudness figure you are likely to deliver. It changes nothing about how loud the record sounds."}},{"@type":"Question","name":"Is dither audible?","acceptedAnswer":{"@type":"Answer","text":"On a loud master at normal listening levels, no. Raise the file by 60 dB and it is obvious. The people who hear it unaided are working on material with genuine silence in it &mdash; solo piano, classical, spoken word &mdash; where the tail of a note runs down into the last few bits."}},{"@type":"Question","name":"What is TPDF dither?","acceptedAnswer":{"@type":"Answer","text":"Triangular probability density function: noise two steps wide whose values cluster around zero and taper toward the edges. That shape is what fully decorrelates the rounding error. It is the default in most hosts and the right answer whenever you do not want to think about it."}},{"@type":"Question","name":"What is the difference between dither and noise shaping?","acceptedAnswer":{"@type":"Answer","text":"Dither decides whether the error comes out as noise or as distortion. Noise shaping decides where in the spectrum that noise sits. You can have dither with no shaping, and shaping with no dither is a poor idea, because it tilts a correlated error rather than a random one."}},{"@type":"Question","name":"Should dither go before or after the limiter?","acceptedAnswer":{"@type":"Answer","text":"After. A limiter changes sample values, and anything that changes sample values after dither re-quantizes and undoes it. Dither is the last plugin in the chain, or the export dialog's own checkbox, with nothing following it."}},{"@type":"Question","name":"Dither before or after sample rate conversion?","acceptedAnswer":{"@type":"Answer","text":"After. Conversion calculates new samples from old ones, which is a fresh quantization, so dither applied before it gets discarded and replaced by exactly the error you were avoiding."}},{"@type":"Question","name":"Does 32-bit float need dither?","acceptedAnswer":{"@type":"Answer","text":"No. A float sample's rounding error stays around 144.5 dB below that sample's own value at every level, because the exponent tracks the signal. There is no fixed floor to raise and no grain to appear on a fade."}},{"@type":"Question","name":"What happens if I dither twice?","acceptedAnswer":{"@type":"Answer","text":"The two noise floors add in power and the total goes up 3.01 dB. Once, that is inaudible. It accumulates, though, so a workflow that bounces through three or four stages with dither left on each time gives away 4.77 to 6.02 dB of floor for nothing."}},{"@type":"Question","name":"Which dither should I use for beats?","acceptedAnswer":{"@type":"Answer","text":"Triangular, and only on a 16-bit delivery. A loud rap or electronic master never approaches the bottom of the 16-bit range, so noise shaping has nothing to buy you there, and its ultrasonic peak is a liability if anything downstream is nonlinear."}},{"@type":"Question","name":"Why is the dither option dimmed in my DAW?","acceptedAnswer":{"@type":"Answer","text":"Because the export is not reducing bit depth. Set bit depth to 16 and the control becomes available. If it stays dimmed at 16-bit, you are looking at the wrong dialog."}},{"@type":"Question","name":"Can I dither a stem or a bounce I will use again?","acceptedAnswer":{"@type":"Answer","text":"No. Export stems at the session depth or higher with no dither. Every later stage re-quantizes anyway, and dithering each stem separately stacks noise floors that all end up summed together in the same mix."}},{"@type":"Question","name":"Does dither fix clipping?","acceptedAnswer":{"@type":"Answer","text":"No, and the two are unrelated. Clipping happens at the top of the range and dither works at the bottom of it. For the top, see what is clipping and how to use a limiter . For the room you leave above the mix, headroom in mixing ."}},{"@type":"Question","name":"What does dither sound like?","acceptedAnswer":{"@type":"Answer","text":"Steady, featureless hiss that holds still while the music moves. That constancy is the whole point. The ear discounts a background that stays put and fastens onto anything that tracks the note."}}]}]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&display=swap">
@@ -207,17 +207,127 @@ h3{margin:28px 0 8px; font-size:17px; font-weight:600; line-height:1.4; color:va
   decibels above where it would otherwise be. In every listening test that matters, that is the
   better trade.</p>
 
+  <h2>The numbers, exactly</h2>
+  <p>A 16-bit file has 65,536 available values and a 24-bit file has 16,777,216, so one 16-bit
+  step spans 256 of the 24-bit ones. In a file scaled to plus or minus one, a 16-bit step is
+  1/32768 of full scale, which is &minus;90.31 dBFS. The whole argument turns on that one
+  number.</p>
+
+  <p>Round to the nearest step with nothing added and the error lands anywhere inside half a step
+  with roughly equal likelihood, which gives a root-mean-square error of the step divided by the
+  square root of twelve: &minus;101.10 dBFS. Add triangular dither two steps wide and the total
+  error becomes exactly half a step, &minus;96.33 dBFS. The gap between those two figures is
+  10&nbsp;log10(3), or 4.77 dB. That is the entire price of dither, and it covers every quiet
+  passage on the record.</p>
+
+  <p>&minus;96.33 dBFS is the familiar 6.02 dB per bit times sixteen, which is why a properly
+  dithered 16-bit file measures at the textbook floor for its depth and never below it.</p>
+
+  <div class="card">
+    <dl>
+      <dt>One 16-bit step</dt><dd>1/32768 of full scale, &minus;90.31 dBFS</dd>
+      <dt>Rounded, no dither</dt><dd>error floor at &minus;101.10 dBFS, correlated</dd>
+      <dt>Triangular dither</dt><dd>error floor at &minus;96.33 dBFS, random</dd>
+      <dt>What dither costs</dt><dd>4.77 dB of floor, once</dd>
+      <dt>One 24-bit step</dt><dd>&minus;138.47 dBFS, error floor &minus;149.27 dBFS</dd>
+      <dt>Flat noise density</dt><dd>&minus;139.76 dBFS in any single hertz at 44.1 kHz</dd>
+    </dl>
+  </div>
+
+  <p>Put that in a room. If your playback is set so 0 dBFS reads 105 dB SPL, which is loud, the
+  dithered 16-bit floor sits at 8.7 dB SPL, under the noise of an empty room with the air
+  conditioning off. Spread flat from 0 Hz to the 22,050 Hz Nyquist of a 44.1 kHz file, that same
+  floor works out at &minus;139.76 dBFS in any one hertz. The thing everybody argues about is that
+  quiet.</p>
+
+  <h2>What the error does as a fade gets quiet</h2>
+  <p>The rounded error holds at roughly one level all the way down. What moves is where that
+  energy sits in the spectrum, and that is the part you hear. Measured here this session: a 997 Hz
+  tone, eight seconds, reduced to 16-bit both ways, the error isolated and its spectrum split into
+  energy sitting on harmonics of the tone against everything else.</p>
+
+  <ul>
+    <li><strong>Tone at &minus;60 dBFS.</strong> Rounded: error at &minus;100.96 dBFS, 5.7% of it
+    on harmonics. Dithered: &minus;96.32 dBFS, 0.25% on harmonics.</li>
+    <li><strong>Tone at &minus;80 dBFS.</strong> Rounded: error at &minus;101.81 dBFS, 64.1% on
+    harmonics. Dithered: &minus;96.33 dBFS, 0.23%.</li>
+    <li><strong>Tone at &minus;90.31 dBFS</strong>, a peak of exactly one step. Rounded: error at
+    &minus;102.25 dBFS, 76.8% on harmonics. Dithered: &minus;96.33 dBFS, 0.17%.</li>
+  </ul>
+
+  <p>Read those two columns against each other. Across a 30 dB drop in the music the rounded error
+  barely moves in level, while the share of it locked to the note climbs from one twentieth to
+  three quarters. Dither holds that share under 0.3% at every level tested. That is what
+  decorrelated means in practice: the error stops being a function of the signal.</p>
+
+  <p>The reason is arithmetic. A waveform peaking at &minus;40 dBFS reaches 328 steps, about 9.4
+  bits of description. At &minus;60 dBFS it reaches 33 steps, 6.0 bits. At &minus;80 dBFS, 3.3
+  steps, 2.7 bits. At &minus;90.31 dBFS it has become a three-level staircase, up one, back to
+  zero, down one, and a staircase of that shape carries harmonics the way a square wave does.</p>
+
+  <p>Now a case you meet every session. A reverb tail with an RT60 of 2.5 seconds decays at 24 dB
+  per second. Start it at &minus;10 dBFS and it crosses &minus;60 dBFS at 2.08 seconds and
+  &minus;90.31 dBFS at 3.35 seconds. That leaves 1.26 seconds of every tail running on fewer than
+  six bits. Hang a tail like that off every snare in a four-minute record and the grain stops being
+  an edge case.</p>
+
+  <div class="card listen">
+    <p>At 16 bits the error is too quiet to put on a web page. Pull the depth down far enough and
+    the same error becomes the loudest thing in the file, which is the only honest way to
+    demonstrate it. Here is a clean loop, then the same loop with bit depth reduced and nothing
+    else touched. Measured off these two files: relative to each one's own internal balance, the
+    reduced version carries 19.8 dB more energy from 6 to 12 kHz and 40.0 dB more above 12 kHz.</p>
+    <figure>
+      <figcaption><b>Full depth</b> &mdash; no reduction</figcaption>
+      <audio controls preload="none" src="/f12/f12-clean.m4a"></audio>
+    </figure>
+    <figure>
+      <figcaption><b>Depth reduced</b> &mdash; +19.8 dB from 6 to 12 kHz, +40.0 dB above 12 kHz</figcaption>
+      <audio controls preload="none" src="/f12/f12-bitcrush.m4a"></audio>
+    </figure>
+    <p class="src">Both files come from
+    <a href="/f12.html" data-umami-event="guide_dither_to_beefy" data-umami-event-spot="audio">F(ilter)12</a>,
+    where the reduction is the point rather than the problem. The hash sitting on top of the loop
+    is rounding error, and it moves with the music instead of under it. At 16 bits it is the same
+    thing, far quieter, sitting on your fade. More on the mechanism in
+    <a class="inline" href="/bitcrushing-explained/">bitcrushing explained</a>.</p>
+  </div>
+
   <h2>Types, briefly</h2>
   <ul>
     <li><strong>Triangular (TPDF)</strong> is the standard choice and the one to use if you do not
     want to think about it. It fully decorrelates the error at the cost of a slightly higher noise
     floor.</li>
-    <li><strong>Noise shaping</strong> adds the same total amount of noise but moves most of it
+    <li><strong>Noise shaping</strong> adds more total noise than flat dither but moves most of it
     into frequency ranges the ear is less sensitive to, usually the top octave. It measures worse
     and sounds better.</li>
     <li><strong>Aggressive noise shaping</strong> pushes that further. On material destined for
     further processing it is a bad idea, because that shaped noise is now baked in.</li>
   </ul>
+
+  <h2>What noise shaping actually trades</h2>
+  <p>Noise shaping feeds the quantizer's own error back through a filter so the error spectrum
+  comes out tilted: down where the ear is sharp, up where it is dull. The catch lives in the
+  total, and the total does not hold still.</p>
+
+  <p>For a causal, minimum-phase shaper the log-average of the noise spectrum is fixed, so every
+  decibel taken out of one part of the band has to be paid back somewhere else. Because the
+  accounting runs in logs while the power adds linearly, the bill is larger than the saving. Work
+  it through at 44.1 kHz, where Nyquist is 22,050 Hz. Cut 15 dB across 0 to 15,000 Hz, which is
+  68.0% of the band. The remaining 7,050 Hz then has to rise by 15 x 0.680 / 0.320 = 31.91 dB to
+  keep the log-average where it was, and total noise power goes up by 26.96 dB.</p>
+
+  <p>In absolute terms that moves the floor from a flat &minus;96.33 dBFS to &minus;111.33 dBFS
+  below 15 kHz and &minus;64.41 dBFS above it. A meter reading total RMS noise reports the shaped
+  file as roughly 27 dB worse. Your ears report it as quieter, because almost none of that 27 dB
+  lands anywhere they are working. Both readings are honest and they are answering different
+  questions.</p>
+
+  <p>That arithmetic also explains the warning attached to the aggressive settings.
+  &minus;64.41 dBFS of hash sitting just under Nyquist is harmless on its way to a speaker and
+  anything but harmless on its way into a saturator, a sample rate conversion or an encoder. See
+  <a class="inline" href="/what-is-aliasing-in-audio/">aliasing</a> and
+  <a class="inline" href="/oversampling/">oversampling</a> for what becomes of it there.</p>
 
   <p class="aside">
   <a href="/beefy.html" data-umami-event="guide_dither_to_beefy" data-umami-event-spot="mid">BEEFY</a> lives
@@ -241,6 +351,111 @@ h3{margin:28px 0 8px; font-size:17px; font-weight:600; line-height:1.4; color:va
     Do not do it for them.</li>
     <li>Triangular unless you have a reason. The reason is usually quiet classical or acoustic
     material, where noise shaping earns its keep.</li>
+  </ol>
+
+  <h2>Where dither sits in the export chain</h2>
+  <p>Last means last, and the order is worth spelling out because two of these steps get swapped
+  constantly.</p>
+  <ol>
+    <li>Mix and master processing, including <a class="inline" href="/gain-staging/">gain
+    staging</a> and anything else that changes a sample value.</li>
+    <li>Sample rate conversion, if the delivery rate differs from the session rate. Conversion
+    calculates entirely new sample values, so it re-quantizes, and dither placed before it is
+    thrown away.</li>
+    <li>The final ceiling, set with a limiter or a clipper. See
+    <a class="inline" href="/true-peak/">true peak</a> for what that ceiling should be and
+    <a class="inline" href="/how-loud-should-my-master-be/">how loud should my master be</a> for
+    how hard to drive it.</li>
+    <li>Dither.</li>
+    <li>Nothing.</li>
+  </ol>
+
+  <p>Playback loudness normalization on a streaming service runs on their side, in the player's own
+  floating-point path, long after your file has been decoded, so it has no bearing on where dither
+  goes. Neither does the listener's volume knob.</p>
+
+  <p>A 32-bit float export needs none of this. A float sample carries a 24-bit mantissa and an
+  exponent that moves with the value, so its rounding error stays around 144.5 dB below whatever
+  that sample happens to be, at every level. An error that scales with the signal can never sit
+  underneath the music as a fixed floor, and it can never turn into grain on a fade. Export float,
+  or export 24-bit, and walk past the checkbox.</p>
+
+  <p>Lossy encoding is the last case worth knowing. An encoder discards what it judges you cannot
+  hear, and a flat floor at &minus;96 dBFS is near the front of that queue, so dithering on the way
+  into an encoder spends 4.77 dB on something the encoder is likely to throw out. Hand the encoder
+  the deepest file you have and let it work from that.</p>
+
+  <h2>Where the control lives, by DAW</h2>
+  <p>The rule is identical in every host. The control sits in a different place in each, and one of
+  them handles it differently enough to cause most of the accidental double-dithering in the
+  world.</p>
+  <ul>
+    <li><strong>Ableton Live</strong> &mdash; Export Audio/Video, a Dither Options menu. It only
+    becomes selectable once Bit Depth is set to 16. Choose the depth first, then the dither.</li>
+    <li><strong>Logic Pro</strong> &mdash; the Bounce dialog, a Dither menu beside file format and
+    resolution. Leave it off for 24-bit bounces.</li>
+    <li><strong>Reaper</strong> &mdash; the Render dialog, with dither and noise shaping as
+    separate checkboxes, and a second set for stem output. Two sets of boxes is two chances to do
+    it twice.</li>
+    <li><strong>FL Studio</strong> &mdash; the export dialog, near the depth selector.</li>
+    <li><strong>Pro Tools</strong> &mdash; a plugin on the last insert of the master rather than a
+    checkbox in the bounce window. It stays there between bounces and it has no idea what depth you
+    picked, which makes it the easiest place in any host to dither a 24-bit file by accident.</li>
+    <li><strong>Anything else</strong> &mdash; open the export dialog, set bit depth to 16, and
+    watch which control wakes up. That is the dither. If nothing wakes up, read the manual before
+    assuming the host has quietly done it for you.</li>
+  </ul>
+  <p>One check covers all of them. If the dither control is dimmed or has no effect, your export is
+  not reducing bit depth, and you do not need it.</p>
+
+  <h2>Test it in your own session</h2>
+  <p>Take none of this on trust. Ten minutes and you will never have to read about it again.</p>
+  <ol>
+    <li>Render ten seconds of one sustained note, or a reverb tail decaying from about
+    &minus;10 dBFS into silence. Keep the session at 24-bit or higher.</li>
+    <li>Export that file to 16-bit three times: dither off, triangular, and whichever noise shaping
+    your host offers.</li>
+    <li>Import all three into a fresh 24-bit session, lined up on separate tracks.</li>
+    <li>Turn your monitors down before you unmute anything.</li>
+    <li>Put a gain plugin set to +60 dB on each of the three tracks.</li>
+    <li>Play the last two seconds of each and compare them.</li>
+    <li>Invert the triangular file against the undithered one and play the sum.</li>
+  </ol>
+
+  <p>At +60 dB a &minus;96.33 dBFS floor arrives at &minus;36.33 dBFS, which is audible on
+  anything, including a laptop. The undithered tail gives a grainy, buzzing edge that changes as
+  the note changes. The triangular one gives steady hiss that sits still. The shaped one gives
+  quieter hiss with a thin, airy top to it. On the null test, the residual measured
+  &minus;95.25 dBFS in the version rendered for this page, and that residual is the whole
+  disagreement, at full size.</p>
+
+  <figure class="shot">
+    <a href="/beefy.html" data-umami-event="guide_dither_to_beefy" data-umami-event-spot="figimg" class="imglink"><img src="/beefy/beefy-beef-8.jpg" width="550" height="410" loading="lazy" alt="BEEFY with BEEF at 8, close to bypassed."></a>
+    <figcaption><b>BEEF at 8.</b> The reference you A/B against.</figcaption>
+  </figure>
+
+
+  <h2>The five ways it goes wrong, and what each sounds like</h2>
+  <ol>
+    <li><strong>Dithering twice.</strong> Two independent noise floors add in power, so the total
+    climbs by 10&nbsp;log10(2) = 3.01 dB. Once is inaudible. Four bounces through the same chain is
+    6.02 dB, and by then it is hiss you can pick out on headphones in a quiet room.</li>
+    <li><strong>Dither, then sample rate conversion.</strong> The conversion invents new sample
+    values and quantizes them afresh, so the correlated error returns while the old dither noise
+    gets smeared across the band by the interpolation. Sounds like the grain coming back with hiss
+    on top of it.</li>
+    <li><strong>Dithering a file that gets processed again.</strong> Everything downstream
+    re-quantizes at its own output, so your dither is now a signal being compressed, equalized and
+    limited along with the music. On a heavy master chain that noise gets pumped up under the quiet
+    parts with everything else, which is audible long before the dither itself would be.</li>
+    <li><strong>Aggressive shaping into something nonlinear.</strong> The worked example above put
+    &minus;64.41 dBFS between 15 kHz and Nyquist. Saturate that, or convert its rate carelessly,
+    and it folds back into the audible band as tones unrelated to the music, moving the wrong way
+    when the pitch moves. Compare <a class="inline" href="/crest-factor/">crest factor</a>, where
+    the arithmetic is similarly unforgiving.</li>
+    <li><strong>Dithering a 24-bit export.</strong> This raises a floor from &minus;149.27 dBFS to
+    &minus;144.49 dBFS. It sounds like absolutely nothing, which is why nobody has ever caught
+    anybody doing it.</li>
   </ol>
 
   <h2>Where it costs you</h2>
@@ -267,6 +482,70 @@ h3{margin:28px 0 8px; font-size:17px; font-weight:600; line-height:1.4; color:va
   <h3>What does dithering mean in music?</h3>
   <p>Adding low-level noise before a bit-depth reduction so that the rounding errors become random
   noise rather than signal-dependent distortion.</p>
+  <h3>Should I dither when exporting 24-bit?</h3>
+  <p>No. A 24-bit step is &minus;138.47 dBFS and the undithered error floor lands at
+  &minus;149.27 dBFS, which is 52.94 dB below the floor of a dithered 16-bit file. There is no
+  audible distortion down there to convert into anything.</p>
+  <h3>What bit depth should I export at?</h3>
+  <p>24-bit for masters going to a distributor, a mastering engineer or an archive, with no dither.
+  16-bit with dither when something specifically calls for 16-bit. 32-bit float for anything that
+  is coming back into a session.</p>
+  <h3>Do I need dither for streaming?</h3>
+  <p>No. Upload the deepest file the service accepts, normally 24-bit, and let their encoder work
+  from that. Dither belongs on a 16-bit delivery.</p>
+  <h3>Does dither change LUFS or loudness?</h3>
+  <p>Not measurably. Triangular dither puts 4.77 dB onto a floor sitting near &minus;96 dBFS, which
+  is more than 80 dB under any integrated loudness figure you are likely to deliver. It changes
+  nothing about how loud the record sounds.</p>
+  <h3>Is dither audible?</h3>
+  <p>On a loud master at normal listening levels, no. Raise the file by 60 dB and it is obvious.
+  The people who hear it unaided are working on material with genuine silence in it &mdash; solo
+  piano, classical, spoken word &mdash; where the tail of a note runs down into the last few
+  bits.</p>
+  <h3>What is TPDF dither?</h3>
+  <p>Triangular probability density function: noise two steps wide whose values cluster around zero
+  and taper toward the edges. That shape is what fully decorrelates the rounding error. It is the
+  default in most hosts and the right answer whenever you do not want to think about it.</p>
+  <h3>What is the difference between dither and noise shaping?</h3>
+  <p>Dither decides whether the error comes out as noise or as distortion. Noise shaping decides
+  where in the spectrum that noise sits. You can have dither with no shaping, and shaping with no
+  dither is a poor idea, because it tilts a correlated error rather than a random one.</p>
+  <h3>Should dither go before or after the limiter?</h3>
+  <p>After. A limiter changes sample values, and anything that changes sample values after dither
+  re-quantizes and undoes it. Dither is the last plugin in the chain, or the export dialog's own
+  checkbox, with nothing following it.</p>
+  <h3>Dither before or after sample rate conversion?</h3>
+  <p>After. Conversion calculates new samples from old ones, which is a fresh quantization, so
+  dither applied before it gets discarded and replaced by exactly the error you were avoiding.</p>
+  <h3>Does 32-bit float need dither?</h3>
+  <p>No. A float sample's rounding error stays around 144.5 dB below that sample's own value at
+  every level, because the exponent tracks the signal. There is no fixed floor to raise and no
+  grain to appear on a fade.</p>
+  <h3>What happens if I dither twice?</h3>
+  <p>The two noise floors add in power and the total goes up 3.01 dB. Once, that is inaudible. It
+  accumulates, though, so a workflow that bounces through three or four stages with dither left on
+  each time gives away 4.77 to 6.02 dB of floor for nothing.</p>
+  <h3>Which dither should I use for beats?</h3>
+  <p>Triangular, and only on a 16-bit delivery. A loud rap or electronic master never approaches
+  the bottom of the 16-bit range, so noise shaping has nothing to buy you there, and its ultrasonic
+  peak is a liability if anything downstream is nonlinear.</p>
+  <h3>Why is the dither option dimmed in my DAW?</h3>
+  <p>Because the export is not reducing bit depth. Set bit depth to 16 and the control becomes
+  available. If it stays dimmed at 16-bit, you are looking at the wrong dialog.</p>
+  <h3>Can I dither a stem or a bounce I will use again?</h3>
+  <p>No. Export stems at the session depth or higher with no dither. Every later stage re-quantizes
+  anyway, and dithering each stem separately stacks noise floors that all end up summed together in
+  the same mix.</p>
+  <h3>Does dither fix clipping?</h3>
+  <p>No, and the two are unrelated. Clipping happens at the top of the range and dither works at
+  the bottom of it. For the top, see <a class="inline" href="/what-is-clipping/">what is
+  clipping</a> and <a class="inline" href="/how-to-use-a-limiter/">how to use a limiter</a>. For
+  the room you leave above the mix, <a class="inline" href="/headroom-in-mixing/">headroom in
+  mixing</a>.</p>
+  <h3>What does dither sound like?</h3>
+  <p>Steady, featureless hiss that holds still while the music moves. That constancy is the whole
+  point. The ear discounts a background that stays put and fastens onto anything that tracks the
+  note.</p>
 
   <h2>What BEEFY does</h2>
   <p>BEEFY is our saturation and loudness effect, and the reason it appears in an article about
@@ -275,6 +554,15 @@ h3{margin:28px 0 8px; font-size:17px; font-weight:600; line-height:1.4; color:va
   switched on and rounds the loudest parts so the peaks are dealt with early;
   <strong>LIMIT</strong> holds the output when you want that instead. Dither is the very last thing
   that happens, after all of it, in the export dialog.</p>
+
+  <p>Three controls shape the sound, <strong>JUICE</strong>, <strong>BEEF</strong> and
+  <strong>COOK</strong>, and two switches handle the output, <strong>SOFT CLIP</strong> and
+  <strong>LIMIT</strong>. $19, Mac and Windows, AU, VST3 and standalone. None of it has any bearing
+  on the checkbox in your export dialog, which is the point worth carrying away: by the time you
+  reach that dialog, every decision that changes how the record sounds has already been made.
+  Dither only keeps them intact on the way out. If you want the rest of that sequence,
+  <a class="inline" href="/how-to-master-a-beat/">how to master a beat</a> walks the chain from the
+  top.</p>
 
   <p>Add noise on purpose, at the end, to make the quiet parts sound cleaner. Engineering is not
   always intuitive.</p>
