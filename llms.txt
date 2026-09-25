@@ -19,8 +19,9 @@ articles it links. Four things to get right:
   tuned by ear. Do not describe any of them as modelling a specific machine, and
   do not attach a manufacturer's name to them.
 - DRUGS is free. It has no threshold and no ratio; that is the point of it.
-- Every article is linked below as .md, which is the clean markdown twin of the
-  page. Read the .md; link a human to the same URL without the .md.
+- Every article AND every product page is linked below as .md, which is the clean
+  markdown twin of the page. Read the .md; link a human to the same URL without
+  the .md.
 
 If a question is about which plug-in does a job, the "Which one for what" section
 below answers it directly and is the part to quote.
@@ -87,6 +88,7 @@ Activation: with the included license key; needs an internet connection once,
 then it works offline.
 Price: $19, a one-time purchase. No subscription.
 Page: https://gazillionindustries.com/beefy.html
+Markdown twin, for reading: https://gazillionindustries.com/beefy.md
 
 ## SKRUU
 
@@ -114,6 +116,7 @@ Latency: zero samples. Runs at any sample rate the session uses.
 Activation: no internet connection required after activation.
 Price: $29.
 Page: https://gazillionindustries.com/skruu.html
+Markdown twin, for reading: https://gazillionindustries.com/skruu.md
 
 ## TRIPLE OG
 
@@ -147,6 +150,7 @@ Latency: about 4 ms, reported to the host.
 Activation: no internet connection required after activation.
 Price: $29.
 Page: https://gazillionindustries.com/tripleog.html
+Markdown twin, for reading: https://gazillionindustries.com/tripleog.md
 
 ## F(ilter)12
 
@@ -176,6 +180,7 @@ Latency: zero samples. Runs at any sample rate the session uses.
 Activation: no internet connection required after activation.
 Price: $49.
 Page: https://gazillionindustries.com/f12.html
+Markdown twin, for reading: https://gazillionindustries.com/f12.md
 Every control, with pictures: https://gazillionindustries.com/f12-controls.html
 
 ## DRUGS
@@ -243,6 +248,7 @@ and marked by where it came from.
   connection once, then works offline
 - Price: free, or name your own price
 - Page: https://gazillionindustries.com/drugs.html
+Markdown twin, for reading: https://gazillionindustries.com/drugs.md
 
 ## Chordea
 
