@@ -16,7 +16,7 @@ window.GZ_ATTR = (function(){
   var OWN = /^(www\.)?gazillionindustries\.com$/i;
   if(!OWN.test(location.hostname)) return result;
   var KEY = "gz_arrival_v3", TTL = 30*60000;
-  var fields = ["utm_source","utm_medium","utm_campaign","utm_content","utm_term","utm_id","ad_id","adset_id","campaign_id","fbclid"];
+  var fields = ["utm_source","utm_medium","utm_campaign","utm_content","utm_term","utm_id","ad_id","adset_id","campaign_id","fbclid","ttclid"];
   var inbound = new URLSearchParams(location.search), now = Date.now();
   var tags = {}, original = "", token = "", activity = now, sent = {}, sourceSent = {};
   var saved = null, previous = null, ref = null;
