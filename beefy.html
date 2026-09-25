@@ -207,6 +207,35 @@ window.GZ_ATTR = (function(){
   return result;
 })();
 </script>
+<script id="gz-tiktok-beefy">
+(function(){
+  if(!/^(www\.)?gazillionindustries\.com$/i.test(location.hostname) || window.GZ_TIKTOK_BEEFY) return;
+  window.GZ_TIKTOK_BEEFY = true;
+  if(!window.ttq || typeof window.ttq.load !== "function"){
+  // Code copied from TikTok
+  (function(w,d,t){w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};var a=d.createElement("script");a.type="text/javascript",a.async=!0,a.src=r+"?sdkid="+e+"&lib="+t;var s=d.getElementsByTagName("script")[0];s.parentNode.insertBefore(a,s)};}(window,document,'ttq'));
+  }
+  var pixelId = "DAQQKERC77UFPT804RG0";
+  if(!window.ttq._i || !window.ttq._i[pixelId]) window.ttq.load(pixelId);
+  window.ttq.instance(pixelId).page();
+  function viewProduct(){
+    var params = {content_id:"xelfo",content_type:"product",content_name:"BEEFY"};
+    document.querySelectorAll('script[type="application/ld+json"]').forEach(function(node){
+      try {
+        var product=JSON.parse(node.textContent);
+        if(product.name !== "BEEFY" || !product.offers) return;
+        var price=Number(product.offers.price), currency=product.offers.priceCurrency;
+        if(Number.isFinite(price) && price >= 0 && /^[A-Z]{3}$/.test(currency || "")){
+          params.value=price; params.currency=currency;
+        }
+      } catch(e) {}
+    });
+    window.ttq.instance(pixelId).track("ViewContent",params);
+  }
+  if(document.readyState === "loading") document.addEventListener("DOMContentLoaded",viewProduct,{once:true});
+  else viewProduct();
+})();
+</script>
 <link rel="canonical" href="https://gazillionindustries.com/beefy.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Gazillion Industries">
