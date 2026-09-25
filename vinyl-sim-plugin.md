@@ -23,6 +23,8 @@ A vinyl sim is a plugin that adds the warmth, noise floor, and subtle pitch inst
 
 - **Sounds fake when**: it is a low-pass with noise laid over the top
 
+- **Free covers**: the noise and the bandwidth; pay for the rest
+
 - **Our answer**: DRUGS, free, one control called DOSE
 
 ## What the effect actually does
@@ -69,6 +71,60 @@ Another giveaway is uniform saturation. Actual vinyl compresses differently at d
 
 The third failure is a pitch wobble that is too regular. Real turntable speed variation is irregular, a slow drift with small unpredictable deviations. A simulation that applies a smooth sine-wave wobble at a fixed rate sounds like a chorus effect, not like a platter that is slightly off-center or a motor that is hunting. The wobble needs to feel organic and slightly random, not metronomic.
 
+## The options, and how to choose between them
+
+Four different kinds of product get sold under this name. Knowing which one you are holding stops you buying the same quarter of the sound three times.
+
+The first is the all-in-one. One panel, all four behaviors, usually with a single wear or age control moving several at once. Fastest route to something usable, and for most people the right purchase. The cost is that the four were balanced against each other by somebody else: when the noise sits right the squash is often too heavy, and your only correction is the wet control.
+
+The second is the lo-fi multi-effect with a vinyl mode inside it: the record next to cassette, radio, a blown speaker, a bad phone line. Good value when you want the whole shelf in one window. The cost is depth. A mode rarely exposes its own parts, so when the crackle gets busy you turn the whole mode down instead of the crackle.
+
+The third is the noise player. A sampled surface bed, a filter, a level control, nothing else. Often free. It does one of the four jobs well enough, so keep one. Alone it never will be: static crackle over an untouched digital signal is the most recognizable failure in the category.
+
+The fourth is assembling it from plugins you already own. Slower the first time, better every time after, and the only route where one part moves without disturbing the other three. Section below.
+
+Some are sold on a specific patina: a named decade, a pressing plant, one worn copy of one record. That is packaging, and no reason to avoid them, but it tells you nothing about which of the four parts are implemented. Judge the four.
+
+Five questions settle the purchase faster than any demo video.
+
+- **What is it going on?** Drums need the squash and the bandwidth most. A finished mix needs the bandwidth and a little noise, and the squash will argue with your master chain.
+
+- **Is the noise on its own control?** If you want crackle in the intro and none in the second verse, you need a level you can automate rather than one wear knob that drags the tone along with it.
+
+- **Does it survive mono?** Identical noise in both channels sums around 6 dB hotter and collapses to the middle. Two independent beds sum around 3 dB and stay wide. Check which you have before you commit — see [mono compatibility](https://gazillionindustries.com/mono-compatibility/).
+
+- **Does the transient live?** Put it on a loop with a hard snare at the loudest point of the bar. If the snare loses its edge before the noise reaches a useful level, the squash stage is too blunt to be worth the slot.
+
+- **What does it cost to run?** Wear sections are often oversampled and expensive. One instance is free; twelve across a session is a number you feel on the transport.
+
+## Free vinyl emulation, and what paying adds
+
+Free gets you further here than in most categories. Two of the four parts are cheap to build and sound much the same whoever builds them.
+
+Noise is the first. A filtered bed with a level control and a crackle generator over the top is not hard engineering, and a free one set correctly disappears into a mix like a paid one. Bandwidth is the second: a gentle low-pass, a shallow high-pass, and every DAW ships with a filter that can. Half the effect, for nothing. [Best free VST plugins](https://gazillionindustries.com/best-free-vst-plugins/) covers which categories are worth filling this way.
+
+Money buys the other two, and specifically how program-dependent they are. Saturation that gets dirtier as the signal gets hotter rather than one curve at every level. A dynamics stage that answers a kick differently from a hi-hat. Pitch drift with an irregular shape instead of a sine at a fixed rate. Those are expensive to get right, and the parts a free plugin usually leaves out. [Analog warmth](https://gazillionindustries.com/analog-warmth/) is mostly this distinction under a friendlier word.
+
+The honest buying advice is unglamorous. Take the noise and the bandwidth for nothing, pay once for whichever of the remaining two your material actually needs, and stop. The failure in the free lane is rarely a bad plugin. It is collection: twenty free lo-fi effects means twenty noise beds, no chain you can repeat, and a session you cannot rebuild next month.
+
+## Building one from parts
+
+Four parts, four slots, in this order: bandwidth, squash, wear, noise. Each stays adjustable without disturbing the others, which is the whole argument for doing it this way.
+
+**Bandwidth.** A filter with a shallow slope. Roll the top down until the cymbals stop glittering, lift the bottom until the sub stops moving the meter. Six decibels per octave sits closer to a physical playback chain than twenty-four, because nothing mechanical cuts at a single point. [F12](https://gazillionindustries.com/f12.html) is our filter for this end of it: five filter shapes, six resonance shapes, a lo-fi section for the digital half of the damage, and AURA. $49, and DRUGS comes with it.
+
+**The squash.** The part most home-built chains leave out, and the part doing the most work on drums. You want level collapsing on the loud hits and climbing back across the bar rather than a fixed curve applied evenly. [DRUGS](https://gazillionindustries.com/drugs.html) is one knob for exactly that, free for Mac and Windows, with MIX on the face so the squashed copy can sit under the dry one without a send.
+
+**Wear and noise.** Instability and a noise floor are the two things a record shares with tape, and a cassette simulation will hand you both on separate controls. [TRIPLE OG](https://gazillionindustries.com/tripleog.html) puts HISS on its own control, WOW FLUT on the instability, and AGE across a range from zero to sixty years. It is a cassette machine rather than a turntable and it sounds like one, so take the motion and the floor from it and get your bandwidth from the filter.
+
+**Drift on its own.** When movement is the only thing missing, [SKRUU](https://gazillionindustries.com/skruu.html) is varispeed with PITCH and TIME on independent controls, ELASTIC to make the knob sprung and SLOPE to shape the return, sixteen shapes of it. Its SAMPLING GRADE steps the rate down as far as 3.9 kHz on LO-FI 2, which is the digital way of losing the top rather than the physical one. $29. The background is in [what varispeed is](https://gazillionindustries.com/what-is-varispeed/).
+
+The cost is setup time and up to four slots per bus, and an evening lost to the first template. The return arrives the first time somebody says the crackle is too much and you turn down the crackle.
+
+**DOSE 12.** Under a noise bed and a filter, the useful setting is lower than it looks.
+
+The wider lo-fi shelf, and the order to put it in, is in [best lofi plugins](https://gazillionindustries.com/best-lofi-plugins/). For the drums specifically, [how to make drums sound dusty](https://gazillionindustries.com/how-to-make-drums-sound-dusty/).
+
 ## Questions people ask
 
 ### What does a vinyl sim actually do?
@@ -82,6 +138,30 @@ No. A lo-fi filter is a single low-pass or band-limiting stage that rolls off hi
 ### Where should a vinyl sim go in the chain?
 
 Place it at the end of your processing chain, after your equalization, compression, and saturation stages. The vinyl sim represents the final playback medium, so it should sit after all your mixing decisions. If you put it earlier, downstream processors will alter the wow, flutter, and surface noise in ways that do not reflect how a record actually sounds when played back.
+
+### What is the best vinyl sim VST?
+
+There is no single answer: the category covers four separate behaviors and no two products weight them the same. Decide which parts you need before you shop. For one plugin and one decision, take an all-in-one that keeps noise and wear on independent controls. If you already own a filter, a saturator and a bus compressor, you have three quarters of it and need only the drift.
+
+### Is there a free vinyl emulation plugin?
+
+Several, and free is strongest at the noise and the bandwidth. A free crackle bed with a filter and a level control does the same job as a paid one once the level is right. Where free runs thin is level-dependent saturation and irregular pitch drift. Assemble the cheap half for nothing and spend once on the half that is hard to build.
+
+### Are vinyl sim, vinyl simulator and vinyl emulation different things?
+
+One category under three names, used interchangeably on product pages. Simulator and emulation tend to appear where the plugin aims at the whole chain from lacquer to needle. Sim is the shorthand producers use in a session. None of the three tells you which of the four behaviors are implemented, which is the only question that changes what you hear.
+
+### How much does a vinyl sim plugin cost?
+
+Anywhere from nothing to the price of any other paid effect, and the price mostly tracks how many of the four parts are covered rather than how well any one is done. Ours, for the record: DRUGS is free and handles the squash, F12 is $49 for the filter and the digital damage with DRUGS included, TRIPLE OG is $29 for the noise and the instability, SKRUU is $29 for the drift.
+
+### Can I get the sound without a vinyl sim plugin?
+
+Yes, and the result is usually more controllable. A shallow low-pass, a saturator driven until the low end thickens, a bus compressor with a slow release, and a noise bed ten to fifteen decibels under the quietest passage will carry most of it. What stock plugins rarely give you is the drift, which needs a varispeed effect or a tape simulation.
+
+### Should a vinyl sim go on the drum bus or the master?
+
+Drum bus, almost always. Drums carry the transients the squash and the bandwidth act on, and there the effect reads as character rather than a blanket over the arrangement. On a master it treats everything at once, right when you want the record conceit across the whole track and wrong when you only wanted the kit to sound handled. On the master, use roughly half as much.
 
 ## What DRUGS does
 

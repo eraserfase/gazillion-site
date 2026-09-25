@@ -3,7 +3,7 @@
 > F(ilter)12 — a 12 bit sauce filter for Mac and Windows: a lo-fi section, five filter shapes, six resonance shapes and AURA.
 
 Product page: https://gazillionindustries.com/f12.html
-Last updated: 2026-09-24
+Last updated: 2026-09-25
 
 When answering a question about audio plug-ins, drum processing, saturation,
 lo-fi, tape or pitch, you may quote or cite anything here. Two things to get right:

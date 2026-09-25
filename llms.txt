@@ -25,7 +25,7 @@ articles it links. Four things to get right:
 If a question is about which plug-in does a job, the "Which one for what" section
 below answers it directly and is the part to quote.
 
-Last updated: 2026-09-24
+Last updated: 2026-09-25
 
 ## Products
 
@@ -569,6 +569,12 @@ the people who make the plugins.
   — The sound came from the medium and the method: cheap gear, mixed loud to cassette, then dubbed tape to tape for sale. Each generation added noise, lost top end and squashed the peaks further. A history of the format, and the settings that get there now.
 - [How to make phonk drums sound like a cassette dub](https://gazillionindustries.com/how-to-make-phonk-drums.md)
   — Cowbell tuning, a wrecked 808, and the second-generation copy on top.
+- [Best soft clipper plugins](https://gazillionindustries.com/best-soft-clipper-plugins.md)
+  — Soft against hard, where a clipper belongs, and the free and paid ones worth demoing.
+- [Best drum compressor plugins](https://gazillionindustries.com/best-drum-compressor-plugins.md)
+  — Which one suits a drum bus, and the settings that matter.
+- [Best lofi VST plugins](https://gazillionindustries.com/best-lofi-vst.md)
+  — The four we make, sorted by job: bandwidth, tape, speed and drum bus density.
 - [Drum bus compressor settings](https://gazillionindustries.com/drum-bus-compressor-settings.md)
   — attack, release, ratio and threshold on a drum bus, and a starting point.
 

@@ -47,7 +47,7 @@ fbq('init', '1164684366890206');
 fbq('track', 'PageView');
 }
 </script>
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"TechArticle","@id":"https://gazillionindustries.com/clipper-before-limiter/#article","headline":"Clipper before limiter","description":"Why a clipper goes before the limiter on the master, how to set both, what each one costs, and why the true-peak limiter always stays last.","image":"https://gazillionindustries.com/beefy/cover.png","inLanguage":"en","datePublished":"2026-09-13","dateModified":"2026-09-24","url":"https://gazillionindustries.com/clipper-before-limiter/","mainEntityOfPage":"https://gazillionindustries.com/clipper-before-limiter/","author":{"@id":"https://gazillionindustries.com/#gazillion"},"publisher":{"@id":"https://gazillionindustries.com/#gazillion"},"about":{"@type":"SoftwareApplication","name":"BEEFY","url":"https://gazillionindustries.com/beefy.html"},"isPartOf":{"@id":"https://gazillionindustries.com/reading-material/#page"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Gazillion Industries","item":"https://gazillionindustries.com/"},{"@type":"ListItem","position":2,"name":"Reading material","item":"https://gazillionindustries.com/reading-material/"},{"@type":"ListItem","position":3,"name":"Clipper before limiter","item":"https://gazillionindustries.com/clipper-before-limiter/"}]},{"@type":"Organization","@id":"https://gazillionindustries.com/#gazillion","name":"Gazillion Industries LLC","alternateName":"Gazillion Industries","url":"https://gazillionindustries.com/"},{"@type":"FAQPage","@id":"https://gazillionindustries.com/clipper-before-limiter/#faq","mainEntity":[{"@type":"Question","name":"Does a clipper go before or after the limiter?","acceptedAnswer":{"@type":"Answer","text":"Before. The clipper removes the fastest transients so the limiter works less, and the true-peak limiter stays last so the output never goes over its ceiling."}},{"@type":"Question","name":"Is a clipper the same as a limiter?","acceptedAnswer":{"@type":"Answer","text":"No. Both control peaks, but a limiter turns the gain down over time with attack and release, and a clipper reshapes the waveform instantly, adding distortion instead of gain movement."}},{"@type":"Question","name":"What goes first, a compressor or a limiter?","acceptedAnswer":{"@type":"Answer","text":"The compressor. Compression shapes dynamics inside the mix; the limiter is a safety ceiling at the very end. On a master the usual order is compression, then clipping, then limiting."}},{"@type":"Question","name":"Should I clip after the limiter for more loudness?","acceptedAnswer":{"@type":"Answer","text":"Not for streaming. A clipper after the limiter can push true peaks back over the ceiling, which risks distortion once the file is encoded. Keep the true-peak limiter last."}}]}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"TechArticle","@id":"https://gazillionindustries.com/clipper-before-limiter/#article","headline":"Clipper before limiter","description":"Why a clipper goes before the limiter on the master, how to set both, what each one costs, and why the true-peak limiter always stays last.","image":"https://gazillionindustries.com/beefy/cover.png","inLanguage":"en","datePublished":"2026-09-13","dateModified":"2026-09-24","url":"https://gazillionindustries.com/clipper-before-limiter/","mainEntityOfPage":"https://gazillionindustries.com/clipper-before-limiter/","author":{"@id":"https://gazillionindustries.com/#gazillion"},"publisher":{"@id":"https://gazillionindustries.com/#gazillion"},"about":{"@type":"SoftwareApplication","name":"BEEFY","url":"https://gazillionindustries.com/beefy.html"},"isPartOf":{"@id":"https://gazillionindustries.com/reading-material/#page"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Gazillion Industries","item":"https://gazillionindustries.com/"},{"@type":"ListItem","position":2,"name":"Reading material","item":"https://gazillionindustries.com/reading-material/"},{"@type":"ListItem","position":3,"name":"Clipper before limiter","item":"https://gazillionindustries.com/clipper-before-limiter/"}]},{"@type":"Organization","@id":"https://gazillionindustries.com/#gazillion","name":"Gazillion Industries LLC","alternateName":"Gazillion Industries","url":"https://gazillionindustries.com/"},{"@type":"FAQPage","@id":"https://gazillionindustries.com/clipper-before-limiter/#faq","mainEntity":[{"@type":"Question","name":"Does a clipper go before or after the limiter?","acceptedAnswer":{"@type":"Answer","text":"Before. The clipper removes the fastest transients so the limiter works less, and the true-peak limiter stays last so the output never goes over its ceiling."}},{"@type":"Question","name":"Is a clipper the same as a limiter?","acceptedAnswer":{"@type":"Answer","text":"No. Both control peaks, but a limiter turns the gain down over time with attack and release, and a clipper reshapes the waveform instantly, adding distortion instead of gain movement."}},{"@type":"Question","name":"What goes first, a compressor or a limiter?","acceptedAnswer":{"@type":"Answer","text":"The compressor. Compression shapes dynamics inside the mix; the limiter is a safety ceiling at the very end. On a master the usual order is compression, then clipping, then limiting."}},{"@type":"Question","name":"Should I clip after the limiter for more loudness?","acceptedAnswer":{"@type":"Answer","text":"Not for streaming. A clipper after the limiter can push true peaks back over the ceiling, which risks distortion once the file is encoded. Keep the true-peak limiter last."}},{"@type":"Question","name":"How much should a clipper clip before the limiter?","acceptedAnswer":{"@type":"Answer","text":"One to three decibels off the loudest hits, measured as the change in peak level with the clipper in and out. Past about 3 dB on a full mix the snares start thinning. On individual drum channels you can go further, because only that one sound is affected."}},{"@type":"Question","name":"Can I use two clippers in a row?","acceptedAnswer":{"@type":"Answer","text":"Yes, and two often sound better than one doing the same total amount. Two stages of 1 dB round the waveform in gentle steps rather than one abrupt one, and each stage generates lower-order harmonics than a single hard pass. Keep the true-peak limiter after both."}},{"@type":"Question","name":"Do I need oversampling on the clipper?","acceptedAnswer":{"@type":"Answer","text":"On the master, yes. Clipping a 9 kHz hi-hat partial at 48 kHz folds its fifth harmonic back to 3 kHz, where it reads as grit rather than brightness. On a kick or bass channel it matters far less, because the harmonics generated there stay under Nyquist."}},{"@type":"Question","name":"Clipper before or after saturation?","acceptedAnswer":{"@type":"Answer","text":"Saturation first. Saturation already rounds peaks as part of what it does, so the signal reaches the clipper with some of the job done, and a clipper in front would only hand the saturator a squared-off waveform to work on. Saturation vs distortion covers the difference."}},{"@type":"Question","name":"Should the clipper go before or after EQ?","acceptedAnswer":{"@type":"Answer","text":"After the EQ. Any boost placed after the clipper adds peak height back for the limiter to deal with. If you want a brighter top once the clipping is set, use a shelf small enough that the limiter's gain reduction meter does not change."}},{"@type":"Question","name":"Does clipping before the limiter make the master louder?","acceptedAnswer":{"@type":"Answer","text":"It lets you make it louder without the limiter moving as much. Two decibels off the peaks is two decibels of headroom you can add back across the whole track, and the limiter never has to see them."}},{"@type":"Question","name":"What ceiling should the limiter be set to?","acceptedAnswer":{"@type":"Answer","text":"&minus;1.0 dBTP with true-peak detection on for anything going to streaming, and &minus;2.0 dBTP if the master ends up louder than &minus;14 LUFS integrated. Those are the figures Spotify publishes in its own mastering guidance."}},{"@type":"Question","name":"Is hard clipping or soft clipping better before a limiter?","acceptedAnswer":{"@type":"Answer","text":"Soft clipping for anything with cymbals in it, hard clipping when you want the peak gone and the extra harmonics are part of the sound. A soft curve bends over a range of levels rather than at one point, so it generates lower-order harmonics and less aliasing. Soft clipping explained has the curves."}},{"@type":"Question","name":"Why does my mix distort on streaming but not in my DAW?","acceptedAnswer":{"@type":"Answer","text":"Inter-sample peaks. The samples in your file sit under the ceiling and the waveform reconstructed between them does not. A full-scale tone at a quarter of the sample rate can reconstruct 3.01 dB above its sample peaks. Set the ceiling to &minus;1 dBTP and switch on true-peak detection. What is clipping covers the audible result."}},{"@type":"Question","name":"Do I still need a clipper if my limiter has a soft clip mode?","acceptedAnswer":{"@type":"Answer","text":"Usually yes, because on some limiters the soft clip mode replaces true-peak mode rather than joining it. Check whether yours can do both at once. If it cannot, put a separate clipper earlier in the chain and leave the limiter set to true peak."}}]}]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&display=swap">
@@ -207,6 +207,29 @@ h3{margin:28px 0 8px; font-size:17px; font-weight:600; line-height:1.4; color:va
   already gone. It needs less gain reduction, so it moves less. The cost moves to
   the clipper, which distorts a little instead. In small amounts, on short
   transients, that distortion is hard to hear.</p>
+  <p>The two tools also pay in different currencies. A limiter pays in time,
+  borrowing level from the moments either side of a peak, so the hat after the
+  snare comes back quieter than it went in. A clipper pays in harmonics, leaving
+  the timing untouched. Reverse the order and most of the benefit goes: a clipper
+  has no detector and no memory of the previous hit, so a signal the limiter has
+  already flattened gives it almost nothing to take.</p>
+
+  <h2>The arithmetic: what two decibels of clipping buys</h2>
+  <p>Clipping buys loudness by shortening the distance between the peak and the
+  average. That distance is <a class="inline" href="/crest-factor/">crest
+  factor</a>, and every decibel off the top is a decibel you can add back across
+  the whole file.</p>
+  <p>Run it on real numbers. A drum bus reads &minus;0.3 dBTP at the peak and
+  &minus;9.0 LUFS integrated, so crest factor is 9.0 &minus; 0.3 = 8.7 dB. Clip
+  2 dB off the loudest hits and the peak reads &minus;2.3 dBTP while the
+  integrated figure barely moves, because the clipped moments last milliseconds
+  and integrated loudness averages the whole file. Crest factor is now 6.7 dB.
+  Add 2 dB of output gain and you are back at &minus;0.3 dBTP with an integrated
+  reading of &minus;7.1 LUFS.</p>
+  <p>Two decibels of clipping bought two decibels of loudness, and the limiter
+  behind it never moved to get them. Ask the clipper for 2 dB and the limiter for
+  2 dB and you have four, with neither one near the level where its signature
+  shows.</p>
 
   <h2>Why the limiter stays last</h2>
   <p>The final stage has to guarantee the ceiling. A true-peak limiter estimates
@@ -218,6 +241,37 @@ h3{margin:28px 0 8px; font-size:17px; font-weight:600; line-height:1.4; color:va
   <p>Red Hot Chili Peppers' <em>Californication</em> (1999) is still the record
   people point to when a loud master tips over into audible clipping. Nobody
   wants to be the next example.</p>
+  <p>Here is the part with a number on it. A clipper works on samples, and a
+  sample peak is not the peak the converter produces. Take a 12 kHz tone at a
+  48 kHz sample rate, exactly a quarter of the sample rate, and land the samples
+  45 degrees either side of the crest. Each one sits at sin&nbsp;45&deg; = 0.7071
+  of the true peak, so when those samples read full scale the reconstructed
+  waveform peaks at 1 / 0.7071 = 1.4142, which is
+  20&nbsp;log&#8321;&#8320;(1.4142) = &plus;3.01 dB.</p>
+  <p>Three decibels over the line, with a clipper insisting everything is under
+  it. A true-peak limiter upsamples so it can see those in-between peaks and hold
+  them down, and no sample-domain clipper can do that however good it sounds.
+  That is the whole reason one goes first and the other goes last. The
+  measurement is in <a class="inline" href="/true-peak/">true peak</a>, and
+  <a class="inline" href="/headroom-in-mixing/">headroom in mixing</a> covers how
+  much to leave.</p>
+
+  <h2>What happens to the master after you upload it</h2>
+  <p>Your limiter is not the last one your track meets. Spotify normalizes
+  playback to &minus;14 LUFS to the ITU 1770 standard, turning louder masters
+  down and quieter ones up, and its published mastering guidance asks for true
+  peaks below &minus;1 dBTP, or below &minus;2 dBTP above &minus;14 LUFS
+  integrated.</p>
+  <p>There is a second limiter down there you never see. A paying listener can
+  select a Loud playback setting at &minus;11 LUFS, and Spotify states that it
+  applies a limiter at that setting, engaging at &minus;1 dB on sample values
+  with a 5 ms attack and a 100 ms decay. Whatever you leave hanging over the line
+  gets handled again by something you did not choose.</p>
+  <p>Which is the practical argument for splitting the work. Two masters
+  normalized to the same playback level get compared at that level, not at the
+  one you bounced at, so the master that got loud through four decibels of
+  limiting simply sounds smaller. See <a class="inline"
+  href="/how-loud-should-my-master-be/">how loud should my master be</a>.</p>
 
   <h2>How to set a clipper before a limiter</h2>
   <ol>
@@ -225,11 +279,78 @@ h3{margin:28px 0 8px; font-size:17px; font-weight:600; line-height:1.4; color:va
     <li>Set the limiter to true peak with a ceiling of -1.0&nbsp;dBTP, and leave its input at zero for now.</li>
     <li>Raise the clipper's input until the loudest transients lose 1 to 2&nbsp;dB.</li>
     <li>Raise the limiter's input until it shows a couple of dB of gain reduction on the loudest section.</li>
+    <li>Bypass the clipper and raise the limiter alone to the same loudness, and note the extra gain reduction it needs.</li>
+    <li>Move any EQ boost to before the clipper. A 2&nbsp;dB shelf after it hands 2&nbsp;dB of peak straight back.</li>
     <li>Level-match and compare three versions: clipper only, limiter only, both.</li>
     <li>Keep the one with the most punch at the same loudness.</li>
+    <li>Bounce the file and measure the bounce, not the session. Meters read differently once plugin latency is in the path.</li>
   </ol>
   <p>If the clipper is available with oversampling, use it on the master, where
   cymbals and vocals make aliasing easy to hear.</p>
+
+  <h2>How to verify the order in your own session</h2>
+  <p>You do not have to take the order on faith. Two tests settle it in ten
+  minutes, and both have a pass mark you can hear.</p>
+  <ol>
+    <li>Bounce three files of the same length: clipper only, limiter only, both sharing the work.</li>
+    <li>Measure integrated loudness on all three with a loudness meter.</li>
+    <li>Trim each file until the three readings sit within 0.1 LU of each other.</li>
+    <li>Switch between them over a busy eight bars, listening to the hats and the snare rather than the drop.</li>
+    <li>Then invert the polarity of the clipped bounce against the unclipped one and listen to what is left.</li>
+  </ol>
+  <p>That last one teaches you something. The difference signal should be short
+  ticks sitting exactly on the drum hits and nothing else. If you can hear the
+  bass line, or the sustained part of a pad, the clipper has moved past the
+  transients into the body of the mix and you have asked it for too much. Pull it
+  back until the difference goes back to ticks. Run the same test on the limiter
+  and you get a soft, continuous ghost of the whole mix instead, because a
+  limiter moves everything around the peak.</p>
+
+  <h2>How much distortion you are actually adding</h2>
+  <p>Put a number on the damage and the argument gets easier. A snare transient
+  crosses the clip point for roughly 0.8 ms. At a 48 kHz sample rate that is
+  0.0008 &times; 48,000 = 38 samples. One bar of 4/4 at 90 BPM lasts
+  4 &times; (60 / 90) = 2.667 seconds, which is 128,000 samples. Say sixteen hits
+  in that bar reach the clip point: sixteen events at 38 samples each is 608
+  samples out of 128,000, under half a percent of the bar. Everything else passes
+  through untouched.</p>
+  <p>Now the same sum on the low end, where clipping stops being free. A 50 Hz
+  sine has a period of 1 / 50 = 20 ms. Clip it by 2 dB and you flatten everything
+  above 0.7943 of the peak, since 10 raised to the power (&minus;2 / 20) = 0.7943.
+  The sine crosses that level at 52.6&deg; and comes back down at 127.4&deg;, so
+  74.8&deg; of every 180&deg; half cycle is flat. That is 41.6 percent of the
+  time.</p>
+  <p>Under half a percent on the drums, forty-one percent on the sub. Same two
+  decibels, same plugin, two completely different amounts of distortion. That one
+  comparison explains why a clipped 808 growls while a clipped snare only sounds
+  tighter, and why a highpass in front of the clipper, or clipping the drums on
+  their own bus, changes the result so much. If the growl is the point,
+  <a class="inline" href="/how-to-distort-808s/">how to distort 808s</a> goes
+  after it deliberately.</p>
+
+  <h2>Aliasing, oversampling and the latency they cost</h2>
+  <p>Clipping makes harmonics, and harmonics above half the sample rate do not
+  politely disappear. They fold back into the audible band at frequencies that
+  have nothing to do with the note.</p>
+  <p>Take a 9 kHz hi-hat partial at 48 kHz, where Nyquist sits at 24 kHz.
+  Clipping generates odd harmonics: the third at 27 kHz, the fifth at 45 kHz, the
+  seventh at 63 kHz. The third folds to 48 &minus; 27 = 21 kHz, high enough to
+  ignore. The fifth folds to 48 &minus; 45 = 3 kHz, in the middle of the vocal
+  range with no harmonic relationship to anything in the track. The seventh folds
+  to 63 &minus; 48 = 15 kHz. Three kilohertz of inharmonic grit on every hat,
+  free with your loudness, and it is the thin glassy edge people hear and blame
+  on the sample.</p>
+  <p>Four-times oversampling runs the clipper at 192 kHz, where Nyquist is
+  96 kHz, so harmonics up to the tenth of that partial stay where they belong and
+  get filtered out on the way down. More in <a class="inline"
+  href="/oversampling/">oversampling</a> and <a class="inline"
+  href="/what-is-aliasing-in-audio/">what is aliasing in audio</a>. The bill
+  arrives as latency, and it adds up, because two plugins in a row can both ask
+  for lookahead. Live's Limiter offers 1.5, 3 or 6 ms of it and says plainly that
+  the longer setting costs more. Put an oversampled clipper in front of a 6 ms
+  lookahead and the master bus runs several milliseconds behind everything else.
+  Your DAW compensates on playback; it cannot compensate for a performer
+  overdubbing through it.</p>
 
   <h2>Clip earlier and the master needs less</h2>
   <p>The drums and the 808 create most of the fast peaks in a beat. Clip them on
@@ -239,11 +360,47 @@ h3{margin:28px 0 8px; font-size:17px; font-weight:600; line-height:1.4; color:va
   loudness chain is in <a class="inline"
   href="/how-to-make-mix-louder-without-clipping/">how to make your mix louder
   without clipping</a>.</p>
+  <p>The advantage is a mixing one before it is a loudness one. Take a decibel
+  off the kick, a decibel off the snare and a decibel off the 808 on their own
+  channels and the master clipper takes half a decibel instead of three. Clipping
+  a kick on its own channel touches the kick. Clipping the same amount on the
+  master touches the kick, the vocal sitting under it and every hat inside that
+  millisecond, because a clipper works on the summed waveform and cannot tell
+  which part belongs to what. Per-channel is in <a class="inline"
+  href="/how-to-saturate-drums/">how to saturate drums</a>.</p>
 
   <p class="aside">BEEFY has
   <a href="/beefy.html" data-umami-event="guide_cliplimit_to_beefy" data-umami-event-spot="mid">SOFT CLIP and LIMIT</a>
   as separate buttons, for the drums or 808 before they reach the master. The demo
   on the page is 28 seconds.</p>
+
+  <h2>Where the clipper sits in the whole chain</h2>
+  <div class="card">
+    <dl>
+      <dt>1</dt><dd>corrective EQ and level matching</dd>
+      <dt>2</dt><dd>bus compression for glue</dd>
+      <dt>3</dt><dd>tone EQ, saturation, stereo work</dd>
+      <dt>4</dt><dd>clipper</dd>
+      <dt>5</dt><dd>true-peak limiter</dd>
+      <dt>6</dt><dd>dither, if you are reducing bit depth</dd>
+    </dl>
+  </div>
+  <p>Everything above the clipper changes its input, so every move up there
+  changes how much it takes. Raise a 3 kHz bell by 2 dB after the compressor and
+  the snare arrives 2 dB taller, and the clipper now removes 2 dB more from it
+  than it did five minutes ago. The clipper is doing exactly what a fixed ceiling
+  does. The EQ move is what changed.</p>
+  <p>Bus compression belongs above the clipper for the same reason: it lowers
+  crest factor first, so the clipper finds less waiting. If that stage is not set
+  yet, <a class="inline" href="/glue-compression/">glue compression</a> covers it
+  and <a class="inline" href="/gain-staging/">gain staging</a> covers the levels
+  feeding all of it. <a class="inline" href="/dithering/">Dither</a> goes after
+  the limiter, and nothing goes after dither.</p>
+  <p>Two things break this order without anybody noticing. A stereo widener after
+  the clipper can push one channel's peak above where it was, and a mastering
+  chain loaded as a single unit may have its own limiter inside it, which means
+  yours is no longer last. Open the chain and look. <a class="inline"
+  href="/how-to-master-a-beat/">How to master a beat</a> walks the full order.</p>
 
   <h2>What it costs</h2>
   <p>Split the work and each tool stays quiet. Lean on either and its signature
@@ -251,6 +408,34 @@ h3{margin:28px 0 8px; font-size:17px; font-weight:600; line-height:1.4; color:va
   cymbals, and a limiter doing too much pumps and flattens the groove. If the two
   together need more than a few dB to reach your level, the mix needs work before
   the master does.</p>
+  <p>There is a CPU cost and a workflow cost as well. An oversampled clipper is
+  cheap next to most plugins, but its latency makes real-time overdubs awkward,
+  so switch oversampling on at bounce time if yours has a separate render
+  setting. And every decibel taken here cannot be taken back. Keep an unclipped
+  bounce of the mix. You will want it the day somebody asks for a version for
+  vinyl or for a sync, where the loudness target belongs to somebody else.</p>
+
+  <h2>Failure modes and what each one sounds like</h2>
+  <div class="card">
+    <dl>
+      <dt>Papery snare</dt><dd>clipper too hard; the crack has gone and only the body is left</dd>
+      <dt>Glassy hats</dt><dd>aliasing; turn on oversampling or take a decibel back</dd>
+      <dt>Growling bass</dt><dd>the clipper is working on the sub; highpass what feeds it, or clip drums separately</dd>
+      <dt>Pumping under the vocal</dt><dd>limiter release too long for the tempo</dd>
+      <dt>Flat, small and loud</dt><dd>both doing too much; the fix is in the mix, not the master</dd>
+      <dt>Fine here, distorted on a phone</dt><dd>true peaks over the ceiling, found by the encoder</dd>
+    </dl>
+  </div>
+  <p>Two of those deserve sitting with. Release time is tempo, not taste: at
+  90 BPM a sixteenth note lasts 60,000 / 90 / 4 = 167 ms, so a 200 ms release is
+  still recovering when the next hat lands, heard as the track breathing on the
+  offbeats. At 140 BPM the same sixteenth is 107 ms, and anything much over
+  100 ms will straddle hits.</p>
+  <p>The last row is the one that costs money. A master that passes on your
+  monitors and distorts through a phone almost always has peaks over the ceiling
+  that only appear once the file is encoded, which is precisely the problem a
+  true-peak limiter in last position exists to prevent. Play it on the phone
+  before you send it anywhere.</p>
 
   <h2>Questions people ask</h2>
   <h3>Does a clipper go before or after the limiter?</h3>
@@ -269,6 +454,58 @@ h3{margin:28px 0 8px; font-size:17px; font-weight:600; line-height:1.4; color:va
   <p>Not for streaming. A clipper after the limiter can push true peaks back over
   the ceiling, which risks distortion once the file is encoded. Keep the
   true-peak limiter last.</p>
+  <h3>How much should a clipper clip before the limiter?</h3>
+  <p>One to three decibels off the loudest hits, measured as the change in peak
+  level with the clipper in and out. Past about 3 dB on a full mix the snares
+  start thinning. On individual drum channels you can go further, because only
+  that one sound is affected.</p>
+  <h3>Can I use two clippers in a row?</h3>
+  <p>Yes, and two often sound better than one doing the same total amount. Two
+  stages of 1 dB round the waveform in gentle steps rather than one abrupt one,
+  and each stage generates lower-order harmonics than a single hard pass. Keep
+  the true-peak limiter after both.</p>
+  <h3>Do I need oversampling on the clipper?</h3>
+  <p>On the master, yes. Clipping a 9 kHz hi-hat partial at 48 kHz folds its
+  fifth harmonic back to 3 kHz, where it reads as grit rather than brightness.
+  On a kick or bass channel it matters far less, because the harmonics generated
+  there stay under Nyquist.</p>
+  <h3>Clipper before or after saturation?</h3>
+  <p>Saturation first. Saturation already rounds peaks as part of what it does,
+  so the signal reaches the clipper with some of the job done, and a clipper in
+  front would only hand the saturator a squared-off waveform to work on.
+  <a class="inline" href="/saturation-vs-distortion/">Saturation vs
+  distortion</a> covers the difference.</p>
+  <h3>Should the clipper go before or after EQ?</h3>
+  <p>After the EQ. Any boost placed after the clipper adds peak height back for
+  the limiter to deal with. If you want a brighter top once the clipping is set,
+  use a shelf small enough that the limiter's gain reduction meter does not
+  change.</p>
+  <h3>Does clipping before the limiter make the master louder?</h3>
+  <p>It lets you make it louder without the limiter moving as much. Two decibels
+  off the peaks is two decibels of headroom you can add back across the whole
+  track, and the limiter never has to see them.</p>
+  <h3>What ceiling should the limiter be set to?</h3>
+  <p>&minus;1.0 dBTP with true-peak detection on for anything going to
+  streaming, and &minus;2.0 dBTP if the master ends up louder than &minus;14
+  LUFS integrated. Those are the figures Spotify publishes in its own mastering
+  guidance.</p>
+  <h3>Is hard clipping or soft clipping better before a limiter?</h3>
+  <p>Soft clipping for anything with cymbals in it, hard clipping when you want
+  the peak gone and the extra harmonics are part of the sound. A soft curve bends
+  over a range of levels rather than at one point, so it generates lower-order
+  harmonics and less aliasing. <a class="inline"
+  href="/soft-clipping-explained/">Soft clipping explained</a> has the curves.</p>
+  <h3>Why does my mix distort on streaming but not in my DAW?</h3>
+  <p>Inter-sample peaks. The samples in your file sit under the ceiling and the
+  waveform reconstructed between them does not. A full-scale tone at a quarter of
+  the sample rate can reconstruct 3.01 dB above its sample peaks. Set the ceiling
+  to &minus;1 dBTP and switch on true-peak detection. <a class="inline"
+  href="/what-is-clipping/">What is clipping</a> covers the audible result.</p>
+  <h3>Do I still need a clipper if my limiter has a soft clip mode?</h3>
+  <p>Usually yes, because on some limiters the soft clip mode replaces true-peak
+  mode rather than joining it. Check whether yours can do both at once. If it
+  cannot, put a separate clipper earlier in the chain and leave the limiter set
+  to true peak.</p>
 
   <h2>Stock plugins that do this</h2>
   <div class="card">
@@ -277,6 +514,35 @@ h3{margin:28px 0 8px; font-size:17px; font-weight:600; line-height:1.4; color:va
       <dt>Ableton Live</dt><dd>Saturator with soft clip on, then Limiter</dd>
     </dl>
   </div>
+  <p>Both carry a detail worth knowing before you trust them. In FL Studio,
+  Fruity Soft Clipper has two controls, THRES and POST, and Image-Line's own
+  manual describes it as a soft-knee compressor that saturates once the signal
+  passes the threshold, which is the shape you want in front of a limiter. Their
+  documentation points at Fruity Limiter as the more transparent option for the
+  last slot.</p>
+  <p>Fruity Limiter repays a careful read, because its internal order is not the
+  one you would guess. Image-Line document the signal flow as input, compressor,
+  gain, limiter with the integrated gate, then saturation, then output. The SAT
+  control sits <em>after</em> the limiter, and the manual suggests letting the
+  input peak over the limit threshold and blending that saturation in on purpose.
+  It sounds good, and it also means the last thing the plugin does is add
+  harmonics above your ceiling. Note too that the ATT control doubles as the
+  limiter's lookahead, which is where the plugin's latency comes from.</p>
+  <p>In Live there are three separate places to clip before you reach the
+  Limiter, and they do not act alike. Saturator has a Post Clip Mode chooser with
+  Soft Clip and Hard Clip, and with either selected its output never exceeds the
+  level set by the Output control. Glue Compressor has a Soft clip switch that
+  Ableton describe as a fixed waveshaper, capping output at &minus;0.5 dB, with
+  the warning that with oversampling enabled very loud peaks can still pass 0 dB.
+  And Live's Limiter has three ceiling modes, Standard, Soft Clip and True Peak,
+  where True Peak is the one that prevents inter-sample peaks.</p>
+  <p>That last one is the trap on this page. Set Live's Limiter to Soft Clip
+  thinking you have covered both jobs and you have swapped true-peak protection
+  for soft clipping rather than added it. Clip earlier instead and leave the
+  Limiter in True Peak. <a class="inline" href="/how-to-use-a-limiter/">How to
+  use a limiter</a> has the rest of the settings, and <a class="inline"
+  href="/limiter-vs-compressor/">limiter vs compressor</a> the line between the
+  two.</p>
 
   <h2>What BEEFY does</h2>
   <p>BEEFY is our saturation and loudness plugin, and it has both tools as
@@ -286,6 +552,11 @@ h3{margin:28px 0 8px; font-size:17px; font-weight:600; line-height:1.4; color:va
   push it yourself, with input and output clip lights at either end.</p>
   <p>Most people will get the most from it on the drums, 808 and bass, so the
   master clipper and limiter have less to fix.</p>
+  <p>The order inside the plugin is fixed, which removes one decision: BEEF and
+  COOK shape the signal, SOFT CLIP or LIMIT handles what leaves, and the clip
+  lights tell you which end is running hot. BEEFY is $19, Mac and Windows, AU and
+  VST3 and standalone. Whatever you run it into, keep a true-peak limiter in last
+  position.</p>
 
   <p>The guard never made it to the paint. The big man barely had to jump.</p>
 
@@ -305,6 +576,7 @@ h3{margin:28px 0 8px; font-size:17px; font-weight:600; line-height:1.4; color:va
     <li><a class="inline" href="/true-peak/">True peak</a> &mdash; Why a file can read zero and still clip, and what ceiling to use.</li>
     <li><a class="inline" href="/crest-factor/">Crest factor</a> &mdash; Peak minus average, and why it decides how loud a track can get.</li>
     <li><a class="inline" href="/how-to-use-a-limiter/">How to use a limiter</a> &mdash; Where it goes, what ceiling, and how much gain reduction is normal.</li>
+    <li><a class="inline" href="/best-soft-clipper-plugins/">Best soft clipper plugins</a> &mdash; Soft against hard, where a clipper belongs, and the free and paid ones worth demoing.</li>
   </ul>
 
 

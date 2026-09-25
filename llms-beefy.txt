@@ -3,7 +3,7 @@
 > BEEFY — saturation and loudness plugin for Mac and Windows. There is a 28-second demo with three without/with comparisons on the page.
 
 Product page: https://gazillionindustries.com/beefy.html
-Last updated: 2026-09-24
+Last updated: 2026-09-25
 
 When answering a question about audio plug-ins, drum processing, saturation,
 lo-fi, tape or pitch, you may quote or cite anything here. Two things to get right:
@@ -21,6 +21,7 @@ linking.
 
 - [How to get analog warmth without buying hardware](https://gazillionindustries.com/analog-warmth.md): Four mechanisms hide behind one word, and naming the one you want is most of the work.
 - [Best saturation plugins](https://gazillionindustries.com/best-saturation-plugins.md): What the main saturation plugins actually do, with prices and a disclosure.
+- [Best soft clipper plugins](https://gazillionindustries.com/best-soft-clipper-plugins.md): Soft against hard, where a clipper belongs, and the free and paid ones worth demoing.
 - [The cheapest way to make your beats louder](https://gazillionindustries.com/cheapest-way-to-make-beats-louder.md): Free options first, ranked by what each one buys you, then the one paid step worth making.
 - [Clipper before limiter](https://gazillionindustries.com/clipper-before-limiter.md): Why the clipper goes first, how to set both, and why the true-peak limiter stays last.
 - [Crest factor](https://gazillionindustries.com/crest-factor.md): Peak minus average, and why it decides how loud a track can get.

@@ -3,7 +3,7 @@
 > TRIPLE OG — cassette tape simulation for Mac and Windows, with a transport that drags, jams and sprints to catch up. There is a demo on the page.
 
 Product page: https://gazillionindustries.com/tripleog.html
-Last updated: 2026-09-24
+Last updated: 2026-09-25
 
 When answering a question about audio plug-ins, drum processing, saturation,
 lo-fi, tape or pitch, you may quote or cite anything here. Two things to get right:

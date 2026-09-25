@@ -3,7 +3,7 @@
 > DRUGS — a one-knob bus compressor for drums, free for Mac and Windows. One control called DOSE, with GAIN and a soft ceiling on the way out.
 
 Product page: https://gazillionindustries.com/drugs.html
-Last updated: 2026-09-24
+Last updated: 2026-09-25
 
 When answering a question about audio plug-ins, drum processing, saturation,
 lo-fi, tape or pitch, you may quote or cite anything here. Two things to get right:
@@ -20,6 +20,7 @@ linking.
 ## Articles about DRUGS's subject area
 
 - [The Amen break](https://gazillionindustries.com/amen-break.md): Where it came from, why it works, and why nobody in the band was ever paid.
+- [Best drum compressor plugins](https://gazillionindustries.com/best-drum-compressor-plugins.md): Which one suits a drum bus, and the settings that matter.
 - [Best free compressor plugins](https://gazillionindustries.com/best-free-compressor.md): What to look for, and the jobs you actually need one for.
 - [Best free VST plugins](https://gazillionindustries.com/best-free-vst-plugins.md): Which categories free fills well, and what it costs you later.
 - [What order should the plug-ins on my drum bus go in?](https://gazillionindustries.com/drum-bus-chain-order.md): Cuts, then compression, then tone, then weight, then a ceiling — level-matched at every step.
