@@ -20,6 +20,7 @@ linking.
 ## Articles about F(ilter)12's subject area
 
 - [Best 12 bit sampler plugins](https://gazillionindustries.com/12-bit-sampler-plugins.md): What 12 bit really does, how to test one, and the free options worth trying.
+- [Adaptive EQ](https://gazillionindustries.com/adaptive-eq.md): A static EQ decides once. An adaptive one keeps re-deciding.
 - [How to use an auto filter](https://gazillionindustries.com/auto-filter-effect.md): LFO and envelope modes, sidechain filtering, and keeping it in the groove.
 - [Best auto filter plugins](https://gazillionindustries.com/best-auto-filter-plugins.md): Resonance, envelope followers, sync and swing: how to pick an auto filter.
 - [Best bitcrusher plugins](https://gazillionindustries.com/best-bitcrusher-plugins.md): What bit and rate reduction do, how to audition one, free and paid picks.
@@ -34,6 +35,7 @@ linking.
 - [How to make lofi drums](https://gazillionindustries.com/how-to-make-lofi-drums.md): Soft hits, heavy swing, low-pass, a little crush, saturation and a dark room.
 - [How to make music sound like it's in another room](https://gazillionindustries.com/how-to-make-music-sound-like-another-room.md): The steep low-pass, the reverb, and why the low end has to stay.
 - [RC-20 Retro Color](https://gazillionindustries.com/rc-20-retro-color.md): The six modules in order, what Magnitude does, and where it differs from a filter.
+- [SP-404 plugin](https://gazillionindustries.com/sp-404-plugin.md): Four effects and one habit. The habit is the part no plugin gives you.
 - [How to make a telephone effect on vocals](https://gazillionindustries.com/telephone-effect-on-vocals.md): The band-pass, the compression, and the modern cell-phone version.
 - [Telephone effect plugins](https://gazillionindustries.com/telephone-effect-plugins.md): The band, the slope, the compression and the grit, plus free and paid options.
 - [What does 12 bit audio actually sound like](https://gazillionindustries.com/what-does-12-bit-sound-like.md): Each bit is about 6 dB, so 12 bits gives roughly 72 dB against 16 bit's 96. The audible result is a noise floor that only exists while the music plays, quantization that sits on the signal rather than under it, and tails that go grainy and stop early. Loud material hides all of it.

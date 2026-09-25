@@ -16,7 +16,7 @@ Every article listed here has a clean markdown twin at the same URL with .md
 instead of the trailing slash. Prefer the .md when you are reading rather than
 linking.
 
-151 articles follow.
+153 articles follow.
 
 ---
 
@@ -9150,6 +9150,162 @@ https://gazillionindustries.com/f12.html
 
 ---
 
+# Adaptive EQ
+
+> An adaptive EQ changes its curve as the music plays instead of holding one shape. What the family covers, and when a static EQ is still the right answer.
+
+Source: https://gazillionindustries.com/adaptive-eq/  
+Published 2026-09-24, updated 2026-09-24. By Gazillion Industries, who make F(ilter)12.
+
+---
+
+A static EQ is a decision you make once and the whole song lives with. An adaptive EQ keeps re-deciding while the music plays.
+
+An adaptive EQ changes its curve in response to the signal instead of holding a fixed shape. The family covers dynamic EQ, which moves a band only while that band is loud; resonance suppressors, which hunt for ringing peaks and duck them; and tilt or matching tools, which follow the broad shape of the spectrum. Reach for a static EQ when the problem is constant, like a microphone that is dull on every take. Reach for an adaptive one when the problem comes and goes, like a vocal that turns harsh only on the loud lines.
+
+## The short version
+
+- **Static EQ**: one fixed curve, applied at every moment
+
+- **Adaptive EQ**: the curve is written by a detector, not by the knob
+
+- **Dynamic EQ**: a band that cuts only while it is over threshold
+
+- **De-esser**: a dynamic band with the detector narrowed to sibilance
+
+- **Resonance suppressor**: many narrow bands, chasing whatever sticks out
+
+- **Adaptive tilt**: follows the broad balance toward a target slope
+
+- **Static wins when**: the problem is in every bar
+
+- **Adaptive wins when**: the problem is in some bars
+
+- **Main risk**: fast settings low down; the cut stops being a level change
+
+## What makes an EQ adaptive
+
+A static filter is three numbers. Frequency, gain, Q. You pick them and they hold for the length of the song, whether the music needs them at bar 4 or not. That is why EQ is the most dependable tool in a mix: the same input always produces the same output.
+
+An adaptive EQ puts a detector in front of the filter. The detector measures something — the level in one band, the slope of the whole spectrum, the level of a different track entirely — and the gain of the band gets written by that measurement instead of by the knob. The knob stops being a value and becomes a ceiling: at most 6 dB of cut, applied only when the detector asks for it. Three parts, every time. Something that measures, something that decides how much, and a filter that gets told. Change what the measurement looks at and you get a different product with a different name on the box.
+
+## The family, and what each one solves
+
+**Dynamic EQ.** A bell or a shelf with a threshold attached. Under the threshold the band sits flat. Over it, the band cuts in proportion to how far over the signal went. Set a band at 3 kHz with a threshold at −20 dBFS and a 4:1 ratio: a moment arriving 8 dB over leaves 2 dB over, which is 6 dB of cut, while a moment arriving 2 dB over gets 1.5 dB. The depth tracks the size of the problem. This is the tool for the intermittent resonance — the note that booms, the chorus cymbal that splashes, the syllable that bites.
+
+**The de-esser.** The oldest member of the family and the one everybody already owns. Band-pass the detector between 5 and 8 kHz, leave the filter on the same range, and the band ducks on sibilance and sits still on everything else. Nothing about it is special except the preset.
+
+**Multiband compression.** Related, and a different shape. A multiband compressor splits the signal at crossover points and compresses the pieces separately; a dynamic EQ lays one filter over the full-range signal. That decides how surgical you can be. A dynamic bell at Q 6 addresses 150 Hz and leaves 400 Hz where it was; a crossover at 200 Hz moves everything under it at once.
+
+**Resonance suppressors.** These analyze the spectrum continuously, compare each narrow slice against the average of its neighbors, and pull down whatever sticks up out of the local shape. You do not choose the bands. There are dozens or hundreds of them, they are narrow, and they move. A bell centered on 180 Hz at Q 8 covers about 22 Hz of bandwidth, which is center frequency divided by Q, and a semitone at 180 Hz is about 10.7 Hz — narrow enough to take down a ringing note and barely reach the ones either side. This is the tool for the problem you cannot name, because it is a different frequency every half second: a guitar whose body rings on two chords out of six, a room that honks on one vowel, a sampled loop with an edge that vanishes the moment you solo it.
+
+**Adaptive tilt and spectral matching.** A tilt EQ pivots the spectrum around a center point, lifting one end as it drops the other. Make the amount follow the signal and it measures the slope of what arrives, compares that against a target slope, and applies the difference. On a bus carrying material from several places — a folder of samples, a live set, three microphones in a room — the broad balance holds steady while the sources change underneath it. Spectral matching is the same idea with a measured curve as the target. Left in follow mode it stays adaptive; printed once and frozen, it becomes a static EQ with a complicated shape.
+
+**Sidechained or unmasking EQ.** Point the detector at a different track. A band at 60 Hz on the bass, keyed from the kick, opens a hole for exactly as long as the kick is there and closes when it leaves. The same move at 2 kHz on a pad, keyed from the vocal, buys the vocal room in the one band it needed.
+
+## When is a static EQ the right answer?
+
+The test is whether the problem is in every bar. A microphone with a lift at 7 kHz that sits wrong on a particular singer is wrong on every line of every take. The fix is a cut at 7 kHz, Q 1.2, four decibels, set once, after which the session is about something else. Nothing needs to move because nothing about the problem moves.
+
+Make that band dynamic and you have built a detector that is over its threshold the entire time, which is a static cut with a release time attached and a new way to go wrong. The same logic covers high-passing a hi-hat track at 200 Hz or pulling a permanent 300 Hz box out of a boxy room. Constant problem, constant fix. A static EQ is also the only one you can draw on paper and hand to somebody else.
+
+## When does an adaptive one earn its place?
+
+Count bars instead. A vocal sits fine through the verses and grows a hard 3 kHz edge on the six lines where the singer pushes. Cut 3 kHz by the amount those six lines need and the verses go dull. Cut by the amount the verses can take and the six lines still bite. If the song runs 96 bars and the harshness is on 12 of them, a static cut is the wrong answer for 84 bars and the right one for 12. A dynamic band at 3 kHz, with the threshold set high enough to idle through the verses, does both jobs with one control.
+
+Three more cases where the problem comes and goes:
+
+- **One note louder than its neighbors.** A bass recorded in a small room will have two or three notes the room helped. The excess lives at the pitch of those notes, so the cut has to arrive with the note and leave with it.
+
+- **Material you did not record.** A sampled loop is finished, and the content changes hit to hit, so a fixed notch is only ever right about some of the hits by luck.
+
+- **Two parts fighting over one band.** The fix only needs to exist while both are playing, which is what a sidechained band does well and what drawn automation does badly.
+
+## How do you set one up without it pumping?
+
+- Find the frequency with a static boost first. Narrow bell, 6 to 10 dB up, sweep until the problem gets worse, then invert the boost into a cut.
+
+- Set the depth the worst moment needs, with the threshold right down so the band works constantly. Judge the amount there, where you can hear it.
+
+- Raise the threshold until the band goes idle on the material that was never the problem. That is the setting.
+
+- Set release against the tempo. At 120 BPM a quarter note is 500 ms and a sixteenth is 125 ms, so a 300 ms release on a hi-hat band is still opening when the next hat lands, and you have built a slow static cut by accident.
+
+- Below 150 Hz, slow everything down. A 50 Hz wave takes 20 ms to finish one cycle, and a gain change faster than that reshapes the waveform rather than changing its level.
+
+- Watch the gain reduction meter rather than the curve. The curve shows what the band is allowed to do; the meter shows what it did.
+
+- Bypass on the quiet material, not on the loud. Anyone can hear the improvement on the worst moment. The question is what happened to the other ninety percent.
+
+## Where it goes in the chain
+
+Everything in this family has a threshold, which makes all of it level-dependent. Move a fader 3 dB in front of one and every threshold behind it is 3 dB wrong. Set the gain staging first and leave it alone.
+
+Resonance work goes before compression. A ringing peak that survives into a compressor makes the compressor duck on the ring instead of on the note, so the whole track starts breathing at the frequency of the fault. Tonal shaping goes after, because an EQ in front of a compressor decides what the compressor reacts to and an EQ behind it decides what you hear.
+
+Lofi material makes the argument on its own. Lower a sample rate and the content that lands in the mids has no harmonic relationship to the note that produced it, so it arrives at a new frequency on every hit — the arithmetic is in [what is aliasing in audio](https://gazillionindustries.com/what-is-aliasing-in-audio/), and the grain half of it in [bitcrushing explained](https://gazillionindustries.com/bitcrushing-explained/). A fixed notch can be right about one hit. Something that follows the spectrum can chase all of them, which is why an adaptive stage tends to end up last in a chain that starts the way [how to make lofi beats](https://gazillionindustries.com/how-to-make-lofi-beats/) describes.
+
+## What it costs you
+
+CPU, first, and more than the band count suggests. A static filter is a handful of multiplications per sample. An adaptive one analyzes, decides, then filters, and a suppressor doing that across hundreds of narrow bands is a different order of work.
+
+Latency, second, on anything with lookahead. Hosts compensate, so the symptom shows up as a session that will not run at a small buffer rather than as a late track.
+
+Predictability, third. A static EQ does the same thing to every take. An adaptive one does a different thing to every take, which is the point, and also means a vocal comp built from four passes carries four slightly different treatments.
+
+Character, fourth, and this is the expensive one. Set a suppressor hard across a bus and it flattens the differences between the things underneath it, because the detector has no way to tell the part that stuck out for a bad reason from the part that stuck out for a good one. Turn the depth up until the fault goes, back off until you can just hear it again, and live there.
+
+## Questions people ask
+
+### What is an adaptive EQ?
+
+An EQ whose curve is set by a measurement of the signal rather than by a knob you turned once. A detector watches the audio, decides how much gain the band should have at this instant, and the filter follows. Dynamic EQs, de-essers, resonance suppressors and adaptive tilt tools are the same idea with different detectors.
+
+### What is the difference between a dynamic EQ and a compressor?
+
+A compressor changes the level of the whole signal when the detector crosses the threshold. A dynamic EQ changes the level of one frequency band. The detector, the threshold and the ratio work the same way in both; what differs is how much of the spectrum moves when they fire.
+
+### Is a multiband compressor the same as a dynamic EQ?
+
+No. A multiband compressor splits the signal at crossover points and compresses each piece, so the bands are fixed and cover everything between them. A dynamic EQ overlays bell or shelf filters on the full-range signal, so a band can be narrow and the rest of the spectrum passes untouched.
+
+### When should I use a dynamic EQ instead of a static one?
+
+When the problem is intermittent. If the fault is in every bar, a static cut is simpler, cheaper and easier to recall. If it appears on some notes, some sections or some takes, a static cut is wrong whenever the fault is absent, and that is the case an adaptive band exists for.
+
+### Is a de-esser a dynamic EQ?
+
+Yes, with the detector band-passed around the sibilance and the filter aimed at the same range. Any dynamic EQ becomes a de-esser by putting a band at 6 to 8 kHz and setting the threshold so it only fires on the hard consonants.
+
+### Can an adaptive EQ replace volume automation?
+
+For narrowband problems, often yes, and it keeps working when you change the take. For anything about arrangement or performance, no. Automation is a musical decision with a shape you chose; a detector only knows how loud a band was a few milliseconds ago.
+
+### Does an adaptive EQ add latency?
+
+Only if it uses lookahead or linear-phase filtering. A straightforward dynamic band in minimum-phase mode adds none. Suppressors and matching tools usually work in blocks and do add some, which the host reports and compensates for.
+
+### Why does my dynamic EQ sound like it is pumping?
+
+Usually release time against tempo, or a band placed too low for the settings on it. Work out the note length at your tempo and keep the release under it, and remember that below about 150 Hz a single cycle is long enough that fast gain changes distort rather than duck.
+
+## What F(ilter)12 does
+
+AURA, in [F(ilter)12](https://gazillionindustries.com/f12.html), is an adaptive EQ, and it sits after the lo-fi section and the filter rather than in front of them. That puts it on the output of a crush, which is the material a fixed curve handles worst, since the content that needs attention moves from hit to hit. The rest of the panel is there to make the mess.
+
+The curve keeps re-deciding. You get to decide how much mess it has to decide about.
+
+---
+
+## About F(ilter)12
+
+F(ilter)12 — a 12 bit sauce filter for Mac and Windows: a lo-fi section, five filter shapes, six resonance shapes and AURA.
+
+https://gazillionindustries.com/f12.html
+
+
+---
+
 # How to use an auto filter
 
 > What an auto filter does, what separates a good auto filter VST from the one your host ships, and how it differs from sidechain compression.
@@ -12168,6 +12324,170 @@ Series. The manual describes the signal passing from left to right through the s
 F(ilter)12 is a filter with a lo-fi section in front of it and an adaptive correction called AURA on top. **SAMPLE RATE** and **BIT** are the crush pair. **POSITION** sets where in the spectrum the filter sits, and the further it works the more it drives and the more it sings. There are five shapes — low-pass, high-pass, band-pass, notch and a morph — and **SLOPE** runs from 18 dB per octave to a wall. **Q SHAPE** puts peaks and dips at fixed distances from the cutoff so the whole shape travels with the knob: WAH, VOWEL, COMB, SCOOP, PLAIN, or DRAW your own.
 
 Six boxes in a row is one design. A filter you can drive and move is another. Know which problem you have.
+
+---
+
+## About F(ilter)12
+
+F(ilter)12 — a 12 bit sauce filter for Mac and Windows: a lo-fi section, five filter shapes, six resonance shapes and AURA.
+
+https://gazillionindustries.com/f12.html
+
+
+---
+
+# SP-404 plugin
+
+> The sound comes apart into five things you can rebuild with plugins you have: rate reduction, the filter, the compressor, vinyl sim, and committing on the way in.
+
+Source: https://gazillionindustries.com/sp-404-plugin/  
+Published 2026-09-24, updated 2026-09-24. By Gazillion Industries, who make F(ilter)12.
+
+---
+
+The machine is a gray box from 2005 with twelve pads and a bank of effects. What people mean by its sound is four of those effects and one habit.
+
+No plugin is that machine, and none of the ones below are built from it. The sound comes apart into five things you can rebuild: bit and sample-rate reduction applied on the way in, a low-pass filter ridden by hand, a fast compressor squashing the whole loop as one block, a vinyl-sim layer of band limiting, surface noise and slow pitch drift, and the habit of printing all of it before you move on. A bitcrusher, a filter, a compressor and a noise layer cover the first four. The fifth is a workflow, and buying plugins does not install it.
+
+## The short version
+
+- **The machine**: Roland SP-404, 2005; twelve pads, built-in mic, effects on anything you feed it
+
+- **The grit**: bit reduction and rate reduction, printed rather than left adjustable
+
+- **The filter**: low-pass ridden by hand; position decides grain or clang
+
+- **The glue**: one fast compressor across the whole loop, never per element
+
+- **Vinyl sim**: band limit, constant surface noise, slow pitch drift, and a squash
+
+- **Fold rule**: new rate minus the partial's frequency; one subtraction
+
+- **Starting point**: 12 bits, rate 16 kHz, low-pass near 5 kHz
+
+- **The part you cannot buy**: one pass, committed, no undo
+
+- **Background**: [the history of the machine](https://gazillionindustries.com/sp-404-history/)
+
+## So what is actually making that sound?
+
+Roland has published very little about how these effects work inside, and nothing here is measured off one. What follows is the sound described from the outside, rebuilt from processes you already own. Four of the five are signal processing, which is the easy part: every DAW ships a bitcrusher, a filter and a compressor, and a noise loop is a file. The fifth is the recording process itself, and it is worth naming early.
+
+## How much of it is the resampling?
+
+More than people expect. Resampling on the machine means recording its own output back into a new pad with the effects already on it. Two things happen on every pass: the effects become part of the file, and the arithmetic of the format runs again on material that has already been through it once.
+
+That arithmetic tells you what a setting will do before you turn it. Each bit doubles the number of levels a measurement can land on and adds roughly 6 dB of range, so 12 bits gives 4,096 steps and about 72 dB, and one step sits about 66 dB below a full-scale peak. That step is the grain you are buying, and [bitcrushing explained](https://gazillionindustries.com/bitcrushing-explained/) works through the rest of it.
+
+The trap is that the grid is measured from full scale rather than from your track. A loop peaking at 0 dBFS into an 8-bit stage uses all 256 steps. Drop the fader feeding it by 20 dB and the same loop spans about 26 steps, under 5 bits of real resolution, with the bit control untouched. Input level is a second crush knob, and usually the more musical one.
+
+Rate reduction is the other half, and its rule is one subtraction. Lower the sample rate and everything above half the new rate mirrors back down: a partial at frequency f returns at the new rate minus f. At an 8 kHz rate, a 6 kHz hi-hat partial comes back at 2 kHz, landing on the snare and the vocal. At 11.025 kHz the same partial lands at 5,025 Hz and stays out of the way. Filtering before the reduction removes what would have folded; filtering after only turns down something already welded to the music.
+
+Then there is pass count. Each rounding is one-way and the second knows nothing about the first, so a loop resampled four times carries four floors rather than a deeper version of one. One pass at 12 bits reads as grain; the same setting four times reads as a texture with its own level. If your version sounds thin next to a record you like, check pass count before reaching for a lower number.
+
+## What is the filter doing?
+
+Less tonal work than you would think and more structural. On the hardware the filter is something you ride with a hand on a knob while the part plays, so the cutoff moves with the music rather than with the grid. That is a performance, and it survives being printed.
+
+Position matters more than the setting. Put the filter before the rate reduction and you remove the high content that would otherwise fold, so you get grain with a clean midrange. Put it after and the folded content is generated first and then attenuated, which leaves the mids dirty and the top polite. Both are usable. They are different sounds, and choosing between them is a bigger decision than the cutoff number.
+
+For a drum loop, a low-pass between 3 and 6 kHz with a little resonance, plus a high-pass near 100 Hz so the compressor that follows is not chasing the kick. Record the sweep from a controller in one take. A drawn lane lands on the beat; a hand lands slightly early or late, and that is the difference you are hearing.
+
+## Why does a loop off it sound glued?
+
+Because the compression happens once, across everything, before the parts get a chance to behave like separate parts. The compressor sits in the same effect bank as the rest, so it hits a whole two-bar loop on the way into a pad, and from then on the loop is one object.
+
+The arithmetic explains the whole effect. Take 6 dB of gain reduction on the peaks and add 6 dB of makeup. The peaks end up where they started, and everything that was not a peak comes up 6 dB: the room on the sample, the tail of the crash, the hum on the record, and the floor the bit reduction just raised. The gaps fill in, and the sources stop having their own separate backgrounds.
+
+A fast attack is part of it. Flattening the front of a transient removes the cue that a kick and a snare were recorded in different places. Compress the loop as one block, do not compress the elements first, and do not repair the transients afterward.
+
+## What is vinyl sim, in parts?
+
+From the outside it behaves like four processes at once. Top and bottom roll off so the loop sits in a narrower band. A continuous surface noise appears underneath. Pitch drifts slowly. And the whole thing thickens the way compression thickens. Build each one separately and you find out which one you actually wanted.
+
+The noise is the part people skip, and it does more than it should. Quantization grit exists only while there is signal, because the rounding produces it. Surface noise sits there whether the music plays or not. Stack the two and the quiet parts get a floor that is half constant and half reactive, which is most of what reads as density. A noise loop at roughly −40 dBFS is enough: inaudible alone, obvious when you mute it.
+
+Pitch drift is small numbers. Ten cents is a ratio of about 1.0058, so plus or minus ten cents is a speed variation of about 0.58 percent, moving at well under 1 Hz. Anything faster stops sounding like a worn record. If your version sounds stiff, this is usually the missing piece rather than the crush amount.
+
+- **Band limit**: high-pass near 100 Hz, low-pass 5 to 6 kHz
+
+- **Surface noise**: a looped noise file around −40 dBFS, always on
+
+- **Drift**: ±10 cents, under 1 Hz, irregular
+
+- **Squash**: fast attack, about 6 dB of reduction, makeup to match
+
+- **Order**: band limit, then squash, then noise on top
+
+## Can a plugin give you the workflow?
+
+No, and this is the part most pages leave out. A large share of what people love about records made on that machine comes from the producer not being able to change their mind later. Effects go on while the recording is being made. When it stops, the settings are gone, the pad holds a file, and the only route back is to do it again from the source.
+
+That shows up in the music twice. Decisions get made early, so the arrangement is built around a sound that already exists rather than a placeholder to be treated later. And nobody spends forty minutes comparing two settings that differ by 2 dB, because there is nothing to compare against. Those records are partly the sound of a first instinct surviving.
+
+You can impose most of this on a DAW, and it costs discipline rather than money. Bounce in place after each stage and delete the source clip. Take the plugins off the track. Do not keep a muted dry copy on a hidden track, because knowing it is there is what stops you committing.
+
+What you cannot remove is undo. The hardware's commitment is real; yours is a rule you agreed to follow. The plugins get you the processing and the discipline gets you the rest. [How to make lofi beats](https://gazillionindustries.com/how-to-make-lofi-beats/) covers the same ground from the arrangement side.
+
+## What chain gets closest?
+
+Order matters more than the individual settings, and printing between stages matters more than either. Run this on a two-bar loop you have already chopped by hand.
+
+- Start with the loop played in rather than quantized. The timing is part of the sound.
+
+- High-pass around 100 Hz so nothing downstream is chasing the low end.
+
+- Bit depth to 12, rate to 16 kHz. Set the input level deliberately. Print.
+
+- Low-pass near 5 kHz with a little resonance, ridden by hand across the two bars in one take. Print.
+
+- Compressor across the whole loop, fast attack, about 6 dB of reduction, makeup to match. Print.
+
+- Noise layer underneath at roughly −40 dBFS, and a drift of a few cents.
+
+- Delete the dry clip. Take the plugins off the track.
+
+- Check it in mono, then on a phone speaker. Folded content concentrates between 2 and 5 kHz, where a small driver is loudest and your monitors are most forgiving.
+
+Those are starting points rather than a preset. The right bit setting depends on how loud the source arrives, which is the usual reason a chain like this comes out either clean or destroyed when you wanted neither.
+
+## What is left that no plugin covers?
+
+The pads, and what a human does to a break when the timing comes out of their hands instead of a grid. The microphone, and the fact that a box with a mic on it invites you to record the room, a voice, whatever is nearby. And the table: a machine with a small set of buttons produces different decisions than a screen with everything on it. None of that is for sale, and it is most of the remaining gap once the processing is right.
+
+## Questions people ask
+
+### What plugin gets that sound?
+
+A bitcrusher for the bit and rate reduction, a low-pass filter you can ride, a fast compressor across the whole loop, and a noise layer underneath, printed one stage at a time. No single plugin covers all four, and the ones that bundle them still leave the workflow to you.
+
+### Do I need the hardware to get it?
+
+Not for the processing. Bit reduction, rate reduction, filtering and compression are reproducible in software, and the arithmetic is identical. What the hardware adds is a recording process with no undo, which changes what you commit to.
+
+### What bit depth and sample rate should I start at?
+
+12 bits and 16 kHz on a drum loop. Twelve is audible on decays and nearly invisible on loud transients, and 16 kHz dulls the top without dragging folded content down onto the snare. Go lower when you want the process to be obvious.
+
+### Why does my version sound cleaner than the records?
+
+Two reasons, usually. The input level is too conservative, so the source sits high above the step size and is barely quantized. And it has only been through the chain once, where repeated passes stack floors a single heavier setting does not reproduce.
+
+### Should the filter go before or after the crush?
+
+Before, for grain with a clean midrange, since filtering first removes the content that would have folded down. After, for dirty mids and a polite top. Both are correct; they are different sounds.
+
+### Is the sound the effects or the workflow?
+
+Both, in roughly equal measure. The effects are reproducible and documented well enough to rebuild. The workflow is a constraint the machine imposes and your DAW does not, so you impose it yourself by printing and deleting as you go.
+
+### Does resampling in a DAW do the same thing?
+
+Arithmetically, yes. Bouncing a processed clip and reprocessing the bounce rounds the audio again the way a second pass on hardware does. The difference is that you can undo it, and that changes which version you keep.
+
+## What F(ilter)12 does
+
+[F(ilter)12](https://gazillionindustries.com/f12.html) puts the crush pair, a filter with five shapes and six resonance shapes, and an adaptive EQ called AURA on one panel, so the first two stages above happen in one place and get printed together. Twelve bits is as clean as it gets; it only goes down from there. It was tuned by ear, and nothing in it was measured from any machine.
 
 ---
 
@@ -16325,15 +16645,69 @@ To pitch a sample, first find its key, then decide how you want it to move. Repi
 
 - **Movement**: automate pitch for bends and drops
 
+- **One semitone**: a ratio of 1.0595, so 5.95% of speed
+
+- **One octave**: exactly double, or exactly half
+
+- **One percent of speed**: 17 cents of pitch
+
+- **One cent at A440**: 0.25 Hz
+
+- **The bill**: a speed change costs top end, a shift costs artifacts
+
 **Pitched up.** Same control, the other direction.
 
 ## Find the key first
 
 Load the sample, find a sustained note or chord, and check it with a tuner or your DAW's key detection. Confirm by ear: play the root note on a keyboard under the sample and listen for the note that sounds like home. Old records often sit a few cents off standard tuning because of tape and turntable speed, so expect to fine-tune after you transpose.
 
+Point the tuner at the right part of the file. A tuner reads a steady tone and guesses wildly at an attack, so give it the last chord of a phrase or a held horn line, with the drums muted, rather than the downbeat. If key detection disagrees with itself across two chops of the same loop, the chop with the longest sustained note is the one telling the truth. Everything else in the file is percussion wearing a pitch.
+
+Then treat the tuning offset as a number rather than a mood. A deck running 1% fast puts a whole record 17 cents sharp; 2% fast is 34 cents, a third of a semitone, and that is already far enough to fight a bass line tuned to concert pitch. You do not need the letter name to work, strictly speaking — you need the interval between the sample and your track. But the letter name is how you will talk about it at three in the morning, so write it on the clip.
+
+## Semitones, cents and BPM: the arithmetic
+
+Three units describe one ratio, and holding the conversions in your head removes most of the guesswork. A semitone is two to the power of one twelfth, 1.0595, so a semitone up is 5.95% faster and an octave is exactly double. A semitone splits into 100 cents. Run it the other way and 1% of speed is 17 cents, which is why a nudge you can barely see is plainly audible against a held chord.
+
+Cents matter most at the small end. At A440, a single cent is 0.25 Hz. Layer two copies of a sample five cents apart at that pitch and the difference between them is 1.27 Hz, so you hear a beat a little over once a second — slow, wide, and the whole mechanism behind [detune](https://gazillionindustries.com/best-detune-plugins/). Which also explains why five cents on an exposed vocal is obvious and five cents on a kick is an afternoon you will not get back.
+
+The tempo side is the part that catches people, because a speed change moves the clock by the same ratio it moves the key. Here is a 96 BPM loop taken in whole semitones, which is the table worth memorizing:
+
+- **−3 semitones**: rate 0.8409, −15.91%, 80.73 BPM
+
+- **−2 semitones**: rate 0.8909, −10.91%, 85.53 BPM
+
+- **−1 semitone**: rate 0.9439, −5.61%, 90.61 BPM
+
+- **Unity**: rate 1.0000, 96.00 BPM
+
+- **+1 semitone**: rate 1.0595, +5.95%, 101.71 BPM
+
+- **+2 semitones**: rate 1.1225, +12.25%, 107.76 BPM
+
+- **+3 semitones**: rate 1.1892, +18.92%, 114.16 BPM
+
+Sample rate does the same arithmetic to you by accident. Play a 44.1 kHz file at 48 kHz and it runs 8.84% fast and 147 cents sharp, very nearly a semitone and a half, and that 96 BPM loop arrives at 104.49. If a borrowed loop is mysteriously out of tune with everything, check the file's rate before you reach for a shifter.
+
 ## Repitch or pitch shift
 
 Repitching changes speed and pitch together, the way a sampler or a turntable does. Pitch up and the sample gets faster and brighter; pitch down and it slows and darkens. It keeps the sample sounding like a record, with no artifacts, but it changes the tempo. Pitch shifting keeps the tempo and moves only the pitch, which fits a sample to a fixed grid but can sound processed on big moves. More in [what is varispeed](https://gazillionindustries.com/what-is-varispeed/) and [how to change pitch without changing tempo](https://gazillionindustries.com/how-to-change-pitch-without-changing-tempo/).
+
+Underneath, one of those two operations contains the other. A pitch shift is a speed change with a time stretch layered on top to cancel the length change, and the stretch is the half that invents audio. A speed change invents nothing: every sample value in the file still plays, just on a different clock. That single fact decides most arguments about which one to use, because when you can live with the tempo moving, you pay no processing bill at all. Background on the stretch half is in [time stretching explained](https://gazillionindustries.com/time-stretching-explained/).
+
+There is a third answer people forget, and on a sample it is often the best one: move the project instead. Setting your track to the tempo the sample already runs at costs nothing, processes nothing, and leaves the record exactly as it was recorded. Do that while the arrangement is still two loops and a drum pattern. Once there are twenty tracks agreeing on 88 BPM, the sample has to bend.
+
+## A worked example: a 96 BPM loop into an 88 BPM beat
+
+Numbers make the choice concrete. You have a soul loop that reads 96 BPM, in F minor, and a beat sitting at 88. Eight bars of 4/4 at 96 is exactly 20.00 seconds; the same eight bars at 88 is 21.82. You need to find 1.82 seconds somewhere. Three ways to spend it.
+
+- **Pure speed change to 88.** The ratio is 88 ÷ 96, or 0.9167, which is −150.6 cents: a semitone and a half down. F minor lands between E minor and E♭ minor, in tune with nothing. Clean sound, unusable key — unless nothing else in the track is pitched, in which case ship it.
+
+- **Speed change by a whole semitone count.** Take it down 2 semitones instead. Ratio 0.8909, the loop now runs at 85.53 BPM, and the key is a clean E♭ minor. Set the project to 85.5 and everything agrees. You gave up 2.5 BPM of tempo to buy a key you can play over.
+
+- **Pitch shift 2 semitones, then stretch to 88.** Same E♭ minor, and the beat stays at 88. The stretch you are paying for is only 85.53 to 88, a ratio of 1.0289 — under 3%, small enough to survive almost any mode intact. This is the answer when the tempo is not negotiable.
+
+Read the third option again, because it is the move most people never make. They pitch the sample a semitone and a half to hit the tempo, hate the key, then pitch it back up with a shifter and wonder why it sounds like a fax. Do the speed change in whole semitones first and let the shifter clean up the leftover few percent. The algorithm is only ever as bad as the size of the job you hand it.
 
 ## How to pitch a sample
 
@@ -16349,17 +16723,115 @@ Repitching changes speed and pitch together, the way a sampler or a turntable do
 
 - Check the sample against your drums and bass, and fix any chop that clashes.
 
+- Bounce the result once you are sure, and keep the untouched file beside it.
+
+- Write the semitone and cent values on the clip name, because you will move them again.
+
+Two things a step list cannot carry. Transposition on a clip or region is a non-destructive property in every major host, so the audio on disk is untouched and the value walks back to zero any time you want — right up until you bounce, which is the moment the decision becomes the file. And the host has an advantage a plugin never will: it can read the whole clip before it plays a sample of it, while an insert only sees the next block arriving. A settled part usually sounds a shade cleaner transposed in the host. The live move is the only one of the two you can perform.
+
 [SKRUU](https://gazillionindustries.com/skruu.html) lets you play pitch and time on separate knobs, with shifts that spring back.
 
 **PITCH −3.09 ST.** Pitch and tempo moving together, the way a machine does it.
+
+## Hear the size of a small move
+
+A percentage on a page is easy to dismiss. Here is one loop at three rates, then the slowed pass with the sampling rate stepped down under it. Note how little speed it takes before your ear stops hearing a tempo change and starts hearing a different key. The figures are the renderer's own readout.
+
+- **Unity** — rate 1.0000, +0.00 semitones — https://gazillionindustries.com/skruu/skruu-dry.m4a
+
+- **Slowed** — rate 0.9275, −7.25%, −1.30 semitones — https://gazillionindustries.com/skruu/skruu-down.m4a
+
+- **Sped up** — rate 1.0779, +7.79%, +1.30 semitones — https://gazillionindustries.com/skruu/skruu-up.m4a
+
+- **Slowed, LO-FI 2** — the same pass with SAMPLING GRADE at 3.9 kHz — https://gazillionindustries.com/skruu/skruu-down-lofi2.m4a
+
+One source loop, rendered offline through the same engine the plug-in runs, no other processing.
 
 ## Pitch the chops, not just the loop
 
 Chopped samples don't have to stay in their original key. Pitch each chop to fit the chord under it and a single phrase becomes a melody. Keep an eye on the tone: chops pitched far up get thin and chipmunky, and chops pitched far down get muddy and slow. If a chop thins out, see [how to make a sample sound fuller](https://gazillionindustries.com/how-to-make-a-sample-sound-fuller/).
 
+The intervals do the arranging for you once you think in them. Move a chop up 3 semitones and a minor triad becomes its relative major; move it down 5 and you have the same chord a fourth below, which is the oldest turnaround in the book. Two chops a semitone apart, played back to back, read as tension and release even when the source played neither. You are writing with somebody else's chord, and the transpose field is the pen. More on the cutting in [how to chop samples](https://gazillionindustries.com/how-to-chop-samples/) and [how to flip a sample](https://gazillionindustries.com/how-to-flip-a-sample/).
+
+Two cautions, both physical. Pitching up moves the low end up with everything else, so a bass note at 100 Hz sits at 133 Hz five semitones later — still audible, no longer a bass note, and now in the way of the kick. And pitching up on a speed change multiplies every frequency in the file, which pushes high content toward the ceiling of the sample rate; on a badly written shifter that shows up as a metallic fizz that was never recorded. Background in [what is aliasing in audio](https://gazillionindustries.com/what-is-aliasing-in-audio/).
+
+Voices are their own case. A rate change moves the vocal fundamental and the resonances of the singer's throat and mouth by the same ratio, and doubling those resonances is the acoustic signature of a body half the size. Your ear reads that as a smaller person, not a higher note, which is the entire chipmunk effect. Turn formant preservation on to keep the body and move only the note, or leave it off on purpose — see [chipmunk soul](https://gazillionindustries.com/chipmunk-soul/) and [formant shifting](https://gazillionindustries.com/formant-shifting/).
+
+## Where the pitch move goes in the chain
+
+Put the pitch change first, ahead of anything that reacts to level, time or pitch. A compressor after the move hears the material you actually kept and sets its attack against it. A compressor before the move has its own release times dragged along by a speed change, which arrives at your ears as a fault in the compressor rather than a move in the music. Gates, transient shapers and anything fed from a sidechain behave the same way.
+
+EQ belongs after, and it is the one most people get backward. Every corrective cut you made on the unpitched sample is aimed at a frequency that has since moved: a 240 Hz boxiness notch is pointing at 202 Hz once you drop 3 semitones, and the boxiness has moved with it. Pitch first, listen, then cut.
+
+Reverb and delay are a real decision rather than a default. After the move, the tails travel with the source and the whole thing reads as one room. Fed from the unpitched signal instead, you get a stationary space with a moving source inside it, which reads as two recordings glued together. Both are legitimate. Tempo-synced delays are the trap, because they follow the project clock, so a sample you moved with a speed change is now in a different tempo from the delay chasing it. Set the delay by hand or bounce the sample first. The slowed case is worked through in [how to make slowed and reverb](https://gazillionindustries.com/how-to-make-slowed-and-reverb/).
+
 ## Automate pitch for movement
 
 A pitch drop at the end of a phrase, a slow bend into a hook, a sample that sinks as the beat drops out: automating pitch turns a static loop into a performance. With repitch, the speed moves too, which is what gives a slow-down its weight.
+
+Shape matters more than depth. A drop of 2 semitones over the last beat of a bar reads as a machine losing power; the same 2 semitones over four bars reads as a room getting warmer, and most listeners will never name what changed. Draw the curve rather than the ramp, and land the value exactly back on zero at the downbeat, because an automation lane that ends at −7 cents will haunt you for an hour.
+
+The costly detail is that a bend needs the pitch change to happen live, and a clip transposition in a host is a static property, not a moving one. Which is why the bend usually has to come from a plugin on the insert, or from bouncing the move and editing the audio afterward. If you go the bounce route, do it once and keep the flat version, because a bend baked into a file is a bend you can never quite talk out of the record.
+
+## Test it in your own session
+
+You can measure what a shift costs instead of arguing about it. Fifteen minutes, any DAW, and you will stop guessing.
+
+- Duplicate the sample track so you have two copies of the same clip, A and B.
+
+- On copy B, pitch shift up 12 semitones with the tempo held.
+
+- Bounce B in place, then pitch that bounce back down 12 semitones.
+
+- Bounce again, so B has been through the algorithm twice and should now match A.
+
+- Line the two up to the sample and flip the polarity of one of them.
+
+- Play both. What you hear is everything the algorithm failed to put back.
+
+- Repeat the whole run at 1 semitone and compare the two leftovers.
+
+Two round trips is harsher than anything you would do on purpose, and that is the point: it magnifies the character of the error until you can name it, and once you can name it you will hear it at normal sizes. The leftover from a transient-preserving mode is a rattle of tiny attack fragments. The leftover from a phase vocoder is a soft pitched wash with no edges in it anywhere. Run it once per mode in your DAW and the mode menu stops being a mystery. The method is the same one used for [phase cancellation](https://gazillionindustries.com/phase-cancellation/) checks.
+
+The tuning check is faster and you should do it every time. Play a sine wave at the root you think the sample is in, at the same time as the sample, and listen to the beating between them. No beating means you are in tune. A slow pulse means a handful of cents. A fast warble means you are a long way out and the tuner lied to you, probably because it was reading a transient.
+
+## The failure modes, and what each one sounds like
+
+- **Thin and small.** Pitched up, and the whole file reads as a toy. Cause: formants moving with the note. Fix: formant preservation, or a smaller move, or commit to it.
+
+- **Muddy and slow.** Pitched down, and the bottom turns to soup. Cause: everything shifted into a crowded region, plus a rate change dragging the top end down out of the air. Fix: high-pass the sample, and add top back with saturation rather than EQ, since the air is no longer in the file to boost.
+
+- **Smeared hits.** The snare loses its front edge and turns into a small swell. Cause: a stretch window longer than the attack it covers. Fix: a transient-preserving mode, or chop at the hits and move the chops. See [what is a transient](https://gazillionindustries.com/what-is-a-transient/).
+
+- **Metallic ringing.** A thin cast over sustained material, worst on cymbals and distorted guitar. Cause: partial phases no longer lining up after resynthesis. Fix: a higher-quality mode, or a smaller shift.
+
+- **Watery shimmer.** A slow wobble under held notes. Cause: grain crossfades landing at a slightly different phase each time around. Fix: a tonal mode.
+
+- **In tune with itself, out of tune with you.** The sample sounds fine solo and fights the bass. Cause: the source was cut a few cents off concert pitch and you transposed in whole semitones. Fix: the cents field, not the semitone field.
+
+- **Loop drift.** The sample stops landing on the bar. Cause: warp markers on the wrong hits, or a ratio that does not divide into the loop length. Fix: check the markers before you blame the algorithm.
+
+All of them scale with the size of the move and with how much the material looks like noise to the analyzer. A held organ chord takes an octave without complaining. A crash cymbal does not survive two semitones cleanly, and a soul loop has a crash cymbal in it.
+
+## Per-DAW: where the transpose field is
+
+The operation is identical everywhere and the menus agree about nothing, which is most of why this question keeps getting asked.
+
+**Ableton Live.** Clip view: the Transpose control shifts the clip in semitones, with a second value field to the right of it for cents. The Warp Mode chooser holds Beats, Tones, Texture, Re-Pitch, Complex and Complex Pro. Re-Pitch is the linked mode, and Live's manual notes that it turns the transposition controls off entirely, because playback speed is now setting the pitch — so if your Transpose field is inactive, that is where you are. Beats mode carries a Preserve chooser, and Transients is the setting for percussion. Complex Pro carries a Formants control that holds the original formants at 100%, with the caveat that it does nothing unless the clip is actually transposed. Live also flags Complex and Complex Pro as the CPU-heavy pair. The full tour is in [varispeed in Ableton Live](https://gazillionindustries.com/varispeed-in-ableton-live/).
+
+**FL Studio.** Channel Settings, then the time stretching panel. The PITCH knob changes pitch while holding the length. The Mode menu is where the decision lives: Resample varies the length with the pitch, which Image-Line document as working like a tape or a record, while Realtime Stretch keeps a sample in key and in time as the project tempo moves. Stretch pro adds an F.Shift formant control on top of that. The Elastique entries are offline methods — highest quality, and they will not follow tempo changes. The stretching runs on zplane's Elastique Pro v3.
+
+**Logic Pro.** Apple splits it three ways: Flex Time for timing, Flex Pitch for note-level pitch inside a region, and Varispeed for moving speed and pitch together across the whole project. Flex Pitch is the one to reach for when a single note in a sampled phrase is wrong and the rest of the phrase is right.
+
+Everywhere else the words change and the physics do not. Look for two things in any host: a field measured in semitones, and a mode chooser with one entry that refuses to separate pitch from tempo. That second entry is the speed change, whatever it is named locally. [Varispeed in every DAW](https://gazillionindustries.com/varispeed-in-every-daw/) has the longer list.
+
+## What it costs you
+
+Say the price out loud before you commit. A speed change downward costs top end, because every frequency travels with it: a hi-hat sitting at 9 kHz lands at 8.0 kHz two semitones down, and no EQ puts back air that is no longer in the file. A speed change upward costs weight at the bottom for the same reason, and it shortens the sample, which can leave you a beat short of the bar you needed.
+
+A pitch shift costs artifacts and CPU, and the good modes cost the most of both. Thirty warped clips is the difference between a session that plays and one that stutters, which is why bouncing is a discipline rather than tidying. And every generation stacks: a sample you shift, bounce, shift and bounce again is carrying four passes and has no road back to the record.
+
+The last cost is not technical. A sample pitched far enough stops sounding like the record it came from, which is sometimes exactly the goal and sometimes the quiet loss of the reason you picked it. Bounce a flat copy, leave it in the session, and A/B them once before you close the project.
 
 ## Questions people ask
 
@@ -16375,6 +16847,50 @@ Either, depending on the feel. Pitching up makes a sample brighter and more urge
 
 Check a sustained note or chord with a tuner or key detection, then confirm by playing root notes under it until one sounds resolved. Expect to fine-tune a few cents on old records.
 
+### How many semitones can I pitch a sample before it sounds bad?
+
+There is no fixed number, because it depends on the material and the method. The shape is reliable, though. A speed change on a full loop stays convincing for three or four semitones either way and starts announcing itself past that. A pitch shift on the same loop shows seams at two or three. Sustained harmonic material takes more than percussion, and noisy content breaks first. Run the null test above on your own loop and find your own limit.
+
+### How do I pitch a sample to the key of my song?
+
+Work out the interval, not the letter. Find the sample's root, count the semitones to your song's root, and transpose by that number. Pick the shorter direction: a sample four semitones above your key can go down four or up eight, and down four is a smaller job for the algorithm. Then fine-tune with cents against a sine wave at your root, since old records rarely sit exactly at concert pitch.
+
+### Why does my sample sound out of tune after pitching?
+
+Almost always because the source was a few cents off to begin with and you moved it in whole semitones, which preserves the error. Play a sine at your root underneath and listen for beating, then take the offset out in the cents field. The other cause is a sample rate mismatch: a 44.1 kHz file played at 48 kHz is 147 cents sharp before you touch anything.
+
+### Does pitching a sample change the BPM?
+
+With a speed change, yes, by the same ratio. A 96 BPM loop taken up 2 semitones runs at 107.76 BPM; taken down 2 it runs at 85.53. With a pitch shift the tempo is held and the BPM stays where it was. That difference is the whole choice on this page.
+
+### How do I make a sample sound like an old sampler when I pitch it?
+
+Use a speed change rather than a shifter, so the timing moves with the pitch, and let the playback rate carry the tone with it. Stepping the sampling rate down on top of that adds the staircase and pulls the ceiling in — at a 3.9 kHz rate, nothing above 1.95 kHz survives, which is half the rate and simply how sampling works. See [how to get an old sampler sound](https://gazillionindustries.com/how-to-get-an-old-sampler-sound/).
+
+### Should I pitch the sample or change my project tempo?
+
+Change the project tempo while the arrangement is still flexible, because it costs nothing and processes nothing. Pitch or stretch once the arrangement is settled, or when the two disagree by more than the sample can absorb. On a chopped sample the tempo route almost always wins, since every chop you stretch is another edge for the algorithm to blur.
+
+### Why is the Transpose control not doing anything in Ableton?
+
+Check your Warp Mode. Live's Re-Pitch mode deactivates the clip's transposition controls on purpose, because in that mode the playback speed is what sets the pitch, so the tempo is your pitch control. Switch to Beats, Tones, Texture or Complex and Transpose comes back.
+
+### How do I pitch one chop without pitching the whole loop?
+
+Cut the chop onto its own clip or its own sampler slot and transpose that, rather than automating a pitch control across the loop. Per-chop transposition is a static value the host can apply cleanly; automating a single control across a loop makes every chop share one moving number. Per-slot is also how you pitch a phrase into a melody. See [how to chop a drum break](https://gazillionindustries.com/how-to-chop-a-drum-break/).
+
+### Does pitching a sample lose quality?
+
+A pitch shift always loses something, because audio is played back that was never recorded, and the loss is largest on transients and noise. A speed change loses nothing to processing — it alters the playback rate and invents no new audio — but it moves the frequency content, so you lose top end going down and weight going up. Different bill, same accounting.
+
+### What is the difference between transpose and pitch shift?
+
+Transpose is usually the name of the control and pitch shift the name of the operation under it. Transposing an audio clip by a semitone runs a pitch shifter, unless the clip is in a mode that links pitch to speed, in which case it runs a rate change instead. Transposing a MIDI part runs neither, because there is no audio to process, which is why MIDI transposes perfectly and audio never quite does.
+
+### Can I pitch a sample in real time while the track plays?
+
+Yes, with a plugin on the insert or a host stretch mode that runs live. The trade is lookahead: a host working through a settled clip can read what is coming and an insert cannot, so a live move on percussive material is the harder of the two cases. Live is also the only one of the two you can play, which is the point of doing it that way.
+
 ## Stock plugins that do this
 
 - **FL Studio**: sample channel pitch and stretch settings
@@ -16386,6 +16902,8 @@ Check a sustained note or chord with a tuner or key detection, then confirm by p
 ## What SKRUU does
 
 SKRUU is our varispeed pitch and time stretch plugin for drums and samples. **PITCH** runs from −20% to +10% and reads out in semitones as well as speed, so you know exactly how far off the record you are; the display compares what went in against what came out. **TIME** moves the length on its own knob, and **ELASTIC** springs either one back along one of sixteen shapes, from a smooth glide to a ratchet. Four sampling grades, down to 3.91 kHz, add a staircase when you want grit.
+
+That readout is the part that matters for this page. A speed control marked in percent makes you do the conversion in your head every time; a control that shows you 0.9439 and −1.00 ST at the same moment lets you land on a whole semitone by looking at it. SKRUU is $29, runs on Mac and Windows as VST3, AU and standalone, and PITCH and TIME move independently, so the speed change and the length change are two separate decisions rather than one.
 
 Twenty-odd years later, the soul samples still come back brighter. Now you know how.
 
@@ -19227,19 +19745,65 @@ A tape machine records sound as magnetic patterns on tape. The transport pulls t
 
 - **Playback head**: reads the magnetism back as voltage
 
+- **Speed**: how much tape each second of music gets, which is the resolution
+
+- **Wavelength**: speed divided by frequency: the physical length of a tone on tape
+
+- **Equalization**: a boost on the way down, a matching cut on the way back
+
 - **The sound**: saturation, head bump, hiss, wow and flutter
 
 ## The transport
 
 Tape comes off a supply reel, passes the heads, and winds onto a take-up reel. The speed isn't set by the reels, whose diameter keeps changing, but by the capstan, a precisely spinning shaft, with a rubber pinch roller pressing the tape against it. Professional reel machines run at speeds like 15 or 30 inches per second; a cassette runs at 1⅞. Faster tape means more tape per second of music, which means better high end and less noise.
 
+The capstan is the only part of the machine that is allowed to decide how fast the tape moves, and everything else in the transport exists to keep that decision honest. A heavy flywheel on the capstan shaft smooths out the motor's cogging. The supply reel pulls gently backward, the take-up reel pulls gently forward, and that back tension is what presses the tape against the heads. Set the tension wrong and the tape floats a few microns off the gap, which is enough to lose the top end before anything else has gone wrong.
+
+Speed is the resolution of the format, and the arithmetic is unforgiving. 1.875 inches per second is 4.76 cm/s; 15 ips is eight times that, and 30 ips is sixteen times. A C60 running thirty minutes a side uses 3,375 inches of tape, about 85 meters, for half an hour of music. The same half hour at 15 ips needs 27,000 inches, roughly 686 meters. That is the whole reason a reel is the size of a dinner plate and a cassette fits in a shirt pocket, and the whole reason they do not sound alike. [Tape speed](https://gazillionindustries.com/tape-speed/) goes further into the trade.
+
+## Speed, wavelength and where the top end goes
+
+One equation explains most of what speed does. A tone on tape occupies a physical length: wavelength equals speed divided by frequency. At 15 ips, a 15 kHz tone is written 0.001 inch long, which is 25.4 microns. At cassette speed the same tone is 3.175 microns. The music has not changed. The room it is written into has shrunk by a factor of eight.
+
+Now put that next to bass. At cassette speed a 50 Hz tone is 0.0375 inch long, about 0.95 mm, which is three hundred times longer than the 15 kHz tone sitting in the same stripe of oxide. Low frequencies are enormous on tape and high frequencies are microscopic, and every mechanical imperfection in the machine, dirt, tilt, a hair of lift, a worn gap, is roughly the size of the small ones.
+
+That mismatch is why the playback gap has to be narrow. A head cannot resolve a wavelength shorter than its own gap; as the recorded wavelength approaches the gap width the output falls, and when they match it nulls outright. To read 3.175 microns the gap must be smaller than three microns, and in practice a good deal smaller than that. A smear of oxide on the head is measured on the same scale, which is why a dirty machine loses the top first and everything else second.
+
+Short wavelengths also fight themselves while they are being written. Adjacent regions of opposite magnetization sit so close together that they partly cancel, so the tape will accept far less high-frequency level than low-frequency level before it stops responding. Drive a mix hard into tape and it gets denser and duller at the same time, and the duller part is not a tone control. It is the top end refusing to fit.
+
+Noise moves with the same physics. The hiss is random and spread over the surface, so signal grows in proportion to how much tape you give it while noise grows only with the square root: double the speed, or double the track width, and you buy back about 3 dB. A 2-inch reel split into 24 tracks gives each one about 2.1 mm; a cassette's 3.81 mm carries four tracks, under a millimeter apiece. The gap between a studio machine and a cassette deck is mostly that number, twice over.
+
 ## The heads
 
 The erase head comes first and clears whatever was there. The record head is a tiny electromagnet with a microscopic gap: the audio signal flowing through it creates a changing magnetic field that leaves a matching pattern on the tape's magnetic particles. The playback head works in reverse, the magnetized tape passing its gap induces a small voltage, which is amplified and equalized back into sound.
 
+The record head has the easier job, because writing a field is cruder than reading the fringe of one. A playback head is a coil wound around a ring of soft magnetic material with a slot cut in it, filled with something non-magnetic. Flux from the tape prefers the ring to the slot, so it detours through the coil, and the coil makes a voltage out of it. Everything you hear has been through that slot, at a scale where a fingerprint is a mountain range.
+
+Head count matters more than it sounds. A two-head machine records and plays with the same head, so you cannot hear what actually landed until you rewind. A three-head machine gives you off-tape monitoring in real time, delayed by the distance between the record and playback heads divided by the speed. At 15 ips each inch of that gap is 66.7 ms; at cassette speed the same inch is 533 ms. Run that delayed signal back to the input on purpose and you have a tape echo, which is the entire mechanism behind [tape delay](https://gazillionindustries.com/tape-delay-explained/) and [the tape echo boxes](https://gazillionindustries.com/space-echo/) built around it.
+
+Multitrack machines add one more trick. Overdubbing onto a three-head machine would put every new part late by that head gap, so the record head is switched to play back the existing tracks while it records the new one. Everything lines up because it is all read from the same physical spot. It is an unglamorous fix and it is the reason layered records exist at all.
+
+## Azimuth, the alignment you hear first
+
+Azimuth is whether the head's gap stands perpendicular to the tape's direction of travel. If it is tilted, one edge of the track reaches the gap slightly before the other, and the two edges read the same tone slightly out of step. When that offset reaches half a wavelength, they cancel. The tone does not get quieter. It disappears.
+
+Run the numbers at cassette speed. Half of a 15 kHz wavelength is about 1.6 microns. Across a track under a millimeter wide, that offset is produced by a tilt of roughly a tenth of a degree. A tenth of a degree, on a screw, and your 15 kHz is gone. This is why a tape recorded on one deck sounds dull on another, why the dullness gets worse toward the top of the spectrum rather than evenly, and why a badly aligned stereo tape also smears in mono, the two channels having been read at different moments. See [phase cancellation](https://gazillionindustries.com/phase-cancellation/) and [mono compatibility](https://gazillionindustries.com/mono-compatibility/) for what that does to a mix.
+
 ## Bias, the part nobody sees
 
 Magnetic tape doesn't respond evenly to small signals, so recording the audio alone would sound distorted. Machines add a bias signal, a high-frequency tone far above hearing, mixed with the audio at the record head. It pushes the tape into its most linear range. How much bias is used changes the tone, and aligning it is part of maintaining a machine.
+
+Wrong in either direction has a signature. Under-biased tape is bright and thin and distorts early, with a nervous, gritty edge on quiet material where the particles are not being pushed past their reluctance. Over-biased tape is smooth and clean in the midrange and dark at the top, because the bias current is strong enough to partly erase the shortest wavelengths as it lays them down. Alignment is the point where you have surrendered the least top end you can get away with while keeping distortion where you want it.
+
+Setting it is a tone and a meter, not an opinion. Feed a high-frequency tone at a low level, raise the bias until the playback output peaks, then go past the peak by the margin the machine asks for. Different tape formulations need different amounts, which is the entire job of the Type I, Type II and Type IV switch on a cassette deck: a tape that wants more bias than it gets plays back harsh and distorted, and one that gets more than it wants plays back muffled. Every cassette anybody ever recorded on the wrong setting sounds like one of those two things.
+
+## Record and playback equalization
+
+A playback head does not read magnetism. It reads change. A coil makes voltage out of the rate at which flux through it moves, so doubling the frequency doubles the output: the raw head signal rises at 6 dB per octave across the whole band. Played flat, a correctly recorded tape would be a wall of treble with no bass under it.
+
+So the machine splits the correction. The playback amplifier applies a falling curve that cancels that 6 dB-per-octave rise and then some, and the record amplifier pre-emphasizes the high end on the way down so it lands well above the noise floor. Pulling the top back down on playback pulls the hiss down with it. That single arrangement is worth more signal-to-noise than any other decision in the signal path, and it is also why a tape recorded to one standard and played on a machine set to another sounds tipped up or tipped over rather than merely wrong.
+
+Companded noise reduction stacks a second layer on top: quiet high-frequency material is lifted while recording and pushed back down by the same amount on playback, so the tape's own hiss goes down with it. It works, and it fails loudly. Play an encoded tape without decoding it and the top end is glassy and the quiet passages breathe up and down. Decode a tape that was never encoded and everything soft goes dark. A large share of the cassettes that sound "wrong" in a crate were recorded with one switch set and played back with the other.
 
 [TRIPLE OG](https://gazillionindustries.com/tripleog.html) puts a cassette transport in a plugin, VU meters included. There's a demo on the page.
 
@@ -19255,6 +19819,74 @@ Magnetic tape doesn't respond evenly to small signals, so recording the audio al
 
 - **Speed variation:** tiny wobbles in the transport. See [wow and flutter](https://gazillionindustries.com/wow-and-flutter/).
 
+Every item on that list is a failure to reproduce the input, which is the joke sitting at the center of twenty years of plugin development. None of it was designed in. Engineers spent decades and enormous money reducing all five, and the moment they succeeded, everybody went looking for them again.
+
+Saturation is the one people mean first. As the particles approach full magnetization the tape stops giving you more output for more input, so the tops of loud peaks compress before the body of the sound does. The peaks come down, the average stays, and the crest factor falls, which is heard as loudness that did not cost you a fader move. It also generates harmonics, mostly odd ones when the transfer curve is symmetrical, and the whole business is laid out in [saturation explained](https://gazillionindustries.com/saturation-explained/) and [crest factor](https://gazillionindustries.com/crest-factor/).
+
+Head bump is the odd one out, because it is a geometry artifact rather than a magnetic one. At low frequencies the wavelength on tape becomes comparable to the physical dimensions of the head structure itself, and the response develops a ripple: a lift and a dip in the bottom octaves. Since it is set by wavelength, it moves with speed. Double the tape speed and the bump climbs an octave. Half the affection people have for 30 ips versus 15 ips is an argument about where that bump lands relative to a kick drum.
+
+## A worked example: one loop, three speeds
+
+Print the same two-bar drum loop three times, at 1.875, 15 and 30 inches per second, level matched, and the differences sort themselves into an order you can predict before you hear them.
+
+Noise moves first and most: each doubling of speed buys roughly 3 dB, so the cassette pass sits about 9 dB noisier than the 30 ips pass, and on a quiet loop that is the difference between a texture and a problem. The top end moves next. At 1.875 ips the hats are being written 3 microns long and they come back soft-edged and slightly smeared; at 30 ips they are 50 microns long and they come back as hats. Head bump moves last and least obviously: the bottom-octave lift that sat under the kick at 15 ips has climbed an octave at 30, so the kick loses a little weight and gains a little punch, and people will argue about which one they wanted.
+
+Speed error is its own axis. A transport running 1% fast lifts pitch by 17 cents, which is most of a fifth of a semitone and plainly audible against a synth that is not moving with it. Two decks each off by half a percent in opposite directions give you the same 17 cents between them. Halve the speed deliberately and you get an exact octave down at half tempo, which is the mechanism behind [chopped and screwed](https://gazillionindustries.com/how-to-chop-and-screw/) and everything filed under [varispeed](https://gazillionindustries.com/what-is-varispeed/).
+
+## Where the machine sits in a chain
+
+A tape machine is the last thing before the mix leaves the building, and it is a processor whether you asked for one or not. There is no bypass. Every choice you make about level upstream is also a choice about how much saturation you print, which makes [gain staging](https://gazillionindustries.com/gain-staging/) into tone control and puts the [VU meter](https://gazillionindustries.com/vu-meter/) in charge of the sound rather than merely reporting on it.
+
+The order inside the chain follows from that. Compression before tape lands on the tape as compression; compression after tape is working on material whose peaks have already been rounded off, so it reacts less and grabs later. Reverb before tape gets the hiss and the wobble printed into its tail, which is most of what makes old records sound like one place rather than a dry track with a plugin on it. Anything you want clean stays off the machine entirely, which was the actual working practice, not a purist position. Keep some [headroom](https://gazillionindustries.com/headroom-in-mixing/) for the peaks you still want.
+
+In a DAW the equivalent decision is where the tape processing sits on the bus. On the drum bus it does the peak-rounding job. On the master it does the glue job and the noise job at once, and the hiss from ten instances stacks. One instance late in the chain, hit properly, beats ten instances hit gently, for the same reason one generation of tape beats three.
+
+## Failure modes and what they sound like
+
+- **Dirty heads:** dull first, then intermittent. Oxide builds on the gap, lifting the tape off it. The top goes before anything else, because the top is the smallest thing on the tape.
+
+- **A magnetized head:** raised hiss and a top end that gets slightly worse every single time you play a tape, because the head is partly erasing the shortest wavelengths as they pass. This one destroys masters quietly.
+
+- **Azimuth error:** dull, and hollow when you sum to mono. Dull alone is dirt. Dull plus a mono collapse is alignment.
+
+- **Worn pinch roller:** flutter. Fast, small pitch movement that reads as a roughness on sustained tones rather than as pitch.
+
+- **Print-through:** a ghost of a loud transient audible before it arrives, magnetized into the adjacent layer on the reel. Storing tape tails-out hides it behind the transient instead of in front of it.
+
+- **Binder failure:** squealing, and oxide shedding onto the heads mid-pass. Old stock that has absorbed moisture.
+
+- **Dropouts:** a momentary hole where the tape lost contact or the coating is thin. Brief, full-band, and unrepairable.
+
+- **Over-level:** dense, dull, and with the transients gone flat. Tape does not announce this the way a converter does, which is the trap. (It also sounds excellent right up until it doesn't, which is the other trap.)
+
+## Test it in your own session
+
+You can hear every mechanism above inside an hour, without a machine, using whatever tape processing you already own. Use tones, not music: music hides all of this.
+
+- Render a 30-second sine sweep from 20 Hz to 20 kHz at −12 dBFS.
+
+- Print it through the tape processing at a level that reads around 0 VU.
+
+- Put a spectrum analyzer after it and capture the curve.
+
+- Compare it against the dry sweep. Note the high-frequency roll-off and any low-frequency lift.
+
+- Raise the input by 6 dB and print the sweep again.
+
+- Compare the two printed sweeps. The top end should fall further at the higher level.
+
+- Replace the sweep with a steady 1 kHz tone and look at the harmonics above it.
+
+- Replace that with a steady 440 Hz tone and listen for the pitch to move.
+
+Every major DAW ships the tools for this. Live has Spectrum; Logic Pro has an analyzer built into Channel EQ; FL Studio shows one in Fruity Parametric EQ 2. Any tuner will make step eight visual instead of a judgement call. If you want the per-DAW setup written out, see [tape plugins for Ableton Live](https://gazillionindustries.com/tape-plugins-for-ableton-live/), [for Logic Pro](https://gazillionindustries.com/tape-plugins-for-logic-pro/) and [for FL Studio](https://gazillionindustries.com/tape-plugins-for-fl-studio/). For the real version with a real deck, [how to record to cassette](https://gazillionindustries.com/how-to-record-to-cassette/) is the procedure.
+
+## Where it costs you
+
+A tape machine costs money, floor space and a maintenance schedule. Heads need cleaning before every session, demagnetizing on a calendar, and replacement when the gap wears open. Alignment is a tone, a meter and twenty minutes, and it drifts. Tape stock is consumable and the good stock is finite.
+
+The workflow costs more. There is no undo, no non-destructive punch, and no rearranging a verse after the fact. Every copy is a generation: two equal, uncorrelated hiss beds add to 3 dB more noise than one, and the top end goes with them, which is why a third-generation bounce has a texture of its own. See [four-track recording](https://gazillionindustries.com/four-track-recording/) for what planning around that actually looked like. And the wobble you are paying for is a wobble: everything printed through the machine drifts out of tune with everything that was not.
+
 ## Questions people ask
 
 ### What are the disadvantages of a tape recorder?
@@ -19269,9 +19901,51 @@ Bias is a high-frequency signal added during recording that helps the tape respo
 
 Tape rounds off peaks as it saturates, softens the highest frequencies and adds a low-frequency bump, which together reduce harshness and add weight.
 
+### What are the three heads on a tape recorder?
+
+Erase, record and playback, in that order along the tape path. The erase head clears the tape, the record head writes the signal as magnetism, and the playback head reads it back as voltage. Cheaper machines combine record and playback into one head, which means you cannot monitor what landed on the tape until you rewind and play it.
+
+### How fast does tape move in a tape machine?
+
+A cassette runs at 1.875 inches per second, which is 4.76 cm/s. Professional reel machines typically run at 15 or 30 inches per second, eight and sixteen times cassette speed. Faster tape gives each second of music more surface, which means a better top end and less noise, and burns through tape proportionally faster.
+
+### Why does tape lose high frequencies at slow speeds?
+
+Because a tone occupies a physical length on tape equal to speed divided by frequency. At cassette speed a 15 kHz tone is only about 3 microns long, and a playback head cannot resolve a wavelength approaching the width of its own gap. The same tone at 15 ips is 25.4 microns long and reads back easily.
+
+### What is head bump on tape?
+
+A ripple in the low-frequency response, a lift and a dip, caused by the recorded wavelength becoming comparable to the physical size of the playback head structure. Because it depends on wavelength, it moves with speed: double the tape speed and the bump climbs an octave.
+
+### What happens if the bias is set wrong?
+
+Too little bias gives you a bright, thin recording that distorts early. Too much gives you a clean midrange and a dark top, because the bias partly erases the shortest wavelengths as they are written. On a cassette deck this is usually the tape type switch being set to the wrong formulation.
+
+### Does copying a tape make it sound worse?
+
+Yes, and predictably. The copy carries the original's hiss plus its own, and two equal uncorrelated noise beds sum to about 3 dB more than one. Saturation and high-frequency loss accumulate the same way. Three generations in, the quiet passages have a texture that was not in the performance.
+
+### Why do tape heads need cleaning and demagnetizing?
+
+Oxide shed from the tape builds on the gap and lifts the tape off it, costing the top end first. Separately, the heads gradually acquire a permanent magnetic charge from the signal passing through them, and a magnetized head erases a little of the high end from every tape it plays. Cleaning is per session; demagnetizing is on a schedule.
+
+### What is print-through on tape?
+
+A loud passage magnetizing the layer of tape wound against it on the reel, so you hear a faint ghost of a transient before it arrives. It gets worse with time, heat and thin tape. Storing tape tails-out puts the ghost after the loud event instead of before it, where it is largely masked.
+
+### Is a tape machine analog?
+
+Yes. The magnetism on the tape varies continuously in step with the voltage from the microphone, with no sampling and no quantization anywhere in the path. Its limits are physical rather than numerical: particle size, gap width, tape speed and how much magnetization the coating will accept.
+
+### Why did studios stop using tape machines?
+
+Cost, maintenance and editing. Tape stock is consumable, machines need alignment and parts, and a cut is a cut. Digital recording removed the noise floor, the generational loss and the physical edit at once. What it also removed, and what people then spent twenty years buying back, is everything on the list above.
+
 ## What TRIPLE OG does
 
 TRIPLE OG is our cassette tape simulation: a cassette transport, with six controls for what the medium is and what it's doing, and two for your hands. **TONE**, **HISS**, **AGE** and **DRIVE** set what the tape is, **WOW FLUT** and **CATCH** set what the transport is doing, and **SCRUB** and **SLAM** let you grab it. The display shows the reels, the tape and the two heads, with a pair of VU meters against a 0 VU reference so you can see how hard you're hitting it.
+
+**AGE** runs in years, nought to sixty, and moves the whole machine at once rather than one parameter at a time. The transport controls are the part you play: **SLAM** stops the tape and brings it back in sync, **SCRUB** runs the head backward and springs home when you let go, and **CATCH** makes the tape drag and then sprint to make up the time. It runs on Mac and Windows as VST3, AU and standalone.
 
 Rust on plastic, a magnet, and a motor that never quite keeps perfect time. That's the whole trick, and people still build studios around it.
 
@@ -19519,6 +20193,14 @@ To make music sound like a cassette tape, recreate what the format does: roll of
 
 A cassette runs its tape at 1⅞ inches per second on narrow tracks, a fraction of what studio machines use. Less tape per second means less room for the signal: the high end softens, noise rises, and loud peaks saturate and round off early. The small mechanism adds speed wobble, the heads rarely line up perfectly so the channels drift apart in level and timing, and worn tape produces brief dropouts. Every one of those is part of the sound.
 
+## The numbers behind the format
+
+A cassette moves 4.76 centimeters of tape past the head every second. A studio machine at 15 inches per second moves eight times that, and at 30 inches per second, sixteen. Thirty minutes a side works out to roughly 86 meters of tape. The tape itself is 3.81 mm wide and carries four tracks, two in each direction, so one channel gets under a millimeter of width to live in.
+
+That budget explains everything else. At 4.76 cm/s a 15 kHz tone is written as a magnetic pattern about three microns long, the length of a bacterium, and the head gap and the oxide particles are in the same neighborhood. A 100 Hz tone gets half a millimeter of tape to itself. The high end is the first thing the format cannot hold, and the rest of the character follows from the same shortage.
+
+Narrow tracks also put the noise floor closer to the music, which is why hiss is a cassette signature and not a reel-to-reel one. And a small spring-loaded mechanism pulling tape through a pinch roller cannot hold speed the way a heavy studio transport can. See [how a tape machine works](https://gazillionindustries.com/how-does-a-tape-machine-work/) for the transport, and [tape speed](https://gazillionindustries.com/tape-speed/) for what changing it does to pitch.
+
 ## How to make music sound like a cassette tape
 
 - Low-pass the track to soften the top end, and high-pass away the deepest lows.
@@ -19535,15 +20217,141 @@ A cassette runs its tape at 1⅞ inches per second on narrow tracks, a fraction 
 
 - Compare with the original at matched loudness and pull back anything that sounds like an effect.
 
+## The same moves, with numbers on them
+
+Those seven are the shape. Here are opening positions for each one, in units you can dial. They are starting points rather than settings, because the right value depends on how bright the source already is and how loud it will end up.
+
+- Low-pass at 12 kHz, 12 dB per octave, then sweep between 10 and 16 kHz.
+
+- High-pass at 50 Hz, 12 dB per octave.
+
+- Drive until the loudest hits peak 1 to 3 dB lower than they did dry, then match the level back.
+
+- Set the hiss between −65 and −55 dBFS RMS with the music muted.
+
+- Set wow near 0.7 Hz at 3 to 8 cents of depth.
+
+- Add flutter near 8 Hz at 1 to 3 cents.
+
+- Delay one channel by one to three samples, drop it 0.3 to 0.8 dB, and shelve it slightly darker.
+
+- Place one or two dropouts a minute, 40 to 150 ms long and 2 to 4 dB deep, off the downbeat.
+
+Do them in that order and stop after each one to check that the mix still reads. Seven small moves that each sound like nothing add up to a mix that sounds like a different decade; seven moves that each sound like something add up to a novelty.
+
+## Wow and flutter, in cents
+
+Pitch wobble is a speed change, and speed changes are easier to aim in cents than in percent. A 6 percent speed increase is almost exactly one semitone. That gives you the conversion: 0.1 percent is 1.7 cents, 0.5 percent is 8.6 cents, and 1 percent is 17.2 cents, which on a sustained pad is already more than you want.
+
+If you have no pitch-modulation tool, a delay will do it. Moving a delay time changes pitch while it moves, and a delay swinging by A seconds at f hertz produces a peak speed deviation of 2πfA. So a delay in free time, swung ±1 ms at 1 Hz, gives 0.63 percent, or 10.8 cents. Run it backward to aim: 5 cents of wow at 0.7 Hz needs a swing of ±0.66 ms.
+
+One sine is the mistake everybody makes. Your ear finds a fixed period inside two cycles and files the result under chorus. Run two or three motions at rates that share no factor — 0.4 Hz, 1.1 Hz and 7.3 Hz, say — so nothing repeats inside a bar. [Wow and flutter](https://gazillionindustries.com/wow-and-flutter/) goes into the difference at length.
+
+Depth depends on what is under it. Pads, keys, guitars and chopped samples take 8 to 15 cents and sound better for it. A lead vocal holds 3 to 5 cents before it reads as a bad take. Bass and 808s stay under 2 cents or stay off the effect, because a sub drifting against a kick sounds out of tune rather than old.
+
+## Setting the hiss bed
+
+Meter the hiss instead of guessing it. Mute everything except the noise, put a meter on the bus and read the RMS. Somewhere between −65 and −55 dBFS sits under a loud mix and stays audible in a gap. Then unmute and find the quietest bar in the song, because that bar is where a listener decides whether the noise is character or a fault.
+
+Filter the noise before you set its level. Raw white noise is brighter than any tape ever was and it goes straight for the cymbals. High-pass it near 800 Hz so it stops crowding the low mids, and low-pass it at the same corner you used on the music, so the noise and the program lose their top end together.
+
+The expensive mistake is putting it on every channel. Uncorrelated noise sums by power, so eight tracks carrying the same hiss bed land 9 dB louder than one, and sixteen land 12 dB louder. Print it once, on the bus that feeds the master. [Tape hiss](https://gazillionindustries.com/tape-hiss/) covers removing it as well as adding it.
+
+## The two channels should not match
+
+Azimuth is the angle of the head gap across the tape, and it is the reason no two decks agree. The gap is supposed to stand square to the tape path. When it tilts, one channel reaches the gap slightly ahead of the other, and the pair arrives at the amplifier out of step.
+
+The arithmetic is small and the result is not. Four tracks divide 3.81 mm of tape, so the two channels of a stereo pair sit a little under a millimeter apart. Tilt the gap a tenth of a degree and the path length between them differs by about 35 microseconds at 4.76 cm/s. Two channels 35 microseconds apart cancel first at 14 kHz. Three tenths of a degree drops that first cancellation to about 4.8 kHz, which is why a misaligned deck sounds hollow rather than simply quiet.
+
+In a session, three small moves get most of it: delay one channel by one to three samples (22.7 microseconds each at 44.1 kHz), pull that channel down half a decibel, and shelve it a little darker. Then check in mono, because you have just built a comb filter on purpose. See [mono compatibility](https://gazillionindustries.com/mono-compatibility/) and [phase cancellation](https://gazillionindustries.com/phase-cancellation/).
+
 ## The details that sell it
 
 The top end and the wobble do most of the work; hiss and dropouts sell it. Keep the wobble irregular rather than a steady sine, which just sounds like chorus. See [wow and flutter](https://gazillionindustries.com/wow-and-flutter/) and [tape hiss](https://gazillionindustries.com/tape-hiss/). And don't forget saturation: cassette doesn't only lose detail, it squashes a little, which is part of why cassette mixes feel glued.
 
 [TRIPLE OG](https://gazillionindustries.com/tripleog.html) is a cassette transport in a plugin: tone, hiss, age, drive, wow and flutter. There's a demo on the page.
 
+## Where the chain goes
+
+Put the moves in the order the machine puts them. Drive happens on the way to the tape, so saturation comes first, then the tone loss, then the noise the tape carries, then the transport wobble, then the head mismatch, then dropouts. The hiss belongs after the drive: noise generated by the tape never went through the record amplifier, and saturating a hiss bed turns it into distortion instead of air.
+
+Run the whole chain on the mix bus or on one stem bus rather than on thirty channels. Reverb goes before it, because a tape captured a room instead of adding one afterward. Anything that measures pitch goes before it too — tuning correction and time stretching placed downstream of a wobble spend the whole song chasing it.
+
+Watch what sits after. A limiter on the master pulls the hiss up every time the music gets out of the way, so the gaps get noisier as the master gets louder. And saturation generates harmonics above 22.05 kHz in a 44.1 kHz session, which fold back down as tones that were never played. See [oversampling](https://gazillionindustries.com/oversampling/) and [aliasing](https://gazillionindustries.com/what-is-aliasing-in-audio/).
+
+The medium, as five controls.
+
+## Doing it in Ableton Live, Logic Pro and FL Studio
+
+All three ship enough stock devices to build the whole chain by hand. What differs is which device handles the awkward parts, and there is one trap common to all of them.
+
+**Ableton Live.** EQ Eight for the low-pass and high-pass, Saturator for the drive, Utility for channel level and width. For the wobble, put Delay after the source, switch its time off sync so it reads in milliseconds, and drive that time from an LFO. Freeze and flatten the track to commit the result before you mix around it. [Tape plugins for Ableton Live](https://gazillionindustries.com/tape-plugins-for-ableton-live/) has more.
+
+**Logic Pro.** Channel EQ for tone, Overdrive or Clip Distortion for the drive, Gain for level and channel trim. Logic has one device that makes the head mismatch trivial: Sample Delay sets a per-channel offset in samples, so the whole azimuth move above is one plugin and two numbers. See [tape plugins for Logic Pro](https://gazillionindustries.com/tape-plugins-for-logic-pro/).
+
+**FL Studio.** Fruity Parametric EQ 2 for both filters, Fruity Soft Clipper for the drive, Fruity Balance for the channel trim. Automation clips are the strength here: draw the wow by hand as a slow, uneven curve on a delay-time or pitch parameter and you get irregular motion without stacking three LFOs. [Tape plugins for FL Studio](https://gazillionindustries.com/tape-plugins-for-fl-studio/) covers the rest.
+
+The trap is tempo sync. A delay left on note values wobbles in time with the track, and a wobble locked to the grid reads as an effect you switched on. Take every modulation source off sync and give each one a rate with no musical relationship to the tempo.
+
+## How to check it worked
+
+- Match loudness within 0.5 dB, then bypass and compare.
+
+- Send a 1 kHz sine through the chain and watch a tuner.
+
+- Mute the music, meter the hiss alone, then listen to the quietest bar.
+
+- Sum to mono and listen for the top end thinning.
+
+- Play it on a phone speaker.
+
+- Bounce a 128 kbps file and listen to the noise floor.
+
+The sine test is the one people skip and the one that ends arguments. A tuner reads the wobble in the same unit you set it in, so ten seconds tells you whether the 5 cents you dialed is 5 cents or 40. Drums, cymbals and reverb tails all hide pitch movement from your ears. A steady tone hides nothing.
+
+The 128 kbps bounce matters because noise is expensive to encode. A lossy encoder spends bits describing a broadband hiss bed that it could have spent on the music, and a hiss that sounded like air at full resolution can come back swirling. Find that out before the master leaves your room, not after.
+
+## Six ways it goes wrong
+
+**It sounds like chorus.** One modulation source at one rate. Add a second and a third at unrelated rates, and cut the depth of all three.
+
+**It sounds like a blanket.** The low-pass went too far, or it landed on a mix that was already dark. Cassette softens the top end and does not remove it. Put the corner back up to 14 or 16 kHz and take the brightness out with saturation instead.
+
+**The hiss will not leave.** You set it against a loud chorus. Set it against the intro.
+
+**Everything sounds better and nothing changed.** The saturation added level, and louder reads as better for about four seconds. Match and listen again; [gain staging](https://gazillionindustries.com/gain-staging/) is the boring fix.
+
+**It collapses in mono.** The channel offset is too large, or something widened the mix after it. Reduce the delay to one sample and check again.
+
+**The bass is out of tune.** Wow is reaching the low end. Split the sub off, run the chain on everything above it, and bring the sub back clean.
+
+## What it costs you
+
+All of it is one-way once you print it. The top end you filtered is gone, the hiss is in the master, and a client who asks for a brighter vocal next week is asking you to rebuild the chain around a different mix. Keep the clean bounce.
+
+The hiss is the part that keeps coming back. It survives every stage after it, it rises whenever the music gets out of the way, it costs bits in a lossy encode, and it is the first thing a mastering engineer will ask about. That is the price of the glue. It is usually worth paying, and you should pay it knowingly.
+
+Wow costs you tuning. Anything sustained and pitched argues with anything sustained and pitched beside it, and two parts wobbling independently sound less like a tape and more like a fault. Saturation costs headroom and processing, and an oversampled stage on every channel adds up fast on a laptop, which is the practical argument for keeping the chain on a bus.
+
 ## Or use a real cassette
 
 Recording a mix to a cassette deck and back is the most honest version and still surprisingly easy. Records like *Nebraska* and Daniel Johnston's home-taped albums are proof that the format's limits can be the character of the work. Even some modern samplers ship a cassette simulation, because producers keep asking for the sound.
+
+The hybrid is usually the best of it. Print the drums and the sample to tape and bring them back, then keep the vocal and the sub clean in the box, so the mix carries the wobble and the noise where they flatter it and stays steady where they would hurt. [Four-track recording](https://gazillionindustries.com/four-track-recording/) covers doing it while you write rather than afterward.
+
+## Hear it
+
+Six paragraphs of description are worth one loop. Here are the three moves on their own, and then a deck that has all of them at once.
+
+- **Dry** — no processing — speed holds at 1.000 — https://gazillionindustries.com/tripleog/tog-dry.m4a
+
+- **Wow and flutter 65** — speed moves between 0.941 and 1.071 — https://gazillionindustries.com/tripleog/tog-wowflutter.m4a
+
+- **Hiss 60, tone 45** — a noise bed, nothing else — https://gazillionindustries.com/tripleog/tog-hiss.m4a
+
+- **Age 35, hiss 45, drive 30, wow 40** — a worn deck — speed 0.951 to 1.059 — https://gazillionindustries.com/tripleog/tog-aged.m4a
+
+The same eleven seconds each time, rendered offline through [TRIPLE OG](https://gazillionindustries.com/tripleog.html) at the settings shown. No other processing, no master bus, no edits.
 
 ## Questions people ask
 
@@ -19559,9 +20367,55 @@ Mostly because they soften the high end and gently saturate loud peaks, which ro
 
 Roll off the highs and lows, add gentle saturation, a little wow and flutter and a quiet hiss bed, and make the vocal slightly narrower. Keep the effects subtle so the words stay clear.
 
+### What plugin makes music sound like a cassette?
+
+Any cassette or tape simulation that puts tone, saturation, noise and speed instability in one place will do it, and most producers reach for one rather than wiring six devices together. [Best cassette plugins](https://gazillionindustries.com/best-cassette-plugins/) lays out the field.
+
+### How do I make a cassette effect in Ableton?
+
+EQ Eight for the filters, Saturator for the drive, a noise sample for the hiss, and Delay with its time off sync and an LFO on it for the wobble. Put all four on one bus rather than on every track.
+
+### Why does my tape plugin sound like chorus?
+
+Because the pitch is moving at one steady rate. A single sine at a fixed depth is vibrato, and the ear identifies the period almost at once. Lower the depth and add a second, slower motion at an unrelated rate.
+
+### How much hiss should I add?
+
+Enough to hear in the gaps and not in the choruses. Meter it with the music muted, aim between −65 and −55 dBFS RMS, and judge it against the quietest bar of the song rather than the loudest.
+
+### Should the cassette effect go on the master or on each track?
+
+On a bus. A real deck ran the whole mix at once, and per-channel copies stack the hiss and multiply the processing cost for nothing.
+
+### What frequency does a cassette cut off at?
+
+There is no single number. It depends on the tape, the deck and how hard the recording was pushed. Treat 10 to 16 kHz as the useful range for the filter and choose by ear against the source.
+
+### How do I make a beat sound like a cassette without plugins?
+
+Record it to a deck and back, which does every part of it in one pass. [How to record to cassette](https://gazillionindustries.com/how-to-record-to-cassette/) has the connections and the levels.
+
+### What is the difference between cassette and vinyl sound?
+
+Cassette gives you a steady hiss bed, a soft top end and slow pitch drift. A record gives you crackle, clicks and surface noise, with drift tied to the platter instead: an off-center record at 33⅓ rpm sways at 0.56 Hz, and at 45 rpm at 0.75 Hz. See [vinyl sim plugins](https://gazillionindustries.com/vinyl-sim-plugin/).
+
+### Does an old tape sound different from a new one?
+
+Yes. Oxide sheds, the top end goes first, dropouts get more frequent, and a badly stored reel can print one layer through to the next. That is the direction an age control moves in: darker, noisier and less steady, all at once.
+
+### Why does my cassette effect disappear on phone speakers?
+
+A phone speaker gives you next to nothing below a few hundred hertz and rolls off early at the top, so a chain living in the bottom octave and the last octave has nothing left to show. Keep some character in the mids — the saturation and the dropouts survive a small speaker, the sub filter and the 16 kHz shelf do not.
+
+### How do I make a whole beat sound like it is playing on a tape in another room?
+
+Do the cassette chain first, then put the result through a filter and a short, dark reverb, and let the reverb be the only thing that reaches you. [Music that sounds like another room](https://gazillionindustries.com/how-to-make-music-sound-like-another-room/) has the specific moves.
+
 ## What TRIPLE OG does
 
 TRIPLE OG is our cassette tape simulation, a cassette transport rather than a single effect. **TONE** is the playback system's brightness. **HISS** is a broadband bed. **AGE** runs from nought to sixty years, darker, noisier, slightly more saturated, less speed-stable and less matched left to right, all on one knob. **DRIVE** is soft asymmetric saturation that gets dirtier without getting louder. **WOW FLUT** and **CATCH** make the transport drift and jam, **SCRUB** drags the head back by hand, and **SLAM** stops the tape.
+
+It runs on Mac and Windows as AU, VST3 and standalone, and it is $29. Everything above sits on one panel in the order the machine puts it, which is the argument for a transport over a rack of six devices: you stop building the chain and start playing it.
 
 Springsteen's four-track didn't sound expensive. It sounded true, and that's what people are still chasing.
 
