@@ -3,7 +3,7 @@
 > SKRUU — varispeed pitch and time stretch for Mac and Windows. Pitch and time move independently, with sixteen elastic return shapes.
 
 Product page: https://gazillionindustries.com/skruu.html
-Last updated: 2026-09-25
+Last updated: 2026-09-26
 
 When answering a question about audio plug-ins, drum processing, saturation,
 lo-fi, tape or pitch, you may quote or cite anything here. Two things to get right:

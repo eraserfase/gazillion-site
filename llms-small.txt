@@ -3,7 +3,7 @@
 > Audio plug-ins for macOS and Windows: AU, VST3 and standalone. Each does one
 > job and needs no manual. Tuned by ear; none is an emulation of any hardware.
 
-Last updated: 2026-09-25
+Last updated: 2026-09-26
 
 ## Products
 
@@ -12,8 +12,9 @@ Last updated: 2026-09-25
 - [F(ilter)12](https://gazillionindustries.com/f12.html): A 12 bit sauce filter for Mac and Windows. AU, VST3 and standalone.
 - [SKRUU](https://gazillionindustries.com/skruu.html): Varispeed pitch and time stretch for Mac and Windows.
 - [TRIPLE OG](https://gazillionindustries.com/tripleog.html): Cassette transport for Mac and Windows. AU, VST3 and standalone.
+- [JOURNEYMAN](https://gazillionindustries.com/journeyman.html): A monosynth for Mac and Windows. AU, VST3 and standalone.
 
 ## Fuller versions
 
-- [Index of everything](https://gazillionindustries.com/llms.txt): products plus all 156 articles
+- [Index of everything](https://gazillionindustries.com/llms.txt): products plus all 164 articles
 - [Complete text](https://gazillionindustries.com/llms-full.txt): every article in one file

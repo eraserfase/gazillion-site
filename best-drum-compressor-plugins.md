@@ -3,27 +3,27 @@
 > The best drum bus compressor plugins, free and paid, which compressor type actually suits drums, and the attack and release numbers that make any of them work.
 
 Source: https://gazillionindustries.com/best-drum-compressor-plugins/  
-Published 2026-09-25, updated 2026-09-25. By Gazillion Industries, who make DRUGS.
+Published 2026-09-25, updated 2026-09-26. By Gazillion Industries, who make DRUGS.
 
 ---
 
 A loop that filled the room on monitors goes small in the car. The kick and the snare still land, but the hats, the ghost notes and the air between them have gone somewhere. That missing middle is the job of a drum bus compressor, and it is a different job from the one a channel compressor does.
 
-The best drum bus compressor for most records is a clean, fast-acting VCA-style plugin set slow: 2:1 to 4:1, attack 10 to 30 ms, release 150 to 300 ms, pulling 2 to 4 dB on the loudest hits, with a sidechain high-pass near 100 Hz so the kick stops steering the whole kit. Free covers that. Paid buys a sound, not more control.
+The best drum bus compressor for most records is a clean, fast-acting VCA-style plugin set slow: 2:1 to 4:1, attack 10 to 30 ms, release 150 to 300 ms, pulling 2 to 4 dB on the loudest hits, with a sidechain high-pass near 100 Hz so the kick stops steering the whole kit. Free covers that. DRUGS is ours, free, and does the job from one control called DOSE, timing underneath rather than on the face.
 
 ## The short version
 
+- **What we would put on the bus**: DRUGS — ours, free, one knob called DOSE
+
 - **Best type of compressor for drum bus**: VCA — fast, predictable, stays out of the way
 
-- **Starting point**: 4:1, 20 ms attack, 200 ms release, 3 dB of gain reduction
+- **Starting point, dialing it yourself**: 4:1, 20 ms attack, 200 ms release, 3 dB of gain reduction
 
 - **Sidechain high-pass**: 80–120 Hz, so the kick is not the only thing it hears
 
-- **Best free drum compressor plugin**: TDR Kotelnikov for control, Klanghelm DC1A for character
+- **Best free drum compressor plugin**: ours; then TDR Kotelnikov for control, Klanghelm DC1A for character
 
-- **The real fork**: control or character — decide before you shop
-
-- **Our answer**: DRUGS, free, one knob called DOSE
+- **The real fork**: control, character, or the decision already made
 
 Everything below is the reasoning, the numbers, and an audition test that takes ten minutes and settles the argument faster than a month of forum reading.
 
@@ -75,15 +75,25 @@ Control means the gain moves and nothing else does. Transients survive, the tone
 
 Character means the compressor adds harmonics, shifts the low end, softens the top, or all three, whether you asked or not. It is why a bus compressor can improve a loop while doing almost no gain reduction at all, which is a hint that the gain reduction was never the point on that particular plugin.
 
-Neither is better. What matters is knowing which one you reached for, because the two fail in opposite ways. A transparent compressor asked to add life will do nothing and you will keep turning it up until the kit is flat. A character compressor asked to control a wild bus will color everything long before it has caught the peaks, and you will end up with a loud, busy, still-uneven drum bus. Half the plugins people buy are the right plugin for the other job.
+There is a third branch, and it is the one most people are actually on: you want neither decision, you want the drums fixed. A plugin built for one bus can make the control-or-character call once, at the factory, and hand you a single knob. That is a real trade and the section below puts it first, because it is what we build.
+
+Neither of the first two is better. What matters is knowing which one you reached for, because they fail in opposite ways. A transparent compressor asked to add life will do nothing and you will keep turning it up until the kit is flat. A character compressor asked to control a wild bus will color everything long before it has caught the peaks, and you will end up with a loud, busy, still-uneven drum bus. Half the plugins people buy are the right plugin for the other job.
 
 ## The best drum bus compressor plugins, sorted by the job
 
 What follows is by category rather than by rank, because a ranked list of drum compressors answers a question nobody actually has. Prices and features below were read on each maker's own page while writing this.
 
+### If you want the decision made for you
+
+**DRUGS** is ours and it is free for Mac and Windows. One control called **DOSE**, with **MIX** on the face for parallel without a send, **GAIN** on the way out and a soft ceiling after it. Turning DOSE up makes a drum bus denser rather than louder — peak level barely moves across the range of the knob — and the room comes up underneath the hits, which is the missing middle from the top of this page. It installs as an Audio Unit, a VST3 and a standalone, and there is a demo on the product page.
+
+The whole argument of this article moves underneath that one control. The transfer curve, the knee, the attack and the release travel together, and release is adaptive with no user control at all, so the tempo arithmetic two sections down is a thing you can read for the understanding rather than a thing you have to do. What you give up is the vote: no attack knob, no release knob, no knee, no sidechain filter. Those are assumptions about drum buses, which is the page you are on.
+
+**DOSE 12.** The line along the bottom is gain reduction; here it barely leaves the top.
+
 ### If you want control
 
-**TDR Kotelnikov**, from Tokyo Dawn Labs, is free and it is the one to try first. Its control scheme is built around crest factor, which means it gives you two release controls — one for peak events and one for the RMS level underneath them — and on drums that split is exactly the distinction you have been trying to make with a single knob. It has a sidechain high-pass filter, stereo linking options aimed at the bus, and a delta preview that plays you the difference between the compressed and the original signal, which is the fastest way to hear what a compressor is actually removing. Tokyo Dawn describe it as proudly digital and say it does not try to emulate any previously existing device. A paid Gentleman's Edition exists with more of everything.
+**TDR Kotelnikov**, from Tokyo Dawn Labs, is free and is the most adjustable of the free ones. Its control scheme is built around crest factor, which means it gives you two release controls — one for peak events and one for the RMS level underneath them — and on drums that split is exactly the distinction you have been trying to make with a single knob. It has a sidechain high-pass filter, stereo linking options aimed at the bus, and a delta preview that plays you the difference between the compressed and the original signal, which is the fastest way to hear what a compressor is actually removing. Tokyo Dawn describe it as proudly digital and say it does not try to emulate any previously existing device. A paid Gentleman's Edition exists with more of everything.
 
 **u-he Presswerk** is 129 € and is the opposite bet: one plugin for every dynamics job you have. Ratio from 1:1 to 20:1 with adjustable knee and linearity, six task-specific views including Drum and Bus, internal parallel compression so you need no send, M/S mode, and a choice of feed-forward, feed-back or interactive detection. That last control is unusual and it matters on drums: feed-back detection, where the detector listens to the output, is softer and later, and switching between them changes the punch more than most people's attack knob does. Mac, Windows and Linux, the last still marked beta.
 
@@ -91,7 +101,7 @@ What follows is by category rather than by rank, because a ranked list of drum c
 
 **Cytomic The Glue** is $99 and is the reference for the best glue compressor for drum bus work. Cytomic describe it as based on the classic 80s British big-console bus compressor, and alongside the usual controls it has Mix, Range and a sidechain high-pass on the face, external sidechain input, a peak clip stage and oversampling. Mac and Windows, VST2, VST3, AU and AAX.
 
-Worth knowing before you spend: **Ableton's Glue Compressor** was made in collaboration with Cytomic and is based on the same console. Ableton's manual notes that it has no user-adjustable knee, the knee sharpening as ratio increases, and that its auto release uses two time constants at once — a slow one as a base and a fast one that reacts to transients. Its Range slider caps how much compression can happen, with the manual suggesting around −60 to −70 dB to match the original hardware behavior and −40 to −15 dB as a usable alternative to the Dry/Wet control. If you are in Live, you may already have most of what the $99 buys.
+Worth knowing before you spend: **Ableton's Glue Compressor** was made in collaboration with Cytomic and is based on the same console. Ableton's manual notes that it has no user-adjustable knee, the knee sharpening as ratio increases, that its auto release uses two time constants at once — a slow one as a base and a fast one that reacts to transients — and that its Range slider caps how much compression can happen at all. If you are in Live, you may already have most of what the $99 buys, and the walk-through for setting it up lives on [drum bus compression in Ableton Live](https://gazillionindustries.com/drum-bus-compression-in-ableton-live/) rather than here.
 
 ### If you want character
 
@@ -99,15 +109,11 @@ Worth knowing before you spend: **Ableton's Glue Compressor** was made in collab
 
 **Kilohearts Essentials** is free with an account and includes 34 effects, among them Compressor, Compactor, Dynamics, Limiter and Transient Shaper. The compressors in it are plain, which is the point — they load anywhere, they run light, and having a transient shaper sitting next to them is genuinely useful on drums, because half the problems people bring to a compressor are transient problems wearing a disguise.
 
-[DRUGS](https://gazillionindustries.com/drugs.html) is our entry in the last category and it is free. One knob, no timing controls, built for exactly this job and nothing else. There's a demo on the page.
-
-**DOSE 12.** The line along the bottom is gain reduction; here it barely leaves the top.
-
 ## Best free drum compressor plugin: what free actually costs you
 
-Free is not the compromise it was. The best free drum compressor plugin available now will hold a drum bus on a finished record, and the honest summary of the gap is narrow: free rarely gives you a character stage worth paying for, and free is less likely to be rebuilt for the next operating system.
+Free is not the compromise it was. The best free drum compressor plugin available now will hold a drum bus on a finished record, and the honest summary of the gap is narrow: free rarely gives you a character stage worth paying for, and free is less likely to be rebuilt for the next operating system. Ours is one of the free ones, which is the disclosure and also the shortest route to the end of this article.
 
-Fill the utility slots for nothing. Kotelnikov for the transparent bus, DC1A when the loop needs attitude, MJUC jr. when it needs to settle, Kilohearts Essentials for the plain ones. That set covers the entire functional range of this article at a cost of zero, and the longer piece on [free compressor plugins](https://gazillionindustries.com/best-free-compressor/) goes through the selection criteria in more detail.
+Fill the utility slots for nothing. DRUGS for the drum bus itself, Kotelnikov when you want every timing control in your own hands, DC1A when the loop needs attitude, MJUC jr. when it needs to settle, Kilohearts Essentials for the plain ones. That set covers the entire functional range of this article at a cost of zero, and the longer piece on [free compressor plugins](https://gazillionindustries.com/best-free-compressor/) goes through the selection criteria in more detail.
 
 Where free stops being free is maintenance. A plugin that is not updated becomes a session you cannot open in three years. Check the changelog on the maker's page before a free compressor becomes load-bearing — Kotelnikov's carries its version history openly. A plugin with no visible update in five years is one to render through rather than keep live.
 
@@ -137,6 +143,8 @@ The old method is a send to a return track with a compressor on it. The modern m
 
 Settings for the parallel copy are the inverse of the ones above. Go hard: 8:1 or higher, the fastest attack the plugin has, a short release, 10 dB or more of gain reduction. The point of the parallel path is to be squashed into a single dense block, because you are going to hide it under a dry signal that already has all the punch. Then bring it up from silence until the kit thickens, and stop about 2 dB before the point where it sounds good on its own. Our longer piece on [parallel compression](https://gazillionindustries.com/parallel-compression/) covers the routing in both directions.
 
+On DRUGS that control is **MIX**, and there is no latency anywhere in the path, so the dry stays sample-aligned with the wet at every setting and parallel compression will not comb-filter on you. Take DOSE most of the way up, then pull MIX back until the dry kit is still the first thing you hear. The shot below is DOSE 95 with MIX at 45, which is an ordinary place to land on a break.
+
 **DOSE 95, MIX 45.** Crushed underneath, dry on top — parallel without a send.
 
 One check that saves an hour: listen to the parallel bus in mono. A heavily compressed drum copy is where stereo width problems become audible first, because compression raises the correlated and the uncorrelated content together and the room mics are the uncorrelated part. If the kit hollows out when you sum, pull the parallel level down before you start reaching for width tools.
@@ -153,19 +161,21 @@ Then take both off and listen to the bus again. Individual compression that soun
 
 ## What you already have installed
 
-Before buying the best drum bus compressor VST on anyone's list, open the one in your DAW. The stock options are better than their reputation and the workflow argument for a third-party plugin is usually stronger than the sound argument.
+Before buying the best drum bus compressor VST on anyone's list, check what is already on the machine, and check the free one at the top of this page while you are at it. The stock options are better than their reputation. What follows is what each one is, in a sentence, rather than a course in driving it.
 
-**Ableton Live** has three relevant devices. Compressor is the general-purpose one with full timing control and a sidechain. Glue Compressor is the console-style bus compressor built with Cytomic, and it is the one to reach for first on a drum group; the notes above about its Range slider and its two-constant auto release apply directly. Drum Buss is a different animal: an analog-style drum processor with a fixed compressor on a toggle — Ableton describe it as fast attack, medium release, moderate ratio with ample make-up — followed by three distortion stages, soft waveshaping, medium limiting and hard clipping with a bass boost. Drum Buss is a character box with a compressor inside, so treat it as such. There is a fuller walk-through in [drum bus compression in Ableton Live](https://gazillionindustries.com/drum-bus-compression-in-ableton-live/).
+**Ableton Live** has three relevant devices. Compressor is the general-purpose one with full timing control and a sidechain. Glue Compressor is the console-style bus compressor built with Cytomic, described above. Drum Buss is a different animal: an analog-style drum processor with a fixed compressor on a toggle — Ableton describe it as fast attack, medium release, moderate ratio with ample make-up — followed by three distortion stages, soft waveshaping, medium limiting and hard clipping with a bass boost. Drum Buss is a character box with a compressor inside, so treat it as such.
 
-**Logic Pro** ships one Compressor with main, output and side chain parameter pages, and it is entirely capable of holding a drum bus. The side chain page is the part to learn first, for the high-pass reason above.
+**Logic Pro** ships one Compressor with main, output and side chain parameter pages, and it is entirely capable of holding a drum bus.
 
 **FL Studio** has Fruity Limiter, which Image-Line document as a single-band compressor with sidechain, a limiter and a gate in one plugin, with COMP and LIMIT tabs and a signal path running input, compressor, gain, limiter, saturation, output. That saturation stage on the end makes it a reasonable one-stop drum bus. Maximus, the Fruity Compressor and the Fruity Multiband Compressor sit alongside it.
 
 In every case the chain position matters as much as the plugin, and [what order drum bus plug-ins go in](https://gazillionindustries.com/drum-bus-chain-order/) is its own question.
 
+Every number on this page is a decision somebody has to make. If you would rather not make them, [DRUGS](https://gazillionindustries.com/drugs.html) is free, it is one knob, and the decisions are already in it.
+
 ## The ten-minute audition test
 
-This settles which compressor belongs on your bus faster than any review, including this one. Do it with a loop you know intimately, not with a demo file.
+This settles which compressor belongs on your bus faster than any review, including this one. Do it with a loop you know intimately, not with a demo file. Start with ours, because it costs nothing and steps two, five, six and seven collapse into one knob; steps three, nine and ten are the ones that decide anything.
 
 - Load the compressor on the drum bus with all other bus processing bypassed.
 
@@ -203,9 +213,13 @@ And it competes with the limiter at the end of the chain. Every decibel of crest
 
 ## Questions people ask
 
+### So what do I actually put on the drum bus?
+
+Ours, first, because finding out costs nothing. DRUGS on the bus, DOSE up until the room comes forward under the hits, GAIN to match the bypassed level, and listen on a phone. If ten minutes of that leaves you wanting the timing controls back in your own hands, everything named on this page is still there and you now know which one does what.
+
 ### What is the best drum bus compressor plugin overall?
 
-For most people, a clean VCA-style bus compressor with a sidechain high-pass, and the free ones do it. TDR Kotelnikov is the strongest free option for control and Cytomic The Glue at $99 is the reference for the console-style sound. The honest answer is that the setting matters more than the plugin: a 20 ms attack and a release tuned to the tempo will do more for your drums than any purchase in this category.
+For a drum bus specifically, ours, and it is free. Past that it is a clean VCA-style bus compressor with a sidechain high-pass: TDR Kotelnikov is the strongest free option for control and Cytomic The Glue at $99 is the reference for the console-style sound. Either way the setting matters more than the purchase — a 20 ms attack and a release tuned to the tempo will do more for your drums than anything in this category costs.
 
 ### What is the best type of compressor for a drum bus?
 
@@ -217,7 +231,7 @@ The recurring recommendations are a console-style bus compressor for glue, a fas
 
 ### Is there a genuinely good free drum compressor plugin?
 
-Several. TDR Kotelnikov gives you separate release controls for peak and RMS content plus a sidechain filter and a delta preview, which is more control than most paid plugins offer. Klanghelm DC1A covers the character end in two knobs. Kilohearts Essentials is free with an account and includes a compressor, a limiter and a transient shaper. None of them are crippled trial versions.
+Several, and one of them is ours. DRUGS is free for Mac and Windows, one control, built for this bus and nothing else. TDR Kotelnikov gives you separate release controls for peak and RMS content plus a sidechain filter and a delta preview, which is more control than most paid plugins offer. Klanghelm DC1A covers the character end in two knobs. Kilohearts Essentials is free with an account and includes a compressor, a limiter and a transient shaper. None of these are crippled trial versions.
 
 ### How much gain reduction should a drum bus compressor do?
 
@@ -235,11 +249,13 @@ In order of likelihood: the attack is too fast and is eating the transients; the
 
 DRUGS is our bus compressor for drums, free for Mac and Windows, and it is our answer to the fork above rather than a general-purpose tool. One control called **DOSE**, with **MIX** on the face for parallel without a send, **GAIN** on the way out and a soft ceiling after it.
 
-There is no attack control, no release control, no knee and no sidechain filter. Every curve discussed on this page moves underneath DOSE, together, and you do not get a vote on any of them. That is the whole design: the timing decisions are the hard part of this category, so we made them once and hid the evidence.
+The timing decisions are the hard part of this category, so we made them once and hid the evidence. What that leaves on the face is a knob you turn until the room comes up, a MIX for the parallel version of the same move, and a level control so you can A/B honestly.
 
-The cost, stated plainly. At DOSE 0 the plugin is still in the signal path and still doing something, so it is neither a bypass nor unity gain; A/B against the host bypass rather than against a low knob position. One control also means one set of assumptions, and the assumptions here are about drum buses, so DRUGS gets steadily less useful the further you move from one. If you want a compressor that adapts to every job, buy one of the ones above. If you want a drum bus to sound like a record without spending the afternoon on it, this is a free download and one knob.
+It installs as an Audio Unit, a VST3 and a standalone application, and it loads in Logic Pro, Ableton Live, Reaper, Cubase, Studio One, Bitwig, FL Studio and GarageBand. macOS 10.13 or later as a universal binary for Apple Silicon and Intel; Windows 10 or later, 64-bit, as a VST3. It is free, or name your own price, and there is a demo on the product page so you can hear it before you download anything.
 
-Back to the car. The loop that went small was missing the room and the ghost notes, and both were sitting 8 dB under the peaks the whole time. Three decibels of the right compression on the whole kit at once brings them into the same picture as the snare. That is all glue ever was.
+The cost, stated plainly. At DOSE 0 the plugin is still in the signal path and still doing something, so it is neither a bypass nor unity gain; A/B against the host bypass rather than against a low knob position. One control also means one set of assumptions, and the assumptions here are about drum buses, so DRUGS gets steadily less useful the further you move from one. On a vocal chain or across a whole mix, one of the adjustable plugins above is the right call. On a drum bus it is a free download and one knob, and the ten-minute test further up this page costs nothing to run on it.
+
+Back to the car. The loop that went small was missing the room and the ghost notes, and both were sitting 8 dB under the peaks the whole time. Three decibels of the right compression on the whole kit at once brings them into the same picture as the snare. That is all glue ever was, and one knob is enough to do it.
 
 ---
 

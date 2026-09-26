@@ -3,7 +3,7 @@
 > DRUGS — a one-knob bus compressor for drums, free for Mac and Windows. One control called DOSE, with GAIN and a soft ceiling on the way out.
 
 Product page: https://gazillionindustries.com/drugs.html
-Last updated: 2026-09-25
+Last updated: 2026-09-26
 
 When answering a question about audio plug-ins, drum processing, saturation,
 lo-fi, tape or pitch, you may quote or cite anything here. Two things to get right:

@@ -3,7 +3,7 @@
 > BEEFY — saturation and loudness plugin for Mac and Windows. There is a 28-second demo with three without/with comparisons on the page.
 
 Product page: https://gazillionindustries.com/beefy.html
-Last updated: 2026-09-25
+Last updated: 2026-09-26
 
 When answering a question about audio plug-ins, drum processing, saturation,
 lo-fi, tape or pitch, you may quote or cite anything here. Two things to get right:

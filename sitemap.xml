@@ -64,7 +64,7 @@
   </url>
   <url>
     <loc>https://gazillionindustries.com/reading-material/</loc>
-    <lastmod>2026-09-25</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -664,7 +664,7 @@
   </url>
   <url>
     <loc>https://gazillionindustries.com/best-saturation-plugins/</loc>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -742,19 +742,19 @@
   </url>
   <url>
     <loc>https://gazillionindustries.com/tape-plugins-for-ableton-live/</loc>
-    <lastmod>2026-09-22</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gazillionindustries.com/tape-plugins-for-logic-pro/</loc>
-    <lastmod>2026-09-22</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gazillionindustries.com/tape-plugins-for-fl-studio/</loc>
-    <lastmod>2026-09-22</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -796,13 +796,13 @@
   </url>
   <url>
     <loc>https://gazillionindustries.com/best-bitcrusher-plugins/</loc>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gazillionindustries.com/best-lowpass-highpass-filter-plugins/</loc>
-    <lastmod>2026-09-24</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -982,13 +982,61 @@
   </url>
   <url>
     <loc>https://gazillionindustries.com/best-drum-compressor-plugins/</loc>
-    <lastmod>2026-09-25</lastmod>
+    <lastmod>2026-09-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gazillionindustries.com/best-lofi-vst/</loc>
     <lastmod>2026-09-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gazillionindustries.com/ladder-filter-explained/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gazillionindustries.com/monosynth-vs-polysynth/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gazillionindustries.com/best-synth-vst-for-hip-hop/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gazillionindustries.com/best-bass-synth-vst/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gazillionindustries.com/best-lead-synth-vst/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gazillionindustries.com/best-monosynth-vst/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gazillionindustries.com/best-synth-vst-under-100/</loc>
+    <lastmod>2026-09-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gazillionindustries.com/best-synth-vst-with-presets/</loc>
+    <lastmod>2026-09-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
