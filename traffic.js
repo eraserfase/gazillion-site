@@ -9,8 +9,8 @@
   try { if (localStorage.getItem('umami.disabled')) return; } catch (_) {}
   var ENDPOINT = 'https://board.gazillionindustries.com/presence/collect';
   var WEBSITE = 'ed71399d-1069-4354-abbf-73dc311e5bc3', GA = 'G-2ZY2T73BLK';
-  var productByListing = {spcjdr:'drugs',kzfirr:'f12',iyhfta:'f12',bfxzea:'skruu',aslssg:'tripleog',xelfo:'beefy'};
-  var productBySlug = {drugs:'drugs',spcjdr:'drugs',f12:'f12','f12-plugin-only':'f12',kzfirr:'f12',iyhfta:'f12',skruu:'skruu',bfxzea:'skruu',tripleog:'tripleog',aslssg:'tripleog',beefy:'beefy',xelfo:'beefy'};
+  var productByListing = {spcjdr:'drugs',kzfirr:'f12',iyhfta:'f12',bfxzea:'skruu',aslssg:'tripleog',xelfo:'beefy',journeyman:'journeyman'};
+  var productBySlug = {drugs:'drugs',spcjdr:'drugs',f12:'f12','f12-plugin-only':'f12',kzfirr:'f12',iyhfta:'f12',skruu:'skruu',bfxzea:'skruu',tripleog:'tripleog',aslssg:'tripleog',beefy:'beefy',xelfo:'beefy',journeyman:'journeyman'};
   var pageId = nonce(), gaClient = '', lastBridge = '', started = false;
   var queue = [], busy = 0, retryTimer = null, nativeSession = null, cloudPageviewSent = false;
   var keys = new Set(['journey','product','tracking_version','video','asset','audible_seconds','duration',
@@ -22,7 +22,7 @@
   }
   function product() {
     if (frame) return productByListing[location.pathname.replace(/^\//,'').replace(/\/$/,'')] || '';
-    var m = location.pathname.match(/^\/(drugs|f12|skruu|tripleog|beefy)(?:\.html|\/)?$/);
+    var m = location.pathname.match(/^\/(drugs|f12|skruu|tripleog|beefy|journeyman)(?:\.html|\/)?$/);
     return m ? m[1] : 'store';
   }
   function props(value) {

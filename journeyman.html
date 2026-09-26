@@ -1,0 +1,991 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>JOURNEYMAN — monosynth</title>
+<meta name="description" content="JOURNEYMAN is a monosynth. One voice, three oscillators, two ladder filters, two envelopes, two modulation busses, a touch surface, and 200 programs: basses, leads, keys, pads, percussion and fx.">
+<link rel="canonical" href="https://gazillionindustries.com/journeyman.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Gazillion Industries">
+<meta property="og:title" content="JOURNEYMAN — monosynth">
+<meta property="og:description" content="THE FUNK IS WITHIN YOU">
+<meta property="og:url" content="https://gazillionindustries.com/journeyman.html">
+<meta property="og:image" content="https://gazillionindustries.com/journeyman/gui-2x.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500&family=Archivo+Black&display=swap">
+<style>
+:root{
+  --face:#0d0d0d; --silk:#efe7d6; --silk-soft:rgba(239,231,214,.72); --silk-faint:rgba(239,231,214,.5);
+  --verm:#d84a2b; --verm-lit:#de5030; --banner-h:104px;
+  font-family:Archivo,-apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif; color:var(--silk); background:var(--face);
+}
+*{box-sizing:border-box} html,body{margin:0} body{background:var(--face);color:var(--silk);-webkit-font-smoothing:antialiased} a{color:inherit}
+.display{font-family:"Archivo Black","Arial Black",sans-serif;font-weight:400;text-transform:uppercase}
+.banner{position:fixed;inset:0 0 auto;z-index:30;padding:14px 20px 12px;text-align:center;background:var(--face)}
+.buy{display:inline-flex;align-items:center;justify-content:center;min-height:56px;border:3px solid #fff;border-radius:6px;background:var(--verm-lit);color:var(--face);box-shadow:5px 5px 0 #fff;text-decoration:none;line-height:1;transition:transform .14s,box-shadow .14s}
+.buy span{padding:14px 24px;font-size:clamp(17px,4.6vw,28px);white-space:nowrap;flex-shrink:0} .buy .buy-price{border-left:3px solid #fff;padding-left:22px;padding-right:26px}
+@media (max-width:420px){.buy span{padding:13px 16px}.buy .buy-price{padding-left:16px;padding-right:18px}}
+@media (max-width:355px){.banner{padding-left:10px;padding-right:10px}.buy span{font-size:15px;padding-left:12px;padding-right:12px}.buy .buy-price{padding-left:12px;padding-right:14px}}
+.buy:hover{transform:translate(-1px,-2px);box-shadow:6px 7px 0 #fff} .buy:active{transform:translate(4px,4px);box-shadow:1px 1px 0 #fff}
+.terms{margin:11px 0 0;font-size:14px;line-height:1.25;color:var(--silk-soft)} .terms.delivery{margin-top:5px;color:var(--silk-faint)} .terms span{white-space:nowrap}
+
+/* ---------- the hero ---------- */
+.hero{position:relative;overflow:hidden;height:auto;min-height:0;background:#2b1140}
+.hero .below{position:absolute;left:0;right:0;top:808px;bottom:0;background:#0d0d0d;pointer-events:none}
+.stage{position:absolute;left:50%;top:0;width:1440px;height:810.43px;transform:translateX(-50%);pointer-events:none} /* Fixed artwork scale; window resizing only changes the crop. */
+.stage > img, .layer > img{display:block;position:absolute;left:0;top:0;width:100%;height:auto}
+.sky{position:absolute;left:0;top:0;width:100%}
+.grade{position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(38,10,72,.62) 0%,rgba(60,14,70,.32) 32%,rgba(0,0,0,0) 60%);z-index:2}
+.ground{position:absolute;left:0;width:100%}
+.layer{position:absolute;pointer-events:none}
+.layer img{width:100%;height:auto;position:static}
+.palms{animation:pan var(--pt,30s) ease-in-out infinite alternate}
+@keyframes pan{from{transform:translateX(calc(var(--px,6px) * -1))}to{transform:translateX(var(--px,6px))}}
+.tree{background-image:url('journeyman/plate/palms-illustrated.png');background-size:var(--sheet-width,300%) 104.74%;background-position:var(--sheet-x,0%) 0;background-repeat:no-repeat;transform-origin:var(--foot,50%) 100%;animation:sway var(--st,9s) ease-in-out infinite alternate}
+.car img.mirror,.tree img.mirror{transform:scaleX(-1)}
+@keyframes sway{from{transform:rotate(-.7deg)}to{transform:rotate(.7deg)}}
+.lockup-scene{position:relative;isolation:isolate;width:min(calc(100% - 48px),612px);padding-top:0;flex:none}
+.lockup-scene::before{content:"";position:absolute;z-index:0;left:50%;top:164px;width:332px;height:24px;transform:translateX(-50%);background:radial-gradient(ellipse,rgba(5,3,8,.95) 20%,rgba(5,3,8,.65) 48%,transparent 73%);pointer-events:none}
+.car{position:absolute;left:50%;top:0;width:210px;pointer-events:none;z-index:1}
+.car img{display:block;width:100%;height:auto}
+.car .driver-hand{position:absolute;left:68%;top:18.5%;width:6.8%;height:auto;transform:scaleX(-1);pointer-events:none}
+.glitter{position:absolute;pointer-events:none}
+.glitter i{position:absolute;height:2px;border-radius:2px;background:#ffe9b0;opacity:0;animation:twinkle 2.6s ease-in-out infinite}
+@keyframes twinkle{0%,100%{opacity:0}50%{opacity:.85}}
+.gulls{position:absolute;inset:0;pointer-events:none;z-index:3}
+.gull{position:absolute;width:16px;height:7px;fill:none;stroke:#1a0d1e;stroke-width:1.5;stroke-linecap:round;animation:fly var(--t,52s) linear infinite;animation-delay:var(--d,0s)}
+@keyframes fly{from{transform:translateX(110vw)}50%{transform:translateX(50vw) translateY(-12px)}to{transform:translateX(-10vw) translateY(3px)}}
+.fold{position:absolute;z-index:8;inset:0;padding-top:calc(var(--banner-h) + 8px);display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding-bottom:24px;gap:10px;pointer-events:none}
+.fold > *{pointer-events:auto}
+.product{display:block;position:relative;z-index:3;flex-shrink:0;width:auto;height:clamp(180px,calc(100svh - var(--banner-h) - 486px),520px);border:2px solid #0a0810;box-shadow:none}
+.lockup{position:relative;z-index:2;width:100%;margin:0}
+
+.buy-mid{position:relative;z-index:10;margin-top:4px;text-align:center}
+.buy-mid .buy span{font-size:15px;padding:13px 12px}
+.buy-mid .buy .buy-price{padding-left:12px;padding-right:14px}
+.lockup .jt{display:block;margin:0;width:100%;text-align:left;text-transform:uppercase;line-height:1;white-space:nowrap;--fit-min:.5;--fit-max:2.2;--fit-aim:.05;color:var(--silk);text-shadow:0 2px 2px #120c17,0 0 9px #120c17}
+.lockup .jt--lead{font-family:"Archivo Black","Arial Black",sans-serif;font-weight:400;font-size:64px;line-height:.78;--fit-aim:.01}
+.lockup .jt--leadlight{font-family:Archivo,-apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif;font-weight:400;font-size:40px;line-height:.82;--fit-aim:.34}
+.lockup .jt--lead + .jt--leadlight{margin-top:6px} .lockup .jt--leadlight + .jt--lead{margin-top:8px} .lockup .jt--tail{font-size:30px;--fit-aim:.08}
+
+/* ---------- below ---------- */
+.copy{position:relative;z-index:1;text-align:center;padding:24px 20px 0}
+.intro{margin:0 auto 28px;color:var(--silk);font-size:clamp(19px,3vw,26px);line-height:1.35;letter-spacing:-.025em}
+.jtblock{width:min(88vw,560px);margin:0 auto}
+.jtblock .jt{margin:0;width:100%;text-align:left;text-transform:uppercase;line-height:1;white-space:nowrap;--fit-min:.5;--fit-max:2.2;--fit-aim:.05;color:var(--silk)}
+.jtblock .jt--lead{font-family:"Archivo Black","Arial Black",sans-serif;font-weight:400;font-size:36px;line-height:.78;--fit-aim:.02} .jtblock .jt--lead + .jt--lead{margin-top:0;font-family:Archivo,-apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif;font-weight:400}
+.claim{margin:30px auto 0;max-width:560px;font-size:clamp(20px,3vw,28px);line-height:1.2;color:var(--silk)}
+.buy-end{text-align:center;margin:44px 0 0}
+.signup{max-width:480px;margin:64px auto 0;text-align:center;padding:0 20px} .signup p{margin:0 0 12px;font-size:17px;color:var(--silk-soft)} .signup form{display:flex;gap:10px}
+.signup input{width:0;flex:1;min-width:0;border:2px solid var(--silk-faint);border-radius:6px;background:transparent;color:var(--silk);padding:12px 15px;font:inherit;font-size:17px;line-height:1.3} .signup input::placeholder{color:var(--silk-faint);opacity:1}
+.signup button{border:2px solid var(--silk);border-radius:6px;background:transparent;color:var(--silk);padding:9px 17px;font:inherit;font-size:17px;cursor:pointer} .signup button:hover{background:var(--verm);border-color:var(--verm);color:var(--face)}
+.footer{text-align:center;padding:64px 15px 30px;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--silk-faint)} .footer p{margin:0}
+@media (max-width:700px){.fold .product{height:max(180px,min(calc(100svh - var(--banner-h) - 426px), calc(70vw * 1800 / 1360)))}}
+
+@media (prefers-reduced-motion:reduce){.palms,.tree,.car,.glitter i,.gull{animation:none!important}}
+
+@media(max-height:720px){.fold{padding-bottom:18px}}
+
+/* Background art revision. All page typography and layout above are unchanged. */
+.hero{background:linear-gradient(to bottom,#49274d 0px,#19131c 520px,#0d0d0d 810px)}
+.stage{pointer-events:none;mask-image:linear-gradient(to right,transparent,#000 64px,#000 calc(100% - 64px),transparent)}
+.stage>.sky{mask-image:linear-gradient(to bottom,transparent 0%,#000 7%,#000 90%,transparent 100%)}
+.grade{background:linear-gradient(180deg,rgba(24,9,36,.22),transparent 42%);pointer-events:none}
+.tree,.glitter{display:none!important}
+.car{top:-20px;left:50%;width:210px;transform:translateX(-50%);opacity:1}
+.car::after{content:"";position:absolute;z-index:-1;left:5%;bottom:8%;width:90%;height:7%;background:radial-gradient(ellipse,#050407cc,transparent 72%)}
+
+.car>img:not(.driver-hand){filter:saturate(.75) brightness(.23)}
+.car .driver-hand{display:none}
+
+.lockup-scene::before{display:none}
+
+.car-art{display:block;width:100%;height:auto;overflow:visible;filter:saturate(.88) brightness(.78)}
+.car-body{transform-origin:130px 650px;animation:hydraulic-cycle 2.35s infinite;animation-timing-function:cubic-bezier(.35,0,.25,1)}
+.car-front-wheels{animation:axle-response 2.35s infinite;animation-timing-function:cubic-bezier(.35,0,.25,1)}
+@keyframes hydraulic-cycle{0%,100%{transform:translateY(0) rotate(0deg)}14%{transform:translateY(5px) rotate(.3deg)}34%{transform:translateY(-18px) rotate(-2.4deg)}44%{transform:translateY(-15px) rotate(-2.1deg)}72%{transform:translateY(8px) rotate(.5deg)}87%{transform:translateY(-3px) rotate(-.3deg)}}
+@keyframes axle-response{0%,22%,68%,100%{transform:translateY(0)}36%,44%{transform:translateY(-10px)}76%{transform:translateY(2px)}}
+.paint-glint{fill:#ffe5ab;transform-box:fill-box;transform-origin:center;animation:paint-flash 4.7s ease-in-out infinite}
+.paint-glint.second{animation-delay:-2.3s}
+@keyframes paint-flash{0%,39%,47%,100%{opacity:0;transform:scale(.3)}43%{opacity:.9;transform:scale(1)}}
+.gulls{display:block;z-index:3}.gull{width:20px;height:10px;stroke:#1b1020;opacity:.7}
+.gull path{transform-origin:9px 5px;animation:wing-beat 1.8s ease-in-out infinite}
+@keyframes wing-beat{0%,100%{transform:scaleY(1)}50%{transform:scaleY(.35)}}
+@media(prefers-reduced-motion:reduce){.car-body,.car-front-wheels,.paint-glint,.gull,.gull path{animation:none!important}.paint-glint{opacity:0}}
+
+/* Shared product-page components: SKRUU source, Journeyman palette. */
+:root{--field:var(--face);--field-deep:#0d0d0d;--rouge:var(--verm-lit);--chalk:var(--silk);--ink:var(--silk);--ink-soft:var(--silk-soft);--ink-faint:var(--silk-faint);--pill-line:rgba(239,231,214,.22);--shadow:rgba(0,0,0,.6)}
+[hidden]{display:none!important}
+/* ---- carousel ------------------------------------------------------------ */
+/* Scroll-snap rather than a library: it is native, it takes a trackpad swipe and
+   a phone flick for free, and it degrades to a plain scroller if the script
+   never runs. Slides are a fixed height and centre their contents, so a portrait
+   screenshot and a 16:9 video can sit in the same track without either being
+   cropped or stretched. */
+.carousel{position:relative; width:100%; margin:10px 0 0}
+.track{display:flex; overflow-x:auto; scroll-snap-type:x mandatory;
+       scroll-behavior:smooth; scrollbar-width:none; -ms-overflow-style:none;
+}
+.track::-webkit-scrollbar{display:none}
+/* The end slides are centred with margins, not track padding. A percentage
+   padding on the track shrinks its content box, and flex-basis then resolves
+   against that smaller box - so the slides came out narrower than the padding
+   assumed and the first and last sat 53px off centre. Margins resolve against
+   the same box the basis does, so the arithmetic closes: 11% + 78% + 11%. */
+.slide:first-child{margin-left:19%}
+.slide:last-child{margin-right:19%}
+.slide{flex:0 0 62%; scroll-snap-align:center;
+       display:flex; align-items:center; justify-content:center; height:500px;
+       /* The neighbours stay visible but recede, so it is obvious there is more
+          without them competing with the slide you are looking at. */
+       opacity:.34; transform:scale(.93);
+       transition:opacity .3s ease, transform .3s ease}
+.slide.is-active{opacity:1; transform:none}
+.slide img{max-height:100%; width:auto; border-radius:10px; display:block;
+           box-shadow:0 26px 60px -22px var(--shadow)}
+/* The demo is a capture of the panel, so it is the same portrait shape as the
+   screenshots either side of it and is sized like them rather than like the
+   16:9 slot the testimonial still uses. */
+.slide video{max-height:100%; width:auto; border-radius:10px; display:block;
+             background:var(--field-deep);
+             box-shadow:0 26px 60px -22px var(--shadow)}
+/* The badge covers the video, so anywhere on the poster starts it. It is hidden
+   until the script reveals it: without one the native controls are still there
+   and still work, and a dead button over them would be worse than none. */
+.player{position:relative; display:flex; align-items:center; height:100%}
+.play-badge{display:none; position:absolute; inset:0; z-index:2;
+            border:0; padding:0; margin:0; cursor:pointer; background:transparent;
+            border-radius:10px; flex-direction:column; align-items:center;
+            justify-content:center; gap:14px}
+.player.is-ready .play-badge{display:flex}
+.player.is-started .play-badge{display:none}
+.play-badge .disc{width:64px; height:64px; border-radius:999px;
+                  background:color-mix(in srgb, var(--field-deep) 68%, transparent);
+                  border:1px solid var(--pill-line);
+                  -webkit-backdrop-filter:blur(8px); backdrop-filter:blur(8px);
+                  display:flex; align-items:center; justify-content:center;
+                  transition:background .18s ease, transform .18s ease}
+/* A triangle carries its mass left of centre, so nudge it back into the disc. */
+.play-badge .disc::before{content:""; margin-left:5px; border-style:solid;
+                          border-width:11px 0 11px 18px;
+                          border-color:transparent transparent transparent var(--ink)}
+.play-badge .say{font-size:11px; letter-spacing:.24em; text-transform:uppercase;
+                 color:var(--ink-soft)}
+.play-badge:hover .disc{background:var(--field-deep); transform:scale(1.06)}
+.play-badge:focus-visible{outline:2px solid var(--chalk); outline-offset:2px}
+.slot{width:100%; max-width:540px; aspect-ratio:16/9; border-radius:10px;
+      background:var(--field-deep); border:1px solid var(--pill-line);
+      display:flex; align-items:center; justify-content:center; overflow:hidden}
+.slot iframe{width:100%; height:100%; border:0; display:block}
+.slot span{font-size:11px; letter-spacing:.24em; text-transform:uppercase;
+           color:var(--ink-faint); text-align:center; padding:0 20px}
+
+.nav{position:absolute; top:50%; transform:translateY(-50%); z-index:2;
+     width:40px; height:40px; border-radius:999px; cursor:pointer;
+     background:color-mix(in srgb, var(--field-deep) 70%, transparent);
+     border:1px solid var(--pill-line); color:var(--ink);
+     font-size:20px; line-height:1; display:flex; align-items:center;
+     justify-content:center; -webkit-backdrop-filter:blur(8px); backdrop-filter:blur(8px);
+     transition:background .18s ease}
+.nav:hover{background:var(--field-deep)}
+.nav:focus-visible{outline:2px solid var(--chalk); outline-offset:2px}
+.nav--prev{left:-4px} .nav--next{right:-4px}
+
+.dots{display:flex; justify-content:center; gap:9px; margin:20px 0 0}
+.dot{width:7px; height:7px; border-radius:999px; padding:0; cursor:pointer;
+     border:0; background:var(--ink-faint); transition:background .2s ease, transform .2s ease}
+.dot[aria-current="true"]{background:var(--chalk); transform:scale(1.35)}
+.dot:focus-visible{outline:2px solid var(--chalk); outline-offset:3px}
+
+
+.testimonial{margin:56px 0 0; width:100%; display:flex; flex-direction:column;
+             align-items:center; gap:52px}
+.testimonial .slot{max-width:560px}
+/* Quote styles ported from drugs.html when DIBIA$E's became the first real F12
+   testimonial (4 Sep 2026). The .tm-vid rules came over on 6 Sep, when both
+   creators' own captures landed on this page instead of only on their feeds. */
+.tm{margin:0; max-width:660px; display:flex; gap:30px; align-items:center;
+    flex-wrap:wrap; justify-content:center; text-align:left}
+.tm-vid{flex:0 0 auto; width:min(300px,64vw); height:auto; border-radius:13px;
+        overflow:hidden; background:#000; box-shadow:0 18px 40px var(--shadow)}
+.tm-vid video{display:block; width:100%; height:auto}
+/* The carousel badge stacks disc-over-label in the middle of an empty panel.
+   Here the middle of the frame is somebody's session, so the label goes to the
+   bottom on its own gradient and the disc is pinned dead centre over it. */
+.tm-vid .play-badge{justify-content:flex-end; padding:0 0 12px;
+        background:linear-gradient(180deg,rgba(0,0,0,0) 52%,rgba(0,0,0,.58) 100%)}
+.tm-vid .play-badge .disc{position:absolute; top:50%; left:50%;
+        transform:translate(-50%,-50%)}
+.tm-vid .play-badge:hover .disc{transform:translate(-50%,-50%) scale(1.06)}
+.tm-vid .play-badge .say{color:var(--chalk)}
+/* Both F12 captures are LANDSCAPE - a DAW window, not a phone story. At the
+   300px a portrait story takes, two plug-in panels side by side are unreadable,
+   so a wide clip runs the full measure with its quote underneath instead of
+   beside it. The sibling page keeps the narrow form for Wino's phone story. */
+.tm--wide{flex-direction:column; gap:22px; max-width:560px; text-align:center}
+.tm--wide .tm-vid{width:100%}
+/* .tm-say carries flex:1 1 250px for the side-by-side form, where 250px is a
+   minimum WIDTH. Turned on its side that basis becomes a 250px minimum HEIGHT
+   and puts a dead half-screen under every quote, so it is reset here. */
+.tm--wide .tm-say{flex:0 0 auto; align-items:center}
+.tm-say{flex:1 1 250px; min-width:0; display:flex; flex-direction:column; gap:13px}
+.tm-say blockquote{margin:0; font-family:"Archivo Black","Arial Black",sans-serif;
+        font-size:clamp(16px,3.4vw,20px); line-height:1.38; letter-spacing:.02em;
+        color:var(--chalk); text-wrap:balance}
+.tm-who{margin:0; font-size:12px; letter-spacing:.18em; text-transform:uppercase;
+        color:var(--ink-soft)}
+.tm-who a{font-weight:600; color:var(--rouge); text-decoration:none;
+           border-bottom:1px solid transparent}
+.tm-who a:hover,.tm-who a:focus-visible{border-bottom-color:var(--rouge)}
+
+
+.about{margin:96px 0 0; width:100%; max-width:34em; text-align:left;
+       border-top:1px solid var(--pill-line); padding-top:28px}
+
+.about-body{margin-top:36px}
+.about h2{margin:38px 0 14px; font-size:12px; font-weight:600; letter-spacing:.2em;
+          text-transform:uppercase; color:var(--chalk)}
+.about h2:first-of-type{margin-top:0}
+.about p{margin:0 0 14px; font-size:15.5px; line-height:1.7; color:var(--ink-soft)}
+.about ul{margin:0; padding:0 0 0 18px; list-style:none}
+.about li{margin:0 0 12px; font-size:15.5px; line-height:1.7; color:var(--ink-soft);
+          position:relative}
+.about li::before{content:"\2014"; position:absolute; left:-18px; color:var(--ink-faint)}
+.about strong{color:var(--ink); font-weight:600}
+.about em{color:var(--ink)}
+
+
+.gr-rating{margin:16px auto 0; text-align:center; line-height:1.2}
+.gr-rating .gr-stars{color:#ffc23d; font-size:25px; letter-spacing:3px; vertical-align:middle}
+.gr-rating .gr-score{font-size:21px; font-weight:800; margin:0 3px 0 11px; vertical-align:middle; color:var(--ink)}
+.gr-rating .gr-count{display:block; font-size:12px; margin-top:4px; color:var(--ink-soft); letter-spacing:.03em; text-transform:uppercase}
+/* Gumroad reviews, 19 Sep 2026: set exactly like the .tm-say testimonial quotes
+   further down (Archivo Black in chalk, tracked-caps attribution, name in rouge) -
+   no card, no per-quote stars: the badge above already carries the stars and only
+   5-star reviews get in. One quote per view; the prev/next buttons and dots are
+   the slide carousel's own .nav/.dot, so desktop (no swipe) can page through. */
+.gr-reviews{max-width:560px; margin:26px auto 0}
+.gr-carousel{display:flex; overflow-x:auto; scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch; scrollbar-width:none; overscroll-behavior-x:contain}
+.gr-carousel::-webkit-scrollbar{display:none}
+.gr-carousel:focus-visible{outline:2px solid var(--chalk); outline-offset:6px; border-radius:4px}
+.gr-quote{flex:0 0 100%; scroll-snap-align:center; margin:0; padding:0 8px; box-sizing:border-box; display:flex; flex-direction:column; justify-content:center; align-items:center; gap:13px; text-align:center}
+.gr-quote blockquote{margin:0; font-family:"Archivo Black","Arial Black",sans-serif; font-size:clamp(16px,3.4vw,20px); line-height:1.38; letter-spacing:.02em; color:var(--chalk); text-wrap:balance; overflow-wrap:anywhere}
+.gr-who{margin:0; font-size:12px; letter-spacing:.18em; text-transform:uppercase; color:var(--ink-soft)}
+.gr-who b{font-weight:600; color:var(--rouge)}
+.gr-controls{display:flex; align-items:center; justify-content:center; gap:14px; margin-top:18px}
+.gr-nav{width:40px; height:40px; border-radius:999px; cursor:pointer; padding:0; background:color-mix(in srgb, var(--field-deep) 70%, transparent); border:1px solid var(--pill-line); color:var(--ink); font-size:20px; line-height:1; display:flex; align-items:center; justify-content:center; transition:background .18s ease}
+.gr-nav:hover{background:var(--field-deep)}
+.gr-nav:focus-visible,.gr-dot:focus-visible{outline:2px solid var(--chalk); outline-offset:2px}
+.gr-dots{display:flex; gap:9px}
+.gr-dot{width:7px; height:7px; border-radius:999px; padding:0; cursor:pointer; border:0; background:var(--ink-faint); transition:background .2s ease, transform .2s ease}
+.gr-dot[aria-current="true"]{background:var(--chalk); transform:scale(1.35)}
+.gr-mini{color:#ffc23d; font-size:clamp(10px,2.6vw,12px); letter-spacing:1px; margin-left:8px; white-space:nowrap; vertical-align:baseline}
+.gr-mini-num{color:var(--ink); letter-spacing:normal; margin-left:3px; font-weight:700}
+/* Phones: the delivery line already fills the measure, so the mini-stars wrapped
+   onto a second line hard against the LEFT edge (the line is text-align:start).
+   Give them their own centred row instead. */
+@media (max-width:560px){.terms.delivery{text-align:center} .gr-mini{display:block; margin:4px 0 0}}
+
+/* ---- payment marks ------------------------------------------------------- */
+/* Under the ratings row. Gumroad owns the checkout, so no link can open a
+   wallet directly - every mark goes to the same one-tap checkout, where the
+   wallet the buyer's device supports is already the first thing offered. The
+   row exists to say so before the tap, not after. utm_content carries which
+   mark was used so the board can tell whether it moved click-to-sale.
+   The white chip is the page's, not the brands' - it gives Apple's black
+   badge and PayPal's blue wordmark a background they both read on, over four
+   pages with four different banners, without touching the artwork itself. */
+.paymarks{margin:9px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:7px;
+          justify-content:center;align-items:center;line-height:0}
+.paymark{display:inline-flex;align-items:center;justify-content:center;
+         height:34px;padding:0 12px;border-radius:7px;background:#fff;
+         box-shadow:0 1px 2px rgba(0,0,0,.28);text-decoration:none;
+         transition:transform .14s,box-shadow .14s}
+.paymark:hover{transform:translateY(-1px);box-shadow:0 3px 6px rgba(0,0,0,.34)}
+.paymark:active{transform:translateY(0);box-shadow:0 1px 2px rgba(0,0,0,.28)}
+.paymark img{display:block;width:auto}
+.pm-apple img{height:22px}    /* badge: fills its own box */
+.pm-google img{height:34px}   /* badge: ships with its required clear space */
+.pm-paypal img{height:15px}   /* bare wordmark: no built-in clear space */
+.pm-google{display:none}
+.no-applepay .pm-apple{display:none}
+.no-applepay .pm-google{display:inline-flex}
+@media (max-width:480px){
+  .paymarks{gap:6px}
+  .paymark{height:31px;padding:0 10px}
+  .pm-apple img{height:20px}.pm-google img{height:31px}.pm-paypal img{height:14px}
+}
+
+/* Delivery line: uppercase, bold, white. Decided 22 Sep 2026. */
+.terms.delivery{margin-top:0;color:#fff;text-transform:uppercase;font-weight:700}
+
+/* One line on a phone, decided 22 Sep 2026. Uppercase and bold widened the line
+   enough to wrap; these are the largest sizes that still fit. */
+@media (max-width:560px){
+  .terms.delivery{font-size:clamp(8px,2.5vw,12px);letter-spacing:.025em}
+}
+
+
+.fold .carousel{flex:none;width:min(100%,660px);margin:0;height:var(--gallery-height);--slide-h:400px}
+.fold .track{position:relative}
+.fold .slide{height:var(--slide-h)}
+.fold .carousel .product{height:100%;width:auto;max-width:100%;object-fit:contain;box-shadow:none;border-radius:0}
+.fold .carousel video{box-shadow:none;border-radius:0}
+.fold .dots{height:24px;margin:10px 0 0}
+.carousel.is-single .nav,.carousel.is-single .dots{display:none}
+.carousel.is-single .slide{flex-basis:100%;margin:0;opacity:1;transform:none}
+.proof{width:min(calc(100% - 48px),612px);margin:0 auto}
+.copy>.testimonial{max-width:612px;margin-left:auto;margin-right:auto}
+.copy>.about{margin:96px auto 0;max-width:34em}
+.buy-end .terms.delivery{margin-top:11px}
+</style>
+<script>if(!window.ApplePaySession)document.documentElement.className+=" no-applepay";</script>
+<script>
+/* Keep observed arrival evidence through the shelf, products and checkout.
+   The anonymous journey expires after 30 minutes without activity. Source
+   metadata is not a visit, and the existing presence heartbeat stays intact. */
+window.GZ_ATTR = (function(){
+  var result = {paid:false, tags:{}, token:"", mark:function(){}, touch:function(){}};
+  var OWN = /^(www\.)?gazillionindustries\.com$/i;
+  if(!OWN.test(location.hostname)) return result;
+  var KEY = "gz_arrival_v3", TTL = 30*60000;
+  var fields = ["utm_source","utm_medium","utm_campaign","utm_content","utm_term","utm_id","ad_id","adset_id","campaign_id","fbclid"];
+  var inbound = new URLSearchParams(location.search), now = Date.now();
+  var tags = {}, original = "", token = "", activity = now, sent = {}, sourceSent = {};
+  var saved = null, previous = null, ref = null;
+  function validToken(value){ return /^[0-9a-f]{24}$/.test(value || ""); }
+  function fresh(value){ return value && typeof value.at === "number" && now >= value.at && now-value.at < TTL; }
+  function url(value){
+    try {
+      var u = new URL(value);
+      if(!/^https?:$/.test(u.protocol)) return null;
+      u.username = ""; u.password = ""; u.hash = "";
+      return u;
+    } catch(e){ return null; }
+  }
+  function cleanTags(value){
+    var clean = {};
+    fields.forEach(function(k){ if(value && typeof value[k] === "string" && value[k]) clean[k] = value[k].slice(0,1024); });
+    return clean;
+  }
+  try {
+    saved = JSON.parse(sessionStorage.getItem(KEY) || "null");
+    if(!fresh(saved)) saved = null;
+    if(saved){
+      tags = cleanTags(saved.tags); token = validToken(saved.token) ? saved.token : "";
+      previous = url(saved.referrer);
+      if(previous && !OWN.test(previous.hostname)) original = previous.toString();
+    } else {
+      var legacy = JSON.parse(sessionStorage.getItem("gz_arrival_v2") || "null");
+      if(fresh(legacy)) tags = cleanTags(legacy.tags);
+    }
+  } catch(e) {}
+  ref = url(document.referrer);
+  var internal = ref && OWN.test(ref.hostname);
+  var gumroadReturn = ref && /(^|\.)gumroad\.com$/i.test(ref.hostname) && saved;
+  if(inbound.get("utm_source")){
+    tags = {};
+    if(!internal && !gumroadReturn) original = "";
+  }
+  // Only an actually observed external URL can become the original referrer.
+  // An internal hop or checkout return must not overwrite that arrival.
+  if(ref && !internal && !gumroadReturn){
+    original = ref.toString();
+    if(!inbound.get("utm_source")){
+      tags = {utm_source:ref.hostname.toLowerCase().replace(/^www\./,""),
+              utm_medium:/(^|\.)(instagram|facebook)\.com$/i.test(ref.hostname) ? "social" : "referral"};
+    }
+  }
+  fields.forEach(function(k){ var v = inbound.get(k); if(v) tags[k] = v.slice(0,1024); });
+  // The stored activity deadline is authoritative. Never resurrect a token
+  // from a shared URL or an internal link after its stored session expired.
+  function makeToken(){
+    try {
+      var bytes = new Uint8Array(12); window.crypto.getRandomValues(bytes);
+      return Array.prototype.map.call(bytes,function(n){return ("0"+n.toString(16)).slice(-2);}).join("");
+    } catch(e){ return ""; }  // Never derive an identity from browser traits.
+  }
+  if(!token) token = makeToken();
+  var source = (tags.utm_source || "").toLowerCase(), medium = (tags.utm_medium || "").toLowerCase();
+  result.paid = /^(meta|facebook|instagram|fb|ig)$/.test(source)
+    && /^(paid|paid_social|paid-social|paidsocial|cpc|ppc|social_ads)$/.test(medium);
+  result.tags = tags;
+  function touch(){
+    var at = Date.now();
+    if(at < activity || at-activity >= TTL){ token = makeToken(); sent = {}; sourceSent = {}; }
+    activity = at; result.token = token;
+    try { sessionStorage.setItem(KEY,JSON.stringify({at:at,tags:tags,referrer:original,token:token})); } catch(e) {}
+    return token;
+  }
+  /* FIRST TOUCH, KEPT ACROSS SESSIONS. The arrival record above is sessionStorage with a
+     30-minute TTL, deliberately - a session must never be resurrected from a shared link.
+     But that also erased the ad click of anyone who came back later, so a buyer who saw the
+     ad on Monday and searched for us on Wednesday arrived looking like a cold Google visitor.
+     Measured 20 Sep 2026: every journey in the board's store was under four minutes, 16 of
+     the last 21 BEEFY purchases had no journey at all, and a day the owner counted 5 real orders
+     on was credited 3 by the ad tag and 2 by Meta.
+     This record is SEPARATE: localStorage, 30 days, written once (first touch wins), and it
+     never touches the session token, the session TTL, or the live utm_* tags. It is only ever
+     added to a checkout link when the CURRENT arrival carries no campaign of its own, so a
+     fresh ad click still attributes exactly as it does today. */
+  var FIRST_KEY = "gz_first_v1", FIRST_TTL = 30*86400000;
+  function firstTouch(){
+    var now = Date.now(), have = null;
+    try { have = JSON.parse(localStorage.getItem(FIRST_KEY) || "null"); } catch(e){ have = null; }
+    if(have && (!have.at || now-have.at >= FIRST_TTL || typeof have.at !== "number")) have = null;
+    if(!have && (tags.utm_campaign || tags.utm_source)){
+      have = {at:now, source:tags.utm_source || "", medium:tags.utm_medium || "",
+              campaign:tags.utm_campaign || "", paid:!!result.paid};
+      try { localStorage.setItem(FIRST_KEY, JSON.stringify(have)); } catch(e){}
+    }
+    return have;
+  }
+  function firstTags(){
+    var f = firstTouch();
+    if(!f || tags.utm_campaign || !(f.campaign || f.source)) return null;
+    var out = {gz_first_days:String(Math.max(0, Math.round((Date.now()-f.at)/86400000)))};
+    if(f.campaign) out.gz_first_campaign = f.campaign;
+    if(f.source) out.gz_first_source = f.source;
+    if(f.medium) out.gz_first_medium = f.medium;
+    return out;
+  }
+  /* Meta's own two browser identifiers. `_fbp` is set by the pixel that this
+     page already loads; `_fbc` is set when the arrival carried an fbclid. The
+     server gets NEITHER from Gumroad, and without them a server-side Purchase
+     cannot be deduplicated against the browser one - which is why Events
+     Manager reports our Purchase coverage as 1% against a 75% goal.
+     They ride the documented referrer override, because that is the only field
+     measured to survive to the sale record; url_parameters comes back empty. */
+  function cookie(name){
+    try {
+      var m = document.cookie.match("(?:^|; )"+name.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")+"=([^;]*)");
+      return m ? decodeURIComponent(m[1]) : "";
+    } catch(e){ return ""; }
+  }
+  function metaIds(){
+    var out = {}, fbp = cookie("_fbp"), fbc = cookie("_fbc");
+    if(/^fb\.\d\.\d{10,16}\.[0-9A-Za-z_-]{4,64}$/.test(fbp)) out.gz_fbp = fbp;
+    if(/^fb\.\d\.\d{10,16}\./.test(fbc)) out.gz_fbc = fbc.slice(0,400);
+    else if(tags.fbclid) out.gz_fbc = "fb.1."+Date.now()+"."+tags.fbclid;
+    return out;
+  }
+  function sourceCode(){
+    var aliases = {"ig":"instagram","instagram.com":"instagram","l.instagram.com":"instagram","m.instagram.com":"instagram",
+                   "fb":"facebook","facebook.com":"facebook","m.facebook.com":"facebook","l.facebook.com":"facebook","lm.facebook.com":"facebook"};
+    var value = aliases[source] || source;
+    // A shortened domain is a different domain. Long/unsafe names retain their
+    // complete original URL and tags at checkout, with no invented short alias.
+    return /^[a-z0-9_.-]{1,18}$/.test(value) && !/^(unknown|unassigned|direct)$/.test(value) ? value : "";
+  }
+  function mode(){
+    if(/^(paid|paid_social|paid-social|paidsocial|cpc|ppc|social_ads)$/.test(medium)) return "p";
+    if(/^(email|e-mail|newsletter)$/.test(medium)) return "e";
+    if(/^(social|organic_social|organic-social)$/.test(medium)) return "s";
+    if(medium === "referral") return "r";
+    return "u";
+  }
+  function emit(name){
+    try {
+      var p = (window.GZTraffic || window.umami).track(name);
+      if(p && typeof p.catch === "function") p.catch(function(){});
+      return true;
+    } catch(e){ return false; }
+  }
+  result.mark = function(stage, product){
+    touch();
+    if(!token || !(window.GZTraffic || window.umami) || typeof (window.GZTraffic || window.umami).track !== "function") return;
+    if(stage !== "store" && (!/^(product|buy)$/.test(stage) || !/^(drugs|f12|skruu|tripleog|journeyman)$/.test(product || ""))) return;
+    var name = "gz_"+stage+"_"+(stage === "store" ? "" : product+"_")+token;
+    if(sent[name]) return;
+    var code = sourceCode();
+    if(code && !sourceSent[token]) sourceSent[token] = emit("gzs_"+token+"_"+code+"_"+mode());
+    sent[name] = emit(name);
+  };
+  result.touch = touch;
+  function carryLink(a){
+    try {
+      if(a.getAttribute && /^#/.test(a.getAttribute("href") || "")) return;
+      var u = new URL(a.href, location.href);
+      if(!/^https?:$/.test(u.protocol)) return;
+      var own = OWN.test(u.hostname), checkout = u.hostname.toLowerCase() === "gazillionindustries.gumroad.com";
+      if(!own && !checkout) return;
+      touch();
+      fields.forEach(function(k){ if(tags[k]) u.searchParams.set(k,tags[k]); });
+      var first = firstTags();
+      if(first) Object.keys(first).forEach(function(k){ u.searchParams.set(k,first[k]); });
+      if(token) u.searchParams.set("gz_journey",token);
+      if(checkout){
+        // Gumroad's documented referrer override preserves the actual first
+        // external URL. UTM-only/direct arrivals use this real site URL.
+        var origin = url(original) || new URL(location.origin+location.pathname);
+        fields.forEach(function(k){ var value=u.searchParams.get(k); if(value) origin.searchParams.set(k,value); });
+        if(first) Object.keys(first).forEach(function(k){ origin.searchParams.set(k,first[k]); });
+        if(token) origin.searchParams.set("gz_journey",token);
+        else origin.searchParams.delete("gz_journey");
+        var ids = metaIds();
+        Object.keys(ids).forEach(function(k){ origin.searchParams.set(k,ids[k]); });
+        u.searchParams.set("referrer",origin.toString());
+      }
+      a.href = u.toString();
+    } catch(e) {}
+  }
+  function carry(){ document.querySelectorAll("a[href]").forEach(carryLink); }
+  document.addEventListener("DOMContentLoaded",carry);
+  // Refresh the link at the actual action, including a middle-click or a menu
+  // opened after an idle tab. This does not block navigation or send a visit.
+  ["click","auxclick","contextmenu"].forEach(function(name){
+    document.addEventListener(name,function(e){var a=e.target.closest && e.target.closest("a[href]");if(a) carryLink(a);},true);
+  });
+  touch();
+  return result;
+})();
+</script>
+<script>window.GZCloudBeforeSend=function(t,p){return t==='event'&&!p.name?p:false;};</script>
+<script defer src="/traffic.js?v=c922077b53f1"></script>
+<script async src="https://cloud.umami.is/script.js" data-auto-track="false" data-before-send="GZCloudBeforeSend" onload="window.GZTraffic?.attachUmami()" onerror="window.GZTraffic?.attachUmami()"
+        data-website-id="ed71399d-1069-4354-abbf-73dc311e5bc3"
+        data-domains="gazillionindustries.com,www.gazillionindustries.com"></script>
+<!-- Google Analytics 4, property "Gazillion Industries". Same hostname gate as
+     the pixel, so a local or draft copy never reports. -->
+<script>
+if (/^(www\.)?gazillionindustries\.com$/i.test(location.hostname)) {
+  var gaTag = document.createElement("script"); gaTag.async = true;
+  gaTag.src = "https://www.googletagmanager.com/gtag/js?id=G-2ZY2T73BLK";
+  document.head.appendChild(gaTag);
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function(){ window.dataLayer.push(arguments); };
+  gtag("js", new Date());
+  gtag("config", "G-2ZY2T73BLK");
+}
+</script>
+<script data-endpoint="https://board.gazillionindustries.com/presence/collect" defer src="presence.js?v=a0f3a806079f" data-product="journeyman"></script>
+<script defer src="home-button.js?v=20260913b"></script>
+<script>
+if (/^(www\.)?gazillionindustries\.com$/i.test(location.hostname)) {
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1164684366890206');
+fbq('track', 'PageView');
+}
+</script>
+</head>
+<body>
+<div class="banner">
+  <a class="buy display" data-pos="banner_top" href="https://gazillionindustries.gumroad.com/l/journeyman?wanted=true&amp;utm_source=gazillionindustries.com&amp;utm_medium=cta&amp;utm_content=banner_top"><span>GET JOURNEYMAN</span><span class="buy-price">$59</span></a>
+  <p class="terms"><span>Mac + Windows</span> &nbsp;·&nbsp; <span>VST3 / AU</span> &nbsp;·&nbsp; <span>Standalone (Mac)</span></p>
+  <p class="terms delivery"><span>grab it on your phone</span> &middot; <span>arrives by email</span> &middot; <span>install any time</span> <!-- GR-STARS:START journeyman -->
+
+<!-- GR-STARS:END --></p>
+  <p class="paymarks"><a class="paymark pm-apple" href="https://gazillionindustries.gumroad.com/l/journeyman?wanted=true&amp;utm_source=gazillionindustries.com&amp;utm_medium=cta&amp;utm_content=pay_wallet"><img src="pay/apple-pay-mark.svg" width="166" height="106" alt="Apple Pay"></a><a class="paymark pm-google" href="https://gazillionindustries.gumroad.com/l/journeyman?wanted=true&amp;utm_source=gazillionindustries.com&amp;utm_medium=cta&amp;utm_content=pay_wallet"><img src="pay/google-pay-mark.svg" width="1094" height="742" alt="Google Pay"></a><a class="paymark pm-paypal" href="https://gazillionindustries.gumroad.com/l/journeyman?wanted=true&amp;utm_source=gazillionindustries.com&amp;utm_medium=cta&amp;utm_content=pay_paypal"><img src="pay/paypal-mark.svg" width="170" height="48" alt="PayPal"></a></p>
+</div>
+
+<section class="hero" id="hero" aria-label="JOURNEYMAN">
+  <div class="below" id="below" aria-hidden="true"></div>
+  <div class="stage" id="stage" aria-hidden="true">
+    <img class="sky" src="journeyman/plate/venice-reference-restored.png" alt="">
+    <div class="glitter" id="glitter"></div>
+    
+  </div>
+  <div class="grade" aria-hidden="true"></div>
+  <div class="gulls" id="gulls" aria-hidden="true"><svg class="gull" viewBox="0 0 18 8" style="top:23%;--t:43s;--d:-9s"><path d="M1 6 Q5 1 9 5 Q13 1 17 6"/></svg><svg class="gull" viewBox="0 0 18 8" style="top:27%;--t:51s;--d:-33s"><path d="M1 6 Q5 1 9 5 Q13 1 17 6"/></svg><svg class="gull" viewBox="0 0 18 8" style="top:19%;--t:47s;--d:-21s"><path d="M1 6 Q5 1 9 5 Q13 1 17 6"/></svg></div>
+  <div class="layer tree" id="tree4m" style="--st:9s" aria-hidden="true"></div>
+  <div class="layer tree" id="tree1" style="--st:10s;animation-delay:-3s" aria-hidden="true"></div>
+  <div class="layer tree" id="tree4" style="--st:8s;animation-delay:-5s" aria-hidden="true"></div>
+  <div class="layer tree" id="tree3" style="--st:11s;animation-delay:-1s" aria-hidden="true"></div>
+
+  <div class="fold">
+    <div class="carousel is-single" aria-label="JOURNEYMAN product gallery">
+      <div class="track" id="track">
+        <!-- PRODUCT-MEDIA:START -->
+<div class="slide is-active"><img class="product" src="journeyman/gui-2x.png" width="1360" height="1800" alt="JOURNEYMAN panel"></div>
+<!-- PRODUCT-MEDIA:END -->
+      </div>
+      <button class="nav nav--prev" type="button" aria-label="Previous">&lsaquo;</button>
+      <button class="nav nav--next" type="button" aria-label="Next">&rsaquo;</button>
+      <div class="dots" id="dots"></div>
+    </div>
+    <div class="lockup-scene">
+      <h1 class="lockup">
+        <span class="jt jt--lead">JOURNEYMAN</span>
+        <span class="jt jt--leadlight">MONOSYNTH</span>
+        <span class="jt jt--lead jt--tail">THE FUNK IS WITHIN YOU</span>
+      </h1>
+    </div>
+    <div class="buy-mid"><a class="buy display" data-pos="hero_mid" href="https://gazillionindustries.gumroad.com/l/journeyman?wanted=true&amp;utm_source=gazillionindustries.com&amp;utm_medium=cta&amp;utm_content=hero_mid"><span>GET JOURNEYMAN</span><span class="buy-price">$59</span></a></div>
+  </div>
+</section>
+
+<div class="proof" id="proof">
+  <!-- GR-REVIEWS:START journeyman — generated with website/reviews_block.py -->
+
+<!-- GR-REVIEWS:END -->
+</div>
+<section class="copy" id="copy">
+  <p class="intro">aaah s#!t... here we go again.</p>
+  <div class="jtblock">
+    <p class="jt jt--lead">INTERGALACTIC SOUND</p>
+    <p class="jt jt--lead">THIS IS A VERY FUNKY MACHINE</p>
+  </div>
+  <p class="claim display">STANK-FACE GUARANTEED.</p>
+
+  <!-- TESTIMONIALS:START -->
+<div class="testimonial" id="testimonials" hidden></div>
+<!-- TESTIMONIALS:END -->
+  <div class="signup" id="list">
+    <p id="list-msg">there will be more of these.</p>
+    <form action="https://app.kit.com/forms/9851450/subscriptions" method="post" aria-labelledby="list-msg">
+      <input type="email" name="email_address" placeholder="Email address" required>
+      <button type="submit">tell me</button>
+    </form>
+  </div>
+  <div class="buy-end">
+    <a class="buy display" data-pos="page_end" href="https://gazillionindustries.gumroad.com/l/journeyman?wanted=true&amp;utm_source=gazillionindustries.com&amp;utm_medium=cta&amp;utm_content=page_end"><span>GET JOURNEYMAN</span><span class="buy-price">$59</span></a>
+    <p class="terms delivery"><span>grab it on your phone</span> &middot; <span>arrives by email</span> &middot; <span>install any time</span></p>
+  </div>
+  <section class="about" aria-label="Product description">
+    <div class="about-body">
+      <!-- GUMROAD-DESCRIPTION:START -->
+<p>JOURNEYMAN is a monosynth. One voice, three oscillators, two ladder filters, two envelopes, two modulation busses, a touch surface, and 200 programs: basses, leads, keys, pads, percussion and fx. Every program is wired to the mod wheel and the touch surface.</p>
+<p>Three oscillators with a continuous wave sweep from triangle through saw and square to pulse. Two ladder filters, left and right, spaced apart for width. A dedicated LFO with sample and hold. Glide, note priority, single or multi trigger. External audio in, or the output fed back into itself.</p>
+<p>AU, VST3 and standalone on macOS. VST3 on Windows. Universal binary. macOS 10.13 or later; Windows 10 or later, 64-bit.</p>
+<p>The licence key arrives with your download and in your receipt email. It activates once and then works offline.</p>
+<!-- GUMROAD-DESCRIPTION:END -->
+    </div>
+  </section>
+  <footer class="footer"><p>Gazillion Industries LLC</p></footer>
+</section>
+
+<script>
+(function bannerH(){
+  var b=document.querySelector('.banner'); if(!b) return;
+  function set(){ document.documentElement.style.setProperty('--banner-h', Math.ceil(b.getBoundingClientRect().height)+'px'); }
+  set(); addEventListener('resize', set); if(window.ResizeObserver) new ResizeObserver(set).observe(b);
+  if(document.fonts && document.fonts.ready) document.fonts.ready.then(set);
+})();
+
+/* Fit the foreground content; the background is independent of this layout. */
+(function compose(){
+  var hero=document.getElementById('hero');
+  function px(n){return n.toFixed(2)+'px'}
+  function layout(){
+    var hw=hero.clientWidth,foldH=window.innerHeight||680;
+    hero.style.height=px(foldH);
+    var fold=document.querySelector('.fold'),cs=getComputedStyle(fold),buy=document.querySelector('.buy-mid');
+    var reserved=parseFloat(cs.paddingTop)+parseFloat(cs.paddingBottom)+2*parseFloat(cs.rowGap)+document.querySelector('.lockup-scene').offsetHeight+buy.offsetHeight+parseFloat(getComputedStyle(buy).marginTop);
+    var gallery=document.querySelector('.carousel'),controls=document.querySelectorAll('#track>.slide').length>1?34:0;
+    var mediaH=Math.max(120,Math.min(foldH-reserved-controls,hw*.9*1800/1360,760));
+    gallery.style.setProperty('--slide-h',px(mediaH));gallery.style.setProperty('--gallery-height',px(mediaH+controls));
+    var hr=hero.getBoundingClientRect(),scene=document.querySelector('.buy-mid');
+    var heroH=Math.max(foldH,Math.ceil(scene.getBoundingClientRect().bottom-hr.top+24));
+    hero.style.height=px(heroH);
+
+  }
+  var queued=false;function schedule(){if(queued)return;queued=true;requestAnimationFrame(function(){queued=false;layout()})}
+  schedule();addEventListener('resize',schedule);addEventListener('load',schedule);
+  if(document.fonts&&document.fonts.ready)document.fonts.ready.then(schedule);
+})();
+
+/* ---------- the site's justifier plus the ink pass ---------- */
+(function justify(){
+  var range = document.createRange();
+  function ink(el){ range.selectNodeContents(el); return range.getBoundingClientRect().width; }
+  function num(cs, prop, dflt){ var v = parseFloat(cs.getPropertyValue(prop)); return isNaN(v) ? dflt : v; }
+  function fit(el){
+    var pcs = getComputedStyle(el.parentNode), target = el.parentNode.clientWidth - parseFloat(pcs.paddingLeft) - parseFloat(pcs.paddingRight), n = (el.textContent || "").trim().length;
+    if(!target || n < 2) return;
+    var gaps = n - 1, cs = getComputedStyle(el), AIM = num(cs, "--fit-aim", 0.26);
+    var base = parseFloat(el.dataset.base || cs.fontSize); el.dataset.base = base;
+    el.style.letterSpacing = "0px"; el.style.marginRight = "0px"; el.style.marginLeft = "0px"; el.style.fontSize = base + "px";
+    var natural = ink(el); if(!(natural > 0)) return;
+    var want = target / (natural / base + gaps * AIM);
+    var size = Math.min(base * num(cs, "--fit-max", 1.35), Math.max(base * num(cs, "--fit-min", 0.88), want));
+    var flat = target / (natural / base); if(size > flat) size = flat;
+    el.style.fontSize = size + "px";
+    var step = (target - ink(el)) / gaps; el.style.letterSpacing = step + "px";
+    var drawn = ink(el) - step; step += (target - drawn) / gaps;
+    el.style.letterSpacing = step + "px"; el.style.marginRight = (-step) + "px";
+  }
+  var cv = document.createElement("canvas"), ctx = cv.getContext("2d");
+  function inkfit(el){
+    var text = (el.textContent || "").trim(), n = text.length; if(n < 2 || !ctx) return;
+    var pcs = getComputedStyle(el.parentNode), target = el.parentNode.clientWidth - parseFloat(pcs.paddingLeft) - parseFloat(pcs.paddingRight), cs = getComputedStyle(el);
+    ctx.font = cs.fontStyle + " " + cs.fontWeight + " " + cs.fontSize + " " + cs.fontFamily;
+    var m = ctx.measureText(text); if(!(m.actualBoundingBoxRight > 0)) return;
+    var lsb = -m.actualBoundingBoxLeft, inkW = m.actualBoundingBoxLeft + m.actualBoundingBoxRight, step = (target - inkW) / (n - 1);
+    el.style.letterSpacing = step + "px"; el.style.marginLeft = (-lsb) + "px"; el.style.marginRight = (lsb - step) + "px";
+  }
+  function all(){ [].forEach.call(document.querySelectorAll(".jt"), function(el){ fit(el); inkfit(el); }); }
+  all(); addEventListener("resize", all);
+  if(document.fonts && document.fonts.ready) document.fonts.ready.then(all);
+})();
+</script>
+<script>
+(function(){
+  var track = document.getElementById("track");
+  var dotsEl = document.getElementById("dots");
+  if(!track || !dotsEl) return;
+  var slides = Array.prototype.slice.call(track.children);
+  document.querySelector(".carousel").classList.toggle("is-single",slides.length<2);
+  if(slides.length < 2){ dotsEl.remove(); return; }
+
+  slides.forEach(function(_, i){
+    var b = document.createElement("button");
+    b.className = "dot";
+    b.type = "button";
+    b.setAttribute("aria-label", "Go to slide " + (i+1));
+    b.addEventListener("click", function(){ go(i); });
+    dotsEl.appendChild(b);
+  });
+  var dots = Array.prototype.slice.call(dotsEl.children);
+
+  // Slides are narrower than the track now, so neither position nor the active
+  // slide can be derived from clientWidth any more. Both come from geometry.
+  function centreOf(el){ return el.offsetLeft + el.offsetWidth / 2; }
+  function index(){
+    var mid = track.scrollLeft + track.clientWidth / 2 + track.offsetLeft;
+    var best = 0, bestDist = Infinity;
+    slides.forEach(function(s, i){
+      var d = Math.abs(centreOf(s) - mid);
+      if(d < bestDist){ bestDist = d; best = i; }
+    });
+    return best;
+  }
+  function go(i){
+    var n = Math.max(0, Math.min(slides.length - 1, i));
+    var left = slides[n].offsetLeft - track.offsetLeft
+                 - (track.clientWidth - slides[n].offsetWidth) / 2;
+    track.scrollTo({ left: left, behavior: "smooth" });
+  }
+  function sync(){
+    var n = index();
+    dots.forEach(function(d, i){ d.setAttribute("aria-current", i === n ? "true" : "false"); });
+    slides.forEach(function(s, i){
+      s.classList.toggle("is-active", i === n);
+      // Keep silent previews on the selected slide; off-screen demos stay cold.
+      var v = s.querySelector("video");
+      if(!v) return;
+      if(i === n){
+        if(v.muted && v.paused && !reduced){ var pr = v.play(); if(pr && pr.catch) pr.catch(function(){}); }
+      } else if(!v.paused && v.muted){
+        v.pause();
+      }
+    });
+  }
+
+  document.querySelector(".nav--prev").addEventListener("click", function(){ go(index() - 1); });
+  document.querySelector(".nav--next").addEventListener("click", function(){ go(index() + 1); });
+
+  var t;
+  track.addEventListener("scroll", function(){
+    clearTimeout(t); t = setTimeout(sync, 60);
+  });
+  window.addEventListener("resize", sync);
+
+  track.setAttribute("tabindex", "0");
+  track.addEventListener("keydown", function(e){
+    if(e.key === "ArrowLeft"){ e.preventDefault(); go(index() - 1); }
+    if(e.key === "ArrowRight"){ e.preventDefault(); go(index() + 1); }
+  });
+
+  // ---- auto-advance ------------------------------------------------------
+  // Every five seconds, except that a slide holding a playing video keeps the
+  // floor until the video is done. The check runs at each tick rather than
+  // being armed once, so pausing and resuming the video is handled for free.
+  var AUTO_MS = 5000;
+  var timer = null;
+  // The demo leads the carousel and is the one thing here that shows what the
+  // plug-in does rather than describing it, so nothing pulls it away from
+  // someone who has not asked to move on. The timer starts at the first real
+  // interaction - a tap, a click, a key - and behaves as before from then on.
+  // Hovering and tab-switching deliberately do not count: neither says the
+  // reader is done with the first slide.
+  var engaged = false;
+  var ytPlaying = false;
+  var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  // A YouTube iframe will only report its state if the embed URL asks it to, so
+  // add the parameter rather than requiring whoever pastes the embed to know
+  // that. Talking to it by postMessage avoids loading YouTube's API script,
+  // which a strict content policy would block anyway.
+  slides.forEach(function(sl){
+    var f = sl.querySelector('iframe[src*="youtube.com"], iframe[src*="youtube-nocookie.com"]');
+    if(f && f.src.indexOf("enablejsapi=1") === -1){
+      f.src += (f.src.indexOf("?") === -1 ? "?" : "&") + "enablejsapi=1";
+    }
+  });
+
+  window.addEventListener("message", function(e){
+    if(String(e.origin).indexOf("youtube") === -1) return;
+    var d;
+    try { d = typeof e.data === "string" ? JSON.parse(e.data) : e.data; } catch(err){ return; }
+    if(!d) return;
+    var state = d.event === "onStateChange" ? d.info
+              : (d.info && typeof d.info.playerState === "number" ? d.info.playerState : null);
+    if(state === null) return;
+    ytPlaying = (state === 1);          // 1 playing, 0 ended, 2 paused
+    if(!ytPlaying) restart();           // ended or paused: let the timer run again
+  });
+
+  function subscribe(){
+    slides.forEach(function(sl){
+      var f = sl.querySelector("iframe");
+      if(f && f.contentWindow) f.contentWindow.postMessage('{"event":"listening"}', "*");
+    });
+  }
+  window.addEventListener("load", subscribe);
+  setTimeout(subscribe, 1200);
+
+  function holding(){
+    var el = slides[index()].querySelector("iframe, video");
+    if(!el) return false;                                  // a placeholder holds nothing
+    if(el.tagName === "VIDEO") return !el.paused && !el.ended;
+    return ytPlaying;
+  }
+
+  function tick(){
+    if(document.hidden) return;   // do not race while nobody is looking
+    if(holding()) return;
+    go((index() + 1) % slides.length);
+  }
+  function restart(){
+    if(timer) clearInterval(timer);
+    if(engaged && !reduced) timer = setInterval(tick, AUTO_MS);
+  }
+  function stop(){ if(timer){ clearInterval(timer); timer = null; } }
+
+  // Manual input resets the clock rather than fighting it, and hovering holds
+  // the slide you are looking at.
+  ["click","keydown","touchstart"].forEach(function(ev){
+    document.querySelector(".carousel").addEventListener(ev, function(){
+      engaged = true;
+      restart();
+    }, { passive: true });
+  });
+  var car = document.querySelector(".carousel");
+  car.addEventListener("mouseenter", stop);
+  car.addEventListener("mouseleave", restart);
+  document.addEventListener("visibilitychange", function(){
+    if(document.hidden) stop(); else restart();
+  });
+
+  restart();
+
+  sync();
+})();
+</script>
+<script>
+// Provider-agnostic by design. Plausible, GoatCounter and Umami each expose a
+// different global; this calls whichever one is actually present and does
+// nothing at all when none is. Changing analytics later is then one script tag
+// in the head rather than an edit at every call site, and the page never depends
+// on that tag being there.
+/* PRODUCTION ONLY - and this is a measured fix, not a precaution.
+   Every page here carries the LIVE Umami property id, so any local copy served
+   at the same path reports as real traffic on the real product: a preview, a
+   colourway draft, a page sitting open in a tab while it is being built.
+   Measured 7 Sep 2026, the day SKRUU and TRIPLE OG launched - seven TRIPLE OG
+   colourway drafts (/_tog-beige.html, /_tog-a-midnight.html and five more) fired
+   23 view_tripleog events into production from files that have never existed on
+   the live site and 404 there; and /journeyman.html beat 607 times against 3 real
+   pageviews. The board's live tree counts view_<product> by NAME, with no path
+   dimension, so every one of those landed on the product's own node and read as
+   people on the page.
+   data-domains on the tag stops the automatic PAGEVIEW; this stops every manual
+   EVENT. They are gated separately, so both are needed. */
+var GZ_LIVE = /^(www\.)?gazillionindustries\.com$/i.test(location.hostname);
+
+function track(name, props){
+  if(!GZ_LIVE) return;          // never report from a local or draft copy
+  try{
+    if(window.plausible)
+      return window.plausible(name, props ? {props:props} : undefined);
+    if(window.goatcounter && window.goatcounter.count)
+      return window.goatcounter.count({path:name, title:name, event:true});
+    if((window.GZTraffic || window.umami) && (window.GZTraffic || window.umami).track)
+      return (window.GZTraffic || window.umami).track(name, props);
+  }catch(e){}
+}
+
+// Every buy button reports which of the three it was. The utm_content on the
+// hrefs answers the same question at the checkout end, but only for the people
+// who actually pay. This counts the ones who clicked and then did not - which is
+// what separates "the page is not convincing" from "the price is not the
+// problem", and there is no way to see it from the checkout side.
+/* A LIVE ARRIVAL SIGNAL, alongside the pageview rather than instead of it.
+   Umami aggregates PAGEVIEW metrics by the hour, so a window that starts
+   mid-hour returns nothing at all - measured 2 Sep 2026, 23:32 UTC: the same
+   traffic gave 21 pageviews "since the top of the hour" and 0 "in the last 15
+   minutes". The launch board's live tree asks exactly that mid-hour question,
+   which is why ON PAGE sat at zero with people plainly on the page. EVENT
+   metrics are not bucketed and come back immediately, so this fires one.
+   The tag is deferred, hence the short wait for it rather than a bare call. */
+var GZ_AD = window.GZ_ATTR.paid;
+
+(function buyClicks(){
+  var links = document.querySelectorAll("a.buy,a.paymark");
+  for(var i = 0; i < links.length; i++){
+    (function(a){
+      a.addEventListener("click", function(){
+        // buy_click_journeyman, NOT buy_click. Umami's share token - which is all the
+        // board has, API keys being a paid plan - returns event metrics by NAME
+        // and silently ignores a url filter, so the event name is the only way
+        // a product's clicks can be told apart. DRUGS keeps the bare
+        // "buy_click" so its history stays one continuous series.
+        window.GZ_ATTR.mark("buy", "journeyman");
+        track("buy_click_journeyman", {position: a.getAttribute("data-pos") || "unknown"});
+        // Standard event name kept standard so the ad sets can still optimise
+        // for InitiateCheckout across the business; the product is carried in
+        // the parameters instead. value/currency also give Meta the amount,
+        // which is what a value-based lookalike is built from later.
+        if (window.fbq) fbq("track", "InitiateCheckout", {
+          content_name: "JOURNEYMAN", content_ids: ["journeyman"],
+          content_type: "product", value: 59.00, currency: "USD"});
+      });
+    })(links[i]);
+  }
+})();
+
+// Carry an inbound campaign through to the checkout. Each buy button already
+// carries its own utm_content saying which of the three it is, and its own
+// utm_source saying "the site" - which is true and useless the moment somebody
+// arrives from somewhere else, because it overwrites where they actually came
+// from. So an inbound utm_source wins on source/medium/campaign, and the
+// button keeps content. A sale then reads kit / email / wave1 / banner_top
+// rather than losing three quarters of that.
+// Arrival tags are forwarded by GZ_ATTR before any link is followed.
+
+(function list(){
+  var box = document.getElementById("list");
+  if(!box) return;
+  var form = box.querySelector("form"),
+      msg  = document.getElementById("list-msg");
+  // Not wired to a provider yet, so hide it. A form posting nowhere still looks
+  // like it worked and loses every address typed into it, which is worse than
+  // not asking.
+  if(!form || form.getAttribute("action").indexOf("PASTE_") === 0){
+    box.hidden = true;
+    return;
+  }
+  form.addEventListener("submit", function(e){
+    e.preventDefault();
+    // no-cors so the cross-origin post is allowed at all; the trade is that the
+    // response cannot be read, so success here is optimistic by necessity. What
+    // that hides is a provider outage. The alternative is showing a CORS error
+    // to somebody who did nothing wrong and cannot fix it either.
+    fetch(form.action, {method:"POST", mode:"no-cors", body:new FormData(form)});
+    box.classList.add("is-done");
+    msg.textContent = "ok. you will hear from us.";
+    track("list_signup");
+  });
+})();
+</script>
+<script defer src="video-audio-focus.js"></script>
+<script defer src="demo-playback.js"></script>
+</body>
+</html>
