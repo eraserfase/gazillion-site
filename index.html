@@ -157,7 +157,7 @@ window.GZ_ATTR = (function(){
   result.mark = function(stage, product){
     touch();
     if(!token || !(window.GZTraffic || window.umami) || typeof (window.GZTraffic || window.umami).track !== "function") return;
-    if(stage !== "store" && (!/^(product|buy)$/.test(stage) || !/^(drugs|f12|skruu|tripleog|beefy|journeyman)$/.test(product || ""))) return;
+    if(stage !== "store" && (!/^(product|buy)$/.test(stage) || !/^(drugs|f12|skruu|tripleog|beefy|journeyman|winnetka)$/.test(product || ""))) return;
     var name = "gz_"+stage+"_"+(stage === "store" ? "" : product+"_")+token;
     if(sent[name]) return;
     var code = sourceCode();
@@ -204,7 +204,7 @@ window.GZ_ATTR = (function(){
 })();
 </script>
 <title>Gazillion Industries - VST's and audio software for macOS, Windows and iPad</title>
-<meta name="description" content="BEEFY, saturation and loudness. SKRUU, varispeed pitch. TRIPLE OG, lofi cassette tape sim. F(ilter)12, a 12 bit sauce filter. DRUGS, a bus compressor. Chordea, a MIDI chord controller for iPad. AU, VST3 and standalone.">
+<meta name="description" content="WINNETKA, polysynth and vocoder. JOURNEYMAN, monosynth. BEEFY, saturation and loudness. SKRUU, varispeed pitch. TRIPLE OG, lofi cassette tape sim. F(ilter)12, a 12 bit sauce filter. DRUGS, a bus compressor. Chordea, a MIDI chord controller for iPad. AU, VST3 and standalone.">
 <link rel="canonical" href="https://gazillionindustries.com/">
 
 <meta property="og:type" content="website">
@@ -247,7 +247,7 @@ window.GZ_ATTR = (function(){
      one unless something checks the hostname. -->
 <script>window.GZ_LIVE = /^(www\.)?gazillionindustries\.com$/i.test(location.hostname);</script>
 <script>window.GZCloudBeforeSend=function(t,p){return t==='event'&&!p.name?p:false;};</script>
-<script defer src="/traffic.js?v=c922077b53f1"></script>
+<script defer src="/traffic.js?v=7357648af0f7"></script>
 <script async src="https://cloud.umami.is/script.js" data-auto-track="false" data-before-send="GZCloudBeforeSend" onload="window.GZTraffic?.attachUmami()" onerror="window.GZTraffic?.attachUmami()"
         data-website-id="ed71399d-1069-4354-abbf-73dc311e5bc3"
         data-domains="gazillionindustries.com,www.gazillionindustries.com"></script>
@@ -264,7 +264,7 @@ if (/^(www\.)?gazillionindustries\.com$/i.test(location.hostname)) {
   gtag("config", "G-2ZY2T73BLK");
 }
 </script>
-<script data-endpoint="https://board.gazillionindustries.com/presence/collect" defer src="presence.js?v=a0f3a806079f" data-product="store"></script>
+<script data-endpoint="https://board.gazillionindustries.com/presence/collect" defer src="presence.js?v=9a9f6e53c99a" data-product="store"></script>
 <script>
 if (window.GZ_LIVE) {
 !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -616,6 +616,22 @@ a{color:inherit;text-decoration:none}
 
     <!-- RELEASE ORDER, newest first - the owner, 7 Sep 2026.  Unchanged. -->
     <div class="rack">
+
+      <article class="unit" style="--accent:#f4f4f2;--cta-ink:#242629">
+        <a class="cardlink" href="/winnetka/" data-product="winnetka" data-name="WINNETKA" data-value="49.00" aria-label="WINNETKA, polysynth and vocoder. $49."></a>
+        <div class="shot"><img src="winnetka/panel.webp" width="1440" height="1856" alt="WINNETKA polysynth in its clear shell." decoding="async"></div>
+        <div class="legend">
+          <p class="mark" style="--markr:1"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 17.7741"><path fill="currentColor" fill-rule="nonzero" d="M15.139 17.7741 L12.8397 6.94948 L12.7364 6.94948 L10.4371 17.7741 L4.15935 17.7741 L0 0 L5.94193 0 L7.98285 10.0754 L8.0862 10.0754 L10.1013 0 L15.7332 0 L17.8774 10.0754 L17.9808 10.0754 L19.8925 0 L25.5761 0 L21.4168 17.7741 L15.139 17.7741 Z M27.5312 17.7741 L27.5312 0 L33.2407 0 L33.2407 17.7741 L27.5312 17.7741 Z M47.9064 17.7741 L40.4402 9.1454 L40.4402 17.7741 L35.1958 17.7741 L35.1958 0 L40.1819 0 L47.648 8.75789 L47.648 0 L52.8924 0 L52.8924 17.7741 L47.9064 17.7741 Z M67.7359 17.7741 L60.2697 9.1454 L60.2697 17.7741 L55.0253 17.7741 L55.0253 0 L60.0114 0 L67.4775 8.75789 L67.4775 0 L72.7219 0 L72.7219 17.7741 L67.7359 17.7741 Z M74.8548 0 L90.2263 0 L90.2263 4.2627 L80.5642 4.2627 L80.5642 6.71696 L88.8312 6.71696 L88.8312 10.7988 L80.5642 10.7988 L80.5642 13.5114 L90.4071 13.5114 L90.4071 17.7741 L74.8548 17.7741 L74.8548 0 Z M103.288 4.54688 L103.288 17.7741 L97.5788 17.7741 L97.5788 4.54688 L91.7402 4.54688 L91.7402 0 L109.101 0 L109.101 4.54688 L103.288 4.54688 Z M122.384 0 L129.463 0 L123.082 7.31116 L129.592 17.7741 L122.849 17.7741 L119.155 11.2638 L116.055 13.7956 L116.055 17.7741 L110.345 17.7741 L110.345 0 L116.055 0 L116.055 7.59534 L122.384 0 Z M143.955 17.7741 L143.206 15.2682 L136.979 15.2682 L136.23 17.7741 L130.392 17.7741 L136.876 0 L143.516 0 L150 17.7741 L143.955 17.7741 Z M138.168 11.2897 L142.017 11.2897 L140.157 4.96022 L140.054 4.96022 L138.168 11.2897 Z"/></svg></p>
+          <p class="jt sub">polysynth</p>
+          <p class="jt cat">w/ vocoder input</p>
+          <p class="jt pitch">cool and calculated</p>
+          <div class="ask">
+            <p class="askline"><span class="money">$49</span><span class="formats" data-short="AU &middot; VST3 &middot; Mac &middot; Win">AU &middot; VST3 &middot; Standalone (Mac) &middot; macOS &middot; Windows</span></p>
+            <a class="cta" href="/winnetka/" data-product="winnetka" data-name="WINNETKA" data-value="49.00">Get WINNETKA</a>
+          </div>
+        </div>
+      </article>
+
 
       <article class="unit" style="--accent:#de5030;--cta-ink:#0b0a09">
         <a class="cardlink" href="/journeyman.html" data-product="journeyman" data-name="JOURNEYMAN" data-value="59.00" aria-label="JOURNEYMAN, monosynth. $59."></a>

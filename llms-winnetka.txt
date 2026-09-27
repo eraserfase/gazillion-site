@@ -1,0 +1,10 @@
+WINNETKA — polysynth and vocoder
+https://gazillionindustries.com/winnetka/
+Price: $49 USD, one-time purchase.
+350 preloaded presets in Bass, Lead, Pads, FX, Perc, Arp and Vocoder.
+40 vocoder presets, including live-input and held-vowel sounds.
+16-step arpeggiator, rates up to 1/64.
+Preset import, export and user library.
+macOS: AU, VST3, standalone; Intel and Apple Silicon.
+Windows: VST3, 64-bit.
+Gazillion Industries LLC.

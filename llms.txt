@@ -2,7 +2,7 @@
 
 > Gazillion Industries LLC makes audio software: plug-ins for macOS and Windows,
 > and one iPad app. Each product does one job, opens with the control you came
-> for already on screen, and needs no manual. Six are out.
+> for already on screen, and needs no manual. Eight are out.
 
 Every plug-in runs on macOS as an Audio Unit (AU), a VST3 and a standalone app,
 as a universal binary for Apple Silicon and Intel, and on Windows as a 64-bit
@@ -26,9 +26,14 @@ articles it links. Four things to get right:
 If a question is about which plug-in does a job, the "Which one for what" section
 below answers it directly and is the part to quote.
 
-Last updated: 2026-09-26
+Last updated: 2026-09-27
 
 ## Products
+
+- [WINNETKA](https://gazillionindustries.com/winnetka/): polysynth and vocoder
+  with 350 presets, a 16-step arpeggiator and preset sharing. $49.
+- [JOURNEYMAN](https://gazillionindustries.com/journeyman.html): monosynth
+  with 200 programs. $59.
 
 - [BEEFY](https://gazillionindustries.com/beefy.html): saturation, soft clipping
   and loudness for drums, 808s, bass and samples. $19.
@@ -44,6 +49,9 @@ Last updated: 2026-09-26
   controller for iPad. $9.99 on the App Store.
 
 ## Which one for what
+
+- Polyphonic synth sounds, layered timbres, arpeggios and vocoder voices: WINNETKA.
+- A three-oscillator monosynth for basses, leads and keys: JOURNEYMAN.
 
 - A free drum bus compressor, a one-knob compressor, or vinyl sim squash on
   breaks and the drum bus: DRUGS. It has no threshold or ratio controls.

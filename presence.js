@@ -4,7 +4,7 @@
   'use strict';
   if(!/^(www\.)?gazillionindustries\.com$/i.test(location.hostname)) return;
   var script=document.currentScript, product=script && script.dataset.product;
-  if(!/^(store|drugs|f12|skruu|tripleog|beefy|journeyman)$/.test(product || '')) return;
+  if(!/^(store|drugs|f12|skruu|tripleog|beefy|journeyman|winnetka)$/.test(product || '')) return;
   var endpoint=script && script.dataset.endpoint;
   // No arbitrary destination, credentials, or query string from configuration.
   if(endpoint!=='https://board.gazillionindustries.com/presence/collect') endpoint='';
@@ -72,7 +72,7 @@
   if(endpoint){
     var checkoutProducts={drugs:'drugs',spcjdr:'drugs',f12:'f12','f12-plugin-only':'f12',
       kzfirr:'f12',iyhfta:'f12',skruu:'skruu',bfxzea:'skruu',tripleog:'tripleog',
-      aslssg:'tripleog',beefy:'beefy',xelfo:'beefy',journeyman:'journeyman'};
+      aslssg:'tripleog',beefy:'beefy',xelfo:'beefy',journeyman:'journeyman',winnetka:'winnetka',xhovtp:'winnetka'};
     function buy(e){
       if(e.type==='auxclick' && e.button!==1 || e.type==='click' && e.button>0) return;
       var a=e.target && e.target.closest && e.target.closest('a[href]');

@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>WINNETKA — polysynth and vocoder</title>
+<meta name="description" content="WINNETKA is a polysynth with a vocoder and 350 presets. Basses, leads, pads, FX, percussion, arps and vocoder sounds. AU, VST3 and standalone on Mac. VST3 on Windows. $49.">
+<link rel="canonical" href="https://gazillionindustries.com/winnetka/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Gazillion Industries">
+<meta property="og:title" content="WINNETKA — polysynth and vocoder">
+<meta property="og:description" content="A polysynth with a vocoder and 350 presets.">
+<meta property="og:url" content="https://gazillionindustries.com/winnetka/">
+<meta property="og:image" content="https://gazillionindustries.com/winnetka/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://gazillionindustries.com/winnetka/og.jpg">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"WINNETKA","applicationCategory":"MultimediaApplication","applicationSubCategory":"Polysynth and vocoder plugin","operatingSystem":"macOS, Windows 64-bit","url":"https://gazillionindustries.com/winnetka/","image":"https://gazillionindustries.com/winnetka/og.jpg","description":"A polysynth with 350 presets, a vocoder, a 16-step arpeggiator and preset import and export.","publisher":{"@type":"Organization","name":"Gazillion Industries LLC","url":"https://gazillionindustries.com/"},"offers":{"@type":"Offer","price":"49.00","priceCurrency":"USD","url":"https://gazillionindustries.gumroad.com/l/winnetka"}}</script>
+<style>
+@font-face{font-family:Archivo;src:url('archivo.woff2') format('woff2');font-weight:100 900;font-display:swap}
+@font-face{font-family:'Archivo Black';src:url('archivo-black.woff2') format('woff2');font-weight:400;font-display:swap}
+:root{--field:#f4f4f2;--ink:#242629;--ink-soft:#53565b;--ink-faint:#6a6d72;--banner-h:102px;font-family:Archivo,-apple-system,BlinkMacSystemFont,'Helvetica Neue',sans-serif;color:var(--ink);background:var(--field)}
+*{box-sizing:border-box}html,body{margin:0}body{background:linear-gradient(#fff 0,#f4f4f2 760px);-webkit-font-smoothing:antialiased}a{color:inherit}[hidden]{display:none!important}
+.banner{position:fixed;inset:0 0 auto;z-index:30;padding:15px 20px 12px;text-align:center;background:rgba(244,244,242,.96);border-bottom:1px solid #dedfdd;backdrop-filter:blur(12px)}
+.buy{display:inline-flex;align-items:center;justify-content:center;min-height:52px;border:2px solid var(--ink);border-radius:6px;background:#fff;box-shadow:4px 4px 0 var(--ink);text-decoration:none;font-family:'Archivo Black','Arial Black',sans-serif;text-transform:uppercase;line-height:1;transition:transform .14s,box-shadow .14s}
+.buy span{padding:14px 22px;font-size:clamp(17px,4.8vw,23px);white-space:nowrap}.buy .buy-price{border-left:2px solid var(--ink);padding-left:19px;padding-right:23px}.buy:hover{transform:translate(-1px,-1px);box-shadow:5px 5px 0 var(--ink)}.buy:active{transform:translate(3px,3px);box-shadow:1px 1px 0 var(--ink)}
+.terms{margin:12px 0 0;font-size:12px;line-height:1.3;color:var(--ink-soft)}.terms span{white-space:nowrap}
+main{max-width:720px;margin:auto;text-align:center;padding:calc(var(--banner-h) + 26px) 24px 0}.hero{display:flex;flex-direction:column;align-items:center}
+.panel{display:block;width:min(100%,430px);height:auto;max-height:590px;object-fit:contain}.lockup{width:min(100%,470px);margin:32px 0 0}.lockup svg{display:block;width:100%;height:auto;fill:var(--ink)}.lockup path{fill:var(--ink)}
+.intro{max-width:440px;margin:29px auto 0;font-size:clamp(19px,3vw,23px);line-height:1.45;letter-spacing:-.02em}.tagline{width:min(100%,470px);margin:11px auto 0;font-family:"Archivo Black","Arial Black",sans-serif;font-size:clamp(19px,4.9vw,30px);line-height:1.1;letter-spacing:.035em;text-transform:uppercase}.claim{margin:46px auto 0;max-width:560px;font-family:"Archivo Black","Arial Black",sans-serif;font-size:clamp(20px,5vw,30px);line-height:1.2;color:var(--ink);text-transform:uppercase}.categories{max-width:430px;margin:12px auto 0;font-size:11px;font-weight:600;letter-spacing:.15em;line-height:1.9;text-transform:uppercase;color:var(--ink-soft)}
+.listen{width:100%;max-width:480px;margin:32px auto 0}.audio-row{border-top:1px solid #c7c9c7;padding:17px 0 18px}.audio-row:last-child{border-bottom:1px solid #c7c9c7}.audio-row label{display:block;margin:0 0 10px;text-align:left;font-size:12px;font-weight:600;letter-spacing:.11em;text-transform:uppercase}.audio-row audio{display:block;width:100%;height:42px;accent-color:#242629}.audio-note{margin:11px 0 0;text-align:left;font-size:12px;line-height:1.5;color:var(--ink-soft)}
+.buy-mid{margin:33px 0 0}.buy-mid .buy span{font-size:16px;padding:13px 17px}.format-strip{max-width:520px;margin:26px auto 0;color:var(--ink-faint);font-size:10px;letter-spacing:.12em;line-height:1.8;text-transform:uppercase}
+.signup{max-width:440px;margin:62px auto 0}.signup p{margin:0 0 15px;font-size:17px;color:var(--ink-soft)}.signup form{display:flex;gap:10px}.signup input{width:0;flex:1;min-width:0;border:1px solid #9c9f9e;border-radius:5px;background:transparent;color:var(--ink);padding:12px 14px;font:inherit;font-size:16px}.signup button{border:1px solid var(--ink);border-radius:5px;background:transparent;color:var(--ink);padding:10px 16px;font:inherit;cursor:pointer}.signup button:hover{background:var(--ink);color:white}
+.buy-end{margin:39px auto 0}.about{max-width:520px;margin:39px auto 0;text-align:left;border-top:1px solid #c7c9c7;border-bottom:1px solid #c7c9c7}.about summary{padding:18px 0;cursor:pointer;font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-soft)}.about-body{padding:0 0 13px;font-size:15px;line-height:1.65}.about-body h2{font-family:'Archivo Black','Arial Black',sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:25px 0 7px}.about-body p{margin:0 0 14px}.footer{text-align:center;padding:46px 20px 28px;font-size:10px;letter-spacing:.2em;color:var(--ink-faint);text-transform:uppercase}
+@media(max-width:430px){main{padding-left:21px;padding-right:21px;padding-top:calc(var(--banner-h) + 21px)}.banner{padding:12px 15px}.buy span{padding:13px 17px}.panel{width:100%}.lockup{margin-top:28px}.intro{font-size:19px}.categories{font-size:10px;letter-spacing:.1em}.signup{margin-top:48px}.signup form{gap:8px}.signup button{padding-left:12px;padding-right:12px}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+</style>
+<script>
+/* Keep observed arrival evidence through the shelf, products and checkout.
+   The anonymous journey expires after 30 minutes without activity. Source
+   metadata is not a visit, and the existing presence heartbeat stays intact. */
+window.GZ_ATTR = (function(){
+  var result = {paid:false, tags:{}, token:"", mark:function(){}, touch:function(){}};
+  var OWN = /^(www\.)?gazillionindustries\.com$/i;
+  if(!OWN.test(location.hostname)) return result;
+  var KEY = "gz_arrival_v3", TTL = 30*60000;
+  var fields = ["utm_source","utm_medium","utm_campaign","utm_content","utm_term","utm_id","ad_id","adset_id","campaign_id","fbclid"];
+  var inbound = new URLSearchParams(location.search), now = Date.now();
+  var tags = {}, original = "", token = "", activity = now, sent = {}, sourceSent = {};
+  var saved = null, previous = null, ref = null;
+  function validToken(value){ return /^[0-9a-f]{24}$/.test(value || ""); }
+  function fresh(value){ return value && typeof value.at === "number" && now >= value.at && now-value.at < TTL; }
+  function url(value){
+    try {
+      var u = new URL(value);
+      if(!/^https?:$/.test(u.protocol)) return null;
+      u.username = ""; u.password = ""; u.hash = "";
+      return u;
+    } catch(e){ return null; }
+  }
+  function cleanTags(value){
+    var clean = {};
+    fields.forEach(function(k){ if(value && typeof value[k] === "string" && value[k]) clean[k] = value[k].slice(0,1024); });
+    return clean;
+  }
+  try {
+    saved = JSON.parse(sessionStorage.getItem(KEY) || "null");
+    if(!fresh(saved)) saved = null;
+    if(saved){
+      tags = cleanTags(saved.tags); token = validToken(saved.token) ? saved.token : "";
+      previous = url(saved.referrer);
+      if(previous && !OWN.test(previous.hostname)) original = previous.toString();
+    } else {
+      var legacy = JSON.parse(sessionStorage.getItem("gz_arrival_v2") || "null");
+      if(fresh(legacy)) tags = cleanTags(legacy.tags);
+    }
+  } catch(e) {}
+  ref = url(document.referrer);
+  var internal = ref && OWN.test(ref.hostname);
+  var gumroadReturn = ref && /(^|\.)gumroad\.com$/i.test(ref.hostname) && saved;
+  if(inbound.get("utm_source")){
+    tags = {};
+    if(!internal && !gumroadReturn) original = "";
+  }
+  // Only an actually observed external URL can become the original referrer.
+  // An internal hop or checkout return must not overwrite that arrival.
+  if(ref && !internal && !gumroadReturn){
+    original = ref.toString();
+    if(!inbound.get("utm_source")){
+      tags = {utm_source:ref.hostname.toLowerCase().replace(/^www\./,""),
+              utm_medium:/(^|\.)(instagram|facebook)\.com$/i.test(ref.hostname) ? "social" : "referral"};
+    }
+  }
+  fields.forEach(function(k){ var v = inbound.get(k); if(v) tags[k] = v.slice(0,1024); });
+  // The stored activity deadline is authoritative. Never resurrect a token
+  // from a shared URL or an internal link after its stored session expired.
+  function makeToken(){
+    try {
+      var bytes = new Uint8Array(12); window.crypto.getRandomValues(bytes);
+      return Array.prototype.map.call(bytes,function(n){return ("0"+n.toString(16)).slice(-2);}).join("");
+    } catch(e){ return ""; }  // Never derive an identity from browser traits.
+  }
+  if(!token) token = makeToken();
+  var source = (tags.utm_source || "").toLowerCase(), medium = (tags.utm_medium || "").toLowerCase();
+  result.paid = /^(meta|facebook|instagram|fb|ig)$/.test(source)
+    && /^(paid|paid_social|paid-social|paidsocial|cpc|ppc|social_ads)$/.test(medium);
+  result.tags = tags;
+  function touch(){
+    var at = Date.now();
+    if(at < activity || at-activity >= TTL){ token = makeToken(); sent = {}; sourceSent = {}; }
+    activity = at; result.token = token;
+    try { sessionStorage.setItem(KEY,JSON.stringify({at:at,tags:tags,referrer:original,token:token})); } catch(e) {}
+    return token;
+  }
+  /* FIRST TOUCH, KEPT ACROSS SESSIONS. The arrival record above is sessionStorage with a
+     30-minute TTL, deliberately - a session must never be resurrected from a shared link.
+     But that also erased the ad click of anyone who came back later, so a buyer who saw the
+     ad on Monday and searched for us on Wednesday arrived looking like a cold Google visitor.
+     Measured 20 Sep 2026: every journey in the board's store was under four minutes, 16 of
+     the last 21 BEEFY purchases had no journey at all, and a day the owner counted 5 real orders
+     on was credited 3 by the ad tag and 2 by Meta.
+     This record is SEPARATE: localStorage, 30 days, written once (first touch wins), and it
+     never touches the session token, the session TTL, or the live utm_* tags. It is only ever
+     added to a checkout link when the CURRENT arrival carries no campaign of its own, so a
+     fresh ad click still attributes exactly as it does today. */
+  var FIRST_KEY = "gz_first_v1", FIRST_TTL = 30*86400000;
+  function firstTouch(){
+    var now = Date.now(), have = null;
+    try { have = JSON.parse(localStorage.getItem(FIRST_KEY) || "null"); } catch(e){ have = null; }
+    if(have && (!have.at || now-have.at >= FIRST_TTL || typeof have.at !== "number")) have = null;
+    if(!have && (tags.utm_campaign || tags.utm_source)){
+      have = {at:now, source:tags.utm_source || "", medium:tags.utm_medium || "",
+              campaign:tags.utm_campaign || "", paid:!!result.paid};
+      try { localStorage.setItem(FIRST_KEY, JSON.stringify(have)); } catch(e){}
+    }
+    return have;
+  }
+  function firstTags(){
+    var f = firstTouch();
+    if(!f || tags.utm_campaign || !(f.campaign || f.source)) return null;
+    var out = {gz_first_days:String(Math.max(0, Math.round((Date.now()-f.at)/86400000)))};
+    if(f.campaign) out.gz_first_campaign = f.campaign;
+    if(f.source) out.gz_first_source = f.source;
+    if(f.medium) out.gz_first_medium = f.medium;
+    return out;
+  }
+  /* Meta's own two browser identifiers. `_fbp` is set by the pixel that this
+     page already loads; `_fbc` is set when the arrival carried an fbclid. The
+     server gets NEITHER from Gumroad, and without them a server-side Purchase
+     cannot be deduplicated against the browser one - which is why Events
+     Manager reports our Purchase coverage as 1% against a 75% goal.
+     They ride the documented referrer override, because that is the only field
+     measured to survive to the sale record; url_parameters comes back empty. */
+  function cookie(name){
+    try {
+      var m = document.cookie.match("(?:^|; )"+name.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")+"=([^;]*)");
+      return m ? decodeURIComponent(m[1]) : "";
+    } catch(e){ return ""; }
+  }
+  function metaIds(){
+    var out = {}, fbp = cookie("_fbp"), fbc = cookie("_fbc");
+    if(/^fb\.\d\.\d{10,16}\.[0-9A-Za-z_-]{4,64}$/.test(fbp)) out.gz_fbp = fbp;
+    if(/^fb\.\d\.\d{10,16}\./.test(fbc)) out.gz_fbc = fbc.slice(0,400);
+    else if(tags.fbclid) out.gz_fbc = "fb.1."+Date.now()+"."+tags.fbclid;
+    return out;
+  }
+  function sourceCode(){
+    var aliases = {"ig":"instagram","instagram.com":"instagram","l.instagram.com":"instagram","m.instagram.com":"instagram",
+                   "fb":"facebook","facebook.com":"facebook","m.facebook.com":"facebook","l.facebook.com":"facebook","lm.facebook.com":"facebook"};
+    var value = aliases[source] || source;
+    // A shortened domain is a different domain. Long/unsafe names retain their
+    // complete original URL and tags at checkout, with no invented short alias.
+    return /^[a-z0-9_.-]{1,18}$/.test(value) && !/^(unknown|unassigned|direct)$/.test(value) ? value : "";
+  }
+  function mode(){
+    if(/^(paid|paid_social|paid-social|paidsocial|cpc|ppc|social_ads)$/.test(medium)) return "p";
+    if(/^(email|e-mail|newsletter)$/.test(medium)) return "e";
+    if(/^(social|organic_social|organic-social)$/.test(medium)) return "s";
+    if(medium === "referral") return "r";
+    return "u";
+  }
+  function emit(name){
+    try {
+      var p = (window.GZTraffic || window.umami).track(name);
+      if(p && typeof p.catch === "function") p.catch(function(){});
+      return true;
+    } catch(e){ return false; }
+  }
+  result.mark = function(stage, product){
+    touch();
+    if(!token || !(window.GZTraffic || window.umami) || typeof (window.GZTraffic || window.umami).track !== "function") return;
+    if(stage !== "store" && (!/^(product|buy)$/.test(stage) || !/^(drugs|f12|skruu|tripleog|journeyman)$/.test(product || ""))) return;
+    var name = "gz_"+stage+"_"+(stage === "store" ? "" : product+"_")+token;
+    if(sent[name]) return;
+    var code = sourceCode();
+    if(code && !sourceSent[token]) sourceSent[token] = emit("gzs_"+token+"_"+code+"_"+mode());
+    sent[name] = emit(name);
+  };
+  result.touch = touch;
+  function carryLink(a){
+    try {
+      if(a.getAttribute && /^#/.test(a.getAttribute("href") || "")) return;
+      var u = new URL(a.href, location.href);
+      if(!/^https?:$/.test(u.protocol)) return;
+      var own = OWN.test(u.hostname), checkout = u.hostname.toLowerCase() === "gazillionindustries.gumroad.com";
+      if(!own && !checkout) return;
+      touch();
+      fields.forEach(function(k){ if(tags[k]) u.searchParams.set(k,tags[k]); });
+      var first = firstTags();
+      if(first) Object.keys(first).forEach(function(k){ u.searchParams.set(k,first[k]); });
+      if(token) u.searchParams.set("gz_journey",token);
+      if(checkout){
+        // Gumroad's documented referrer override preserves the actual first
+        // external URL. UTM-only/direct arrivals use this real site URL.
+        var origin = url(original) || new URL(location.origin+location.pathname);
+        fields.forEach(function(k){ var value=u.searchParams.get(k); if(value) origin.searchParams.set(k,value); });
+        if(first) Object.keys(first).forEach(function(k){ origin.searchParams.set(k,first[k]); });
+        if(token) origin.searchParams.set("gz_journey",token);
+        else origin.searchParams.delete("gz_journey");
+        var ids = metaIds();
+        Object.keys(ids).forEach(function(k){ origin.searchParams.set(k,ids[k]); });
+        u.searchParams.set("referrer",origin.toString());
+      }
+      a.href = u.toString();
+    } catch(e) {}
+  }
+  function carry(){ document.querySelectorAll("a[href]").forEach(carryLink); }
+  document.addEventListener("DOMContentLoaded",carry);
+  // Refresh the link at the actual action, including a middle-click or a menu
+  // opened after an idle tab. This does not block navigation or send a visit.
+  ["click","auxclick","contextmenu"].forEach(function(name){
+    document.addEventListener(name,function(e){var a=e.target.closest && e.target.closest("a[href]");if(a) carryLink(a);},true);
+  });
+  touch();
+  return result;
+})();
+</script>
+<script>window.GZCloudBeforeSend=function(t,p){return t==='event'&&!p.name?p:false;};</script>
+<script defer src="/traffic.js?v=7357648af0f7"></script>
+<script async src="https://cloud.umami.is/script.js" data-auto-track="false" data-before-send="GZCloudBeforeSend" onload="window.GZTraffic?.attachUmami()" onerror="window.GZTraffic?.attachUmami()"
+        data-website-id="ed71399d-1069-4354-abbf-73dc311e5bc3"
+        data-domains="gazillionindustries.com,www.gazillionindustries.com"></script>
+<!-- Google Analytics 4, property "Gazillion Industries". Same hostname gate as
+     the pixel, so a local or draft copy never reports. -->
+<script>
+if (/^(www\.)?gazillionindustries\.com$/i.test(location.hostname)) {
+  var gaTag = document.createElement("script"); gaTag.async = true;
+  gaTag.src = "https://www.googletagmanager.com/gtag/js?id=G-2ZY2T73BLK";
+  document.head.appendChild(gaTag);
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function(){ window.dataLayer.push(arguments); };
+  gtag("js", new Date());
+  gtag("config", "G-2ZY2T73BLK");
+}
+</script>
+<script data-endpoint="https://board.gazillionindustries.com/presence/collect" defer src="/presence.js?v=9a9f6e53c99a" data-product="winnetka"></script>
+<script defer src="/home-button.js?v=20260913b"></script>
+<script>
+if (/^(www\.)?gazillionindustries\.com$/i.test(location.hostname)) {
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1164684366890206');
+fbq('track', 'PageView');
+}
+</script>
+
+</head>
+<body>
+<header class="banner">
+<a class="buy" data-pos="banner_top" href="https://gazillionindustries.gumroad.com/l/winnetka?wanted=true&amp;utm_source=gazillionindustries.com&amp;utm_medium=cta&amp;utm_content=banner_top"><span>GET WINNETKA</span><span class="buy-price">$49</span></a>
+<p class="terms"><span>Mac + Windows</span> &middot; <span>one-time purchase</span></p>
+</header>
+<main>
+<section class="hero" aria-label="WINNETKA polysynth">
+<img class="panel" src="panel.webp" width="1440" height="1856" alt="WINNETKA's clear shell, live spectrum display, grey edit buttons, red parameter displays and five coloured knob caps." fetchpriority="high">
+<h1 class="lockup" aria-label="WINNETKA polysynth"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 29.5741"><path fill="#d6d6dc" fill-rule="nonzero" d="M15.139 17.7741 L12.8397 6.94948 L12.7364 6.94948 L10.4371 17.7741 L4.15935 17.7741 L0 0 L5.94193 0 L7.98285 10.0754 L8.0862 10.0754 L10.1013 0 L15.7332 0 L17.8774 10.0754 L17.9808 10.0754 L19.8925 0 L25.5761 0 L21.4168 17.7741 L15.139 17.7741 Z M27.5312 17.7741 L27.5312 0 L33.2407 0 L33.2407 17.7741 L27.5312 17.7741 Z M47.9064 17.7741 L40.4402 9.1454 L40.4402 17.7741 L35.1958 17.7741 L35.1958 0 L40.1819 0 L47.648 8.75789 L47.648 0 L52.8924 0 L52.8924 17.7741 L47.9064 17.7741 Z M67.7359 17.7741 L60.2697 9.1454 L60.2697 17.7741 L55.0253 17.7741 L55.0253 0 L60.0114 0 L67.4775 8.75789 L67.4775 0 L72.7219 0 L72.7219 17.7741 L67.7359 17.7741 Z M74.8548 0 L90.2263 0 L90.2263 4.2627 L80.5642 4.2627 L80.5642 6.71696 L88.8312 6.71696 L88.8312 10.7988 L80.5642 10.7988 L80.5642 13.5114 L90.4071 13.5114 L90.4071 17.7741 L74.8548 17.7741 L74.8548 0 Z M103.288 4.54688 L103.288 17.7741 L97.5788 17.7741 L97.5788 4.54688 L91.7402 4.54688 L91.7402 0 L109.101 0 L109.101 4.54688 L103.288 4.54688 Z M122.384 0 L129.463 0 L123.082 7.31116 L129.592 17.7741 L122.849 17.7741 L119.155 11.2638 L116.055 13.7956 L116.055 17.7741 L110.345 17.7741 L110.345 0 L116.055 0 L116.055 7.59534 L122.384 0 Z M143.955 17.7741 L143.206 15.2682 L136.979 15.2682 L136.23 17.7741 L130.392 17.7741 L136.876 0 L143.516 0 L150 17.7741 L143.955 17.7741 Z M138.168 11.2897 L142.017 11.2897 L140.157 4.96022 L140.054 4.96022 L138.168 11.2897 Z M0 20.9741 L3.70589 20.9741 Q4.60001 20.9741 5.1647 21.2329 Q5.72942 21.4918 6.03529 21.88 Q6.34117 22.2682 6.45294 22.7271 Q6.5647 23.1859 6.5647 23.5741 Q6.5647 23.9624 6.45294 24.4153 Q6.34117 24.8682 6.03529 25.2565 Q5.72942 25.6447 5.1647 25.8976 Q4.60001 26.1506 3.70589 26.1506 L1.47058 26.1506 L1.47058 29.3741 L0 29.3741 L0 20.9741 Z M1.47058 24.9506 L3.62354 24.9506 Q3.87059 24.9506 4.12941 24.88 Q4.38823 24.8094 4.60588 24.6506 Q4.82353 24.4918 4.95882 24.2271 Q5.09412 23.9624 5.09412 23.5623 Q5.09412 23.1506 4.97647 22.88 Q4.85883 22.6094 4.65883 22.4506 Q4.45882 22.2918 4.2 22.2329 Q3.94118 22.1741 3.64706 22.1741 L1.47058 22.1741 L1.47058 24.9506 Z M22.8268 21.9741 Q22.1563 21.9741 21.668 22.2447 Q21.1798 22.5153 20.8739 22.9682 Q20.568 23.4212 20.421 23.9977 Q20.2739 24.5741 20.2739 25.1741 Q20.2739 25.7741 20.421 26.3506 Q20.568 26.9271 20.8739 27.38 Q21.1798 27.8329 21.668 28.1035 Q22.1563 28.3741 22.8268 28.3741 Q23.4974 28.3741 23.9857 28.1035 Q24.4739 27.8329 24.7798 27.38 Q25.0857 26.9271 25.2327 26.3506 Q25.3798 25.7741 25.3798 25.1741 Q25.3798 24.5741 25.2327 23.9977 Q25.0857 23.4212 24.7798 22.9682 Q24.4739 22.5153 23.9857 22.2447 Q23.4974 21.9741 22.8268 21.9741 Z M22.8268 20.7741 Q23.768 20.7741 24.5151 21.1271 Q25.2621 21.48 25.7798 22.08 Q26.2974 22.68 26.5739 23.48 Q26.8504 24.28 26.8504 25.1741 Q26.8504 26.08 26.5739 26.88 Q26.2974 27.68 25.7798 28.28 Q25.2621 28.88 24.5151 29.2271 Q23.768 29.5741 22.8268 29.5741 Q21.8857 29.5741 21.1386 29.2271 Q20.3916 28.88 19.8739 28.28 Q19.3563 27.68 19.0798 26.88 Q18.8033 26.08 18.8033 25.1741 Q18.8033 24.28 19.0798 23.48 Q19.3563 22.68 19.8739 22.08 Q20.3916 21.48 21.1386 21.1271 Q21.8857 20.7741 22.8268 20.7741 Z M38.2323 20.9741 L39.7029 20.9741 L39.7029 28.1035 L43.9735 28.1035 L43.9735 29.3741 L38.2323 29.3741 L38.2323 20.9741 Z M56.183 26.08 L53.03 20.9741 L54.7359 20.9741 L56.9594 24.7388 L59.1477 20.9741 L60.7947 20.9741 L57.6536 26.08 L57.6536 29.3741 L56.183 29.3741 L56.183 26.08 Z M72.6681 26.5741 Q72.6681 27.0565 72.8328 27.3976 Q72.9975 27.7388 73.2917 27.9565 Q73.5858 28.1741 73.9681 28.2741 Q74.3505 28.3741 74.7975 28.3741 Q75.2799 28.3741 75.6211 28.2623 Q75.9622 28.1506 76.174 27.9741 Q76.3858 27.7976 76.4799 27.5682 Q76.574 27.3388 76.574 27.1035 Q76.574 26.6212 76.3564 26.3918 Q76.1387 26.1624 75.8799 26.0682 Q75.4328 25.9035 74.8387 25.7565 Q74.2446 25.6094 73.374 25.3741 Q72.8328 25.2329 72.474 25.0035 Q72.1152 24.7741 71.9034 24.4918 Q71.6917 24.2094 71.6034 23.8918 Q71.5152 23.5741 71.5152 23.2447 Q71.5152 22.6094 71.7799 22.1447 Q72.0446 21.68 72.4799 21.3741 Q72.9152 21.0682 73.4681 20.9212 Q74.0211 20.7741 74.5858 20.7741 Q75.2446 20.7741 75.827 20.9447 Q76.4093 21.1153 76.8505 21.4565 Q77.2917 21.7976 77.5505 22.2976 Q77.8093 22.7976 77.8093 23.4565 L76.3387 23.4565 Q76.2799 22.6447 75.7858 22.3094 Q75.2917 21.9741 74.527 21.9741 Q74.2681 21.9741 73.9975 22.0271 Q73.727 22.08 73.5034 22.2035 Q73.2799 22.3271 73.1328 22.5388 Q72.9858 22.7506 72.9858 23.0682 Q72.9858 23.5153 73.2623 23.7682 Q73.5387 24.0212 73.9858 24.1506 Q74.0328 24.1624 74.3564 24.2506 Q74.6799 24.3388 75.0799 24.4447 Q75.4799 24.5506 75.8623 24.6506 Q76.2446 24.7506 76.4093 24.7976 Q76.8211 24.9271 77.127 25.1506 Q77.4328 25.3741 77.6387 25.6624 Q77.8446 25.9506 77.9446 26.28 Q78.0446 26.6094 78.0446 26.9388 Q78.0446 27.6447 77.7564 28.1447 Q77.4681 28.6447 76.9975 28.9624 Q76.527 29.28 75.927 29.4271 Q75.327 29.5741 74.7034 29.5741 Q73.9858 29.5741 73.3505 29.3976 Q72.7152 29.2212 72.2446 28.8565 Q71.774 28.4918 71.4917 27.9212 Q71.2093 27.3506 71.1975 26.5741 L72.6681 26.5741 Z M91.6004 26.08 L88.4474 20.9741 L90.1533 20.9741 L92.3768 24.7388 L94.5651 20.9741 L96.2121 20.9741 L93.071 26.08 L93.071 29.3741 L91.6004 29.3741 L91.6004 26.08 Z M107.227 20.9741 L108.78 20.9741 L112.615 27.1624 L112.639 27.1624 L112.639 20.9741 L114.039 20.9741 L114.039 29.3741 L112.486 29.3741 L108.662 23.1976 L108.627 23.1976 L108.627 29.3741 L107.227 29.3741 L107.227 20.9741 Z M125.176 20.9741 L131.976 20.9741 L131.976 22.2447 L129.305 22.2447 L129.305 29.3741 L127.835 29.3741 L127.835 22.2447 L125.176 22.2447 L125.176 20.9741 Z M143.235 20.9741 L144.706 20.9741 L144.706 24.3153 L148.529 24.3153 L148.529 20.9741 L150 20.9741 L150 29.3741 L148.529 29.3741 L148.529 25.5859 L144.706 25.5859 L144.706 29.3741 L143.235 29.3741 L143.235 20.9741 Z"/></svg></h1>
+<p class="tagline">w/ vocoder input</p>
+<p class="intro">A polysynth with a vocoder.<br>Play it, layer it, or feed it your voice.</p>
+
+<p class="categories">Bass &middot; Lead &middot; Pads &middot; FX<br>Perc &middot; Arp &middot; Vocoder</p>
+</section>
+<div class="buy-mid"><a class="buy" data-pos="hero_mid" href="https://gazillionindustries.gumroad.com/l/winnetka?wanted=true&amp;utm_source=gazillionindustries.com&amp;utm_medium=cta&amp;utm_content=hero_mid"><span>GET WINNETKA</span><span class="buy-price">$49</span></a></div>
+<p class="format-strip">AU &middot; VST3 &middot; Standalone (Mac)<br>macOS &middot; Windows</p>
+<p class="claim">cool and calculated</p>
+<div class="signup" id="list"><p id="list-msg">there will be more of these.</p><form action="https://app.kit.com/forms/9851450/subscriptions" method="post" aria-labelledby="list-msg"><input type="email" name="email_address" placeholder="Email address" required autocomplete="email"><button type="submit">tell me</button></form></div>
+<div class="buy-end"><a class="buy" data-pos="page_end" href="https://gazillionindustries.gumroad.com/l/winnetka?wanted=true&amp;utm_source=gazillionindustries.com&amp;utm_medium=cta&amp;utm_content=page_end"><span>GET WINNETKA</span><span class="buy-price">$49</span></a><p class="terms"><span>grab it on your phone</span> &middot; <span>arrives by email</span> &middot; <span>install any time</span></p></div>
+<details class="about"><summary>More info</summary><div class="about-body">
+<!-- GUMROAD-DESCRIPTION:START -->
+<p>WINNETKA is a polysynth with a vocoder and 350 preloaded presets: bass, lead, pads, FX, percussion, arp and vocoder.</p><p>Play a single sound or layer two timbres. Shape your voice with the vocoder, or play the held-vowel presets without a microphone. The bank includes 40 vocoder presets, with formant and shift controls.</p><p>A 16-step arpeggiator with rates up to 1/64. Filters, envelopes, modulation, EQ and delay. Save your own presets, import new ones, share and trade on our discord! <br><br>AU, VST3 and standalone on macOS. VST3 on Windows. Intel and Apple Silicon Macs. macOS 10.13 or later; Windows 10 or later, 64-bit.</p><p>The licence key arrives with your download and in your receipt email. Activate once, then use it offline.</p>
+<!-- GUMROAD-DESCRIPTION:END -->
+</div></details>
+</main>
+<footer class="footer">Gazillion Industries LLC</footer>
+<script>
+(function(){
+var live=/^(www\.)?gazillionindustries\.com$/i.test(location.hostname);
+function track(name,data){if(!live)return;var t=window.GZTraffic||window.umami;if(t&&t.track)t.track(name,data);}
+function banner(){document.documentElement.style.setProperty('--banner-h',document.querySelector('.banner').getBoundingClientRect().height+'px');}banner();addEventListener('resize',banner);if(document.fonts)document.fonts.ready.then(banner);
+document.querySelectorAll('a.buy').forEach(function(a){a.addEventListener('click',function(){window.GZ_ATTR.mark('buy','winnetka');track('buy_click_winnetka',{position:a.dataset.pos});if(live&&window.fbq)fbq('track','InitiateCheckout',{content_name:'WINNETKA',content_ids:['winnetka'],content_type:'product',value:49,currency:'USD'});});});
+var form=document.querySelector('#list form');form.addEventListener('submit',function(e){e.preventDefault();fetch(form.action,{method:'POST',mode:'no-cors',body:new FormData(form)});document.querySelector('#list-msg').textContent='ok. you will hear from us.';track('list_signup');});
+})();
+</script>
+</body>
+</html>
