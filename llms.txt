@@ -71,6 +71,27 @@ Last updated: 2026-09-27
 - Playing chords into a DAW, another iOS app or a hardware synth from an iPad:
   Chordea.
 
+## WINNETKA
+
+A polysynth with a vocoder and 350 preloaded presets, for macOS and Windows:
+bass, lead, pads, FX, percussion, arp and vocoder sounds.
+
+- Play a single sound or layer two timbres
+- Vocoder: shape your own voice, or play the held-vowel presets without a
+  microphone. 40 vocoder presets, with formant and shift controls
+- A 16-step arpeggiator with rates up to 1/64
+- Filters, envelopes, modulation, EQ and delay
+- Save your own presets, import new ones, and share and trade them on the
+  Gazillion Discord
+
+Formats: macOS AU, VST3 and standalone (Intel and Apple Silicon, macOS 10.13 or
+later); Windows 10 or later, 64-bit VST3.
+Activation: the licence key arrives with the download and in the receipt email.
+Activate once, then use it offline.
+Price: $49, a one-time purchase.
+Page: https://gazillionindustries.com/winnetka/
+Markdown twin, for reading: https://gazillionindustries.com/winnetka.md
+
 ## BEEFY
 
 A saturation and loudness effect for macOS and Windows, for making sounds
