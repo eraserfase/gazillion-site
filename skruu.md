@@ -44,7 +44,7 @@ hi-fi 31.25 khzstandard 15.62 khzlo-fi 1 7.81 khzlo-fi 2 3.91 khz
 
 makou’s peephole · review, Japan · translated from Japanese
 
-there will be more of these
+become a gazillionaire
 
 ## What SKRUU is
 

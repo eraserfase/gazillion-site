@@ -54,7 +54,7 @@ for hands-on manipulation of the tapehead
 
 wow/flutter/catch controls, a scrub lever that drags the head back across the tape, a slam for tape stops, and a catch activation button for when you need something to take it all out on
 
-there will be more of these
+become a gazillionaire
 
 ## What TRIPLE OG is
 

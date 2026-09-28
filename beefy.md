@@ -38,7 +38,7 @@ let’s not get too concerned with how the sausage is made.
 
 put it on. turn it up.more fatterrer. more betterrer.
 
-there will be more of these.
+become a gazillionaire.
 
 one payment. all the beef.
 

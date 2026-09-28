@@ -80,7 +80,7 @@ Ryan D.
 
 朱尔丹
 
-there will be more of these
+become a gazillionaire
 
 free · or name your own price
 
