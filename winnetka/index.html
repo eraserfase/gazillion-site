@@ -91,6 +91,8 @@ main{max-width:720px;margin:auto;text-align:center;padding:calc(var(--banner-h) 
   .pm-apple img{height:18px}.pm-google img{height:28px}.pm-paypal img{height:13px}
 }
 @media(max-width:430px){main{padding-left:21px;padding-right:21px;padding-top:calc(var(--banner-h) + 21px)}.banner{padding:12px 15px}.buy span{padding:13px 17px}.panel{width:100%}.lockup{margin-top:28px}.intro{font-size:19px}.categories{font-size:10px;letter-spacing:.1em}.signup{margin-top:48px}.signup form{gap:8px}.signup button{padding-left:12px;padding-right:12px}}
+.banner .purchase-term::before{content:" · "}
+@media(max-width:360px){.banner .purchase-term{display:block}.banner .purchase-term::before{content:none}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
 </style>
 <script>
@@ -330,7 +332,7 @@ fbq('track', 'PageView');
 <body>
 <header class="banner">
 <a class="buy" data-pos="banner_top" href="https://gazillionindustries.gumroad.com/l/winnetka?wanted=true&amp;utm_source=gazillionindustries.com&amp;utm_medium=cta&amp;utm_content=banner_top"><span>GET WINNETKA</span><span class="buy-price">$49</span></a>
-<p class="terms"><span>Mac + Windows</span> &middot; <span>one-time purchase</span></p>
+<p class="terms"><span>AU &middot; VST3 &middot; Standalone (Mac) &middot; Windows</span><span class="purchase-term">one-time purchase</span></p>
 <p class="terms delivery"><span>grab it on your phone</span> &middot; <span>arrives by email</span> &middot; <span>install any time</span> <!-- GR-STARS:START winnetka --><!-- GR-STARS:END --></p>
 <p class="paymarks"><a class="paymark pm-apple" href="https://gazillionindustries.gumroad.com/l/winnetka?wanted=true&amp;utm_source=gazillionindustries.com&amp;utm_medium=cta&amp;utm_content=pay_wallet"><img src="../pay/apple-pay-mark.svg" width="166" height="106" alt="Apple Pay"></a><a class="paymark pm-google" href="https://gazillionindustries.gumroad.com/l/winnetka?wanted=true&amp;utm_source=gazillionindustries.com&amp;utm_medium=cta&amp;utm_content=pay_wallet"><img src="../pay/google-pay-mark.svg" width="1094" height="742" alt="Google Pay"></a><a class="paymark pm-paypal" href="https://gazillionindustries.gumroad.com/l/winnetka?wanted=true&amp;utm_source=gazillionindustries.com&amp;utm_medium=cta&amp;utm_content=pay_paypal"><img src="../pay/paypal-mark.svg" width="170" height="48" alt="PayPal"></a></p>
 </header>
