@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<title>WINNETKA manual - every key, knob and row explained</title>
+<meta name="description" content="What every key, knob and row on WINNETKA does: installing and activating, presets and your library, SINGLE, LAYER and VOCODER, the synth and vocoder rows, effects, the 16-step arpeggiator, MIDI and DAW parameters. With panel screenshots.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="https://gazillionindustries.com/winnetka/manual.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Gazillion Industries">
+<meta property="og:title" content="WINNETKA manual">
+<meta property="og:description" content="Every key, knob and row on the box, in the order you meet them.">
+<meta property="og:url" content="https://gazillionindustries.com/winnetka/manual.html">
+<meta property="og:image" content="https://gazillionindustries.com/winnetka/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://gazillionindustries.com/winnetka/og.jpg">
+<meta name="twitter:title" content="WINNETKA manual">
+<meta name="twitter:description" content="Every key, knob and row on the box, in the order you meet them.">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"TechArticle","@id":"https://gazillionindustries.com/winnetka/manual.html#article","headline":"WINNETKA manual","description":"What every key, knob and row on WINNETKA does, in the order you meet them.","url":"https://gazillionindustries.com/winnetka/manual.html","inLanguage":"en","author":{"@id":"https://gazillionindustries.com/#gazillion"},"publisher":{"@id":"https://gazillionindustries.com/#gazillion"},"about":{"@type":"SoftwareApplication","name":"WINNETKA","url":"https://gazillionindustries.com/winnetka/"},"image":"https://gazillionindustries.com/winnetka/manual/face.jpg"},{"@type":"Organization","@id":"https://gazillionindustries.com/#gazillion","name":"Gazillion Industries LLC","alternateName":"Gazillion Industries","url":"https://gazillionindustries.com/"}]}</script>
+<script>window.GZCloudBeforeSend=function(t,p){return t==='event'&&!p.name?p:false;};</script>
+<script defer src="/traffic.js?v=7357648af0f7"></script>
+<script async src="https://cloud.umami.is/script.js" data-auto-track="false" data-before-send="GZCloudBeforeSend" onload="window.GZTraffic?.attachUmami()" onerror="window.GZTraffic?.attachUmami()"
+        data-website-id="ed71399d-1069-4354-abbf-73dc311e5bc3"
+        data-domains="gazillionindustries.com,www.gazillionindustries.com"></script>
+<!-- Google Analytics 4, property "Gazillion Industries". Same hostname gate as
+     the pixel, so a local or draft copy never reports. -->
+<script>
+if (/^(www\.)?gazillionindustries\.com$/i.test(location.hostname)) {
+  var gaTag = document.createElement("script"); gaTag.async = true;
+  gaTag.src = "https://www.googletagmanager.com/gtag/js?id=G-2ZY2T73BLK";
+  document.head.appendChild(gaTag);
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function(){ window.dataLayer.push(arguments); };
+  gtag("js", new Date());
+  gtag("config", "G-2ZY2T73BLK");
+}
+</script>
+<style>
+@font-face{font-family:Archivo;src:url('archivo.woff2') format('woff2');font-weight:100 900;font-display:swap}
+@font-face{font-family:'Archivo Black';src:url('archivo-black.woff2') format('woff2');font-weight:400;font-display:swap}
+/* The WINNETKA page's own surface, unchanged: one product, one surface.
+   The two chips are the box's own furniture - an EDIT SELECT key for a row,
+   the red label that sits above a knob for a control - so the page names
+   things the way the panel does. */
+:root{
+  --field:#f4f4f2; --ink:#242629; --ink-soft:#53565b; --ink-faint:#6a6d72;
+  --rule:#c7c9c7; --led:#ff4636; --measure:62ch;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:linear-gradient(#fff 0,#f4f4f2 760px) #f4f4f2;color:var(--ink);
+     font-family:Archivo,-apple-system,BlinkMacSystemFont,'Helvetica Neue',sans-serif;
+     font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+main{max-width:800px;margin:0 auto;padding:56px 24px 96px}
+p{margin:0;max-width:var(--measure)}
+p+p{margin-top:12px}
+
+.furn{font-size:11px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--ink-soft);margin:0}
+.lockup{display:block;width:min(100%,470px);margin:20px 0 0}
+.lockup svg{display:block;width:100%;height:auto}
+.lockup path{fill:var(--ink)}
+.standfirst{font-size:clamp(18px,3vw,21px);line-height:1.5;letter-spacing:-.01em;color:var(--ink-soft);margin:26px 0 0}
+.cover-art{display:none}
+
+/* The house's hard-shadow box, taken from the WINNETKA page's buy button. */
+.note{margin:26px 0 0;padding:15px 19px 16px;max-width:var(--measure);background:#fff;
+      border:2px solid var(--ink);border-radius:6px;box-shadow:4px 4px 0 var(--ink);
+      font-size:16px;line-height:1.55;color:var(--ink-soft)}
+.note b{font-family:'Archivo Black','Arial Black',sans-serif;font-weight:400;text-transform:uppercase;
+        letter-spacing:.03em;color:var(--ink);margin-right:4px}
+
+nav.toc{margin:40px 0 0;padding:18px 0 0;border-top:1px solid var(--rule)}
+nav.toc ol{list-style:none;margin:12px 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:4px 24px;counter-reset:toc}
+nav.toc li{counter-increment:toc;font-size:15px}
+nav.toc li::before{content:counter(toc);display:inline-block;width:24px;font-size:11px;font-weight:700;color:var(--ink-faint)}
+nav.toc a{text-decoration:none;border-bottom:1px solid transparent}
+nav.toc a:hover{border-bottom-color:var(--ink)}
+
+section{margin:64px 0 0;padding:44px 0 0;border-top:1px solid var(--rule)}
+.sec-head{display:flex;flex-direction:column;gap:10px;margin-bottom:22px}
+.sec-head p:not(.furn){color:var(--ink-soft)}
+h2{font-family:'Archivo Black','Arial Black',sans-serif;font-weight:400;font-size:clamp(25px,5vw,32px);
+   line-height:1.08;letter-spacing:.005em;text-transform:uppercase;margin:0;text-wrap:balance}
+h3{font-family:'Archivo Black','Arial Black',sans-serif;font-weight:400;font-size:15px;letter-spacing:.06em;
+   text-transform:uppercase;margin:0}
+.sub{margin:36px 0 0}
+.sub>h3+p,.sub>h3+ul,.sub>h3+figure{margin-top:10px}
+
+/* ---- the chips ---------------------------------------------------------- */
+.key{display:inline-flex;align-items:center;gap:9px;padding:8px 14px 8px 11px;border-radius:5px;
+     background:linear-gradient(#66676c,#4a4b4f);color:#fff;font-size:12.5px;font-weight:700;line-height:1;
+     letter-spacing:.13em;text-transform:uppercase;white-space:nowrap;
+     box-shadow:0 2px 0 #2b2c2f,inset 0 1px 0 rgba(255,255,255,.2)}
+.key::before{content:"";flex:none;width:7px;height:7px;border-radius:50%;
+     background:radial-gradient(circle at 35% 35%,#ffc2b8,var(--led) 55%,#a3180f);box-shadow:0 0 6px rgba(255,70,54,.75)}
+.key.cap{background:linear-gradient(#fdfdfb,#e2e2dd);color:var(--ink);box-shadow:0 2px 0 #9c9d99,inset 0 0 0 1px #c9cac5}
+.key.cap.off::before{background:radial-gradient(circle at 35% 35%,#8a4a44,#4d1d18 60%,#2a0e0b);box-shadow:none}
+.lbl{display:inline-block;padding:6px 8px 5px;border-radius:3px;background:#170f0f;color:var(--led);
+     font-size:11.5px;font-weight:600;line-height:1;letter-spacing:.14em;text-transform:uppercase;white-space:nowrap;
+     text-shadow:0 0 6px rgba(255,70,54,.55);box-shadow:inset 0 0 0 1px #33201f}
+.lbl.k{background:linear-gradient(#fdfdfb,#e2e2dd);color:var(--ink);text-shadow:none;box-shadow:0 1px 0 #9c9d99,inset 0 0 0 1px #c9cac5}
+
+/* ---- a row of the box ---------------------------------------------------- */
+.row{margin:30px 0 0;padding:26px 0 0;border-top:1px solid var(--rule)}
+.row-head{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px}
+.row-head .furn{letter-spacing:.12em}
+.row>p{margin-top:14px;color:var(--ink-soft)}
+ol.slots{list-style:none;margin:18px 0 0;padding:0;display:flex;flex-direction:column;gap:15px}
+ol.slots>li{display:grid;grid-template-columns:136px minmax(0,1fr);gap:0 18px;align-items:start}
+ol.slots>li>.lbl{justify-self:start;margin-top:2px}
+.spec{display:block;font-size:11.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
+      color:var(--ink-faint);font-variant-numeric:tabular-nums;line-height:1.5}
+ol.slots>li p{margin:3px 0 0;font-size:16px;line-height:1.55;color:var(--ink-soft)}
+ol.slots>li p.lead{color:var(--ink)}
+dl.opts{margin:8px 0 0;display:grid;grid-template-columns:96px minmax(0,1fr);gap:7px 14px;font-size:15.5px;line-height:1.5;max-width:var(--measure)}
+dl.opts dt{font-size:11.5px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:var(--ink);padding-top:3px}
+dl.opts dd{margin:0;color:var(--ink-soft)}
+.screen-note{margin:16px 0 0;font-size:14px;line-height:1.5;color:var(--ink-faint);max-width:var(--measure)}
+.screen-note b{font-weight:700;letter-spacing:.1em;text-transform:uppercase;font-size:11px;color:var(--ink-soft);margin-right:6px}
+
+/* ---- figures ------------------------------------------------------------- */
+figure{margin:20px 0 0}
+figure img{display:block;max-width:100%;height:auto;border-radius:8px;background:#151515}
+figcaption{margin-top:9px;font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint)}
+figure.deck img{width:100%}
+
+.box{display:grid;grid-template-columns:minmax(0,420px) minmax(0,1fr);grid-template-areas:"face legend" "hands legend";gap:26px 34px;align-items:start;margin-top:8px}
+.face{grid-area:face;position:relative;margin:0}
+ol.legend{grid-area:legend}
+.hands-wrap{grid-area:hands}
+.hands-wrap .sub{margin-top:18px}
+.face img{width:100%;border-radius:12px}
+.pin{position:absolute;width:26px;height:26px;margin:-13px 0 0 -13px;border-radius:50%;background:#fff;
+     border:2px solid var(--ink);box-shadow:2px 2px 0 var(--ink);color:var(--ink);text-align:center;
+     font-family:'Archivo Black','Arial Black',sans-serif;font-size:13px;line-height:22px}
+ol.legend{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:16px;counter-reset:pin}
+ol.legend>li{counter-increment:pin;position:relative;padding-left:40px;font-size:15.5px;line-height:1.5;color:var(--ink-soft)}
+ol.legend>li::before{content:counter(pin);position:absolute;left:0;top:-1px;width:26px;height:26px;border-radius:50%;
+     background:#fff;border:2px solid var(--ink);box-shadow:2px 2px 0 var(--ink);color:var(--ink);text-align:center;
+     font-family:'Archivo Black','Arial Black',sans-serif;font-size:13px;line-height:22px}
+ol.legend>li>b{display:block;color:var(--ink);font-size:12px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;margin-bottom:2px}
+
+ul.hands{list-style:none;margin:10px 0 0;padding:0;display:flex;flex-direction:column;gap:8px;max-width:var(--measure)}
+ul.hands li{position:relative;padding-left:18px;color:var(--ink-soft)}
+ul.hands li::before{content:"";position:absolute;left:2px;top:.72em;width:6px;height:6px;border-radius:50%;background:var(--ink)}
+
+.screens{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 18px;margin-top:22px}
+.screens figure{margin:0}
+.screens img{width:100%;border-radius:6px}
+.screens figcaption{letter-spacing:.1em}
+.screens figcaption span{display:block;margin-top:3px;font-size:14px;font-weight:400;letter-spacing:0;text-transform:none;color:var(--ink-soft);line-height:1.45}
+
+/* ---- tables -------------------------------------------------------------- */
+.scroller{overflow-x:auto;margin:16px 0 0;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;font-size:15px}
+th,td{text-align:left;padding:9px 14px 9px 0;border-bottom:1px solid var(--rule);vertical-align:top}
+th{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint)}
+td{color:var(--ink-soft);font-variant-numeric:tabular-nums}
+td.n{color:var(--ink);font-weight:700;white-space:nowrap}
+td.p{color:var(--ink);font-size:12.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;white-space:nowrap}
+table.counts td,table.counts th{text-align:center;padding-right:6px}
+table.counts td{font-size:22px;font-family:'Archivo Black','Arial Black',sans-serif;color:var(--ink)}
+
+footer{margin:76px 0 0;padding-top:24px;border-top:1px solid var(--rule);display:flex;flex-direction:column;gap:16px;align-items:flex-start}
+footer a{display:inline-flex;align-items:center;min-height:46px;padding:0 22px;border:2px solid var(--ink);border-radius:6px;
+         background:#fff;box-shadow:4px 4px 0 var(--ink);text-decoration:none;font-family:'Archivo Black','Arial Black',sans-serif;
+         font-size:15px;text-transform:uppercase;letter-spacing:.02em;transition:transform .14s,box-shadow .14s}
+footer a:hover{transform:translate(-1px,-1px);box-shadow:5px 5px 0 var(--ink)}
+footer a:focus-visible,nav.toc a:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+
+@media (max-width:720px){
+  .box{grid-template-columns:minmax(0,1fr);grid-template-areas:"face" "legend" "hands"}
+  .face{max-width:430px}
+}
+@media (max-width:600px){
+  main{padding:40px 18px 72px}
+  body{font-size:16px}
+  section{margin-top:52px;padding-top:36px}
+  ol.slots>li{grid-template-columns:minmax(0,1fr);gap:7px}
+  dl.opts{grid-template-columns:minmax(0,1fr);gap:1px}
+  dl.opts dd{margin-bottom:8px}
+  .screens{gap:18px 12px}
+  .note{box-shadow:3px 3px 0 var(--ink)}
+  td.p{white-space:normal}
+  td.path{overflow-wrap:anywhere}
+  table{font-size:14px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+
+/* ---- print: the same page, as the PDF in the download --------------------
+   White sheets with real margins so the page numbers have somewhere to sit;
+   the cover is its own sheet with the box on it; every part starts a sheet;
+   nothing that belongs together is split across two. */
+@media print{
+  @page{size:letter;margin:16mm 17mm 17mm;
+        @bottom-center{content:counter(page);font-family:Archivo,sans-serif;font-size:8.5pt;color:#6a6d72}}
+  @page cover{margin:0;@bottom-center{content:none}}
+  *,*::before,*::after{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
+  html,body{background:#fff!important}
+  body{font-size:10.4pt;line-height:1.52}
+  main{max-width:none;padding:0}
+  p,.note,dl.opts,ul.hands,.screen-note{max-width:100%}
+  header.cover{page:cover;height:279mm;padding:20mm 19mm 17mm;display:flex;flex-direction:column;break-after:page}
+  .lockup{width:122mm;margin-top:7mm}
+  .standfirst{font-size:13.5pt;margin-top:8mm}
+  .cover .note{margin-top:8mm;font-size:10.5pt}
+  .cover-art{display:flex;justify-content:center;margin:auto 0 0}
+  .cover-art img{height:112mm;width:auto;border-radius:9px}
+  .cover-foot{display:block;margin-top:7mm;font-size:8pt;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#6a6d72}
+  nav.toc{display:none}
+  section{break-before:page;margin:0;padding:0;border-top:0}
+  section.flow{break-before:auto;margin-top:12mm;padding-top:8mm;border-top:1px solid var(--rule)}
+  .sec-head,.row-head,h2,h3,figure.deck,.row>p{break-after:avoid}
+  .sec-head,figure,.note,ol.slots>li,ol.legend>li,tr,.screens figure,dl.opts,ul.hands li{break-inside:avoid}
+  thead{display:table-header-group}
+  .box{grid-template-columns:84mm minmax(0,1fr);gap:7mm 9mm}
+  ol.legend{gap:3.2mm}
+  ol.legend>li{font-size:9.6pt;line-height:1.42}
+  .screens{grid-template-columns:repeat(3,minmax(0,1fr));gap:5mm 5mm}
+  .screens figcaption span{font-size:8.6pt;line-height:1.38}
+  figure.deck img{width:auto;max-width:100%;max-height:34mm}
+  .scroller{overflow:visible}
+  table{font-size:9.5pt}
+  footer{break-inside:avoid;margin-top:14mm}
+  footer a{box-shadow:none}
+  a[href^="#"]{text-decoration:none}
+}
+@media screen{.cover-foot{display:none}}
+</style>
+
+<main>
+
+<header class="cover">
+  <p class="furn">Gazillion Industries &middot; Manual</p>
+  <h1 class="lockup" aria-label="WINNETKA polysynth and vocoder"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 41.3741"><path fill="currentColor" fill-rule="nonzero" d="M15.139 17.7741 L12.8397 6.94948 L12.7364 6.94948 L10.4371 17.7741 L4.15935 17.7741 L0 0 L5.94193 0 L7.98285 10.0754 L8.0862 10.0754 L10.1013 0 L15.7332 0 L17.8774 10.0754 L17.9808 10.0754 L19.8925 0 L25.5761 0 L21.4168 17.7741 L15.139 17.7741 Z M27.5312 17.7741 L27.5312 0 L33.2407 0 L33.2407 17.7741 L27.5312 17.7741 Z M47.9064 17.7741 L40.4402 9.1454 L40.4402 17.7741 L35.1958 17.7741 L35.1958 0 L40.1819 0 L47.648 8.75789 L47.648 0 L52.8924 0 L52.8924 17.7741 L47.9064 17.7741 Z M67.7359 17.7741 L60.2697 9.1454 L60.2697 17.7741 L55.0253 17.7741 L55.0253 0 L60.0114 0 L67.4775 8.75789 L67.4775 0 L72.7219 0 L72.7219 17.7741 L67.7359 17.7741 Z M74.8548 0 L90.2263 0 L90.2263 4.2627 L80.5642 4.2627 L80.5642 6.71696 L88.8312 6.71696 L88.8312 10.7988 L80.5642 10.7988 L80.5642 13.5114 L90.4071 13.5114 L90.4071 17.7741 L74.8548 17.7741 L74.8548 0 Z M103.288 4.54688 L103.288 17.7741 L97.5788 17.7741 L97.5788 4.54688 L91.7402 4.54688 L91.7402 0 L109.101 0 L109.101 4.54688 L103.288 4.54688 Z M122.384 0 L129.463 0 L123.082 7.31116 L129.592 17.7741 L122.849 17.7741 L119.155 11.2638 L116.055 13.7956 L116.055 17.7741 L110.345 17.7741 L110.345 0 L116.055 0 L116.055 7.59534 L122.384 0 Z M143.955 17.7741 L143.206 15.2682 L136.979 15.2682 L136.23 17.7741 L130.392 17.7741 L136.876 0 L143.516 0 L150 17.7741 L143.955 17.7741 Z M138.168 11.2897 L142.017 11.2897 L140.157 4.96022 L140.054 4.96022 L138.168 11.2897 Z M0 20.9741 L3.70589 20.9741 Q4.60001 20.9741 5.1647 21.2329 Q5.72942 21.4918 6.03529 21.88 Q6.34117 22.2682 6.45294 22.7271 Q6.5647 23.1859 6.5647 23.5741 Q6.5647 23.9624 6.45294 24.4153 Q6.34117 24.8682 6.03529 25.2565 Q5.72942 25.6447 5.1647 25.8976 Q4.60001 26.1506 3.70589 26.1506 L1.47058 26.1506 L1.47058 29.3741 L0 29.3741 L0 20.9741 Z M1.47058 24.9506 L3.62354 24.9506 Q3.87059 24.9506 4.12941 24.88 Q4.38823 24.8094 4.60588 24.6506 Q4.82353 24.4918 4.95882 24.2271 Q5.09412 23.9624 5.09412 23.5623 Q5.09412 23.1506 4.97647 22.88 Q4.85883 22.6094 4.65883 22.4506 Q4.45882 22.2918 4.2 22.2329 Q3.94118 22.1741 3.64706 22.1741 L1.47058 22.1741 L1.47058 24.9506 Z M22.8268 21.9741 Q22.1563 21.9741 21.668 22.2447 Q21.1798 22.5153 20.8739 22.9682 Q20.568 23.4212 20.421 23.9977 Q20.2739 24.5741 20.2739 25.1741 Q20.2739 25.7741 20.421 26.3506 Q20.568 26.9271 20.8739 27.38 Q21.1798 27.8329 21.668 28.1035 Q22.1563 28.3741 22.8268 28.3741 Q23.4974 28.3741 23.9857 28.1035 Q24.4739 27.8329 24.7798 27.38 Q25.0857 26.9271 25.2327 26.3506 Q25.3798 25.7741 25.3798 25.1741 Q25.3798 24.5741 25.2327 23.9977 Q25.0857 23.4212 24.7798 22.9682 Q24.4739 22.5153 23.9857 22.2447 Q23.4974 21.9741 22.8268 21.9741 Z M22.8268 20.7741 Q23.768 20.7741 24.5151 21.1271 Q25.2621 21.48 25.7798 22.08 Q26.2974 22.68 26.5739 23.48 Q26.8504 24.28 26.8504 25.1741 Q26.8504 26.08 26.5739 26.88 Q26.2974 27.68 25.7798 28.28 Q25.2621 28.88 24.5151 29.2271 Q23.768 29.5741 22.8268 29.5741 Q21.8857 29.5741 21.1386 29.2271 Q20.3916 28.88 19.8739 28.28 Q19.3563 27.68 19.0798 26.88 Q18.8033 26.08 18.8033 25.1741 Q18.8033 24.28 19.0798 23.48 Q19.3563 22.68 19.8739 22.08 Q20.3916 21.48 21.1386 21.1271 Q21.8857 20.7741 22.8268 20.7741 Z M38.2323 20.9741 L39.7029 20.9741 L39.7029 28.1035 L43.9735 28.1035 L43.9735 29.3741 L38.2323 29.3741 L38.2323 20.9741 Z M56.183 26.08 L53.03 20.9741 L54.7359 20.9741 L56.9594 24.7388 L59.1477 20.9741 L60.7947 20.9741 L57.6536 26.08 L57.6536 29.3741 L56.183 29.3741 L56.183 26.08 Z M72.6681 26.5741 Q72.6681 27.0565 72.8328 27.3976 Q72.9975 27.7388 73.2917 27.9565 Q73.5858 28.1741 73.9681 28.2741 Q74.3505 28.3741 74.7975 28.3741 Q75.2799 28.3741 75.6211 28.2623 Q75.9622 28.1506 76.174 27.9741 Q76.3858 27.7976 76.4799 27.5682 Q76.574 27.3388 76.574 27.1035 Q76.574 26.6212 76.3564 26.3918 Q76.1387 26.1624 75.8799 26.0682 Q75.4328 25.9035 74.8387 25.7565 Q74.2446 25.6094 73.374 25.3741 Q72.8328 25.2329 72.474 25.0035 Q72.1152 24.7741 71.9034 24.4918 Q71.6917 24.2094 71.6034 23.8918 Q71.5152 23.5741 71.5152 23.2447 Q71.5152 22.6094 71.7799 22.1447 Q72.0446 21.68 72.4799 21.3741 Q72.9152 21.0682 73.4681 20.9212 Q74.0211 20.7741 74.5858 20.7741 Q75.2446 20.7741 75.827 20.9447 Q76.4093 21.1153 76.8505 21.4565 Q77.2917 21.7976 77.5505 22.2976 Q77.8093 22.7976 77.8093 23.4565 L76.3387 23.4565 Q76.2799 22.6447 75.7858 22.3094 Q75.2917 21.9741 74.527 21.9741 Q74.2681 21.9741 73.9975 22.0271 Q73.727 22.08 73.5034 22.2035 Q73.2799 22.3271 73.1328 22.5388 Q72.9858 22.7506 72.9858 23.0682 Q72.9858 23.5153 73.2623 23.7682 Q73.5387 24.0212 73.9858 24.1506 Q74.0328 24.1624 74.3564 24.2506 Q74.6799 24.3388 75.0799 24.4447 Q75.4799 24.5506 75.8623 24.6506 Q76.2446 24.7506 76.4093 24.7976 Q76.8211 24.9271 77.127 25.1506 Q77.4328 25.3741 77.6387 25.6624 Q77.8446 25.9506 77.9446 26.28 Q78.0446 26.6094 78.0446 26.9388 Q78.0446 27.6447 77.7564 28.1447 Q77.4681 28.6447 76.9975 28.9624 Q76.527 29.28 75.927 29.4271 Q75.327 29.5741 74.7034 29.5741 Q73.9858 29.5741 73.3505 29.3976 Q72.7152 29.2212 72.2446 28.8565 Q71.774 28.4918 71.4917 27.9212 Q71.2093 27.3506 71.1975 26.5741 L72.6681 26.5741 Z M91.6004 26.08 L88.4474 20.9741 L90.1533 20.9741 L92.3768 24.7388 L94.5651 20.9741 L96.2121 20.9741 L93.071 26.08 L93.071 29.3741 L91.6004 29.3741 L91.6004 26.08 Z M107.227 20.9741 L108.78 20.9741 L112.615 27.1624 L112.639 27.1624 L112.639 20.9741 L114.039 20.9741 L114.039 29.3741 L112.486 29.3741 L108.662 23.1976 L108.627 23.1976 L108.627 29.3741 L107.227 29.3741 L107.227 20.9741 Z M125.176 20.9741 L131.976 20.9741 L131.976 22.2447 L129.305 22.2447 L129.305 29.3741 L127.835 29.3741 L127.835 22.2447 L125.176 22.2447 L125.176 20.9741 Z M143.235 20.9741 L144.706 20.9741 L144.706 24.3153 L148.529 24.3153 L148.529 20.9741 L150 20.9741 L150 29.3741 L148.529 29.3741 L148.529 25.5859 L144.706 25.5859 L144.706 29.3741 L143.235 29.3741 L143.235 20.9741 Z"/><path fill="currentColor" d="M6.488764044943821 41.225785393258434 6.130337078651686 40.02690898876405H3.1516853932584272L2.7932584269662923 41.225785393258434H0.0L3.1022471910112364 32.72241460674158H6.2786516853932595L9.380898876404496 41.225785393258434ZM3.720224719101124 38.1235382022472H5.56179775280899L4.6719101123595514 35.09544831460675H4.62247191011236Z M21.376292134831463 41.225785393258434 17.80438202247191 37.097695505617985V41.225785393258434H15.295393258426966V32.72241460674158H17.68078651685393L21.252696629213485 36.912302247191015V32.72241460674158H23.76168539325843V41.225785393258434Z M38.624494382022476 36.97410000000001Q38.624494382022476 41.225785393258434 34.162696629213485 41.225785393258434H30.479550561797755V32.72241460674158H34.162696629213485Q38.624494382022476 32.72241460674158 38.624494382022476 36.97410000000001ZM33.211011235955056 39.18645955056181H34.1132584269663Q35.83123595505618 39.18645955056181 35.83123595505618 37.34488651685394V36.603313483146074Q35.83123595505618 34.76174044943821 34.1132584269663 34.76174044943821H33.211011235955056Z M56.29955056179776 41.225785393258434 53.28382022471911 32.72241460674158H56.200674157303375L57.90629213483147 38.40780786516854H57.955730337078656L59.673707865168545 32.72241460674158H62.466966292134835L59.46359550561798 41.225785393258434Z M77.31741573033709 36.97410000000001Q77.31741573033709 39.124661797752815 76.1185393258427 40.24938089887641Q74.91966292134832 41.374100000000006 72.71966292134833 41.374100000000006Q70.51966292134833 41.374100000000006 69.32696629213484 40.25556067415731Q68.13426966292135 39.13702134831461 68.13426966292135 36.97410000000001Q68.13426966292135 34.811178651685395 69.32696629213484 33.6926393258427Q70.51966292134833 32.5741 72.71966292134833 32.5741Q74.91966292134832 32.5741 76.1185393258427 33.698819101123604Q77.31741573033709 34.8235382022472 77.31741573033709 36.97410000000001ZM70.92752808988764 36.57859438202248V37.369605617977534Q70.92752808988764 38.27185280898877 71.38483146067416 38.80331348314607Q71.84213483146068 39.33477415730338 72.71966292134833 39.33477415730338Q73.59719101123596 39.33477415730338 74.06067415730338 38.80331348314607Q74.5241573033708 38.27185280898877 74.5241573033708 37.369605617977534V36.57859438202248Q74.5241573033708 35.676347191011246 74.06067415730338 35.144886516853944Q73.59719101123596 34.613425842696635 72.71966292134833 34.613425842696635Q71.84213483146068 34.613425842696635 71.38483146067416 35.144886516853944Q70.92752808988764 35.676347191011246 70.92752808988764 36.57859438202248Z M91.82179775280899 36.220167415730344H89.21393258426967Q89.21393258426967 35.47859438202248 88.82460674157304 35.04601011235955Q88.43528089887641 34.613425842696635 87.71842696629214 34.613425842696635Q86.8903370786517 34.613425842696635 86.50101123595506 35.13252696629214Q86.11168539325843 35.651628089887645 86.11168539325843 36.57859438202248V37.369605617977534Q86.11168539325843 38.284212359550565 86.50101123595506 38.80949325842697Q86.8903370786517 39.33477415730338 87.69370786516855 39.33477415730338Q88.4847191011236 39.33477415730338 88.89258426966293 38.926908988764055Q89.30044943820225 38.519043820224724 89.30044943820225 37.77747078651686H91.82179775280899Q91.82179775280899 39.52016741573034 90.75269662921349 40.44713370786518Q89.68359550561799 41.374100000000006 87.73078651685394 41.374100000000006Q85.55550561797753 41.374100000000006 84.43696629213483 40.26174044943821Q83.31842696629214 39.14938089887641 83.31842696629214 36.97410000000001Q83.31842696629214 34.7988191011236 84.43696629213483 33.6864595505618Q85.55550561797753 32.5741 87.73078651685394 32.5741Q89.62179775280899 32.5741 90.72179775280898 33.51960561797753Q91.82179775280899 34.465111235955064 91.82179775280899 36.220167415730344Z M107.00595505617979 36.97410000000001Q107.00595505617979 39.124661797752815 105.8070786516854 40.24938089887641Q104.60820224719102 41.374100000000006 102.40820224719103 41.374100000000006Q100.20820224719102 41.374100000000006 99.01550561797754 40.25556067415731Q97.82280898876405 39.13702134831461 97.82280898876405 36.97410000000001Q97.82280898876405 34.811178651685395 99.01550561797754 33.6926393258427Q100.20820224719102 32.5741 102.40820224719103 32.5741Q104.60820224719102 32.5741 105.8070786516854 33.698819101123604Q107.00595505617979 34.8235382022472 107.00595505617979 36.97410000000001ZM100.61606741573034 36.57859438202248V37.369605617977534Q100.61606741573034 38.27185280898877 101.07337078651686 38.80331348314607Q101.53067415730338 39.33477415730338 102.40820224719103 39.33477415730338Q103.28573033707866 39.33477415730338 103.74921348314608 38.80331348314607Q104.2126966292135 38.27185280898877 104.2126966292135 37.369605617977534V36.57859438202248Q104.2126966292135 35.676347191011246 103.74921348314608 35.144886516853944Q103.28573033707866 34.613425842696635 102.40820224719103 34.613425842696635Q101.53067415730338 34.613425842696635 101.07337078651686 35.144886516853944Q100.61606741573034 35.676347191011246 100.61606741573034 36.57859438202248Z M121.51033707865169 36.97410000000001Q121.51033707865169 41.225785393258434 117.0485393258427 41.225785393258434H113.36539325842698V32.72241460674158H117.0485393258427Q121.51033707865169 32.72241460674158 121.51033707865169 36.97410000000001ZM116.09685393258428 39.18645955056181H116.99910112359551Q118.7170786516854 39.18645955056181 118.7170786516854 37.34488651685394V36.603313483146074Q118.7170786516854 34.76174044943821 116.99910112359551 34.76174044943821H116.09685393258428Z M127.86977528089889 32.72241460674158H135.22370786516856V34.76174044943821H130.60123595505618V35.935897752809H134.55629213483147V37.88870674157304H130.60123595505618V39.18645955056181H135.31022471910114V41.225785393258434H127.86977528089889Z M148.10898876404494 37.66623483146068 150.0 41.225785393258434H146.93483146067413L145.4269662921348 38.1235382022472H144.4134831460674V41.225785393258434H141.6820224719101V32.72241460674158H146.88539325842694Q147.79999999999998 32.72241460674158 148.44887640449437 33.07466179775282Q149.09775280898876 33.426908988764055 149.4252808988764 34.02634719101124Q149.75280898876403 34.62578539325843 149.75280898876403 35.33027977528091Q149.75280898876403 36.108931460674164 149.3325842696629 36.73926853932585Q148.91235955056177 37.369605617977534 148.10898876404494 37.66623483146068ZM146.20561797752808 34.662864044943824H144.4134831460674V36.23252696629214H146.20561797752808Q146.52696629213483 36.23252696629214 146.74943820224718 36.00387528089888Q146.97191011235952 35.77522359550562 146.97191011235952 35.44151573033709Q146.97191011235952 35.107807865168546 146.74943820224718 34.885335955056185Q146.52696629213483 34.662864044943824 146.20561797752808 34.662864044943824Z"/></svg></h1>
+  <p class="standfirst">Every key, knob and row on the box, in the order you meet them. What each one does&nbsp;&mdash; not what to set it to.</p>
+  <div class="note"><b>Before any of this.</b> Pick a preset with the arrows and play. Press any key in EDIT SELECT and the five knobs under the screen take on that row&rsquo;s jobs. That is the whole machine. Everything below is detail.</div>
+  <div class="cover-art"><img src="manual/face.jpg" alt=""></div>
+  <p class="cover-foot">gazillionindustries.com/winnetka</p>
+</header>
+
+<nav class="toc" aria-label="Contents">
+  <p class="furn">Contents</p>
+  <ol>
+    <li><a href="#install">Install and activate</a></li>
+    <li><a href="#box">The box</a></li>
+    <li><a href="#screen">The screen</a></li>
+    <li><a href="#presets">Presets and your library</a></li>
+    <li><a href="#modes">Single, layer, vocoder</a></li>
+    <li><a href="#synth">The synth rows</a></li>
+    <li><a href="#vocoder">The vocoder</a></li>
+    <li><a href="#effects">Effects</a></li>
+    <li><a href="#arp">Arpeggiator</a></li>
+    <li><a href="#daw">MIDI, tempo and your DAW</a></li>
+  </ol>
+</nav>
+
+<!-- ======================================================================= -->
+<section id="install">
+  <div class="sec-head">
+    <p class="furn">First</p>
+    <h2>Install and activate</h2>
+  </div>
+
+  <div class="scroller">
+    <table>
+      <thead><tr><th>Format</th><th>Where it goes</th></tr></thead>
+      <tbody>
+        <tr><td class="p">Mac &middot; AU</td><td class="path">/Library/Audio/Plug-Ins/Components/WINNETKA.component</td></tr>
+        <tr><td class="p">Mac &middot; VST3</td><td class="path">/Library/Audio/Plug-Ins/VST3/WINNETKA.vst3</td></tr>
+        <tr><td class="p">Mac &middot; App</td><td>Applications</td></tr>
+        <tr><td class="p">Windows &middot; VST3</td><td class="path">C:\Program Files\Common Files\VST3\WINNETKA.vst3</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p style="margin-top:16px">On a Mac the installer puts each format you tick in its place. On Windows, copy the whole WINNETKA.vst3 folder &mdash; the folder, not the file inside it. Then rescan plug-ins in your music software and look for WINNETKA under Gazillion Industries LLC.</p>
+  <p>macOS 10.13 or later, Apple Silicon and Intel. Windows 10 or later, 64-bit.</p>
+
+  <div class="sub">
+    <h3>The license key</h3>
+    <p>The first time WINNETKA opens, it asks for your key. It is in your receipt email and on your download page. Copy it and press PASTE: the key goes in and activates in one step. If a key is already on your clipboard when the panel opens, it is filled in for you &mdash; press ACTIVATE.</p>
+    <p>Activation goes online once. After that WINNETKA runs offline on that computer. Until it is activated, it makes no sound.</p>
+    <figure class="deck" style="max-width:440px"><img src="manual/activation.jpg" alt="The activation panel: the WINNETKA wordmark, a key field, and PASTE and ACTIVATE buttons." width="720" height="540"><figcaption>The first thing it shows</figcaption></figure>
+  </div>
+</section>
+
+<!-- ======================================================================= -->
+<section id="box">
+  <div class="sec-head">
+    <p class="furn">The box</p>
+    <h2>What you are looking at</h2>
+  </div>
+
+  <div class="box">
+    <figure class="face">
+      <img src="manual/face.jpg" alt="The WINNETKA panel: a dot-matrix screen at the top, twenty-one EDIT SELECT keys, five colored knobs, MODE and TIMBRE keys and an output meter, on a circuit board seen through a clear shell." width="1080" height="1392">
+      <span class="pin" style="left:50.3%;top:5.6%">1</span>
+      <span class="pin" style="left:7.4%;top:13.4%">2</span>
+      <span class="pin" style="left:3.3%;top:59.9%">3</span>
+      <span class="pin" style="left:3.3%;top:76.1%">4</span>
+      <span class="pin" style="left:4.9%;top:88.0%">5</span>
+      <span class="pin" style="left:94.6%;top:88.0%">6</span>
+      <span class="pin" style="left:4.9%;top:94.9%">7</span>
+    </figure>
+    <ol class="legend">
+      <li><b>Program keys</b>&lsaquo; and &rsaquo; step through the factory presets and wrap around at the ends. SAVE names the sound on the panel and keeps it in your library. PRESET opens the preset menu.</li>
+      <li><b>Screen</b>The top line is the preset. The bottom line is the control under your pointer, with its value. Between them, a live graph of the row you are on. Click anywhere on the screen to open the preset menu.</li>
+      <li><b>Edit select</b>Twenty-one keys, one per row. Press one: its light comes on and the five knobs below take that row&rsquo;s jobs. VOCODER mode brings its own set.</li>
+      <li><b>The five knobs</b>The red label above each knob names its job and changes with the row. A position the row leaves empty has no label and does nothing. Some rows put a key or a selector where a knob would be.</li>
+      <li><b>Mode</b>SINGLE, LAYER, VOCODER.</li>
+      <li><b>Timbre</b>For LAYER. 1 and 2 choose which timbre the knobs edit. SYNC edits both at once.</li>
+      <li><b>Output</b>Left and right, after the effects. White up to &minus;12&nbsp;dBFS, yellow above, and a red dot at the end for a second whenever a sample reaches full scale.</li>
+    </ol>
+    <div class="hands-wrap">
+    <p>The four red lights on the board follow the voices as they sound.</p>
+    <div class="sub">
+    <h3>By hand</h3>
+    <ul class="hands">
+      <li>Drag a knob up or down, or turn it with the scroll wheel.</li>
+      <li>Double-click a knob to put it back to its default.</li>
+      <li>Click a knob, then step it with the arrow keys. Hold Shift for bigger steps.</li>
+      <li>A selector with arrows at both ends steps back when you click its left half and forward on its right half. The scroll wheel steps it too.</li>
+      <li>Drag the bottom-right corner to resize, from 80% up to 200%. The size saves with your session.</li>
+    </ul>
+    </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================================================= -->
+<section id="screen">
+  <div class="sec-head">
+    <p class="furn">The box</p>
+    <h2>The screen</h2>
+    <p>128 by 64 dots. What it draws depends on the row you are on, and it moves with the sound.</p>
+  </div>
+  <div class="screens">
+    <figure><img src="manual/lcd-lines.jpg" alt="Screen: a waveform drawn as receding ridges." width="864" height="432"><figcaption>Most synth rows<span>The waveform of the voice you are playing, one cycle behind the last, newest in front.</span></figcaption></figure>
+    <figure><img src="manual/lcd-filter.jpg" alt="Screen: a resonant low-pass curve with a dotted line at the cutoff." width="864" height="432"><figcaption>Filter<span>The response at the cutoff the voice is using right now, envelope and LFO movement included. The dotted line is the cutoff.</span></figcaption></figure>
+    <figure><img src="manual/lcd-feg.jpg" alt="Screen: a strip chart of envelope peaks." width="864" height="432"><figcaption>F-ADSR and A-ADSR<span>The envelope of the loudest voice as it runs.</span></figcaption></figure>
+    <figure><img src="manual/lcd-lfo.jpg" alt="Screen: a strip chart of a sine LFO." width="864" height="432"><figcaption>LFO 1 and LFO 2<span>The LFO as it runs.</span></figcaption></figure>
+    <figure><img src="manual/lcd-eq.jpg" alt="Screen: an EQ curve." width="864" height="432"><figcaption>EQ<span>The three bands as one curve.</span></figcaption></figure>
+    <figure><img src="manual/lcd-arp.jpg" alt="Screen: sixteen numbered step boxes in two rows of eight." width="864" height="432"><figcaption>Arp A, Arp B, Step<span>The sixteen steps. Solid boxes are in the loop, filled ones play, and the underline is the step playing now.</span></figcaption></figure>
+    <figure><img src="manual/lcd-bands.jpg" alt="Screen: sixteen vertical bars." width="864" height="432"><figcaption>Vocoder rows<span>Sixteen bands, low on the left: what the vocoder hears, or the shape it is holding.</span></figcaption></figure>
+    <figure><img src="manual/lcd-out.jpg" alt="Screen: an output waveform." width="864" height="432"><figcaption>Mod FX and Delay<span>What leaves the box.</span></figcaption></figure>
+  </div>
+</section>
+
+<!-- ======================================================================= -->
+<section id="presets">
+  <div class="sec-head">
+    <p class="furn">Sounds</p>
+    <h2>Presets and your library</h2>
+    <p>350 factory presets in seven groups.</p>
+  </div>
+  <div class="scroller">
+    <table class="counts">
+      <thead><tr><th>Bass</th><th>Lead</th><th>Pads</th><th>FX</th><th>Perc</th><th>Arp</th><th>Vocoder</th></tr></thead>
+      <tbody><tr><td>65</td><td>60</td><td>65</td><td>40</td><td>35</td><td>45</td><td>40</td></tr></tbody>
+    </table>
+  </div>
+
+  <div class="row" style="border-top:0;margin-top:14px">
+    <ol class="slots">
+      <li><span class="lbl k">&lsaquo; &rsaquo;</span><div><p class="lead">Step through all 350 in order.</p></div></li>
+      <li><span class="lbl k">Preset</span><div><p class="lead">The menu. FACTORY holds a submenu for each group, with its count. USER LIBRARY holds the sounds you have saved. Then Import, Export and Save.</p></div></li>
+      <li><span class="lbl k">Save</span><div><p class="lead">Type a name in the bar across the top of the screen. Return saves it to USER LIBRARY; Esc cancels. A name already taken gets a number, as in NAME (2).</p></div></li>
+      <li><span class="lbl k">Export</span><div><p class="lead">Writes the sound on the panel to a .winnetka file wherever you choose, a held vowel included.</p></div></li>
+      <li><span class="lbl k">Import</span><div><p class="lead">Opens a .winnetka file, adds it to USER LIBRARY and loads it.</p></div></li>
+    </ol>
+  </div>
+  <p style="margin-top:22px">Saved sounds live in Documents &rsaquo; Gazillion Industries &rsaquo; WINNETKA Programs, one .winnetka file each, on Mac and Windows. Share and trade them on the Gazillion Discord; the invite arrives by email after you buy.</p>
+  <p>A preset holds the whole sound: the mode, both timbres or the vocoder, the effects, the arpeggiator and a held vowel. It never changes the GLOBAL settings listed under Only in your DAW. Your DAW project keeps everything, the window size included.</p>
+</section>
+
+<!-- ======================================================================= -->
+<section id="modes">
+  <div class="sec-head">
+    <p class="furn">Modes</p>
+    <h2>Single, layer, vocoder</h2>
+  </div>
+  <figure class="deck"><img src="manual/modes.jpg" alt="The MODE keys SINGLE, LAYER and VOCODER, the TIMBRE keys 1, 2 and SYNC, and the output meter." width="1296" height="312"><figcaption>LAYER, editing timbre 1</figcaption></figure>
+
+  <div class="row" style="border-top:0">
+    <ol class="slots">
+      <li><span class="key cap">Single</span><div><p class="lead">One timbre. Up to 128 voices at once in POLY.</p></div></li>
+      <li><span class="key cap">Layer</span><div><p class="lead">Two timbres, both playing every key. Each has its own full set of rows, VOICE through PATCH 4; the effects and the arpeggiator are shared. Two POLY timbres get 64 voices each.</p><p>TIMBRE 1 and 2 choose which one the knobs and the screen show. With SYNC lit, every edit lands on both timbres: the knobs, keys and selectors on the panel, MIDI controllers and the envelope RESET key.</p></div></li>
+      <li><span class="key cap">Vocoder</span><div><p class="lead">Audio coming in shapes the notes you play. The rows change to the vocoder&rsquo;s own; the effects and arpeggiator rows stay. See The vocoder, below.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ======================================================================= -->
+<section id="synth" class="flow">
+  <div class="sec-head">
+    <p class="furn">Single and layer</p>
+    <h2>The synth rows</h2>
+    <p>Fifteen rows make the sound, VOICE through PATCH 4. The last six keys, effects and arpeggiator, work the same in every mode and have their own sections.</p>
+  </div>
+  <figure class="deck"><img src="manual/editselect-synth.jpg" alt="EDIT SELECT in SINGLE mode: VOICE, PITCH, OSC 1, OSC 2, MIXER, FILTER, F-ADSR, AMP, A-ADSR, LFO 1, LFO 2, PATCH 1, PATCH 2, PATCH 3, PATCH 4, MOD FX, DELAY, EQ, ARP A, ARP B, STEP." width="1296" height="360"><figcaption>Edit select, single and layer</figcaption></figure>
+
+  <div class="row" id="row-voice">
+    <div class="row-head"><span class="key">Voice</span></div>
+    <ol class="slots">
+      <li><span class="lbl">Assign</span><div><span class="spec">Mono &middot; Poly &middot; Unison</span><p class="lead">MONO plays one note at a time. UNISON stacks four voices on every note &mdash; two per timbre in LAYER &mdash; spread apart by DETUNE.</p></div></li>
+      <li><span class="lbl">Trigger</span><div><span class="spec">Single &middot; Multi</span><p class="lead">For MONO and UNISON. SINGLE: overlap your notes and the envelopes keep running while the pitch moves; a fresh phrase starts them over. MULTI: every note restarts them.</p></div></li>
+      <li><span class="lbl">Detune</span><div><span class="spec">0 &ndash; 99 cents</span><p class="lead">How far apart the UNISON voices are tuned.</p></div></li>
+    </ol>
+  </div>
+
+  <div class="row" id="row-pitch">
+    <div class="row-head"><span class="key">Pitch</span></div>
+    <ol class="slots">
+      <li><span class="lbl">Transpose</span><div><span class="spec">&plusmn;24 semitones</span><p class="lead">Both oscillators. The screen calls it BOTH OSC.</p></div></li>
+      <li><span class="lbl">Tune</span><div><span class="spec">&plusmn;50 cents</span><p class="lead">Both oscillators.</p></div></li>
+      <li><span class="lbl">Portamento</span><div><span class="spec">0 &ndash; 5 s</span><p class="lead">Glide from one note to the next, from 2&nbsp;ms up. At 0 there is none. The screen calls it GLIDE.</p></div></li>
+      <li><span class="lbl">Bend</span><div><span class="spec">&plusmn;12 semitones</span><p class="lead">Pitch-bend range. Below zero the wheel bends the other way. The screen calls it PB RANGE.</p></div></li>
+      <li><span class="lbl">Vibrato</span><div><span class="spec">&plusmn;63</span><p class="lead">MW VIBRATO on the screen: vibrato the mod wheel brings in. With the wheel down there is none. At 63, with the wheel all the way up, it swings two semitones either way.</p><p>It moves at LFO 2&rsquo;s rate and in LFO 2&rsquo;s shape. Below zero the swing is turned upside down.</p></div></li>
+    </ol>
+    <div class="note"><b>No mod wheel?</b> Every sound that uses VIBRATO needs the wheel. Draw the MOD WHEEL parameter in your DAW instead &mdash; it does exactly what the wheel does.</div>
+  </div>
+
+  <div class="row" id="row-osc1">
+    <div class="row-head"><span class="key">Osc 1</span></div>
+    <ol class="slots">
+      <li><span class="lbl">Wave</span><div><span class="spec">Saw &middot; Pulse &middot; Tri &middot; Sine &middot; Vox &middot; Table &middot; Noise &middot; Audio in</span></div></li>
+      <li><span class="lbl">Control 1</span><div><span class="spec">0 &ndash; 127</span><p class="lead">Reshapes the wave. What that means depends on WAVE:</p>
+        <dl class="opts">
+          <dt>Saw</dt><dd>Blends in a saw an octave up.</dd>
+          <dt>Pulse</dt><dd>Narrows the pulse from a square. At the top it thins to nothing.</dd>
+          <dt>Tri</dt><dd>Blends in a triangle an octave and a fifth up.</dd>
+          <dt>Sine</dt><dd>Cross-modulates it with OSC 2&rsquo;s wave, whether or not OSC 2 is in the mix.</dd>
+          <dt>Vox</dt><dd>A voice-like wave. CONTROL 1 moves its formant from dark to bright.</dd>
+          <dt>Table</dt><dd>No effect.</dd>
+          <dt>Noise</dt><dd>Noise filtered around the note you play. CONTROL 1 moves the filter in semitones; at 24 it sits on the note.</dd>
+          <dt>Audio in</dt><dd>WINNETKA&rsquo;s audio input, played through the synth while you hold keys. CONTROL 1 balances the two channels: 0 is the right only, 127 the left only.</dd>
+        </dl></div></li>
+      <li><span class="lbl">Control 2</span><div><span class="spec">0 &ndash; 127</span><p class="lead">How far LFO 1 moves CONTROL 1.</p><p>On TABLE the knob becomes TABLE and picks one of 64 stored waves; the screen shows each one&rsquo;s number and family, as in 36 KEYS. On NOISE it sets the resonance &mdash; turn it up and the noise sings at the pitch.</p></div></li>
+    </ol>
+  </div>
+
+  <div class="row" id="row-osc2">
+    <div class="row-head"><span class="key">Osc 2</span></div>
+    <ol class="slots">
+      <li><span class="lbl">Wave</span><div><span class="spec">Saw &middot; Square &middot; Tri</span></div></li>
+      <li><span class="lbl">Osc mod</span><div><span class="spec">Off &middot; Ring &middot; Sync &middot; Ring sync</span><p class="lead">RING multiplies OSC 2 by OSC 1. SYNC restarts OSC 2 with every cycle of OSC 1, so SEMITONE and TUNE change its tone instead of its pitch. RING SYNC does both.</p></div></li>
+      <li><span class="lbl">Semitone</span><div><span class="spec">&plusmn;24 semitones</span><p class="lead">Against OSC 1.</p></div></li>
+      <li><span class="lbl">Tune</span><div><span class="spec">&plusmn;63</span><p class="lead">Fine near the middle and wide at the ends: an octave at &plusmn;48, two at &plusmn;63. The screen reads it in cents.</p></div></li>
+    </ol>
+  </div>
+
+  <div class="row" id="row-mixer">
+    <div class="row-head"><span class="key">Mixer</span></div>
+    <ol class="slots">
+      <li><span class="lbl">Osc 1</span><div><span class="spec">0 &ndash; 127</span></div></li>
+      <li><span class="lbl">Osc 2</span><div><span class="spec">0 &ndash; 127</span></div></li>
+      <li><span class="lbl">Noise</span><div><span class="spec">0 &ndash; 127</span><p class="lead">White noise, apart from OSC 1&rsquo;s NOISE wave. All three feed the filter.</p></div></li>
+    </ol>
+  </div>
+
+  <div class="row" id="row-filter">
+    <div class="row-head"><span class="key">Filter</span></div>
+    <figure class="deck"><img src="manual/deck-filter.jpg" alt="The FILTER row: TYPE, CUTOFF, RESONANCE, EG INT and KBD TRACK knobs." width="1296" height="312"></figure>
+    <ol class="slots">
+      <li><span class="lbl">Type</span><div><span class="spec">24 LPF &middot; 12 LPF &middot; 12 BPF &middot; 12 HPF</span></div></li>
+      <li><span class="lbl">Cutoff</span><div><span class="spec">20 Hz &ndash; 20 kHz</span></div></li>
+      <li><span class="lbl">Resonance</span><div><span class="spec">0 &ndash; 127</span></div></li>
+      <li><span class="lbl">EG int</span><div><span class="spec">&plusmn;63</span><p class="lead">How far F-ADSR moves the cutoff, up or down. The ends reach ten octaves.</p></div></li>
+      <li><span class="lbl">Kbd track</span><div><span class="spec">&plusmn;63</span><p class="lead">The cutoff follows the keys, pivoting on middle C. At +48 it moves note for note; below zero it closes as you play higher.</p></div></li>
+    </ol>
+  </div>
+
+  <div class="row" id="row-feg">
+    <div class="row-head"><span class="key">F-ADSR</span><span class="key">A-ADSR</span></div>
+    <figure class="deck"><img src="manual/deck-feg.jpg" alt="The F-ADSR row: ATTACK, DECAY, SUSTAIN and RELEASE knobs and a RESET key." width="1296" height="312"></figure>
+    <p>F-ADSR is the filter&rsquo;s envelope, A-ADSR the amp&rsquo;s.</p>
+    <ol class="slots">
+      <li><span class="lbl">Attack</span><div><span class="spec">0 &ndash; 20 s</span></div></li>
+      <li><span class="lbl">Decay</span><div><span class="spec">0 &ndash; 20 s</span></div></li>
+      <li><span class="lbl">Sustain</span><div><span class="spec">0 &ndash; 127</span></div></li>
+      <li><span class="lbl">Release</span><div><span class="spec">0 &ndash; 20 s</span><p class="lead">At 0 a stage is instant; 1 is a millisecond.</p></div></li>
+      <li><span class="lbl k">Reset</span><div><span class="spec">Key</span><p class="lead">Puts the four back where a new sound starts: instant attack, decay and release, full sustain. In LAYER with SYNC lit, on both timbres.</p></div></li>
+    </ol>
+  </div>
+
+  <div class="row" id="row-amp">
+    <div class="row-head"><span class="key">Amp</span></div>
+    <ol class="slots">
+      <li><span class="lbl">Level</span><div><span class="spec">0 &ndash; 127</span></div></li>
+      <li><span class="lbl">Pan</span><div><span class="spec">&plusmn;63</span></div></li>
+      <li><span class="lbl k">Dist</span><div><span class="spec">Key</span><p class="lead">Distortion on this timbre.</p></div></li>
+      <li><span class="lbl">Kbd track</span><div><span class="spec">&plusmn;63</span><p class="lead">Level follows the keys, pivoting on middle C: up to 6&nbsp;dB an octave, louder or quieter as you climb.</p></div></li>
+    </ol>
+  </div>
+
+  <div class="row" id="row-lfo">
+    <div class="row-head"><span class="key">LFO 1</span><span class="key">LFO 2</span></div>
+    <ol class="slots">
+      <li><span class="lbl">Wave</span><div><span class="spec">LFO 1: Saw &middot; Square &middot; Tri &middot; S/H &nbsp;&nbsp; LFO 2: Saw &middot; Square+ &middot; Sine &middot; S/H</span><p class="lead">SQUARE+ switches between zero and the top, never below. S/H picks a new random level every cycle.</p></div></li>
+      <li><span class="lbl">Key sync</span><div><span class="spec">Off &middot; Timbre &middot; Voice</span><p class="lead">OFF: one LFO, running free. TIMBRE: one LFO, started again by the first note of each phrase. VOICE: every voice runs its own, started with its note.</p></div></li>
+      <li><span class="lbl k">Tempo</span><div><span class="spec">Key</span><p class="lead">Locks the rate to the tempo. RATE becomes NOTE: 1/1 to 1/32, dotted and triplet values included.</p></div></li>
+      <li><span class="lbl">Rate</span><div><span class="spec">0.05 &ndash; 50 Hz</span></div></li>
+    </ol>
+    <p>LFO 1 also moves OSC 1, through CONTROL 2. LFO 2 drives VIBRATO. Both can be patched anywhere.</p>
+  </div>
+
+  <div class="row" id="row-patch">
+    <div class="row-head"><span class="key">Patch 1</span><span class="key">Patch 2</span><span class="key">Patch 3</span><span class="key">Patch 4</span></div>
+    <figure class="deck"><img src="manual/deck-patch.jpg" alt="The PATCH 1 row: SOURCE and DEST selectors and an INT knob." width="1296" height="312"></figure>
+    <p>Four patch cords. Each one sends a SOURCE to a DEST by INT, and cords on the same DEST add up.</p>
+    <ol class="slots">
+      <li><span class="lbl">Source</span><div><span class="spec">Filter EG &middot; Amp EG &middot; LFO 1 &middot; LFO 2 &middot; Velocity &middot; Key track &middot; P.bend &middot; Mod wheel</span><p class="lead">KEY TRACK is the note&rsquo;s distance from middle C. P.BEND and MOD WHEEL let the wheels drive anything on the other list.</p></div></li>
+      <li><span class="lbl">Dest</span><div><span class="spec">Pitch &middot; Osc2 tune &middot; Osc1 ctrl1 &middot; Noise &middot; Cutoff &middot; Amp &middot; Pan &middot; LFO2 freq</span></div></li>
+      <li><span class="lbl">Int</span><div><span class="spec">&plusmn;63</span><p class="lead">How far, and which way. On PITCH the full 63 is two octaves, so vibrato lives in single digits.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ======================================================================= -->
+<section id="vocoder">
+  <div class="sec-head">
+    <p class="furn">Vocoder</p>
+    <h2>The vocoder</h2>
+    <p>WINNETKA puts the shape of what it hears onto the notes you play. It needs both: audio coming in, and notes.</p>
+  </div>
+  <p>Twelve of the forty VOCODER presets hold a vowel inside them. They play without any audio at all.</p>
+
+  <div class="sub">
+    <h3>Getting your voice in</h3>
+    <p>WINNETKA has a stereo audio input. The left channel is the voice it listens to. The right channel can carry an instrument to be played through the vocoder as well &mdash; raise INST in the MIXER row.</p>
+    <p><b>Ableton Live:</b> on the track your voice is on, set Audio To to the WINNETKA track and pick Audio In-WINNETKA in the box under it. If that track is a live mic, set its Monitor to In.</p>
+    <p><b>Other DAWs:</b> send your mic or vocal track to WINNETKA&rsquo;s audio input.</p>
+    <p><b>The standalone app</b> starts with its input muted, so it cannot feed back. Click Settings&hellip; in the notice at the top of its window, choose your input and untick Mute audio input. Wear headphones.</p>
+  </div>
+
+  <figure class="deck"><img src="manual/editselect-voc.jpg" alt="EDIT SELECT in VOCODER mode: VOICE, PITCH, OSC 1, AUDIO IN, MIXER, FORMANT, FC MOD, AMP, A-ADSR, LFO 1, LFO 2, LEVEL A, LEVEL B, PAN A, PAN B, MOD FX, DELAY, EQ, ARP A, ARP B, STEP." width="1296" height="360"><figcaption>Edit select, vocoder</figcaption></figure>
+  <p style="margin-top:16px">VOICE, PITCH, OSC 1, A-ADSR, LFO 1 and LFO 2 work as in SINGLE, on the carrier &mdash; the screen calls TRANSPOSE and TUNE CARRIER. There is no OSC 2 here, so SINE&rsquo;s CONTROL 1 adds harmonics instead.</p>
+
+  <div class="row" id="row-audioin">
+    <div class="row-head"><span class="key">Audio in</span></div>
+    <ol class="slots">
+      <li><span class="lbl">Gate sense</span><div><span class="spec">0 &ndash; 127</span><p class="lead">How long the gate takes to close once the voice stops, from 2&nbsp;ms to 2&nbsp;s.</p></div></li>
+      <li><span class="lbl">Threshold</span><div><span class="spec">0 &ndash; 127</span><p class="lead">Below this level the input is shut out. At 0 the gate is off.</p></div></li>
+      <li><span class="lbl">HPF level</span><div><span class="spec">0 &ndash; 127</span><p class="lead">Sends the top of the voice, above about 4&nbsp;kHz, straight to the output, so the s&rsquo;s and t&rsquo;s cut through.</p></div></li>
+      <li><span class="lbl k">HPF gate</span><div><span class="spec">Key</span><p class="lead">Lit: that top end only comes through while you hold a key.</p></div></li>
+    </ol>
+  </div>
+
+  <div class="row" id="row-vmixer">
+    <div class="row-head"><span class="key">Mixer</span></div>
+    <p>The carrier: what the vocoder shapes.</p>
+    <ol class="slots">
+      <li><span class="lbl">Osc 1</span><div><span class="spec">0 &ndash; 127</span></div></li>
+      <li><span class="lbl">Inst</span><div><span class="spec">0 &ndash; 127</span><p class="lead">The right input channel.</p></div></li>
+      <li><span class="lbl">Noise</span><div><span class="spec">0 &ndash; 127</span></div></li>
+    </ol>
+  </div>
+
+  <div class="row" id="row-formant">
+    <div class="row-head"><span class="key">Formant</span></div>
+    <figure class="deck"><img src="manual/deck-formant.jpg" alt="The FORMANT row: SHIFT, CUTOFF, RESONANCE and E.F. SENSE knobs and a HOLD key." width="1296" height="312"></figure>
+    <ol class="slots">
+      <li><span class="lbl">Shift</span><div><span class="spec">&minus;2 to +2</span><p class="lead">Moves the whole shape down or up, a band at a time.</p></div></li>
+      <li><span class="lbl">Cutoff</span><div><span class="spec">&plusmn;63</span><p class="lead">Slides it smoothly, up to two bands either way.</p></div></li>
+      <li><span class="lbl">Resonance</span><div><span class="spec">0 &ndash; 127</span><p class="lead">How sharp the bands are.</p></div></li>
+      <li><span class="lbl">E.F. sense</span><div><span class="spec">0 &ndash; 127</span><p class="lead">How slowly the shape follows the voice: low values catch every syllable, high values smear them. At 127 it holds.</p></div></li>
+      <li><span class="lbl k">Hold</span><div><span class="spec">Key</span><p class="lead">Freezes the shape that is there now. It keeps playing with no input, and it saves with the preset and with your session. Letting go sets E.F. SENSE to 20.</p></div></li>
+    </ol>
+  </div>
+
+  <div class="row" id="row-fcmod">
+    <div class="row-head"><span class="key">FC mod</span></div>
+    <ol class="slots">
+      <li><span class="lbl">Source</span><div><span class="spec">Amp EG &middot; LFO 1 &middot; LFO 2 &middot; Velocity &middot; Key track &middot; P.bend &middot; Mod wheel</span></div></li>
+      <li><span class="lbl">Intensity</span><div><span class="spec">&plusmn;63</span><p class="lead">Moves the shape with the source, up to four bands either way.</p></div></li>
+    </ol>
+  </div>
+
+  <div class="row" id="row-vamp">
+    <div class="row-head"><span class="key">Amp</span></div>
+    <ol class="slots">
+      <li><span class="lbl">Level</span><div><span class="spec">0 &ndash; 127</span><p class="lead">The internal carrier: OSC 1 and noise.</p></div></li>
+      <li><span class="lbl">Direct</span><div><span class="spec">0 &ndash; 127</span><p class="lead">Your voice, dry, into the output.</p></div></li>
+      <li><span class="lbl k">Dist</span><div><span class="spec">Key</span><p class="lead">Distortion on the carrier.</p></div></li>
+      <li><span class="lbl">Kbd track</span><div><span class="spec">&plusmn;63</span><p class="lead">Carrier level follows the keys, as in SINGLE.</p></div></li>
+    </ol>
+  </div>
+
+  <div class="row" id="row-bands">
+    <div class="row-head"><span class="key">Level A</span><span class="key">Level B</span><span class="key">Pan A</span><span class="key">Pan B</span></div>
+    <p>The knobs read BAND 1 to BAND 8, low to high, and each one sets two neighboring bands of the sixteen. LEVEL A and PAN A hold BAND 1 to 4, the lows; LEVEL B and PAN B hold BAND 5 to 8. The LEVEL rows set how loud each is, the PAN rows place it from left (&minus;63) to right (+63).</p>
+  </div>
+</section>
+
+<!-- ======================================================================= -->
+<section id="effects">
+  <div class="sec-head">
+    <p class="furn">Every mode</p>
+    <h2>Effects</h2>
+    <p>One chain for the whole instrument, in this order: MOD FX, DELAY, EQ.</p>
+  </div>
+
+  <div class="row" id="row-modfx" style="border-top:0;margin-top:0;padding-top:0">
+    <div class="row-head"><span class="key">Mod FX</span></div>
+    <ol class="slots">
+      <li><span class="lbl">Type</span><div><span class="spec">Cho/Flg &middot; Ensemble &middot; Phaser</span><p class="lead">CHO/FLG is a chorus at low DEPTH. Turn DEPTH up and it becomes a flanger.</p></div></li>
+      <li><span class="lbl">Speed</span><div><span class="spec">0.05 &ndash; 10 Hz</span></div></li>
+      <li><span class="lbl">Depth</span><div><span class="spec">0 &ndash; 127</span><p class="lead">At 0 the effect is out.</p></div></li>
+    </ol>
+  </div>
+
+  <div class="row" id="row-delay">
+    <div class="row-head"><span class="key">Delay</span></div>
+    <figure class="deck"><img src="manual/deck-delay.jpg" alt="The DELAY row: a TYPE knob, ON and TEMPO keys stacked, and TIME, DEPTH and DRY/WET knobs." width="1296" height="312"></figure>
+    <ol class="slots">
+      <li><span class="lbl">Type</span><div><span class="spec">Stereo &middot; Cross &middot; L/R</span><p class="lead">STEREO keeps each side&rsquo;s repeats on its own side. CROSS swaps them with every repeat. L/R bounces the repeats left, right, left.</p></div></li>
+      <li><span class="lbl k">On</span><div><span class="spec">Key</span><p class="lead">The delay in or out. Out leaves the dry sound untouched.</p></div></li>
+      <li><span class="lbl k">Tempo</span><div><span class="spec">Key, under ON</span><p class="lead">Locks TIME to the tempo. TIME becomes NOTE: 1/32 to 1/1.</p></div></li>
+      <li><span class="lbl">Time</span><div><span class="spec">1 ms &ndash; 2 s</span></div></li>
+      <li><span class="lbl">Depth</span><div><span class="spec">0 &ndash; 127</span><p class="lead">More repeats, and louder ones.</p></div></li>
+      <li><span class="lbl">Dry/wet</span><div><span class="spec">0 &ndash; 100</span><p class="lead">0 is dry only. 50 is the whole dry sound plus the whole of the repeats. 100 is repeats only.</p></div></li>
+    </ol>
+  </div>
+
+  <div class="row" id="row-eq">
+    <div class="row-head"><span class="key">EQ</span></div>
+    <ol class="slots">
+      <li><span class="lbl">Low freq</span><div><span class="spec">40 Hz &ndash; 1 kHz</span><p class="lead">Where the low shelf sits.</p></div></li>
+      <li><span class="lbl">Low gain</span><div><span class="spec">&plusmn;12 dB</span></div></li>
+      <li><span class="lbl">Hi freq</span><div><span class="spec">1 &ndash; 18 kHz</span><p class="lead">Where the high shelf sits.</p></div></li>
+      <li><span class="lbl">Hi gain</span><div><span class="spec">&plusmn;12 dB</span></div></li>
+      <li><span class="lbl">Mid gain</span><div><span class="spec">&plusmn;12 dB</span><p class="lead">A broad bell, fixed at 1&nbsp;kHz.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ======================================================================= -->
+<section id="arp">
+  <div class="sec-head">
+    <p class="furn">Every mode</p>
+    <h2>Arpeggiator</h2>
+    <p>Three rows: ARP A, ARP B and STEP.</p>
+  </div>
+
+  <div class="row" id="row-arpa" style="border-top:0;margin-top:0;padding-top:0">
+    <div class="row-head"><span class="key">Arp A</span></div>
+    <ol class="slots">
+      <li><span class="lbl k">On</span><div><span class="spec">Key</span></div></li>
+      <li><span class="lbl">Pattern</span><div><span class="spec">12 patterns</span>
+        <dl class="opts">
+          <dt>Up &middot; Down</dt><dd>&nbsp;</dd>
+          <dt>Alt 1</dt><dd>Up and back down, without playing the top and bottom notes twice.</dd>
+          <dt>Alt 2</dt><dd>Up and back down, playing the top and bottom notes twice.</dd>
+          <dt>Random</dt><dd>&nbsp;</dd>
+          <dt>Trigger</dt><dd>The whole chord on every step. RANGE does not apply.</dd>
+          <dt>Played</dt><dd>In the order you pressed the keys.</dd>
+          <dt>Converge</dt><dd>From the outside in: lowest, highest, next lowest, next highest.</dd>
+          <dt>Diverge</dt><dd>From the middle out.</dd>
+          <dt>Up2 down1</dt><dd>Two steps up, one back.</dd>
+          <dt>Down2 up1</dt><dd>Two steps down, one back.</dd>
+          <dt>Root alt</dt><dd>The lowest note in between each of the others.</dd>
+        </dl></div></li>
+      <li><span class="lbl">Range</span><div><span class="spec">1 &ndash; 4 octaves</span></div></li>
+      <li><span class="lbl">Gate</span><div><span class="spec">0 &ndash; 100%</span><p class="lead">How much of each step the note holds.</p></div></li>
+      <li><span class="lbl k">Latch</span><div><span class="spec">Key</span><p class="lead">Keeps playing after you let go. Your next chord replaces the held one.</p></div></li>
+    </ol>
+  </div>
+
+  <div class="row" id="row-arpb">
+    <div class="row-head"><span class="key">Arp B</span></div>
+    <ol class="slots">
+      <li><span class="lbl">Rate</span><div><span class="spec">1/24 &middot; 1/16 &middot; 1/12 &middot; 1/8 &middot; 1/6 &middot; 1/4 &middot; 1/64</span><p class="lead">The length of each step. 1/64 sits at the far end of the knob.</p></div></li>
+      <li><span class="lbl">Swing</span><div><span class="spec">&plusmn;100%</span><p class="lead">Above zero every second step arrives late; below zero, early.</p></div></li>
+      <li><span class="lbl">Last step</span><div><span class="spec">1 &ndash; 16</span><p class="lead">The length of the loop.</p></div></li>
+      <li><span class="lbl">Target</span><div><span class="spec">Both &middot; Timbre 1 &middot; Timbre 2</span><p class="lead">In LAYER, which timbre the arpeggiator plays. The other one plays your keys as you play them.</p></div></li>
+      <li><span class="lbl k">Key sync</span><div><span class="spec">Key</span><p class="lead">Lit: a new phrase starts the pattern from its first step. Unlit: it joins the clock where it is.</p></div></li>
+    </ol>
+  </div>
+
+  <div class="row" id="row-step">
+    <div class="row-head"><span class="key">Step</span></div>
+    <figure class="deck"><img src="manual/deck-step.jpg" alt="The STEP row: sixteen numbered step keys in two rows of eight; 9 to 16 dimmed." width="1296" height="312"></figure>
+    <p>Sixteen keys, one per step. An unlit step is a rest, and the pattern still moves past it: the note it would have played is skipped. Steps past LAST STEP go dim and keep their settings.</p>
+    <p>The arpeggiator follows your DAW&rsquo;s tempo and starts over when the DAW starts playing.</p>
+  </div>
+</section>
+
+<!-- ======================================================================= -->
+<section id="daw">
+  <div class="sec-head">
+    <p class="furn">Good to know</p>
+    <h2>MIDI, tempo and your DAW</h2>
+  </div>
+
+  <div class="row" style="border-top:0;margin-top:0;padding-top:0">
+    <ol class="slots">
+      <li><span class="lbl k">Tempo</span><div><p class="lead">The arpeggiator, an LFO with TEMPO lit and the delay with TEMPO lit follow your DAW&rsquo;s tempo. The standalone app runs them at 120 BPM.</p></div></li>
+      <li><span class="lbl k">Stop</span><div><p class="lead">When your DAW stops, WINNETKA lets go of every note.</p></div></li>
+      <li><span class="lbl k">MIDI</span><div><p class="lead">It listens on every channel and follows pitch bend and the mod wheel. Velocity reaches the sound through the patch cords: send VELOCITY to AMP and the level rises with how hard you play. Program change 0 to 127 loads factory presets 001 to 128.</p><p>The controllers below edit whatever the panel is editing: the timbre that is lit in LAYER, the vocoder in VOCODER. CC&nbsp;95 picks the timbre in LAYER &mdash; below 64 is timbre 1, 64 and up is timbre 2.</p></div></li>
+      <li><span class="lbl k">Automation</span><div><p class="lead">Every control is a parameter in your DAW, named by where it lives: T1 and T2 for the timbres, VOC, FX, ARP and GLOBAL.</p></div></li>
+    </ol>
+  </div>
+
+  <div class="sub">
+    <h3>Only in your DAW</h3>
+    <p>These have no place on the panel.</p>
+    <div class="scroller">
+      <table>
+        <thead><tr><th>Parameter</th><th>Range</th><th>What it does</th></tr></thead>
+        <tbody>
+          <tr><td class="p">Mod wheel</td><td>0 &ndash; 127</td><td>The wheel. Draw it to bring in VIBRATO without one.</td></tr>
+          <tr><td class="p">Pitch bend</td><td>&minus;8192 to +8191</td><td>The bend wheel.</td></tr>
+          <tr><td class="p">Global clock</td><td>Host &middot; Internal</td><td>HOST follows the DAW&rsquo;s tempo. INTERNAL uses ARP TEMPO.</td></tr>
+          <tr><td class="p">Arp tempo</td><td>20 &ndash; 300 BPM</td><td>The tempo when GLOBAL CLOCK is INTERNAL.</td></tr>
+          <tr><td class="p">Global master tune</td><td>4300 &ndash; 4500</td><td>The pitch of A above middle C, in tenths of a hertz: 4400 is 440&nbsp;Hz.</td></tr>
+          <tr><td class="p">Global transpose</td><td>&plusmn;12 semitones</td><td>Everything, on top of each sound&rsquo;s own.</td></tr>
+          <tr><td class="p">Global velocity</td><td>0 &ndash; 127</td><td>At 0 every note keeps the velocity you played. 1 to 127 fixes every note at that value.</td></tr>
+          <tr><td class="p">Global volume</td><td>0 &ndash; 127</td><td>The last level before the output.</td></tr>
+          <tr><td class="p">FX output trim</td><td>&minus;48 to +12 dB</td><td>Each preset&rsquo;s own level.</td></tr>
+          <tr><td class="p">EG reset</td><td>On &middot; Off</td><td>One per envelope. On: a retriggered envelope starts from zero. Off: from where it is.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="sub">
+    <h3>MIDI controllers</h3>
+    <div class="scroller">
+      <table>
+        <thead><tr><th>CC</th><th>Single and layer</th><th>Vocoder</th></tr></thead>
+        <tbody>
+          <tr><td class="n">1</td><td>Mod wheel</td><td>Mod wheel</td></tr>
+          <tr><td class="n">5</td><td>Portamento</td><td>Portamento</td></tr>
+          <tr><td class="n">7</td><td>Amp level</td><td>Amp level</td></tr>
+          <tr><td class="n">10</td><td>Pan</td><td>Direct</td></tr>
+          <tr><td class="n">12</td><td>Mod FX speed</td><td>Mod FX speed</td></tr>
+          <tr><td class="n">13</td><td>Delay time</td><td>Delay time</td></tr>
+          <tr><td class="n">14</td><td>Osc 1 control 1</td><td>Osc 1 control 1</td></tr>
+          <tr><td class="n">15</td><td>Osc 1 control 2</td><td>Osc 1 control 2</td></tr>
+          <tr><td class="n">18</td><td>Osc 2 semitone</td><td>HPF level</td></tr>
+          <tr><td class="n">19</td><td>Osc 2 tune</td><td>Threshold</td></tr>
+          <tr><td class="n">20</td><td>Mixer osc 1</td><td>Mixer osc 1</td></tr>
+          <tr><td class="n">21</td><td>Mixer osc 2</td><td>Mixer inst</td></tr>
+          <tr><td class="n">22</td><td>Mixer noise</td><td>Mixer noise</td></tr>
+          <tr><td class="n">23 &ndash; 26</td><td>F-ADSR attack, decay, sustain, release</td><td>&mdash;</td></tr>
+          <tr><td class="n">27</td><td>LFO 1 rate</td><td>LFO 1 rate</td></tr>
+          <tr><td class="n">28 &ndash; 31</td><td>Patch 1 &ndash; 4 int</td><td>&mdash;</td></tr>
+          <tr><td class="n">70</td><td>A-ADSR sustain</td><td>A-ADSR sustain</td></tr>
+          <tr><td class="n">71</td><td>Resonance</td><td>Formant resonance</td></tr>
+          <tr><td class="n">72</td><td>A-ADSR release</td><td>A-ADSR release</td></tr>
+          <tr><td class="n">73</td><td>A-ADSR attack</td><td>A-ADSR attack</td></tr>
+          <tr><td class="n">74</td><td>Cutoff</td><td>Formant cutoff</td></tr>
+          <tr><td class="n">75</td><td>A-ADSR decay</td><td>A-ADSR decay</td></tr>
+          <tr><td class="n">76</td><td>LFO 2 rate</td><td>LFO 2 rate</td></tr>
+          <tr><td class="n">77</td><td>Osc 1 wave</td><td>Osc 1 wave</td></tr>
+          <tr><td class="n">78</td><td>Osc 2 wave</td><td>&mdash;</td></tr>
+          <tr><td class="n">79</td><td>Filter EG int</td><td>FC mod intensity</td></tr>
+          <tr><td class="n">82</td><td>Osc mod</td><td>&mdash;</td></tr>
+          <tr><td class="n">83</td><td>Filter type</td><td>Formant shift *</td></tr>
+          <tr><td class="n">85</td><td>Filter kbd track</td><td>E.F. sense</td></tr>
+          <tr><td class="n">87</td><td>LFO 1 wave</td><td>LFO 1 wave</td></tr>
+          <tr><td class="n">88</td><td>LFO 2 wave</td><td>LFO 2 wave</td></tr>
+          <tr><td class="n">92</td><td>Dist</td><td>Dist</td></tr>
+          <tr><td class="n">93</td><td>Mod FX depth</td><td>Mod FX depth</td></tr>
+          <tr><td class="n">94</td><td>Delay depth</td><td>Delay depth</td></tr>
+          <tr><td class="n">95</td><td>Timbre select</td><td>&mdash;</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="screen-note">* CC 83 in VOCODER: 0&ndash;25 is 0, 26&ndash;51 is +1, 52&ndash;76 is +2, 77&ndash;102 is &minus;1, 103&ndash;127 is &minus;2. WINNETKA also answers All Sound Off, All Notes Off and Reset All Controllers.</p>
+  </div>
+</section>
+
+<footer>
+  <p class="furn">Gazillion Industries</p>
+  <a href="/winnetka/">WINNETKA</a>
+</footer>
+
+</main>
+</html>

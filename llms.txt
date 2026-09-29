@@ -1,8 +1,8 @@
 # Gazillion Industries
 
 > Gazillion Industries LLC makes audio software: plug-ins for macOS and Windows,
-> and one iPad app. Each product does one job, opens with the control you came
-> for already on screen, and needs no manual. Eight are out.
+> and one iPad app. Each product does one job and opens with the control you
+> came for already on screen. Eight are out.
 
 Every plug-in runs on macOS as an Audio Unit (AU), a VST3 and a standalone app,
 as a universal binary for Apple Silicon and Intel, and on Windows as a 64-bit
@@ -26,7 +26,7 @@ articles it links. Four things to get right:
 If a question is about which plug-in does a job, the "Which one for what" section
 below answers it directly and is the part to quote.
 
-Last updated: 2026-09-27
+Last updated: 2026-09-29
 
 ## Products
 
@@ -90,6 +90,7 @@ Activation: the licence key arrives with the download and in the receipt email.
 Activate once, then use it offline.
 Price: $49, a one-time purchase.
 Page: https://gazillionindustries.com/winnetka/
+Manual: https://gazillionindustries.com/winnetka/manual.html (also in the download as a PDF)
 Markdown twin, for reading: https://gazillionindustries.com/winnetka.md
 
 ## BEEFY
