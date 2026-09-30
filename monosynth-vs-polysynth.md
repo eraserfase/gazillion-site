@@ -29,7 +29,7 @@ A monosynth plays one note at a time. A polysynth plays several at once, one voi
 
 A monosynth is a synthesizer with one voice. A voice is the whole path a single note travels: oscillators into a mixer, the mixer into a filter, the filter into an amplifier, with envelopes and modulation aimed at the stages along the way. One voice means one of those paths exists. One path, one note.
 
-Oscillator count is a separate question, and it is the one people get wrong in the store. Three oscillators do not give you three notes. They give you one note built from three layers, tuned in unison or spread across octaves, all of them arriving at the same filter and leaving through the same amplifier. One singer with three microphones on them, not three singers.
+Oscillator count is a separate question, and it is the one people get wrong in the store. Three oscillators do not give you three notes. They give you one note built from three layers, tuned in unison or spread across octaves, all of them arriving at the same filter and leaving through the same amplifier. One singer with three microphones in front of her, rather than three singers in a room.
 
 So when you hold four keys and one note sounds, the instrument has done exactly what it was built to do. It had to choose, and the rule it used is note priority. Low priority keeps the bottom of what you are holding, high priority keeps the top, last priority follows your fingers. Whichever rule is set, three of your four notes are discarded: 75 percent of what you played never reaches the output.
 
@@ -65,7 +65,7 @@ JOURNEYMAN is monophonic. Three oscillators, one pitch at a time, one filter env
 
 Everything the instrument owns goes into the note you can hear. That is the entire argument for a one voice synth, and it shows up in three places.
 
-**Thickness.** Three oscillators on one pitch is a stack, not a chord. Tune the second an octave down and the third in unison, then detune the third slightly, and the two unison oscillators beat against each other at the difference between their frequencies. The arithmetic is worth knowing because it changes with register. Two oscillators 7 cents apart at 110 Hz differ by 0.45 Hz, which is one slow swell every 2.24 seconds. The same 7 cents at 220 Hz differs by 0.89 Hz, a swell every 1.12 seconds. Detune that feels like breathing on a bass note feels like chorus an octave up, from the same knob position.
+**Thickness.** Three oscillators on one pitch build a stack rather than a chord. Tune the second an octave down and the third in unison, then detune the third slightly, and the two unison oscillators beat against each other at the difference between their frequencies. The arithmetic is worth knowing because it changes with register. Two oscillators 7 cents apart at 110 Hz differ by 0.45 Hz, which is one slow swell every 2.24 seconds. The same 7 cents at 220 Hz differs by 0.89 Hz, a swell every 1.12 seconds. Detune that feels like breathing on a bass note feels like chorus an octave up, from the same knob position.
 
 **Filtering.** A polysynth has to build one filter per voice, so sixteen voices means sixteen filters and the design pays for all of them. One voice can afford two filters on the single note, with a control that sets the distance between their cutoff points. Run them as a pair of lowpass filters and you get two rolloffs at different frequencies; split them left and right and the gap between the two becomes stereo width on a mono source. Pole count is the other word on these panels worth learning: one pole in a lowpass is 6 dB per octave by definition, so three poles is a gentler slope than four and lets more of the material above the cutoff through. If cutoff and resonance are still abstractions, start at [filter cutoff and resonance](https://gazillionindustries.com/filter-cutoff-and-resonance/).
 
@@ -77,7 +77,7 @@ One voice, laid out left to right in signal order. **SPACING** sets the distance
 
 ## Monosynth vs polysynth in an arrangement: where one voice wins
 
-Bass first, because it is the part that cannot be shared. Low frequencies take up physical room in a mix and two of them at once take up more than twice as much attention as either alone. A monophonic bass forces one decision per beat, which is why it sits. When it still goes missing, the problem is usually the fundamental rather than the part, and [how to make bass audible on phone speakers](https://gazillionindustries.com/how-to-make-bass-audible-on-phone-speakers/) covers what a 3-inch driver actually reproduces. The instrument side of the same question is in [best bass synth VST](https://gazillionindustries.com/best-bass-synth-vst/).
+Bass first, because it is the part that cannot be shared. Two low notes sounding together share harmonics, sum unpredictably depending on their phase relationship, and leave the listener guessing at the root. A monophonic bass forces one decision per beat, which is why it sits. When it still goes missing, the problem is usually the fundamental rather than the part, and [how to make bass audible on phone speakers](https://gazillionindustries.com/how-to-make-bass-audible-on-phone-speakers/) covers what a 3-inch driver actually reproduces. The instrument side of the same question is in [best bass synth VST](https://gazillionindustries.com/best-bass-synth-vst/).
 
 Leads next. A hook is one line, and a single voice holds the front of a busy beat because nothing behind it is competing for the same filter. If the lead is thin rather than quiet, thickness beats volume every time — see [how to make a synth sound thicker](https://gazillionindustries.com/how-to-make-a-synth-sound-thicker/), and [best lead synth VST](https://gazillionindustries.com/best-lead-synth-vst/) for what to play it on.
 
@@ -129,7 +129,7 @@ Voice count, and the five things that follow from it: chords, glide, trigger beh
 
 ### Is a synth with three oscillators polyphonic?
 
-No. Three oscillators tuned to the same note played through one filter and one amplifier are one voice with three layers. Polyphony is counted in voices, and a voice is the whole chain. This is the single most common misreading of a spec sheet in the plugin store.
+No. Three oscillators tuned to the same note played through one filter and one amplifier are one voice with three layers. Polyphony is counted in voices, and a voice is the whole chain, which is the line worth reading twice on any spec sheet.
 
 ### What does paraphonic mean, and how is paraphonic vs polyphonic different?
 

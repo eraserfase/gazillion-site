@@ -627,6 +627,22 @@ the people who make the plugins.
   — Free picks, what $249 buys instead, and why one voice teaches fastest.
 - [Best synth VST with presets](https://gazillionindustries.com/best-synth-vst-with-presets.md)
   — What a good preset bank does, the free ones worth having, and how to audition one fast.
+- [Best vocoder plugins](https://gazillionindustries.com/best-vocoder-plugins.md)
+  — The three controls that decide whether your words survive the filter bank.
+- [How to make robot vocals](https://gazillionindustries.com/how-to-make-robot-vocals.md)
+  — The three effects people call a robot voice, and the no-mic route.
+- [Vocoder vs talkbox vs autotune](https://gazillionindustries.com/vocoder-vs-talkbox.md)
+  — How each one works, and why software cannot be a talkbox.
+- [Best polysynth VST](https://gazillionindustries.com/best-polysynth-vst.md)
+  — What voice count really changes, and how to audition one fast.
+- [Best free vocoder plugins](https://gazillionindustries.com/best-free-vocoder-plugins.md)
+  — The free vocoders that are really free, and where they run out.
+- [Best arpeggiator VST](https://gazillionindustries.com/best-arpeggiator-vst.md)
+  — Why a MIDI arp and a built-in arp are different tools.
+- [How to use a vocoder](https://gazillionindustries.com/how-to-use-a-vocoder.md)
+  — The routing problem solved host by host, and how to stay intelligible.
+- [What is a vocoder](https://gazillionindustries.com/what-is-a-vocoder.md)
+  — A vocoder stage by stage, and what band count actually changes.
 - [Drum bus compressor settings](https://gazillionindustries.com/drum-bus-compressor-settings.md)
   — attack, release, ratio and threshold on a drum bus, and a starting point.
 

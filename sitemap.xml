@@ -64,7 +64,7 @@
   </url>
   <url>
     <loc>https://gazillionindustries.com/reading-material/</loc>
-    <lastmod>2026-09-26</lastmod>
+    <lastmod>2026-09-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1042,4 +1042,52 @@
   </url>
   <url><loc>https://gazillionindustries.com/winnetka/</loc><lastmod>2026-09-27</lastmod></url>
   <url><loc>https://gazillionindustries.com/winnetka/manual.html</loc><lastmod>2026-09-29</lastmod></url>
+  <url>
+    <loc>https://gazillionindustries.com/best-vocoder-plugins/</loc>
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gazillionindustries.com/how-to-make-robot-vocals/</loc>
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gazillionindustries.com/vocoder-vs-talkbox/</loc>
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gazillionindustries.com/best-polysynth-vst/</loc>
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gazillionindustries.com/best-free-vocoder-plugins/</loc>
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gazillionindustries.com/best-arpeggiator-vst/</loc>
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gazillionindustries.com/how-to-use-a-vocoder/</loc>
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gazillionindustries.com/what-is-a-vocoder/</loc>
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
