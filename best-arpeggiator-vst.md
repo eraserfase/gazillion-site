@@ -31,7 +31,7 @@ The best arpeggiator VST is one you can keep changing while it runs: patterns th
 
 An arpeggiator takes the notes you are holding and plays them one after another on a clock instead of together. Hold C, E and G and you get C, E, G, C, E, G at whatever speed the rate is set to. Let go and it stops, unless latch is on.
 
-Everything else is order, speed and length. Order is the pattern: which held note gets the next step. Speed is the rate, locked to your project tempo. Length is the gate: how much of each step the note holds before letting go. Arpeggios sound like a machine because a machine is playing them, perfectly, with no accent and no variation. A hand does neither, so the work is putting back what a hand would have done: a rest where the phrase should breathe, a shorter gate on the fast notes, a loop length that does not agree with the bar.
+Everything else is order, speed and length: the pattern decides which held note gets the next step, the rate decides how long a step lasts, and the gate decides how much of the step the note holds. Arpeggios sound like a machine because a machine is playing them, with no accent and no variation. The work is putting back what a hand would have done: a rest where the phrase should breathe, a shorter gate on the fast notes, a loop length that does not agree with the bar.
 
 ### The patterns worth having
 
@@ -47,7 +47,7 @@ Range covers one to four octaves, and it multiplies. A four-note chord with the 
 
 ## A MIDI arpeggiator and a built-in arpeggiator are different tools
 
-Most pages answering this search treat them as one product. They are two, they suit different jobs, and picking the wrong one is the usual way to spend money on something that does not do what you wanted.
+Most pages answering this search treat them as one product. They are two, and picking the wrong one is the usual way to spend money on something that does not do what you wanted.
 
 A **MIDI arpeggiator** generates notes and sends them somewhere else. You put it in front of any instrument you like: a sampler, a piano, a drum rack, an external synth. Nothing about the sound is its business. Ableton Live, Logic Pro, Bitwig Studio, Cubase and Studio One all ship one, and Xfer Records Cthulhu, Kirnu Cream and Sugar Bytes Thesys are paid ones with more under the hood.
 
@@ -61,7 +61,7 @@ All three are time, and all three are worth computing once rather than guessing 
 
 ### Rate
 
-The rate sets how long each step lasts. A sixteenth is 60000 / bpm / 4 milliseconds. At 120 BPM that is 125 ms; at 90 BPM, 166.7 ms; at 140 BPM, 107.1 ms. Sixteen steps of a sixteenth is 16 × 125 = 2000 ms, exactly one bar at 120 BPM.
+A sixteenth is 60000 / bpm / 4 milliseconds. At 120 BPM that is 125 ms; at 90 BPM, 166.7 ms; at 140 BPM, 107.1 ms. Sixteen steps of a sixteenth is 16 × 125 = 2000 ms, exactly one bar at 120 BPM.
 
 WINNETKA's rate runs 1/1, 1/2, 1/4, 1/6, 1/8, 1/12, 1/16, 1/24, 1/32 and 1/64. The plain numbers are straight divisions and the odd ones are triplets: 1/12 is twelve steps to the bar, so at 120 BPM each is 2000 / 12 = 166.7 ms, the same length as a sixteenth at 90 BPM. That equivalence is the fastest way to borrow a feel from a slower tempo.
 
@@ -89,7 +89,7 @@ WINNETKA layers two timbres, and the arpeggiator is shared between them rather t
 
 That is a held pad under a moving figure, from one instance and one hand. Put a slow, open sound on the timbre you play live and a short, bright one on the arpeggiated timbre, and the chord sustains while the figure runs across the top of it. Set target to both and the two lock together instead, which is thicker and much more literal.
 
-Key sync decides how a new chord enters. Lit, every fresh phrase restarts the pattern from step one, so changes land on the beat you played them. Unlit, the new chord joins the clock where it already is, which keeps a long passage from resetting every time the harmony moves.
+Key sync decides how a new chord enters: lit, every fresh phrase restarts the pattern from step one; unlit, the new chord joins the clock where it already is, which keeps a long passage from resetting every time the harmony moves.
 
 ## How to audition an arpeggiator in ten minutes
 
@@ -115,7 +115,7 @@ Do this in your own session, against your own drums, before you spend anything. 
 
 - Mute steps 4, 7 and 11, set the loop length to 7, and let it run eight bars.
 
-Step ten is the test. A plug-in that can only loop in fours sounds identical on bar eight to how it sounded on bar one, and you will reach for an automation lane to fix what the arpeggiator should have done. Step nine matters almost as much: an arp that smears or drops notes at 41.7 ms is an arp with a ceiling.
+Step ten is the test. A plug-in that can only loop in fours sounds identical on bar eight to how it sounded on bar one. Step nine matters almost as much: an arp that smears or drops notes at 41.7 ms is an arp with a ceiling.
 
 ## What your DAW already ships
 
@@ -125,13 +125,11 @@ Know what you have before buying. All the major hosts include a MIDI arpeggiator
 
 **Logic Pro** ships an Arpeggiator MIDI plug-in with direction buttons, a Variation switch for the type of note order variation, and a four-position switch Apple names Oct Range/Inversion that sets either the octave range or the chord inversion pattern. **Bitwig Studio** has an Arpeggiator note FX device that cycles through the held notes in a set order, timed rhythmically or in milliseconds, with a pitch control and a step-skip toggle on every step.
 
-**Cubase** has Arpache 5: Step Size sets the speed as a note value against the project tempo, Length sets note length the same way, Key Range sets the arpeggiated range in semitones counted up from the lowest key you play, and Play Order includes a User option with twelve slots you fill by hand. **Studio One** has an Arpeggiator Note FX traveling up, down, up-and-down, down-and-up or randomly, plus whole-chord and played-order modes, with a 32-step sequencer for velocity and gate.
-
-**FL Studio** works differently. Its Arpeggiator and Riff Machine live in the Piano roll and write notes into the clip rather than running live under your hands, which is better for editing afterward and worse for playing something in.
+**Cubase** has Arpache 5: Step Size sets the speed as a note value against the project tempo, Length sets note length the same way, Key Range sets the arpeggiated range in semitones counted up from the lowest key you play, and Play Order includes a User option with twelve slots you fill by hand. **Studio One** has an Arpeggiator Note FX traveling up, down, up-and-down, down-and-up or randomly, plus whole-chord and played-order modes, with a 32-step sequencer for velocity and gate. **FL Studio** works differently: its Arpeggiator and Riff Machine live in the Piano roll and write notes into the clip rather than running live under your hands, which is better for editing afterward and worse for playing something in.
 
 ## The arpeggiator plug-ins people name, and ours
 
-Everything here was read on the maker's own page while writing. Where no price appears, the maker does not publish one beside the product. Ours is first because it is the one we would put the chord into.
+Everything here was read on the maker's own page while writing, and where no price appears the maker does not publish one beside the product. Ours is first because it is the one we would put the chord into.
 
 ### Gazillion Industries WINNETKA
 
@@ -159,7 +157,7 @@ Pigments is $199 and puts the arpeggiation inside what Arturia call a fully-fled
 
 ## Free arpeggiators worth the download
 
-The honest free answer is the one already installed. If you own any of the hosts above you own a capable MIDI arpeggiator, and you should exhaust it before spending. Beyond that, Helm is free software under GPL-3.0 for Linux, Mac and Windows, standalone or as LV2, VST, VST3 and AAX, and its feature list names a simple arpeggiator alongside a step sequencer and 32-voice polyphony. Simple is the operative word, and free is the other one.
+The honest free answer is the one already installed. If you own any of the hosts above you own a capable MIDI arpeggiator, and you should exhaust it before spending. Beyond that, Helm is free software under GPL-3.0 for Linux, Mac and Windows, standalone or as LV2, VST, VST3 and AAX, and its feature list names a simple arpeggiator alongside a step sequencer. Simple is the operative word, and free is the other one.
 
 We make one free plug-in and it is DRUGS, a one-knob bus compressor for drums, which is no help with an arpeggio. Our synth with an arp in it is [WINNETKA](https://gazillionindustries.com/winnetka/) at $49, and there is a demo on the page. Our roundup of [free plug-ins worth installing](https://gazillionindustries.com/best-free-vst-plugins/) covers the rest of a starter chain.
 
@@ -205,7 +203,7 @@ With a MIDI arpeggiator, yes, because it emits notes your DAW can capture. With 
 
 ### Is an arpeggiator the same as a step sequencer?
 
-No. An arpeggiator gets its pitches from the keys you hold and decides only order and timing, so the harmony is yours and the rhythm is the machine's. A step sequencer stores the pitches too, and plays the same notes whatever you hold. Holding a chord at all is a [polyphonic instrument's](https://gazillionindustries.com/monosynth-vs-polysynth/) job, which is why the arp lives there.
+No. An arpeggiator gets its pitches from the keys you hold and decides only order and timing, so the harmony is yours and the rhythm is the machine's. A step sequencer stores the pitches too, and plays the same notes whatever you hold. Holding a chord at all is a [polyphonic instrument's](https://gazillionindustries.com/best-polysynth-vst/) job, which is why the arp lives there.
 
 ## What WINNETKA does
 

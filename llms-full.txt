@@ -37045,7 +37045,7 @@ The best arpeggiator VST is one you can keep changing while it runs: patterns th
 
 An arpeggiator takes the notes you are holding and plays them one after another on a clock instead of together. Hold C, E and G and you get C, E, G, C, E, G at whatever speed the rate is set to. Let go and it stops, unless latch is on.
 
-Everything else is order, speed and length. Order is the pattern: which held note gets the next step. Speed is the rate, locked to your project tempo. Length is the gate: how much of each step the note holds before letting go. Arpeggios sound like a machine because a machine is playing them, perfectly, with no accent and no variation. A hand does neither, so the work is putting back what a hand would have done: a rest where the phrase should breathe, a shorter gate on the fast notes, a loop length that does not agree with the bar.
+Everything else is order, speed and length: the pattern decides which held note gets the next step, the rate decides how long a step lasts, and the gate decides how much of the step the note holds. Arpeggios sound like a machine because a machine is playing them, with no accent and no variation. The work is putting back what a hand would have done: a rest where the phrase should breathe, a shorter gate on the fast notes, a loop length that does not agree with the bar.
 
 ### The patterns worth having
 
@@ -37061,7 +37061,7 @@ Range covers one to four octaves, and it multiplies. A four-note chord with the 
 
 ## A MIDI arpeggiator and a built-in arpeggiator are different tools
 
-Most pages answering this search treat them as one product. They are two, they suit different jobs, and picking the wrong one is the usual way to spend money on something that does not do what you wanted.
+Most pages answering this search treat them as one product. They are two, and picking the wrong one is the usual way to spend money on something that does not do what you wanted.
 
 A **MIDI arpeggiator** generates notes and sends them somewhere else. You put it in front of any instrument you like: a sampler, a piano, a drum rack, an external synth. Nothing about the sound is its business. Ableton Live, Logic Pro, Bitwig Studio, Cubase and Studio One all ship one, and Xfer Records Cthulhu, Kirnu Cream and Sugar Bytes Thesys are paid ones with more under the hood.
 
@@ -37075,7 +37075,7 @@ All three are time, and all three are worth computing once rather than guessing 
 
 ### Rate
 
-The rate sets how long each step lasts. A sixteenth is 60000 / bpm / 4 milliseconds. At 120 BPM that is 125 ms; at 90 BPM, 166.7 ms; at 140 BPM, 107.1 ms. Sixteen steps of a sixteenth is 16 × 125 = 2000 ms, exactly one bar at 120 BPM.
+A sixteenth is 60000 / bpm / 4 milliseconds. At 120 BPM that is 125 ms; at 90 BPM, 166.7 ms; at 140 BPM, 107.1 ms. Sixteen steps of a sixteenth is 16 × 125 = 2000 ms, exactly one bar at 120 BPM.
 
 WINNETKA's rate runs 1/1, 1/2, 1/4, 1/6, 1/8, 1/12, 1/16, 1/24, 1/32 and 1/64. The plain numbers are straight divisions and the odd ones are triplets: 1/12 is twelve steps to the bar, so at 120 BPM each is 2000 / 12 = 166.7 ms, the same length as a sixteenth at 90 BPM. That equivalence is the fastest way to borrow a feel from a slower tempo.
 
@@ -37103,7 +37103,7 @@ WINNETKA layers two timbres, and the arpeggiator is shared between them rather t
 
 That is a held pad under a moving figure, from one instance and one hand. Put a slow, open sound on the timbre you play live and a short, bright one on the arpeggiated timbre, and the chord sustains while the figure runs across the top of it. Set target to both and the two lock together instead, which is thicker and much more literal.
 
-Key sync decides how a new chord enters. Lit, every fresh phrase restarts the pattern from step one, so changes land on the beat you played them. Unlit, the new chord joins the clock where it already is, which keeps a long passage from resetting every time the harmony moves.
+Key sync decides how a new chord enters: lit, every fresh phrase restarts the pattern from step one; unlit, the new chord joins the clock where it already is, which keeps a long passage from resetting every time the harmony moves.
 
 ## How to audition an arpeggiator in ten minutes
 
@@ -37129,7 +37129,7 @@ Do this in your own session, against your own drums, before you spend anything. 
 
 - Mute steps 4, 7 and 11, set the loop length to 7, and let it run eight bars.
 
-Step ten is the test. A plug-in that can only loop in fours sounds identical on bar eight to how it sounded on bar one, and you will reach for an automation lane to fix what the arpeggiator should have done. Step nine matters almost as much: an arp that smears or drops notes at 41.7 ms is an arp with a ceiling.
+Step ten is the test. A plug-in that can only loop in fours sounds identical on bar eight to how it sounded on bar one. Step nine matters almost as much: an arp that smears or drops notes at 41.7 ms is an arp with a ceiling.
 
 ## What your DAW already ships
 
@@ -37139,13 +37139,11 @@ Know what you have before buying. All the major hosts include a MIDI arpeggiator
 
 **Logic Pro** ships an Arpeggiator MIDI plug-in with direction buttons, a Variation switch for the type of note order variation, and a four-position switch Apple names Oct Range/Inversion that sets either the octave range or the chord inversion pattern. **Bitwig Studio** has an Arpeggiator note FX device that cycles through the held notes in a set order, timed rhythmically or in milliseconds, with a pitch control and a step-skip toggle on every step.
 
-**Cubase** has Arpache 5: Step Size sets the speed as a note value against the project tempo, Length sets note length the same way, Key Range sets the arpeggiated range in semitones counted up from the lowest key you play, and Play Order includes a User option with twelve slots you fill by hand. **Studio One** has an Arpeggiator Note FX traveling up, down, up-and-down, down-and-up or randomly, plus whole-chord and played-order modes, with a 32-step sequencer for velocity and gate.
-
-**FL Studio** works differently. Its Arpeggiator and Riff Machine live in the Piano roll and write notes into the clip rather than running live under your hands, which is better for editing afterward and worse for playing something in.
+**Cubase** has Arpache 5: Step Size sets the speed as a note value against the project tempo, Length sets note length the same way, Key Range sets the arpeggiated range in semitones counted up from the lowest key you play, and Play Order includes a User option with twelve slots you fill by hand. **Studio One** has an Arpeggiator Note FX traveling up, down, up-and-down, down-and-up or randomly, plus whole-chord and played-order modes, with a 32-step sequencer for velocity and gate. **FL Studio** works differently: its Arpeggiator and Riff Machine live in the Piano roll and write notes into the clip rather than running live under your hands, which is better for editing afterward and worse for playing something in.
 
 ## The arpeggiator plug-ins people name, and ours
 
-Everything here was read on the maker's own page while writing. Where no price appears, the maker does not publish one beside the product. Ours is first because it is the one we would put the chord into.
+Everything here was read on the maker's own page while writing, and where no price appears the maker does not publish one beside the product. Ours is first because it is the one we would put the chord into.
 
 ### Gazillion Industries WINNETKA
 
@@ -37173,7 +37171,7 @@ Pigments is $199 and puts the arpeggiation inside what Arturia call a fully-fled
 
 ## Free arpeggiators worth the download
 
-The honest free answer is the one already installed. If you own any of the hosts above you own a capable MIDI arpeggiator, and you should exhaust it before spending. Beyond that, Helm is free software under GPL-3.0 for Linux, Mac and Windows, standalone or as LV2, VST, VST3 and AAX, and its feature list names a simple arpeggiator alongside a step sequencer and 32-voice polyphony. Simple is the operative word, and free is the other one.
+The honest free answer is the one already installed. If you own any of the hosts above you own a capable MIDI arpeggiator, and you should exhaust it before spending. Beyond that, Helm is free software under GPL-3.0 for Linux, Mac and Windows, standalone or as LV2, VST, VST3 and AAX, and its feature list names a simple arpeggiator alongside a step sequencer. Simple is the operative word, and free is the other one.
 
 We make one free plug-in and it is DRUGS, a one-knob bus compressor for drums, which is no help with an arpeggio. Our synth with an arp in it is [WINNETKA](https://gazillionindustries.com/winnetka/) at $49, and there is a demo on the page. Our roundup of [free plug-ins worth installing](https://gazillionindustries.com/best-free-vst-plugins/) covers the rest of a starter chain.
 
@@ -37219,7 +37217,7 @@ With a MIDI arpeggiator, yes, because it emits notes your DAW can capture. With 
 
 ### Is an arpeggiator the same as a step sequencer?
 
-No. An arpeggiator gets its pitches from the keys you hold and decides only order and timing, so the harmony is yours and the rhythm is the machine's. A step sequencer stores the pitches too, and plays the same notes whatever you hold. Holding a chord at all is a [polyphonic instrument's](https://gazillionindustries.com/monosynth-vs-polysynth/) job, which is why the arp lives there.
+No. An arpeggiator gets its pitches from the keys you hold and decides only order and timing, so the harmony is yours and the rhythm is the machine's. A step sequencer stores the pitches too, and plays the same notes whatever you hold. Holding a chord at all is a [polyphonic instrument's](https://gazillionindustries.com/best-polysynth-vst/) job, which is why the arp lives there.
 
 ## What WINNETKA does
 
@@ -38189,7 +38187,7 @@ A vocoder needs two signals and you have given it one. The synth is the **carrie
 
 ## What a vocoder actually does
 
-A vocoder is two matched banks of band-pass filters with a level detector between them. Apple's Logic Pro user guide puts it plainly on its Vocoder basics page: the analysis bank and the synthesis bank hold a matching number of bands, band 1 to band 1 and band 2 to band 2, and an envelope follower on each analysis band tracks volume changes in that slice of the incoming audio. Those tracked levels control the levels of the matching synthesis bands. The synth hears nothing and understands nothing. It is being turned up and down in sixteen or twenty places at once, quickly.
+A vocoder is two matched banks of band-pass filters with a level detector between them. Apple's Logic Pro user guide puts it plainly on its Vocoder basics page: the analysis bank and the synthesis bank hold a matching number of bands, band 1 to band 1 and band 2 to band 2, and an envelope follower on each analysis band tracks volume changes in that slice of the incoming audio. Those tracked levels control the levels of the matching synthesis bands. The synth hears nothing and understands nothing. It is being turned up and down in sixteen or twenty places at once, quickly. The stage-by-stage version is in [what is a vocoder](https://gazillionindustries.com/what-is-a-vocoder/).
 
 Which means a band with no carrier energy in it opens onto silence. Image-Line's Fruity Vocoder page says the same thing from the other end: the vocoder acts like a series of gates, and where a gate opens and the carrier has nothing, that part of the tonal character is lost. A thin carrier makes an unintelligible vocoder, and no work on the voice will fix it.
 
@@ -38199,7 +38197,7 @@ The carrier is what you hear. The modulator is what you understand. Ableton's re
 
 ### Bands, and what the count buys
 
-More bands means a finer copy of the original spectrum. Apple states it directly — the more bands a vocoder offers, the more precisely the original sound character is reproduced — and gives EVOC 20 PS up to 20 bands per bank. Ableton's manual adds the cost in the same breath: more bands is a more accurate analysis and more CPU. Fruity Vocoder offers 4 to 128, Audacity's built-in Vocoder defaults to 40, and WINNETKA runs sixteen. Push a filter bank fine enough and it starts resynthesizing the voice rather than cartooning it, so pick the count for the sound you want and stop treating it as a quality setting.
+More bands means a finer copy of the original spectrum. Apple states it directly — the more bands a vocoder offers, the more precisely the original sound character is reproduced — and gives EVOC 20 PS up to 20 bands per bank. Ableton's manual adds the cost in the same breath: more bands is a more accurate analysis and more CPU. Fruity Vocoder offers 4 to 128, Audacity's built-in Vocoder defaults to 40, WINNETKA runs sixteen. Push a filter bank fine enough and it resynthesizes the voice rather than cartooning it, so pick the count for the sound you want.
 
 ## The routing problem, in one paragraph
 
@@ -38209,7 +38207,7 @@ Three things have to be true at once. A track has to be playing notes into the c
 
 Live's own Vocoder is an audio effect, and it goes on the voice. That sentence undoes most of the confusion, because the instinct is to put it on the synth. Ableton's manual is explicit: Live's Vocoder should be inserted on the track that contains the audio material you plan to use as your modulator. The Carrier chooser then picks what gets shaped — Noise, External, Modulator or Pitch Tracking — and External is the one the manual names for classic robot voice work, with Audio From choosers underneath for pointing at the synth track.
 
-Ableton's own singing synthesizer walkthrough: insert Vocoder on the vocal track, put a synthesizer on another track, set the Carrier chooser to External, select the synth track in the Audio From choosers with Post FX in the bottom one, and arm both tracks if you are playing and speaking at once. Solo the voice track to hear the vocoded signal alone. The manual also notes Vocoder is absent from the Intro and Lite editions, which is the answer for anyone who cannot find it in the browser.
+Ableton's own singing synthesizer walkthrough: insert Vocoder on the vocal track, put a synthesizer on another track, set the Carrier chooser to External, select the synth track in the Audio From choosers with Post FX in the bottom one, and arm both tracks if you are playing and speaking at once. Solo the voice track to hear the vocoded signal alone. The manual also notes that Vocoder is absent from the Intro and Lite editions, which answers anyone who cannot find it.
 
 A plug-in with the synth already inside reverses the picture, and Ableton documents that too. Section 17.5.2.7, Feeding Sidechain Inputs, says that where the vocoder plug-in includes its own carrier synthesizer, the only difference is that the vocoder instrument is dragged into a MIDI track, and feeding the sidechain audio input works as described: set the speech track's Output Type chooser to the track holding the instrument, then pick the plug-in's input from the Output Channel chooser below it. In the mixer those read **Audio To** and the box under it. WINNETKA's manual gives the same path in its own names — Audio To set to the WINNETKA track, Audio In-WINNETKA picked below, and Monitor set to In if the source is a live mic rather than a clip. Its audio input is stereo and the left channel is the voice it listens to, so a mono vocal panned hard left is the safe way in.
 
@@ -38235,13 +38233,13 @@ One documented limit decides which route you take. Image-Line notes that Vocodex
 
 GarageBand is the one with nothing in the box. Apple's GarageBand user guide has no vocoder page and documents no bus, send or side chain anywhere in it, so the two-track wire the other four hosts provide does not exist here. What it does document is Audio Units: instrument plug-ins can be used on software instrument tracks only, added from the Plug-ins area of the Smart Controls pane by clicking the right side of the Instrument slot and choosing AU Generators or AU Instruments. Apple also flags the checkbox that catches people, Enable Audio Units in GarageBand › Settings › Audio/MIDI.
 
-So two honest answers, both skipping routing entirely. The first is the no-microphone route below, which needs only MIDI notes. The second is WINNETKA's standalone application, which takes its own input from your interface, carries the arpeggiator, the effects and the whole bank, and records into GarageBand as audio afterwards. One warning from its manual: the standalone opens with its input muted so it cannot feed back, and you turn it on in Settings by choosing your input and unticking Mute audio input. Wear headphones.
+So two honest answers, both skipping routing entirely. The first is the no-microphone route below, which needs only MIDI notes. The second is WINNETKA's standalone application, which takes its own input from your interface, carries the whole bank, and records into GarageBand as audio afterwards. One warning from its manual: the standalone opens with its input muted so it cannot feed back, and you turn it on in Settings by choosing your input and unticking Mute audio input.
 
 ## How to use a vocoder in Reaper
 
 Reaper does it with extra track channels, and once seen it is the most flexible of the five. Cockos' own effects guide walks ReaVocode through it: record the vocal on a track by itself, put a synth on a second track with a fairly bland sound, and give both tracks four channels with their master/parent sends disabled, set from each track's I/O button. Then create a third track, insert ReaVocode into its FX chain, send the vocal to Channels 1/2 and the synth to Channels 3/4, and balance the two with the vertical faders on the plug-in.
 
-The channel numbers matter because of the pin connector, explained in section 17.4 of the user guide: the connectors work like virtual cables deciding which track channels feed the plug-in's inputs, with channel 1 going to the FX left input and channel 2 to the FX right by default. A Reaper track holds two channels until you raise the count in the track channels dropdown, and anything past 1/2 exists only for the plug-in looking for it.
+The channel numbers matter because of the pin connector, explained in section 17.4 of the user guide: the connectors work like virtual cables deciding which track channels feed the plug-in's inputs, with channel 1 going to the FX left input and channel 2 to the FX right by default. A track holds two channels until you raise the count in the track channels dropdown, and anything past 1/2 exists only for the plug-in looking for it.
 
 An instrument carrying its own carrier makes the arithmetic simpler, because the synth track is the vocoder track and there is no second send. Put WINNETKA in the FX chain, send the vocal track to Channels 1/2, and the default pin mapping already feeds the plug-in's left and right inputs. Left is the voice. Keep the vocal track's master/parent send off so the dry voice does not also arrive at the mix — the same discipline Apple asks for with the muted side chain track and Image-Line asks for with Sidechain to this track only. Three hosts, three menus, one instruction.
 
@@ -38259,9 +38257,9 @@ Then the consonants, which always go missing, because sibilants and plosives are
 
 WINNETKA's second answer is a cheat and a good one. HPF LEVEL sends the top of the voice, above about 4 kHz, straight to the output without passing through the bands, so the real s's and t's cut through under the synthetic vowels. HPF GATE then confines that top end to the moments you are holding a key, so it stops sounding like an open mic between phrases. Start low, raise it until the words land, stop.
 
-Speed and dynamics carry the rest. Ableton's Attack and Release set how quickly the Vocoder responds to amplitude changes in the modulator, and their manual warns that very fast times preserve the transients but can cause distortion artifacts; Audacity calls the same idea Distance and says the higher the distance, the slower the response. WINNETKA calls it E.F. SENSE, 0 to 127, low for every syllable and high for a smear, holding entirely at 127. Underneath it, THRESHOLD shuts the input out below a level and is off at 0, and GATE SENSE sets how long the gate takes to close once the voice stops, from 2 ms to 2 seconds. Image-Line's advice to compress the modulator does the same job from outside: lifting the quiet parts improves the frequency-band detection.
+Speed and dynamics carry the rest. Ableton's Attack and Release set how quickly the Vocoder responds to amplitude changes in the modulator, and their manual warns that very fast times preserve the transients but can cause distortion artifacts; Audacity calls the same idea Distance and says the higher the distance, the slower the response. WINNETKA calls it E.F. SENSE, 0 to 127, low for every syllable and high for a smear, holding entirely at 127. Underneath it, THRESHOLD shuts the input out below a level and is off at 0, and GATE SENSE sets how long the gate takes to close once the voice stops, from 2 ms to 2 seconds. Image-Line's advice to compress the modulator does the same job from outside.
 
-Two more knobs, then stop turning things. RESONANCE in the FORMANT row sets how sharp the bands are and makes the trade every filter makes, sharper reading as more vocal and more brittle — background in [cutoff and resonance](https://gazillionindustries.com/filter-cutoff-and-resonance/). And DIRECT in the vocoder AMP row puts your dry voice into the output alongside the carrier, which is the honest fix when the vocoder alone will not carry a lyric. A little of it under the effect is how most vocoder hooks on records are actually built.
+Two more knobs, then stop turning things. RESONANCE in the FORMANT row sets how sharp the bands are, sharper reading as more vocal and more brittle — background in [cutoff and resonance](https://gazillionindustries.com/filter-cutoff-and-resonance/). And DIRECT in the vocoder AMP row puts your dry voice into the output alongside the carrier, which is the honest fix when the vocoder alone will not carry a lyric. A little of it under the effect is how most vocoder hooks are built.
 
 ## Set one up in ten minutes
 
@@ -38299,15 +38297,15 @@ Step thirteen is the one people skip, and a vocoder punishes it harder than most
 
 Live use changes two things: monitoring and feedback. The mic is open in the same room as the speakers and a vocoder is a bank of resonant filters aimed at whatever it hears, so it finds a howl faster than a plain channel does. WINNETKA's standalone opens with its input muted for that reason, and its manual's advice when you unmute is one word long: headphones.
 
-The rest is arrangement. Set THRESHOLD higher than you would in the studio so stage noise never opens the bands. Put LATCH on in the ARP A row if you want the chord to keep playing after you let go, which frees both hands for the mic; your next chord replaces the held one. And pick one route for the dry voice, because DIRECT and the front-of-house channel do the same job, and doing both is how a vocal ends up 6 dB too loud.
+The rest is arrangement. Set THRESHOLD higher than you would in the studio so stage noise never opens the bands. Put LATCH on in the ARP A row if you want the chord to keep playing after you let go, which frees both hands for the mic; your next chord replaces the held one. And pick one route for the dry voice, because DIRECT and the front-of-house channel do the same job.
 
 ## What a vocoder costs you
 
-It costs consonants. The design throws away the parts of speech that carry no pitch, and every fix above is a way of smuggling some of them back. A vocoder line is a hook rather than a verse. Write accordingly.
+It costs consonants. The design throws away the parts of speech that carry no pitch, and every fix above is a way of smuggling some of them back. A vocoder line is a hook rather than a verse.
 
-It costs two performances in one take. You are playing the chord and speaking the line at the same time and both have to land together. The workaround is to record the voice first and play chords against it, which is what Apple, Ableton and Image-Line all assume in their own walkthroughs, and which loses the thing that makes live vocoding fun.
+It costs two performances in one take, because you are playing the chord and speaking the line at the same time and both have to land together. The workaround is to record the voice first and play chords against it, which is what Apple, Ableton and Image-Line all assume in their own walkthroughs, and which loses the thing that makes live vocoding fun.
 
-It costs arrangement space. A vocoder occupies the lead vocal's register and the pad's harmonic job at once, so a track carrying all three has an argument in it. Cut the pad while the vocoder sings, or narrow it, or move the vocoder where the others are not; [EQ on the vocal](https://gazillionindustries.com/how-to-eq-vocals/) is the second half of that fix. And it costs CPU that scales with the band count, which Ableton states plainly and which matters most on a laptop at a show.
+It costs arrangement space. A vocoder occupies the lead vocal's register and the pad's harmonic job at once, so a track carrying all three has an argument in it. Cut the pad while the vocoder sings, or move the vocoder where the others are not; [EQ on the vocal](https://gazillionindustries.com/how-to-eq-vocals/) is the second half of that fix. And it costs CPU that scales with the band count, which matters most on a laptop at a show.
 
 ## Questions people ask
 
@@ -38321,23 +38319,23 @@ Four things, in the order they go wrong. The modulator never arrived, which is t
 
 ### How do you use a vocoder in Audacity?
 
-Build both signals into one stereo track before you run the effect. Audacity's manual says Vocoder synthesizes a modulator in the left channel of a stereo track with a carrier wave in the right channel, that it works only on unsplit stereo tracks, and that it lives under Effect › Distortion and Modulation › Vocoder. It defaults to 40 bands and can add white noise or a pulse train to the carrier. It is offline processing, so nobody plays along with it, which is the honest reason to reach for a plug-in instead.
+Build both signals into one stereo track before you run the effect. Audacity's manual says Vocoder synthesizes a modulator in the left channel of a stereo track with a carrier wave in the right channel, that it works only on unsplit stereo tracks, and that it lives under Effect › Distortion and Modulation › Vocoder. It defaults to 40 bands and can add white noise or a pulse train to the carrier. It is offline processing, so nobody plays along with it.
 
 ### How do you use a vocoder in Studio One?
 
-The same three things are true, and we are not printing a menu path we could not read today — PreSonus's online manual would not serve us its pages while this was being written, and a wrong routing path is worse than none. So: find the sidechain send in your version's documentation, point the vocal at the instrument holding the vocoder, and stop the vocal reaching the mix twice. WINNETKA is a VST3, the format Studio One takes on both platforms.
+The same three things are true, and we are not printing a menu path we could not read today — PreSonus's online manual would not serve us its pages while this was written, and a wrong routing path is worse than none. So: find the sidechain send in your version's documentation, point the vocal at the instrument holding the vocoder, and stop the vocal reaching the mix twice. WINNETKA is a VST3, the format Studio One takes on both platforms.
 
 ### How do you make a robotic voice with a vocoder?
 
-Hold one chord and keep it still. The robot comes from stripping the pitch movement out of speech and replacing it with a fixed harmonic set, so a single sustained chord, a bright sawtooth or pulse carrier and a fast envelope response get you most of the way. Then add noise until the consonants come back. On WINNETKA, drop the octave with TRANSPOSE, which reaches ±24 semitones, keep E.F. SENSE low, and put a little DIST on the carrier.
+Hold one chord and keep it still. The robot comes from stripping the pitch movement out of speech and replacing it with a fixed harmonic set, so a sustained chord, a bright sawtooth or pulse carrier and a fast envelope response get you most of the way. Then add noise until the consonants come back. On WINNETKA, drop the octave with TRANSPOSE, which reaches ±24 semitones, keep E.F. SENSE low, and put a little DIST on the carrier.
 
 ### How do you use a vocoder live?
 
-On headphones, with the gate set high. An open mic beside a bank of resonant filters is a feedback path, which is why WINNETKA's standalone opens with its input muted and asks you to choose an input and untick Mute audio input before it will listen. Raise THRESHOLD until stage noise cannot open the bands, latch the arpeggiator so your hands are free, and pick one route for the dry voice rather than two.
+On headphones, with the gate set high. An open mic beside a bank of resonant filters is a feedback path, which is why WINNETKA's standalone opens with its input muted and asks you to choose an input and untick Mute audio input before it will listen. Raise THRESHOLD until stage noise cannot open the bands, latch the arpeggiator so your hands are free, and pick one route for the dry voice.
 
 ### Do I need a microphone to use a vocoder?
 
-No, for two separate reasons. Any recorded audio works as a modulator — a drum loop shaping a string pad is standard, and Apple names exactly that in their own vocoder primer. And a vocoder that can freeze a formant shape needs no live input at all: twelve of WINNETKA's forty vocoder presets hold a vowel and play from the keyboard on their own, with HOLD in the FORMANT row for freezing your own.
+No, for two separate reasons. Any recorded audio works as a modulator — a drum loop shaping a string pad is standard, and Apple names exactly that in their own vocoder primer. And a vocoder that can freeze a formant shape needs no live input at all: twelve of WINNETKA's forty vocoder presets hold a vowel and play from the keyboard on their own.
 
 ## What WINNETKA does
 
@@ -38345,7 +38343,7 @@ No, for two separate reasons. Any recorded audio works as a modulator — a drum
 
 The **vocoder is 16 bands**, drawn low to high across the screen as it moves. Audio arrives on a stereo input where the left channel is the voice it listens to and the right can carry an instrument, raised with **INST** in the MIXER row beside OSC 1 and NOISE. The **AUDIO IN** row holds THRESHOLD, GATE SENSE from 2 ms to 2 seconds, and **HPF LEVEL**, which sends the voice above about 4 kHz straight to the output so the consonants survive, with HPF GATE to confine it to held keys. The **FORMANT** row carries the vowels: SHIFT from −2 to +2 bands, CUTOFF sliding smoothly up to two bands either way, RESONANCE for how sharp the bands are, E.F. SENSE for how fast the shape follows, and **HOLD** to freeze it and keep playing with nothing plugged in. **FC MOD** puts that shape under an envelope, an LFO, velocity, key track or the mod wheel, and **LEVEL A/B** and **PAN A/B** set the loudness and stereo position of each pair of bands across the sixteen.
 
-Around it sits the rest: a carrier built on OSC 1 with eight waves, among them a VOX wave whose CONTROL 1 moves its own formant from dark to bright; TRANSPOSE of ±24 semitones; a sixteen-step arpeggiator across ARP A and ARP B with rates from 1/1 to 1/64, swing, latch and twelve patterns; and a shared chain of mod FX, delay and a three-band EQ. Every control is a DAW parameter and the window resizes from 80% to 200%. If presets are how you learn a panel, our piece on [synths with presets worth reading](https://gazillionindustries.com/best-synth-vst-with-presets/) makes the case.
+Around it sits the rest: a carrier built on OSC 1 with eight waves, among them a VOX wave whose CONTROL 1 moves its own formant from dark to bright; TRANSPOSE of ±24 semitones; a sixteen-step arpeggiator across ARP A and ARP B with rates from 1/1 to 1/64, swing, latch and twelve patterns; and a shared chain of mod FX, delay and a three-band EQ. Every control is a DAW parameter. If presets are how you learn a panel, our piece on [synths with presets worth reading](https://gazillionindustries.com/best-synth-vst-with-presets/) makes the case.
 
 Same mic, same chord, same held note. This time the chord talks.
 
