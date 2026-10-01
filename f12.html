@@ -3,212 +3,14 @@
 <!-- Declared in the file (as on drugs.html) so it is correct on its own, not only because
      GitHub Pages sends charset=utf-8 on the wire. Must stay inside the first 1024 bytes. -->
 <meta charset="utf-8">
+<script src="/landing-url.js?v=64d97a7417af"></script>
 <script defer src="video-audio-focus.js?v=1ed0c194152a"></script>
 <script defer src="demo-engagement.js?v=7e5e9c694f6c"></script>
 <script defer src="demo-playback.js?v=bb71d451d1df"></script>
 <title>F(ilter)12 — 12 bit sauce filter and bitcrusher, $49</title>
 <meta name="description" content="A 12 bit filter and bitcrusher: sample rate crush, five filter shapes, six resonance shapes and AURA. DRUGS included free. Mac and Windows. $49.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script>
-/* Keep observed arrival evidence through the shelf, products and checkout.
-   The anonymous journey expires after 30 minutes without activity. Source
-   metadata is not a visit, and the existing presence heartbeat stays intact. */
-window.GZ_ATTR = (function(){
-  var result = {paid:false, tags:{}, token:"", mark:function(){}, touch:function(){}};
-  var OWN = /^(www\.)?gazillionindustries\.com$/i;
-  if(!OWN.test(location.hostname)) return result;
-  var KEY = "gz_arrival_v3", TTL = 30*60000;
-  var fields = ["utm_source","utm_medium","utm_campaign","utm_content","utm_term","utm_id","ad_id","adset_id","campaign_id","fbclid"];
-  var inbound = new URLSearchParams(location.search), now = Date.now();
-  var tags = {}, original = "", token = "", activity = now, sent = {}, sourceSent = {};
-  var saved = null, previous = null, ref = null;
-  function validToken(value){ return /^[0-9a-f]{24}$/.test(value || ""); }
-  function fresh(value){ return value && typeof value.at === "number" && now >= value.at && now-value.at < TTL; }
-  function url(value){
-    try {
-      var u = new URL(value);
-      if(!/^https?:$/.test(u.protocol)) return null;
-      u.username = ""; u.password = ""; u.hash = "";
-      return u;
-    } catch(e){ return null; }
-  }
-  function cleanTags(value){
-    var clean = {};
-    fields.forEach(function(k){ if(value && typeof value[k] === "string" && value[k]) clean[k] = value[k].slice(0,1024); });
-    return clean;
-  }
-  try {
-    saved = JSON.parse(sessionStorage.getItem(KEY) || "null");
-    if(!fresh(saved)) saved = null;
-    if(saved){
-      tags = cleanTags(saved.tags); token = validToken(saved.token) ? saved.token : "";
-      previous = url(saved.referrer);
-      if(previous && !OWN.test(previous.hostname)) original = previous.toString();
-    } else {
-      var legacy = JSON.parse(sessionStorage.getItem("gz_arrival_v2") || "null");
-      if(fresh(legacy)) tags = cleanTags(legacy.tags);
-    }
-  } catch(e) {}
-  ref = url(document.referrer);
-  var internal = ref && OWN.test(ref.hostname);
-  var gumroadReturn = ref && /(^|\.)gumroad\.com$/i.test(ref.hostname) && saved;
-  if(inbound.get("utm_source")){
-    tags = {};
-    if(!internal && !gumroadReturn) original = "";
-  }
-  // Only an actually observed external URL can become the original referrer.
-  // An internal hop or checkout return must not overwrite that arrival.
-  if(ref && !internal && !gumroadReturn){
-    original = ref.toString();
-    if(!inbound.get("utm_source")){
-      tags = {utm_source:ref.hostname.toLowerCase().replace(/^www\./,""),
-              utm_medium:/(^|\.)(instagram|facebook)\.com$/i.test(ref.hostname) ? "social" : "referral"};
-    }
-  }
-  fields.forEach(function(k){ var v = inbound.get(k); if(v) tags[k] = v.slice(0,1024); });
-  // The stored activity deadline is authoritative. Never resurrect a token
-  // from a shared URL or an internal link after its stored session expired.
-  function makeToken(){
-    try {
-      var bytes = new Uint8Array(12); window.crypto.getRandomValues(bytes);
-      return Array.prototype.map.call(bytes,function(n){return ("0"+n.toString(16)).slice(-2);}).join("");
-    } catch(e){ return ""; }  // Never derive an identity from browser traits.
-  }
-  if(!token) token = makeToken();
-  var source = (tags.utm_source || "").toLowerCase(), medium = (tags.utm_medium || "").toLowerCase();
-  result.paid = /^(meta|facebook|instagram|fb|ig)$/.test(source)
-    && /^(paid|paid_social|paid-social|paidsocial|cpc|ppc|social_ads)$/.test(medium);
-  result.tags = tags;
-  function touch(){
-    var at = Date.now();
-    if(at < activity || at-activity >= TTL){ token = makeToken(); sent = {}; sourceSent = {}; }
-    activity = at; result.token = token;
-    try { sessionStorage.setItem(KEY,JSON.stringify({at:at,tags:tags,referrer:original,token:token})); } catch(e) {}
-    return token;
-  }
-  /* FIRST TOUCH, KEPT ACROSS SESSIONS. The arrival record above is sessionStorage with a
-     30-minute TTL, deliberately - a session must never be resurrected from a shared link.
-     But that also erased the ad click of anyone who came back later, so a buyer who saw the
-     ad on Monday and searched for us on Wednesday arrived looking like a cold Google visitor.
-     Measured 20 Sep 2026: every journey in the board's store was under four minutes, 16 of
-     the last 21 BEEFY purchases had no journey at all, and a day the owner counted 5 real orders
-     on was credited 3 by the ad tag and 2 by Meta.
-     This record is SEPARATE: localStorage, 30 days, written once (first touch wins), and it
-     never touches the session token, the session TTL, or the live utm_* tags. It is only ever
-     added to a checkout link when the CURRENT arrival carries no campaign of its own, so a
-     fresh ad click still attributes exactly as it does today. */
-  var FIRST_KEY = "gz_first_v1", FIRST_TTL = 30*86400000;
-  function firstTouch(){
-    var now = Date.now(), have = null;
-    try { have = JSON.parse(localStorage.getItem(FIRST_KEY) || "null"); } catch(e){ have = null; }
-    if(have && (!have.at || now-have.at >= FIRST_TTL || typeof have.at !== "number")) have = null;
-    if(!have && (tags.utm_campaign || tags.utm_source)){
-      have = {at:now, source:tags.utm_source || "", medium:tags.utm_medium || "",
-              campaign:tags.utm_campaign || "", paid:!!result.paid};
-      try { localStorage.setItem(FIRST_KEY, JSON.stringify(have)); } catch(e){}
-    }
-    return have;
-  }
-  function firstTags(){
-    var f = firstTouch();
-    if(!f || tags.utm_campaign || !(f.campaign || f.source)) return null;
-    var out = {gz_first_days:String(Math.max(0, Math.round((Date.now()-f.at)/86400000)))};
-    if(f.campaign) out.gz_first_campaign = f.campaign;
-    if(f.source) out.gz_first_source = f.source;
-    if(f.medium) out.gz_first_medium = f.medium;
-    return out;
-  }
-  /* Meta's own two browser identifiers. `_fbp` is set by the pixel that this
-     page already loads; `_fbc` is set when the arrival carried an fbclid. The
-     server gets NEITHER from Gumroad, and without them a server-side Purchase
-     cannot be deduplicated against the browser one - which is why Events
-     Manager reports our Purchase coverage as 1% against a 75% goal.
-     They ride the documented referrer override, because that is the only field
-     measured to survive to the sale record; url_parameters comes back empty. */
-  function cookie(name){
-    try {
-      var m = document.cookie.match("(?:^|; )"+name.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")+"=([^;]*)");
-      return m ? decodeURIComponent(m[1]) : "";
-    } catch(e){ return ""; }
-  }
-  function metaIds(){
-    var out = {}, fbp = cookie("_fbp"), fbc = cookie("_fbc");
-    if(/^fb\.\d\.\d{10,16}\.[0-9A-Za-z_-]{4,64}$/.test(fbp)) out.gz_fbp = fbp;
-    if(/^fb\.\d\.\d{10,16}\./.test(fbc)) out.gz_fbc = fbc.slice(0,400);
-    else if(tags.fbclid) out.gz_fbc = "fb.1."+Date.now()+"."+tags.fbclid;
-    return out;
-  }
-  function sourceCode(){
-    var aliases = {"ig":"instagram","instagram.com":"instagram","l.instagram.com":"instagram","m.instagram.com":"instagram",
-                   "fb":"facebook","facebook.com":"facebook","m.facebook.com":"facebook","l.facebook.com":"facebook","lm.facebook.com":"facebook"};
-    var value = aliases[source] || source;
-    // A shortened domain is a different domain. Long/unsafe names retain their
-    // complete original URL and tags at checkout, with no invented short alias.
-    return /^[a-z0-9_.-]{1,18}$/.test(value) && !/^(unknown|unassigned|direct)$/.test(value) ? value : "";
-  }
-  function mode(){
-    if(/^(paid|paid_social|paid-social|paidsocial|cpc|ppc|social_ads)$/.test(medium)) return "p";
-    if(/^(email|e-mail|newsletter)$/.test(medium)) return "e";
-    if(/^(social|organic_social|organic-social)$/.test(medium)) return "s";
-    if(medium === "referral") return "r";
-    return "u";
-  }
-  function emit(name){
-    try {
-      var p = (window.GZTraffic || window.umami).track(name);
-      if(p && typeof p.catch === "function") p.catch(function(){});
-      return true;
-    } catch(e){ return false; }
-  }
-  result.mark = function(stage, product){
-    touch();
-    if(!token || !(window.GZTraffic || window.umami) || typeof (window.GZTraffic || window.umami).track !== "function") return;
-    if(stage !== "store" && (!/^(product|buy)$/.test(stage) || !/^(drugs|f12|skruu|tripleog)$/.test(product || ""))) return;
-    var name = "gz_"+stage+"_"+(stage === "store" ? "" : product+"_")+token;
-    if(sent[name]) return;
-    var code = sourceCode();
-    if(code && !sourceSent[token]) sourceSent[token] = emit("gzs_"+token+"_"+code+"_"+mode());
-    sent[name] = emit(name);
-  };
-  result.touch = touch;
-  function carryLink(a){
-    try {
-      if(a.getAttribute && /^#/.test(a.getAttribute("href") || "")) return;
-      var u = new URL(a.href, location.href);
-      if(!/^https?:$/.test(u.protocol)) return;
-      var own = OWN.test(u.hostname), checkout = u.hostname.toLowerCase() === "gazillionindustries.gumroad.com";
-      if(!own && !checkout) return;
-      touch();
-      fields.forEach(function(k){ if(tags[k]) u.searchParams.set(k,tags[k]); });
-      var first = firstTags();
-      if(first) Object.keys(first).forEach(function(k){ u.searchParams.set(k,first[k]); });
-      if(token) u.searchParams.set("gz_journey",token);
-      if(checkout){
-        // Gumroad's documented referrer override preserves the actual first
-        // external URL. UTM-only/direct arrivals use this real site URL.
-        var origin = url(original) || new URL(location.origin+location.pathname);
-        fields.forEach(function(k){ var value=u.searchParams.get(k); if(value) origin.searchParams.set(k,value); });
-        if(first) Object.keys(first).forEach(function(k){ origin.searchParams.set(k,first[k]); });
-        if(token) origin.searchParams.set("gz_journey",token);
-        else origin.searchParams.delete("gz_journey");
-        var ids = metaIds();
-        Object.keys(ids).forEach(function(k){ origin.searchParams.set(k,ids[k]); });
-        u.searchParams.set("referrer",origin.toString());
-      }
-      a.href = u.toString();
-    } catch(e) {}
-  }
-  function carry(){ document.querySelectorAll("a[href]").forEach(carryLink); }
-  document.addEventListener("DOMContentLoaded",carry);
-  // Refresh the link at the actual action, including a middle-click or a menu
-  // opened after an idle tab. This does not block navigation or send a visit.
-  ["click","auxclick","contextmenu"].forEach(function(name){
-    document.addEventListener(name,function(e){var a=e.target.closest && e.target.closest("a[href]");if(a) carryLink(a);},true);
-  });
-  touch();
-  return result;
-})();
-</script>
+
 <link rel="canonical" href="https://gazillionindustries.com/f12.html">
   <link rel="alternate" type="text/markdown" href="https://gazillionindustries.com/f12.md" title="Markdown version for agents">
   <link rel="describedby" type="text/plain" href="https://gazillionindustries.com/llms.txt">
@@ -236,8 +38,8 @@ window.GZ_ATTR = (function(){
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"SoftwareApplication","name":"F(ilter)12","alternateName":"F12","applicationCategory":"MultimediaApplication","applicationSubCategory":"Audio plug-in","operatingSystem":"macOS 10.13 or later, Windows 10 or later","softwareVersion":"2.0.0","url":"https://gazillionindustries.com/f12.html","image":"https://gazillionindustries.com/f12/og.jpg","description":"A 12 bit sauce filter for macOS and Windows. AURA is an adaptive correction that moves with the source and sits a record better without sounding processed. Sample rate and bit reduction, five filter shapes, six resonance shapes including one you draw yourself, a slope that runs from gentle to a wall, a DIRTY switch that feeds the filter's own distortion back through itself, auto filter and sidechain. AU, VST3 and standalone.","featureList":["AURA adaptive enhancement, and MAX AURA","Sample rate and bit depth reduction","Five filter shapes: low-pass, high-pass, band-pass, notch and morph","Six resonance shapes that travel with the filter","DRAW: your own resonance shape, drawn on the display","Slope from 18 dB per octave to a wall","DIRTY switch that feeds the filter's own distortion back through itself","Auto filter driven by a clock, with swing and start phase","Whole plug-in bypass","Sidechain that follows another signal","Visualizer that pops out into its own window","Resizable window","Zero latency","Universal binary, Apple Silicon and Intel","Works offline"],"keywords":"lofi plugin, 12 bit, bitcrusher, sample rate reduction, filter plugin, resonant filter VST, auto filter, sidechain filter, lo-fi hip hop, boom bap, sampler sound, AU plugin, VST3, macOS audio plugin, character filter","softwareRequirements":"macOS 10.13 or later, or Windows 10 or later 64-bit; a host supporting AU or VST3, or none for the standalone","@id":"https://gazillionindustries.com/f12.html#f12","author":{"@id":"https://gazillionindustries.com/#tony"},"publisher":{"@id":"https://gazillionindustries.com/#gazillion"},"creator":{"@id":"https://gazillionindustries.com/#tony"},"installUrl":"https://gazillionindustries.com/f12.html","datePublished":"2026-09-01","inLanguage":"en","offers":{"@type":"Offer","priceCurrency":"USD","price":"49.00","availability":"https://schema.org/InStock"},"video":{"@id":"https://gazillionindustries.com/f12.html#demo"},"screenshot":"https://gazillionindustries.com/f12/f12-demo-20260909-poster.jpg"},{"@type":"VideoObject","@id":"https://gazillionindustries.com/f12.html#demo","name":"F(ilter)12 demo","description":"The F(ilter)12 plug-in demonstrated over a loop.","thumbnailUrl":"https://gazillionindustries.com/f12/f12-demo-20260909-poster.jpg","contentUrl":"https://gazillionindustries.com/f12/f12-demo-20260909.mp4","uploadDate":"2026-09-09","duration":"PT28S","width":1080,"height":1920,"inLanguage":"en","isPartOf":{"@id":"https://gazillionindustries.com/f12.html#f12"}},{"@type":"Organization","@id":"https://gazillionindustries.com/#gazillion","name":"Gazillion Industries LLC","alternateName":"Gazillion Industries","url":"https://gazillionindustries.com/","email":"tony@gazillionindustries.com","founder":{"@id":"https://gazillionindustries.com/#tony"}},{"@type":"Person","@id":"https://gazillionindustries.com/#tony","name":"Tony Barko","alternateName":"Anthony Greg Barko","jobTitle":"Founder","worksFor":{"@id":"https://gazillionindustries.com/#gazillion"},"sameAs":["https://apps.apple.com/us/developer/anthony-greg-barko/id1866031805"]},{"@type":"WebSite","@id":"https://gazillionindustries.com/#website","url":"https://gazillionindustries.com/","name":"Gazillion Industries","inLanguage":"en","publisher":{"@id":"https://gazillionindustries.com/#gazillion"}}]}</script>
 <!-- Same Umami site and same Meta pixel as the sibling page: one business, one
      property. Keeping them identical is what lets the two pages be compared. -->
-<script>window.GZCloudBeforeSend=function(t,p){return t==='event'&&!p.name?p:false;};</script>
-<script defer src="/traffic.js?v=7357648af0f7"></script>
+<script>window.GZCloudBeforeSend=function(t,p){if(t!=='event'||p.name)return false;if(window.GZLanding)p.url=window.GZLanding.pagePath;return p;};</script>
+<script defer src="/traffic.js?v=81a2090ed257"></script>
 <script async src="https://cloud.umami.is/script.js" data-auto-track="false" data-before-send="GZCloudBeforeSend" onload="window.GZTraffic?.attachUmami()" onerror="window.GZTraffic?.attachUmami()"
         data-website-id="ed71399d-1069-4354-abbf-73dc311e5bc3"
         data-domains="gazillionindustries.com,www.gazillionindustries.com"></script>
@@ -251,7 +53,7 @@ if (/^(www\.)?gazillionindustries\.com$/i.test(location.hostname)) {
   window.dataLayer = window.dataLayer || [];
   window.gtag = function(){ window.dataLayer.push(arguments); };
   gtag("js", new Date());
-  gtag("config", "G-2ZY2T73BLK");
+  gtag("config", "G-2ZY2T73BLK", {page_location: window.GZLanding ? window.GZLanding.analyticsUrl : location.href.split("#")[0]});
 }
 </script>
 <script data-endpoint="https://board.gazillionindustries.com/presence/collect" defer src="presence.js?v=9a9f6e53c99a" data-product="f12"></script>
@@ -1391,7 +1193,7 @@ function track(name, props){
    which is why ON PAGE sat at zero with people plainly on the page. EVENT
    metrics are not bucketed and come back immediately, so this fires one.
    The tag is deferred, hence the short wait for it rather than a bare call. */
-var GZ_AD = window.GZ_ATTR.paid;
+var GZ_AD = !!(window.GZ_ATTR && window.GZ_ATTR.paid);
 
 (function buyClicks(){
   var links = document.querySelectorAll("a.cta");
@@ -1403,7 +1205,7 @@ var GZ_AD = window.GZ_ATTR.paid;
         // and silently ignores a url filter, so the event name is the only way
         // a product's clicks can be told apart. DRUGS keeps the bare
         // "buy_click" so its history stays one continuous series.
-        window.GZ_ATTR.mark("buy", "f12");
+        window.GZ_ATTR?.mark("buy", "f12");
         track("buy_click_f12", {position: a.getAttribute("data-pos") || "unknown"});
         // Standard event name kept standard so the ad sets can still optimise
         // for InitiateCheckout across the business; the product is carried in

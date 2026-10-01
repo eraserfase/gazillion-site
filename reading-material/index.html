@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <meta charset="utf-8">
+<script src="/landing-url.js?v=64d97a7417af"></script>
 <!-- The guides index. Reached from one small footer link on the storefront,
      on purpose: it exists so search engines can find and connect the guides,
      not to pull buyers out of the shelf. Add every new guide to the list and to
@@ -14,8 +15,8 @@
 <meta property="og:title" content="Reading material">
 <meta property="og:url" content="https://gazillionindustries.com/reading-material/">
 <meta property="og:image" content="https://gazillionindustries.com/og.jpg">
-<script>window.GZCloudBeforeSend=function(t,p){return t==='event'&&!p.name?p:false;};</script>
-<script defer src="/traffic.js?v=37092f63d724"></script>
+<script>window.GZCloudBeforeSend=function(t,p){if(t!=='event'||p.name)return false;if(window.GZLanding)p.url=window.GZLanding.pagePath;return p;};</script>
+<script defer src="/traffic.js?v=81a2090ed257"></script>
 <script async src="https://cloud.umami.is/script.js" data-auto-track="false" data-before-send="GZCloudBeforeSend" onload="window.GZTraffic?.attachUmami()" onerror="window.GZTraffic?.attachUmami()"
         data-website-id="ed71399d-1069-4354-abbf-73dc311e5bc3"
         data-domains="gazillionindustries.com,www.gazillionindustries.com"></script>
@@ -29,7 +30,7 @@ if (/^(www\.)?gazillionindustries\.com$/i.test(location.hostname)) {
   window.dataLayer = window.dataLayer || [];
   window.gtag = function(){ window.dataLayer.push(arguments); };
   gtag("js", new Date());
-  gtag("config", "G-2ZY2T73BLK");
+  gtag("config", "G-2ZY2T73BLK", {page_location: window.GZLanding ? window.GZLanding.analyticsUrl : location.href.split("#")[0]});
 }
 </script>
 <script type="application/ld+json">

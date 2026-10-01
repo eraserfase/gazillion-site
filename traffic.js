@@ -53,7 +53,7 @@
     } catch (_) { return ''; }
   }
   function base(type) {
-    var attr = window.GZ_ATTR || {}, query = new URLSearchParams(location.search || '');
+    var attr = window.GZ_ATTR || {}, query = new URLSearchParams(window.GZLanding ? window.GZLanding.search : location.search || '');
     var b = {v:2,type:type,event_id:nonce(),page_id:pageId,host:host,path:location.pathname};
     var display = window.screen;
     if (display && Number.isInteger(display.width) && Number.isInteger(display.height)
@@ -140,7 +140,7 @@
   }
   // Cloud's own automatic pageviews continue, while custom events/properties
   // have one owner below and no longer consume its event allowance.
-  window.GZCloudBeforeSend=function(type,payload){return type==='event' && !payload.name ? payload : false;};
+  window.GZCloudBeforeSend=function(type,payload){if(type!=='event' || payload.name)return false;if(window.GZLanding)payload.url=window.GZLanding.pagePath;return payload;};
   window.GZTraffic={version:'owned-observations-20260919',attachUmami:attachUmami,track:track};
   function start() {
     if (started) return; started=true;pageview();
