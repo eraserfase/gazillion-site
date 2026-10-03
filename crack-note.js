@@ -90,7 +90,7 @@
   }
   if (marked) { bye(); return; }
 
-  var REFERRERS = /(^|\.)(hideyou\.me|audiolove\.me|audiolove\.info|audioz\.download|audio\.tools|goaudio\.net|dl4all\.org|plugincrack\.com|peeplink\.in)$/i;
+  var REFERRERS = /(^|\.)(hideyou\.me|audiolove\.me|audiolove\.info|audioz\.download|audio\.tools|goaudio\.net|dl4all\.org|plugincrack\.com|peeplink\.in|minidl\.org|vstclub\.com|oneddl\.org|vstorrent\.org|plugintorrent\.com)$/i;
   var live = /^(www\.)?gazillionindustries\.com$/i.test(location.hostname);
   var cfg = window.GZ_CRACK_NOTE || {};
   var from = '';
