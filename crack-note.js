@@ -11,6 +11,85 @@
    Without yesUrl the note does not show at all on the live site.
    Preview on any non-production host with ?cracknote=1. */
 (function () {
+  // "no" marks this browser; from then on every page carrying this script shows the goodbye screen
+  // in place of the site. It is a browser mark, not an IP ban - this site has no server to refuse anyone.
+  var BYE_KEY = 'gz-crack-bye';
+  function bye() {
+    var s = document.createElement('style');
+    s.textContent = 'html,body{overflow:hidden!important}.gz-bye{position:fixed;inset:0;z-index:2147483647;background:#000;color:#fff;' +
+      'display:flex;align-items:center;justify-content:center;padding:24px;text-align:center;' +
+      'font:700 clamp(22px,5vw,40px)/1.25 -apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif}' +
+      '.gz-bye canvas{position:absolute;inset:0;width:100%;height:100%}' +
+      '.gz-bye span{position:relative;text-shadow:0 0 18px #000,0 0 6px #000}';
+    var d = document.createElement('div');
+    d.className = 'gz-bye';
+    var cv = document.createElement('canvas');
+    var words = document.createElement('span');
+    words.textContent = 'aight then, bet. bye felicia.';
+    d.appendChild(cv);
+    d.appendChild(words);
+    function put() { document.head.appendChild(s); document.body.appendChild(d); rain(cv); }
+    if (document.body) put(); else document.addEventListener('DOMContentLoaded', put);
+  }
+  // The same flood the launch board drops on a sale (burst across the whole screen, then a steady
+  // fall with drift and spin) - here it never stops, and the drops are laugh-cry faces.
+  function rain(cv) {
+    var ctx = cv.getContext && cv.getContext('2d');
+    if (!ctx) return;
+    var still = window.matchMedia && matchMedia('(prefers-reduced-motion:reduce)').matches;
+    var spr = document.createElement('canvas');
+    spr.width = spr.height = 96;
+    var sx = spr.getContext('2d');
+    sx.font = '72px "Apple Color Emoji","Segoe UI Emoji","Noto Color Emoji",sans-serif';
+    sx.textAlign = 'center'; sx.textBaseline = 'middle';
+    sx.fillText('😂', 48, 52);
+    var W = 0, H = 0, dpr = 1, parts = [], last = performance.now(), acc = 0;
+    function size() {
+      W = innerWidth; H = innerHeight;
+      dpr = Math.min(window.devicePixelRatio || 1, 2);
+      cv.width = Math.round(W * dpr); cv.height = Math.round(H * dpr);
+    }
+    function drop(across) {
+      var sc = 0.4 + Math.random() * 0.5;
+      parts.push({ s: sc, x: Math.random() * W,
+        y: across ? Math.random() * H : -96 * sc - Math.random() * H * 0.25,
+        vy: (300 + Math.random() * 420) / 1000, vx: (Math.random() - 0.5) * 120 / 1000,
+        rot: Math.random() * 7, vr: (Math.random() - 0.5) * 0.004 });
+    }
+    function draw(dt) {
+      ctx.setTransform(1, 0, 0, 1, 0, 0);
+      ctx.clearRect(0, 0, cv.width, cv.height);
+      for (var i = 0; i < parts.length; i++) {
+        var p = parts[i];
+        p.y += p.vy * dt; p.x += p.vx * dt; p.rot += p.vr * dt;
+        var c = Math.cos(p.rot) * dpr, n = Math.sin(p.rot) * dpr;
+        ctx.setTransform(c, n, -n, c, p.x * dpr, p.y * dpr);
+        ctx.drawImage(spr, -48 * p.s, -48 * p.s, 96 * p.s, 96 * p.s);
+      }
+    }
+    size();
+    var density = Math.max(0.35, Math.min(1.6, (W * H) / (1280 * 800)));
+    for (var i = 0, n = Math.round(110 * density); i < n; i++) drop(true);
+    if (still) { draw(0); return; }
+    addEventListener('resize', size);
+    (function frame(at) {
+      var dt = Math.min(64, at - last); last = at;
+      acc += dt * (26 * density / 1000);
+      while (acc >= 1 && parts.length < 420 * density) { acc -= 1; drop(false); }
+      if (acc > 1) acc = 1;
+      draw(dt);
+      parts = parts.filter(function (p) { return p.y < H + 120; });
+      requestAnimationFrame(frame);
+    })(last);
+  }
+  var marked = false;
+  try { marked = localStorage.getItem(BYE_KEY) === '1'; } catch (e) {}
+  if (!/^(www\.)?gazillionindustries\.com$/i.test(location.hostname) && /[?&]cracknote=reset/.test(location.search)) {
+    try { localStorage.removeItem(BYE_KEY); } catch (e) {}
+    marked = false;
+  }
+  if (marked) { bye(); return; }
+
   var REFERRERS = /(^|\.)(hideyou\.me|audiolove\.me|audiolove\.info|audioz\.download|audio\.tools|goaudio\.net|dl4all\.org|plugincrack\.com|peeplink\.in)$/i;
   var live = /^(www\.)?gazillionindustries\.com$/i.test(location.hostname);
   var cfg = window.GZ_CRACK_NOTE || {};
@@ -106,7 +185,12 @@
   no.type = 'button';
   no.className = 'gz-cn-no';
   no.textContent = 'no';
-  no.addEventListener('click', function () { track('crack_note_no'); close(); });
+  no.addEventListener('click', function () {
+    track('crack_note_no');
+    try { localStorage.setItem(BYE_KEY, '1'); } catch (e) {}
+    close();
+    bye();
+  });
   btns.appendChild(yes);
   btns.appendChild(no);
   card.appendChild(btns);
