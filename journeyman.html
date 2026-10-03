@@ -336,7 +336,7 @@
 .fold .track{position:relative}
 .fold .slide{height:var(--slide-h)}
 .fold .carousel .product{height:100%;width:auto;max-width:100%;object-fit:contain;box-shadow:none;border-radius:0}
-.fold .carousel video{box-shadow:none;border-radius:0}
+.fold .carousel video{box-shadow:none;border-radius:0;background:transparent;height:100%;width:auto;max-width:100%;object-fit:contain}
 .fold .dots{height:24px;margin:10px 0 0}
 .carousel.is-single .nav,.carousel.is-single .dots{display:none}
 .carousel.is-single .slide{flex-basis:100%;margin:0;opacity:1;transform:none}
@@ -404,10 +404,11 @@ fbq('track', 'PageView');
   <div class="layer tree" id="tree3" style="--st:11s;animation-delay:-1s" aria-hidden="true"></div>
 
   <div class="fold">
-    <div class="carousel is-single" aria-label="JOURNEYMAN product gallery">
+    <div class="carousel" aria-label="JOURNEYMAN product gallery">
       <div class="track" id="track">
         <!-- PRODUCT-MEDIA:START -->
-<div class="slide is-active"><img class="product" src="journeyman/gui-2x.png" width="1360" height="1800" alt="JOURNEYMAN panel"></div>
+<div class="slide is-active"><div class="player"><video id="demo" playsinline preload="none" muted loop width="720" height="1166" poster="journeyman/journeyman-demo-v1.webp" data-webm="journeyman/journeyman-demo-v1.webm" data-hevc="journeyman/journeyman-demo-v1.mov" data-name="the JOURNEYMAN demo" aria-label="JOURNEYMAN demo"></video><button class="play-badge" type="button" aria-label="Play the JOURNEYMAN demo with sound from the beginning"><span class="disc" aria-hidden="true"></span><span class="say">sound on</span></button></div></div>
+<div class="slide"><img class="product" src="journeyman/gui-2x.png" width="1360" height="1800" alt="JOURNEYMAN panel"></div>
 <!-- PRODUCT-MEDIA:END -->
       </div>
       <button class="nav nav--prev" type="button" aria-label="Previous">&lsaquo;</button>
@@ -795,6 +796,6 @@ var GZ_AD = !!(window.GZ_ATTR && window.GZ_ATTR.paid);
 })();
 </script>
 <script defer src="video-audio-focus.js"></script>
-<script defer src="demo-playback.js"></script>
+<script defer src="beefy-demo.js?v=20260914-live-clip"></script>
 </body>
 </html>
