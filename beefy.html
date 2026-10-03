@@ -115,6 +115,12 @@ main{max-width:720px;margin:0 auto;padding:calc(var(--banner-h) + 24px) 25px 0}.
 .slide .panel{height:100%;width:auto;max-width:100%;object-fit:contain;filter:none}
 .player{position:relative;display:flex;align-items:center;justify-content:center;width:min(100%,calc(var(--slide-height) * 1080 / 1920));max-width:100%}
 .player video{display:block;width:100%;height:auto;aspect-ratio:1080/1920;object-fit:contain;background:transparent}
+/* The demo is the panel alone, the size of the still slides; its captions are page text under the circle,
+   set in the face of the wordmark's own two lines. */
+.player--panel{width:min(100%,calc(var(--slide-height) * 1000 / 1600))}.player--panel video{aspect-ratio:1000/1600}
+@font-face{font-family:BeefyLogo;src:url('beefy/LilitaOne-Regular.ttf') format('truetype');font-weight:400;font-style:normal;font-display:swap}
+.demo-captions{position:relative;z-index:1;width:min(84%,22em);min-height:2.24em;margin:calc(10px - var(--cap-spare,0px)) auto 0;font-family:BeefyLogo,BeefyCartoon,'Comic Sans MS',sans-serif;font-weight:400;font-size:26px;line-height:1.12;text-align:center;text-wrap:balance;color:var(--ink);pointer-events:none}
+.carousel .nav{top:calc(var(--slide-height) / 2)}
 .play-badge{display:none;position:absolute;inset:0;z-index:2;align-items:center;justify-content:center;flex-direction:column;gap:14px;border:0;background:transparent;padding:0;margin:0}
 .player.is-ready .play-badge{display:flex}.player.is-started .play-badge{display:none}
 .play-badge .disc{width:64px;height:64px;border-radius:50%;background:var(--paper);border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;box-shadow:3px 3px 0 var(--ink)}
@@ -129,7 +135,7 @@ main{max-width:720px;margin:0 auto;padding:calc(var(--banner-h) + 24px) 25px 0}.
 .dots{display:flex;justify-content:center;gap:0;height:34px;margin:0}
 .dot{display:grid;place-items:center;width:44px;height:34px;border:0;padding:0;background:transparent}.dot::after{content:"";width:8px;height:8px;border-radius:50%;background:var(--ink);opacity:.3}.dot[aria-current="true"]::after{opacity:1;box-shadow:0 0 0 2px var(--paper)}
 .demo-status{position:absolute;bottom:10px;left:0;right:0;margin:0;text-align:center;background:var(--paper);font-size:15px;padding:8px}
-@media(max-width:480px){.carousel{--slide-height:clamp(365px,58svh,500px)}.carousel .stage::before{transform:translateY(-24px) rotate(-5deg)}}
+@media(max-width:480px){.demo-captions{font-size:20px}.carousel{--slide-height:clamp(365px,58svh,500px)}.carousel .stage::before{transform:translateY(-24px) rotate(-5deg)}}
 
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
 /* Gumroad reviews, 19 Sep 2026: one paper card per view (the same card as .said),
@@ -222,10 +228,10 @@ main{max-width:720px;margin:0 auto;padding:calc(var(--banner-h) + 24px) 25px 0}.
     <div class="stage">
     <div class="track" id="beefy-track" tabindex="0">
       <div class="slide is-active" role="group" aria-roledescription="slide" aria-label="1 of 4: demo">
-        <div class="player">
+        <div class="player player--panel">
           <video id="demo-new" playsinline preload="none" muted loop
-                 width="720" height="1280" poster="beefy/beefy-demo-portrait-v4.webp"
-                 data-webm="beefy/beefy-demo-portrait-v4.webm" data-hevc="beefy/beefy-demo-portrait-v4.mov"
+                 width="720" height="1152" poster="beefy/beefy-demo-panel-v5.webp"
+                 data-webm="beefy/beefy-demo-panel-v5.webm" data-hevc="beefy/beefy-demo-panel-v5.mov"
                  aria-label="BEEFY drum demo: before-and-after comparisons"></video>
           <button class="play-badge" type="button" aria-label="Play the BEEFY demo with sound from the beginning">
             <span class="disc" aria-hidden="true"></span><span class="say">sound on</span>
@@ -255,6 +261,7 @@ main{max-width:720px;margin:0 auto;padding:calc(var(--banner-h) + 24px) 25px 0}.
       </div>
     </div>
     </div>
+    <p class="demo-captions" id="demo-captions" aria-hidden="true"></p>
     <button class="nav nav--prev" type="button" aria-label="Previous slide">&#8249;</button>
     <button class="nav nav--next" type="button" aria-label="Next slide">&#8250;</button>
     <div class="dots" role="group" aria-label="Choose BEEFY slide">
@@ -445,6 +452,32 @@ main{max-width:720px;margin:0 auto;padding:calc(var(--banner-h) + 24px) 25px 0}.
   });
   addEventListener('resize', syncSlides);
   syncSlides();
+  // Demo captions: page text under the circle, in step with the video.
+  const capVideo = document.getElementById('demo-new');
+  const capBox = document.getElementById('demo-captions');
+  if (capVideo && capBox) {
+    const cues = [[0.25,2.78,"This is BEEFY,"],[2.78,4.68,"a loudness and saturation plugin"],[4.68,6.59,"by GAZILLION INDUSTRIES."],[6.62,8.52,"You may be wondering, what does it do?"],[8.55,10.22,"Well... I'll show you."],[10.25,15.77,"Here are some drums without BEEFY."],[15.92,21.6,"And now those same drums, with BEEFY."],[21.75,24.5,"Without BEEFY."],[24.65,28.97,"With BEEFY."],[29.18,32.03,"The soft clipper has automatic gain staging,"],[32.03,33.53,"which takes the guesswork"],[33.53,35.37,"out of making your drums slap,"],[35.37,36.29,"every time."],[36.32,43.1,"It sounds great on sub bass,"],[43.28,45.35,"and you can even put it on a master bus."],[45.38,47.23,"There is some serious processing"],[47.23,48.75,"going on under the hood."],[48.78,50.33,"But let's not get too concerned"],[50.33,51.82,"with how the sausage is made."],[51.85,53.58,"When your beats smack this hard,"],[53.58,55.43,"you don't ask too many questions."],[55.48,56.25,"BEEFY,"],[56.25,59.33,"by GAZILLION INDUSTRIES."]];
+    const capSlide = capVideo.closest('.slide'), capPlayer = capVideo.closest('.player');
+    let capShown = -2, capFrame = 0;
+    function capDraw() {
+      const live = capSlide.classList.contains('is-active') && (capVideo.currentTime > 0 || !capVideo.paused);
+      const t = capVideo.currentTime, i = live ? cues.findIndex(c => t >= c[0] && t < c[1]) : -1;
+      if (i !== capShown) { capShown = i; capBox.textContent = i < 0 ? '' : cues[i][2]; }
+    }
+    function capLoop() { capDraw(); capFrame = capVideo.paused ? 0 : requestAnimationFrame(capLoop); }
+    ['play', 'playing', 'pause', 'seeked', 'timeupdate', 'emptied'].forEach(name => capVideo.addEventListener(name, () => {
+      capDraw(); if (!capVideo.paused && !capFrame) capFrame = requestAnimationFrame(capLoop);
+    }));
+    // Where the slide is taller than the panel (phones), pull the line up to sit right under the panel.
+    function capPlace() {
+      const spare = Math.max(0, (capSlide.clientHeight - capPlayer.clientHeight) / 2);
+      capBox.style.setProperty('--cap-spare', spare + 'px');
+      scheduleFit();
+    }
+    addEventListener('resize', capPlace);
+    capVideo.addEventListener('loadedmetadata', capPlace);
+    capPlace();
+  }
   const wink = document.querySelector('.wink-animation');
   const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
   let winkVisible = false;
