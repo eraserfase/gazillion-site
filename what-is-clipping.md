@@ -313,7 +313,7 @@ BEEFY is our saturation and loudness effect. **SOFT CLIP** opens switched on and
 
 For the job on this page it goes on the element or the bus making the peak, which on a kit is usually the snare and the hats rather than the kick. SOFT CLIP opens switched on because it handles the initial gain staging, so the clipping finds the sound without you hunting for a magic input level, and you can still add BEEF on top. COOK is the control to watch here, because brighter is the direction that puts more energy into the range this page has been measuring, so if the residue test starts buzzing, COOK is the first thing to pull back.
 
-Run the residue test on it the way this page describes. Two copies of the same bounce, one through BEEFY, matched by peak, one polarity flipped, and listen to what is left. Short bursts on the hits means the harmonics are landing where they should. It is $19, one payment, Mac and Windows, with AU, VST3 and a Mac standalone. The panel resizes and remembers its size, it opens at 80 percent, and the cow reacts to the audio, which is not a metering feature and is not going anywhere.
+Run the residue test on it the way this page describes. Two copies of the same bounce, one through BEEFY, matched by peak, one polarity flipped, and listen to what is left. Short bursts on the hits means the harmonics are landing where they should. It is $39, one payment, Mac and Windows, with AU, VST3 and a Mac standalone. The panel resizes and remembers its size, it opens at 80 percent, and the cow reacts to the audio, which is not a metering feature and is not going anywhere.
 
 The thing every meter warns you about, used on purpose, two decibels at a time.
 

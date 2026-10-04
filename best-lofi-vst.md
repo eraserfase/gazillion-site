@@ -15,7 +15,7 @@ Straight answer, and the conflict of interest first: the four plugins on this pa
 
 - **Bandwidth and grain**: F(ilter)12 — filter and 12 bit crush on one face, $49, DRUGS included
 
-- **The medium**: TRIPLE OG — cassette tape simulation with a playable transport, $29
+- **The medium**: TRIPLE OG — cassette tape simulation with a playable transport, $39
 
 - **Speed and pitch**: SKRUU — varispeed, with pitch and time on separate knobs, $29
 
@@ -53,7 +53,7 @@ Behind the pair sits the filter, which is why the two are on one face. **POSITIO
 
 The second job is the thing the music was recorded onto. A medium contributes four signatures at once, which is why one medium plugin tends to do more work than three specialists: reduced bandwidth, a noise floor that sits under the quiet parts, saturation that comes in gradually rather than as a wall, and a speed that never holds perfectly still. Those four arriving together is what the ear reads as age.
 
-TRIPLE OG is our cassette tape simulation, $29, Mac and Windows, AU, VST3 and standalone. **TONE** sets playback brightness and **DRIVE** the thickness. **AGE** runs from nought to sixty years and makes the tape darker, noisier and less steady as it climbs, which is one control instead of three. **HISS** is a continuous broadband bed, partly decorrelated across the channels so it survives a fold to mono. **WOW FLUT** is the speed instability.
+TRIPLE OG is our cassette tape simulation, $39, Mac and Windows, AU, VST3 and standalone. **TONE** sets playback brightness and **DRIVE** the thickness. **AGE** runs from nought to sixty years and makes the tape darker, noisier and less steady as it climbs, which is one control instead of three. **HISS** is a continuous broadband bed, partly decorrelated across the channels so it survives a fold to mono. **WOW FLUT** is the speed instability.
 
 The transport is the half almost nothing else offers. **SLAM** stops the tape and returns it in sync, so the beat is where it should be when the machine comes back. **SCRUB** runs the head backward and springs home. **CATCH** drags, then sprints to catch up. Those are performance moves rather than settings, and they are the reason a lot of people searching for the best lofi tape VST end up wanting a machine rather than a saturation curve.
 
@@ -105,7 +105,7 @@ Four gaps, stated plainly, because the fastest way to waste money in this catego
 
 **No space.** None of the four is a reverb or a delay. A great deal of what people hear as lofi is actually a small dark room around a dry sample, and no amount of bit reduction substitutes for it.
 
-**No loudness.** BEEFY, our saturation and soft clipping plugin at $19, is not a lofi tool and we would rather say so than sell it to you sideways. It makes things bigger and more present, which is the opposite journey from the one this page is about. It belongs after the lofi chain, or on a different record.
+**No loudness.** BEEFY, our saturation and soft clipping plugin at $39, is not a lofi tool and we would rather say so than sell it to you sideways. It makes things bigger and more present, which is the opposite journey from the one this page is about. It belongs after the lofi chain, or on a different record.
 
 ## What you probably already own, per host
 
@@ -149,7 +149,7 @@ Step six is the one people skip and it is the one that decides the outcome. Ever
 
 ## What all four cost, and what they cost you
 
-In money: DRUGS is free. TRIPLE OG is $29 and SKRUU is $29. F(ilter)12 is $49 with DRUGS included, so buying F(ilter)12 first and adding the other two comes to $107 for the set. Nobody needs the set on day one.
+In money: DRUGS is free. TRIPLE OG is $39 and SKRUU is $29. F(ilter)12 is $49 with DRUGS included, so buying F(ilter)12 first and adding the other two comes to $117 for the set. Nobody needs the set on day one.
 
 In sound, the costs are more interesting, and each one is real.
 
@@ -185,7 +185,7 @@ Two plugins in series, in this order: something that damages the sound, then som
 
 ### What is the best lofi tape VST?
 
-Look for speed instability and a transport, because saturation on its own is available almost everywhere. A tape plugin that only warms the signal is doing the same job as the saturator already in your host. TRIPLE OG is ours, at $29, with SLAM, SCRUB and CATCH on the face. Others are surveyed in [best lofi plugins](https://gazillionindustries.com/best-lofi-plugins/).
+Look for speed instability and a transport, because saturation on its own is available almost everywhere. A tape plugin that only warms the signal is doing the same job as the saturator already in your host. TRIPLE OG is ours, at $39, with SLAM, SCRUB and CATCH on the face. Others are surveyed in [best lofi plugins](https://gazillionindustries.com/best-lofi-plugins/).
 
 ### What is the best VST for lofi hip hop specifically?
 

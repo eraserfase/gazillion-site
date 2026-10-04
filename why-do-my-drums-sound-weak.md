@@ -281,7 +281,7 @@ BEEFY is our saturation and loudness effect for making sounds thicker, punchier 
 
 Read against this article, the panel is two decisions. JUICE and BEEF decide how much signal reaches the bend, which is how much average level comes up and how many of those phone-friendly harmonics get made. SOFT CLIP and LIMIT are the two ways of handling what is left at the top: one rounds the peak and pays in harmonics, the other holds a ceiling over it and pays in movement. A new instance opens with SOFT CLIP on, JUICE at 0 dB, BEEF at 30 and COOK at 30, which is a reasonable place to take the first decibel off a drum bus. Judge every setting by bypassing the plugin rather than by turning BEEF down.
 
-If the bus needs holding together rather than thickening, [DRUGS](https://gazillionindustries.com/drugs.html) is our free one-knob bus compressor for drums, with a single DOSE control plus GAIN and a soft ceiling on the way out. DOSE at zero is still part of the sound, so bypass it to compare. BEEFY is $19 and runs on Mac and Windows as AU, VST3 and standalone, and there is a 28-second demo with three without/with comparisons on the page.
+If the bus needs holding together rather than thickening, [DRUGS](https://gazillionindustries.com/drugs.html) is our free one-knob bus compressor for drums, with a single DOSE control plus GAIN and a soft ceiling on the way out. DOSE at zero is still part of the sound, so bypass it to compare. BEEFY is $39 and runs on Mac and Windows as AU, VST3 and standalone, and there is a 28-second demo with three without/with comparisons on the page.
 
 Five causes, in order, and the plugin is the fourth one. Check the first three first.
 

@@ -9,7 +9,7 @@ Published 2026-09-25, updated 2026-09-25. By Gazillion Industries, who make BEEF
 
 The beat sounds right in the room and small in the car. So you push the limiter three more decibels, and somewhere around the second chorus the snare goes soft in the middle, like somebody laid a coat over the kit.
 
-A clipper is the tool for that job. It rounds or flattens the tallest peaks where they stand, instantly, so the transient stops growing while everything under it keeps rising. For drums, StandardCLIP at $25 and KClip 3 at $39.99 are the two to demo first. KClip Zero, Free Clip 2 and ClipOnly2 cost nothing. BEEFY is ours at $19, and it is a character clipper rather than a transparent mastering one.
+A clipper is the tool for that job. It rounds or flattens the tallest peaks where they stand, instantly, so the transient stops growing while everything under it keeps rising. For drums, StandardCLIP at $25 and KClip 3 at $39.99 are the two to demo first. KClip Zero, Free Clip 2 and ClipOnly2 cost nothing. BEEFY is ours at $39, and it is a character clipper rather than a transparent mastering one.
 
 ## The short version
 
@@ -21,7 +21,7 @@ A clipper is the tool for that job. It rounds or flattens the tallest peaks wher
 
 - **Already installed**: Fruity Soft Clipper, Live's Saturator, Logic's Clip Distortion
 
-- **Character**: BEEFY, $19 — ours, SOFT CLIP or LIMIT as the out stage
+- **Character**: BEEFY, $39 — ours, SOFT CLIP or LIMIT as the out stage
 
 - **Prices**: read 24 September 2026 on each maker's own page
 
@@ -81,15 +81,15 @@ Free Clip 2 is the current version and ships as part of Venn Audio's free suite,
 
 For anyone searching for the best free soft clipper VST with an actual interface and a drive control, this is the first one to install. It costs a download.
 
-### BEEFY — $19, and what it is not
+### BEEFY — $39, and what it is not
 
-We make it, so read this as disclosure rather than a review. BEEFY is $19, Mac and Windows, AU, VST3 and standalone. Three knobs: BEEF for weight and density, COOK for color and bite, JUICE for the level going in. SOFT CLIP and LIMIT are separate switchable output stages and either can be off. New instances open with SOFT CLIP already on, JUICE at 0 dB, BEEF at 30 and COOK at 30, so the gain staging is handled before you touch anything.
+We make it, so read this as disclosure rather than a review. BEEFY is $39, Mac and Windows, AU, VST3 and standalone. Three knobs: BEEF for weight and density, COOK for color and bite, JUICE for the level going in. SOFT CLIP and LIMIT are separate switchable output stages and either can be off. New instances open with SOFT CLIP already on, JUICE at 0 dB, BEEF at 30 and COOK at 30, so the gain staging is handled before you touch anything.
 
 What it does not have: no oversampling switch, no multiband, no mid-side, no ceiling control you can dial to an arbitrary number. Its output ceiling is a sample-peak limit at −0.3 dBFS, and a sample-peak limit is not a true-peak guarantee, so a true-peak limiter still goes after it on a master. On very bright material, feed it more gently than you would feed a 256x clipper, because there is nothing upstairs catching the harmonics.
 
 What it does have: the drive-it-and-it-gets-bigger job at a fifth of the price of the broad mastering clippers, with color on the way. If your actual need is "make these drums hit harder without the meter moving", that is the entire design brief.
 
-[BEEFY](https://gazillionindustries.com/beefy.html) is ours at $19, and it is a character tool rather than a transparent one. We would rather say that here than sell you a neutrality it does not have. There's a demo on the page.
+[BEEFY](https://gazillionindustries.com/beefy.html) is ours at $39, and it is a character tool rather than a transparent one. We would rather say that here than sell you a neutrality it does not have. There's a demo on the page.
 
 ## The best free clipper plugins, starting with the one already in your DAW
 
@@ -207,7 +207,7 @@ After compression and EQ, before the limiter, last on whichever bus it is treati
 
 ## What BEEFY does
 
-BEEFY is our saturation and loudness plugin for Mac and Windows, $19, in AU, VST3 and standalone. **BEEF** is the main control: more weight, more density, more loudness and more attitude as it climbs. **COOK** moves the color and bite from rounder toward brighter and more cooked. **JUICE** sets the level going in. **SOFT CLIP** is switched on when it opens and handles the initial gain staging; **LIMIT** is the alternative out stage; both can be off, and input and output clip lights watch either end.
+BEEFY is our saturation and loudness plugin for Mac and Windows, $39, in AU, VST3 and standalone. **BEEF** is the main control: more weight, more density, more loudness and more attitude as it climbs. **COOK** moves the color and bite from rounder toward brighter and more cooked. **JUICE** sets the level going in. **SOFT CLIP** is switched on when it opens and handles the initial gain staging; **LIMIT** is the alternative out stage; both can be off, and input and output clip lights watch either end.
 
 It is a character clipper. It has no oversampling switch, no bands and no mid-side, and its ceiling is a sample-peak limit at −0.3 dBFS rather than a true-peak one. If you need a neutral mastering clipper, buy a neutral mastering clipper. If you need a drum bus to sound like it came off something, that is the one we built.
 

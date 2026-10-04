@@ -251,7 +251,7 @@ Do the cassette chain first, then put the result through a filter and a short, d
 
 TRIPLE OG is our cassette tape simulation, a cassette transport rather than a single effect. **TONE** is the playback system's brightness. **HISS** is a broadband bed. **AGE** runs from nought to sixty years, darker, noisier, slightly more saturated, less speed-stable and less matched left to right, all on one knob. **DRIVE** is soft asymmetric saturation that gets dirtier without getting louder. **WOW FLUT** and **CATCH** make the transport drift and jam, **SCRUB** drags the head back by hand, and **SLAM** stops the tape.
 
-It runs on Mac and Windows as AU, VST3 and standalone, and it is $29. Everything above sits on one panel in the order the machine puts it, which is the argument for a transport over a rack of six devices: you stop building the chain and start playing it.
+It runs on Mac and Windows as AU, VST3 and standalone, and it is $39. Everything above sits on one panel in the order the machine puts it, which is the argument for a transport over a rack of six devices: you stop building the chain and start playing it.
 
 Springsteen's four-track didn't sound expensive. It sounded true, and that's what people are still chasing.
 

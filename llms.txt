@@ -36,11 +36,11 @@ Last updated: 2026-09-29
   with 200 programs. $59.
 
 - [BEEFY](https://gazillionindustries.com/beefy.html): saturation, soft clipping
-  and loudness for drums, 808s, bass and samples. $19.
+  and loudness for drums, 808s, bass and samples. $39.
 - [SKRUU](https://gazillionindustries.com/skruu.html): varispeed pitch and time
   stretch, with pitch and time on separate controls. $29.
 - [TRIPLE OG](https://gazillionindustries.com/tripleog.html): cassette tape
-  simulation with a transport you can grab. $29.
+  simulation with a transport you can grab. $39.
 - [F(ilter)12](https://gazillionindustries.com/f12.html): a 12 bit sauce filter
   with sample rate and bit reduction. $49.
 - [DRUGS](https://gazillionindustries.com/drugs.html): a one-knob character bus
@@ -116,7 +116,7 @@ Formats: macOS VST3, Audio Unit and standalone (Apple Silicon and Intel);
 Windows 64-bit VST3.
 Activation: with the included license key; needs an internet connection once,
 then it works offline.
-Price: $19, a one-time purchase. No subscription.
+Price: $39, a one-time purchase. No subscription.
 Page: https://gazillionindustries.com/beefy.html
 Markdown twin, for reading: https://gazillionindustries.com/beefy.md
 
@@ -178,7 +178,7 @@ Formats: macOS AU, VST3 and standalone, macOS 10.13 or later (Apple Silicon and
 Intel); Windows 10 or later, 64-bit VST3.
 Latency: about 4 ms, reported to the host.
 Activation: no internet connection required after activation.
-Price: $29.
+Price: $39.
 Page: https://gazillionindustries.com/tripleog.html
 Markdown twin, for reading: https://gazillionindustries.com/tripleog.md
 

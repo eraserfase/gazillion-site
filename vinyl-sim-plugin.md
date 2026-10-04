@@ -153,7 +153,7 @@ One category under three names, used interchangeably on product pages. Simulator
 
 ### How much does a vinyl sim plugin cost?
 
-Anywhere from nothing to the price of any other paid effect, and the price mostly tracks how many of the four parts are covered rather than how well any one is done. Ours, for the record: DRUGS is free and handles the squash, F12 is $49 for the filter and the digital damage with DRUGS included, TRIPLE OG is $29 for the noise and the instability, SKRUU is $29 for the drift.
+Anywhere from nothing to the price of any other paid effect, and the price mostly tracks how many of the four parts are covered rather than how well any one is done. Ours, for the record: DRUGS is free and handles the squash, F12 is $49 for the filter and the digital damage with DRUGS included, TRIPLE OG is $39 for the noise and the instability, SKRUU is $29 for the drift.
 
 ### Can I get the sound without a vinyl sim plugin?
 

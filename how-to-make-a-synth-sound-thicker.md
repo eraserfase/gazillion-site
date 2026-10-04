@@ -255,7 +255,7 @@ Detuned voices drift in and out of phase alignment, so the peak and the average 
 
 BEEFY is our saturation and loudness plugin, and there's no drum-only rule: feed it a thin synth. It adds body, squeezes some space out of the peaks and brings out harmonics that help a sound feel bigger. Use a little **BEEF** for weight and presence, or push it for an obviously saturated sound. **COOK** moves the color from rounder toward brighter, which on a synth decides how much edge you add.
 
-Every new instance opens the same way: SOFT CLIP on, **JUICE** at 0 dB, BEEF at 30, COOK at 30. On a thin pad that is already a working starting point. Raise BEEF until the body arrives, then set COOK by ear, lower for weight and higher for edge. **LIMIT** is the other output stage: try both at the same drive on a unison patch and keep whichever one leaves the 8 dB swell intact, because that swell is what you spent the voices on. Then pull JUICE back until the processed version matches bypass and decide from there. BEEFY is $19, Mac and Windows, AU, VST3 and standalone.
+Every new instance opens the same way: SOFT CLIP on, **JUICE** at 0 dB, BEEF at 30, COOK at 30. On a thin pad that is already a working starting point. Raise BEEF until the body arrives, then set COOK by ear, lower for weight and higher for edge. **LIMIT** is the other output stage: try both at the same drive on a unison patch and keep whichever one leaves the 8 dB swell intact, because that swell is what you spent the voices on. Then pull JUICE back until the processed version matches bypass and decide from there. BEEFY is $39, Mac and Windows, AU, VST3 and standalone.
 
 Nobody's asking for the whole fog bank. Just more than a strand of floss.
 

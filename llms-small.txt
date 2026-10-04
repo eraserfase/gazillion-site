@@ -3,7 +3,7 @@
 > Audio plug-ins for macOS and Windows: AU, VST3 and standalone. Each does one
 > job and needs no manual. Tuned by ear; none is an emulation of any hardware.
 
-Last updated: 2026-09-29
+Last updated: 2026-10-04
 
 ## Products
 

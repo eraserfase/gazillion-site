@@ -309,7 +309,7 @@ BEEFY is our saturation and loudness plugin. For parallel saturation, put it on 
 
 A new instance opens with SOFT CLIP on, JUICE at 0 dB, BEEF at 30 and COOK at 30, which is a channel setting. On a return you are starting from there and going a long way past it: BEEF is where the work happens, COOK decides whether the return is adding weight or adding bite, and JUICE sets the level going in, so it is the second way to drive the curve harder. **LIMIT** is the alternative output stage to SOFT CLIP, and on a copy you are burying anyway it is worth hearing both.
 
-It runs on Mac and Windows as AU, VST3 and standalone, so the return can be the same blend in whichever DAW the session ends up in, and it is $19. The standalone is the fast way to hear the drive range on a loop before you commit to routing anything.
+It runs on Mac and Windows as AU, VST3 and standalone, so the return can be the same blend in whichever DAW the session ends up in, and it is $39. The standalone is the fast way to hear the drive range on a loop before you commit to routing anything.
 
 Stock and roux, same pot. Nobody at the table asks which one they're tasting.
 

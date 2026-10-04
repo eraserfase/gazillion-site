@@ -19,7 +19,7 @@ The Sausage Fattener is a saturation and loudness plugin released under the Dada
 
 - **Their price**: $39, and $29 at launch in 2011
 
-- **Our price**: $19
+- **Our price**: $39
 
 - **Documented path**: theirs is undisclosed by the makers, by choice
 
@@ -55,7 +55,7 @@ Then two output choices that are separate from each other. **SOFT CLIP** is on w
 
 **What we have not claimed.** We are not saying BEEFY is cleaner, or louder, or more transparent, or better voiced. We have not measured their plugin and we are not going to publish a comparison we did not run.
 
-[BEEFY](https://gazillionindustries.com/beefy.html) is $19 for Mac and Windows, and there is a demo on the page with three without-and-with comparisons. Use your ears rather than this article.
+[BEEFY](https://gazillionindustries.com/beefy.html) is $39 for Mac and Windows, and there is a demo on the page with three without-and-with comparisons. Use your ears rather than this article.
 
 ## Which to reach for
 
@@ -79,7 +79,7 @@ No. BEEFY is tuned by ear, with its own control set: three knobs plus separate s
 
 ### Which one should I buy?
 
-Try both on your own material. Ours is $19 with a demo on its page; theirs is $39 and widely demonstrated. Anyone telling you which sounds better without hearing your track is guessing.
+Try both on your own material. Ours is $39 with a demo on its page; theirs is $39 and widely demonstrated. Anyone telling you which sounds better without hearing your track is guessing.
 
 ## What BEEFY does
 

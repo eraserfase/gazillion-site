@@ -307,7 +307,7 @@ Either the drive is bringing up something the source already had, or the harmoni
 
 BEEFY is our saturation and loudness plugin for making sounds thicker, punchier and more up front, and there's no drum-only rule. Feed it a chopped sample and it adds body, squeezes some space out of the peaks, and brings out harmonics that help the sound feel bigger. **BEEF** sets how much, **COOK** sets how round or bright, and **SOFT CLIP**, on by default, handles the initial gain staging.
 
-Every new instance opens the same way: SOFT CLIP on, **JUICE** at 0 dB, BEEF at 30, COOK at 30. On a thin chop that is already a working start. Raise BEEF until the body arrives, set COOK by ear — lower for weight, higher for the edge that gets a sample through a phone speaker — then pull JUICE back until the processed version matches bypass and decide from there. **LIMIT** is the other output stage: run both at the same drive and keep whichever one leaves the chop's attack intact, because that attack is what tells the listener it was played rather than held. BEEFY is $19, Mac and Windows, AU, VST3 and standalone.
+Every new instance opens the same way: SOFT CLIP on, **JUICE** at 0 dB, BEEF at 30, COOK at 30. On a thin chop that is already a working start. Raise BEEF until the body arrives, set COOK by ear — lower for weight, higher for the edge that gets a sample through a phone speaker — then pull JUICE back until the processed version matches bypass and decide from there. **LIMIT** is the other output stage: run both at the same drive and keep whichever one leaves the chop's attack intact, because that attack is what tells the listener it was played rather than held. BEEFY is $39, Mac and Windows, AU, VST3 and standalone.
 
 Same postcard. Now it's closer to the picture.
 

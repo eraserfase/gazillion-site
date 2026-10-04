@@ -269,7 +269,7 @@ Which is the argument for taking it in pieces. Six decibels removed in one place
 
 Most of it costs nothing, which is worth saying before anybody goes shopping. Every major DAW ships a compressor with an attack control, a limiter and a polarity invert, and that is the complete equipment list for the null test, the detector comparison and the crest-factor ledger above. The measurement half of this article has no price at all.
 
-The paid half is shaping and loudness. [DRUGS](https://gazillionindustries.com/drugs.html) is our one-knob bus compressor for drums, free on Mac and Windows: DOSE does the work, with GAIN and a soft ceiling on the way out, and it does not sit at unity with DOSE at nought, so level-match before you judge it. [BEEFY](https://gazillionindustries.com/beefy.html) is $19, one payment, Mac and Windows, AU, VST3 and standalone. Whatever you use, the honest way to spend money here is to demo against the null test rather than against the loudness, because everything in the category makes the loop louder and the question was always which few milliseconds it took that from.
+The paid half is shaping and loudness. [DRUGS](https://gazillionindustries.com/drugs.html) is our one-knob bus compressor for drums, free on Mac and Windows: DOSE does the work, with GAIN and a soft ceiling on the way out, and it does not sit at unity with DOSE at nought, so level-match before you judge it. [BEEFY](https://gazillionindustries.com/beefy.html) is $39, one payment, Mac and Windows, AU, VST3 and standalone. Whatever you use, the honest way to spend money here is to demo against the null test rather than against the loudness, because everything in the category makes the loop louder and the question was always which few milliseconds it took that from.
 
 ## Questions people ask
 
@@ -407,7 +407,7 @@ BEEFY is a saturation and loudness effect for making sounds thicker, punchier an
 
 Read against this article, the panel is two questions. JUICE and BEEF decide how much signal reaches the bend, which is how far the average comes up. SOFT CLIP and LIMIT are the two ways of handling what is still standing at the top: one rounds the peak, the other holds a ceiling over it, and they are separate switches so you can hear the difference on one hit rather than reason about it. Both off is also an option, and it is the honest starting point for the null test above.
 
-BEEFY is $19, one payment, and runs on Mac and Windows as AU, VST3 and standalone. There is a 28-second demo with three without/with comparisons on the page, which is the fastest way to hear what rounding a peak does to an attack.
+BEEFY is $39, one payment, and runs on Mac and Windows as AU, VST3 and standalone. There is a 28-second demo with three without/with comparisons on the page, which is the fastest way to hear what rounding a peak does to an attack.
 
 Five milliseconds, almost no energy, and the whole difference between a snare and a slap.
 

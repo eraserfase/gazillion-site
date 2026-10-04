@@ -23,7 +23,7 @@ Choose the machine, then the behaviors, then the format. Reel simulations lead o
 
 - **Free first**: an open-source reel model costs nothing to try
 
-- **Our answer**: TRIPLE OG, cassette, $29, Mac and Windows
+- **Our answer**: TRIPLE OG, cassette, $39, Mac and Windows
 
 [TRIPLE OG](https://gazillionindustries.com/tripleog.html) is our cassette sim for Mac and Windows, with the transport on the face rather than in a menu. There is a demo on the page.
 
@@ -41,7 +41,7 @@ Tape emulation bundles six separate things: saturation, compression, high-freque
 
 The short guidance: saturation is available from dozens of plugins you already own and is the weakest reason to pick one. Speed instability is available from almost nothing else, and a playable transport from less still. Weight your decision toward the things that are hard to get elsewhere.
 
-[TRIPLE OG](https://gazillionindustries.com/tripleog.html) is our cassette tape simulation, $29 for Mac and Windows, with the transport on the face rather than in a menu. There's a demo on the page.
+[TRIPLE OG](https://gazillionindustries.com/tripleog.html) is our cassette tape simulation, $39 for Mac and Windows, with the transport on the face rather than in a menu. There's a demo on the page.
 
 The same panel in its light finish. A finish, not a theme — every control sits where it did.
 
@@ -49,7 +49,7 @@ The same panel in its light finish. A finish, not a theme — every control sits
 
 On the free side, open-source physical models of reel machines are genuinely good. CHOW Tape Model is a physical model of an analog tape machine, originally based on a Sony TC-260, described in a paper presented at the DAFx conference in 2019 and released under the GPL, in VST, VST3, AU, AAX, AUv3 and CLAP. What to expect from free, and what it leaves out, is in [free tape plugins](https://gazillionindustries.com/best-free-tape-plugins/).
 
-On the cassette side, Aberrant DSP's SketchCassette II lists at $36 and describes itself as cassette-inspired degradation. Wavesfactory's Cassette lists at €59 and models four cassette tape formulations — ferric oxide, chromium dioxide, ferro-chrome and metal — along with hiss, asperity noise, wow, flutter and crosstalk. TRIPLE OG is $29.
+On the cassette side, Aberrant DSP's SketchCassette II lists at $36 and describes itself as cassette-inspired degradation. Wavesfactory's Cassette lists at €59 and models four cassette tape formulations — ferric oxide, chromium dioxide, ferro-chrome and metal — along with hiss, asperity noise, wow, flutter and crosstalk. TRIPLE OG is $39.
 
 On the reel side, Softube's Tape lists at €99. AudioThing's Reels sits across both, billed as a tape plugin with echo and a tape stop effect, running on macOS, Windows and Linux in every common format, with a trial that goes silent for three seconds every forty-five. Every price here was read off the maker's own page in September 2026; they move, so check before you buy.
 

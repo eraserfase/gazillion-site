@@ -149,7 +149,7 @@ No, and the collision of words costs people hours. Monophonic describes how many
 
 ### What is the best free way to start?
 
-Open what your DAW already has and set its voice count to 1 for an evening. Our free one is [DRUGS](https://gazillionindustries.com/drugs.html), a one-knob drum bus compressor rather than a synth, so it is the free way to get one of ours into your session and not the free way to get a synth. When the synth bass is written and needs weight against the kick, [BEEFY](https://gazillionindustries.com/beefy.html) at $19 is the saturation stage for it, and [how to mix kick and 808](https://gazillionindustries.com/how-to-mix-kick-and-808/) covers the fight between the two.
+Open what your DAW already has and set its voice count to 1 for an evening. Our free one is [DRUGS](https://gazillionindustries.com/drugs.html), a one-knob drum bus compressor rather than a synth, so it is the free way to get one of ours into your session and not the free way to get a synth. When the synth bass is written and needs weight against the kick, [BEEFY](https://gazillionindustries.com/beefy.html) at $39 is the saturation stage for it, and [how to mix kick and 808](https://gazillionindustries.com/how-to-mix-kick-and-808/) covers the fight between the two.
 
 ## What JOURNEYMAN does
 

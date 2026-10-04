@@ -287,7 +287,7 @@ BEEFY is our saturation and loudness effect. **BEEF** brings more weight, more d
 
 Read against this article, the panel is two decisions. JUICE and BEEF set how much of the signal reaches the bend, which is how far the average comes up. SOFT CLIP and LIMIT are the two ways of dealing with what is left at the top: one rounds the peak and pays in harmonics, the other holds a ceiling over it and pays in movement. A new instance opens with SOFT CLIP on, JUICE at 0 dB, BEEF at 30 and COOK at 30, which is a sensible place to take the first decibel off a drum bus before anything reaches the master.
 
-BEEFY is $19, runs on Mac and Windows as AU, VST3 and standalone, and there is a 28-second demo with three without/with comparisons on the page.
+BEEFY is $39, runs on Mac and Windows as AU, VST3 and standalone, and there is a 28-second demo with three without/with comparisons on the page.
 
 One number, measurable in ten seconds, that explains the last decade of arguments about loudness.
 

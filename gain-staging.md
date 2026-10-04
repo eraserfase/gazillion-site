@@ -299,7 +299,7 @@ BEEFY is our saturation and loudness plugin, and it is built so gain staging doe
 
 **BEEF** adds weight, density and loudness from there, and **LIMIT** holds the output peaks if you'd rather have that.
 
-Either output switch is a stage like any other, so the same rule applies to it: level-match before you judge it. Turn SOFT CLIP on, bring the output back to where it was, and listen to what changed about the sound rather than to how much louder it got. That comparison is the only one worth making, on our plugin or anybody's. It is $19 for Mac and Windows; the Mac build includes VST3, Audio Unit and standalone, and Windows is the 64-bit VST3.
+Either output switch is a stage like any other, so the same rule applies to it: level-match before you judge it. Turn SOFT CLIP on, bring the output back to where it was, and listen to what changed about the sound rather than to how much louder it got. That comparison is the only one worth making, on our plugin or anybody's. It is $39 for Mac and Windows; the Mac build includes VST3, Audio Unit and standalone, and Windows is the 64-bit VST3.
 
 Same forty tracks. The limiter is off, the master meter is green, and the beat finally has somewhere to go.
 

@@ -23,7 +23,7 @@ The best free tape plugins cover saturation, high-frequency behavior and the bas
 
 - **Watch for**: reel models when you wanted a cassette; different sound
 
-- **Our answer**: TRIPLE OG, $29, when you want the machine too
+- **Our answer**: TRIPLE OG, $39, when you want the machine too
 
 [TRIPLE OG](https://gazillionindustries.com/tripleog.html) is our cassette sim for Mac and Windows, with the transport on the face rather than in a menu. There is a demo on the page.
 
@@ -45,7 +45,7 @@ That is not a cut-down tool. On saturation and the way the top end behaves under
 
 - **The transport.** Stopping, dragging, rewinding. This is the rarest feature in the category at any price, and it is essentially absent from free tools, because a model of tape running at speed has no reason to have one.
 
-[TRIPLE OG](https://gazillionindustries.com/tripleog.html) is a cassette tape simulation with the transport on the face: **SLAM**, **SCRUB** and **CATCH**. $29, Mac and Windows. There's a demo on the page.
+[TRIPLE OG](https://gazillionindustries.com/tripleog.html) is a cassette tape simulation with the transport on the face: **SLAM**, **SCRUB** and **CATCH**. $39, Mac and Windows. There's a demo on the page.
 
 The whole thing. Top half is the machine, bottom half is the tape, and the **SCRUB on [TRIPLE OG](https://gazillionindustries.com/tripleog.html)** strip along the bottom is played by hand.
 

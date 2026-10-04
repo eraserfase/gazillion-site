@@ -263,7 +263,7 @@ Effectively, yes. Fuzz circuits drive hard enough that the output is close to a 
 
 BEEFY is our saturation and loudness plugin, and it goes from the subtle end to the obvious one. A little **BEEF** fills things out; a lot gets rude. **COOK** moves the color from a rounder feel toward a brighter, more cooked edge, and **SOFT CLIP**, on by default, brings rounded, fuzzy edges to the loudest parts. There is no drum-only rule: it works on synths, samples, keys, guitar and vocals too.
 
-**JUICE** is the input trim from the steps above, built in, so the drive can be set with a number instead of a hunt, and **LIMIT** holds the output peaks if you want the ceiling handled in the same box. Input and output clip lights tell you which end is complaining. It runs as AU, VST3 and standalone on Mac and Windows, and it costs $19.
+**JUICE** is the input trim from the steps above, built in, so the drive can be set with a number instead of a hunt, and **LIMIT** holds the output peaks if you want the ceiling handled in the same box. Input and output clip lights tell you which end is complaining. It runs as AU, VST3 and standalone on Mac and Windows, and it costs $39.
 
 Dave Davies never needed the word. He needed the razor blade, and then he needed to stop.
 

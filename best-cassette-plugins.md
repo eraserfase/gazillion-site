@@ -23,7 +23,7 @@ The best cassette plugins model the things a cassette did badly: narrow bandwidt
 
 - **Prices**: roughly $29 to €59 across the category
 
-- **Our answer**: TRIPLE OG, $29, Mac and Windows
+- **Our answer**: TRIPLE OG, $39, Mac and Windows
 
 [TRIPLE OG](https://gazillionindustries.com/tripleog.html) is our cassette sim for Mac and Windows, with the transport on the face rather than in a menu. There is a demo on the page.
 
@@ -61,11 +61,11 @@ Cassettes came in formulations, and the brightness genuinely differed. Type I wa
 
 Some plugins expose these as a switch — Wavesfactory's Cassette models all four, for example. It is a real distinction, and it is also a smaller one than the difference between a fresh tape and a worn one. If you are choosing between plugins, weight wear and transport above tape type.
 
-[TRIPLE OG](https://gazillionindustries.com/tripleog.html) is our cassette tape simulation, $29 for Mac and Windows. **AGE** runs from nought to sixty years in one control, and the transport is on the face rather than in a menu. There's a demo on the page.
+[TRIPLE OG](https://gazillionindustries.com/tripleog.html) is our cassette tape simulation, $39 for Mac and Windows. **AGE** runs from nought to sixty years in one control, and the transport is on the face rather than in a menu. There's a demo on the page.
 
 ## What the field costs
 
-Cassette plugins sit in a narrow band. Aberrant DSP's SketchCassette II lists at $36 and describes itself as cassette-inspired degradation, drawn from four-track cassette recorders and reaching from subtle warble to what its makers call unearthed-from-the-attic destruction. Wavesfactory's Cassette lists at €59, models the four tape types along with hiss, asperity noise, wow, flutter and crosstalk, and includes a control that runs its processing more than once. Caelum Audio's Tape Cassette 2 works from Type I characteristics and puts wow and flutter on controls its makers say go past what the hardware could manage; it runs as VST3, AU, AAX and AUv3, which is the widest format list in this group. TRIPLE OG is $29.
+Cassette plugins sit in a narrow band. Aberrant DSP's SketchCassette II lists at $36 and describes itself as cassette-inspired degradation, drawn from four-track cassette recorders and reaching from subtle warble to what its makers call unearthed-from-the-attic destruction. Wavesfactory's Cassette lists at €59, models the four tape types along with hiss, asperity noise, wow, flutter and crosstalk, and includes a control that runs its processing more than once. Caelum Audio's Tape Cassette 2 works from Type I characteristics and puts wow and flutter on controls its makers say go past what the hardware could manage; it runs as VST3, AU, AAX and AUv3, which is the widest format list in this group. TRIPLE OG is $39.
 
 Two names come up in the same conversation and are not cassette at all. Softube's Tape models three studio machines at component level, and Chow Tape Model — free and open source, and unusual in this category for having come out of a university class and a 2019 conference paper — emulates a reel-to-reel. Both are good at what they do. Neither is aimed at the thing a cassette does wrong, which is the whole point of a cassette.
 

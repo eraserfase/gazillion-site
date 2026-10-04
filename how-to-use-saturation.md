@@ -283,7 +283,7 @@ BEEFY is our saturation and loudness plugin for making sounds thicker, punchier 
 
 A new instance opens at JUICE 0 dB, BEEF 30, COOK 30 and SOFT CLIP switched on, which is a deliberate starting point rather than a bypass: park it there, play the part, and move one control at a time. JUICE is where the level-matching from this page happens, so drive with BEEF and pay it back with JUICE until active and bypassed read the same. **LIMIT** is the alternative to SOFT CLIP as the output stage, and swapping between the two at identical settings is the fastest way to hear what an output stage is actually for.
 
-It is $19, runs on Mac and Windows, and installs as AU, VST3 and a standalone application, so you can drive a loop into it without opening a session at all. The demo on the product page runs three without-and-with comparisons in 28 seconds, which is a faster answer than anything on this page.
+It is $39, runs on Mac and Windows, and installs as AU, VST3 and a standalone application, so you can drive a loop into it without opening a session at all. The demo on the product page runs three without-and-with comparisons in 28 seconds, which is a faster answer than anything on this page.
 
 Taste first. Then the hot sauce, on the one plate that needed it.
 

@@ -251,7 +251,7 @@ No. On a single held note every harmonic a curve adds is a whole multiple of the
 
 BEEFY is our saturation and loudness plugin, and 808s and bass are very much invited. **SOFT CLIP** opens switched on and brings rounded, fuzzy edges to the loudest parts, adding harmonics above the low end so there's more to hear than just sub. Push **BEEF** and a clean bass note moves toward a growl. **COOK** moves the tone from rounder toward brighter and more bitten. For the split method above, run it on the copy or the return.
 
-A new instance opens with SOFT CLIP on, **JUICE** at 0 dB, BEEF at 30 and COOK at 30, which is a working position rather than a bypass. JUICE is the input trim, so the drive figures in the table above can be set as a number instead of hunted for by ear. **LIMIT** is the alternative to SOFT CLIP on the output, and the two screenshots on this page are that one switch thrown both ways. It runs as AU, VST3 and standalone on Mac and Windows, and it costs $19.
+A new instance opens with SOFT CLIP on, **JUICE** at 0 dB, BEEF at 30 and COOK at 30, which is a working position rather than a bypass. JUICE is the input trim, so the drive figures in the table above can be set as a number instead of hunted for by ear. **LIMIT** is the alternative to SOFT CLIP on the output, and the two screenshots on this page are that one switch thrown both ways. It runs as AU, VST3 and standalone on Mac and Windows, and it costs $39.
 
 Same engine, new muffler. Now the whole block hears it coming.
 

@@ -295,7 +295,7 @@ BEEFY is a saturation and loudness effect for making sounds thicker, punchier an
 
 Set against this article, that distinction is the whole point. Width built from two opposed copies is borrowed, and the sum calls the loan in at 3, 6 or 10 dB depending on how far you pushed the correlation. Loudness built from harmonic content is paid for up front and survives the fold, because it is added to the material rather than arranged around it. When a part feels small, work out which of the two you need before you reach for either.
 
-Judge any processor by the same test you would run on a widener. Insert it, sum to mono, and watch the meter across the switch. If the drop is the same with the plugin engaged as it was without, the plugin is not spending your summed level. **LIMIT** is the other output switch, holding the peaks when you want a ceiling instead of a rounded edge, and both switches sit on the panel next to each other. BEEFY is $19, runs on Mac and Windows as AU, VST3 and standalone, and there is a 28-second demo with three without/with comparisons on the page.
+Judge any processor by the same test you would run on a widener. Insert it, sum to mono, and watch the meter across the switch. If the drop is the same with the plugin engaged as it was without, the plugin is not spending your summed level. **LIMIT** is the other output switch, holding the peaks when you want a ceiling instead of a rounded edge, and both switches sit on the panel next to each other. BEEFY is $39, runs on Mac and Windows as AU, VST3 and standalone, and there is a 28-second demo with three without/with comparisons on the page.
 
 Four playback systems, three of them summing your record. Press the button more often.
 

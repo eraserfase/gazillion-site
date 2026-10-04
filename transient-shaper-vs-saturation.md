@@ -299,7 +299,7 @@ BEEFY is the saturation side of this page: a saturation and loudness effect that
 
 A new instance opens with SOFT CLIP on, JUICE at 0 dB, BEEF at 30 and COOK at 30, which is a working starting point rather than a preset. **JUICE** sets how hard you are feeding the thing, and **LIMIT** is there as the alternative to SOFT CLIP when you want the output peaks held rather than rounded. On a drum bus, keep BEEF low enough that bypass and engaged still sound like the same kit, then level-match and decide.
 
-Run the crest-factor check from above across it and the number goes down, every time, which is the whole point of putting it there. Mac and Windows, AU, VST3 and standalone, $19. More on the method in [how to saturate drums](https://gazillionindustries.com/how-to-saturate-drums/) and [how to make drums hit harder](https://gazillionindustries.com/how-to-make-drums-hit-harder/).
+Run the crest-factor check from above across it and the number goes down, every time, which is the whole point of putting it there. Mac and Windows, AU, VST3 and standalone, $39. More on the method in [how to saturate drums](https://gazillionindustries.com/how-to-saturate-drums/) and [how to make drums hit harder](https://gazillionindustries.com/how-to-make-drums-hit-harder/).
 
 Hire the sprinter, hire the linebacker. Just don't ask either one to play the other's position.
 

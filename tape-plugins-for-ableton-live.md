@@ -1,6 +1,6 @@
 # Tape plugins for Ableton Live
 
-> Roar, Saturator and Erosion cover saturation. Live has no device for speed, cassette noise or a transport. That one is TRIPLE OG, VST3 and AU, $29.
+> Roar, Saturator and Erosion cover saturation. Live has no device for speed, cassette noise or a transport. That one is TRIPLE OG, VST3 and AU, $39.
 
 Source: https://gazillionindustries.com/tape-plugins-for-ableton-live/  
 Published 2026-09-22, updated 2026-09-26. By Gazillion Industries, who make TRIPLE OG.
@@ -9,11 +9,11 @@ Published 2026-09-22, updated 2026-09-26. By Gazillion Industries, who make TRIP
 
 Live gives you a lot of ways to damage a sound and no way to slow one down. Roar, Saturator and Erosion between them cover saturation and degradation thoroughly, and none of them is a tape machine, because none of them touches the one thing tape does that nothing else does: speed.
 
-So the thing you load is [TRIPLE OG](https://gazillionindustries.com/tripleog.html), our cassette tape simulation, $29, as VST3 on Windows and macOS and as an Audio Unit on a Mac. **WOW FLUT** is the speed instability, **HISS** the noise bed, and **SLAM**, **SCRUB** and **CATCH** put the transport on the face, playable while the set runs.
+So the thing you load is [TRIPLE OG](https://gazillionindustries.com/tripleog.html), our cassette tape simulation, $39, as VST3 on Windows and macOS and as an Audio Unit on a Mac. **WOW FLUT** is the speed instability, **HISS** the noise bed, and **SLAM**, **SCRUB** and **CATCH** put the transport on the face, playable while the set runs.
 
 ## The short version
 
-- **Load this**: TRIPLE OG, $29 — speed, cassette noise, a transport
+- **Load this**: TRIPLE OG, $39 — speed, cassette noise, a transport
 
 - **Spend nothing first**: DRUGS is free and loads in Live; a drum bus compressor, not tape
 
@@ -77,7 +77,7 @@ Speed. Every behavior in Live's degradation set processes a signal arriving at t
 
 **WOW/FLUT on [TRIPLE OG](https://gazillionindustries.com/tripleog.html)** is the one control on this page with no counterpart anywhere in Live's device set.
 
-[TRIPLE OG](https://gazillionindustries.com/tripleog.html) loads in Live as VST3 on Windows and macOS, and as an Audio Unit on macOS, and it is $29. **WOW FLUT** and the **SLAM** transport are the parts Live has no device for. There's a demo on the page.
+[TRIPLE OG](https://gazillionindustries.com/tripleog.html) loads in Live as VST3 on Windows and macOS, and as an Audio Unit on macOS, and it is $39. **WOW FLUT** and the **SLAM** transport are the parts Live has no device for. There's a demo on the page.
 
 ## What Live already does well
 
@@ -85,7 +85,7 @@ Speed. Every behavior in Live's degradation set processes a signal arriving at t
 
 **Saturator** was updated in the same version with a Bass Shaper curve and a more focused interface. **Erosion**, Live's signal degradation device, was revamped with real-time spectrum visualization and blending between sine and noise modulation.
 
-So if what you want from tape is harmonic thickening and a bit of grit, you already own it, and reaching for a tape plugin to get saturation in Live is buying something you have. Use Roar or Saturator for the harmonic half and put TRIPLE OG after it for the half they leave alone. That ordering is also the honest case for the $29: the three behaviors Live has none of, rather than more of the one it already gives you.
+So if what you want from tape is harmonic thickening and a bit of grit, you already own it, and reaching for a tape plugin to get saturation in Live is buying something you have. Use Roar or Saturator for the harmonic half and put TRIPLE OG after it for the half they leave alone. That ordering is also the honest case for the $39: the three behaviors Live has none of, rather than more of the one it already gives you.
 
 ## Warping is not varispeed
 
@@ -111,7 +111,7 @@ Repitch mode is the exception and it is the closest thing in Live to a tape beha
 
 ### Does Ableton have a tape emulation plugin?
 
-Not as such. Live has saturation and degradation devices — Roar, Saturator, Erosion — which cover the harmonic side. It has no device for speed instability, cassette noise or a tape transport, which is what a tape plugin gets bought for. Ours is [TRIPLE OG](https://gazillionindustries.com/tripleog.html), $29, VST3 and AU.
+Not as such. Live has saturation and degradation devices — Roar, Saturator, Erosion — which cover the harmonic side. It has no device for speed instability, cassette noise or a tape transport, which is what a tape plugin gets bought for. Ours is [TRIPLE OG](https://gazillionindustries.com/tripleog.html), $39, VST3 and AU.
 
 ### What is the best tape plugin for Ableton?
 
@@ -131,7 +131,7 @@ Our free one is [DRUGS](https://gazillionindustries.com/drugs.html), a one-knob 
 
 ## What TRIPLE OG does
 
-[TRIPLE OG](https://gazillionindustries.com/tripleog.html) is our cassette tape simulation, $29, and in Live it is doing the half the stock devices leave alone. **WOW FLUT** is the speed instability, **HISS** a continuous broadband bed, and **AGE** runs from nought to sixty years, taking wear, noise and stability together. **TONE** and **DRIVE** handle brightness and thickness. The transport is on the face: **SLAM** stops the tape and returns it in sync, **SCRUB** runs the head backward and springs home, and **CATCH** makes it drag and sprint to catch up. VST3 on Windows 10 or later, and on macOS 10.13 or later as VST3, Audio Unit and a standalone app.
+[TRIPLE OG](https://gazillionindustries.com/tripleog.html) is our cassette tape simulation, $39, and in Live it is doing the half the stock devices leave alone. **WOW FLUT** is the speed instability, **HISS** a continuous broadband bed, and **AGE** runs from nought to sixty years, taking wear, noise and stability together. **TONE** and **DRIVE** handle brightness and thickness. The transport is on the face: **SLAM** stops the tape and returns it in sync, **SCRUB** runs the head backward and springs home, and **CATCH** makes it drag and sprint to catch up. VST3 on Windows 10 or later, and on macOS 10.13 or later as VST3, Audio Unit and a standalone app.
 
 Live will make anything sound damaged. It will not make anything sound late.
 

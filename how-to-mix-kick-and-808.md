@@ -241,7 +241,7 @@ Anything that survives all five is finished. The reason the meter is in there tw
 
 Every fix above takes something. Ducking the 808 also ducks whatever the 808 was holding up, so a sparse beat can end up with a hole where the bass used to be continuous. High-passing the kick costs weight on a big system, and you will not hear what you gave away until the record is on one. Tuning a kick to the song changes its character, sometimes into a different drum. Saturating the 808 to make it read on a phone adds midrange that a vocal may want back.
 
-The money side is small. Every DAW in the list above already ships the compressor that does the sidechain, so that half costs nothing. BEEFY is $19 for Mac and Windows if you want the harmonic half handled in one panel, and DRUGS, our one-knob drum bus compressor, is free on both.
+The money side is small. Every DAW in the list above already ships the compressor that does the sidechain, so that half costs nothing. BEEFY is $39 for Mac and Windows if you want the harmonic half handled in one panel, and DRUGS, our one-knob drum bus compressor, is free on both.
 
 ## Questions people ask
 
@@ -329,7 +329,7 @@ The job it is doing here is the harmonic ladder. An 808 on E1 puts its fundament
 
 The two output switches decide how the coincident peak is handled. **SOFT CLIP** rounds the top of it and colors it slightly; **LIMIT** holds a ceiling over it instead. A kick meeting an 808 makes a peak that is short and loud, which is the case a clipper handles with the least audible effort. Put it on the bus that carries both, A/B against bypass at matched level, and let **JUICE** return whatever the peak reduction took. [Soft clipping explained](https://gazillionindustries.com/soft-clipping-explained/) has the mechanism.
 
-BEEFY runs on Mac and Windows as AU, VST3 and standalone, $19. There is a 28-second demo with three without/with comparisons on the page.
+BEEFY runs on Mac and Windows as AU, VST3 and standalone, $39. There is a 28-second demo with three without/with comparisons on the page.
 
 Same two roommates, same bathroom. They just made a schedule.
 

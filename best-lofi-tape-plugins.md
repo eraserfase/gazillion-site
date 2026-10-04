@@ -23,7 +23,7 @@ A lofi tape plugin wants wear, noise and speed movement turned up, and bandwidth
 
 - **Most underdone**: speed movement, which is what sells it
 
-- **Our answer**: TRIPLE OG, $29, Mac and Windows
+- **Our answer**: TRIPLE OG, $39, Mac and Windows
 
 [TRIPLE OG](https://gazillionindustries.com/tripleog.html) is our cassette sim for Mac and Windows, with the transport on the face rather than in a menu. There is a demo on the page.
 

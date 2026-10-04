@@ -339,7 +339,7 @@ BEEFY is a saturation and loudness effect for making sounds thicker, punchier an
 
 Where it goes relative to the EQ follows from what each one does. Put the subtractive EQ first, so the harmonics being generated are built on a signal with the mud and the honk already gone — feed a 265 Hz resonance into any saturation and you get that resonance plus everything it generates above itself. Anything additive can sit after, where you can hear what the drive already supplied and boost only the rest. Often the presence boost gets smaller or disappears once the harmonics are there.
 
-**SOFT CLIP** and **LIMIT** are the two output switches, they are separate choices, and both can be off if you would rather push it yourself. Input and output clip lights show you either end. The window starts at 80% and remembers the size you leave it at. On Mac it installs as AU, VST3 and a standalone; on Windows as a 64-bit VST3. It is $19 as a one-time purchase. If you want the full argument for driving a voice rather than boosting it, [distortion on vocals](https://gazillionindustries.com/distortion-on-vocals/) is the longer version.
+**SOFT CLIP** and **LIMIT** are the two output switches, they are separate choices, and both can be off if you would rather push it yourself. Input and output clip lights show you either end. The window starts at 80% and remembers the size you leave it at. On Mac it installs as AU, VST3 and a standalone; on Windows as a 64-bit VST3. It is $39 as a one-time purchase. If you want the full argument for driving a voice rather than boosting it, [distortion on vocals](https://gazillionindustries.com/distortion-on-vocals/) is the longer version.
 
 **LIMIT** instead, everything else identical.
 

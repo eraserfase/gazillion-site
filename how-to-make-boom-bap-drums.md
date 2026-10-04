@@ -201,7 +201,7 @@ Two passes of the same eleven seconds, so you can hear noise and drift working s
 
 Keep the noise floor honest. Hiss that reads at −45 dBFS under a kit peaking at −1 dBFS is 44 dB down and sits underneath everything; the same hiss after a bus compressor pulling 9 dB on the hits comes up with the rest of the floor and can end up nearer −36. Add texture after the compressor if you want to keep control of it. [How to make drums sound dusty](https://gazillionindustries.com/how-to-make-drums-sound-dusty/), [tape hiss](https://gazillionindustries.com/tape-hiss/) and [wow and flutter](https://gazillionindustries.com/wow-and-flutter/) take each strand separately.
 
-[TRIPLE OG](https://gazillionindustries.com/tripleog.html) is our cassette tape simulation, $29, with TONE, DRIVE, AGE from 0 to 60 years, HISS and WOW FLUT, plus a transport of SLAM, SCRUB and CATCH.
+[TRIPLE OG](https://gazillionindustries.com/tripleog.html) is our cassette tape simulation, $39, with TONE, DRIVE, AGE from 0 to 60 years, HISS and WOW FLUT, plus a transport of SLAM, SCRUB and CATCH.
 
 ## Check the loop on a phone speaker
 
@@ -305,7 +305,7 @@ A new instance opens with SOFT CLIP on, JUICE at 0 dB, BEEF at 30 and COOK at 30
 
 **LIMIT** is the alternative to SOFT CLIP, and on a swung kit the two are audibly different at identical settings. The clipper takes the top off each stick hit and leaves the gaps alone. The limiter pulls the whole hit down for as long as it is over, which on a 58% swing at 90 BPM means it is still recovering through a 140 ms gap. Try both on the backbeat and keep the one that leaves the ghost notes audible.
 
-It runs on Mac and Windows as AU, VST3 and standalone, and it is $19.
+It runs on Mac and Windows as AU, VST3 and standalone, and it is $39.
 
 No carpet on your walls, probably. The drums can still sound like there is.
 

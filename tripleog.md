@@ -1,6 +1,6 @@
 # TRIPLE OG — cassette sim VST and lofi tape plugin
 
-> A cassette sim VST with the transport on the face: hiss, age to sixty years, wow and flutter, and a tape stop that returns in sync. Mac, Windows. $29.
+> A cassette sim VST with the transport on the face: hiss, age to sixty years, wow and flutter, and a tape stop that returns in sync. Mac, Windows. $39.
 
 Source: https://gazillionindustries.com/tripleog.html  
 By Gazillion Industries. Nothing here emulates, models or clones any hardware; the plug-ins are tuned by ear.
@@ -12,7 +12,11 @@ By Gazillion Industries. Nothing here emulates, models or clones any hardware; t
 
 - **Operating systems**: macOS 10.13 or later, Windows 10 or later
 - **Version**: 1.1.0
-- **Price**: USD 29.00
+- **Price**: USD 39.00
+
+> “I can’t describe in words how much I love this plugin triple Og is amazing”
+
+Gregory L Grant Jr · Gumroad review
 
 > “Tape analoggy shit .. stop and play amzing tings !! wow and fluff Damn crazy !! Dope dope weapon”
 
@@ -95,7 +99,7 @@ Any sample rate your session runs at. No internet connection required after acti
 
 ## Price
 
-$29.
+$39.
 
 ---
 

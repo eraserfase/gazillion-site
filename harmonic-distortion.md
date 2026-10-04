@@ -185,7 +185,7 @@ Downstream, harmonics are new content, so EQ after the stage is a legitimate par
 
 ## What it costs
 
-Nothing about generating harmonic distortion is expensive. Any DAW will do the physics with stock tools, and the test above needs no purchase at all. What a saturation plugin sells is the curve somebody chose and the staging that gets you onto it without hunting for an input level. [BEEFY](https://gazillionindustries.com/beefy.html) is $19, a one-time purchase, Mac and Windows.
+Nothing about generating harmonic distortion is expensive. Any DAW will do the physics with stock tools, and the test above needs no purchase at all. What a saturation plugin sells is the curve somebody chose and the staging that gets you onto it without hunting for an input level. [BEEFY](https://gazillionindustries.com/beefy.html) is $39, a one-time purchase, Mac and Windows.
 
 ## Questions people ask
 
@@ -249,7 +249,7 @@ Total harmonic distortion plus noise, measured as one figure. It rises as signal
 
 BEEFY is a saturation and loudness effect for making sounds thicker, punchier and more up front. It adds body, squeezes some space out of the peaks, and brings out harmonics that help a sound feel bigger. **BEEF** is more weight, density, loudness and attitude as you turn it up; **COOK** changes the color and bite, from a rounder feel toward a brighter, more cooked edge; **JUICE** sets the level going in. **SOFT CLIP** opens switched on and brings rounded, fuzzy edges to the loudest parts, adding harmonics above the low end so there is more to hear than just sub.
 
-SOFT CLIP also takes care of the initial gain staging, so you land on the curve without hunting for a magic input level, and you can still add more BEEF from there. Switch to **LIMIT** instead to hold the output peaks, or turn both output buttons off and push it yourself; they are separate choices. Input and output clip lights watch both ends. It is $19, one payment, Mac and Windows — VST3, Audio Unit and standalone on Mac for Apple Silicon and Intel, 64-bit VST3 on Windows.
+SOFT CLIP also takes care of the initial gain staging, so you land on the curve without hunting for a magic input level, and you can still add more BEEF from there. Switch to **LIMIT** instead to hold the output peaks, or turn both output buttons off and push it yourself; they are separate choices. Input and output clip lights watch both ends. It is $39, one payment, Mac and Windows — VST3, Audio Unit and standalone on Mac for Apple Silicon and Intel, 64-bit VST3 on Windows.
 
 One measurement, two industries, opposite goals. The number was never the point.
 

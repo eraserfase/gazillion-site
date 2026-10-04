@@ -1,6 +1,6 @@
 # Tape plugins for Logic Pro
 
-> Logic loads Audio Units only. ChromaGlow covers saturation; speed, cassette noise and a transport need a plug-in. That one is TRIPLE OG, AU, $29.
+> Logic loads Audio Units only. ChromaGlow covers saturation; speed, cassette noise and a transport need a plug-in. That one is TRIPLE OG, AU, $39.
 
 Source: https://gazillionindustries.com/tape-plugins-for-logic-pro/  
 Published 2026-09-22, updated 2026-09-26. By Gazillion Industries, who make TRIPLE OG.
@@ -9,11 +9,11 @@ Published 2026-09-22, updated 2026-09-26. By Gazillion Industries, who make TRIP
 
 Logic ships a very good saturation plug-in and no tape machine. ChromaGlow covers the harmonic side properly, with models of tube and analog gear, and it leaves speed, noise and the transport alone. Those three are most of what people mean by a tape sound, and they are the reason to load anything else at all.
 
-So the thing you actually load is [TRIPLE OG](https://gazillionindustries.com/tripleog.html), our cassette tape simulation, $29, shipping as an Audio Unit on macOS so Logic finds it. **WOW FLUT** is the speed instability, **HISS** the noise bed, and **SLAM**, **SCRUB** and **CATCH** put the transport on the face rather than in a menu.
+So the thing you actually load is [TRIPLE OG](https://gazillionindustries.com/tripleog.html), our cassette tape simulation, $39, shipping as an Audio Unit on macOS so Logic finds it. **WOW FLUT** is the speed instability, **HISS** the noise bed, and **SLAM**, **SCRUB** and **CATCH** put the transport on the face rather than in a menu.
 
 ## The short version
 
-- **Load this**: TRIPLE OG, AU on macOS, $29 — speed, noise, transport
+- **Load this**: TRIPLE OG, AU on macOS, $39 — speed, noise, transport
 
 - **Spend nothing first**: DRUGS is free and ships as an AU; use it to test the menu
 
@@ -87,7 +87,7 @@ The honest position, then, is that Logic already gives you harmonic thickening a
 
 - **A transport.** Stopping, dragging, rewinding and coming back in sync. See [tape stop plugins](https://gazillionindustries.com/best-tape-stop-plugins/). **SLAM**, **SCRUB** and **CATCH** are three separate controls for it, on the face, playable while the session runs.
 
-[TRIPLE OG](https://gazillionindustries.com/tripleog.html) ships as an Audio Unit on macOS, so it appears in Logic's menu like any stock plug-in, and it is $29. **WOW FLUT** and the **SLAM** transport are the parts Logic has nothing for. There's a demo on the page.
+[TRIPLE OG](https://gazillionindustries.com/tripleog.html) ships as an Audio Unit on macOS, so it appears in Logic's menu like any stock plug-in, and it is $39. **WOW FLUT** and the **SLAM** transport are the parts Logic has nothing for. There's a demo on the page.
 
 ## Tape Delay is not a tape machine
 
@@ -97,7 +97,7 @@ Logic's Tape Delay is a delay whose design references tape echo units. It is a g
 
 ### Does Logic Pro have a tape emulation plugin?
 
-No. It has ChromaGlow, a saturation plug-in with models of tube and analog gear, which covers the harmonic side of a tape sound. It has no device for speed instability, cassette noise or a tape transport, which is what a tape plug-in is bought for. Ours is [TRIPLE OG](https://gazillionindustries.com/tripleog.html), $29, AU on macOS.
+No. It has ChromaGlow, a saturation plug-in with models of tube and analog gear, which covers the harmonic side of a tape sound. It has no device for speed instability, cassette noise or a tape transport, which is what a tape plug-in is bought for. Ours is [TRIPLE OG](https://gazillionindustries.com/tripleog.html), $39, AU on macOS.
 
 ### Can Logic use VST plugins?
 
@@ -117,7 +117,7 @@ Our free plug-in is [DRUGS](https://gazillionindustries.com/drugs.html), a one-k
 
 ## What TRIPLE OG does
 
-[TRIPLE OG](https://gazillionindustries.com/tripleog.html) is our cassette tape simulation, $29, and on macOS it ships as an Audio Unit alongside VST3 and a standalone app, so Logic finds it. **WOW FLUT** is the speed instability, **HISS** a continuous broadband bed, and **AGE** runs from nought to sixty years, taking wear, noise and stability together. **TONE** and **DRIVE** handle brightness and thickness. The transport is on the face: **SLAM** stops the tape and returns it in sync, **SCRUB** runs the head backward and springs home, and **CATCH** makes it drag and then sprint to catch up. macOS 10.13 or later, Apple silicon or Intel; Windows 10 or later as a VST3.
+[TRIPLE OG](https://gazillionindustries.com/tripleog.html) is our cassette tape simulation, $39, and on macOS it ships as an Audio Unit alongside VST3 and a standalone app, so Logic finds it. **WOW FLUT** is the speed instability, **HISS** a continuous broadband bed, and **AGE** runs from nought to sixty years, taking wear, noise and stability together. **TONE** and **DRIVE** handle brightness and thickness. The transport is on the face: **SLAM** stops the tape and returns it in sync, **SCRUB** runs the head backward and springs home, and **CATCH** makes it drag and then sprint to catch up. macOS 10.13 or later, Apple silicon or Intel; Windows 10 or later as a VST3.
 
 Logic will color a sound beautifully. It will not put one on a machine.
 

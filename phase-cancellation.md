@@ -259,7 +259,7 @@ See [how to layer kicks](https://gazillionindustries.com/how-to-layer-kicks/) fo
 
 Nothing, for almost all of it. Every DAW in the list above ships a polarity invert, a sample delay and a spectrum analyzer, and those three are the complete kit for the measurement, the null test and the fix. Alignment is the rare mix problem where spending money is genuinely optional, and it is worth saying plainly before anybody goes shopping for a plugin to solve it.
 
-The paid part comes after, once the sum is coherent and you want it bigger. [DRUGS](https://gazillionindustries.com/drugs.html) is our one-knob bus compressor for drums, free on Mac and Windows: DOSE does the work, with GAIN and a soft ceiling on the way out, and it does not sit at unity with DOSE at nought, so match levels before you judge it. [BEEFY](https://gazillionindustries.com/beefy.html) is $19, one payment, Mac and Windows, AU, VST3 and standalone. Neither of them — nor anything else in the category — can return a frequency that two tracks removed from each other.
+The paid part comes after, once the sum is coherent and you want it bigger. [DRUGS](https://gazillionindustries.com/drugs.html) is our one-knob bus compressor for drums, free on Mac and Windows: DOSE does the work, with GAIN and a soft ceiling on the way out, and it does not sit at unity with DOSE at nought, so match levels before you judge it. [BEEFY](https://gazillionindustries.com/beefy.html) is $39, one payment, Mac and Windows, AU, VST3 and standalone. Neither of them — nor anything else in the category — can return a frequency that two tracks removed from each other.
 
 ## Questions people ask
 
@@ -365,7 +365,7 @@ BEEFY is our saturation and loudness effect: it adds body, squeezes some space o
 
 Read against this article, the panel has one honest place in the order of work: after the sum is coherent. Drive a combed pair with JUICE and you raise a spectrum with holes in it; the harmonics BEEF and COOK bring out will land on top of the notches and flatten the measurement without returning the recording. Do the nudge, confirm it on a meter, then come back and set the drive. **LIMIT** and **SOFT CLIP** are the two output switches, and both of them are working on a peak that alignment has already decided the height of.
 
-BEEFY is $19, one payment, and runs on Mac and Windows as AU, VST3 and standalone. There is a 28-second demo with three without/with comparisons on the page.
+BEEFY is $39, one payment, and runs on Mac and Windows as AU, VST3 and standalone. There is a 28-second demo with three without/with comparisons on the page.
 
 Two good microphones, one drum, and a subtraction nobody asked for.
 

@@ -93,7 +93,7 @@ The order to spend in, if you spend at all:
 
 Note what is not on that list: anything sold as one-click loudness. Those hand the whole job to a limiter, which is the part that punishes bad crest factor hardest.
 
-BEEFY is [$19](https://gazillionindustries.com/beefy.html) and opens with SOFT CLIP switched on, so the gain staging is handled before you touch anything. The demo on the page is 28 seconds.
+BEEFY is [$39](https://gazillionindustries.com/beefy.html) and opens with SOFT CLIP switched on, so the gain staging is handled before you touch anything. The demo on the page is 28 seconds.
 
 ## A free chain to try tonight
 
@@ -153,7 +153,7 @@ Loud enough to survive next to what it will be played against, with peaks below 
 
 ## What BEEFY does
 
-BEEFY is our saturation and loudness plug-in, and it is the one paid step described above rather than a chain. SOFT CLIP opens switched on and handles the input staging, BEEF adds weight and density on the way through, and LIMIT holds the output peaks when that is what the track needs. [BEEFY](https://gazillionindustries.com/beefy.html) costs $19, which is the point: the free work comes first, and this is the small amount of money that buys back the part the free work leaves on the table.
+BEEFY is our saturation and loudness plug-in, and it is the one paid step described above rather than a chain. SOFT CLIP opens switched on and handles the input staging, BEEF adds weight and density on the way through, and LIMIT holds the output peaks when that is what the track needs. [BEEFY](https://gazillionindustries.com/beefy.html) costs $39, which is the point: the free work comes first, and this is the small amount of money that buys back the part the free work leaves on the table.
 
 Loudness was never sold separately. It was sitting in the gap between your peaks and your average, waiting for someone to close it.
 

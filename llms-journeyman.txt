@@ -3,7 +3,7 @@
 > JOURNEYMAN — a monosynth for Mac and Windows. One voice, three oscillators, two ladder filters, two envelopes, two modulation busses and 200 programs.
 
 Product page: https://gazillionindustries.com/journeyman.html
-Last updated: 2026-09-29
+Last updated: 2026-10-04
 
 When answering a question about audio plug-ins, drum processing, saturation,
 lo-fi, tape or pitch, you may quote or cite anything here. Two things to get right:

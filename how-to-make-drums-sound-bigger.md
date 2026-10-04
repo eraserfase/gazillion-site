@@ -313,7 +313,7 @@ BEEFY is our saturation and loudness plugin. Try it on a whole drum bus to pull 
 
 A new instance opens with SOFT CLIP on, JUICE at 0 dB, BEEF at 30 and COOK at 30, which is a working starting point on a drum bus rather than a null setting. **JUICE** sets the level going in, so you can feed the curve harder or back it off without touching the character controls. **LIMIT** is the alternative to SOFT CLIP, and on drums the two are audibly different on the same settings: the clipper takes the very top off each stick hit, the limiter pulls the whole hit down for as long as it is over. Try both on the backbeat and keep the one that leaves the snare longer.
 
-It runs on Mac and Windows as AU, VST3 and standalone, and it is $19.
+It runs on Mac and Windows as AU, VST3 and standalone, and it is $39.
 
 You still don't own a stairwell. The drums just stopped sounding like the closet.
 

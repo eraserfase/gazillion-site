@@ -247,7 +247,7 @@ BEEFY is our saturation and loudness plugin, and it has both tools as separate c
 
 Most people will get the most from it on the drums, 808 and bass, so the master clipper and limiter have less to fix.
 
-The order inside the plugin is fixed, which removes one decision: BEEF and COOK shape the signal, SOFT CLIP or LIMIT handles what leaves, and the clip lights tell you which end is running hot. BEEFY is $19, Mac and Windows, AU and VST3 and standalone. Whatever you run it into, keep a true-peak limiter in last position.
+The order inside the plugin is fixed, which removes one decision: BEEF and COOK shape the signal, SOFT CLIP or LIMIT handles what leaves, and the clip lights tell you which end is running hot. BEEFY is $39, Mac and Windows, AU and VST3 and standalone. Whatever you run it into, keep a true-peak limiter in last position.
 
 The guard never made it to the paint. The big man barely had to jump.
 

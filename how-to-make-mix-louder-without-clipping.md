@@ -299,7 +299,7 @@ BEEFY is our saturation and loudness plugin, made for the parts that set your pe
 
 The two switches are the two halves of this page, and they are separate choices. SOFT CLIP is the upstream half, the one the worked example is about: round the tallest peaks on the drums and the 808 and the average comes up before any ceiling is involved. LIMIT is the downstream half, holding output peaks in check. Turn both off and you are driving it yourself, which is the setting for when a limiter you already trust lives at the end of the master chain. **JUICE** sets the level going in and **COOK** moves the color from rounder toward brighter and more cooked.
 
-$19, Mac and Windows, AU and VST3 with a standalone on Mac, and the product page has a 28-second demo with three without/with comparisons so you can hear the difference between rounding a peak and holding a ceiling over it before you decide. [How to make beats sound fuller](https://gazillionindustries.com/how-to-make-beats-sound-fuller/) is the same work aimed at size rather than level.
+$39, Mac and Windows, AU and VST3 with a standalone on Mac, and the product page has a 28-second demo with three without/with comparisons so you can hear the difference between rounding a peak and holding a ceiling over it before you decide. [How to make beats sound fuller](https://gazillionindustries.com/how-to-make-beats-sound-fuller/) is the same work aimed at size rather than level.
 
 Same playlist, same record before it. This time the beat is in the room.
 

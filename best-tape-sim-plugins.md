@@ -23,7 +23,7 @@ The best tape sim plugin is the one whose subset matches your use. Mastering wor
 
 - **Trap**: judging at unmatched level; tape always flatters
 
-- **Our answer**: TRIPLE OG for the character end, $29
+- **Our answer**: TRIPLE OG for the character end, $39
 
 [TRIPLE OG](https://gazillionindustries.com/tripleog.html) is our cassette sim for Mac and Windows, with the transport on the face rather than in a menu. There is a demo on the page.
 

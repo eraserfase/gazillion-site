@@ -123,7 +123,7 @@ The crossover sits somewhere between 1 and 3 kHz for this curve, which maps onto
 
 - On anything you are tracking through in real time, leave it off until you are done performing.
 
-[BEEFY](https://gazillionindustries.com/beefy.html) is our saturation and loudness effect: three knobs, two output stages, $19 for Mac and Windows. What any plugin does with sample rates inside itself is an implementation detail we do not publish either way, so treat it the way you would treat any nonlinear process. If the source is very bright, feed it less.
+[BEEFY](https://gazillionindustries.com/beefy.html) is our saturation and loudness effect: three knobs, two output stages, $39 for Mac and Windows. What any plugin does with sample rates inside itself is an implementation detail we do not publish either way, so treat it the way you would treat any nonlinear process. If the source is very bright, feed it less.
 
 ## Test your own plugin in one pass
 
@@ -271,7 +271,7 @@ Some run it all the time and do not offer a switch. Some are linear and have not
 
 BEEFY is a saturation and loudness effect for making sounds thicker, punchier and more up front. It adds body, squeezes some space out of the peaks, and brings out harmonics that help a sound feel bigger. **BEEF** brings weight, density and attitude; **COOK** changes the color and bite from a rounder feel toward a brighter, more cooked edge; **JUICE** sets the level going in, which is the control that matters most here: feeding a very bright source more gently is the oldest way of managing what a nonlinear process does with it.
 
-A new instance opens with SOFT CLIP on, JUICE at 0 dB, BEEF at 30 and COOK at 30, and **LIMIT** is the alternative out stage when you want the peaks held rather than rounded. Mapped onto everything above: JUICE is the drive number in the harmonic tables, and turning it down is the move that shrinks the series before anything else in the chain gets a chance to fold it. It runs on Mac and Windows as AU, VST3 and standalone, and it costs $19. [Soft clipping](https://gazillionindustries.com/soft-clipping-explained/) and [harmonic distortion](https://gazillionindustries.com/harmonic-distortion/) cover the curve itself.
+A new instance opens with SOFT CLIP on, JUICE at 0 dB, BEEF at 30 and COOK at 30, and **LIMIT** is the alternative out stage when you want the peaks held rather than rounded. Mapped onto everything above: JUICE is the drive number in the harmonic tables, and turning it down is the move that shrinks the series before anything else in the chain gets a chance to fold it. It runs on Mac and Windows as AU, VST3 and standalone, and it costs $39. [Soft clipping](https://gazillionindustries.com/soft-clipping-explained/) and [harmonic distortion](https://gazillionindustries.com/harmonic-distortion/) cover the curve itself.
 
 A setting in the corner that costs CPU and buys you the absence of something. Worth it more often than not.
 

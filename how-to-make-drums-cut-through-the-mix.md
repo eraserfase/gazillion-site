@@ -337,7 +337,7 @@ BEEFY is our saturation and loudness plugin for making sounds thicker, punchier 
 
 A new instance opens with SOFT CLIP on, JUICE at 0 dB, BEEF at 30 and COOK at 30, which is a working starting point rather than a bypass. Set JUICE so the loop is arriving at a sensible level, then raise BEEF slowly from zero and stop at the first point where the kit sounds planted against the rest of the arrangement, with everything playing. COOK decides whether the new harmonics land as warmth or as edge, which is the difference between a snare that travels to a phone and one that gets tiring on earbuds.
 
-SOFT CLIP and LIMIT are two ways to handle the loudest parts and they do not sound alike on drums. Soft clipping rounds the top of the waveform and leaves the hit feeling immediate; limiting pulls the level down around the peak and can take the front edge with it. [Soft clipping explained](https://gazillionindustries.com/soft-clipping-explained/) and [how to use a limiter](https://gazillionindustries.com/how-to-use-a-limiter/) cover the choice. BEEFY runs on Mac and Windows as AU, VST3 and standalone, and it is $19.
+SOFT CLIP and LIMIT are two ways to handle the loudest parts and they do not sound alike on drums. Soft clipping rounds the top of the waveform and leaves the hit feeling immediate; limiting pulls the level down around the peak and can take the front edge with it. [Soft clipping explained](https://gazillionindustries.com/soft-clipping-explained/) and [how to use a limiter](https://gazillionindustries.com/how-to-use-a-limiter/) cover the choice. BEEFY runs on Mac and Windows as AU, VST3 and standalone, and it is $39.
 
 **SOFT CLIP** as the out stage, BEEF at 62. Match the bypassed level before you judge it.
 

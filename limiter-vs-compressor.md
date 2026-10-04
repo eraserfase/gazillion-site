@@ -259,7 +259,7 @@ A hit with no front is a shaping problem rather than a level one, and a transien
 
 Nothing, if you want it to. Every DAW named above includes a compressor and a limiter that can finish a record, and plenty of records have been finished on them. What the paid market mostly sells on top is character, metering and speed, and those are real things to want — just not things you need before you can start. [Best free compressor plugins](https://gazillionindustries.com/best-free-compressor/) covers what to look for when the budget is nothing.
 
-From us: [DRUGS](https://gazillionindustries.com/drugs.html) is free, and it is the compressor half of this page. [BEEFY](https://gazillionindustries.com/beefy.html) is $19 and covers the stage between them — saturation and soft clipping, with SOFT CLIP and LIMIT as its two output switches.
+From us: [DRUGS](https://gazillionindustries.com/drugs.html) is free, and it is the compressor half of this page. [BEEFY](https://gazillionindustries.com/beefy.html) is $39 and covers the stage between them — saturation and soft clipping, with SOFT CLIP and LIMIT as its two output switches.
 
 What to look for when the budget is nothing: [best free compressor plugins](https://gazillionindustries.com/best-free-compressor/).
 

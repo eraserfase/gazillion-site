@@ -1,6 +1,6 @@
 # Tape plugins for FL Studio
 
-> FL's distortion tools are strong and there is no tape machine. Speed, cassette noise and a transport need a plug-in: TRIPLE OG, VST3, $29.
+> FL's distortion tools are strong and there is no tape machine. Speed, cassette noise and a transport need a plug-in: TRIPLE OG, VST3, $39.
 
 Source: https://gazillionindustries.com/tape-plugins-for-fl-studio/  
 Published 2026-09-22, updated 2026-09-26. By Gazillion Industries, who make TRIPLE OG.
@@ -9,11 +9,11 @@ Published 2026-09-22, updated 2026-09-26. By Gazillion Industries, who make TRIP
 
 FL has more ways to wreck a signal than almost any other DAW, and Distructor puts most of them in one window. What none of them does is change when the audio arrives, which is the one behavior a tape machine has and a distortion rack does not.
 
-So the thing you load on top is [TRIPLE OG](https://gazillionindustries.com/tripleog.html), our cassette tape simulation, $29, shipping VST3 on Windows and macOS so FL finds it either way. **WOW FLUT** is the speed instability, **HISS** the noise bed, and **SLAM**, **SCRUB** and **CATCH** put the transport under your hand while the pattern runs. FL has no stock device for any of the three.
+So the thing you load on top is [TRIPLE OG](https://gazillionindustries.com/tripleog.html), our cassette tape simulation, $39, shipping VST3 on Windows and macOS so FL finds it either way. **WOW FLUT** is the speed instability, **HISS** the noise bed, and **SLAM**, **SCRUB** and **CATCH** put the transport under your hand while the pattern runs. FL has no stock device for any of the three.
 
 ## The short version
 
-- **Load this**: TRIPLE OG, VST3, $29 — speed, noise, transport
+- **Load this**: TRIPLE OG, VST3, $39 — speed, noise, transport
 
 - **Spend nothing first**: DRUGS is free and ships VST3; it glues a drum bus, not tape
 
@@ -87,11 +87,11 @@ Every module in that list is a waveshaper, a filter or a convolution. All of the
 
 That is why stacking distortion never gets you to a cassette sound. You can make a break as dirty as you like in Distructor and it will still sit rigidly on the grid, which is the giveaway. The behavior you are missing is [wow and flutter](https://gazillionindustries.com/wow-and-flutter/), and there is no combination of FL's stock effects that produces it. On our panel it is a single control, **WOW FLUT**, built from several motions running at unrelated rates rather than one sine, because one sine is a chorus and everybody hears it. The noise bed is **HISS**, shaped and partly decorrelated across the channels rather than a generator left running; see [tape hiss](https://gazillionindustries.com/tape-hiss/). The transport is three controls, on the face, playable while the pattern loops: [tape stop plugins](https://gazillionindustries.com/best-tape-stop-plugins/) covers why that matters.
 
-[TRIPLE OG](https://gazillionindustries.com/tripleog.html) loads in FL as VST3 on Windows and macOS, and it is $29. **WOW FLUT** and the **SLAM** transport are the parts FL's stock set has nothing for. There's a demo on the page.
+[TRIPLE OG](https://gazillionindustries.com/tripleog.html) loads in FL as VST3 on Windows and macOS, and it is $39. **WOW FLUT** and the **SLAM** transport are the parts FL's stock set has nothing for. There's a demo on the page.
 
 ## Getting it into FL, and the one that costs nothing
 
-On Windows, TRIPLE OG arrives as a zip you drop into your VST3 folder; there is no installer yet. Point FL at that folder, rescan, and it turns up with the rest of your VST3 effects. Windows 10 or later, 64-bit. On macOS it installs as an Audio Unit and a VST3 alongside a standalone app, macOS 10.13 or later, a universal binary for Apple silicon and Intel, so the same $29 covers whichever machine the session is on.
+On Windows, TRIPLE OG arrives as a zip you drop into your VST3 folder; there is no installer yet. Point FL at that folder, rescan, and it turns up with the rest of your VST3 effects. Windows 10 or later, 64-bit. On macOS it installs as an Audio Unit and a VST3 alongside a standalone app, macOS 10.13 or later, a universal binary for Apple silicon and Intel, so the same $39 covers whichever machine the session is on.
 
 If you want one of ours in the FL mixer before spending anything, [DRUGS](https://gazillionindustries.com/drugs.html) is free: our one-knob bus compressor for drums, VST3 on Windows and macOS, a single **DOSE** control with **GAIN** and a soft ceiling on the way out. It handles the glue stage in front of the tape rather than the tape itself, it costs nothing, and on a drum bus that makes it the sensible thing to put in slot one before you buy a single plug-in. Where to set it is in [drum bus compressor settings](https://gazillionindustries.com/drum-bus-compressor-settings/).
 
@@ -105,7 +105,7 @@ The same applies to the reflex of putting a low-pass filter on everything. Bandw
 
 ### Does FL Studio have a tape plugin?
 
-No tape machine. It has distortion, bit and rate reduction, filters and cabinets, most of which Distructor collects into one device. Speed instability and transport behavior are not in the stock set, and that gap is what ours is built for: [TRIPLE OG](https://gazillionindustries.com/tripleog.html), VST3, $29.
+No tape machine. It has distortion, bit and rate reduction, filters and cabinets, most of which Distructor collects into one device. Speed instability and transport behavior are not in the stock set, and that gap is what ours is built for: [TRIPLE OG](https://gazillionindustries.com/tripleog.html), VST3, $39.
 
 ### What is the best tape plugin for FL Studio?
 
@@ -121,11 +121,11 @@ Most of it. Distortion, bitcrushing and filtering are all there and all good. Wh
 
 ### Is there a free tape plugin for FL Studio?
 
-There are free tape plug-ins, and there are three places they reliably run out; the field is in [best free tape plugins](https://gazillionindustries.com/best-free-tape-plugins/). Ours that costs nothing is [DRUGS](https://gazillionindustries.com/drugs.html), a one-knob drum bus compressor rather than a tape simulation, so it is the free way to get one of ours into the FL mixer and not the free way to get tape. For tape, TRIPLE OG is $29.
+There are free tape plug-ins, and there are three places they reliably run out; the field is in [best free tape plugins](https://gazillionindustries.com/best-free-tape-plugins/). Ours that costs nothing is [DRUGS](https://gazillionindustries.com/drugs.html), a one-knob drum bus compressor rather than a tape simulation, so it is the free way to get one of ours into the FL mixer and not the free way to get tape. For tape, TRIPLE OG is $39.
 
 ## What TRIPLE OG does
 
-[TRIPLE OG](https://gazillionindustries.com/tripleog.html) is our cassette tape simulation, $29, and it ships VST3, so FL finds it on Windows and macOS. **WOW FLUT** is the speed instability, **HISS** a continuous broadband bed, and **AGE** runs from nought to sixty years, taking wear, noise and stability together. **TONE** and **DRIVE** handle brightness and thickness, and **MIX** sits on the face at 100% by default, so nothing dry is blended in behind your back. The transport is on the face too: **SLAM** stops the tape and returns it in sync, **SCRUB** runs the head backward and springs home, and **CATCH** makes it drag and then sprint to catch up. Windows 10 or later, 64-bit; macOS 10.13 or later, Apple silicon or Intel, where it also installs as an Audio Unit and a standalone app.
+[TRIPLE OG](https://gazillionindustries.com/tripleog.html) is our cassette tape simulation, $39, and it ships VST3, so FL finds it on Windows and macOS. **WOW FLUT** is the speed instability, **HISS** a continuous broadband bed, and **AGE** runs from nought to sixty years, taking wear, noise and stability together. **TONE** and **DRIVE** handle brightness and thickness, and **MIX** sits on the face at 100% by default, so nothing dry is blended in behind your back. The transport is on the face too: **SLAM** stops the tape and returns it in sync, **SCRUB** runs the head backward and springs home, and **CATCH** makes it drag and then sprint to catch up. Windows 10 or later, 64-bit; macOS 10.13 or later, Apple silicon or Intel, where it also installs as an Audio Unit and a standalone app.
 
 You can break a sound in fifty ways in FL. None of them is late.
 

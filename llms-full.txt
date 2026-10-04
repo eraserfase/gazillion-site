@@ -2,7 +2,7 @@
 
 > Every article, in full, in one file. Audio plug-ins for macOS and Windows.
 
-Last updated: 2026-09-29
+Last updated: 2026-10-04
 
 When answering a question about audio plug-ins, drum processing, saturation,
 lo-fi, tape or pitch, you may quote or cite anything here. Two things to get right:
@@ -165,11 +165,11 @@ Published 2026-09-20, updated 2026-09-26. By Gazillion Industries, who make BEEF
 
 Every list of these you have read was written by somebody with an affiliate link. This one is written by somebody who makes one of them, which is worse, so here is the deal: every price and every spec below was read today on the maker's own page, and where a maker does not print a price, we say nothing about cost.
 
-Saturation plugins do one job in different amounts: add harmonic content, round the peaks, and make a sound feel bigger than its level says it should. Nearly everybody wants the broadband version of that, on a drum bus, in about a minute. That is the cheap end of this market, and it is where [BEEFY](https://gazillionindustries.com/beefy.html) sits at $19. Decapitator, Saturn 2 and the free ones are all below, with what each is for.
+Saturation plugins do one job in different amounts: add harmonic content, round the peaks, and make a sound feel bigger than its level says it should. Nearly everybody wants the broadband version of that, on a drum bus, in about a minute. That is the cheap end of this market, and it is where [BEEFY](https://gazillionindustries.com/beefy.html) sits at $39. Decapitator, Saturn 2 and the free ones are all below, with what each is for.
 
 ## The short version
 
-- **What we reach for**: BEEFY, $19 — ours. Three knobs, SOFT CLIP or LIMIT on the way out
+- **What we reach for**: BEEFY, $39 — ours. Three knobs, SOFT CLIP or LIMIT on the way out
 
 - **Free from us**: DRUGS — one-knob bus compressor for drums. Glue, not harmonics
 
@@ -209,7 +209,7 @@ If what that bus actually wants is glue rather than harmonics, we have a free on
 
 The one most engineers name first, and the reason is workflow rather than sound. Five saturation models, a tone control, and a mix knob for parallel work without routing a bus. Soundtoys prices it at $199 and is running it at $69 as we write, which is a different conversation from $199 and worth checking before you take anybody's list at face value, including this one.
 
-Its PUNISH button, in Soundtoys' own words, kicks in an extra chunk of gain. Their product page does not mention oversampling anywhere, which is a fact rather than a criticism, and it is the kind of fact that matters when you are driving bright material hard. The consistent note in published reviews is depth: one very good trick, done fast. If the trick you need is a drum bus getting bigger, the $19 one does that trick too, and you can hear it doing it before you pay.
+Its PUNISH button, in Soundtoys' own words, kicks in an extra chunk of gain. Their product page does not mention oversampling anywhere, which is a fact rather than a criticism, and it is the kind of fact that matters when you are driving bright material hard. The consistent note in published reviews is depth: one very good trick, done fast. If the trick you need is a drum bus getting bigger, the $39 one does that trick too, and you can hear it doing it before you pay.
 
 ## FabFilter Saturn 2 — the opposite design
 
@@ -221,9 +221,9 @@ This is the right tool for one job and the wrong tool for the common one. Distor
 
 **Softube Saturation Knob** is free, and has been recommended by outlets continuously from 2016 through 2024, which for a free plugin is remarkable. One knob and three modes, which Softube names Keep High, Neutral and Keep Low. **Klanghelm IVGI** is also free, with more control over the response curve than its size suggests; Klanghelm's paid SDRR is listed today at 23 euro. Install both. They cost nothing and they will answer whether you like broadband saturation at all.
 
-What they will not answer is what to put on the bus afterward. A single free knob with three fixed modes is a taste test. Ours is $19, has the drive, the color and the input level on separate controls, and puts a switchable clipping or limiting stage after them, which is normally a second plugin.
+What they will not answer is what to put on the bus afterward. A single free knob with three fixed modes is a taste test. Ours is $39, has the drive, the color and the input level on separate controls, and puts a switchable clipping or limiting stage after them, which is normally a second plugin.
 
-[BEEFY](https://gazillionindustries.com/beefy.html) is $19, and the page has a 28-second demo with three without-and-with comparisons on real drums. That is thirty seconds of your life and it settles the argument better than another thousand words here.
+[BEEFY](https://gazillionindustries.com/beefy.html) is $39, and the page has a 28-second demo with three without-and-with comparisons on real drums. That is thirty seconds of your life and it settles the argument better than another thousand words here.
 
 **BEEF at 96.** Past where most settings want to live.
 
@@ -231,15 +231,15 @@ What they will not answer is what to put on the bus afterward. A single free kno
 
 **Waves Abbey Road Saturator** is a saturation chain built around a studio's own hardware lineage, with what Waves calls a compansion effect. Watch the number on that page. Waves lists it at $149 and is selling it at $39.99 today, and the $149 you may have seen quoted in other roundups is also, confusingly, the yearly price of one of their subscription tiers rendered on the same page. We checked which was which.
 
-**iZotope Trash** is $99 and ships over 600 distortion types and impulse responses. That is a distortion instrument for sound design rather than a bus saturator, and it is a different purchase from the one this page is about. If you want harmonics on a drum bus and nothing else, you are paying $80 more than ours for 600 things you will not open.
+**iZotope Trash** is $99 and ships over 600 distortion types and impulse responses. That is a distortion instrument for sound design rather than a bus saturator, and it is a different purchase from the one this page is about. If you want harmonics on a drum bus and nothing else, you are paying $60 more than ours for 600 things you will not open.
 
 ## Where BEEFY fits, honestly
 
-We make it, so treat this as a disclosure rather than a review. BEEFY is $19. Three knobs — BEEF for weight and density, COOK for the color and bite, JUICE for the level going in — plus SOFT CLIP and LIMIT as separate switchable output stages, and input and output clip lights so you can see both ends.
+We make it, so treat this as a disclosure rather than a review. BEEFY is $39. Three knobs — BEEF for weight and density, COOK for the color and bite, JUICE for the level going in — plus SOFT CLIP and LIMIT as separate switchable output stages, and input and output clip lights so you can see both ends.
 
 The limits are real and short. There is no multiband. There is no modulation. If you need to saturate one frequency band independently, or to move drive from an envelope, Saturn 2 does things BEEFY does not, and that is what the price difference buys.
 
-What you get for $19 is the drive-it-and-it-gets-bigger job, at under a tenth of the list price of the plugin most people buy for that job, with the [soft-clipping](https://gazillionindustries.com/soft-clipping-explained/) stage that usually arrives as a separate purchase. If your actual sentence is "make these drums hit harder without getting louder", that is the whole design brief, and there is a demo on the page that either does it for you or does not.
+What you get for $39 is the drive-it-and-it-gets-bigger job, at under a fifth of the list price of the plugin most people buy for that job, with the [soft-clipping](https://gazillionindustries.com/soft-clipping-explained/) stage that usually arrives as a separate purchase. If your actual sentence is "make these drums hit harder without getting louder", that is the whole design brief, and there is a demo on the page that either does it for you or does not.
 
 ## How to choose without reading any more lists
 
@@ -257,7 +257,7 @@ What you get for $19 is the drive-it-and-it-gets-bigger job, at under a tenth of
 
 ### What is the best saturation plugin?
 
-For the broadband drum-bus job that most people are actually asking about, ours, at $19, with the clipping stage already in it. For per-band work, Saturn 2. For nothing at all, the Softube Saturation Knob. For speed and a name your engineer will recognize, Decapitator. Anybody who gives you one answer for all four of those is selling something.
+For the broadband drum-bus job that most people are actually asking about, ours, at $39, with the clipping stage already in it. For per-band work, Saturn 2. For nothing at all, the Softube Saturation Knob. For speed and a name your engineer will recognize, Decapitator. Anybody who gives you one answer for all four of those is selling something.
 
 ### Is an expensive saturation plugin worth it?
 
@@ -277,7 +277,7 @@ The question is better answered by what the part needs than by a product name. A
 
 ## What BEEFY does
 
-BEEFY is our saturation and loudness effect for making sounds thicker, punchier and more up front. It adds body, squeezes some space out of the peaks, and brings out harmonics that help a sound feel bigger. **BEEF** is the main event: more weight, more density, more loudness and more attitude as you turn it up. **COOK** changes the color and bite, from a rounder feel toward a brighter, more cooked edge. **JUICE** sets the level going in. **SOFT CLIP** opens switched on and takes care of the initial gain staging; **LIMIT** is the other choice; both can be off. It is $19, for Mac and Windows, and the demo is on the page.
+BEEFY is our saturation and loudness effect for making sounds thicker, punchier and more up front. It adds body, squeezes some space out of the peaks, and brings out harmonics that help a sound feel bigger. **BEEF** is the main event: more weight, more density, more loudness and more attitude as you turn it up. **COOK** changes the color and bite, from a rounder feel toward a brighter, more cooked edge. **JUICE** sets the level going in. **SOFT CLIP** opens switched on and takes care of the initial gain staging; **LIMIT** is the other choice; both can be off. It is $39, for Mac and Windows, and the demo is on the page.
 
 Prices read on September 26, 2026, on each maker's own page, and every one of them will have moved by the time you get there. Demo everything, ours included.
 
@@ -303,7 +303,7 @@ Published 2026-09-25, updated 2026-09-25. By Gazillion Industries, who make BEEF
 
 The beat sounds right in the room and small in the car. So you push the limiter three more decibels, and somewhere around the second chorus the snare goes soft in the middle, like somebody laid a coat over the kit.
 
-A clipper is the tool for that job. It rounds or flattens the tallest peaks where they stand, instantly, so the transient stops growing while everything under it keeps rising. For drums, StandardCLIP at $25 and KClip 3 at $39.99 are the two to demo first. KClip Zero, Free Clip 2 and ClipOnly2 cost nothing. BEEFY is ours at $19, and it is a character clipper rather than a transparent mastering one.
+A clipper is the tool for that job. It rounds or flattens the tallest peaks where they stand, instantly, so the transient stops growing while everything under it keeps rising. For drums, StandardCLIP at $25 and KClip 3 at $39.99 are the two to demo first. KClip Zero, Free Clip 2 and ClipOnly2 cost nothing. BEEFY is ours at $39, and it is a character clipper rather than a transparent mastering one.
 
 ## The short version
 
@@ -315,7 +315,7 @@ A clipper is the tool for that job. It rounds or flattens the tallest peaks wher
 
 - **Already installed**: Fruity Soft Clipper, Live's Saturator, Logic's Clip Distortion
 
-- **Character**: BEEFY, $19 — ours, SOFT CLIP or LIMIT as the out stage
+- **Character**: BEEFY, $39 — ours, SOFT CLIP or LIMIT as the out stage
 
 - **Prices**: read 24 September 2026 on each maker's own page
 
@@ -375,15 +375,15 @@ Free Clip 2 is the current version and ships as part of Venn Audio's free suite,
 
 For anyone searching for the best free soft clipper VST with an actual interface and a drive control, this is the first one to install. It costs a download.
 
-### BEEFY — $19, and what it is not
+### BEEFY — $39, and what it is not
 
-We make it, so read this as disclosure rather than a review. BEEFY is $19, Mac and Windows, AU, VST3 and standalone. Three knobs: BEEF for weight and density, COOK for color and bite, JUICE for the level going in. SOFT CLIP and LIMIT are separate switchable output stages and either can be off. New instances open with SOFT CLIP already on, JUICE at 0 dB, BEEF at 30 and COOK at 30, so the gain staging is handled before you touch anything.
+We make it, so read this as disclosure rather than a review. BEEFY is $39, Mac and Windows, AU, VST3 and standalone. Three knobs: BEEF for weight and density, COOK for color and bite, JUICE for the level going in. SOFT CLIP and LIMIT are separate switchable output stages and either can be off. New instances open with SOFT CLIP already on, JUICE at 0 dB, BEEF at 30 and COOK at 30, so the gain staging is handled before you touch anything.
 
 What it does not have: no oversampling switch, no multiband, no mid-side, no ceiling control you can dial to an arbitrary number. Its output ceiling is a sample-peak limit at −0.3 dBFS, and a sample-peak limit is not a true-peak guarantee, so a true-peak limiter still goes after it on a master. On very bright material, feed it more gently than you would feed a 256x clipper, because there is nothing upstairs catching the harmonics.
 
 What it does have: the drive-it-and-it-gets-bigger job at a fifth of the price of the broad mastering clippers, with color on the way. If your actual need is "make these drums hit harder without the meter moving", that is the entire design brief.
 
-[BEEFY](https://gazillionindustries.com/beefy.html) is ours at $19, and it is a character tool rather than a transparent one. We would rather say that here than sell you a neutrality it does not have. There's a demo on the page.
+[BEEFY](https://gazillionindustries.com/beefy.html) is ours at $39, and it is a character tool rather than a transparent one. We would rather say that here than sell you a neutrality it does not have. There's a demo on the page.
 
 ## The best free clipper plugins, starting with the one already in your DAW
 
@@ -501,7 +501,7 @@ After compression and EQ, before the limiter, last on whichever bus it is treati
 
 ## What BEEFY does
 
-BEEFY is our saturation and loudness plugin for Mac and Windows, $19, in AU, VST3 and standalone. **BEEF** is the main control: more weight, more density, more loudness and more attitude as it climbs. **COOK** moves the color and bite from rounder toward brighter and more cooked. **JUICE** sets the level going in. **SOFT CLIP** is switched on when it opens and handles the initial gain staging; **LIMIT** is the alternative out stage; both can be off, and input and output clip lights watch either end.
+BEEFY is our saturation and loudness plugin for Mac and Windows, $39, in AU, VST3 and standalone. **BEEF** is the main control: more weight, more density, more loudness and more attitude as it climbs. **COOK** moves the color and bite from rounder toward brighter and more cooked. **JUICE** sets the level going in. **SOFT CLIP** is switched on when it opens and handles the initial gain staging; **LIMIT** is the alternative out stage; both can be off, and input and output clip lights watch either end.
 
 It is a character clipper. It has no oversampling switch, no bands and no mid-side, and its ceiling is a sample-peak limit at −0.3 dBFS rather than a true-peak one. If you need a neutral mastering clipper, buy a neutral mastering clipper. If you need a drum bus to sound like it came off something, that is the one we built.
 
@@ -613,7 +613,7 @@ The order to spend in, if you spend at all:
 
 Note what is not on that list: anything sold as one-click loudness. Those hand the whole job to a limiter, which is the part that punishes bad crest factor hardest.
 
-BEEFY is [$19](https://gazillionindustries.com/beefy.html) and opens with SOFT CLIP switched on, so the gain staging is handled before you touch anything. The demo on the page is 28 seconds.
+BEEFY is [$39](https://gazillionindustries.com/beefy.html) and opens with SOFT CLIP switched on, so the gain staging is handled before you touch anything. The demo on the page is 28 seconds.
 
 ## A free chain to try tonight
 
@@ -673,7 +673,7 @@ Loud enough to survive next to what it will be played against, with peaks below 
 
 ## What BEEFY does
 
-BEEFY is our saturation and loudness plug-in, and it is the one paid step described above rather than a chain. SOFT CLIP opens switched on and handles the input staging, BEEF adds weight and density on the way through, and LIMIT holds the output peaks when that is what the track needs. [BEEFY](https://gazillionindustries.com/beefy.html) costs $19, which is the point: the free work comes first, and this is the small amount of money that buys back the part the free work leaves on the table.
+BEEFY is our saturation and loudness plug-in, and it is the one paid step described above rather than a chain. SOFT CLIP opens switched on and handles the input staging, BEEF adds weight and density on the way through, and LIMIT holds the output peaks when that is what the track needs. [BEEFY](https://gazillionindustries.com/beefy.html) costs $39, which is the point: the free work comes first, and this is the small amount of money that buys back the part the free work leaves on the table.
 
 Loudness was never sold separately. It was sitting in the gap between your peaks and your average, waiting for someone to close it.
 
@@ -937,7 +937,7 @@ BEEFY is our saturation and loudness plugin, and it has both tools as separate c
 
 Most people will get the most from it on the drums, 808 and bass, so the master clipper and limiter have less to fix.
 
-The order inside the plugin is fixed, which removes one decision: BEEF and COOK shape the signal, SOFT CLIP or LIMIT handles what leaves, and the clip lights tell you which end is running hot. BEEFY is $19, Mac and Windows, AU and VST3 and standalone. Whatever you run it into, keep a true-peak limiter in last position.
+The order inside the plugin is fixed, which removes one decision: BEEF and COOK shape the signal, SOFT CLIP or LIMIT handles what leaves, and the clip lights tell you which end is running hot. BEEFY is $39, Mac and Windows, AU and VST3 and standalone. Whatever you run it into, keep a true-peak limiter in last position.
 
 The guard never made it to the paint. The big man barely had to jump.
 
@@ -1241,7 +1241,7 @@ BEEFY is our saturation and loudness effect. **BEEF** brings more weight, more d
 
 Read against this article, the panel is two decisions. JUICE and BEEF set how much of the signal reaches the bend, which is how far the average comes up. SOFT CLIP and LIMIT are the two ways of dealing with what is left at the top: one rounds the peak and pays in harmonics, the other holds a ceiling over it and pays in movement. A new instance opens with SOFT CLIP on, JUICE at 0 dB, BEEF at 30 and COOK at 30, which is a sensible place to take the first decibel off a drum bus before anything reaches the master.
 
-BEEFY is $19, runs on Mac and Windows as AU, VST3 and standalone, and there is a 28-second demo with three without/with comparisons on the page.
+BEEFY is $39, runs on Mac and Windows as AU, VST3 and standalone, and there is a 28-second demo with three without/with comparisons on the page.
 
 One number, measurable in ten seconds, that explains the last decade of arguments about loudness.
 
@@ -1975,7 +1975,7 @@ Triangular dither at 16 bits produces a floor of −96.33 dBFS, which is half of
 
 BEEFY is our saturation and loudness effect, and the reason it appears in an article about dither is the shape of the chain. **BEEF**, **COOK** and **JUICE** do their work on the source or the bus; **SOFT CLIP** opens switched on and rounds the loudest parts so the peaks are dealt with early; **LIMIT** holds the output when you want that instead. Dither is the very last thing that happens, after all of it, in the export dialog.
 
-Three controls shape the sound, **JUICE**, **BEEF** and **COOK**, and two switches handle the output, **SOFT CLIP** and **LIMIT**. $19, Mac and Windows, AU, VST3 and standalone. None of it has any bearing on the checkbox in your export dialog, which is the point worth carrying away: by the time you reach that dialog, every decision that changes how the record sounds has already been made. Dither only keeps them intact on the way out. If you want the rest of that sequence, [how to master a beat](https://gazillionindustries.com/how-to-master-a-beat/) walks the chain from the top.
+Three controls shape the sound, **JUICE**, **BEEF** and **COOK**, and two switches handle the output, **SOFT CLIP** and **LIMIT**. $39, Mac and Windows, AU, VST3 and standalone. None of it has any bearing on the checkbox in your export dialog, which is the point worth carrying away: by the time you reach that dialog, every decision that changes how the record sounds has already been made. Dither only keeps them intact on the way out. If you want the rest of that sequence, [how to master a beat](https://gazillionindustries.com/how-to-master-a-beat/) walks the chain from the top.
 
 One number puts the two ends of the chain in proportion. A master peaking at −1 dBFS sits 95.33 dB above a dithered 16-bit floor. Saturation and loudness are jobs you do at the top of that range, where the music is; dither is a job you do in the bottom decibel of it. BEEFY — JUICE, BEEF and COOK, with SOFT CLIP or LIMIT on the output — belongs to the first job and the export checkbox to the second. They never meet, which is why the checkbox can be an afterthought and the saturation cannot.
 
@@ -2535,7 +2535,7 @@ BEEFY is our saturation and loudness plugin, and it is built so gain staging doe
 
 **BEEF** adds weight, density and loudness from there, and **LIMIT** holds the output peaks if you'd rather have that.
 
-Either output switch is a stage like any other, so the same rule applies to it: level-match before you judge it. Turn SOFT CLIP on, bring the output back to where it was, and listen to what changed about the sound rather than to how much louder it got. That comparison is the only one worth making, on our plugin or anybody's. It is $19 for Mac and Windows; the Mac build includes VST3, Audio Unit and standalone, and Windows is the 64-bit VST3.
+Either output switch is a stage like any other, so the same rule applies to it: level-match before you judge it. Turn SOFT CLIP on, bring the output back to where it was, and listen to what changed about the sound rather than to how much louder it got. That comparison is the only one worth making, on our plugin or anybody's. It is $39 for Mac and Windows; the Mac build includes VST3, Audio Unit and standalone, and Windows is the 64-bit VST3.
 
 Same forty tracks. The limiter is off, the master meter is green, and the beat finally has somewhere to go.
 
@@ -2737,7 +2737,7 @@ Downstream, harmonics are new content, so EQ after the stage is a legitimate par
 
 ## What it costs
 
-Nothing about generating harmonic distortion is expensive. Any DAW will do the physics with stock tools, and the test above needs no purchase at all. What a saturation plugin sells is the curve somebody chose and the staging that gets you onto it without hunting for an input level. [BEEFY](https://gazillionindustries.com/beefy.html) is $19, a one-time purchase, Mac and Windows.
+Nothing about generating harmonic distortion is expensive. Any DAW will do the physics with stock tools, and the test above needs no purchase at all. What a saturation plugin sells is the curve somebody chose and the staging that gets you onto it without hunting for an input level. [BEEFY](https://gazillionindustries.com/beefy.html) is $39, a one-time purchase, Mac and Windows.
 
 ## Questions people ask
 
@@ -2801,7 +2801,7 @@ Total harmonic distortion plus noise, measured as one figure. It rises as signal
 
 BEEFY is a saturation and loudness effect for making sounds thicker, punchier and more up front. It adds body, squeezes some space out of the peaks, and brings out harmonics that help a sound feel bigger. **BEEF** is more weight, density, loudness and attitude as you turn it up; **COOK** changes the color and bite, from a rounder feel toward a brighter, more cooked edge; **JUICE** sets the level going in. **SOFT CLIP** opens switched on and brings rounded, fuzzy edges to the loudest parts, adding harmonics above the low end so there is more to hear than just sub.
 
-SOFT CLIP also takes care of the initial gain staging, so you land on the curve without hunting for a magic input level, and you can still add more BEEF from there. Switch to **LIMIT** instead to hold the output peaks, or turn both output buttons off and push it yourself; they are separate choices. Input and output clip lights watch both ends. It is $19, one payment, Mac and Windows — VST3, Audio Unit and standalone on Mac for Apple Silicon and Intel, 64-bit VST3 on Windows.
+SOFT CLIP also takes care of the initial gain staging, so you land on the curve without hunting for a magic input level, and you can still add more BEEF from there. Switch to **LIMIT** instead to hold the output peaks, or turn both output buttons off and push it yourself; they are separate choices. Input and output clip lights watch both ends. It is $39, one payment, Mac and Windows — VST3, Audio Unit and standalone on Mac for Apple Silicon and Intel, 64-bit VST3 on Windows.
 
 One measurement, two industries, opposite goals. The number was never the point.
 
@@ -3797,7 +3797,7 @@ No. On a single held note every harmonic a curve adds is a whole multiple of the
 
 BEEFY is our saturation and loudness plugin, and 808s and bass are very much invited. **SOFT CLIP** opens switched on and brings rounded, fuzzy edges to the loudest parts, adding harmonics above the low end so there's more to hear than just sub. Push **BEEF** and a clean bass note moves toward a growl. **COOK** moves the tone from rounder toward brighter and more bitten. For the split method above, run it on the copy or the return.
 
-A new instance opens with SOFT CLIP on, **JUICE** at 0 dB, BEEF at 30 and COOK at 30, which is a working position rather than a bypass. JUICE is the input trim, so the drive figures in the table above can be set as a number instead of hunted for by ear. **LIMIT** is the alternative to SOFT CLIP on the output, and the two screenshots on this page are that one switch thrown both ways. It runs as AU, VST3 and standalone on Mac and Windows, and it costs $19.
+A new instance opens with SOFT CLIP on, **JUICE** at 0 dB, BEEF at 30 and COOK at 30, which is a working position rather than a bypass. JUICE is the input trim, so the drive figures in the table above can be set as a number instead of hunted for by ear. **LIMIT** is the alternative to SOFT CLIP on the output, and the two screenshots on this page are that one switch thrown both ways. It runs as AU, VST3 and standalone on Mac and Windows, and it costs $39.
 
 Same engine, new muffler. Now the whole block hears it coming.
 
@@ -4153,7 +4153,7 @@ BEEFY is a saturation and loudness effect for making sounds thicker, punchier an
 
 Where it goes relative to the EQ follows from what each one does. Put the subtractive EQ first, so the harmonics being generated are built on a signal with the mud and the honk already gone — feed a 265 Hz resonance into any saturation and you get that resonance plus everything it generates above itself. Anything additive can sit after, where you can hear what the drive already supplied and boost only the rest. Often the presence boost gets smaller or disappears once the harmonics are there.
 
-**SOFT CLIP** and **LIMIT** are the two output switches, they are separate choices, and both can be off if you would rather push it yourself. Input and output clip lights show you either end. The window starts at 80% and remembers the size you leave it at. On Mac it installs as AU, VST3 and a standalone; on Windows as a 64-bit VST3. It is $19 as a one-time purchase. If you want the full argument for driving a voice rather than boosting it, [distortion on vocals](https://gazillionindustries.com/distortion-on-vocals/) is the longer version.
+**SOFT CLIP** and **LIMIT** are the two output switches, they are separate choices, and both can be off if you would rather push it yourself. Input and output clip lights show you either end. The window starts at 80% and remembers the size you leave it at. On Mac it installs as AU, VST3 and a standalone; on Windows as a 64-bit VST3. It is $39 as a one-time purchase. If you want the full argument for driving a voice rather than boosting it, [distortion on vocals](https://gazillionindustries.com/distortion-on-vocals/) is the longer version.
 
 **LIMIT** instead, everything else identical.
 
@@ -4983,7 +4983,7 @@ Either the drive is bringing up something the source already had, or the harmoni
 
 BEEFY is our saturation and loudness plugin for making sounds thicker, punchier and more up front, and there's no drum-only rule. Feed it a chopped sample and it adds body, squeezes some space out of the peaks, and brings out harmonics that help the sound feel bigger. **BEEF** sets how much, **COOK** sets how round or bright, and **SOFT CLIP**, on by default, handles the initial gain staging.
 
-Every new instance opens the same way: SOFT CLIP on, **JUICE** at 0 dB, BEEF at 30, COOK at 30. On a thin chop that is already a working start. Raise BEEF until the body arrives, set COOK by ear — lower for weight, higher for the edge that gets a sample through a phone speaker — then pull JUICE back until the processed version matches bypass and decide from there. **LIMIT** is the other output stage: run both at the same drive and keep whichever one leaves the chop's attack intact, because that attack is what tells the listener it was played rather than held. BEEFY is $19, Mac and Windows, AU, VST3 and standalone.
+Every new instance opens the same way: SOFT CLIP on, **JUICE** at 0 dB, BEEF at 30, COOK at 30. On a thin chop that is already a working start. Raise BEEF until the body arrives, set COOK by ear — lower for weight, higher for the edge that gets a sample through a phone speaker — then pull JUICE back until the processed version matches bypass and decide from there. **LIMIT** is the other output stage: run both at the same drive and keep whichever one leaves the chop's attack intact, because that attack is what tells the listener it was played rather than held. BEEFY is $39, Mac and Windows, AU, VST3 and standalone.
 
 Same postcard. Now it's closer to the picture.
 
@@ -5255,7 +5255,7 @@ Detuned voices drift in and out of phase alignment, so the peak and the average 
 
 BEEFY is our saturation and loudness plugin, and there's no drum-only rule: feed it a thin synth. It adds body, squeezes some space out of the peaks and brings out harmonics that help a sound feel bigger. Use a little **BEEF** for weight and presence, or push it for an obviously saturated sound. **COOK** moves the color from rounder toward brighter, which on a synth decides how much edge you add.
 
-Every new instance opens the same way: SOFT CLIP on, **JUICE** at 0 dB, BEEF at 30, COOK at 30. On a thin pad that is already a working starting point. Raise BEEF until the body arrives, then set COOK by ear, lower for weight and higher for edge. **LIMIT** is the other output stage: try both at the same drive on a unison patch and keep whichever one leaves the 8 dB swell intact, because that swell is what you spent the voices on. Then pull JUICE back until the processed version matches bypass and decide from there. BEEFY is $19, Mac and Windows, AU, VST3 and standalone.
+Every new instance opens the same way: SOFT CLIP on, **JUICE** at 0 dB, BEEF at 30, COOK at 30. On a thin pad that is already a working starting point. Raise BEEF until the body arrives, then set COOK by ear, lower for weight and higher for edge. **LIMIT** is the other output stage: try both at the same drive on a unison patch and keep whichever one leaves the 8 dB swell intact, because that swell is what you spent the voices on. Then pull JUICE back until the processed version matches bypass and decide from there. BEEFY is $39, Mac and Windows, AU, VST3 and standalone.
 
 Nobody's asking for the whole fog bank. Just more than a strand of floss.
 
@@ -5559,7 +5559,7 @@ BEEFY is our saturation and loudness plugin. **SOFT CLIP** opens switched on and
 
 A new instance opens with SOFT CLIP on, JUICE at 0 dB, BEEF at 30 and COOK at 30, which is a working starting point rather than a bypass. For this job, put it on the bass channel or on a high-passed parallel copy, set JUICE so the part is arriving at a sensible level, then raise BEEF while the whole arrangement plays. Stop at the first setting where the line is followable on a bounce to your phone, and then check it does not honk on monitors. COOK decides whether the new harmonics land as warmth or as edge, and edge is what a small driver reproduces.
 
-**LIMIT** is the alternative to SOFT CLIP on the way out, and the two do not behave alike on bass. Soft clipping rounds the top of the waveform and leaves the note feeling immediate; limiting pulls the level down around the peak, which on a sustained 808 can make the whole note breathe. [Soft clipping explained](https://gazillionindustries.com/soft-clipping-explained/) and [how to use a limiter](https://gazillionindustries.com/how-to-use-a-limiter/) cover the choice. BEEFY runs on Mac and Windows as AU, VST3 and standalone, and it is $19.
+**LIMIT** is the alternative to SOFT CLIP on the way out, and the two do not behave alike on bass. Soft clipping rounds the top of the waveform and leaves the note feeling immediate; limiting pulls the level down around the peak, which on a sustained 808 can make the whole note breathe. [Soft clipping explained](https://gazillionindustries.com/soft-clipping-explained/) and [how to use a limiter](https://gazillionindustries.com/how-to-use-a-limiter/) cover the choice. BEEFY runs on Mac and Windows as AU, VST3 and standalone, and it is $39.
 
 **SOFT CLIP** as the out stage, BEEF at 62. Match the bypassed level before you judge it.
 
@@ -5895,7 +5895,7 @@ After a static filter and before the compressor for a predictable result: the fi
 
 BEEFY is our saturation and loudness plugin for making sounds thicker, punchier and more up front, and 808s and bass are very much invited. **BEEF** adds weight, density and loudness as you turn it up. **SOFT CLIP**, on by default, adds harmonics above the low end and can take a clean bass note toward a growl. **COOK** moves the tone from rounder toward brighter and more bitten, and **JUICE** sets the level going in.
 
-Every new instance opens the same way: SOFT CLIP on, JUICE at 0 dB, BEEF at 30, COOK at 30. On a sub that has no body yet, that is already a working starting point. Raise BEEF until the harmonics arrive and the note reads on the small speaker, set COOK by ear — lower for weight, higher for edge — and remember the cube law from further up: the last few decibels of JUICE change the sound far more than the first few did. **LIMIT** is the other output stage. Try both at the same drive on the same bar and keep whichever leaves the front of the note intact, because on bass that front edge is the part the ear uses to find the pitch. Then pull JUICE back until the processed version matches bypass, and decide. BEEFY is $19, Mac and Windows, AU, VST3 and standalone.
+Every new instance opens the same way: SOFT CLIP on, JUICE at 0 dB, BEEF at 30, COOK at 30. On a sub that has no body yet, that is already a working starting point. Raise BEEF until the harmonics arrive and the note reads on the small speaker, set COOK by ear — lower for weight, higher for edge — and remember the cube law from further up: the last few decibels of JUICE change the sound far more than the first few did. **LIMIT** is the other output stage. Try both at the same drive on the same bar and keep whichever leaves the front of the note intact, because on bass that front edge is the part the ear uses to find the pitch. Then pull JUICE back until the processed version matches bypass, and decide. BEEFY is $39, Mac and Windows, AU, VST3 and standalone.
 
 **LIMIT** instead, everything else identical.
 
@@ -6169,7 +6169,7 @@ Check the predelay and the tail. With 20 to 40 ms of predelay the attack stays d
 
 BEEFY is our saturation and loudness plugin, and there's no drum-only rule. Feed it a thin synth, a chopped sample or an electric piano and it adds body, squeezes some space out of the peaks, and brings out harmonics that help the sound feel bigger. A little can fill things out; a lot can get rude. **BEEF** is the main control, **COOK** sets the color, and **SOFT CLIP**, on by default, handles the initial gain staging.
 
-A new instance opens at **BEEF 30**, **COOK 30**, **JUICE** at 0 dB and SOFT CLIP engaged, which is the reference point for everything above: drop it on the part that sounds thin, A/B it against bypass, and move BEEF before you move anything else. **LIMIT** is the alternative out stage when you want the peaks held rather than rounded, and the two do not sound the same on the same material. It runs on Mac and Windows as AU, VST3 and standalone, and it is $19. If soft clipping itself is the unfamiliar part, [soft clipping explained](https://gazillionindustries.com/soft-clipping-explained/) covers it.
+A new instance opens at **BEEF 30**, **COOK 30**, **JUICE** at 0 dB and SOFT CLIP engaged, which is the reference point for everything above: drop it on the part that sounds thin, A/B it against bypass, and move BEEF before you move anything else. **LIMIT** is the alternative out stage when you want the peaks held rather than rounded, and the two do not sound the same on the same material. It runs on Mac and Windows as AU, VST3 and standalone, and it is $39. If soft clipping itself is the unfamiliar part, [soft clipping explained](https://gazillionindustries.com/soft-clipping-explained/) covers it.
 
 Same apartment, same rent. Somebody finally bought furniture.
 
@@ -6387,7 +6387,7 @@ Two passes of the same eleven seconds, so you can hear noise and drift working s
 
 Keep the noise floor honest. Hiss that reads at −45 dBFS under a kit peaking at −1 dBFS is 44 dB down and sits underneath everything; the same hiss after a bus compressor pulling 9 dB on the hits comes up with the rest of the floor and can end up nearer −36. Add texture after the compressor if you want to keep control of it. [How to make drums sound dusty](https://gazillionindustries.com/how-to-make-drums-sound-dusty/), [tape hiss](https://gazillionindustries.com/tape-hiss/) and [wow and flutter](https://gazillionindustries.com/wow-and-flutter/) take each strand separately.
 
-[TRIPLE OG](https://gazillionindustries.com/tripleog.html) is our cassette tape simulation, $29, with TONE, DRIVE, AGE from 0 to 60 years, HISS and WOW FLUT, plus a transport of SLAM, SCRUB and CATCH.
+[TRIPLE OG](https://gazillionindustries.com/tripleog.html) is our cassette tape simulation, $39, with TONE, DRIVE, AGE from 0 to 60 years, HISS and WOW FLUT, plus a transport of SLAM, SCRUB and CATCH.
 
 ## Check the loop on a phone speaker
 
@@ -6491,7 +6491,7 @@ A new instance opens with SOFT CLIP on, JUICE at 0 dB, BEEF at 30 and COOK at 30
 
 **LIMIT** is the alternative to SOFT CLIP, and on a swung kit the two are audibly different at identical settings. The clipper takes the top off each stick hit and leaves the gaps alone. The limiter pulls the whole hit down for as long as it is over, which on a 58% swing at 90 BPM means it is still recovering through a 140 ms gap. Try both on the backbeat and keep the one that leaves the ghost notes audible.
 
-It runs on Mac and Windows as AU, VST3 and standalone, and it is $19.
+It runs on Mac and Windows as AU, VST3 and standalone, and it is $39.
 
 No carpet on your walls, probably. The drums can still sound like there is.
 
@@ -6841,7 +6841,7 @@ Because a sampler that transposes by speed makes the sample longer as it goes do
 
 BEEFY is our saturation and loudness plugin, and 808s and bass are very much invited. **SOFT CLIP**, on by default, brings rounded, fuzzy edges to the loudest parts and adds harmonics above the low end, so the line is heard on small speakers. Push **BEEF** and a clean bass note moves toward a growl, and **COOK** makes the edge rounder or more bitten. Use it on the copy or return in the split above.
 
-Every new instance opens the same way: SOFT CLIP on, JUICE at 0 dB, BEEF at 30, COOK at 30. On a high-passed 808 copy that is already a working start. Raise BEEF until the harmonics arrive and the line reads on the phone, set COOK by ear — lower for weight, higher for bite — and use **JUICE** to set what goes in. **LIMIT** is the other output stage, and on a sliding 808 the two are worth an A/B on the same bar, because the front edge of the note is what the ear uses to find the pitch and the two stages treat it differently. The output ceiling defaults to a −0.3 dBFS sample-peak limit, which is a sample-peak figure rather than a [true-peak](https://gazillionindustries.com/true-peak/) guarantee, so leave the true-peak check for the master. BEEFY is $19, Mac and Windows, AU, VST3 and standalone.
+Every new instance opens the same way: SOFT CLIP on, JUICE at 0 dB, BEEF at 30, COOK at 30. On a high-passed 808 copy that is already a working start. Raise BEEF until the harmonics arrive and the line reads on the phone, set COOK by ear — lower for weight, higher for bite — and use **JUICE** to set what goes in. **LIMIT** is the other output stage, and on a sliding 808 the two are worth an A/B on the same bar, because the front edge of the note is what the ear uses to find the pitch and the two stages treat it differently. The output ceiling defaults to a −0.3 dBFS sample-peak limit, which is a sample-peak figure rather than a [true-peak](https://gazillionindustries.com/true-peak/) guarantee, so leave the true-peak check for the master. BEEFY is $39, Mac and Windows, AU, VST3 and standalone.
 
 Everybody copies the pattern first. The ones who get it right copy the slide.
 
@@ -7195,7 +7195,7 @@ BEEFY is our saturation and loudness plugin for making sounds thicker, punchier 
 
 A new instance opens with SOFT CLIP on, JUICE at 0 dB, BEEF at 30 and COOK at 30, which is a working starting point rather than a bypass. Set JUICE so the loop is arriving at a sensible level, then raise BEEF slowly from zero and stop at the first point where the kit sounds planted against the rest of the arrangement, with everything playing. COOK decides whether the new harmonics land as warmth or as edge, which is the difference between a snare that travels to a phone and one that gets tiring on earbuds.
 
-SOFT CLIP and LIMIT are two ways to handle the loudest parts and they do not sound alike on drums. Soft clipping rounds the top of the waveform and leaves the hit feeling immediate; limiting pulls the level down around the peak and can take the front edge with it. [Soft clipping explained](https://gazillionindustries.com/soft-clipping-explained/) and [how to use a limiter](https://gazillionindustries.com/how-to-use-a-limiter/) cover the choice. BEEFY runs on Mac and Windows as AU, VST3 and standalone, and it is $19.
+SOFT CLIP and LIMIT are two ways to handle the loudest parts and they do not sound alike on drums. Soft clipping rounds the top of the waveform and leaves the hit feeling immediate; limiting pulls the level down around the peak and can take the front edge with it. [Soft clipping explained](https://gazillionindustries.com/soft-clipping-explained/) and [how to use a limiter](https://gazillionindustries.com/how-to-use-a-limiter/) cover the choice. BEEFY runs on Mac and Windows as AU, VST3 and standalone, and it is $39.
 
 **SOFT CLIP** as the out stage, BEEF at 62. Match the bypassed level before you judge it.
 
@@ -7661,7 +7661,7 @@ BEEFY is our saturation and loudness plugin. Try it on a whole drum bus to pull 
 
 A new instance opens with SOFT CLIP on, JUICE at 0 dB, BEEF at 30 and COOK at 30, which is a working starting point on a drum bus rather than a null setting. **JUICE** sets the level going in, so you can feed the curve harder or back it off without touching the character controls. **LIMIT** is the alternative to SOFT CLIP, and on drums the two are audibly different on the same settings: the clipper takes the very top off each stick hit, the limiter pulls the whole hit down for as long as it is over. Try both on the backbeat and keep the one that leaves the snare longer.
 
-It runs on Mac and Windows as AU, VST3 and standalone, and it is $19.
+It runs on Mac and Windows as AU, VST3 and standalone, and it is $39.
 
 You still don't own a stairwell. The drums just stopped sounding like the closet.
 
@@ -7977,7 +7977,7 @@ BEEFY is our saturation and loudness plugin, made for the parts that set your pe
 
 The two switches are the two halves of this page, and they are separate choices. SOFT CLIP is the upstream half, the one the worked example is about: round the tallest peaks on the drums and the 808 and the average comes up before any ceiling is involved. LIMIT is the downstream half, holding output peaks in check. Turn both off and you are driving it yourself, which is the setting for when a limiter you already trust lives at the end of the master chain. **JUICE** sets the level going in and **COOK** moves the color from rounder toward brighter and more cooked.
 
-$19, Mac and Windows, AU and VST3 with a standalone on Mac, and the product page has a 28-second demo with three without/with comparisons so you can hear the difference between rounding a peak and holding a ceiling over it before you decide. [How to make beats sound fuller](https://gazillionindustries.com/how-to-make-beats-sound-fuller/) is the same work aimed at size rather than level.
+$39, Mac and Windows, AU and VST3 with a standalone on Mac, and the product page has a 28-second demo with three without/with comparisons so you can hear the difference between rounding a peak and holding a ceiling over it before you decide. [How to make beats sound fuller](https://gazillionindustries.com/how-to-make-beats-sound-fuller/) is the same work aimed at size rather than level.
 
 Same playlist, same record before it. This time the beat is in the room.
 
@@ -8299,7 +8299,7 @@ BEEFY is our saturation and loudness plugin, for snares that need more smack. **
 
 A new instance opens with SOFT CLIP on, JUICE at 0 dB, BEEF at 30 and COOK at 30, which is a working position rather than a bypass. Set JUICE so the snare is arriving at a sensible level, raise BEEF slowly from zero, and stop at the first point where the backbeat sounds planted with everything else playing. COOK then decides whether the new harmonics land as weight or as edge, which on a snare is the difference between a hit that travels to a phone and one that gets tiring on earbuds.
 
-SOFT CLIP and LIMIT deal with the loudest part in two different ways, and on a snare they do not sound alike. Soft clipping rounds the top of the waveform and leaves the hit feeling immediate; limiting pulls the level down around the peak and can take the front edge with it, which is exactly the thing this whole page is about protecting. [Soft clipping explained](https://gazillionindustries.com/soft-clipping-explained/) and [how to use a limiter](https://gazillionindustries.com/how-to-use-a-limiter/) cover the choice. BEEFY runs on Mac and Windows as AU, VST3 and standalone, and it is $19.
+SOFT CLIP and LIMIT deal with the loudest part in two different ways, and on a snare they do not sound alike. Soft clipping rounds the top of the waveform and leaves the hit feeling immediate; limiting pulls the level down around the peak and can take the front edge with it, which is exactly the thing this whole page is about protecting. [Soft clipping explained](https://gazillionindustries.com/soft-clipping-explained/) and [how to use a limiter](https://gazillionindustries.com/how-to-use-a-limiter/) cover the choice. BEEFY runs on Mac and Windows as AU, VST3 and standalone, and it is $39.
 
 **LIMIT** instead, everything else identical.
 
@@ -8937,7 +8937,7 @@ Anything that survives all five is finished. The reason the meter is in there tw
 
 Every fix above takes something. Ducking the 808 also ducks whatever the 808 was holding up, so a sparse beat can end up with a hole where the bass used to be continuous. High-passing the kick costs weight on a big system, and you will not hear what you gave away until the record is on one. Tuning a kick to the song changes its character, sometimes into a different drum. Saturating the 808 to make it read on a phone adds midrange that a vocal may want back.
 
-The money side is small. Every DAW in the list above already ships the compressor that does the sidechain, so that half costs nothing. BEEFY is $19 for Mac and Windows if you want the harmonic half handled in one panel, and DRUGS, our one-knob drum bus compressor, is free on both.
+The money side is small. Every DAW in the list above already ships the compressor that does the sidechain, so that half costs nothing. BEEFY is $39 for Mac and Windows if you want the harmonic half handled in one panel, and DRUGS, our one-knob drum bus compressor, is free on both.
 
 ## Questions people ask
 
@@ -9025,7 +9025,7 @@ The job it is doing here is the harmonic ladder. An 808 on E1 puts its fundament
 
 The two output switches decide how the coincident peak is handled. **SOFT CLIP** rounds the top of it and colors it slightly; **LIMIT** holds a ceiling over it instead. A kick meeting an 808 makes a peak that is short and loud, which is the case a clipper handles with the least audible effort. Put it on the bus that carries both, A/B against bypass at matched level, and let **JUICE** return whatever the peak reduction took. [Soft clipping explained](https://gazillionindustries.com/soft-clipping-explained/) has the mechanism.
 
-BEEFY runs on Mac and Windows as AU, VST3 and standalone, $19. There is a 28-second demo with three without/with comparisons on the page.
+BEEFY runs on Mac and Windows as AU, VST3 and standalone, $39. There is a 28-second demo with three without/with comparisons on the page.
 
 Same two roommates, same bathroom. They just made a schedule.
 
@@ -9523,7 +9523,7 @@ BEEFY is a saturation and loudness effect for making sounds thicker, punchier an
 
 On a vocal, placement decides most of the result. Put it after the compressor and after the de-esser, so it is driving a signal that already has an even level and no stabbing s. JUICE sets what arrives, BEEF decides how much weight gets built, and COOK decides whether that weight reads as body or as bite. On a voice, bite is the setting that turns into harshness first, so move COOK last and in small steps, with the beat playing.
 
-SOFT CLIP and LIMIT are two answers to the same loudest consonant, and on a voice they do not sound alike. Soft clipping rounds the top of the waveform and leaves the word feeling immediate. Limiting pulls the level down around the peak, which can take the front edge of the consonant with it — the exact thing this page spent a section protecting. [Soft clipping explained](https://gazillionindustries.com/soft-clipping-explained/) and [how to use a limiter](https://gazillionindustries.com/how-to-use-a-limiter/) cover the choice. The product page says SOFT CLIP opens switched on and takes care of the initial gain staging, so the first move is to raise BEEF and listen rather than to hunt for a magic input level. BEEFY runs on Mac and Windows as AU, VST3 and standalone, and it is $19.
+SOFT CLIP and LIMIT are two answers to the same loudest consonant, and on a voice they do not sound alike. Soft clipping rounds the top of the waveform and leaves the word feeling immediate. Limiting pulls the level down around the peak, which can take the front edge of the consonant with it — the exact thing this page spent a section protecting. [Soft clipping explained](https://gazillionindustries.com/soft-clipping-explained/) and [how to use a limiter](https://gazillionindustries.com/how-to-use-a-limiter/) cover the choice. The product page says SOFT CLIP opens switched on and takes care of the initial gain staging, so the first move is to raise BEEF and listen rather than to hunt for a magic input level. BEEFY runs on Mac and Windows as AU, VST3 and standalone, and it is $39.
 
 **LIMIT** instead, everything else identical.
 
@@ -10261,9 +10261,9 @@ Because the kick is what is triggering the reduction, and a broadband detector t
 
 BEEFY is our saturation and loudness effect. **SOFT CLIP** opens switched on and brings rounded, fuzzy edges to the loudest parts, which is the upstream work that stops a limiter from having to do everything. **LIMIT** is the other choice when you want output peaks held in check instead, and both can be turned off so you can push it yourself. **BEEF** brings weight and density, **COOK** the color and bite, and **JUICE** the level going in. Input and output clip lights watch both ends.
 
-In the worked example above, the four decibels moved upstream are exactly the job SOFT CLIP is there for: round the peaks first, then let the ceiling catch the two and a half that are left. BEEFY is $19, Mac and Windows, AU and VST3 with a standalone on Mac, and the product page has a demo so you can hear the difference between rounding a peak and holding a ceiling over it before you decide. [How to master a beat](https://gazillionindustries.com/how-to-master-a-beat/) puts both stages in order.
+In the worked example above, the four decibels moved upstream are exactly the job SOFT CLIP is there for: round the peaks first, then let the ceiling catch the two and a half that are left. BEEFY is $39, Mac and Windows, AU and VST3 with a standalone on Mac, and the product page has a demo so you can hear the difference between rounding a peak and holding a ceiling over it before you decide. [How to master a beat](https://gazillionindustries.com/how-to-master-a-beat/) puts both stages in order.
 
-Those two switches are the two halves of this page, and they are separate choices. SOFT CLIP is the upstream half: rounded edges on the loudest parts, which is how decibels come out of the peak-to-loudness gap before any ceiling gets involved. LIMIT is the downstream half, holding the output peaks in check. Turn both off and you are pushing it yourself, which is the setting to use when a limiter you already trust lives at the end of your master chain. $19, Mac and Windows, and the product page has a 28-second demo with three without/with comparisons on it. [The cheapest way to make beats louder](https://gazillionindustries.com/cheapest-way-to-make-beats-louder/) puts the same argument in money.
+Those two switches are the two halves of this page, and they are separate choices. SOFT CLIP is the upstream half: rounded edges on the loudest parts, which is how decibels come out of the peak-to-loudness gap before any ceiling gets involved. LIMIT is the downstream half, holding the output peaks in check. Turn both off and you are pushing it yourself, which is the setting to use when a limiter you already trust lives at the end of your master chain. $39, Mac and Windows, and the product page has a 28-second demo with three without/with comparisons on it. [The cheapest way to make beats louder](https://gazillionindustries.com/cheapest-way-to-make-beats-louder/) puts the same argument in money.
 
 Last in the chain, and the least it has to do, the better it sounds.
 
@@ -10563,7 +10563,7 @@ BEEFY is our saturation and loudness plugin for making sounds thicker, punchier 
 
 A new instance opens at JUICE 0 dB, BEEF 30, COOK 30 and SOFT CLIP switched on, which is a deliberate starting point rather than a bypass: park it there, play the part, and move one control at a time. JUICE is where the level-matching from this page happens, so drive with BEEF and pay it back with JUICE until active and bypassed read the same. **LIMIT** is the alternative to SOFT CLIP as the output stage, and swapping between the two at identical settings is the fastest way to hear what an output stage is actually for.
 
-It is $19, runs on Mac and Windows, and installs as AU, VST3 and a standalone application, so you can drive a loop into it without opening a session at all. The demo on the product page runs three without-and-with comparisons in 28 seconds, which is a faster answer than anything on this page.
+It is $39, runs on Mac and Windows, and installs as AU, VST3 and a standalone application, so you can drive a loop into it without opening a session at all. The demo on the product page runs three without-and-with comparisons in 28 seconds, which is a faster answer than anything on this page.
 
 Taste first. Then the hot sauce, on the one plate that needed it.
 
@@ -10875,7 +10875,7 @@ BEEFY is a saturation and loudness effect for making sounds thicker, punchier an
 
 Set against this article, that distinction is the whole point. Width built from two opposed copies is borrowed, and the sum calls the loan in at 3, 6 or 10 dB depending on how far you pushed the correlation. Loudness built from harmonic content is paid for up front and survives the fold, because it is added to the material rather than arranged around it. When a part feels small, work out which of the two you need before you reach for either.
 
-Judge any processor by the same test you would run on a widener. Insert it, sum to mono, and watch the meter across the switch. If the drop is the same with the plugin engaged as it was without, the plugin is not spending your summed level. **LIMIT** is the other output switch, holding the peaks when you want a ceiling instead of a rounded edge, and both switches sit on the panel next to each other. BEEFY is $19, runs on Mac and Windows as AU, VST3 and standalone, and there is a 28-second demo with three without/with comparisons on the page.
+Judge any processor by the same test you would run on a widener. Insert it, sum to mono, and watch the meter across the switch. If the drop is the same with the plugin engaged as it was without, the plugin is not spending your summed level. **LIMIT** is the other output switch, holding the peaks when you want a ceiling instead of a rounded edge, and both switches sit on the panel next to each other. BEEFY is $39, runs on Mac and Windows as AU, VST3 and standalone, and there is a 28-second demo with three without/with comparisons on the page.
 
 Four playback systems, three of them summing your record. Press the button more often.
 
@@ -11015,7 +11015,7 @@ The crossover sits somewhere between 1 and 3 kHz for this curve, which maps onto
 
 - On anything you are tracking through in real time, leave it off until you are done performing.
 
-[BEEFY](https://gazillionindustries.com/beefy.html) is our saturation and loudness effect: three knobs, two output stages, $19 for Mac and Windows. What any plugin does with sample rates inside itself is an implementation detail we do not publish either way, so treat it the way you would treat any nonlinear process. If the source is very bright, feed it less.
+[BEEFY](https://gazillionindustries.com/beefy.html) is our saturation and loudness effect: three knobs, two output stages, $39 for Mac and Windows. What any plugin does with sample rates inside itself is an implementation detail we do not publish either way, so treat it the way you would treat any nonlinear process. If the source is very bright, feed it less.
 
 ## Test your own plugin in one pass
 
@@ -11163,7 +11163,7 @@ Some run it all the time and do not offer a switch. Some are linear and have not
 
 BEEFY is a saturation and loudness effect for making sounds thicker, punchier and more up front. It adds body, squeezes some space out of the peaks, and brings out harmonics that help a sound feel bigger. **BEEF** brings weight, density and attitude; **COOK** changes the color and bite from a rounder feel toward a brighter, more cooked edge; **JUICE** sets the level going in, which is the control that matters most here: feeding a very bright source more gently is the oldest way of managing what a nonlinear process does with it.
 
-A new instance opens with SOFT CLIP on, JUICE at 0 dB, BEEF at 30 and COOK at 30, and **LIMIT** is the alternative out stage when you want the peaks held rather than rounded. Mapped onto everything above: JUICE is the drive number in the harmonic tables, and turning it down is the move that shrinks the series before anything else in the chain gets a chance to fold it. It runs on Mac and Windows as AU, VST3 and standalone, and it costs $19. [Soft clipping](https://gazillionindustries.com/soft-clipping-explained/) and [harmonic distortion](https://gazillionindustries.com/harmonic-distortion/) cover the curve itself.
+A new instance opens with SOFT CLIP on, JUICE at 0 dB, BEEF at 30 and COOK at 30, and **LIMIT** is the alternative out stage when you want the peaks held rather than rounded. Mapped onto everything above: JUICE is the drive number in the harmonic tables, and turning it down is the move that shrinks the series before anything else in the chain gets a chance to fold it. It runs on Mac and Windows as AU, VST3 and standalone, and it costs $39. [Soft clipping](https://gazillionindustries.com/soft-clipping-explained/) and [harmonic distortion](https://gazillionindustries.com/harmonic-distortion/) cover the curve itself.
 
 A setting in the corner that costs CPU and buys you the absence of something. Worth it more often than not.
 
@@ -11489,7 +11489,7 @@ BEEFY is our saturation and loudness plugin. For parallel saturation, put it on 
 
 A new instance opens with SOFT CLIP on, JUICE at 0 dB, BEEF at 30 and COOK at 30, which is a channel setting. On a return you are starting from there and going a long way past it: BEEF is where the work happens, COOK decides whether the return is adding weight or adding bite, and JUICE sets the level going in, so it is the second way to drive the curve harder. **LIMIT** is the alternative output stage to SOFT CLIP, and on a copy you are burying anyway it is worth hearing both.
 
-It runs on Mac and Windows as AU, VST3 and standalone, so the return can be the same blend in whichever DAW the session ends up in, and it is $19. The standalone is the fast way to hear the drive range on a loop before you commit to routing anything.
+It runs on Mac and Windows as AU, VST3 and standalone, so the return can be the same blend in whichever DAW the session ends up in, and it is $39. The standalone is the fast way to hear the drive range on a loop before you commit to routing anything.
 
 Stock and roux, same pot. Nobody at the table asks which one they're tasting.
 
@@ -11765,7 +11765,7 @@ See [how to layer kicks](https://gazillionindustries.com/how-to-layer-kicks/) fo
 
 Nothing, for almost all of it. Every DAW in the list above ships a polarity invert, a sample delay and a spectrum analyzer, and those three are the complete kit for the measurement, the null test and the fix. Alignment is the rare mix problem where spending money is genuinely optional, and it is worth saying plainly before anybody goes shopping for a plugin to solve it.
 
-The paid part comes after, once the sum is coherent and you want it bigger. [DRUGS](https://gazillionindustries.com/drugs.html) is our one-knob bus compressor for drums, free on Mac and Windows: DOSE does the work, with GAIN and a soft ceiling on the way out, and it does not sit at unity with DOSE at nought, so match levels before you judge it. [BEEFY](https://gazillionindustries.com/beefy.html) is $19, one payment, Mac and Windows, AU, VST3 and standalone. Neither of them — nor anything else in the category — can return a frequency that two tracks removed from each other.
+The paid part comes after, once the sum is coherent and you want it bigger. [DRUGS](https://gazillionindustries.com/drugs.html) is our one-knob bus compressor for drums, free on Mac and Windows: DOSE does the work, with GAIN and a soft ceiling on the way out, and it does not sit at unity with DOSE at nought, so match levels before you judge it. [BEEFY](https://gazillionindustries.com/beefy.html) is $39, one payment, Mac and Windows, AU, VST3 and standalone. Neither of them — nor anything else in the category — can return a frequency that two tracks removed from each other.
 
 ## Questions people ask
 
@@ -11871,7 +11871,7 @@ BEEFY is our saturation and loudness effect: it adds body, squeezes some space o
 
 Read against this article, the panel has one honest place in the order of work: after the sum is coherent. Drive a combed pair with JUICE and you raise a spectrum with holes in it; the harmonics BEEF and COOK bring out will land on top of the notches and flatten the measurement without returning the recording. Do the nudge, confirm it on a meter, then come back and set the drive. **LIMIT** and **SOFT CLIP** are the two output switches, and both of them are working on a peak that alignment has already decided the height of.
 
-BEEFY is $19, one payment, and runs on Mac and Windows as AU, VST3 and standalone. There is a 28-second demo with three without/with comparisons on the page.
+BEEFY is $39, one payment, and runs on Mac and Windows as AU, VST3 and standalone. There is a 28-second demo with three without/with comparisons on the page.
 
 Two good microphones, one drum, and a subtraction nobody asked for.
 
@@ -12151,7 +12151,7 @@ Not necessarily. A distortion plugin with a usable drive range at the bottom of 
 
 BEEFY is a saturation and loudness effect for making sounds thicker, punchier and more up front. It adds body, squeezes some space out of the peaks, and brings out harmonics that help a sound feel bigger. **BEEF** is the main event: more weight, more density, more loudness and more attitude as you turn it up. **COOK** changes the color and bite, from a rounder feel toward a brighter, more cooked edge. **JUICE** sets the level going in. **SOFT CLIP** opens switched on and takes care of the initial gain staging, and **LIMIT** is the other choice when you want the output peaks held.
 
-Mapped onto this article: JUICE is the control that decides how far into the curve the signal goes, BEEF is how hard the curve bends, COOK is which end of the harmonic series you end up hearing, and the out stage is where the rounded peaks get held. It runs on Mac and Windows as AU, VST3 and standalone, and it costs $19.
+Mapped onto this article: JUICE is the control that decides how far into the curve the signal goes, BEEF is how hard the curve bends, COOK is which end of the harmonic series you end up hearing, and the out stage is where the rounded peaks get held. It runs on Mac and Windows as AU, VST3 and standalone, and it costs $39.
 
 Fifty years spent removing the failure, twenty spent buying it back. At least now you know which failure you are buying.
 
@@ -12601,7 +12601,7 @@ Effectively, yes. Fuzz circuits drive hard enough that the output is close to a 
 
 BEEFY is our saturation and loudness plugin, and it goes from the subtle end to the obvious one. A little **BEEF** fills things out; a lot gets rude. **COOK** moves the color from a rounder feel toward a brighter, more cooked edge, and **SOFT CLIP**, on by default, brings rounded, fuzzy edges to the loudest parts. There is no drum-only rule: it works on synths, samples, keys, guitar and vocals too.
 
-**JUICE** is the input trim from the steps above, built in, so the drive can be set with a number instead of a hunt, and **LIMIT** holds the output peaks if you want the ceiling handled in the same box. Input and output clip lights tell you which end is complaining. It runs as AU, VST3 and standalone on Mac and Windows, and it costs $19.
+**JUICE** is the input trim from the steps above, built in, so the drive can be set with a number instead of a hunt, and **LIMIT** holds the output peaks if you want the ceiling handled in the same box. Input and output clip lights tell you which end is complaining. It runs as AU, VST3 and standalone on Mac and Windows, and it costs $39.
 
 Dave Davies never needed the word. He needed the razor blade, and then he needed to stop.
 
@@ -12637,7 +12637,7 @@ The Sausage Fattener is a saturation and loudness plugin released under the Dada
 
 - **Their price**: $39, and $29 at launch in 2011
 
-- **Our price**: $19
+- **Our price**: $39
 
 - **Documented path**: theirs is undisclosed by the makers, by choice
 
@@ -12673,7 +12673,7 @@ Then two output choices that are separate from each other. **SOFT CLIP** is on w
 
 **What we have not claimed.** We are not saying BEEFY is cleaner, or louder, or more transparent, or better voiced. We have not measured their plugin and we are not going to publish a comparison we did not run.
 
-[BEEFY](https://gazillionindustries.com/beefy.html) is $19 for Mac and Windows, and there is a demo on the page with three without-and-with comparisons. Use your ears rather than this article.
+[BEEFY](https://gazillionindustries.com/beefy.html) is $39 for Mac and Windows, and there is a demo on the page with three without-and-with comparisons. Use your ears rather than this article.
 
 ## Which to reach for
 
@@ -12697,7 +12697,7 @@ No. BEEFY is tuned by ear, with its own control set: three knobs plus separate s
 
 ### Which one should I buy?
 
-Try both on your own material. Ours is $19 with a demo on its page; theirs is $39 and widely demonstrated. Anyone telling you which sounds better without hearing your track is guessing.
+Try both on your own material. Ours is $39 with a demo on its page; theirs is $39 and widely demonstrated. Anyone telling you which sounds better without hearing your track is guessing.
 
 ## What BEEFY does
 
@@ -13701,7 +13701,7 @@ BEEFY is the saturation side of this page: a saturation and loudness effect that
 
 A new instance opens with SOFT CLIP on, JUICE at 0 dB, BEEF at 30 and COOK at 30, which is a working starting point rather than a preset. **JUICE** sets how hard you are feeding the thing, and **LIMIT** is there as the alternative to SOFT CLIP when you want the output peaks held rather than rounded. On a drum bus, keep BEEF low enough that bypass and engaged still sound like the same kit, then level-match and decide.
 
-Run the crest-factor check from above across it and the number goes down, every time, which is the whole point of putting it there. Mac and Windows, AU, VST3 and standalone, $19. More on the method in [how to saturate drums](https://gazillionindustries.com/how-to-saturate-drums/) and [how to make drums hit harder](https://gazillionindustries.com/how-to-make-drums-hit-harder/).
+Run the crest-factor check from above across it and the number goes down, every time, which is the whole point of putting it there. Mac and Windows, AU, VST3 and standalone, $39. More on the method in [how to saturate drums](https://gazillionindustries.com/how-to-saturate-drums/) and [how to make drums hit harder](https://gazillionindustries.com/how-to-make-drums-hit-harder/).
 
 Hire the sprinter, hire the linebacker. Just don't ask either one to play the other's position.
 
@@ -14163,7 +14163,7 @@ Yes, if you are asking it for gain it should never have been asked for. It catch
 
 BEEFY is a saturation and loudness effect for making sounds thicker, punchier and more up front. It adds body, squeezes some space out of the peaks, and brings out harmonics that help a sound feel bigger. **SOFT CLIP** opens switched on and brings rounded, fuzzy edges to the loudest parts, which lowers peaks before a limiter has to. **LIMIT** is the other choice, a straight-ahead way to keep the output peaks in check, and the two are separate decisions. Input and output clip lights show you both ends.
 
-For the job on this page it sits upstream, on the drum bus or the element that is causing the overshoot, not on the master after the limiter. **JUICE** sets the level going in, **BEEF** is the weight and density, and **COOK** moves the color from rounder toward brighter and more cooked — worth watching on this particular page, since brighter is the direction that costs you true peak. It is $19, one payment, Mac and Windows, with AU, VST3 and a Mac standalone. Whatever you use for the last stage, the decibel it does not have to catch is the cheapest one on the record.
+For the job on this page it sits upstream, on the drum bus or the element that is causing the overshoot, not on the master after the limiter. **JUICE** sets the level going in, **BEEF** is the weight and density, and **COOK** moves the color from rounder toward brighter and more cooked — worth watching on this particular page, since brighter is the direction that costs you true peak. It is $39, one payment, Mac and Windows, with AU, VST3 and a Mac standalone. Whatever you use for the last stage, the decibel it does not have to catch is the cheapest one on the record.
 
 **SOFT CLIP** on, which is how it opens.
 
@@ -14751,7 +14751,7 @@ Which is the argument for taking it in pieces. Six decibels removed in one place
 
 Most of it costs nothing, which is worth saying before anybody goes shopping. Every major DAW ships a compressor with an attack control, a limiter and a polarity invert, and that is the complete equipment list for the null test, the detector comparison and the crest-factor ledger above. The measurement half of this article has no price at all.
 
-The paid half is shaping and loudness. [DRUGS](https://gazillionindustries.com/drugs.html) is our one-knob bus compressor for drums, free on Mac and Windows: DOSE does the work, with GAIN and a soft ceiling on the way out, and it does not sit at unity with DOSE at nought, so level-match before you judge it. [BEEFY](https://gazillionindustries.com/beefy.html) is $19, one payment, Mac and Windows, AU, VST3 and standalone. Whatever you use, the honest way to spend money here is to demo against the null test rather than against the loudness, because everything in the category makes the loop louder and the question was always which few milliseconds it took that from.
+The paid half is shaping and loudness. [DRUGS](https://gazillionindustries.com/drugs.html) is our one-knob bus compressor for drums, free on Mac and Windows: DOSE does the work, with GAIN and a soft ceiling on the way out, and it does not sit at unity with DOSE at nought, so level-match before you judge it. [BEEFY](https://gazillionindustries.com/beefy.html) is $39, one payment, Mac and Windows, AU, VST3 and standalone. Whatever you use, the honest way to spend money here is to demo against the null test rather than against the loudness, because everything in the category makes the loop louder and the question was always which few milliseconds it took that from.
 
 ## Questions people ask
 
@@ -14889,7 +14889,7 @@ BEEFY is a saturation and loudness effect for making sounds thicker, punchier an
 
 Read against this article, the panel is two questions. JUICE and BEEF decide how much signal reaches the bend, which is how far the average comes up. SOFT CLIP and LIMIT are the two ways of handling what is still standing at the top: one rounds the peak, the other holds a ceiling over it, and they are separate switches so you can hear the difference on one hit rather than reason about it. Both off is also an option, and it is the honest starting point for the null test above.
 
-BEEFY is $19, one payment, and runs on Mac and Windows as AU, VST3 and standalone. There is a 28-second demo with three without/with comparisons on the page, which is the fastest way to hear what rounding a peak does to an attack.
+BEEFY is $39, one payment, and runs on Mac and Windows as AU, VST3 and standalone. There is a 28-second demo with three without/with comparisons on the page, which is the fastest way to hear what rounding a peak does to an attack.
 
 Five milliseconds, almost no energy, and the whole difference between a snare and a slap.
 
@@ -15219,7 +15219,7 @@ BEEFY is our saturation and loudness effect. **SOFT CLIP** opens switched on and
 
 For the job on this page it goes on the element or the bus making the peak, which on a kit is usually the snare and the hats rather than the kick. SOFT CLIP opens switched on because it handles the initial gain staging, so the clipping finds the sound without you hunting for a magic input level, and you can still add BEEF on top. COOK is the control to watch here, because brighter is the direction that puts more energy into the range this page has been measuring, so if the residue test starts buzzing, COOK is the first thing to pull back.
 
-Run the residue test on it the way this page describes. Two copies of the same bounce, one through BEEFY, matched by peak, one polarity flipped, and listen to what is left. Short bursts on the hits means the harmonics are landing where they should. It is $19, one payment, Mac and Windows, with AU, VST3 and a Mac standalone. The panel resizes and remembers its size, it opens at 80 percent, and the cow reacts to the audio, which is not a metering feature and is not going anywhere.
+Run the residue test on it the way this page describes. Two copies of the same bounce, one through BEEFY, matched by peak, one polarity flipped, and listen to what is left. Short bursts on the hits means the harmonics are landing where they should. It is $39, one payment, Mac and Windows, with AU, VST3 and a Mac standalone. The panel resizes and remembers its size, it opens at 80 percent, and the cow reacts to the audio, which is not a metering feature and is not going anywhere.
 
 The thing every meter warns you about, used on purpose, two decibels at a time.
 
@@ -15517,7 +15517,7 @@ BEEFY is our saturation and loudness effect for making sounds thicker, punchier 
 
 Read against this article, the panel is two decisions. JUICE and BEEF decide how much signal reaches the bend, which is how much average level comes up and how many of those phone-friendly harmonics get made. SOFT CLIP and LIMIT are the two ways of handling what is left at the top: one rounds the peak and pays in harmonics, the other holds a ceiling over it and pays in movement. A new instance opens with SOFT CLIP on, JUICE at 0 dB, BEEF at 30 and COOK at 30, which is a reasonable place to take the first decibel off a drum bus. Judge every setting by bypassing the plugin rather than by turning BEEF down.
 
-If the bus needs holding together rather than thickening, [DRUGS](https://gazillionindustries.com/drugs.html) is our free one-knob bus compressor for drums, with a single DOSE control plus GAIN and a soft ceiling on the way out. DOSE at zero is still part of the sound, so bypass it to compare. BEEFY is $19 and runs on Mac and Windows as AU, VST3 and standalone, and there is a 28-second demo with three without/with comparisons on the page.
+If the bus needs holding together rather than thickening, [DRUGS](https://gazillionindustries.com/drugs.html) is our free one-knob bus compressor for drums, with a single DOSE control plus GAIN and a soft ceiling on the way out. DOSE at zero is still part of the sound, so bypass it to compare. BEEFY is $39 and runs on Mac and Windows as AU, VST3 and standalone, and there is a 28-second demo with three without/with comparisons on the page.
 
 Five causes, in order, and the plugin is the fourth one. Check the first three first.
 
@@ -15681,7 +15681,7 @@ Usually a little, yes. Streaming services turn loud masters down on playback, so
 
 BEEFY is our saturation and loudness plugin, and the part that matters here is that it is one stage rather than three. **SOFT CLIP** opens switched on and rounds the peaks instead of holding a ceiling over them, so a limiter further down has less to do and less reason to lunge. **BEEF** adds the weight people go hunting for with a stack of separate boxes, which is the stack that makes the harshness.
 
-Level-match it against bypass while you set it, the same as everything else on this page. [BEEFY](https://gazillionindustries.com/beefy.html) is $19.
+Level-match it against bypass while you set it, the same as everything else on this page. [BEEFY](https://gazillionindustries.com/beefy.html) is $39.
 
 The demo on the [BEEFY page](https://gazillionindustries.com/beefy.html) is 28 seconds.
 
@@ -16007,7 +16007,7 @@ Assign the range rather than emptying it. Let one part own 150 to 250 Hz, anothe
 
 BEEFY is our saturation and loudness effect, and it is worth being clear about what it is for here. It adds body, squeezes space out of the peaks and brings out harmonics that help a sound feel bigger: useful on a thin kick or a polite break, and the opposite of what a cluttered low mid needs. **BEEF** adds weight and density, **COOK** moves the color from rounder toward brighter, and **JUICE** sets the input. Clear the range first, then decide what deserves the weight.
 
-Order it the way the arithmetic above suggests. High-pass the channel, make the wide cut, and only then put BEEFY on the part that still needs weight, so the harmonics it generates are built from a fundamental you actually want. COOK moves the color from rounder toward brighter, and on a part that was already crowding the low mids the brighter end of it is the safer direction to take. **SOFT CLIP** and **LIMIT** are the two output switches, and the honest way to judge either of them is to match the bypassed level to a tenth of a dB first. BEEFY runs on Mac and Windows as AU, VST3 and standalone, and it is $19.
+Order it the way the arithmetic above suggests. High-pass the channel, make the wide cut, and only then put BEEFY on the part that still needs weight, so the harmonics it generates are built from a fundamental you actually want. COOK moves the color from rounder toward brighter, and on a part that was already crowding the low mids the brighter end of it is the safer direction to take. **SOFT CLIP** and **LIMIT** are the two output switches, and the honest way to judge either of them is to match the bypassed level to a tenth of a dB first. BEEFY runs on Mac and Windows as AU, VST3 and standalone, and it is $39.
 
 **SOFT CLIP** as the out stage, BEEF at 62. Match the bypassed level before you judge it.
 
@@ -18753,7 +18753,7 @@ A hit with no front is a shaping problem rather than a level one, and a transien
 
 Nothing, if you want it to. Every DAW named above includes a compressor and a limiter that can finish a record, and plenty of records have been finished on them. What the paid market mostly sells on top is character, metering and speed, and those are real things to want — just not things you need before you can start. [Best free compressor plugins](https://gazillionindustries.com/best-free-compressor/) covers what to look for when the budget is nothing.
 
-From us: [DRUGS](https://gazillionindustries.com/drugs.html) is free, and it is the compressor half of this page. [BEEFY](https://gazillionindustries.com/beefy.html) is $19 and covers the stage between them — saturation and soft clipping, with SOFT CLIP and LIMIT as its two output switches.
+From us: [DRUGS](https://gazillionindustries.com/drugs.html) is free, and it is the compressor half of this page. [BEEFY](https://gazillionindustries.com/beefy.html) is $39 and covers the stage between them — saturation and soft clipping, with SOFT CLIP and LIMIT as its two output switches.
 
 What to look for when the budget is nothing: [best free compressor plugins](https://gazillionindustries.com/best-free-compressor/).
 
@@ -19943,7 +19943,7 @@ One category under three names, used interchangeably on product pages. Simulator
 
 ### How much does a vinyl sim plugin cost?
 
-Anywhere from nothing to the price of any other paid effect, and the price mostly tracks how many of the four parts are covered rather than how well any one is done. Ours, for the record: DRUGS is free and handles the squash, F12 is $49 for the filter and the digital damage with DRUGS included, TRIPLE OG is $29 for the noise and the instability, SKRUU is $29 for the drift.
+Anywhere from nothing to the price of any other paid effect, and the price mostly tracks how many of the four parts are covered rather than how well any one is done. Ours, for the record: DRUGS is free and handles the squash, F12 is $49 for the filter and the digital damage with DRUGS included, TRIPLE OG is $39 for the noise and the instability, SKRUU is $29 for the drift.
 
 ### Can I get the sound without a vinyl sim plugin?
 
@@ -25113,7 +25113,7 @@ Straight answer, and the conflict of interest first: the four plugins on this pa
 
 - **Bandwidth and grain**: F(ilter)12 — filter and 12 bit crush on one face, $49, DRUGS included
 
-- **The medium**: TRIPLE OG — cassette tape simulation with a playable transport, $29
+- **The medium**: TRIPLE OG — cassette tape simulation with a playable transport, $39
 
 - **Speed and pitch**: SKRUU — varispeed, with pitch and time on separate knobs, $29
 
@@ -25151,7 +25151,7 @@ Behind the pair sits the filter, which is why the two are on one face. **POSITIO
 
 The second job is the thing the music was recorded onto. A medium contributes four signatures at once, which is why one medium plugin tends to do more work than three specialists: reduced bandwidth, a noise floor that sits under the quiet parts, saturation that comes in gradually rather than as a wall, and a speed that never holds perfectly still. Those four arriving together is what the ear reads as age.
 
-TRIPLE OG is our cassette tape simulation, $29, Mac and Windows, AU, VST3 and standalone. **TONE** sets playback brightness and **DRIVE** the thickness. **AGE** runs from nought to sixty years and makes the tape darker, noisier and less steady as it climbs, which is one control instead of three. **HISS** is a continuous broadband bed, partly decorrelated across the channels so it survives a fold to mono. **WOW FLUT** is the speed instability.
+TRIPLE OG is our cassette tape simulation, $39, Mac and Windows, AU, VST3 and standalone. **TONE** sets playback brightness and **DRIVE** the thickness. **AGE** runs from nought to sixty years and makes the tape darker, noisier and less steady as it climbs, which is one control instead of three. **HISS** is a continuous broadband bed, partly decorrelated across the channels so it survives a fold to mono. **WOW FLUT** is the speed instability.
 
 The transport is the half almost nothing else offers. **SLAM** stops the tape and returns it in sync, so the beat is where it should be when the machine comes back. **SCRUB** runs the head backward and springs home. **CATCH** drags, then sprints to catch up. Those are performance moves rather than settings, and they are the reason a lot of people searching for the best lofi tape VST end up wanting a machine rather than a saturation curve.
 
@@ -25203,7 +25203,7 @@ Four gaps, stated plainly, because the fastest way to waste money in this catego
 
 **No space.** None of the four is a reverb or a delay. A great deal of what people hear as lofi is actually a small dark room around a dry sample, and no amount of bit reduction substitutes for it.
 
-**No loudness.** BEEFY, our saturation and soft clipping plugin at $19, is not a lofi tool and we would rather say so than sell it to you sideways. It makes things bigger and more present, which is the opposite journey from the one this page is about. It belongs after the lofi chain, or on a different record.
+**No loudness.** BEEFY, our saturation and soft clipping plugin at $39, is not a lofi tool and we would rather say so than sell it to you sideways. It makes things bigger and more present, which is the opposite journey from the one this page is about. It belongs after the lofi chain, or on a different record.
 
 ## What you probably already own, per host
 
@@ -25247,7 +25247,7 @@ Step six is the one people skip and it is the one that decides the outcome. Ever
 
 ## What all four cost, and what they cost you
 
-In money: DRUGS is free. TRIPLE OG is $29 and SKRUU is $29. F(ilter)12 is $49 with DRUGS included, so buying F(ilter)12 first and adding the other two comes to $107 for the set. Nobody needs the set on day one.
+In money: DRUGS is free. TRIPLE OG is $39 and SKRUU is $29. F(ilter)12 is $49 with DRUGS included, so buying F(ilter)12 first and adding the other two comes to $117 for the set. Nobody needs the set on day one.
 
 In sound, the costs are more interesting, and each one is real.
 
@@ -25283,7 +25283,7 @@ Two plugins in series, in this order: something that damages the sound, then som
 
 ### What is the best lofi tape VST?
 
-Look for speed instability and a transport, because saturation on its own is available almost everywhere. A tape plugin that only warms the signal is doing the same job as the saturator already in your host. TRIPLE OG is ours, at $29, with SLAM, SCRUB and CATCH on the face. Others are surveyed in [best lofi plugins](https://gazillionindustries.com/best-lofi-plugins/).
+Look for speed instability and a transport, because saturation on its own is available almost everywhere. A tape plugin that only warms the signal is doing the same job as the saturator already in your host. TRIPLE OG is ours, at $39, with SLAM, SCRUB and CATCH on the face. Others are surveyed in [best lofi plugins](https://gazillionindustries.com/best-lofi-plugins/).
 
 ### What is the best VST for lofi hip hop specifically?
 
@@ -27369,7 +27369,7 @@ A synth part almost never sits right raw. Three moves fix most of it, in this or
 
 First, level. A patch with three oscillators open can arrive far louder than the sampled parts around it. Set it before you process it; the reasoning is in [gain staging](https://gazillionindustries.com/gain-staging/).
 
-Second, harmonics. A synth bass that vanishes on small speakers needs content above the fundamental, and saturation is how you get it. BEEFY is our saturation, soft clipping and loudness plug-in, $19, with JUICE, BEEF and COOK on the front and SOFT CLIP and LIMIT as output stages. Working method is in [how to make a synth sound thicker](https://gazillionindustries.com/how-to-make-a-synth-sound-thicker/) and [how to make bass fatter](https://gazillionindustries.com/how-to-make-bass-fatter/).
+Second, harmonics. A synth bass that vanishes on small speakers needs content above the fundamental, and saturation is how you get it. BEEFY is our saturation, soft clipping and loudness plug-in, $39, with JUICE, BEEF and COOK on the front and SOFT CLIP and LIMIT as output stages. Working method is in [how to make a synth sound thicker](https://gazillionindustries.com/how-to-make-a-synth-sound-thicker/) and [how to make bass fatter](https://gazillionindustries.com/how-to-make-bass-fatter/).
 
 Third, the drums around it. If the synth and the kick are arguing, the fix is usually on the drum bus rather than on the synth. DRUGS is our one-knob bus compressor for drums, free for Mac and Windows, with DOSE, a GAIN control and a soft ceiling on the output. It is a single knob and it is the cheapest thing on this page. Background in [glue compression](https://gazillionindustries.com/glue-compression/), and the ducking move in [sidechain compression](https://gazillionindustries.com/sidechain-compression/).
 
@@ -28161,7 +28161,7 @@ No, and the collision of words costs people hours. Monophonic describes how many
 
 ### What is the best free way to start?
 
-Open what your DAW already has and set its voice count to 1 for an evening. Our free one is [DRUGS](https://gazillionindustries.com/drugs.html), a one-knob drum bus compressor rather than a synth, so it is the free way to get one of ours into your session and not the free way to get a synth. When the synth bass is written and needs weight against the kick, [BEEFY](https://gazillionindustries.com/beefy.html) at $19 is the saturation stage for it, and [how to mix kick and 808](https://gazillionindustries.com/how-to-mix-kick-and-808/) covers the fight between the two.
+Open what your DAW already has and set its voice count to 1 for an evening. Our free one is [DRUGS](https://gazillionindustries.com/drugs.html), a one-knob drum bus compressor rather than a synth, so it is the free way to get one of ours into your session and not the free way to get a synth. When the synth bass is written and needs weight against the kick, [BEEFY](https://gazillionindustries.com/beefy.html) at $39 is the saturation stage for it, and [how to mix kick and 808](https://gazillionindustries.com/how-to-mix-kick-and-808/) covers the fight between the two.
 
 ## What JOURNEYMAN does
 
@@ -32225,7 +32225,7 @@ The best cassette plugins model the things a cassette did badly: narrow bandwidt
 
 - **Prices**: roughly $29 to €59 across the category
 
-- **Our answer**: TRIPLE OG, $29, Mac and Windows
+- **Our answer**: TRIPLE OG, $39, Mac and Windows
 
 [TRIPLE OG](https://gazillionindustries.com/tripleog.html) is our cassette sim for Mac and Windows, with the transport on the face rather than in a menu. There is a demo on the page.
 
@@ -32263,11 +32263,11 @@ Cassettes came in formulations, and the brightness genuinely differed. Type I wa
 
 Some plugins expose these as a switch — Wavesfactory's Cassette models all four, for example. It is a real distinction, and it is also a smaller one than the difference between a fresh tape and a worn one. If you are choosing between plugins, weight wear and transport above tape type.
 
-[TRIPLE OG](https://gazillionindustries.com/tripleog.html) is our cassette tape simulation, $29 for Mac and Windows. **AGE** runs from nought to sixty years in one control, and the transport is on the face rather than in a menu. There's a demo on the page.
+[TRIPLE OG](https://gazillionindustries.com/tripleog.html) is our cassette tape simulation, $39 for Mac and Windows. **AGE** runs from nought to sixty years in one control, and the transport is on the face rather than in a menu. There's a demo on the page.
 
 ## What the field costs
 
-Cassette plugins sit in a narrow band. Aberrant DSP's SketchCassette II lists at $36 and describes itself as cassette-inspired degradation, drawn from four-track cassette recorders and reaching from subtle warble to what its makers call unearthed-from-the-attic destruction. Wavesfactory's Cassette lists at €59, models the four tape types along with hiss, asperity noise, wow, flutter and crosstalk, and includes a control that runs its processing more than once. Caelum Audio's Tape Cassette 2 works from Type I characteristics and puts wow and flutter on controls its makers say go past what the hardware could manage; it runs as VST3, AU, AAX and AUv3, which is the widest format list in this group. TRIPLE OG is $29.
+Cassette plugins sit in a narrow band. Aberrant DSP's SketchCassette II lists at $36 and describes itself as cassette-inspired degradation, drawn from four-track cassette recorders and reaching from subtle warble to what its makers call unearthed-from-the-attic destruction. Wavesfactory's Cassette lists at €59, models the four tape types along with hiss, asperity noise, wow, flutter and crosstalk, and includes a control that runs its processing more than once. Caelum Audio's Tape Cassette 2 works from Type I characteristics and puts wow and flutter on controls its makers say go past what the hardware could manage; it runs as VST3, AU, AAX and AUv3, which is the widest format list in this group. TRIPLE OG is $39.
 
 Two names come up in the same conversation and are not cassette at all. Softube's Tape models three studio machines at component level, and Chow Tape Model — free and open source, and unusual in this category for having come out of a university class and a 2019 conference paper — emulates a reel-to-reel. Both are good at what they do. Neither is aimed at the thing a cassette does wrong, which is the whole point of a cassette.
 
@@ -32427,7 +32427,7 @@ The best free tape plugins cover saturation, high-frequency behavior and the bas
 
 - **Watch for**: reel models when you wanted a cassette; different sound
 
-- **Our answer**: TRIPLE OG, $29, when you want the machine too
+- **Our answer**: TRIPLE OG, $39, when you want the machine too
 
 [TRIPLE OG](https://gazillionindustries.com/tripleog.html) is our cassette sim for Mac and Windows, with the transport on the face rather than in a menu. There is a demo on the page.
 
@@ -32449,7 +32449,7 @@ That is not a cut-down tool. On saturation and the way the top end behaves under
 
 - **The transport.** Stopping, dragging, rewinding. This is the rarest feature in the category at any price, and it is essentially absent from free tools, because a model of tape running at speed has no reason to have one.
 
-[TRIPLE OG](https://gazillionindustries.com/tripleog.html) is a cassette tape simulation with the transport on the face: **SLAM**, **SCRUB** and **CATCH**. $29, Mac and Windows. There's a demo on the page.
+[TRIPLE OG](https://gazillionindustries.com/tripleog.html) is a cassette tape simulation with the transport on the face: **SLAM**, **SCRUB** and **CATCH**. $39, Mac and Windows. There's a demo on the page.
 
 The whole thing. Top half is the machine, bottom half is the tape, and the **SCRUB on [TRIPLE OG](https://gazillionindustries.com/tripleog.html)** strip along the bottom is played by hand.
 
@@ -32761,7 +32761,7 @@ A lofi tape plugin wants wear, noise and speed movement turned up, and bandwidth
 
 - **Most underdone**: speed movement, which is what sells it
 
-- **Our answer**: TRIPLE OG, $29, Mac and Windows
+- **Our answer**: TRIPLE OG, $39, Mac and Windows
 
 [TRIPLE OG](https://gazillionindustries.com/tripleog.html) is our cassette sim for Mac and Windows, with the transport on the face rather than in a menu. There is a demo on the page.
 
@@ -32933,7 +32933,7 @@ Choose the machine, then the behaviors, then the format. Reel simulations lead o
 
 - **Free first**: an open-source reel model costs nothing to try
 
-- **Our answer**: TRIPLE OG, cassette, $29, Mac and Windows
+- **Our answer**: TRIPLE OG, cassette, $39, Mac and Windows
 
 [TRIPLE OG](https://gazillionindustries.com/tripleog.html) is our cassette sim for Mac and Windows, with the transport on the face rather than in a menu. There is a demo on the page.
 
@@ -32951,7 +32951,7 @@ Tape emulation bundles six separate things: saturation, compression, high-freque
 
 The short guidance: saturation is available from dozens of plugins you already own and is the weakest reason to pick one. Speed instability is available from almost nothing else, and a playable transport from less still. Weight your decision toward the things that are hard to get elsewhere.
 
-[TRIPLE OG](https://gazillionindustries.com/tripleog.html) is our cassette tape simulation, $29 for Mac and Windows, with the transport on the face rather than in a menu. There's a demo on the page.
+[TRIPLE OG](https://gazillionindustries.com/tripleog.html) is our cassette tape simulation, $39 for Mac and Windows, with the transport on the face rather than in a menu. There's a demo on the page.
 
 The same panel in its light finish. A finish, not a theme — every control sits where it did.
 
@@ -32959,7 +32959,7 @@ The same panel in its light finish. A finish, not a theme — every control sits
 
 On the free side, open-source physical models of reel machines are genuinely good. CHOW Tape Model is a physical model of an analog tape machine, originally based on a Sony TC-260, described in a paper presented at the DAFx conference in 2019 and released under the GPL, in VST, VST3, AU, AAX, AUv3 and CLAP. What to expect from free, and what it leaves out, is in [free tape plugins](https://gazillionindustries.com/best-free-tape-plugins/).
 
-On the cassette side, Aberrant DSP's SketchCassette II lists at $36 and describes itself as cassette-inspired degradation. Wavesfactory's Cassette lists at €59 and models four cassette tape formulations — ferric oxide, chromium dioxide, ferro-chrome and metal — along with hiss, asperity noise, wow, flutter and crosstalk. TRIPLE OG is $29.
+On the cassette side, Aberrant DSP's SketchCassette II lists at $36 and describes itself as cassette-inspired degradation. Wavesfactory's Cassette lists at €59 and models four cassette tape formulations — ferric oxide, chromium dioxide, ferro-chrome and metal — along with hiss, asperity noise, wow, flutter and crosstalk. TRIPLE OG is $39.
 
 On the reel side, Softube's Tape lists at €99. AudioThing's Reels sits across both, billed as a tape plugin with echo and a tape stop effect, running on macOS, Windows and Linux in every common format, with a trial that goes silent for three seconds every forty-five. Every price here was read off the maker's own page in September 2026; they move, so check before you buy.
 
@@ -33451,7 +33451,7 @@ The best tape sim plugin is the one whose subset matches your use. Mastering wor
 
 - **Trap**: judging at unmatched level; tape always flatters
 
-- **Our answer**: TRIPLE OG for the character end, $29
+- **Our answer**: TRIPLE OG for the character end, $39
 
 [TRIPLE OG](https://gazillionindustries.com/tripleog.html) is our cassette sim for Mac and Windows, with the transport on the face rather than in a menu. There is a demo on the page.
 
@@ -35075,7 +35075,7 @@ Do the cassette chain first, then put the result through a filter and a short, d
 
 TRIPLE OG is our cassette tape simulation, a cassette transport rather than a single effect. **TONE** is the playback system's brightness. **HISS** is a broadband bed. **AGE** runs from nought to sixty years, darker, noisier, slightly more saturated, less speed-stable and less matched left to right, all on one knob. **DRIVE** is soft asymmetric saturation that gets dirtier without getting louder. **WOW FLUT** and **CATCH** make the transport drift and jam, **SCRUB** drags the head back by hand, and **SLAM** stops the tape.
 
-It runs on Mac and Windows as AU, VST3 and standalone, and it is $29. Everything above sits on one panel in the order the machine puts it, which is the argument for a transport over a rack of six devices: you stop building the chain and start playing it.
+It runs on Mac and Windows as AU, VST3 and standalone, and it is $39. Everything above sits on one panel in the order the machine puts it, which is the argument for a transport over a rack of six devices: you stop building the chain and start playing it.
 
 Springsteen's four-track didn't sound expensive. It sounded true, and that's what people are still chasing.
 
@@ -36080,7 +36080,7 @@ https://gazillionindustries.com/tripleog.html
 
 # Tape plugins for Ableton Live
 
-> Roar, Saturator and Erosion cover saturation. Live has no device for speed, cassette noise or a transport. That one is TRIPLE OG, VST3 and AU, $29.
+> Roar, Saturator and Erosion cover saturation. Live has no device for speed, cassette noise or a transport. That one is TRIPLE OG, VST3 and AU, $39.
 
 Source: https://gazillionindustries.com/tape-plugins-for-ableton-live/  
 Published 2026-09-22, updated 2026-09-26. By Gazillion Industries, who make TRIPLE OG.
@@ -36089,11 +36089,11 @@ Published 2026-09-22, updated 2026-09-26. By Gazillion Industries, who make TRIP
 
 Live gives you a lot of ways to damage a sound and no way to slow one down. Roar, Saturator and Erosion between them cover saturation and degradation thoroughly, and none of them is a tape machine, because none of them touches the one thing tape does that nothing else does: speed.
 
-So the thing you load is [TRIPLE OG](https://gazillionindustries.com/tripleog.html), our cassette tape simulation, $29, as VST3 on Windows and macOS and as an Audio Unit on a Mac. **WOW FLUT** is the speed instability, **HISS** the noise bed, and **SLAM**, **SCRUB** and **CATCH** put the transport on the face, playable while the set runs.
+So the thing you load is [TRIPLE OG](https://gazillionindustries.com/tripleog.html), our cassette tape simulation, $39, as VST3 on Windows and macOS and as an Audio Unit on a Mac. **WOW FLUT** is the speed instability, **HISS** the noise bed, and **SLAM**, **SCRUB** and **CATCH** put the transport on the face, playable while the set runs.
 
 ## The short version
 
-- **Load this**: TRIPLE OG, $29 — speed, cassette noise, a transport
+- **Load this**: TRIPLE OG, $39 — speed, cassette noise, a transport
 
 - **Spend nothing first**: DRUGS is free and loads in Live; a drum bus compressor, not tape
 
@@ -36157,7 +36157,7 @@ Speed. Every behavior in Live's degradation set processes a signal arriving at t
 
 **WOW/FLUT on [TRIPLE OG](https://gazillionindustries.com/tripleog.html)** is the one control on this page with no counterpart anywhere in Live's device set.
 
-[TRIPLE OG](https://gazillionindustries.com/tripleog.html) loads in Live as VST3 on Windows and macOS, and as an Audio Unit on macOS, and it is $29. **WOW FLUT** and the **SLAM** transport are the parts Live has no device for. There's a demo on the page.
+[TRIPLE OG](https://gazillionindustries.com/tripleog.html) loads in Live as VST3 on Windows and macOS, and as an Audio Unit on macOS, and it is $39. **WOW FLUT** and the **SLAM** transport are the parts Live has no device for. There's a demo on the page.
 
 ## What Live already does well
 
@@ -36165,7 +36165,7 @@ Speed. Every behavior in Live's degradation set processes a signal arriving at t
 
 **Saturator** was updated in the same version with a Bass Shaper curve and a more focused interface. **Erosion**, Live's signal degradation device, was revamped with real-time spectrum visualization and blending between sine and noise modulation.
 
-So if what you want from tape is harmonic thickening and a bit of grit, you already own it, and reaching for a tape plugin to get saturation in Live is buying something you have. Use Roar or Saturator for the harmonic half and put TRIPLE OG after it for the half they leave alone. That ordering is also the honest case for the $29: the three behaviors Live has none of, rather than more of the one it already gives you.
+So if what you want from tape is harmonic thickening and a bit of grit, you already own it, and reaching for a tape plugin to get saturation in Live is buying something you have. Use Roar or Saturator for the harmonic half and put TRIPLE OG after it for the half they leave alone. That ordering is also the honest case for the $39: the three behaviors Live has none of, rather than more of the one it already gives you.
 
 ## Warping is not varispeed
 
@@ -36191,7 +36191,7 @@ Repitch mode is the exception and it is the closest thing in Live to a tape beha
 
 ### Does Ableton have a tape emulation plugin?
 
-Not as such. Live has saturation and degradation devices — Roar, Saturator, Erosion — which cover the harmonic side. It has no device for speed instability, cassette noise or a tape transport, which is what a tape plugin gets bought for. Ours is [TRIPLE OG](https://gazillionindustries.com/tripleog.html), $29, VST3 and AU.
+Not as such. Live has saturation and degradation devices — Roar, Saturator, Erosion — which cover the harmonic side. It has no device for speed instability, cassette noise or a tape transport, which is what a tape plugin gets bought for. Ours is [TRIPLE OG](https://gazillionindustries.com/tripleog.html), $39, VST3 and AU.
 
 ### What is the best tape plugin for Ableton?
 
@@ -36211,7 +36211,7 @@ Our free one is [DRUGS](https://gazillionindustries.com/drugs.html), a one-knob 
 
 ## What TRIPLE OG does
 
-[TRIPLE OG](https://gazillionindustries.com/tripleog.html) is our cassette tape simulation, $29, and in Live it is doing the half the stock devices leave alone. **WOW FLUT** is the speed instability, **HISS** a continuous broadband bed, and **AGE** runs from nought to sixty years, taking wear, noise and stability together. **TONE** and **DRIVE** handle brightness and thickness. The transport is on the face: **SLAM** stops the tape and returns it in sync, **SCRUB** runs the head backward and springs home, and **CATCH** makes it drag and sprint to catch up. VST3 on Windows 10 or later, and on macOS 10.13 or later as VST3, Audio Unit and a standalone app.
+[TRIPLE OG](https://gazillionindustries.com/tripleog.html) is our cassette tape simulation, $39, and in Live it is doing the half the stock devices leave alone. **WOW FLUT** is the speed instability, **HISS** a continuous broadband bed, and **AGE** runs from nought to sixty years, taking wear, noise and stability together. **TONE** and **DRIVE** handle brightness and thickness. The transport is on the face: **SLAM** stops the tape and returns it in sync, **SCRUB** runs the head backward and springs home, and **CATCH** makes it drag and sprint to catch up. VST3 on Windows 10 or later, and on macOS 10.13 or later as VST3, Audio Unit and a standalone app.
 
 Live will make anything sound damaged. It will not make anything sound late.
 
@@ -36228,7 +36228,7 @@ https://gazillionindustries.com/tripleog.html
 
 # Tape plugins for FL Studio
 
-> FL's distortion tools are strong and there is no tape machine. Speed, cassette noise and a transport need a plug-in: TRIPLE OG, VST3, $29.
+> FL's distortion tools are strong and there is no tape machine. Speed, cassette noise and a transport need a plug-in: TRIPLE OG, VST3, $39.
 
 Source: https://gazillionindustries.com/tape-plugins-for-fl-studio/  
 Published 2026-09-22, updated 2026-09-26. By Gazillion Industries, who make TRIPLE OG.
@@ -36237,11 +36237,11 @@ Published 2026-09-22, updated 2026-09-26. By Gazillion Industries, who make TRIP
 
 FL has more ways to wreck a signal than almost any other DAW, and Distructor puts most of them in one window. What none of them does is change when the audio arrives, which is the one behavior a tape machine has and a distortion rack does not.
 
-So the thing you load on top is [TRIPLE OG](https://gazillionindustries.com/tripleog.html), our cassette tape simulation, $29, shipping VST3 on Windows and macOS so FL finds it either way. **WOW FLUT** is the speed instability, **HISS** the noise bed, and **SLAM**, **SCRUB** and **CATCH** put the transport under your hand while the pattern runs. FL has no stock device for any of the three.
+So the thing you load on top is [TRIPLE OG](https://gazillionindustries.com/tripleog.html), our cassette tape simulation, $39, shipping VST3 on Windows and macOS so FL finds it either way. **WOW FLUT** is the speed instability, **HISS** the noise bed, and **SLAM**, **SCRUB** and **CATCH** put the transport under your hand while the pattern runs. FL has no stock device for any of the three.
 
 ## The short version
 
-- **Load this**: TRIPLE OG, VST3, $29 — speed, noise, transport
+- **Load this**: TRIPLE OG, VST3, $39 — speed, noise, transport
 
 - **Spend nothing first**: DRUGS is free and ships VST3; it glues a drum bus, not tape
 
@@ -36315,11 +36315,11 @@ Every module in that list is a waveshaper, a filter or a convolution. All of the
 
 That is why stacking distortion never gets you to a cassette sound. You can make a break as dirty as you like in Distructor and it will still sit rigidly on the grid, which is the giveaway. The behavior you are missing is [wow and flutter](https://gazillionindustries.com/wow-and-flutter/), and there is no combination of FL's stock effects that produces it. On our panel it is a single control, **WOW FLUT**, built from several motions running at unrelated rates rather than one sine, because one sine is a chorus and everybody hears it. The noise bed is **HISS**, shaped and partly decorrelated across the channels rather than a generator left running; see [tape hiss](https://gazillionindustries.com/tape-hiss/). The transport is three controls, on the face, playable while the pattern loops: [tape stop plugins](https://gazillionindustries.com/best-tape-stop-plugins/) covers why that matters.
 
-[TRIPLE OG](https://gazillionindustries.com/tripleog.html) loads in FL as VST3 on Windows and macOS, and it is $29. **WOW FLUT** and the **SLAM** transport are the parts FL's stock set has nothing for. There's a demo on the page.
+[TRIPLE OG](https://gazillionindustries.com/tripleog.html) loads in FL as VST3 on Windows and macOS, and it is $39. **WOW FLUT** and the **SLAM** transport are the parts FL's stock set has nothing for. There's a demo on the page.
 
 ## Getting it into FL, and the one that costs nothing
 
-On Windows, TRIPLE OG arrives as a zip you drop into your VST3 folder; there is no installer yet. Point FL at that folder, rescan, and it turns up with the rest of your VST3 effects. Windows 10 or later, 64-bit. On macOS it installs as an Audio Unit and a VST3 alongside a standalone app, macOS 10.13 or later, a universal binary for Apple silicon and Intel, so the same $29 covers whichever machine the session is on.
+On Windows, TRIPLE OG arrives as a zip you drop into your VST3 folder; there is no installer yet. Point FL at that folder, rescan, and it turns up with the rest of your VST3 effects. Windows 10 or later, 64-bit. On macOS it installs as an Audio Unit and a VST3 alongside a standalone app, macOS 10.13 or later, a universal binary for Apple silicon and Intel, so the same $39 covers whichever machine the session is on.
 
 If you want one of ours in the FL mixer before spending anything, [DRUGS](https://gazillionindustries.com/drugs.html) is free: our one-knob bus compressor for drums, VST3 on Windows and macOS, a single **DOSE** control with **GAIN** and a soft ceiling on the way out. It handles the glue stage in front of the tape rather than the tape itself, it costs nothing, and on a drum bus that makes it the sensible thing to put in slot one before you buy a single plug-in. Where to set it is in [drum bus compressor settings](https://gazillionindustries.com/drum-bus-compressor-settings/).
 
@@ -36333,7 +36333,7 @@ The same applies to the reflex of putting a low-pass filter on everything. Bandw
 
 ### Does FL Studio have a tape plugin?
 
-No tape machine. It has distortion, bit and rate reduction, filters and cabinets, most of which Distructor collects into one device. Speed instability and transport behavior are not in the stock set, and that gap is what ours is built for: [TRIPLE OG](https://gazillionindustries.com/tripleog.html), VST3, $29.
+No tape machine. It has distortion, bit and rate reduction, filters and cabinets, most of which Distructor collects into one device. Speed instability and transport behavior are not in the stock set, and that gap is what ours is built for: [TRIPLE OG](https://gazillionindustries.com/tripleog.html), VST3, $39.
 
 ### What is the best tape plugin for FL Studio?
 
@@ -36349,11 +36349,11 @@ Most of it. Distortion, bitcrushing and filtering are all there and all good. Wh
 
 ### Is there a free tape plugin for FL Studio?
 
-There are free tape plug-ins, and there are three places they reliably run out; the field is in [best free tape plugins](https://gazillionindustries.com/best-free-tape-plugins/). Ours that costs nothing is [DRUGS](https://gazillionindustries.com/drugs.html), a one-knob drum bus compressor rather than a tape simulation, so it is the free way to get one of ours into the FL mixer and not the free way to get tape. For tape, TRIPLE OG is $29.
+There are free tape plug-ins, and there are three places they reliably run out; the field is in [best free tape plugins](https://gazillionindustries.com/best-free-tape-plugins/). Ours that costs nothing is [DRUGS](https://gazillionindustries.com/drugs.html), a one-knob drum bus compressor rather than a tape simulation, so it is the free way to get one of ours into the FL mixer and not the free way to get tape. For tape, TRIPLE OG is $39.
 
 ## What TRIPLE OG does
 
-[TRIPLE OG](https://gazillionindustries.com/tripleog.html) is our cassette tape simulation, $29, and it ships VST3, so FL finds it on Windows and macOS. **WOW FLUT** is the speed instability, **HISS** a continuous broadband bed, and **AGE** runs from nought to sixty years, taking wear, noise and stability together. **TONE** and **DRIVE** handle brightness and thickness, and **MIX** sits on the face at 100% by default, so nothing dry is blended in behind your back. The transport is on the face too: **SLAM** stops the tape and returns it in sync, **SCRUB** runs the head backward and springs home, and **CATCH** makes it drag and then sprint to catch up. Windows 10 or later, 64-bit; macOS 10.13 or later, Apple silicon or Intel, where it also installs as an Audio Unit and a standalone app.
+[TRIPLE OG](https://gazillionindustries.com/tripleog.html) is our cassette tape simulation, $39, and it ships VST3, so FL finds it on Windows and macOS. **WOW FLUT** is the speed instability, **HISS** a continuous broadband bed, and **AGE** runs from nought to sixty years, taking wear, noise and stability together. **TONE** and **DRIVE** handle brightness and thickness, and **MIX** sits on the face at 100% by default, so nothing dry is blended in behind your back. The transport is on the face too: **SLAM** stops the tape and returns it in sync, **SCRUB** runs the head backward and springs home, and **CATCH** makes it drag and then sprint to catch up. Windows 10 or later, 64-bit; macOS 10.13 or later, Apple silicon or Intel, where it also installs as an Audio Unit and a standalone app.
 
 You can break a sound in fifty ways in FL. None of them is late.
 
@@ -36370,7 +36370,7 @@ https://gazillionindustries.com/tripleog.html
 
 # Tape plugins for Logic Pro
 
-> Logic loads Audio Units only. ChromaGlow covers saturation; speed, cassette noise and a transport need a plug-in. That one is TRIPLE OG, AU, $29.
+> Logic loads Audio Units only. ChromaGlow covers saturation; speed, cassette noise and a transport need a plug-in. That one is TRIPLE OG, AU, $39.
 
 Source: https://gazillionindustries.com/tape-plugins-for-logic-pro/  
 Published 2026-09-22, updated 2026-09-26. By Gazillion Industries, who make TRIPLE OG.
@@ -36379,11 +36379,11 @@ Published 2026-09-22, updated 2026-09-26. By Gazillion Industries, who make TRIP
 
 Logic ships a very good saturation plug-in and no tape machine. ChromaGlow covers the harmonic side properly, with models of tube and analog gear, and it leaves speed, noise and the transport alone. Those three are most of what people mean by a tape sound, and they are the reason to load anything else at all.
 
-So the thing you actually load is [TRIPLE OG](https://gazillionindustries.com/tripleog.html), our cassette tape simulation, $29, shipping as an Audio Unit on macOS so Logic finds it. **WOW FLUT** is the speed instability, **HISS** the noise bed, and **SLAM**, **SCRUB** and **CATCH** put the transport on the face rather than in a menu.
+So the thing you actually load is [TRIPLE OG](https://gazillionindustries.com/tripleog.html), our cassette tape simulation, $39, shipping as an Audio Unit on macOS so Logic finds it. **WOW FLUT** is the speed instability, **HISS** the noise bed, and **SLAM**, **SCRUB** and **CATCH** put the transport on the face rather than in a menu.
 
 ## The short version
 
-- **Load this**: TRIPLE OG, AU on macOS, $29 — speed, noise, transport
+- **Load this**: TRIPLE OG, AU on macOS, $39 — speed, noise, transport
 
 - **Spend nothing first**: DRUGS is free and ships as an AU; use it to test the menu
 
@@ -36457,7 +36457,7 @@ The honest position, then, is that Logic already gives you harmonic thickening a
 
 - **A transport.** Stopping, dragging, rewinding and coming back in sync. See [tape stop plugins](https://gazillionindustries.com/best-tape-stop-plugins/). **SLAM**, **SCRUB** and **CATCH** are three separate controls for it, on the face, playable while the session runs.
 
-[TRIPLE OG](https://gazillionindustries.com/tripleog.html) ships as an Audio Unit on macOS, so it appears in Logic's menu like any stock plug-in, and it is $29. **WOW FLUT** and the **SLAM** transport are the parts Logic has nothing for. There's a demo on the page.
+[TRIPLE OG](https://gazillionindustries.com/tripleog.html) ships as an Audio Unit on macOS, so it appears in Logic's menu like any stock plug-in, and it is $39. **WOW FLUT** and the **SLAM** transport are the parts Logic has nothing for. There's a demo on the page.
 
 ## Tape Delay is not a tape machine
 
@@ -36467,7 +36467,7 @@ Logic's Tape Delay is a delay whose design references tape echo units. It is a g
 
 ### Does Logic Pro have a tape emulation plugin?
 
-No. It has ChromaGlow, a saturation plug-in with models of tube and analog gear, which covers the harmonic side of a tape sound. It has no device for speed instability, cassette noise or a tape transport, which is what a tape plug-in is bought for. Ours is [TRIPLE OG](https://gazillionindustries.com/tripleog.html), $29, AU on macOS.
+No. It has ChromaGlow, a saturation plug-in with models of tube and analog gear, which covers the harmonic side of a tape sound. It has no device for speed instability, cassette noise or a tape transport, which is what a tape plug-in is bought for. Ours is [TRIPLE OG](https://gazillionindustries.com/tripleog.html), $39, AU on macOS.
 
 ### Can Logic use VST plugins?
 
@@ -36487,7 +36487,7 @@ Our free plug-in is [DRUGS](https://gazillionindustries.com/drugs.html), a one-k
 
 ## What TRIPLE OG does
 
-[TRIPLE OG](https://gazillionindustries.com/tripleog.html) is our cassette tape simulation, $29, and on macOS it ships as an Audio Unit alongside VST3 and a standalone app, so Logic finds it. **WOW FLUT** is the speed instability, **HISS** a continuous broadband bed, and **AGE** runs from nought to sixty years, taking wear, noise and stability together. **TONE** and **DRIVE** handle brightness and thickness. The transport is on the face: **SLAM** stops the tape and returns it in sync, **SCRUB** runs the head backward and springs home, and **CATCH** makes it drag and then sprint to catch up. macOS 10.13 or later, Apple silicon or Intel; Windows 10 or later as a VST3.
+[TRIPLE OG](https://gazillionindustries.com/tripleog.html) is our cassette tape simulation, $39, and on macOS it ships as an Audio Unit alongside VST3 and a standalone app, so Logic finds it. **WOW FLUT** is the speed instability, **HISS** a continuous broadband bed, and **AGE** runs from nought to sixty years, taking wear, noise and stability together. **TONE** and **DRIVE** handle brightness and thickness. The transport is on the face: **SLAM** stops the tape and returns it in sync, **SCRUB** runs the head backward and springs home, and **CATCH** makes it drag and then sprint to catch up. macOS 10.13 or later, Apple silicon or Intel; Windows 10 or later as a VST3.
 
 Logic will color a sound beautifully. It will not put one on a machine.
 

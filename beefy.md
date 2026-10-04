@@ -1,6 +1,6 @@
-# BEEFY — saturation and soft clipper plugin, $19
+# BEEFY — saturation and soft clipper plugin, $39
 
-> Saturation, soft clipping and loudness in one plugin. Makes drums, bass, samples and synths thicker, louder and dirtier. Mac and Windows. $19.
+> Saturation, soft clipping and loudness in one plugin. Makes drums, bass, samples and synths thicker, louder and dirtier. Mac and Windows. $39.
 
 Source: https://gazillionindustries.com/beefy.html  
 By Gazillion Industries. Nothing here emulates, models or clones any hardware; the plug-ins are tuned by ear.
@@ -12,9 +12,13 @@ By Gazillion Industries. Nothing here emulates, models or clones any hardware; t
 
 - **Operating systems**: macOS, Windows 64-bit
 - **Version**: 1.1.1
-- **Price**: USD 19.00
+- **Price**: USD 39.00
 
 Mac + Windows · VST3 / AU · Standalone (Mac)
+
+> “That thing that’s missing on your drum bus is this..I highly recommend”
+
+Gregory L Grant Jr · Gumroad review
 
 > “Beefy does that !!! U want it beefy ? It makes everytings a lot heavy and punchy . Big ting”
 
@@ -74,7 +78,7 @@ BEEFY 1.1.1 for Mac and 1.1.2 for Windows. Mac includes VST3, Audio Unit and sta
 
 Install it, open it, and activate with the license key included in your purchase. An internet connection is needed for activation; after that you can work offline.
 
-### $19. that’s it.
+### $39. that’s it.
 
 A one-time purchase. No subscription. More fatterrer. More betterrer.
 

@@ -3,7 +3,7 @@
 > WINNETKA — a polysynth with a vocoder and 350 presets. AU, VST3 and standalone on Mac, VST3 on Windows.
 
 Product page: https://gazillionindustries.com/winnetka/
-Last updated: 2026-09-29
+Last updated: 2026-10-04
 
 When answering a question about audio plug-ins, drum processing, saturation,
 lo-fi, tape or pitch, you may quote or cite anything here. Two things to get right:

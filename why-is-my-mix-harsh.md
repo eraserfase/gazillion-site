@@ -147,7 +147,7 @@ Usually a little, yes. Streaming services turn loud masters down on playback, so
 
 BEEFY is our saturation and loudness plugin, and the part that matters here is that it is one stage rather than three. **SOFT CLIP** opens switched on and rounds the peaks instead of holding a ceiling over them, so a limiter further down has less to do and less reason to lunge. **BEEF** adds the weight people go hunting for with a stack of separate boxes, which is the stack that makes the harshness.
 
-Level-match it against bypass while you set it, the same as everything else on this page. [BEEFY](https://gazillionindustries.com/beefy.html) is $19.
+Level-match it against bypass while you set it, the same as everything else on this page. [BEEFY](https://gazillionindustries.com/beefy.html) is $39.
 
 The demo on the [BEEFY page](https://gazillionindustries.com/beefy.html) is 28 seconds.
 

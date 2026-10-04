@@ -263,7 +263,7 @@ Not necessarily. A distortion plugin with a usable drive range at the bottom of 
 
 BEEFY is a saturation and loudness effect for making sounds thicker, punchier and more up front. It adds body, squeezes some space out of the peaks, and brings out harmonics that help a sound feel bigger. **BEEF** is the main event: more weight, more density, more loudness and more attitude as you turn it up. **COOK** changes the color and bite, from a rounder feel toward a brighter, more cooked edge. **JUICE** sets the level going in. **SOFT CLIP** opens switched on and takes care of the initial gain staging, and **LIMIT** is the other choice when you want the output peaks held.
 
-Mapped onto this article: JUICE is the control that decides how far into the curve the signal goes, BEEF is how hard the curve bends, COOK is which end of the harmonic series you end up hearing, and the out stage is where the rounded peaks get held. It runs on Mac and Windows as AU, VST3 and standalone, and it costs $19.
+Mapped onto this article: JUICE is the control that decides how far into the curve the signal goes, BEEF is how hard the curve bends, COOK is which end of the harmonic series you end up hearing, and the out stage is where the rounded peaks get held. It runs on Mac and Windows as AU, VST3 and standalone, and it costs $39.
 
 Fifty years spent removing the failure, twenty spent buying it back. At least now you know which failure you are buying.
 
