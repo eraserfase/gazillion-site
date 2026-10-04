@@ -85,6 +85,21 @@ main{max-width:720px;margin:auto;text-align:center;padding:calc(var(--banner-h) 
 .dot{display:grid;place-items:center;width:44px;height:34px;border:0;padding:0;background:transparent;cursor:pointer}.dot::after{content:"";width:8px;height:8px;border-radius:50%;background:var(--ink);opacity:.3}.dot[aria-current="true"]::after{opacity:1}
 .demo-status{position:absolute;bottom:10px;left:0;right:0;margin:0;text-align:center;background:#fff;font-size:15px;padding:8px}
 @media(max-width:480px){.carousel{--slide-w:min(84%,calc(var(--slide-height) * 720 / 928))}}
+/* ---- what people said: press + buyer cards under the Gumroad reviews. Own class
+   names (cards-*, cnav, cdot) because the hero script binds every .dot/.nav on the page.
+   The video slide reuses demo.js (.player): silent preview while active, deliberate sound on. */
+.cards{--cw:min(80%,400px);position:relative;width:100%;max-width:560px;margin:30px auto 0}
+.cards-track{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;padding:2px 0 10px}
+.cards-track::-webkit-scrollbar{display:none}.cards-track:focus-visible{outline:2px solid var(--ink);outline-offset:4px}
+.cards .slide{flex:0 0 var(--cw);aspect-ratio:4/5}
+.cards .slide:first-child{margin-left:calc((100% - var(--cw)) / 2)}.cards .slide:last-child{margin-right:calc((100% - var(--cw)) / 2)}
+.cards .card-img,.cards .player video{display:block;width:100%;height:100%;aspect-ratio:4/5;object-fit:cover;border:2px solid var(--ink);border-radius:6px;box-shadow:4px 4px 0 var(--ink);background:#0b0a0a}
+.cards .player{height:100%}
+.cnav{position:absolute;top:calc(50% - 22px);transform:translateY(-50%);z-index:3;width:44px;height:44px;display:grid;place-items:center;border:2px solid var(--ink);border-radius:6px;background:#fff;color:var(--ink);box-shadow:3px 3px 0 var(--ink);font-size:26px;line-height:1;padding:0 0 3px;cursor:pointer}
+.cnav:hover{transform:translate(-1px,calc(-50% - 1px));box-shadow:4px 4px 0 var(--ink)}.cnav--prev{left:0}.cnav--next{right:0}
+.cdots{display:flex;justify-content:center;height:34px;margin:0}
+.cdot{display:grid;place-items:center;width:44px;height:34px;border:0;padding:0;background:transparent;cursor:pointer}.cdot::after{content:"";width:8px;height:8px;border-radius:50%;background:var(--ink);opacity:.3}.cdot[aria-current="true"]::after{opacity:1}
+@media(max-width:480px){.cards{--cw:84%}}
 /* Archivo Black ships as one 400 face: avoid synthesised bold on headings. */
 .claim{font-weight:400}
 .format-strip+.claim{margin-top:34px;letter-spacing:-.015em}.claim-copy+.signup{margin-top:34px}
@@ -216,6 +231,32 @@ delightful sound</p>
 </div>
 <!-- GR-REVIEWS:END -->
 
+<div class="cards carousel" aria-label="What people said about WINNETKA" aria-roledescription="carousel">
+<div class="cards-track" id="cards-track" tabindex="0">
+<div class="slide is-active" role="group" aria-roledescription="slide" aria-label="1 of 3: Salim Abu Zahra">
+<div class="player">
+<video playsinline preload="none" muted loop width="1080" height="1350" poster="cards/salim.webp" data-mp4="cards/salim.mp4" data-name="Salim's voice note" aria-label="Salim Abu Zahra (@leemlizzy), five-star Gumroad review, VERY DOPE, with his voice note: yeah boss, this is fresh as fuck man, I'm digging through the library of patches that's labeled effects, man, you gonna hear some of this stuff pop up in my joint"></video>
+<button class="play-badge" type="button" aria-label="Play Salim's voice note with sound"><span class="disc" aria-hidden="true"></span><span class="say">sound on</span></button>
+<button class="demo-toggle" type="button" aria-label="Pause Salim's voice note">Pause</button>
+<p class="demo-status" role="status" hidden></p>
+</div>
+</div>
+<div class="slide" role="group" aria-roledescription="slide" aria-label="2 of 3: Makou's Peephole">
+<img class="card-img" src="cards/makou.webp" width="1080" height="1350" loading="lazy" decoding="async" alt="Makou's Peephole, Japan, 30 Sep 2026: Exactly the sound you expect from an analog synth.">
+</div>
+<div class="slide" role="group" aria-roledescription="slide" aria-label="3 of 3: Noizefield">
+<img class="card-img" src="cards/noizefield.webp" width="1080" height="1350" loading="lazy" decoding="async" alt="Noizefield, Germany, 30 Sep 2026: A budget-friendly polysynth with a unique vocoder twist.">
+</div>
+</div>
+<button class="cnav cnav--prev" type="button" aria-label="Previous card">&#8249;</button>
+<button class="cnav cnav--next" type="button" aria-label="Next card">&#8250;</button>
+<div class="cdots" role="group" aria-label="Choose a card">
+<button class="cdot" type="button" aria-label="Show Salim Abu Zahra" aria-current="true"></button>
+<button class="cdot" type="button" aria-label="Show Makou's Peephole" aria-current="false"></button>
+<button class="cdot" type="button" aria-label="Show Noizefield" aria-current="false"></button>
+</div>
+</div>
+
 </div>
 
 <p class="preset-note">350 PRESETS - SHARE AND TRADE PRESETS ON OUR DISCORD</p>
@@ -251,6 +292,22 @@ rail.addEventListener('keydown',function(e){if(e.target!==rail)return;if(e.key==
 addEventListener('resize',syncSlides);syncSlides();
 document.querySelectorAll('a.buy').forEach(function(a){a.addEventListener('click',function(){window.GZ_ATTR?.mark('buy','winnetka');track('buy_click_winnetka',{position:a.dataset.pos});if(live&&window.fbq)fbq('track','InitiateCheckout',{content_name:'WINNETKA',content_ids:['winnetka'],content_type:'product',value:49,currency:'USD'});});});
 var form=document.querySelector('#list form');form.addEventListener('submit',function(e){e.preventDefault();fetch(form.action,{method:'POST',mode:'no-cors',body:new FormData(form)});document.querySelector('#list-msg').textContent='ok. you will hear from us.';track('list_signup');});
+})();
+</script>
+<script>
+(function(){
+var cardRail=document.getElementById('cards-track');if(!cardRail)return;
+var cardSlides=Array.prototype.slice.call(cardRail.children),cardDots=Array.prototype.slice.call(document.querySelectorAll('.cdot')),still=matchMedia('(prefers-reduced-motion: reduce)');
+function at(){var c=cardRail.scrollLeft+cardRail.clientWidth/2;return cardSlides.reduce(function(b,s,i){return Math.abs(s.offsetLeft+s.offsetWidth/2-c)<Math.abs(cardSlides[b].offsetLeft+cardSlides[b].offsetWidth/2-c)?i:b;},0);}
+function sync(){var n=at();cardSlides.forEach(function(s,i){s.classList.toggle('is-active',i===n);});cardDots.forEach(function(d,i){d.setAttribute('aria-current',String(i===n));});}
+function go(i){var n=Math.max(0,Math.min(cardSlides.length-1,i));cardRail.scrollTo({left:cardSlides[n].offsetLeft-(cardRail.clientWidth-cardSlides[n].offsetWidth)/2,behavior:still.matches?'instant':'smooth'});}
+document.querySelector('.cnav--prev').addEventListener('click',function(){go(at()-1);});document.querySelector('.cnav--next').addEventListener('click',function(){go(at()+1);});
+cardDots.forEach(function(d,i){d.addEventListener('click',function(){go(i);});});
+var tick;cardRail.addEventListener('scroll',function(){clearTimeout(tick);tick=setTimeout(sync,60);},{passive:true});
+cardRail.addEventListener('keydown',function(e){if(e.target!==cardRail)return;if(e.key==='ArrowLeft'||e.key==='ArrowRight'){e.preventDefault();go(at()+(e.key==='ArrowRight'?1:-1));}});
+addEventListener('resize',sync);sync();
+// one voice at a time: a video that starts with sound pauses every other video on the page
+document.addEventListener('play',function(e){var v=e.target;if(v.tagName!=='VIDEO'||v.muted)return;document.querySelectorAll('video').forEach(function(o){if(o!==v&&!o.muted)o.pause();});},true);
 })();
 </script>
 </body>
