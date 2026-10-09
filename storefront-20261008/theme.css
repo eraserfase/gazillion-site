@@ -1,0 +1,102 @@
+/* Shared appearance switch; product artwork and buying geometry stay intact. */
+:root[data-theme="light"]{color-scheme:light;--field:#f4f4f2;--surface:#e8e8e5;--ink:#242629;--muted:#53565b;--line:#c9cac7;--media-shadow:#0002}
+:root[data-theme="dark"]{color-scheme:dark;--field:#111;--surface:#292929;--ink:#f4efe9;--muted:#b8b6b2;--line:#484848;--media-shadow:#0005}
+html{scrollbar-color:var(--muted) var(--field)}
+.mast-actions{gap:10px}.posture{margin-right:16px}
+.theme-toggle{display:flex;align-items:center;justify-content:center;flex:0 0 44px;width:44px;height:44px;border:0;background:transparent;color:var(--muted);padding:11px}
+.theme-toggle svg{width:22px;height:22px;overflow:visible;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.theme-toggle:hover{color:var(--ink);background:var(--surface)}
+.theme-toggle .bulb-rays{opacity:0}:root[data-theme="light"] .bulb-rays{opacity:1}
+.media-window{position:absolute;inset:8px 12px 52px;overflow:hidden;isolation:isolate}
+.media-window .panel-link{width:100%;height:100%;display:block}
+.media-window>video{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:center bottom;pointer-events:none;max-width:none;will-change:transform}
+.panel-link img,.media-window>video{filter:drop-shadow(0 7px 9px var(--media-shadow))}
+[data-product="beefy"] .panel-link img,[data-product="beefy"] .media-window>video,[data-product="skruu"] .panel-link img,[data-product="skruu"] .media-window>video{filter:none}
+.sound{border-color:var(--line)}
+.cta.product-page{background:transparent;color:var(--ink);border-color:var(--ink)}
+.cta.add-to-cart,.checkout,.ipad-product .cta{background:var(--ink);color:var(--field);border-color:var(--ink)}
+.cta.in-cart{background:var(--surface);color:var(--ink);border-color:var(--ink)}
+#cart{background:var(--field);color:var(--ink)}
+@media(max-width:660px){.mast-actions{gap:6px}.media-window{inset:6px 8px 50px}}
+@media(max-width:359px){.cart-word{display:none}}
+@media(prefers-reduced-motion:reduce){.media-window>video{transform:none!important}}
+
+.media-window .panel-link:focus-visible{outline-offset:-3px}
+
+/* WINNETKA's LCD rises out of an otherwise stationary instrument. */
+[data-product="winnetka"] .media-window,[data-product="drugs"] .media-window,[data-product="f12"] .media-window,[data-product="tripleog"] .media-window{overflow:visible}
+.lcd-popout{position:absolute;z-index:2;pointer-events:none;transform-origin:center center;border-radius:3px;will-change:transform}
+
+.catalog-toolbar .delivery{text-align:center;text-wrap:balance}
+
+/* A quiet common boundary joins each instrument to its purchase actions.
+   Draw in the existing gutters so media and tap targets retain their size. */
+:root[data-theme="light"]{--product-outline:#d8d9d5}
+:root[data-theme="dark"]{--product-outline:#383838}
+.product{position:relative}
+.product::before{content:"";position:absolute;inset:0 -6px -8px;border:1px solid var(--product-outline);border-radius:4px;pointer-events:none}
+@media(max-width:660px){.product::before{left:-5px;right:-5px}}
+@media(max-width:359px){.product::before{left:-4px;right:-4px}}
+
+/* Quiet, anonymous recent activity; purchase actions retain the visual emphasis. */
+.activity-ticker{position:fixed;z-index:3;inset:auto 0 0;display:flex;align-items:center;height:36px;padding-bottom:env(safe-area-inset-bottom);box-sizing:content-box;border-top:1px solid var(--ink);background:var(--ink);color:var(--field);font-size:12px;line-height:1}
+.activity-pause{display:grid;place-items:center;align-self:stretch;flex:0 0 44px;width:44px;padding:0;border:0;border-right:1px solid var(--line);background:var(--field);color:var(--muted)}
+.activity-pause svg{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linejoin:round}
+.activity-window{overflow:hidden;min-width:0;flex:1;height:100%;display:flex;align-items:center}
+.activity-track,.activity-group{display:flex;align-items:center;flex:0 0 auto;width:max-content}.activity-group{gap:36px;padding-right:36px}.activity-item{white-space:nowrap;font-variant-numeric:tabular-nums}
+.has-activity .cart-dock{bottom:calc(50px + env(safe-area-inset-bottom))}.cart-open .activity-ticker,.demo-open .activity-ticker{visibility:hidden}
+.activity-window:focus-visible{outline:1px solid var(--ink);outline-offset:-3px}
+@media(prefers-reduced-motion:reduce){.activity-window{overflow-x:auto}.activity-group[aria-hidden]{display:none}}
+
+/* Tighten the media/control/identity rhythm while preserving GUI height. */
+.stage{height:304px}
+.media-window{bottom:44px}
+.legend{padding-top:0}
+@media(max-width:1100px){.stage{height:282px}}
+@media(max-width:660px){.stage{height:248px}.media-window{bottom:42px}}
+@media(max-width:359px){.stage{height:220px}}
+
+/* Continuous entry from the right. The optional pause control appears only
+   on keyboard focus; pointer entry does not interrupt the activity stream. */
+.activity-pause{position:absolute;left:0;top:0;z-index:2;height:36px;background:var(--ink);color:var(--field);border:1px solid var(--field);transform:translateY(120%)}
+.activity-pause:focus-visible{transform:none;outline:1px solid var(--field);outline-offset:-3px}
+.activity-window:focus-visible{outline-color:var(--field)}
+
+.activity-ticker{font-family:Arial,sans-serif;font-weight:400;text-transform:uppercase}
+.activity-product{font-family:Arial,sans-serif;font-weight:700}
+
+.activity-ticker{height:28px}.activity-pause{height:28px}.activity-group{gap:24px;padding-right:24px}.has-activity .cart-dock{bottom:calc(42px + env(safe-area-inset-bottom))}
+
+:root[data-theme="light"] .foot a[href="https://gazillionindustries.com/reading-material/"]{color:#dadad8}
+
+/* Two actual playing views share the existing CHORDEA media space. */
+.ipad-product .stage{padding-bottom:44px}
+.chordea-stack{display:grid;grid-template-rows:repeat(2,minmax(0,1fr));gap:8px;width:100%;height:100%;min-height:0}
+.chordea-static,.chordea-performance{width:100%;height:100%;min-height:0}
+.chordea-static{object-fit:contain;filter:drop-shadow(0 7px 9px var(--media-shadow))}
+.chordea-performance{position:relative}
+.chordea-performance .panel-link{display:flex}
+.chordea-performance .panel-link img,.chordea-performance video{width:100%;height:100%;object-fit:contain;object-position:center}
+.chordea-performance video{position:absolute;inset:0;pointer-events:none}
+.demo-choices{display:flex;gap:6px;justify-content:center;margin-top:8px;flex-wrap:wrap}
+.demo-choices button{min-height:36px;padding:6px 10px;border:1px solid var(--line);background:transparent;color:var(--ink);font:inherit;font-size:12px}
+.demo-choices button[aria-pressed="true"]{background:var(--ink);color:var(--field);border-color:var(--ink)}
+.demo-app-actions{padding-top:8px;border-top:1px solid var(--line)}
+.demo-app-actions .app-details{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
+.demo-app-actions .cta{width:100%;background:var(--ink);color:var(--field);border-color:var(--ink)}
+.demo-viewer:has(.demo-choices:not([hidden])) .demo-screen video{max-height:calc(100dvh - 300px)}
+
+/* Gazillion type roles. Identity artwork retains its authored visible geometry.
+   All button labels: Arial Bold, consistent lowercase treatment.
+   Supporting information: Arial. Delivery: emphatic utility, uppercase. */
+:root{--type-display:'Archivo Black','Arial Black',sans-serif;--type-ui:Arial,sans-serif;--type-control-weight:700;--type-detail-weight:400}
+body{font-family:var(--type-ui)}
+.filters button,.cart-toggle,.product-actions .cta,.ipad-product .cta{font-family:var(--type-ui);font-weight:var(--type-control-weight);font-size:12px;line-height:1.2;letter-spacing:0;text-transform:lowercase}
+.cart-count{font-family:var(--type-ui);font-weight:700}
+.cta,.sound,.demo-transport button,.demo-choices button,.continue-shopping,.cart-remove{font-family:var(--type-ui);font-weight:var(--type-control-weight);letter-spacing:0}
+.formats,.foot,.list input{font-family:var(--type-ui);font-weight:var(--type-detail-weight);letter-spacing:0}
+.catalog-toolbar{flex-wrap:wrap;gap:6px 12px}
+.catalog-toolbar .delivery{display:block;flex:0 0 100%;width:100%;box-sizing:border-box;min-height:28px;margin:0;padding:6px 10px;background:var(--ink);color:var(--field);font-family:var(--type-ui);font-weight:400;font-size:12px;line-height:16px;letter-spacing:0;text-transform:uppercase;text-align:center;text-wrap:balance}
+.catalog-toolbar .delivery strong{font-family:var(--type-ui);font-weight:700}
+
+@media(max-width:359px){.filters button,.cart-toggle,.product-actions .cta,.ipad-product .cta{font-size:11px}}
