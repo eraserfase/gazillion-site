@@ -116,5 +116,5 @@ body{font-family:var(--type-ui)}
 :root[data-theme="dark"] .activity-ticker{border-top-color:#292929}
 :root[data-theme="dark"] .activity-window:focus-visible{outline-color:#fff}
 
-/* Tony, 9 Oct: Arial Black for prices; action labels remain Arial Bold. */
-.money,.cart-item-price,.dock-total,.cart-subtotal strong{font-family:'Arial Black',Arial,sans-serif;font-weight:900;font-synthesis:none}
+/* Tony, 9 Oct: lighter Arial Regular prices; action labels remain Arial Bold. */
+.money,.cart-item-price,.dock-total,.cart-subtotal strong{font-family:Arial,sans-serif;font-weight:400;font-synthesis:none}
