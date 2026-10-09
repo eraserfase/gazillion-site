@@ -185,12 +185,50 @@ const purchasable=new Map(products.filter(p=>p.querySelector('.add-to-cart')).ma
 }]));
 const cart=document.querySelector('#cart'),cartItems=cart.querySelector('.cart-items'),cartStatus=document.querySelector('#cart-status');
 const cartStorageKey='gazillion-storefront-cart-v1';
-let selectedProducts=new Set();
-try{const saved=JSON.parse(localStorage.getItem(cartStorageKey)||'[]');if(Array.isArray(saved))selectedProducts=new Set(saved.filter(id=>purchasable.has(id)));}catch{}
+// Separate product records make concurrent edits to different products commute.
+// The old array is read only as a fallback for products not yet edited here.
+function createCartSelectionStore(ids,key,getStorage=()=>localStorage){
+ const known=new Set(ids),prefix=key+':product:',unsaved=new Map();
+ let snapshot=new Set();
+ function read(){
+  try{
+   const storage=getStorage();let legacy=[];
+   try{const value=JSON.parse(storage.getItem(key)||'[]');if(Array.isArray(value))legacy=value;}catch{}
+   const next=new Set(legacy.filter(id=>known.has(id)));
+   for(const id of known){const value=storage.getItem(prefix+id);if(value==='1')next.add(id);else if(value==='0')next.delete(id);}
+   snapshot=next;
+  }catch{} // Keep this tab usable when browser storage is unavailable.
+  for(const [id,selected] of unsaved){if(selected)snapshot.add(id);else snapshot.delete(id);}
+  return new Set(snapshot);
+ }
+ return {
+  read,
+  set(id,selected){
+   if(!known.has(id))return read();
+   read();
+   try{getStorage().setItem(prefix+id,selected?'1':'0');unsaved.delete(id);}
+   catch{unsaved.set(id,selected);}
+   if(selected)snapshot.add(id);else snapshot.delete(id);
+   return read();
+  },
+  acceptsStorageEvent(event){return event.key===null||event.key===key||[...known].some(id=>event.key===prefix+id);}
+ };
+}
+const cartSelection=createCartSelectionStore(purchasable.keys(),cartStorageKey);
+let selectedProducts=cartSelection.read();
 const money=cents=>cents===0?'Free':new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:cents%100?2:0}).format(cents/100);
-function openCart(){generation++;stopOthers(null);if(demoDialog.open)demoDialog.close();cart.showModal();document.body.classList.add('cart-open');}
+function refreshCart(){
+ const next=cartSelection.read();
+ if(next.size===selectedProducts.size&&[...next].every(id=>selectedProducts.has(id)))return false;
+ selectedProducts=next;drawCart();return true;
+}
+function openCart(){refreshCart();generation++;stopOthers(null);if(demoDialog.open)demoDialog.close();cart.showModal();document.body.classList.add('cart-open');}
 function closeCart(){cart.close();}
 function drawCart(){
+ const focused=document.activeElement;
+ const focusProduct=focused?.closest('.cart-item')?.dataset.product;
+ const focusRemove=focused?.classList.contains('cart-remove');
+ const focusCheckout=focused?.classList.contains('checkout');
  const items=[...selectedProducts].map(id=>purchasable.get(id));
  const total=items.reduce((sum,p)=>sum+p.price,0);
  document.querySelectorAll('.cart-count').forEach(el=>el.textContent=String(items.length));
@@ -208,14 +246,15 @@ function drawCart(){
   p.button.querySelector('path').setAttribute('d',added?'m5 12 4 4L19 6':'M12 5v14M5 12h14');
  }
  cartItems.replaceChildren(...items.map(p=>{
-  const row=document.createElement('li');row.className='cart-item';
+  const row=document.createElement('li');row.className='cart-item';row.dataset.product=p.id;
   const image=document.createElement('img');image.src=document.querySelector(`[data-product="${p.id}"] .panel-link img`).src;image.alt='';
   const details=document.createElement('div');details.className='cart-item-details';
   const name=document.createElement('h3');name.textContent=p.name;
   const remove=document.createElement('button');remove.type='button';remove.className='cart-remove';remove.textContent='Remove';remove.setAttribute('aria-label',`Remove ${p.name} from cart`);
   remove.addEventListener('click',()=>{
-   const index=items.findIndex(item=>item.id===p.id);
-   selectedProducts.delete(p.id);drawCart();cartStatus.textContent=`${p.name} removed from cart.`;
+   refreshCart();const current=[...selectedProducts];
+   const index=Math.max(0,current.indexOf(p.id));
+   selectedProducts=cartSelection.set(p.id,false);drawCart();cartStatus.textContent=`${p.name} removed from cart.`;
    const remaining=cartItems.querySelectorAll('.cart-remove');(remaining[Math.min(index,remaining.length-1)]||cart.querySelector('.continue-shopping')).focus();
   });
   const price=document.createElement('span');price.className='cart-item-price';price.textContent=money(p.price);
@@ -230,19 +269,29 @@ function drawCart(){
  if(destination?.ok){nextCheckout.href=destination.url;nextCheckout.target='_blank';nextCheckout.rel='noopener';}
  else nextCheckout.type='button';
  checkout.replaceWith(nextCheckout);
- try{localStorage.setItem(cartStorageKey,JSON.stringify([...selectedProducts]));}catch{}
+ syncDemoCart();
+ if(cart.open&&focusRemove)(cartItems.querySelector(`[data-product="${focusProduct}"] .cart-remove`)||cart.querySelector('.continue-shopping')).focus();
+ else if(cart.open&&focusCheckout)(items.length?nextCheckout:cart.querySelector('.continue-shopping')).focus();
 }
 for(const p of purchasable.values())p.button.addEventListener('click',()=>{
- if(selectedProducts.has(p.id)){openCart();return;}
- selectedProducts.add(p.id);drawCart();cartStatus.textContent=`${p.name} added to cart. ${selectedProducts.size} ${selectedProducts.size===1?'product':'products'} in cart.`;
+ const wasInCart=p.button.classList.contains('in-cart');refreshCart();
+ // A stale “in cart” button remains a view action, never an accidental re-add.
+ if(wasInCart||selectedProducts.has(p.id)){openCart();return;}
+ selectedProducts=cartSelection.set(p.id,true);drawCart();cartStatus.textContent=`${p.name} added to cart. ${selectedProducts.size} ${selectedProducts.size===1?'product':'products'} in cart.`;
 });
 document.querySelectorAll('.cart-toggle,.cart-dock').forEach(button=>button.addEventListener('click',openCart));
 cart.querySelectorAll('.cart-close,.continue-shopping').forEach(button=>button.addEventListener('click',closeCart));
 cart.addEventListener('click',event=>{if(event.target===cart){const bounds=cart.getBoundingClientRect();if(event.clientX<bounds.left||event.clientX>bounds.right||event.clientY<bounds.top||event.clientY>bounds.bottom)closeCart();}});
 cart.addEventListener('close',()=>{document.body.classList.remove('cart-open');previewVisible();});
-cart.addEventListener('click',event=>{
+function checkoutFromCart(event){
+ if(event.type==='auxclick'&&event.button!==1)return;
  const checkout=event.target.closest('.checkout');
  if(!checkout||!cart.contains(checkout))return;
+ if(refreshCart()){
+  event.preventDefault();
+  const changed=cart.querySelector('.checkout-preview');changed.textContent='Your cart changed in another tab. Review it, then check out.';changed.hidden=false;
+  cartStatus.textContent=changed.textContent;return;
+ }
  const message=cart.querySelector('.checkout-preview');
  const adapter=window.GazillionCheckoutAdapter;
  if(!adapter){event.preventDefault();message.textContent='Checkout could not load. Your cart has been kept. Please reload and try again.';message.hidden=false;return;}
@@ -250,10 +299,16 @@ cart.addEventListener('click',event=>{
  if(!result.ok){event.preventDefault();message.textContent=result.message;message.hidden=false;return;}
  if(checkout.tagName!=='A'||!adapter.matchesDestination(result,checkout.getAttribute('href'))){event.preventDefault();message.textContent='Checkout could not load. Your cart has been kept. Please reload and try again.';message.hidden=false;return;}
  message.hidden=true;
+ if(event.type==='contextmenu')return;
  cartStatus.textContent='Continue in the Gumroad checkout tab. Your cart has been kept here.';
  if(window.GZ_LIVE)for(const id of result.products){
   window.GZ_ATTR?.mark('buy',id);
   (window.GZTraffic||window.umami)?.track?.('storefront_checkout_outbound',{product:id,position:'storefront_cart'});
  }
-});
+}
+['click','auxclick','contextmenu'].forEach(type=>cart.addEventListener(type,checkoutFromCart));
+addEventListener('storage',event=>{if(cartSelection.acceptsStorageEvent(event))refreshCart();});
+addEventListener('pageshow',refreshCart);
+addEventListener('focus',refreshCart);
+document.addEventListener('visibilitychange',()=>{if(!document.hidden)refreshCart();});
 drawCart();
