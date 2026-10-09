@@ -72,7 +72,7 @@ html{scrollbar-color:var(--muted) var(--field)}
 :root[data-theme="dark"]{--reading-material-ink:#141414}
 .foot a.reading-material{color:var(--reading-material-ink);text-decoration:none}
 .foot a.reading-material:focus-visible{color:var(--muted)}
-.list{width:min(400px,calc(100% - 28px));max-width:400px;flex-direction:column;gap:16px}
+.list{width:min(360px,calc(90% - 25.2px));max-width:360px;flex-direction:column;gap:16px}
 .list h2{width:100%;line-height:0}
 .list h2 svg{display:block;width:100%;height:auto;fill:currentColor;overflow:visible}
 .list form{width:100%;max-width:none;flex:none}
