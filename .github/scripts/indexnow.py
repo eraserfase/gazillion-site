@@ -18,6 +18,35 @@ import xml.etree.ElementTree as ET
 HOST = 'gazillionindustries.com'
 ORIGIN = 'https://' + HOST
 KEY = 'cb94b8640633c2f4af2f60ee2eb171ba'
+CF_BEACON_TOKEN = '37a6dbcfe7b54c24b8f2c39c21f1dcca'
+CF_BEACON = re.compile(
+    rb'<script type="module" src="https://static\.cloudflareinsights\.com/beacon\.min\.js/[A-Za-z0-9]+" '
+    rb'integrity="sha512-[A-Za-z0-9+/=]+" data-cf-beacon=\'(\{[^<>\r\n]+\})\' '
+    rb'crossorigin="anonymous"></script>\n')
+
+
+def publication_matches(actual, expected):
+    if actual == expected:
+        return True
+    # Existing Cloudflare Web Analytics injects this one edge-owned beacon into
+    # browser-like responses. Preserve it in production; tolerate only the
+    # verified site's exact provider/attribute contract immediately before body.
+    matches = list(CF_BEACON.finditer(actual))
+    if len(matches) != 1:
+        return False
+    match = matches[0]
+    if not actual[match.end():].startswith(b'</body>'):
+        return False
+    try:
+        config = json.loads(match[1])
+    except (ValueError, UnicodeDecodeError):
+        return False
+    if (set(config) != {'version', 'token', 'r', 'spa'} or
+            config.get('version') != '2024.11.0' or
+            config.get('token') != CF_BEACON_TOKEN or
+            config.get('r') != 1 or config.get('spa') != 2):
+        return False
+    return actual[:match.start()] + actual[match.end():] == expected
 
 
 def git(*args):
@@ -80,7 +109,7 @@ def live_matches(url, expected):
         with request.urlopen(req, timeout=15) as response:
             if response.status != 200 or response.geturl() != url or expected is None:
                 return False
-            return hashlib.sha256(response.read()).digest() == hashlib.sha256(expected).digest()
+            return publication_matches(response.read(), expected)
     except error.HTTPError as exc:
         return expected is None and exc.code in (404, 410)
     except (error.URLError, TimeoutError, OSError):
