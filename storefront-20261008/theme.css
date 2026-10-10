@@ -133,3 +133,22 @@ body{font-family:var(--type-ui)}
 .cta.add-to-cart.in-cart{background:var(--surface);color:var(--ink);border-color:var(--ink);box-shadow:none;transform:none}
 .cta.add-to-cart.in-cart:hover{background:#deded9;color:var(--ink);box-shadow:none;transform:none}
 @media(prefers-reduced-motion:reduce){.cta{transition:none!important}}
+
+/* Storefront control roles: one actual face, weight and case in every state.
+   Card/filter/header sizes remain compact; cart and transport sizes keep their
+   established context. Authored logo and signup outline artwork is separate. */
+.filters button,.cart-toggle,.cart-dock,.cta,.sound,
+.demo-transport button,.demo-choices button,.continue-shopping,.cart-remove,
+.share-fallback button,.list button{
+ font-family:var(--type-ui);font-weight:var(--type-control-weight);
+ letter-spacing:0;text-transform:lowercase;font-synthesis:none;
+}
+/* Names rendered as ordinary text share one face. In particular TRIPLE OG's
+   storefront text uses Arial Black; the landing-title exception stays local. */
+.cart-item h3,.demo-head h2{
+ font-family:'Arial Black',Arial,sans-serif;font-weight:900;font-synthesis:none;
+}
+
+/* Fixed product names use original Arial Black outlines across operating systems. */
+.cart-item h3,.demo-head h2{display:flex;align-items:center;min-height:1.3em}
+.cart-item h3 .gz-type-art,.demo-head h2 .gz-type-art{display:block;max-width:100%;margin:0;fill:currentColor;stroke:none;flex:none;overflow:visible}

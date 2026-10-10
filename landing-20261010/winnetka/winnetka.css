@@ -1,0 +1,57 @@
+/* WINNETKA preview: neutral LCD face and clear-shell frame; source red rejected. */
+:root{--purchase-fill:#cdcdcd;--purchase-hover:#dddddd;--purchase-ink:#171717}
+body{font-family:Arial,sans-serif}
+.hero{gap:24px 64px;padding-block:28px 30px;grid-template-rows:auto auto}
+.hero-content{gap:20px;grid-row:1;align-self:end}
+.hero-lockup{max-width:430px;width:100%;margin:auto}
+.hero-lockup img{width:100%;max-width:100%;margin:0;height:auto}
+.instrument{grid-row:1/3}
+.instrument-view.is-playing{width:min(100%,420px,calc((100svh - 165px)*720/928));aspect-ratio:720/928;background:transparent}
+.instrument-view.is-playing .panel-button{aspect-ratio:720/928}
+#demo{object-fit:contain;border-radius:0}.audition-overlay{top:31%}
+.demo-tools{display:flex;justify-content:center;margin-top:6px}
+.demo-tools .share-product{width:auto;flex-basis:auto;gap:7px;font-size:12px}
+.purchase-term{font:400 12px/1.4 Arial,sans-serif;color:var(--muted);text-align:center;margin-top:5px}
+.buy,.sticky-buy{background:var(--purchase-fill);color:var(--purchase-ink);border-color:#414141;box-shadow:inset 0 0 0 1px #ffffffa6,inset 0 3px 0 #0000000c,4px 4px 0 #222}
+.buy .price,.sticky-buy .price{display:flex;align-items:center;align-self:stretch;justify-content:center;flex:none;min-width:84px;padding-inline:18px;margin:0;font:400 28px/1 Arial,sans-serif;background:transparent;color:inherit;border-left:1px solid #00000026}
+.buy:hover,.sticky-buy:hover{background:var(--purchase-hover);color:var(--purchase-ink);border-color:#414141}
+.sticky-buy{width:390px;padding:0 0 0 16px}.sticky-buy .price{font-size:25px;min-width:74px;padding-inline:14px}
+.hero-thesis{grid-column:2;grid-row:2;align-self:start;text-align:center;max-width:480px;width:100%;margin:auto;font:400 16px/1.4 Arial,sans-serif}
+.thesis-label{font:700 17px/1.25 Arial,sans-serif;margin-bottom:10px}
+.thesis-lines{font:400 25px/1.22 Arial,sans-serif;margin-bottom:10px}
+.hero-reviews .gr-reviews{margin-top:8px}.hero-reviews .gr-quote{gap:5px}.hero-reviews .gr-rating{margin:0}
+#testimonials .testimonial-artwork{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+#testimonials .testimonial-artwork .tm{grid-column:auto;max-width:none;width:100%;padding:0;border:0}
+.proof-card{width:100%;height:auto}.tm-vid{position:relative;width:100%;background:transparent;aspect-ratio:4/5}
+.tm-vid video{width:100%;height:100%;object-fit:contain}
+.tm-vid .play-badge{position:absolute;left:50%;top:42%;transform:translate(-50%,-50%);display:flex;align-items:center;gap:8px;min-height:48px;padding:10px 16px;white-space:nowrap;background:var(--ink);color:#fff;border:1px solid #fff;font:700 14px/1.2 Arial,sans-serif;box-shadow:0 4px 14px #0004}
+.tm-vid .play-badge svg{width:18px;height:18px}
+.proof-status{margin-top:8px;font:400 13px/1.4 Arial,sans-serif;text-align:center}
+.story-row{border-top:1px solid var(--line);padding-block:36px;gap:56px}
+.story-copy h2:not(.statement),.purchase-end h2{font:700 32px/1.2 Arial,sans-serif;letter-spacing:0;text-transform:lowercase}
+.story-copy p{font:400 16px/1.6 Arial,sans-serif}
+.detail-group{display:flex;flex-direction:column;gap:18px;min-width:0;width:100%}
+.detail-photo{background:transparent;aspect-ratio:auto;overflow:visible;width:100%;max-width:480px}
+.detail-photo img{position:static;width:100%;height:auto;max-width:100%}
+.section-purchase{padding-top:4px;padding-bottom:30px}
+.purchase-end{text-align:center;width:100%;max-width:480px;margin:auto}
+.purchase-end h2{margin-bottom:8px}.purchase-end>p{margin-bottom:18px}
+.purchase-end .buy{margin-top:0}.footer a{font-size:11px}
+@media(max-width:1000px) and (min-width:701px){.hero{column-gap:36px}.hero-content{gap:16px}.hero-thesis .thesis-lines{font-size:23px}.buy>span:first-child{font-size:24px}.buy .price{font-size:25px;min-width:73px;padding-inline:12px}}
+@media(max-width:700px){
+.hero{padding-top:20px;gap:0;display:flex;flex-direction:column}
+.hero-lockup{max-width:340px;margin:0 auto 14px}.purchase{margin:0 auto}
+.purchase .paymarks{margin-bottom:2px}.purchase .buy{order:1}.purchase .compatibility{order:2;margin:10px 0 0}.purchase-term{order:3}
+.hero-reviews:has(.gr-rating,.gr-reviews){display:contents}.hero-reviews .gr-rating{order:1;margin:12px auto 0}.hero-reviews .gr-reviews{order:3;margin:20px auto 0}
+.instrument{margin-top:16px;width:100%}.instrument-view.is-playing{width:min(100%,430px);aspect-ratio:720/928}
+.demo-purchase{margin-top:12px}.hero-thesis{order:4;margin:22px auto 0}.thesis-lines{font-size:23px}
+.buy .price{font-size:26px;min-width:72px;padding-inline:13px}.buy>span:first-child,.sticky-buy>span:first-child{font-size:clamp(17px,6.1cqi,28px)}
+#testimonials .testimonial-artwork{grid-template-columns:1fr;gap:24px;max-width:430px;margin:auto}
+#testimonials .testimonial-artwork .tm{max-width:380px;justify-self:center}
+.story-row{padding-block:28px;gap:24px}.story-copy h2:not(.statement),.purchase-end h2{font-size:28px}
+.story-row .detail-group{order:1;max-width:430px;margin:auto}.story-row .story-copy{order:0}
+.requirements-row{gap:28px}.section-purchase{padding-bottom:24px}
+}
+@media(max-width:359px){.hero-lockup{max-width:280px}.buy .price{font-size:24px;min-width:64px;padding-inline:10px}.compatibility,.footer a{font-size:11px}.entry-reassurance{font-size:11px}.paymarks{margin-bottom:8px}}
+
+.tm-vid.is-playing .play-badge{left:auto;right:8px;top:8px;transform:none}

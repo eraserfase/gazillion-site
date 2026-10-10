@@ -1,3 +1,21 @@
+// Tracking observes successful interactions and never owns cart/navigation state.
+// The durable collector receives custom events; vendor Cloud receives pageviews only.
+function storeTrack(name,data){
+ if(!window.GZ_LIVE)return;
+ try{const pending=(window.GZTraffic||window.umami)?.track?.(name,data);pending?.catch?.(()=>{});}catch{}
+}
+function storeMeta(name,data){if(window.GZ_LIVE)try{window.fbq?.('track',name,data);}catch{}}
+function storeGA(name,data){if(window.GZ_LIVE)try{window.gtag?.('event',name,data);}catch{}}
+function storeItem(product){return {item_id:product.id,item_name:product.name,price:product.price/100,quantity:1};}
+// Gumroad owns GA begin_checkout; our tab departure is checkout_handoff.
+function storeCommerce(action,items){
+ const value=items.reduce((sum,item)=>sum+item.price,0)/100;
+ storeGA(action,{currency:'USD',value,items:items.map(storeItem)});
+ if(action==='add_to_cart'||action==='checkout_handoff')storeMeta(action==='add_to_cart'?'AddToCart':'InitiateCheckout',{
+  content_ids:items.map(item=>item.id),content_name:items.map(item=>item.name).join(', '),content_type:'product',
+  contents:items.map(item=>({id:item.id,quantity:1,item_price:item.price/100})),num_items:items.length,value,currency:'USD'
+ });
+}
 const products=[...document.querySelectorAll('.product')];
 const filters=[...document.querySelectorAll('[data-filter]')];
 const videos=[...document.querySelectorAll('.stage video')];
@@ -9,6 +27,7 @@ function pause(video){players.get(video)?.pause();}
 function stopOthers(except){videos.forEach(v=>{if(v!==except)pause(v);});}
 filters.forEach(button=>button.addEventListener('click',()=>{
  const selected=button.dataset.filter;
+ const changed=button.getAttribute('aria-pressed')!=='true';
  document.querySelector('.delivery').hidden=selected==='ipad';
  document.querySelector('.catalog-grid').dataset.view=selected;
  filters.forEach(f=>f.setAttribute('aria-pressed',String(f===button)));
@@ -16,14 +35,15 @@ filters.forEach(button=>button.addEventListener('click',()=>{
  const count=products.filter(p=>!p.hidden).length;
  document.querySelector('#filter-status').textContent=`Showing ${count} ${count===1?'product':'products'}.`;
  document.dispatchEvent(new Event('catalog-filter'));
+ if(changed)storeTrack('storefront_filter',{position:selected});
 }));
 const demoDialog=document.querySelector('.demo-viewer'),demoVideo=demoDialog.querySelector('video'),demoPlay=demoDialog.querySelector('.demo-play'),demoFailure=demoDialog.querySelector('.demo-failure');
-let demoProduct=null,demoRequest=0;
+let demoProduct=null,demoRequest=0,demoTrackedSource='';
 const demoChoices=document.createElement('div');demoChoices.className='demo-choices';demoChoices.hidden=true;demoChoices.setAttribute('aria-label','CHORDEA demonstrations');
 demoDialog.querySelector('.demo-screen').after(demoChoices);
 const demoAppActions=document.createElement('div');demoAppActions.className='demo-app-actions';demoAppActions.hidden=true;demoDialog.append(demoAppActions);
 const chordeaDemos=[['hands-on','/storefront-20261008/assets/chordea/hands-demo.mp4'],['learn mode','/storefront-20261008/assets/chordea/learn-mode-demo.mp4'],['Ashta · Hydrasynth','/storefront-20261008/assets/chordea/hydrasynth-demo.mp4']];
-for(const [label,src] of chordeaDemos){const choice=document.createElement('button');choice.type='button';choice.textContent=label;choice.dataset.source=src;choice.addEventListener('click',()=>{demoVideo.pause();demoVideo.src=src;demoChoices.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',String(b===choice)));playFullDemo();});demoChoices.append(choice);}
+for(const [label,src] of chordeaDemos){const choice=document.createElement('button');choice.type='button';choice.textContent=label;choice.dataset.source=src;choice.addEventListener('click',()=>{demoVideo.pause();demoTrackedSource='';demoVideo.src=src;demoChoices.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',String(b===choice)));playFullDemo();});demoChoices.append(choice);}
 
 function syncDemo(){
  const active=!demoVideo.paused;
@@ -44,8 +64,10 @@ async function playFullDemo(){
  finally{if(ticket===demoRequest){demoPlay.disabled=false;syncDemo();}}
 }
 function openDemo(video){
- stopOthers(null);demoProduct=video.closest('.product');
+ stopOthers(null);demoProduct=video.closest('.product');demoTrackedSource='';
+ storeTrack('storefront_demo_open',{product:demoProduct.dataset.product,position:'storefront_card'});
  demoDialog.querySelector('h2').textContent=demoProduct.getAttribute('aria-label');
+ window.GZProductType?.(demoDialog.querySelector('h2'),demoProduct.dataset.product,demoProduct.getAttribute('aria-label'));
  const info=demoProduct.querySelector('.product-page')||demoProduct.querySelector('.cta');demoDialog.querySelector('.product-page').href=info.href;
  demoDialog.querySelector('.formats').innerHTML=demoProduct.querySelector('.formats').innerHTML;
  demoDialog.querySelector('.money').textContent=demoProduct.querySelector('.money').textContent;
@@ -63,7 +85,15 @@ document.addEventListener('product-link-copied',()=>{if(demoDialog.open){const l
 demoDialog.querySelector('.demo-share').addEventListener('click',()=>{demoProduct.querySelector('.share-product').click();});
 demoPlay.addEventListener('click',()=>{if(!demoVideo.paused)demoVideo.pause();else{if(demoVideo.error)demoVideo.load();if(demoVideo.ended)demoVideo.currentTime=0;playFullDemo();}});
 ['play','pause','ended'].forEach(event=>demoVideo.addEventListener(event,syncDemo));
-demoVideo.addEventListener('error',()=>{if(demoVideo.getAttribute('src')){demoFailure.hidden=false;syncDemo();}});
+demoVideo.addEventListener('error',()=>{if(demoVideo.getAttribute('src')){demoFailure.hidden=false;syncDemo();storeTrack('storefront_demo_error',{product:demoProduct?.dataset.product,asset:demoVideo.currentSrc||demoVideo.src,media_error:demoVideo.error?.code||0});}});
+// Opening the viewer is intent; only actual audible playback is listening proof.
+demoVideo.addEventListener('playing',()=>{
+ const source=demoVideo.currentSrc||demoVideo.src;
+ if(document.hidden||!demoDialog.open||!demoProduct||demoVideo.muted||demoVideo.volume===0||source===demoTrackedSource)return;
+ demoTrackedSource=source;
+ storeTrack('storefront_demo_play',{product:demoProduct.dataset.product,position:'storefront_demo',asset:source});
+});
+
 for(const video of videos){
  const stage=video.closest('.stage'),button=buttonFor(video),still=video.parentElement.querySelector('.panel-link img')||stage.querySelector('img');
  let request=0,failed=false,cameraFrame=0,cameraStart=0;
@@ -222,7 +252,7 @@ function refreshCart(){
  if(next.size===selectedProducts.size&&[...next].every(id=>selectedProducts.has(id)))return false;
  selectedProducts=next;drawCart();return true;
 }
-function openCart(){refreshCart();generation++;stopOthers(null);if(demoDialog.open)demoDialog.close();cart.showModal();document.body.classList.add('cart-open');}
+function openCart(){refreshCart();generation++;stopOthers(null);if(demoDialog.open)demoDialog.close();const wasOpen=cart.open;cart.showModal();document.body.classList.add('cart-open');if(!wasOpen){storeTrack('storefront_cart_open',{position:'storefront_cart'});storeCommerce('view_cart',[...selectedProducts].map(id=>purchasable.get(id)));}}
 function closeCart(){cart.close();}
 function drawCart(){
  const focused=document.activeElement;
@@ -249,12 +279,12 @@ function drawCart(){
   const row=document.createElement('li');row.className='cart-item';row.dataset.product=p.id;
   const image=document.createElement('img');image.src=document.querySelector(`[data-product="${p.id}"] .panel-link img`).src;image.alt='';
   const details=document.createElement('div');details.className='cart-item-details';
-  const name=document.createElement('h3');name.textContent=p.name;
+  const name=document.createElement('h3');name.textContent=p.name;window.GZProductType?.(name,p.id,p.name);
   const remove=document.createElement('button');remove.type='button';remove.className='cart-remove';remove.textContent='Remove';remove.setAttribute('aria-label',`Remove ${p.name} from cart`);
   remove.addEventListener('click',()=>{
    refreshCart();const current=[...selectedProducts];
-   const index=Math.max(0,current.indexOf(p.id));
-   selectedProducts=cartSelection.set(p.id,false);drawCart();cartStatus.textContent=`${p.name} removed from cart.`;
+   const index=Math.max(0,current.indexOf(p.id)),wasSelected=selectedProducts.has(p.id);
+   selectedProducts=cartSelection.set(p.id,false);drawCart();if(wasSelected&&!selectedProducts.has(p.id)){storeTrack('storefront_remove_from_cart',{product:p.id,position:'storefront_cart'});storeCommerce('remove_from_cart',[p]);}cartStatus.textContent=`${p.name} removed from cart.`;
    const remaining=cartItems.querySelectorAll('.cart-remove');(remaining[Math.min(index,remaining.length-1)]||cart.querySelector('.continue-shopping')).focus();
   });
   const price=document.createElement('span');price.className='cart-item-price';price.textContent=money(p.price);
@@ -266,7 +296,7 @@ function drawCart(){
  const nextCheckout=document.createElement(destination?.ok?'a':'button');
  nextCheckout.className=checkout.className;
  nextCheckout.innerHTML=checkout.innerHTML;
- if(destination?.ok){nextCheckout.href=destination.url;nextCheckout.target='_blank';nextCheckout.rel='noopener';}
+ if(destination?.ok){nextCheckout.href=destination.url;nextCheckout.target='_blank';nextCheckout.rel='noopener';nextCheckout.setAttribute('data-gz-managed-checkout','true');}
  else nextCheckout.type='button';
  checkout.replaceWith(nextCheckout);
  syncDemoCart();
@@ -277,14 +307,14 @@ for(const p of purchasable.values())p.button.addEventListener('click',()=>{
  const wasInCart=p.button.classList.contains('in-cart');refreshCart();
  // A stale “in cart” button remains a view action, never an accidental re-add.
  if(wasInCart||selectedProducts.has(p.id)){openCart();return;}
- selectedProducts=cartSelection.set(p.id,true);drawCart();cartStatus.textContent=`${p.name} added to cart. ${selectedProducts.size} ${selectedProducts.size===1?'product':'products'} in cart.`;
+ selectedProducts=cartSelection.set(p.id,true);drawCart();if(selectedProducts.has(p.id)){storeTrack('storefront_add_to_cart',{product:p.id,position:demoDialog.open?'storefront_demo':'storefront_card'});storeCommerce('add_to_cart',[p]);}cartStatus.textContent=`${p.name} added to cart. ${selectedProducts.size} ${selectedProducts.size===1?'product':'products'} in cart.`;
 });
 document.querySelectorAll('.cart-toggle,.cart-dock').forEach(button=>button.addEventListener('click',openCart));
 cart.querySelectorAll('.cart-close,.continue-shopping').forEach(button=>button.addEventListener('click',closeCart));
 cart.addEventListener('click',event=>{if(event.target===cart){const bounds=cart.getBoundingClientRect();if(event.clientX<bounds.left||event.clientX>bounds.right||event.clientY<bounds.top||event.clientY>bounds.bottom)closeCart();}});
 cart.addEventListener('close',()=>{document.body.classList.remove('cart-open');previewVisible();});
 function checkoutFromCart(event){
- if(event.type==='auxclick'&&event.button!==1)return;
+ if(event.type==='auxclick'&&event.button!==1||event.type==='click'&&event.button>0)return;
  const checkout=event.target.closest('.checkout');
  if(!checkout||!cart.contains(checkout))return;
  if(refreshCart()){
@@ -301,9 +331,17 @@ function checkoutFromCart(event){
  message.hidden=true;
  if(event.type==='contextmenu')return;
  cartStatus.textContent='Continue in the Gumroad checkout tab. Your cart has been kept here.';
- if(window.GZ_LIVE)for(const id of result.products){
-  window.GZ_ATTR?.mark('buy',id);
-  (window.GZTraffic||window.umami)?.track?.('storefront_checkout_outbound',{product:id,position:'storefront_cart'});
+ if(window.GZ_LIVE){
+  for(const id of result.products){
+   // Managed anchors bypass generic capture handlers: a blocked/stale cart is
+   // never a checkout observation, and wishlist products count individually.
+   try{window.GZ_ATTR?.mark('buy',id);}catch{}
+   try{window.GZTraffic?.buy?.(id);}catch{}
+   try{window.GZPresence?.buy?.(id);}catch{}
+   storeTrack(id==='drugs'?'buy_click':'buy_click_'+id,{product:id,position:'storefront_cart'});
+   storeTrack('storefront_checkout_outbound',{product:id,position:'storefront_cart'});
+  }
+  storeCommerce('checkout_handoff',result.products.map(id=>purchasable.get(id)));
  }
 }
 ['click','auxclick','contextmenu'].forEach(type=>cart.addEventListener(type,checkoutFromCart));
@@ -312,3 +350,21 @@ addEventListener('pageshow',refreshCart);
 addEventListener('focus',refreshCart);
 document.addEventListener('visibilitychange',()=>{if(!document.hidden)refreshCart();});
 drawCart();
+
+// Product information stays a shelf click, distinct from a checkout action.
+function trackShelf(event){
+ if(event.defaultPrevented||event.type==='auxclick'&&event.button!==1||event.type==='click'&&event.button>0)return;
+ const link=event.target.closest('a[href]');if(!link||!link.matches('.name-link,.product-page,.app-store,.product[data-product="chordea"] .cta,.demo-app-actions .cta'))return;
+ const card=link.closest('.product')||(demoDialog.contains(link)?demoProduct:null);if(!card)return;
+ const id=card.dataset.product,name=card.getAttribute('aria-label'),value=Number(card.dataset.price)/100;
+ storeTrack('shelf_'+id,{product:id,position:demoDialog.contains(link)?'demo':link.classList.contains('name-link')?'face':'button'});
+ storeMeta('ViewContent',{content_name:name,content_ids:[id],content_type:'product',value,currency:'USD'});
+ storeGA('select_item',{item_list_id:'storefront',items:[{item_id:id,item_name:name,price:value,quantity:1}]});
+}
+document.addEventListener('click',trackShelf);
+document.addEventListener('auxclick',trackShelf);
+document.querySelector('.list form')?.addEventListener('submit',()=>{
+ // Browser validation has succeeded, but Kit has not confirmed a subscription.
+ storeTrack('storefront_signup_submit',{position:'storefront_footer'});
+});
+document.querySelector('a.reading-material')?.addEventListener('click',()=>storeTrack('footer_reading_material'));

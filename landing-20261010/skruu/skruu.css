@@ -1,0 +1,43 @@
+/* Local SKRUU draft, extending the established neutral landing-page system. */
+:root{--purchase-fill:#e11235;--purchase-hover:#c70e2d;--purchase-ink:#fff}
+.hero{padding-block:28px 30px;gap:64px}
+.hero-content{gap:24px}
+.hero-lockup{width:100%;max-width:430px;margin:auto}
+.hero-lockup img{width:100%;max-width:100%;margin:0}
+.instrument-view.is-playing{width:min(100%,410px);aspect-ratio:9/16;min-width:0}
+.instrument-view.is-playing .panel-button{aspect-ratio:9/16;display:grid;place-items:center}
+.instrument-view.is-playing .panel-button img{height:94%;width:auto;max-width:100%;object-fit:contain}
+#demo{object-fit:contain;border-radius:0}
+.audition-overlay{top:30%}
+.motion-toggle{width:44px;height:44px}
+.demo-tools{display:flex;justify-content:center;margin-top:8px}
+.demo-tools .share-product{width:auto;flex-basis:auto;gap:8px;font-size:12px}
+.story-row{border-top:1px solid var(--line)}
+.story-copy h2:not(.statement){font-size:32px;line-height:1.16;text-wrap:balance}
+.story-copy h2:not(:first-child){margin-top:32px}
+.story-copy ul{padding-left:20px;margin:0;font-size:15px;line-height:1.6}
+.story-copy li{margin-bottom:14px}
+.instrument-detail{background:none;max-width:480px}
+.instrument-detail img{width:100%;left:0;max-width:none}
+.detail-pitch{aspect-ratio:680/500}
+.detail-pitch img{top:0}
+.detail-elastic{aspect-ratio:680/470}
+.detail-elastic img{top:-106.38298%}
+.detail-display{aspect-ratio:680/400}
+.detail-display img{top:-240%}
+.finish-pair{display:grid;grid-template-columns:1fr 1fr;align-items:start;gap:22px;width:100%;max-width:480px;margin:auto}
+.detail-finish{aspect-ratio:680/1536}
+.detail-finish img{position:static;max-width:100%;height:auto}
+.purchase-end{align-self:center;width:100%;max-width:480px;margin:auto}
+.social-proof .tm:first-child:last-child{border-bottom:0;padding-bottom:0}
+.sticky-buy{--purchase-fill:#e11235;--purchase-hover:#c70e2d}
+.buy>span:first-child,.sticky-buy>span:first-child{font-size:clamp(17px,6.4cqi,28px)}
+@media(max-width:1000px) and (min-width:701px){.hero{gap:36px}.hero-lockup{max-width:360px}.hero-content{gap:22px}.story-copy h2:not(.statement){font-size:28px}}
+@media(max-width:700px){
+ .hero{padding-top:20px;gap:0}.hero-lockup{width:min(100%,360px);margin:0 auto 16px}
+ .instrument{margin-top:18px}.instrument-view.is-playing{width:min(100%,400px)}
+ .demo-purchase{margin-top:12px}.story-copy h2:not(.statement){font-size:28px}
+ .elastic-section .instrument-detail,.grades-section .instrument-detail{grid-row:2}
+ .finishes-section .finish-pair{grid-row:2;gap:16px;max-width:430px}
+ .requirements-row{gap:12px}.purchase-end .buy{margin-top:0}
+}

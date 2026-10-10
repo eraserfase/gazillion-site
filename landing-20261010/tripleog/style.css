@@ -1,0 +1,203 @@
+@font-face{font-family:Archivo;src:url('/landing-20261010/tripleog/fonts/archivo.woff2?v=7150c0ec5ad3') format('woff2');font-weight:100 900;font-display:swap}
+@font-face{font-family:'Archivo Black';src:url('/landing-20261010/tripleog/fonts/archivo-black.woff2?v=4eca2abdbbc1') format('woff2');font-weight:400;font-display:swap}
+:root{color-scheme:light;--field:#f4f4f2;--ink:#242629;--muted:#62655f;--line:#c9cac7;--surface:#e1e2de;--max:1120px;--action:#242629;--action-hover:#121314}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scrollbar-color:#999 var(--field)}body{margin:0;background:var(--field);color:var(--ink);font:16px/1.55 Archivo,sans-serif}a{color:inherit;text-decoration:none}button,input{font:inherit}button{cursor:pointer}button,a{-webkit-tap-highlight-color:transparent;touch-action:manipulation}img,video{display:block;max-width:100%}h1,h2,p,figure{margin:0}[hidden]{display:none!important}::selection{color:var(--field);background:var(--ink)}a:focus-visible,button:focus-visible,input:focus-visible,video:focus-visible{outline:2px solid var(--ink);outline-offset:4px}svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}.wrap,.mast-inner{width:min(var(--max),calc(100% - 64px));margin-inline:auto}.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}.skip{position:fixed;left:12px;top:8px;z-index:20;transform:translateY(-200%);padding:10px;background:var(--ink);color:var(--field)}.skip:focus{transform:none}
+.masthead{border-bottom:1px solid var(--line)}.mast-inner{min-height:66px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:block;padding:8px 0}.lock{display:flex;flex-direction:column;align-items:center;line-height:1}.lock-a,.lock-b{display:block}.lock-a{font:400 32px/1 'Archivo Black',sans-serif;letter-spacing:-.055em;margin-right:-.055em}.lock-b{font:300 15px/1 Archivo,sans-serif;letter-spacing:.31em;margin-right:-.31em;margin-top:1px}.store-link{display:flex;align-items:center;gap:10px;font-size:13px;min-height:44px;color:var(--muted)}.store-link:hover{color:var(--ink)}.store-link svg{width:16px;height:16px}
+.hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:64px;align-items:center;padding-block:34px 42px}.instrument{min-width:0}.instrument-view{position:relative;width:min(100%,408px);aspect-ratio:34/45;margin-inline:auto;display:flex;align-items:center;justify-content:center}.instrument-view.is-playing{width:min(100%,440px,calc((100dvh - 24px)*720/1166));aspect-ratio:720/1166;background:transparent}.panel-button{height:100%;max-width:100%;padding:0;border:0;background:none;cursor:zoom-in}.panel{width:auto;height:100%;object-fit:contain;filter:drop-shadow(0 12px 16px #0002)}#demo{height:100%;width:100%;object-fit:contain;background:transparent}#demo:fullscreen{background:var(--field)}#demo:-webkit-full-screen{background:var(--field)}.demo-purchase{display:none}#demo{cursor:pointer}.media-status{max-width:400px;margin:12px auto 0;font-size:13px;text-align:center}.hero-content{display:flex;flex-direction:column;align-items:stretch;gap:30px;max-width:480px;width:100%;margin:auto}.hero-lockup,.presets{line-height:0}.hero-lockup img,.presets img{width:100%;height:auto}.purchase{padding-top:2px}.buy{display:flex;align-items:center;justify-content:space-between;min-height:60px;background:var(--action);color:var(--field);font:400 19px/1 'Archivo Black',sans-serif;border:1px solid var(--action);padding:0 20px}.buy .price{display:flex;align-items:center;align-self:stretch;border-left:1px solid #ffffff4d;margin-left:18px;padding-left:20px;font-size:24px}.buy:hover{background:var(--action-hover);border-color:var(--action-hover)}.compatibility,.delivery{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:6px;color:var(--muted);font-size:12px;line-height:1.45;text-align:center}.compatibility{margin-top:14px}.delivery{margin-top:7px;font-size:11px}.compatibility span+span::before,.delivery span+span::before{content:'·';margin-right:6px}.paymarks{display:grid;grid-template-columns:66px 80px 104px;justify-content:center;align-items:center;gap:clamp(10px,calc((100% - 250px)/2),28px);width:100%;margin:0 auto 16px}.paymarks a{display:flex;align-items:center;justify-content:center;min-width:0;height:48px}.paymarks img{height:42px;width:auto;max-height:none;max-width:none;object-fit:contain}.paymarks a:nth-child(2) img{height:78px}.paymarks a:last-child img{width:104px;max-width:100%;height:auto}
+.audition-overlay{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:2;display:flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:12px 22px;border:1px solid #f4f4f2;background:#242629;color:#f4f4f2;font-size:15px;font-weight:700;box-shadow:0 4px 14px #0005;white-space:nowrap}.audition-overlay svg{width:20px;height:20px}.audition-overlay:hover{background:#f4f4f2;color:#242629;border-color:#242629}.audition-overlay:focus-visible{outline-color:#f4f4f2}
+.signup{border-top:1px solid var(--line);display:flex;align-items:center;justify-content:center;gap:24px;padding-block:28px}.signup p{font-size:15px;white-space:nowrap}.signup form{display:flex;gap:8px;max-width:340px;width:100%}.signup input{width:0;min-width:0;flex:1;background:transparent;border:1px solid #8c8f87;color:var(--ink);padding:11px 12px;min-height:44px;font-size:14px;border-radius:0;caret-color:var(--ink)}.signup input::placeholder{color:var(--muted);opacity:1}.signup button{border:1px solid #72756e;background:transparent;color:var(--ink);min-width:58px;min-height:44px;font-size:14px}.signup button:hover{background:var(--surface)}.footer{display:flex;align-items:center;justify-content:space-between;gap:20px;color:var(--muted);font-size:11px;padding-block:18px 32px}.footer a{min-height:32px;display:flex;align-items:center}.footer a:hover{text-decoration:underline;text-underline-offset:4px}
+.sticky-buy{position:fixed;bottom:16px;left:50%;transform:translateX(-50%);z-index:5;display:flex;align-items:center;justify-content:space-between;gap:28px;min-height:54px;width:340px;max-width:calc(100% - 28px);padding:15px 18px;background:var(--action);color:var(--field);box-shadow:0 5px 18px #0003;font:400 15px/1 'Archivo Black',sans-serif}.sticky-buy strong{font:inherit;font-size:22px}.interface-dialog{padding:30px;background:var(--field);border:0;max-width:96vw;max-height:94dvh;overflow:auto}.interface-dialog::backdrop{background:#101010c9}.interface-dialog>img{width:auto;height:82dvh;max-width:none}.dialog-close{position:sticky;top:0;display:flex;align-items:center;justify-content:center;margin:0 0 12px auto;background:var(--field);border:1px solid #72756e;color:var(--ink);width:44px;height:44px}
+@media(min-width:1450px){.hero{padding-block:44px 52px}.instrument-view{width:min(100%,438px)}.instrument-view.is-playing{width:min(100%,480px,calc((100dvh - 24px)*720/1166))}}
+@media(max-width:1000px){.hero{gap:36px}.instrument-view{width:min(100%,363px)}.hero-content{gap:26px}.buy{font-size:16px;padding-inline:16px;min-height:58px}.buy .price{font-size:22px;padding-left:16px}}
+@media(max-width:700px){.wrap,.mast-inner{width:calc(100% - 32px)}.mast-inner{min-height:60px;gap:12px}.store-link{font-size:12px;gap:7px}.hero{display:flex;flex-direction:column;gap:0;padding-block:24px 30px}.hero-content{display:contents}.hero-lockup{order:0;width:min(100%,430px);margin-bottom:18px}.instrument{order:2;width:100%;margin-top:22px}.instrument-view{width:min(100%,400px)}.instrument-view.is-playing{width:min(100%,400px,calc((100dvh - 148px)*720/1166))}.demo-purchase{display:block;width:min(100%,430px);margin:12px auto 0}.purchase{order:1;width:min(100%,430px);margin-top:0}.presets{order:3;width:min(100%,430px);margin-top:32px}.buy{font-size:17px;min-height:58px;padding-inline:18px}.buy .price{font-size:24px;padding-left:18px}.compatibility{font-size:11px;gap:5px}.delivery{font-size:10px;gap:4px}.paymarks{margin-bottom:14px}.instrument-detail{order:1;width:min(100%,360px)}.signup{flex-direction:column;gap:12px;padding-block:24px}.signup form{max-width:380px}.footer{font-size:10px;padding-bottom:95px}.interface-dialog{padding:14px}.interface-dialog>img{height:auto;width:690px}.sticky-buy{bottom:max(14px,env(safe-area-inset-bottom))}}
+@media(max-width:359px){.wrap,.mast-inner{width:calc(100% - 28px)}.store-link{font-size:11px;gap:4px}.store-link svg{display:none}.hero{padding-top:20px}.hero-lockup{margin-bottom:18px}.buy{font-size:15px;padding-inline:14px}.buy .price{padding-left:14px}.delivery{gap:0;flex-direction:column;font-size:11px}.delivery span+span::before{display:none}.compatibility{gap:4px;font-size:10px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* Shared visible-edge masthead perimeter. */
+.mast-inner{width:calc(100% - 28px);min-height:68px;height:68px;max-width:none}.brand{padding:0}.lock{display:block;line-height:0}.lock svg{width:revert;height:revert;stroke:none}.store-link{margin-right:0}
+
+/* Readable initial/fallback brand while the pixel-positioned SVG loads. */
+.lock-a,.lock-b{line-height:1}
+
+
+/* Instrument imagery is the visual system. Source windows are measured in image pixels. */
+.story-row,.requirements-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:64px;align-items:center;padding-block:44px}
+.story-copy{max-width:480px;width:100%;margin-inline:auto}
+.story-copy h2{margin:0 0 18px;font-size:25px;line-height:1.22;font-weight:750;letter-spacing:-.02em}
+.story-copy p{font-size:16px;line-height:1.65;margin:0 0 18px}.story-copy p:last-child{margin-bottom:0}
+.personality{background:var(--field);color:var(--ink);border-top:1px solid var(--line)}
+.personality-copy .intro{text-align:center;font-size:15px;line-height:1.4;margin-bottom:20px}
+.personality-copy .statement{line-height:0;margin-bottom:20px}
+.statement img{width:100%;height:auto}
+.personality-copy .claim{text-align:center;font:400 21px/1.2 'Archivo Black',sans-serif;margin-bottom:28px}
+.instrument-detail{display:block;position:relative;overflow:hidden;width:100%;max-width:480px;margin:auto;padding:0;border:0;background:#101010;cursor:zoom-in}
+.instrument-detail img{position:absolute;height:auto;max-width:none}
+.instrument-detail:focus-visible{outline-offset:6px}
+.personality .instrument-detail:focus-visible{outline-color:var(--ink)}
+.detail-oscillators{aspect-ratio:688/688}
+.detail-oscillators img{width:197.674419%;left:-11.627907%;top:-18.168605%}
+.detail-filters{aspect-ratio:476/508}
+.detail-filters img{width:285.714286%;left:-162.184874%;top:-24.803150%}
+.detail-touch{aspect-ratio:398/276}
+.detail-touch img{width:341.708543%;left:-126.884422%;top:-435.869565%}
+.performance{border-top:1px solid var(--line)}
+.requirements-row{border-top:1px solid var(--line);align-items:start;padding-block:36px}
+.requirements-row .buy{margin-top:24px}
+@media(max-width:1000px){.story-row,.requirements-row{gap:36px}.story-copy h2{font-size:23px}.personality-copy .claim{font-size:17px}}
+@media(max-width:700px){.story-row,.requirements-row{grid-template-columns:1fr;gap:24px;padding-block:30px}.story-copy{max-width:430px}.story-copy h2{font-size:23px}.story-copy p{font-size:15px;line-height:1.65}.instrument-detail{max-width:430px}.personality .instrument-detail{grid-row:2}.synthesis .instrument-detail{grid-row:2}.performance .instrument-detail{grid-row:2}.personality-copy .claim{font-size:16px}.personality-copy .intro{font-size:14px}.requirements-row{gap:28px}}
+
+.preset-bank,.synthesis,.modulation{border-top:1px solid var(--line)}
+.story-copy h3{font-size:18px;line-height:1.3;margin:26px 0 12px;font-weight:750}
+.bank-auditions{width:100%;max-width:480px;margin:auto}
+.bank-group{padding:12px 0;border-bottom:1px solid var(--line)}.bank-group:first-child{padding-top:0}.bank-group:last-of-type{border-bottom:0;padding-bottom:0}
+.bank-group h3{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin:0 0 5px;font-size:14px;line-height:1.4;font-weight:700}.bank-group h3 span{color:var(--muted);font-weight:400;font-variant-numeric:tabular-nums}
+.bank-voices{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8px}
+.preset-preview{display:flex;align-items:center;gap:8px;min-height:44px;padding:8px 0;border:0;background:transparent;color:var(--ink);text-align:left;font-size:12px;line-height:1.3;font-weight:600}
+.preset-preview svg{width:17px;height:17px;flex:none}.preset-preview:hover,.preset-preview[aria-pressed="true"]{background:var(--surface)}.preset-preview[aria-pressed="true"]{font-weight:750}
+.bank-status:not(.sr-only){margin-top:14px;font-size:13px}
+.detail-modulation{aspect-ratio:698/364}.detail-modulation img{width:194.842407%;left:-16.045845%;top:-227.472527%}
+.sticky-buy:hover{background:var(--action-hover)}
+@media(min-width:701px){.performance .instrument-detail{grid-column:1;grid-row:1}.performance .story-copy{grid-column:2;grid-row:1}}
+@media(max-width:700px){.modulation .instrument-detail{grid-row:2}.preset-preview{font-size:11px}.preset-bank{gap:20px}}
+
+.entry-reassurance{display:flex;justify-content:center;align-items:center;gap:6px;margin:0;padding:8px 14px 10px;color:var(--ink);font-size:13px;font-weight:700;line-height:1.4;text-align:center}
+.entry-reassurance span{white-space:nowrap}.entry-reassurance span+span::before{content:'·';margin-right:6px}
+@media(max-width:700px){.entry-reassurance{font-size:clamp(10.5px,2.95vw,13px);gap:4px;padding:7px 12px 9px}.entry-reassurance span+span::before{margin-right:4px}.hero{padding-top:20px}}
+
+/* Shared neutral purchase silhouette: outlined label plus solid price terminal. */
+.buy,.sticky-buy{background:var(--field);color:var(--ink);border:2px solid var(--ink);padding:0 0 0 18px;gap:16px}
+.buy .price,.sticky-buy strong{display:flex;align-items:center;align-self:stretch;justify-content:center;flex:none;min-width:82px;margin:0;padding:0 18px;border:0;background:var(--ink);color:var(--field)}
+.buy:hover,.sticky-buy:hover{background:var(--surface);color:var(--ink);border-color:var(--ink)}
+.sticky-buy{min-height:56px}.sticky-buy strong{font-size:22px}
+@media(max-width:700px){.instrument{margin-top:12px}.purchase{display:flex;flex-direction:column}.purchase .paymarks{order:0;margin-bottom:4px}.purchase .compatibility{order:1;margin:0 0 12px}.purchase .buy{order:2}}
+@media(max-width:359px){.buy,.sticky-buy{padding-left:12px;gap:10px}.buy .price,.sticky-buy strong{min-width:66px;padding-inline:12px}}
+
+/* The filled purchase control owns the strongest nearby contrast. */
+.buy,.sticky-buy{background:var(--ink);color:var(--field);box-shadow:0 4px 12px #0003;transition:background .15s,box-shadow .15s,transform .15s}
+.buy>span:first-child,.sticky-buy>span:first-child{display:flex;align-items:center;justify-content:space-between;gap:10px;flex:1}
+.buy .purchase-arrow,.sticky-buy .purchase-arrow{width:20px;height:20px;flex:none;stroke-width:2;transition:transform .15s}
+.buy .price,.sticky-buy strong{border-left:1px solid #ffffff55;min-width:78px}
+.buy:hover,.sticky-buy:hover{background:#111;color:var(--field);box-shadow:0 6px 16px #0004}
+.buy:hover .purchase-arrow,.sticky-buy:hover .purchase-arrow{transform:translateX(3px)}
+.buy:active{transform:translateY(1px);box-shadow:0 2px 5px #0003}
+@media(max-width:359px){.buy .price,.sticky-buy strong{min-width:62px}.buy .purchase-arrow,.sticky-buy .purchase-arrow{width:16px;height:16px}}
+@media(prefers-reduced-motion:reduce){.buy,.sticky-buy,.purchase-arrow{transition:none!important}}
+
+.buy>span:first-child,.sticky-buy>span:first-child{white-space:nowrap}
+@media(max-width:359px){.buy,.sticky-buy{font-size:14px;gap:8px}.buy>span:first-child,.sticky-buy>span:first-child{gap:8px}}
+
+.share-product{display:flex;align-items:center;justify-content:center;flex:0 0 44px;width:44px;height:44px;padding:10px;border:1px solid transparent;background:transparent;color:var(--muted)}
+.share-product svg{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linejoin:round;stroke-linecap:round}
+.share-product:hover{color:var(--ink);border-color:var(--line)}
+.share-fallback{position:fixed;z-index:20;bottom:20px;left:50%;transform:translateX(-50%);width:min(440px,calc(100% - 28px));padding:16px;background:var(--field);color:var(--ink);border:1px solid var(--ink);box-shadow:0 8px 24px #0003}
+.share-fallback label{display:block;font-size:14px;font-weight:700}.share-fallback input{width:100%;min-height:44px;margin-block:8px;padding:8px;border:1px solid var(--line);background:var(--field);color:var(--ink)}.share-fallback button{min-height:44px;padding:8px 16px;background:var(--ink);color:var(--field);border:0}
+
+.share-journeyman{width:auto;gap:8px;margin-top:8px;padding-inline:0;font-size:13px}.share-journeyman svg{flex:0 0 19px}
+
+/* 9 October: shared roles from the approved storefront, not new product branding. */
+:root{--type-ui:Arial,sans-serif;--control-weight:700}
+body{font-family:var(--type-ui)}
+.store-link,.buy,.sticky-buy,.audition-overlay,.motion-toggle,.preset-preview,
+.share-product,.dialog-close,.signup button{font-family:var(--type-ui);font-weight:var(--control-weight);letter-spacing:0}
+.store-link,.buy>span:first-child,.sticky-buy>span:first-child{text-transform:lowercase}
+.store-link{font-size:12px;color:var(--ink);padding:0 2px}
+.entry-reassurance{display:block;min-height:28px;padding:6px 14px;background:var(--ink);color:var(--field);font:400 12px/16px Arial,sans-serif;text-transform:uppercase;text-wrap:balance}
+.entry-reassurance strong{font-weight:700}
+.hero-content{grid-column:2;grid-row:1}
+.instrument{grid-column:1;grid-row:1}
+.hero-lockup img,.presets img,.statement img{width:104.166667%;max-width:none;margin-left:-2.083333%}
+.buy{font-size:19px}
+.buy .price,.sticky-buy strong{font-family:Arial,sans-serif;font-weight:400;font-synthesis:none;font-variant-numeric:tabular-nums}
+.compatibility,.media-status,.footer,.bank-group,.signup input{font-family:var(--type-ui)}
+.story-copy h2{font-family:var(--type-ui);font-weight:700;letter-spacing:0;text-wrap:balance}
+.story-copy h3{font-weight:700;letter-spacing:0}
+.story-copy p{line-height:1.6}
+.audition-overlay{font-size:14px;min-height:48px;padding:10px 18px}
+.motion-toggle{position:absolute;top:8px;right:8px;z-index:3;width:36px;height:36px;display:grid;place-items:center;padding:8px;border:1px solid #f4f4f270;background:#242629;color:#f4f4f2}
+.motion-toggle:hover{background:#111}.motion-toggle:focus-visible{outline-color:#fff}
+.motion-toggle svg{width:17px;height:17px;stroke-width:2}
+.instrument-view.is-playing .panel-button{position:absolute;inset:0 0 auto;width:100%;height:auto;aspect-ratio:34/45}
+.instrument-view.is-playing .panel-button img{width:100%;height:100%;filter:none}
+.instrument-view:has(.panel-button:not([hidden])) #demo{visibility:hidden}
+.audition-overlay:disabled{cursor:wait;opacity:.7}
+.bank-group{padding:12px 0}
+.bank-group h3{font-size:13px;margin-bottom:8px}
+.preset-preview{padding:10px 9px;border:1px solid var(--line);font-size:12px;line-height:1.3}
+.preset-preview[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--field);font-weight:700}
+.preset-preview:disabled{cursor:wait}
+.signup{flex-direction:column;gap:16px;padding-block:32px}
+.signup p{font-family:Arial,sans-serif;font-weight:700;font-size:23px;line-height:1.2;white-space:normal;text-align:center}
+.signup form{max-width:360px}
+.signup button{font-size:13px}
+.interface-dialog{overscroll-behavior:contain}
+.footer{padding-bottom:96px}
+@media(max-width:1000px){.buy{font-size:18px}}
+@media(max-width:700px){
+  .entry-reassurance{font-size:12px;line-height:16px;padding:6px 14px}
+  .hero-lockup{margin-bottom:16px}
+  .hero-lockup img,.presets img{width:100%;max-width:100%;margin-left:0}
+  .hero-lockup,.presets{width:min(104.166667%,448px)}
+  .purchase .paymarks{margin-bottom:2px}
+  .purchase .compatibility{margin-bottom:10px}
+  .buy{font-size:18px;min-height:56px}
+  .instrument-view.is-playing{width:min(100%,430px)}
+  .instrument-view{max-width:100%}
+  .presets{margin-top:24px}
+  .story-copy h2{font-size:24px}
+  .bank-voices{gap:8px}
+  .preset-preview{font-size:11px;padding-inline:8px}
+}
+@media(max-width:359px){
+  .entry-reassurance{font-size:11px;padding-inline:12px}
+  .buy{font-size:16px}.sticky-buy{font-size:14px}
+  .buy .price{font-size:23px}
+  .preset-preview{font-size:10px;gap:6px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* Signup artwork uses Tony's requested Arial Bold and period, framed by visible ink. */
+.signup h2{width:min(360px,100%);line-height:0}
+.signup h2 svg{display:block;width:100%;height:auto;fill:currentColor;stroke:none;overflow:visible}
+
+/* Purchase action fills its compartment; arrow stays attached to the label. */
+.buy,.sticky-buy{container-type:inline-size}
+.buy>span:first-child,.sticky-buy>span:first-child{justify-content:center;gap:.35em;font-size:clamp(16px,6cqi,28px);line-height:1.1}
+.buy .purchase-arrow,.sticky-buy .purchase-arrow{width:.72em;height:.72em}
+
+/* Tony: the complete purchase action is uppercase Arial Black. */
+.purchase-label{white-space:nowrap;text-transform:none}
+.purchase-verb{font-family:'Arial Black',Arial,sans-serif;font-weight:900;font-synthesis:none;text-transform:uppercase}
+.purchase-name{font-family:'Arial Black',Arial,sans-serif;font-weight:900;font-synthesis:none;text-transform:uppercase}
+
+/* Section hierarchy and repeat purchases — Tony, 9 October. */
+.story-copy h2:not(.statement),.story-copy h3,.bank-group h3{font-family:Arial,sans-serif;font-weight:700;font-synthesis:none;text-transform:lowercase;letter-spacing:0}
+.story-copy h2:not(.statement){font-size:28px}
+.story-copy h3{font-size:20px}
+.bank-group h3{font-size:15px}
+.personality-copy .statement{line-height:0;margin-bottom:20px}
+.bank-group h3 span{font-family:Arial,sans-serif;font-weight:400}
+.section-purchase{display:flex;justify-content:center;padding-block:0 26px}
+.section-purchase .buy{width:min(480px,100%)}
+.hero:has(+.section-purchase),.story-row:has(+.section-purchase){padding-bottom:24px}
+.personality:has(+.section-purchase) .story-row{padding-bottom:24px}
+.section-purchase+.story-row{padding-top:26px}
+.section-purchase+.personality .story-row{padding-top:28px}
+@media(max-width:700px){.section-purchase .buy{width:min(430px,100%)}.section-purchase{padding-bottom:20px}.section-purchase+.story-row{padding-top:22px}}
+
+@media(max-width:700px){.section-purchase:has([data-pos="section_intro"]){display:none}}
+
+/* Local purchase-color comparison: Journeyman section-strip red, white lettering. */
+:root{--purchase-fill:#d84a2b;--purchase-hover:#c13f24;--purchase-ink:#ffffff}
+.buy,.sticky-buy{background:var(--purchase-fill);color:var(--purchase-ink);border-color:var(--purchase-ink)}
+.buy .price,.sticky-buy strong{background:transparent;color:inherit;border-left-color:#24262955}
+.buy:hover,.sticky-buy:hover{background:var(--purchase-hover);color:var(--purchase-ink);border-color:var(--purchase-ink)}
+
+/* White lettering; Winnetka’s crisp offset shadow and press response. */
+.buy,.sticky-buy{border-color:var(--ink);box-shadow:4px 4px 0 var(--ink)}
+.buy .price,.sticky-buy strong{border-left-color:#ffffff55}
+.buy:hover,.sticky-buy:hover{border-color:var(--ink);box-shadow:5px 5px 0 var(--ink)}
+.buy:hover{transform:translate(-1px,-1px)}
+.sticky-buy:hover{transform:translate(calc(-50% - 1px),-1px)}
+.buy:active,.sticky-buy:active{box-shadow:1px 1px 0 var(--ink)}
+.buy:active{transform:translate(3px,3px)}
+.sticky-buy:active{transform:translate(calc(-50% + 3px),3px)}

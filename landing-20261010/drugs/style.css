@@ -1,0 +1,42 @@
+/* Local DRUGS extension. Rouge is the authored light-interface accent. */
+:root{--purchase-fill:#9c5560;--purchase-hover:#9c5560;--purchase-ink:#fff}
+.hero{gap:64px;padding-block:30px}
+.hero-content{gap:24px}
+.hero-lockup{max-width:430px;width:100%;margin:auto}
+.hero-lockup img{width:100%;max-width:100%;height:auto;margin:0}
+.hero-intro{text-align:center;font:400 17px/1.6 Arial,sans-serif;text-wrap:balance}
+.instrument-view.is-playing{width:min(100%,340px,calc((100svh - 170px)*334/654));min-width:250px;aspect-ratio:334/654;background:transparent}
+.instrument-view.is-playing .panel-button{position:absolute;inset:0;width:100%;height:100%;aspect-ratio:334/654}
+.instrument-view.is-playing .panel-button img{width:100%;height:100%;object-fit:contain}
+#demo{object-fit:contain;border-radius:0}
+.audition-overlay{top:28%}
+.buy,.sticky-buy{padding:0 18px;min-height:60px}
+.buy>span:first-child,.sticky-buy>span:first-child{font-size:clamp(18px,6cqi,28px);justify-content:center}
+.purchase .buy{margin-bottom:14px}
+.sticky-buy{min-height:56px}
+.share-drugs{width:auto;gap:8px;margin:12px auto 0;padding-inline:12px;font:700 12px Arial,sans-serif}
+.share-drugs svg{flex:0 0 19px}
+.detail-photo{background:transparent;aspect-ratio:auto;max-width:420px}
+.detail-photo img{position:static;width:100%;height:auto;max-width:100%}
+.story-copy ul{margin:0;padding-left:19px;font:400 16px/1.6 Arial,sans-serif}
+.story-copy li{padding-left:3px;margin-bottom:14px}
+.story-copy li:last-child{margin-bottom:0}
+.requirements-row .buy{margin-top:24px}
+.social-proof .tm-vid{position:relative;margin:0 auto 22px;width:100%;max-width:400px;background:transparent}
+.social-proof .tm-vid video{width:100%;height:auto;max-height:460px;object-fit:contain;background:transparent}
+.social-proof .play-badge{position:absolute;inset:50% auto auto 50%;transform:translate(-50%,-50%);display:flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:10px 18px;border:1px solid #fff;background:#242629;color:#fff;font:700 14px Arial,sans-serif;white-space:nowrap}
+.social-proof .play-badge::before{content:'';width:0;height:0;border-top:7px solid transparent;border-bottom:7px solid transparent;border-left:11px solid currentColor}
+.social-proof .play-badge .disc{display:none}
+.social-proof .play-badge:hover{background:#fff;color:#242629;border-color:#242629}
+.social-proof .tm:nth-child(4),.social-proof .tm:nth-child(5){align-self:start}
+.social-proof .tm:nth-child(6){grid-column:1/-1;max-width:800px;justify-self:center;border-block:1px solid var(--line);padding-block:28px}
+.social-proof .tm:nth-child(9){grid-column:1/-1;max-width:780px;justify-self:center}
+@media(max-width:1000px) and (min-width:701px){.hero{gap:36px}.instrument-view.is-playing{min-width:230px}}
+@media(max-width:700px){
+.hero{padding-top:20px;gap:0}.hero-lockup{width:min(100%,430px);margin:0 auto 16px}.hero-content{gap:0}
+.hero-intro{order:4;width:min(100%,430px);margin:24px auto 0;font-size:16px}
+.instrument{margin-top:18px}.instrument-view.is-playing{width:min(100%,334px);min-width:0;aspect-ratio:334/654}
+.purchase .buy{margin:0}.purchase .compatibility{margin-bottom:12px}
+.demo-purchase{margin-top:18px}.detail-photo{max-width:430px}
+.story-copy ul{font-size:15px}.social-proof .tm:nth-child(6){padding-block:24px}.social-proof .tm-vid{max-width:360px}
+}

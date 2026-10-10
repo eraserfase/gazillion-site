@@ -1,0 +1,90 @@
+/* Gazillion landing utility roles — shared authority, loaded after product skins.
+   Authored logo/lockup artwork, product palettes and media framing remain local.
+   Surface decisions and exceptions: LANDING-STYLE-RULES.md. */
+body[data-landing-family]{font-family:Arial,sans-serif;font-weight:400;font-synthesis:none}
+body[data-landing-family] :is(.section-heading,.product-name-heading){font:700 32px/1.2 Arial,sans-serif;letter-spacing:0;font-synthesis:none}
+body[data-landing-family] .section-heading{text-transform:lowercase}
+body[data-landing-family] .product-name-heading{text-transform:none}
+body[data-landing-family] .section-subheading{font:700 20px/1.25 Arial,sans-serif;letter-spacing:0;text-transform:lowercase}
+body[data-landing-family] .bank-category{font:700 15px/1.3 Arial,sans-serif;letter-spacing:0;text-transform:lowercase}
+body[data-landing-family] .bank-category span{font:400 15px/1.3 Arial,sans-serif}
+body[data-landing-family] :is(.story-copy p,.story-copy ul,.story-copy li,.requirements-row p,.requirements-row li){font:400 16px/1.6 Arial,sans-serif}
+body[data-landing-family] :is(.story-copy p,.story-copy li,.requirements-row p,.requirements-row li) :is(strong,b){font-weight:700}
+
+/* Shared purchase lettering. Scale whole glyphs with the available button width.
+   The action is Black; prices deliberately retain Tony's lighter Arial trial. */
+body[data-landing-family] :is(.buy,.sticky-buy){container-type:inline-size;min-height:60px;gap:12px;padding:0 0 0 16px;border-radius:0}
+body[data-landing-family] :is(.buy,.sticky-buy)>span:first-child{display:flex;align-items:center;justify-content:center;flex:1;min-width:0;gap:.35em;font-size:clamp(16px,6cqi,28px);line-height:1.1;text-transform:none}
+body[data-landing-family] :is(.buy,.sticky-buy) .purchase-label{font-family:'Arial Black',Arial,sans-serif;font-weight:900;font-size:inherit;line-height:1.1;letter-spacing:0;font-synthesis:none;white-space:nowrap;text-transform:none}
+body[data-landing-family] :is(.purchase-verb,.purchase-name){font-family:inherit;font-size:inherit;font-weight:inherit;line-height:inherit;letter-spacing:0;text-transform:uppercase}
+body[data-landing-family]:has(main#f12) .purchase-name{text-transform:none}
+body[data-landing-family] :is(.buy,.sticky-buy) svg{width:.72em;height:.72em;margin:0;flex:none;stroke-width:2}
+body[data-landing-family] :is(.buy,.sticky-buy) :is(.price,strong){display:flex;align-items:center;justify-content:center;align-self:stretch;flex:none;min-width:78px;padding:0 16px;margin:0;font:400 24px/1 Arial,sans-serif;font-variant-numeric:tabular-nums;letter-spacing:0;background:transparent;color:inherit}
+body[data-landing-family] .sticky-buy{width:min(390px,calc(100% - 32px));max-width:390px;min-height:56px}
+body[data-landing-family] .sticky-buy :is(.price,strong){font-size:22px;min-width:72px;padding-inline:14px}
+body[data-landing-family]:has(main#drugs) :is(.buy,.sticky-buy){padding-inline:16px}
+
+/* One visible-edge header perimeter and one payment-mark scale. */
+body[data-landing-family] .mast-inner{width:calc(100% - 28px);max-width:none;min-height:68px;height:68px;margin-inline:auto;padding:0;gap:12px}
+body[data-landing-family] .brand .lock svg{width:revert;height:revert;stroke:none}
+body[data-landing-family] .paymarks{display:grid;grid-template-columns:66px 80px 104px;justify-content:center;align-items:center;gap:clamp(10px,calc((100% - 250px)/2),28px);width:100%;height:auto;margin-inline:auto}
+body[data-landing-family] .paymarks a{display:flex;align-items:center;justify-content:center;min-width:0;width:auto;height:48px}
+body[data-landing-family] .paymarks img{height:42px;width:auto;max-height:none;max-width:none;object-fit:contain}
+body[data-landing-family] .paymarks a:nth-child(2) img{height:78px}
+body[data-landing-family] .paymarks a:last-child img{width:104px;max-width:100%;height:auto}
+
+/* Utility type belongs to the store, regardless of the instrument's personality. */
+body[data-landing-family] .store-link{display:flex;align-items:center;min-height:44px;padding:0 2px;font:700 12px/1.2 Arial,sans-serif;letter-spacing:0;gap:8px;white-space:nowrap;text-transform:lowercase}
+body[data-landing-family] .store-link svg{width:16px;height:16px}
+body[data-landing-family] .entry-reassurance{min-height:28px;padding:6px 14px;font:400 12px/16px Arial,sans-serif;letter-spacing:0;text-transform:uppercase}
+body[data-landing-family] .entry-reassurance strong{font-weight:700}
+body[data-landing-family] .compatibility{font:400 12px/1.5 Arial,sans-serif;letter-spacing:0}
+body[data-landing-family] .share-product{display:flex;align-items:center;justify-content:center;gap:8px;width:auto;min-height:44px;padding:8px 12px;border:0;border-radius:0;background:transparent;color:var(--muted);font:700 12px/1.2 Arial,sans-serif;letter-spacing:0;text-transform:none}
+body[data-landing-family] .share-product svg{width:19px;height:19px;flex:none}
+body[data-landing-family] :is(.audition-overlay,.live-play,.social-proof .play-badge){min-height:48px;padding:10px 18px;gap:8px;font:700 14px/1.2 Arial,sans-serif;letter-spacing:0;text-transform:none;border-radius:0}
+body[data-landing-family] :is(.audition-overlay,.live-play,.social-proof .play-badge) svg{width:18px;height:18px;flex:none}
+body[data-landing-family] .social-proof .play-badge::before{content:none}
+body[data-landing-family] .social-proof .tm-vid.is-playing .play-badge{inset:8px 8px auto auto;transform:none;opacity:1;pointer-events:auto}
+body[data-landing-family] .motion-toggle{width:44px;height:44px}
+body[data-landing-family] .motion-toggle svg{width:18px;height:18px}
+body[data-landing-family] .footer{font:400 11px/1.4 Arial,sans-serif}
+body[data-landing-family] .footer a{font:400 11px/1.4 Arial,sans-serif}
+
+/* Same live-review controls; source quotes and curated artwork are untouched. */
+body[data-landing-family] .gr-rating{font:400 12px/1.3 Arial,sans-serif;gap:8px 10px}
+body[data-landing-family] .gr-stars{font-size:21px;line-height:1;letter-spacing:1px;color:var(--ink)}
+body[data-landing-family] .gr-score{font:700 18px/1.3 Arial,sans-serif}
+body[data-landing-family] :is(.gr-count,.gr-who){color:#55575a;font:400 12px/1.4 Arial,sans-serif}
+body[data-landing-family] .gr-who b{font-weight:700;color:var(--ink)}
+body[data-landing-family] .gr-nav{width:36px;height:36px;border:1px solid var(--line);font:400 25px/1 Arial,sans-serif}
+body[data-landing-family] .gr-dot{width:28px;height:32px}
+body[data-landing-family] .gr-dot::after{background:#b9bab9}
+body[data-landing-family] .gr-dot[aria-current=true]::after{background:var(--ink)}
+
+/* Approved two-face signup artwork; one form measure and one vertical rhythm. */
+body[data-landing-family] .signup{display:flex;flex-direction:column;align-items:center;gap:16px;padding-block:32px;text-align:center}
+body[data-landing-family] .signup h2{width:min(360px,100%);margin:0;line-height:0}
+body[data-landing-family] .signup h2 svg{display:block;width:100%;height:auto;margin:0;fill:currentColor;stroke:none}
+body[data-landing-family] .signup form{display:flex;gap:8px;width:100%;max-width:360px;margin:0}
+body[data-landing-family] .signup input{flex:1;min-width:0;min-height:44px;padding:11px 12px;border:1px solid #8c8f87;border-radius:0;background:transparent;color:var(--ink);font:400 14px/1.4 Arial,sans-serif}
+body[data-landing-family] .signup input::placeholder{color:var(--muted);opacity:1}
+body[data-landing-family] .signup button{min-width:58px;min-height:44px;padding:10px 16px;border:1px solid #72756e;border-radius:0;background:transparent;color:var(--ink);font:700 13px/1.4 Arial,sans-serif}
+body[data-landing-family] .signup button:hover{background:#e1e2de}
+@media(max-width:700px){
+ body[data-landing-family] :is(.section-heading,.product-name-heading){font-size:28px}
+ body[data-landing-family] .buy{min-height:56px;gap:10px;padding-left:12px}
+ body[data-landing-family] .buy :is(.price,strong){min-width:72px;padding-inline:13px}
+ body[data-landing-family] .compatibility{font-size:11px}
+}
+@media(max-width:359px){
+ body[data-landing-family] .entry-reassurance{font-size:11px;padding-inline:12px}
+ body[data-landing-family] .store-link svg{display:none}
+ body[data-landing-family] :is(.buy,.sticky-buy){gap:8px;padding-left:10px}
+ body[data-landing-family] :is(.buy,.sticky-buy) :is(.price,strong){font-size:22px;min-width:64px;padding-inline:10px}
+}
+
+/* Fixed Arial Black letter contours retain their native pair spacing on systems
+   without the proprietary font. Screen-reader text remains ordinary text. */
+body[data-landing-family] :is(.buy,.sticky-buy) .purchase-label{display:inline-flex;align-items:center;min-height:1.1em}
+body[data-landing-family] :is(.buy,.sticky-buy) .purchase-label .gz-type-art{display:block;max-width:100%;margin:0;fill:currentColor;stroke:none;flex:none;overflow:visible}
+.gz-text-equivalent{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}

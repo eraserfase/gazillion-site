@@ -1,0 +1,20 @@
+/* Tony, 10 October 2026: catalogue exits stay subordinate to landing-page
+   checkout. One treatment for all six local product drafts, including BEEFY's
+   separate base stylesheet. Match the arrow through currentColor. */
+:root{--landing-return-link:#b5b5b2}
+.masthead a.store-link,
+.footer.wrap>a[href="https://gazillionindustries.com/"]{
+  color:var(--landing-return-link);
+}
+.masthead a.store-link:hover,
+.footer.wrap>a[href="https://gazillionindustries.com/"]:hover{
+  color:var(--landing-return-link);
+  text-decoration:underline;
+  text-decoration-thickness:1px;
+  text-underline-offset:4px;
+}
+.masthead a.store-link:focus-visible,
+.footer.wrap>a[href="https://gazillionindustries.com/"]:focus-visible{
+  outline:2px solid var(--ink);
+  outline-offset:4px;
+}

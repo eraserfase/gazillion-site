@@ -1,0 +1,33 @@
+/* TRIPLE OG extends the approved Journeyman landing-page system. */
+:root{--purchase-fill:#cc2a1e;--purchase-hover:#ac2319}
+.hero{gap:64px;padding-block:28px 30px}
+.hero-content{gap:24px}
+.hero-lockup img{width:104.166667%;max-width:none;margin-left:-2.083333%}
+.hero-intro{font:400 23px/1.25 Arial,sans-serif;text-align:center;text-wrap:balance}
+.instrument-view.is-playing{width:min(100%,400px,calc((100svh - 166px)*9/16));min-width:280px;aspect-ratio:9/16;background:transparent}
+.instrument-view.is-playing .panel-button{aspect-ratio:9/16;display:grid;place-items:center}
+#demo{border-radius:0;object-fit:contain}
+.detail-photo{background:transparent;aspect-ratio:auto}
+.detail-photo img{position:static;display:block;width:100%;height:auto;max-width:100%}
+.footer a{font-size:11px}
+.bank-auditions{margin-top:22px}.bank-voices{grid-template-columns:repeat(3,minmax(0,1fr))}
+.modulation .bank-voices{grid-template-columns:repeat(2,minmax(0,1fr))}
+.story-copy h2:not(.statement){font-size:32px;line-height:1.15}
+@media(max-width:1000px) and (min-width:701px){.hero{gap:36px}.hero-content{gap:20px}.hero-intro{font-size:20px}.instrument-view.is-playing{min-width:250px}}
+@media(max-width:700px){
+.hero{padding-top:20px;gap:0}.hero-lockup{margin-bottom:12px}.hero-lockup img{width:100%;max-width:100%;margin-left:0}
+.hero-intro{order:3;width:min(100%,430px);font-size:21px;margin:24px auto 0}
+.instrument{margin-top:18px}.instrument-view.is-playing{width:min(100%,400px);min-width:0;aspect-ratio:9/16}
+.story-copy h2:not(.statement){font-size:28px}.demo-purchase{margin-top:18px}
+}
+
+/* Keep the sound action in the first visible portion of the tall tape panel. */
+.audition-overlay{top:29%}
+@media(max-width:700px){.buy>span:first-child,.sticky-buy>span:first-child{font-size:clamp(17px,6.4cqi,28px)}}
+@media(max-width:359px){.compatibility,.preset-preview,.footer a{font-size:11px}}
+
+/* Two rows of authentic Arial outlines, fitted by visible letter edges. */
+.hero-intro{line-height:0;margin:0}
+.hero-intro img{width:104.166667%;max-width:none;margin-left:-2.083333%;height:auto}
+.hero-content{gap:22px}
+@media(max-width:700px){.hero-intro{order:4;margin:28px auto 0}.hero-intro img{width:100%;max-width:100%;margin:0}}
