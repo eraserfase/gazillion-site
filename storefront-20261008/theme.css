@@ -1,12 +1,11 @@
-/* Shared appearance switch; product artwork and buying geometry stay intact. */
-:root[data-theme="light"]{color-scheme:light;--field:#f4f4f2;--surface:#e8e8e5;--ink:#242629;--muted:#53565b;--line:#c9cac7;--media-shadow:#0002}
-:root[data-theme="dark"]{color-scheme:dark;--field:#111;--surface:#292929;--ink:#f4efe9;--muted:#b8b6b2;--line:#484848;--media-shadow:#0005}
+/* Storefront: one light appearance; product artwork and buying geometry stay intact. */
+:root{color-scheme:light;--field:#f4f4f2;--surface:#e8e8e5;--ink:#242629;--muted:#53565b;--line:#c9cac7;--media-shadow:#0002}
 html{scrollbar-color:var(--muted) var(--field)}
-.mast-actions{gap:10px}.posture{margin-right:16px}
-.theme-toggle{display:flex;align-items:center;justify-content:center;flex:0 0 44px;width:44px;height:44px;border:0;background:transparent;color:var(--muted);padding:11px}
-.theme-toggle svg{width:22px;height:22px;overflow:visible;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
-.theme-toggle:hover{color:var(--ink);background:var(--surface)}
-.theme-toggle .bulb-rays{opacity:0}:root[data-theme="light"] .bulb-rays{opacity:1}
+.mast-actions{gap:26px}.posture{margin-right:0}
+
+
+
+
 .media-window{position:absolute;inset:8px 12px 52px;overflow:hidden;isolation:isolate}
 .media-window .panel-link{width:100%;height:100%;display:block}
 .media-window>video{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:center bottom;pointer-events:none;max-width:none;will-change:transform}
@@ -31,8 +30,7 @@ html{scrollbar-color:var(--muted) var(--field)}
 
 /* A quiet common boundary joins each instrument to its purchase actions.
    Draw in the existing gutters so media and tap targets retain their size. */
-:root[data-theme="light"]{--product-outline:#d8d9d5}
-:root[data-theme="dark"]{--product-outline:#383838}
+:root{--product-outline:#d8d9d5}
 .product{position:relative}
 .product::before{content:"";position:absolute;inset:0 -6px -8px;border:1px solid var(--product-outline);border-radius:4px;pointer-events:none}
 @media(max-width:660px){.product::before{left:-5px;right:-5px}}
@@ -68,8 +66,7 @@ html{scrollbar-color:var(--muted) var(--field)}
 .activity-ticker{height:28px}.activity-pause{height:28px}.activity-group{gap:24px;padding-right:24px}.has-activity .cart-dock{bottom:calc(42px + env(safe-area-inset-bottom))}
 
 /* Keep the acquisition articles deliberately out of the shopping hierarchy. */
-:root[data-theme="light"]{--reading-material-ink:#f1f1ef}
-:root[data-theme="dark"]{--reading-material-ink:#141414}
+:root{--reading-material-ink:#f1f1ef}
 .foot a.reading-material{color:var(--reading-material-ink);text-decoration:none}
 .foot a.reading-material:focus-visible{color:var(--muted)}
 .list{width:min(360px,calc(90% - 25.2px));max-width:360px;flex-direction:column;gap:16px}
@@ -110,11 +107,29 @@ body{font-family:var(--type-ui)}
 
 @media(max-width:359px){.filters button,.cart-toggle,.product-actions .cta,.ipad-product .cta{font-size:11px}}
 
-:root[data-theme="dark"] .catalog-toolbar .delivery,
-:root[data-theme="dark"] .activity-ticker,
-:root[data-theme="dark"] .activity-pause{background:#292929;color:#fff}
-:root[data-theme="dark"] .activity-ticker{border-top-color:#292929}
-:root[data-theme="dark"] .activity-window:focus-visible{outline-color:#fff}
 
 /* Tony, 9 Oct: lighter Arial Regular prices; action labels remain Arial Bold. */
 .money,.cart-item-price,.dock-total,.cart-subtotal strong{font-family:Arial,sans-serif;font-weight:400;font-synthesis:none}
+
+/* Catalog selection stays charcoal; checkout alone carries vermilion.
+   Information preserves its full-size neutral button and established type. */
+:root{--purchase-fill:#d14729;--purchase-hover:#c13f24;--purchase-ink:#fff;--selection-fill:#484b50;--selection-hover:#373a3f;--selection-edge:#101112}
+.cta.add-to-cart,.cta.checkout,.ipad-product .cta,.demo-app-actions .cta{
+ background:var(--selection-fill);color:var(--purchase-ink);border-color:var(--selection-edge);
+ box-shadow:2px 2px 0 var(--selection-edge);filter:none;
+ transition:background-color .12s ease,box-shadow .12s ease,transform .12s ease;
+}
+.cta.add-to-cart:hover,.cta.checkout:hover,.ipad-product .cta:hover,.demo-app-actions .cta:hover{
+ background:var(--selection-hover);color:var(--purchase-ink);border-color:var(--selection-edge);
+ box-shadow:3px 3px 0 var(--selection-edge);transform:translate(-1px,-1px);filter:none;
+}
+.cta.checkout{background:var(--purchase-fill);border-color:var(--ink);box-shadow:3px 3px 0 var(--ink)}
+.cta.checkout:hover{background:var(--purchase-hover);border-color:var(--ink);box-shadow:4px 4px 0 var(--ink)}
+.cta.add-to-cart:active,.cta.checkout:active,.ipad-product .cta:active,.demo-app-actions .cta:active{
+ box-shadow:1px 1px 0 var(--selection-edge);transform:translate(1px,1px);
+}
+.cta.product-page{background:var(--field);color:var(--ink);border-color:var(--ink);box-shadow:none}
+.cta.product-page:hover{background:var(--surface);color:var(--ink);border-color:var(--ink)}
+.cta.add-to-cart.in-cart{background:var(--surface);color:var(--ink);border-color:var(--ink);box-shadow:none;transform:none}
+.cta.add-to-cart.in-cart:hover{background:#deded9;color:var(--ink);box-shadow:none;transform:none}
+@media(prefers-reduced-motion:reduce){.cta{transition:none!important}}
