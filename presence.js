@@ -9,7 +9,10 @@
   // No arbitrary destination, credentials, or query string from configuration.
   if(endpoint!=='https://board.gazillionindustries.com/presence/collect') endpoint='';
   var period='', active=false, sent=false, initialSent=false, away=false, lastBeatAt=0;
-  var version='presence-direct-20261010', directPending='';
+  var version='presence-direct-20261011', directPending='';
+  // The storefront's cart rides its own lease (Tony, 11 Oct 2026: track cart adds on live traffic).
+  // It is the product keys only, so a closed or expired tab empties the board's IN CART with it.
+  var cart=[], KEYS=/^(drugs|f12|skruu|tripleog|beefy|journeyman|winnetka)$/;
   function nonce(){
     var bytes=new Uint8Array(6);crypto.getRandomValues(bytes);
     return Array.from(bytes,function(b){return b.toString(16).padStart(2,'0');}).join('');
@@ -23,6 +26,7 @@
     if(/^[0-9a-f]{24}$/.test(attr.token||'')) data.journey=attr.token;
     if(/^[A-Za-z0-9_.-]{1,200}$/.test(attr.tags?.utm_source||'')) data.source=attr.tags.utm_source;
     if(/^[A-Za-z0-9_.-]{1,64}$/.test(attr.tags?.utm_medium||'')) data.medium=attr.tags.utm_medium;
+    if(type==='lease' && product==='store' && cart.length) data.cart=cart.slice();
     var body=JSON.stringify(data);
     var sentPeriod=period, controller=new AbortController(), timeout=setTimeout(function(){controller.abort();},5000);
     if(type==='lease') directPending=sentPeriod;
@@ -95,5 +99,12 @@
     if(sent || ++attempts>=40) clearInterval(ready);
   },150);
   setInterval(beat,15000);
-  window.GZPresence={version:version,buy:checkoutClick};
+  // Called by the storefront after every cart change; a change renews the lease at once.
+  function cartChanged(list){
+    var next=Array.from(new Set((list||[]).filter(function(k){return KEYS.test(k);}))).sort().slice(0,10);
+    if(product!=='store' || next.join()===cart.join()) return;
+    cart=next;
+    if(endpoint && active && sent && !away && document.visibilityState!=='hidden'){directPending='';direct('lease');lastBeatAt=Date.now();}
+  }
+  window.GZPresence={version:version,buy:checkoutClick,cart:cartChanged};
 })();

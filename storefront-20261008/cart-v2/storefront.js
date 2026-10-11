@@ -255,6 +255,7 @@ function refreshCart(){
 function openCart(){refreshCart();generation++;stopOthers(null);if(demoDialog.open)demoDialog.close();const wasOpen=cart.open;cart.showModal();document.body.classList.add('cart-open');if(!wasOpen){storeTrack('storefront_cart_open',{position:'storefront_cart'});storeCommerce('view_cart',[...selectedProducts].map(id=>purchasable.get(id)));}}
 function closeCart(){cart.close();}
 function drawCart(){
+ try{window.GZPresence?.cart?.([...selectedProducts]);}catch{}
  const focused=document.activeElement;
  const focusProduct=focused?.closest('.cart-item')?.dataset.product;
  const focusRemove=focused?.classList.contains('cart-remove');
