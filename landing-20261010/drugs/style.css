@@ -31,6 +31,9 @@
 .social-proof .tm:nth-child(4),.social-proof .tm:nth-child(5){align-self:start}
 .social-proof .tm:nth-child(6){grid-column:1/-1;max-width:800px;justify-self:center;border-block:1px solid var(--line);padding-block:28px}
 .social-proof .tm:nth-child(9){grid-column:1/-1;max-width:780px;justify-self:center}
+.social-proof .tm--dtmer{grid-column:1/-1;justify-self:center;border-top:1px solid var(--line);padding-top:28px}
+.social-proof .tm--dtmer .tm-vid{max-width:315px}
+.social-proof .tm--dtmer video{aspect-ratio:9/16;max-height:none}
 @media(max-width:1000px) and (min-width:701px){.hero{gap:36px}.instrument-view.is-playing{min-width:230px}}
 @media(max-width:700px){
 .hero{padding-top:20px;gap:0}.hero-lockup{width:min(100%,430px);margin:0 auto 16px}.hero-content{gap:0}
