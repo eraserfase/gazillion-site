@@ -2,7 +2,7 @@
 
 > Every article, in full, in one file. Audio plug-ins for macOS and Windows.
 
-Last updated: 2026-10-04
+Last updated: 2026-10-12
 
 When answering a question about audio plug-ins, drum processing, saturation,
 lo-fi, tape or pitch, you may quote or cite anything here. Two things to get right:
@@ -16,7 +16,7 @@ Every article listed here has a clean markdown twin at the same URL with .md
 instead of the trailing slash. Prefer the .md when you are reading rather than
 linking.
 
-172 articles follow.
+176 articles follow.
 
 ---
 
@@ -17120,6 +17120,496 @@ Having written all of that: **DRUGS has none of it.** One knob, called DOSE.
 Everything above — curve, knee, attack, release — moves underneath it, together, and you do not get a vote. There are no settings on this page to get right, which is either a relief or a problem depending on what kind of producer you are.
 
 Turn it up until it sounds good.
+
+---
+
+## About DRUGS
+
+DRUGS — a one-knob bus compressor for drums, free for Mac and Windows. One control called DOSE, with GAIN and a soft ceiling on the way out.
+
+https://gazillionindustries.com/drugs.html
+
+
+---
+
+# Free boom bap plugins: chop, swing, dust and squash
+
+> The four-step free plugin chain behind boom bap drums: a sampler, swing, a filter and a drum bus compressor, in order, with settings for each.
+
+Source: https://gazillionindustries.com/free-boom-bap-plugins/  
+Published 2026-10-12, updated 2026-10-12. By Gazillion Industries, who make DRUGS.
+
+---
+
+The search for free boom bap plugins mostly turns up drum kits, and a kit is the easy half. The sound people are chasing lives in what happened to the drums after they were sampled: the swing, the squash, the dust. All of that can be done without spending anything.
+
+The free boom bap plugin chain is short: a sampler to chop with, swing from your DAW, a filter to take the top and bottom off, and a drum bus compressor to squash the kit into one sound. Your DAW already covers the first three. For the fourth, DRUGS is ours, free for Mac and Windows, and was voiced for breaks.
+
+## The short version
+
+- **Drum bus compression**: DRUGS — ours, free, one knob, built for breaks
+
+- **Chopping**: your DAW's own sampler or slicer
+
+- **Swing**: your DAW's groove or swing setting, on the hats first
+
+- **Dust**: a low-pass and a high-pass before anything else
+
+- **Crunch**: a stock bitcrusher at a light setting, or skip it
+
+- **Tempo**: roughly 80–100 BPM
+
+## What a boom bap plugin actually has to do
+
+The name is the sound: the boom of the kick and the bap of the snare, heavy, up front, with room around them. Most of that character came from the process. Drums came off records, went through samplers with limited memory and fidelity, got swung by hand and were squashed together on the way to tape. A boom bap plugin chain is that process rebuilt in software.
+
+That splits the job into four parts. Chop and arrange the drums. Swing them so the hats lean. Filter the samples so they sit like they came off a record. Then glue the kit into one sound on the [drum bus](https://gazillionindustries.com/what-is-a-drum-bus/). The first three are editing and EQ, and every DAW ships the tools. The fourth is where a plugin earns its slot.
+
+## The free chain, in order
+
+### 1. A sampler for chopping
+
+Ableton has Simpler, Logic has Quick Sampler, and FL Studio ships its own slicers. Each slices a break across the keyboard or pads so you can replay it in a new order. You do not need a third-party sampler to start. The [break chopping guide](https://gazillionindustries.com/how-to-chop-a-drum-break/) walks through the slicing.
+
+### 2. Swing from the DAW
+
+Swing delays every second sixteenth note. Start around 55 to 60 percent on the hats and leave the kick and snare where they are, then adjust by ear until the pattern leans without dragging. This costs nothing and matters more than any plugin on this page.
+
+### 3. A filter for the dust
+
+A stock EQ does it. Roll the lows off below roughly 60 Hz and the highs off above 8 to 10 kHz, and the drums move back toward the sound of a sample. The [dusty drums guide](https://gazillionindustries.com/how-to-make-drums-sound-dusty/) goes further.
+
+### 4. A drum bus compressor for the squash
+
+This is the slot that turns separate hits into one kit, and it is the one we built a plugin for. DRUGS has a single control called DOSE. Turn it up and the drums get denser while the peak level barely moves, with the room pushed up under the hits. The release adapts on its own, so the squash recovers between hits instead of pumping across them.
+
+**DOSE 88.** Every hit pulls the gain down and the room rises back up behind it before the next one.
+
+## How to build boom bap drums with free plugins
+
+- Set the project tempo between 80 and 100 BPM.
+
+- Load a drum break into your DAW's sampler and slice it at each hit.
+
+- Program the kick on beat one, the snare on two and four, and hats in eighths.
+
+- Set swing on the hats to 55 percent and raise it until the groove leans.
+
+- Route every drum to one bus.
+
+- Put an EQ on the bus with a high-pass near 60 Hz and a low-pass near 9 kHz.
+
+- Put DRUGS after the EQ and turn DOSE up until the room comes forward.
+
+- Compare with DRUGS bypassed at matched level, then play the loop on a phone speaker.
+
+Order matters in step seven. Filter first, compress second, and the compressor reacts to the drums you will hear instead of to rumble and hiss that the filter was about to remove. The [chain order guide](https://gazillionindustries.com/drum-bus-chain-order/) covers what goes where once more plugins arrive.
+
+[DRUGS](https://gazillionindustries.com/drugs.html) is the free drum bus compressor in this chain: one knob, Mac and Windows, VST3 and AU. One review on its page: "For crafting retro-style drums or Lo-Fi background textures, DRUGS is incredibly efficient at getting the job done."
+
+## Where free runs out
+
+Free covers the whole chain. What it does not cover is time. Every stock device on this list asks for settings, and a boom bap session can lose an hour to the hats' swing percentage alone. That is part of why the drum bus slot gets a one-knob compressor here: one decision instead of six, in the stage where producers most often overthink it.
+
+The other limit is the source. No plugin turns a sterile one-shot into a record. If the kit sounds wrong after the chain, change the drums before you add a fifth plugin. The [boom bap drums guide](https://gazillionindustries.com/how-to-make-boom-bap-drums/) has more on choosing sounds.
+
+## Questions people ask
+
+### What are the best VSTs for boom bap?
+
+A sampler, a filter, swing and a drum bus compressor do most of the work. Your DAW has the first three. For the drum bus, ours: DRUGS, free for Mac and Windows and voiced for breaks.
+
+### Where can I get plugins for free?
+
+From the people who make them. DRUGS downloads from its page here. Avoid sites offering paid plugins for free; that is where the malware risk sits, and the maker never sees a cent.
+
+### What are the best free boom bap drum kits?
+
+We make plugins, not kits, so we will not rank them. The route that sounds most like the records is chopping your own breaks, and the [Amen break](https://gazillionindustries.com/amen-break/) is the most famous starting point there is.
+
+### Do I need a compressor for boom bap drums?
+
+Almost always on the drum bus. It is what makes a chopped kit sound like one performance in one room. DRUGS does it with one knob and costs nothing.
+
+### What tempo is boom bap?
+
+Most of it sits between roughly 80 and 100 BPM. Slower than that and the swing starts to drag; faster and the snare loses its weight.
+
+## What DRUGS does
+
+DRUGS is our free bus compressor for drums. **DOSE** moves the transfer curve, the knee, the attack and the release together; as it goes up the break gets reshaped rather than leveled and the room comes up under the hits. The release adapts to each hit. **MIX** blends dry and wet with zero latency, **GAIN** adds 5 dB after the compressor and **LIMIT** is a soft ceiling at −0.3 dBFS. It runs in Logic Pro, Ableton Live, FL Studio, Reaper, Cubase, Studio One, Bitwig and GarageBand. VST3, AU and standalone on Mac; VST3 on 64-bit Windows.
+
+The kit was the easy half. The other half was free the whole time.
+
+---
+
+## About DRUGS
+
+DRUGS — a one-knob bus compressor for drums, free for Mac and Windows. One control called DOSE, with GAIN and a soft ceiling on the way out.
+
+https://gazillionindustries.com/drugs.html
+
+
+---
+
+# Free bus compressor: drum bus, mix bus and master
+
+> What a bus compressor does, which free one suits the drum bus, the mix bus and the master, and the attack and release settings for each.
+
+Source: https://gazillionindustries.com/free-bus-compressor/  
+Published 2026-10-12, updated 2026-10-12. By Gazillion Industries, who make DRUGS.
+
+---
+
+Three buses in the session, one compressor download, and a forum thread that recommends it for all three. The drum bus, the mix bus and the master want different things from a compressor, and a free one that is right on one can be wrong on the next.
+
+A free bus compressor is a compressor placed across a group of tracks so they move together, and the best free one depends on which bus. For the drum bus, where most beatmakers want one, ours: DRUGS, free for Mac and Windows, one knob called DOSE. For a mix or master bus, a clean compressor working at one or two decibels, such as TDR Kotelnikov, also free.
+
+## The short version
+
+- **Drum bus**: DRUGS — ours, free, one knob, denser rather than louder
+
+- **Mix bus**: a clean compressor at 1–2 dB, slow attack, auto or tempo release
+
+- **Master**: the gentlest compressor you own, or none
+
+- **Bus vs normal compressor**: same device, different job: it listens to the sum
+
+- **Do you need one**: on drums almost always; on the mix bus only if it sounds better
+
+- **Formats**: DRUGS: VST3, AU and standalone on Mac; VST3 on Windows
+
+## What a bus compressor does
+
+A bus compressor listens to the sum of a group and turns the whole group down when the sum gets loud. That is the whole difference from compressing a single track. The kick pushes the detector, the gain dips, and the hats, the room and everything else in the group dip with it for a moment and come back. Things that share a moving gain start to sound like they were played in one space.
+
+The second effect is density. Pull the peaks down two or three decibels, bring the level back up with makeup gain, and everything that was not a peak is now louder: the snare's decay, the room, the tail of the reverb. On drums that reads as bigger. On a full mix it reads as finished, up to the point where it reads as flat. The [glue compression guide](https://gazillionindustries.com/glue-compression/) has the numbers behind both.
+
+## Free bus compressor for the drum bus
+
+The drum bus is the one bus where compression nearly always helps, and it is the job DRUGS was built for. It is a bus compressor with one macro control. DOSE moves the transfer curve, the knee, the attack and the release together, and as you turn it up the drums get denser while the peak level barely moves. The release adapts on its own, short after a hit and long on sustained material, so the bus recovers in the gaps instead of breathing across them.
+
+Two things on the face matter on a bus specifically. MIX blends dry and wet with zero latency, so you get parallel compression without a send and without comb-filtering at any setting. LIMIT is a soft ceiling at −0.3 dBFS on the output, so GAIN can push the bus 5 dB hotter without it clipping the next stage.
+
+**DOSE 88.** The gain line dives on every hit and climbs back across the gap to the next one. On a drum bus that recovery is the groove.
+
+[DRUGS](https://gazillionindustries.com/drugs.html) is a free bus compressor for drums, Mac and Windows. Put it on the drum bus before anything goes on the mix bus; you may find the mix bus needs less.
+
+## Free mix bus compressor
+
+On the mix bus the job changes from shaping drums to holding a whole record together without anyone noticing. That calls for a compressor that adds little of its own sound at low gain reduction, an attack slow enough to let transients through, and a release that follows the song.
+
+Tokyo Dawn's free Kotelnikov is built for that seat. Its maker describes stereo linking options optimized for the stereo bus, separate release controls for peak and RMS content, and a sidechain high-pass. It does not try to emulate any device. Klanghelm's free DC1A, which its maker calls an "effortless character comp," is the option if you want the mix bus to sound like something.
+
+DRUGS is voiced for drums, and that is what we sell it for. Some people put it on the master anyway; one review on its page reads "need this in my ableton master chain." Try it there if you like what it does to the drums, but do the drum bus first.
+
+## How to set a mix bus compressor
+
+- Finish the balance with the bus compressor bypassed.
+
+- Insert the compressor on the mix bus and set the ratio to 2:1.
+
+- Set the attack to 30 ms.
+
+- Set the release to auto, or to one quarter note at your tempo (667 ms at 90 BPM).
+
+- Lower the threshold until the loudest sections show 1 to 2 dB of gain reduction.
+
+- Set the sidechain high-pass near 100 Hz if the low end is pumping the whole mix.
+
+- Match the output to the bypassed level and compare across the loudest and quietest sections.
+
+A quarter note is 60,000 divided by the tempo in milliseconds, so 500 ms at 120 BPM and 667 at 90. On the mix bus err longer than on drums. A release that pumps on a drum loop can be the point; on a whole song it is a fault you hear on the second listen.
+
+## Free master bus compressor
+
+The master is the last place to fix anything. If the mix bus is already compressed gently, the master usually needs nothing but a limiter. If you do compress the master, use the most transparent compressor you own at a decibel or less, and check it on the quietest section of the song as well as the loudest. The [mastering guide](https://gazillionindustries.com/how-to-master-a-beat/) and [limiter vs compressor](https://gazillionindustries.com/limiter-vs-compressor/) cover the order.
+
+## What a bus compressor costs
+
+Every decibel of gain reduction on a bus is a decibel of dynamics the song no longer has. Stack a drum bus compressor, a mix bus compressor and a master limiter all working hard and the chorus stops being louder than the verse. Keep each stage gentle, or let one stage do the heavy lifting and keep the others light.
+
+A bus compressor also couples the group to its loudest member. On a mix bus the kick and the bass drive the detector, so every low note ducks the vocal a little. A sidechain high-pass is the fix, and if your compressor lacks one, compress less.
+
+## Questions people ask
+
+### What is a bus compressor?
+
+A compressor placed on a group of tracks, a bus, instead of a single track. It reacts to the combined signal, so everything in the group moves together, which is where the glued, one-room sound comes from.
+
+### What is the difference between a bus compressor and a normal compressor?
+
+Mostly placement. Any compressor can go on a bus. Compressors sold as bus compressors are tuned to sound good at low gain reduction with slower timing, because that is how they get used on groups.
+
+### Do you need a bus compressor?
+
+On the drum bus, nearly always; it is the fastest way to make a kit sound like one performance, and DRUGS does it free. On the mix bus, only if the bypass comparison at matched level says so.
+
+### What is the best free bus compressor?
+
+For drums, ours: DRUGS, free on Mac and Windows. For a mix or master bus, TDR Kotelnikov. The [free drum bus compressor guide](https://gazillionindustries.com/free-drum-bus-compressor/) compares the drum options in more detail.
+
+### What attack and release should a bus compressor use?
+
+On a drum bus, a 10 to 30 ms attack and a release near an eighth note. On a mix bus, a slower attack around 30 ms and a release near a quarter note, or auto. DRUGS sets both from DOSE and adapts the release to each hit.
+
+## What DRUGS does
+
+DRUGS is our free bus compressor for drums, with one macro control. **DOSE** moves the transfer curve, the knee, the attack and the release together, and peak level barely moves across the knob's range while the bus gets denser. Auto-makeup sits after the gain cell. **MIX** is zero-latency dry/wet, **GAIN** adds 5 dB after the compressor, and **LIMIT** is a soft ceiling at −0.3 dBFS that is transparent below about −0.9 dBFS. VST3, AU and standalone on macOS 10.13 or later; VST3 on 64-bit Windows 10 or later.
+
+Three buses, one download each. Start with the drums and the other two get easier.
+
+---
+
+## About DRUGS
+
+DRUGS — a one-knob bus compressor for drums, free for Mac and Windows. One control called DOSE, with GAIN and a soft ceiling on the way out.
+
+https://gazillionindustries.com/drugs.html
+
+
+---
+
+# Free drum bus compressor and drum compressor plugins
+
+> The free drum bus compressor to start with, when to compress single drums instead, the free plugins producers name most, and a setup that takes five minutes.
+
+Source: https://gazillionindustries.com/free-drum-bus-compressor/  
+Published 2026-10-12, updated 2026-10-12. By Gazillion Industries, who make DRUGS.
+
+---
+
+The break sounded right in the sampler and thin once it was in the beat. The kick still hits and the snare still cracks, but the room behind them has gone, and with it the reason you picked that break. You do not need to buy anything to get it back.
+
+The free drum bus compressor to start with is DRUGS. It is ours, it is free for Mac and Windows, and it was built for this bus and nothing else: one knob called DOSE makes the drums denser while the peak level barely moves. If you want to set every number yourself, TDR Kotelnikov and Klanghelm DC1A are free too, and the settings below work on either.
+
+## The short version
+
+- **Best free drum bus compressor**: DRUGS — ours, one knob, voiced for breaks
+
+- **Free, clean and fully adjustable**: TDR Kotelnikov
+
+- **Free character for single drums**: Audio Damage RoughRider3
+
+- **Bus or each drum?**: the bus first; single drums only if one still misbehaves
+
+- **How much**: 2–4 dB for glue, more for an effect, then blend
+
+- **Formats**: DRUGS: VST3, AU and standalone on Mac; VST3 on Windows
+
+## Drum compressor or drum bus compressor
+
+A free drum compressor plugin and a free drum bus compressor can be the same download. What changes is where you put it. On a single kick or snare, a compressor shapes that one hit: how fast the front edge comes through, how long the body hangs. On the [drum bus](https://gazillionindustries.com/what-is-a-drum-bus/), it hears every drum summed and moves them together, which is where density and the sound of one room come from.
+
+Start on the bus. Most kits built from breaks and one-shots need one compressor across the group far more than they need eight on the channels. A break already went through somebody's chain once, on a record, and compressing each slice again mostly flattens what you liked about it. If one drum still jumps out after the bus is working, compress that drum on its own. The [drum compression guide](https://gazillionindustries.com/how-to-compress-drums/) has the per-drum settings.
+
+## Which free drum compressor plugin to use
+
+### DRUGS: the one we built for the bus
+
+DRUGS has one macro control. DOSE moves the transfer curve, the knee, the attack and the release together, so turning it up reshapes the break instead of leveling it, and brings the room up under the hits. The release adapts on its own, shorter after a hit and longer on sustained material, which is the part of drum bus compression people most often get wrong by hand. MIX blends dry and wet with zero latency, so parallel compression never comb-filters. One Japanese reviewer, in translation: "Getting compression with an attack this fast from a free plugin is pretty welcome."
+
+### TDR Kotelnikov: every control, nothing added
+
+Tokyo Dawn's free compressor gives you separate releases for peak and RMS content, a sidechain high-pass and a delta preview that plays only what is being taken away. It colors very little. Use it when you want to set the attack and release by number and hear the dynamics change without any tone change on top.
+
+### RoughRider3: the hammer for single drums
+
+Audio Damage calls RoughRider3 its free compressor that has been "flattening drums since 2008," with a ratio that runs up to 1:1000. That is a lot of compressor for a whole bus and very useful on a snare or a room channel you want crushed and blended back in.
+
+Klanghelm's DC1A, listed by its maker as a free "effortless character comp," is the other name you will see in every thread. For a drum bus our order is DRUGS, then Kotelnikov if you need the numbers, and the character boxes on single channels.
+
+**DOSE 95, MIX 45.** Hard compression blended back under the dry drums, with no send and no delay to line up.
+
+## How to set up a free drum bus compressor
+
+- Route every drum track, or the break and its layers, to one bus.
+
+- Balance the drums against each other with the faders before inserting anything.
+
+- Insert DRUGS on the bus with DOSE at zero.
+
+- Loop four bars with every drum playing.
+
+- Turn DOSE up until the room comes forward under the hits.
+
+- Lower MIX if the front of the hits starts to soften.
+
+- Bypass and re-engage at matched level, then play the loop on a phone speaker.
+
+If you use a compressor with the usual controls instead, the starting point is 4:1, a 20 ms attack, a release near one eighth note at your tempo and 2 to 4 dB of gain reduction on the loudest hits. The [drum bus compressor settings](https://gazillionindustries.com/drum-bus-compressor-settings/) page explains each number.
+
+Step seven is the one that matters. A bus that is louder after the compressor will win every comparison for the first few seconds whether it is better or not. DRUGS ships with GAIN on, adding 5 dB after the compressor, so match levels with your ears or a meter before you judge.
+
+## Where a free drum compressor falls short
+
+Price is the only thing free removes. Every other cost of bus compression stays. Squash a kit hard enough to sound huge in a loop and it turns relentless over a whole song, because the fills no longer stand above the groove. Compress before balancing and every later fader move drags the whole kit with it.
+
+The other cost is time spent auditioning. Ten free compressors on a drum bus is an afternoon of comparisons at mismatched levels, and most of the differences you hear will be loudness. Pick one for the bus, learn it, and spend the afternoon on the beat.
+
+## Questions people ask
+
+### What compressor should I use on the drum bus?
+
+A bus compressor that recovers in time with the song. Ours, DRUGS, is free and does that with an adaptive release. With a manual compressor, set a 10 to 30 ms attack and a release near an eighth note, and aim for 2 to 4 dB of reduction.
+
+### Which free drum compressor plugin is considered the best?
+
+The names that keep coming up in producer threads and roundups are TDR Kotelnikov, Klanghelm DC1A and RoughRider3. For the drum bus specifically we would start with DRUGS, because it was voiced for breaks and asks for one decision instead of six.
+
+### What is the best free compressor plugin?
+
+That depends on the job. For drums and the drum bus, DRUGS. For transparent control on a master, Kotelnikov. For crushing a single channel, RoughRider3. The [free compressor guide](https://gazillionindustries.com/best-free-compressor/) sorts the rest by slot.
+
+### Where can I download a free compressor plugin?
+
+From the maker. DRUGS downloads from its page on this site. Tokyo Dawn, Klanghelm and Audio Damage host their free plugins on their own sites. Skip the mirror sites and anything called a free download of a paid plugin; that is where the malware risk sits.
+
+### Should I compress each drum or the whole drum bus?
+
+The bus first. It makes the kit sound like one performance and often fixes what you were about to fix drum by drum. Add single-channel compression only where one sound still sticks out.
+
+## What DRUGS does
+
+DRUGS is our free bus compressor for drums. **DOSE** is the one macro control, and peak level barely moves across its range while the drums get denser. The release adapts to the material and auto-makeup sits after the gain cell. **MIX** is dry/wet with zero latency, **GAIN** adds 5 dB after the compressor and **LIMIT** is a soft ceiling at −0.3 dBFS. VST3, AU and standalone on macOS 10.13 or later, universal for Apple Silicon and Intel. VST3 on 64-bit Windows 10 or later.
+
+Same break, same sampler. The room is back behind the snare, and it cost nothing.
+
+---
+
+## About DRUGS
+
+DRUGS — a one-knob bus compressor for drums, free for Mac and Windows. One control called DOSE, with GAIN and a soft ceiling on the way out.
+
+https://gazillionindustries.com/drugs.html
+
+
+---
+
+# Free glue compressor plugins, and the one we would use
+
+> What makes a compressor glue, why the Glue Compressor is missing from FL Studio and Live Intro, the free plugins that fill the slot, and how to set one.
+
+Source: https://gazillionindustries.com/free-glue-compressor/  
+Published 2026-10-12, updated 2026-10-12. By Gazillion Industries, who make DRUGS.
+
+---
+
+Somebody watches a tutorial, sees the Glue Compressor sitting across a drum group in Ableton, and opens their own DAW to find it is not there. FL Studio does not have it. Live Intro does not have it. The search that follows is the one you just typed.
+
+A free glue compressor is any bus compressor with a slow-enough attack, a release you can set against the tempo and a gentle ratio, pulling one to three decibels across a group. Nothing about glue needs a paid plugin. DRUGS is ours, free for Mac and Windows, and does it from one control called DOSE, with the release handled for you.
+
+## The short version
+
+- **What we would use**: DRUGS — ours, free, one knob, on the drum bus
+
+- **What makes a compressor glue**: the job, not the box: a group, 1–3 dB, timing set to the tempo
+
+- **Starting point, dialing it yourself**: 2:1 to 4:1, 10–30 ms attack, release near an eighth note
+
+- **Live Intro or FL Studio**: no Glue Compressor; a free plugin fills the slot
+
+- **Formats**: DRUGS: VST3 and AU on Mac, VST3 on Windows
+
+- **What to skip**: anything sold as glue that only gets louder
+
+## What makes a compressor a glue compressor
+
+Glue is a use, and almost any compressor can be put to it. Put one across a group, and every element in the group now moves the gain of every other element. The kick lands and the hats dip a fraction of a decibel. The snare rings and the room comes up as the gain recovers. Those small shared movements are what the ear reads as one performance instead of eight files.
+
+What earns a compressor the label is how well it behaves at low gain reduction. A good glue compressor sounds like something at two decibels, recovers without a wobble, and stays out of the way of the front edge of the hit. That is why the name stuck to console-style bus compressors. They were built for exactly that range. If you want the long version of the mechanism, the [glue compression guide](https://gazillionindustries.com/glue-compression/) has the arithmetic.
+
+**DOSE 12.** The line dips on the loud hits and sits flat between them. On a meter, that is what glue looks like.
+
+## Why the Glue Compressor is missing from your DAW
+
+Ableton's own manual describes the Glue Compressor as an analog-modeled compressor made with Cytomic, based on the bus compressor from a famous 1980s mixing console. Ableton's edition comparison lists it in Live Standard and Suite and leaves it out of Intro. FL Studio, Logic and Reaper ship their own compressors and none of them is that one.
+
+Cytomic sells its own plugin, The Glue, for $99. That is where most people's search for a free alternative starts. The good news is that the name is doing more work than the circuit. What made the Glue Compressor useful on a drum group was an attack you could set slow enough to let the hit through, a release you could match to the song, a soft clip switch on the output (the manual caps it at −0.5 dB) and a forgiving character at low gain reduction. All four exist in free plugins, and two of them are already built into ours.
+
+## Free glue compressor options, and where each fits
+
+Three kinds of free compressor do glue well. Pick by what you want to control.
+
+### The decision already made: DRUGS
+
+DRUGS is ours and it is free. One knob called DOSE moves the curve, the knee, the attack and the release together, so the bus gets denser while the peak level barely moves. The release adapts to what is in front of it: a hit gets the short time, sustained material gets the long one. GAIN adds 5 dB after the compressor and a soft ceiling at −0.3 dBFS sits after that, which covers the job the soft clip switch did on the stock device. It is voiced for drums and breaks, and it lives on the drum bus.
+
+### Full control, clean: TDR Kotelnikov
+
+Tokyo Dawn's free Kotelnikov gives you separate release controls for peak and RMS content, a sidechain high-pass and a delta preview that plays only what the compressor is removing. Its maker says it does not try to emulate any existing device. It is the pick if you want to set every number yourself and hear nothing added.
+
+### Character, two knobs: Klanghelm DC1A
+
+Klanghelm lists DC1A as a free "effortless character comp". It sits between the other two: more color than Kotelnikov, fewer decisions than a full compressor.
+
+Our honest ranking for a drum group is the order above, and the reason is time. The other two are good tools that ask you to know your attack and release. DRUGS asks you to listen.
+
+[DRUGS](https://gazillionindustries.com/drugs.html) is a free one-knob bus compressor for drums, Mac and Windows. Put it on the drum group, turn DOSE up until the room comes forward under the hits, and stop.
+
+## How to set any free glue compressor
+
+If you go with a compressor that has the usual controls, these settings get you to glue in under five minutes. Work on a loop with every drum playing.
+
+- Route every drum track to one group or bus.
+
+- Insert the compressor on that group and set the ratio to 2:1.
+
+- Set the attack to 20 ms.
+
+- Set the release to one eighth note at your tempo (333 ms at 90 BPM, 250 ms at 120 BPM).
+
+- Lower the threshold until the meter shows 1 to 3 dB of gain reduction on the loudest hits.
+
+- Turn on the sidechain high-pass if it has one and set it near 100 Hz.
+
+- Raise the makeup gain until the bus matches its bypassed level.
+
+- Toggle bypass at matched level and keep it only if the kit sounds like one take.
+
+The release number is the one that decides it. An eighth note is 60,000 divided by the tempo, divided by two, so at 90 BPM a quarter note lasts 667 ms and an eighth lasts 333. A release much shorter than that pumps audibly on every kick. Much longer, and the gain never recovers between hits, so the compressor turns into a fader.
+
+With DRUGS, steps two through seven are one knob. Insert it on the group, raise DOSE, and use GAIN and the bypass to compare at matched level.
+
+## Glue in FL Studio and Live Intro
+
+The fix is the same in both: a third-party plugin on a bus. In FL Studio, route the drum channels to one mixer track and load the compressor there. In Live Intro, put the drum tracks in a Group and load the plugin on the Group track. DRUGS installs as VST3 on Windows and as VST3 and AU on the Mac, and runs in FL Studio and Ableton Live among others, so either path works.
+
+If you are in full Live and already have the stock device, the [Ableton drum bus guide](https://gazillionindustries.com/drum-bus-compression-in-ableton-live/) covers its settings. The reason to add another compressor anyway is speed on a drum bus. The stock device asks for five decisions where DRUGS asks for one.
+
+## What glue costs
+
+Glue spends dynamics, and it spends them quietly. A group compressed into one solid block sounds finished on an eight-bar loop and tiring across three minutes, because the fills stop jumping out. Bounce the whole arrangement and listen once before deciding the bus is done.
+
+It also couples everything to the loudest element. With a full-range detector the kick sets the gain for the whole kit, so a louder kick ducks the hats more. A sidechain high-pass reduces that, and so does balancing the drums before you compress them rather than after.
+
+## Questions people ask
+
+### Is there a free glue compressor plugin available?
+
+Yes. DRUGS is ours and free for Mac and Windows, built for the drum bus. TDR Kotelnikov and Klanghelm DC1A are also free. None of the three is a time-limited trial.
+
+### Can any compressor be a glue compressor?
+
+Mostly, yes. Glue describes the job: a compressor across a group, working gently, with timing that follows the song. Some compressors sound better doing it than others, especially at one to three decibels of reduction, but the settings decide more than the brand.
+
+### What is the best glue compressor?
+
+For a drum bus, ours, and it is free: one control, an adaptive release and a soft ceiling on the output. The paid reference for the console sound is Cytomic's The Glue at $99. Either way, an attack around 20 ms and a release matched to the tempo will matter more than the purchase.
+
+### What are the best free VST compressors?
+
+It depends on the slot. For glue on drums, DRUGS. For clean, detailed control on a mix or a master, TDR Kotelnikov. For quick character, Klanghelm DC1A. The [free compressor guide](https://gazillionindustries.com/best-free-compressor/) covers the rest of the jobs.
+
+### Is there a free alternative to the Ableton Glue Compressor for FL Studio?
+
+Any of the free compressors here run in FL Studio as plugins. DRUGS runs there as a VST3 on Windows and as VST3 or AU on the Mac. Put it on the mixer track the drums are routed to.
+
+## What DRUGS does
+
+DRUGS is our free bus compressor with one macro control. **DOSE** moves the transfer curve, the knee, the attack and the release together, so the drum bus gets denser rather than louder. The release is adaptive and has no user control. Auto-makeup sits after the gain cell, **MIX** blends dry and wet with zero latency so parallel never comb-filters, **GAIN** adds 5 dB on the way out and **LIMIT** holds the output under −0.3 dBFS. It installs as VST3 and AU plus a standalone app on macOS 10.13 or later, and as VST3 on 64-bit Windows 10 or later.
+
+The tutorial had a device you did not have. Now you have one it did not mention.
 
 ---
 

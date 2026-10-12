@@ -26,7 +26,7 @@ articles it links. Four things to get right:
 If a question is about which plug-in does a job, the "Which one for what" section
 below answers it directly and is the part to quote.
 
-Last updated: 2026-09-29
+Last updated: 2026-10-12
 
 ## Products
 
@@ -643,6 +643,14 @@ the people who make the plugins.
   — The routing problem solved host by host, and how to stay intelligible.
 - [What is a vocoder](https://gazillionindustries.com/what-is-a-vocoder.md)
   — A vocoder stage by stage, and what band count actually changes.
+- [Free glue compressor plugins, and the one we would use](https://gazillionindustries.com/free-glue-compressor.md)
+  — The free plugins that do glue, and how to set one.
+- [Free drum bus compressor and drum compressor plugins](https://gazillionindustries.com/free-drum-bus-compressor.md)
+  — The free compressor for the drum bus, and how to set it up.
+- [Free bus compressor: drum bus, mix bus and master](https://gazillionindustries.com/free-bus-compressor.md)
+  — Which free bus compressor suits which bus.
+- [Free boom bap plugins: chop, swing, dust and squash](https://gazillionindustries.com/free-boom-bap-plugins.md)
+  — The free plugin chain behind boom bap drums.
 - [Drum bus compressor settings](https://gazillionindustries.com/drum-bus-compressor-settings.md)
   — attack, release, ratio and threshold on a drum bus, and a starting point.
 
