@@ -1,0 +1,22 @@
+/* The storefront's live activity strip, shared by all plugin landing pages.
+   Keep product purchase colours local; this utility uses the store's ink/field.
+   activity.js owns freshness, empty states, motion and the live 24-hour feed. */
+body[data-landing-family] .activity-ticker{position:fixed;z-index:3;inset:auto 0 0;display:flex;align-items:center;height:28px;padding-bottom:env(safe-area-inset-bottom,0px);box-sizing:content-box;border-top:1px solid #242629;background:#242629;color:#f4f4f2;font:400 12px/1 Arial,sans-serif;letter-spacing:0;text-transform:uppercase}
+body[data-landing-family] .activity-ticker[hidden]{display:none!important}
+body[data-landing-family] .activity-window{overflow:hidden;min-width:0;flex:1;height:100%;display:flex;align-items:center}
+body[data-landing-family] :is(.activity-track,.activity-group){display:flex;align-items:center;flex:0 0 auto;width:max-content}
+body[data-landing-family] .activity-group{gap:24px;padding-right:24px}
+body[data-landing-family] .activity-item{white-space:nowrap;font-variant-numeric:tabular-nums}
+body[data-landing-family] .activity-product{font-family:Arial,sans-serif;font-weight:700}
+body[data-landing-family] .activity-pause{position:absolute;left:0;top:0;z-index:2;display:grid;place-items:center;width:44px;height:28px;margin:0;padding:0;border:1px solid #f4f4f2;border-radius:0;background:#242629;color:#f4f4f2;transform:translateY(120%)}
+body[data-landing-family] .activity-pause svg{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linejoin:round}
+body[data-landing-family] .activity-pause:focus-visible{transform:none;outline:1px solid #f4f4f2;outline-offset:-3px}
+body[data-landing-family] .activity-window:focus-visible{outline:1px solid #f4f4f2;outline-offset:-3px}
+/* The buy button remains above the strip, including the phone's safe area. */
+body[data-landing-family].has-activity{padding-bottom:calc(29px + env(safe-area-inset-bottom,0px))}
+body[data-landing-family].has-activity .sticky-buy{bottom:calc(43px + env(safe-area-inset-bottom,0px))}
+body[data-landing-family]:has(dialog[open],.share-fallback,input:focus,textarea:focus) .activity-ticker{visibility:hidden}
+@media(prefers-reduced-motion:reduce){
+ body[data-landing-family] .activity-window{overflow-x:auto}
+ body[data-landing-family] .activity-group[aria-hidden]{display:none}
+}
