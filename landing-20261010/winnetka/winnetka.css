@@ -20,8 +20,8 @@ body{font-family:Arial,sans-serif}
 .thesis-label{font:700 17px/1.25 Arial,sans-serif;margin-bottom:10px}
 .thesis-lines{font:400 25px/1.22 Arial,sans-serif;margin-bottom:10px}
 .hero-reviews .gr-reviews{margin-top:8px}.hero-reviews .gr-quote{gap:5px}.hero-reviews .gr-rating{margin:0}
-#testimonials .testimonial-artwork{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
-#testimonials .testimonial-artwork .tm{grid-column:auto;max-width:none;width:100%;padding:0;border:0}
+#testimonials .testimonial-artwork{display:grid;grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:calc((100% - 56px)/3);gap:28px;overflow-x:auto;scroll-snap-type:x mandatory;overscroll-behavior-x:contain;padding-bottom:14px;scrollbar-width:thin}
+#testimonials .testimonial-artwork .tm{grid-column:auto;max-width:none;width:100%;padding:0;border:0;scroll-snap-align:start}
 .proof-card{width:100%;height:auto}.tm-vid{position:relative;width:100%;background:transparent;aspect-ratio:4/5}
 .tm-vid video{width:100%;height:100%;object-fit:contain}
 .tm-vid .play-badge{position:absolute;left:50%;top:42%;transform:translate(-50%,-50%);display:flex;align-items:center;gap:8px;min-height:48px;padding:10px 16px;white-space:nowrap;background:var(--ink);color:#fff;border:1px solid #fff;font:700 14px/1.2 Arial,sans-serif;box-shadow:0 4px 14px #0004}
@@ -46,8 +46,8 @@ body{font-family:Arial,sans-serif}
 .instrument{margin-top:16px;width:100%}.instrument-view.is-playing{width:min(100%,430px);aspect-ratio:720/928}
 .demo-purchase{margin-top:12px}.hero-thesis{order:4;margin:22px auto 0}.thesis-lines{font-size:23px}
 .buy .price{font-size:26px;min-width:72px;padding-inline:13px}.buy>span:first-child,.sticky-buy>span:first-child{font-size:clamp(17px,6.1cqi,28px)}
-#testimonials .testimonial-artwork{grid-template-columns:1fr;gap:24px;max-width:430px;margin:auto}
-#testimonials .testimonial-artwork .tm{max-width:380px;justify-self:center}
+#testimonials .testimonial-artwork{grid-template-columns:none;grid-auto-columns:82%;gap:16px;max-width:none;margin:0}
+#testimonials .testimonial-artwork .tm{max-width:none;justify-self:stretch}
 .story-row{padding-block:28px;gap:24px}.story-copy h2:not(.statement),.purchase-end h2{font-size:28px}
 .story-row .detail-group{order:1;max-width:430px;margin:auto}.story-row .story-copy{order:0}
 .requirements-row{gap:28px}.section-purchase{padding-bottom:24px}
