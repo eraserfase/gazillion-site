@@ -16,7 +16,7 @@ window.GZ_ATTR = (function(){
   var OWN = /^(www\.)?gazillionindustries\.com$/i;
   if(!OWN.test(location.hostname)) return result;
   var KEY = "gz_arrival_v3", BRIDGE_KEY = "gz_tab_journeys_v1", TTL = 30*60000;
-  var fields = ["utm_source","utm_medium","utm_campaign","utm_content","utm_term","utm_id","ad_id","adset_id","campaign_id","fbclid"];
+  var fields = ["utm_source","utm_medium","utm_campaign","utm_content","utm_term","utm_id","ad_id","adset_id","campaign_id","fbclid","gclid","gbraid","wbraid"];
   var inbound = new URLSearchParams(window.GZLanding.search), now = Date.now();
   var tags = {}, original = "", token = "", activity = now, sent = {}, sourceSent = {};
   var saved = null, previous = null, ref = null, hadSession = false;
@@ -90,8 +90,13 @@ window.GZ_ATTR = (function(){
   }
   if(!token) token = makeToken();
   var source = (tags.utm_source || "").toLowerCase(), medium = (tags.utm_medium || "").toLowerCase();
-  result.paid = /^(meta|facebook|instagram|fb|ig)$/.test(source)
-    && /^(paid|paid_social|paid-social|paidsocial|cpc|ppc|social_ads)$/.test(medium);
+  // Paid = a Meta paid medium, a Google Ads paid medium, or a Google click ID
+  // (gclid/gbraid/wbraid are only ever appended by Google Ads auto-tagging).
+  result.paid = (/^(meta|facebook|instagram|fb|ig)$/.test(source)
+    && /^(paid|paid_social|paid-social|paidsocial|cpc|ppc|social_ads)$/.test(medium))
+    || (/^(google|googleads|google_ads|adwords)$/.test(source)
+    && /^(cpc|ppc|paid|paid_search|paid-search|paidsearch)$/.test(medium))
+    || !!(tags.gclid || tags.gbraid || tags.wbraid);
   result.tags = tags;
   function touch(){
     var at = Date.now();

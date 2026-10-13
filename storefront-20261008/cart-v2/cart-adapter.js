@@ -40,7 +40,7 @@
   try {
    const expected=new URL(result.url),actual=new URL(value);
    if(actual.origin!==expected.origin||actual.pathname!==expected.pathname||actual.username||actual.password||actual.hash)return false;
-   const attribution=/^(utm_(source|medium|campaign|content|term|id)|gz_(journey|first_days|first_source|first_medium|first_campaign)|ad_id|adset_id|campaign_id|fbclid|referrer)$/;
+   const attribution=/^(utm_(source|medium|campaign|content|term|id)|gz_(journey|first_days|first_source|first_medium|first_campaign)|ad_id|adset_id|campaign_id|fbclid|gclid|gbraid|wbraid|referrer)$/;
    const functional=url=>[...url.searchParams].filter(([key])=>!attribution.test(key)).sort((a,b)=>a[0].localeCompare(b[0])||a[1].localeCompare(b[1]));
    if(JSON.stringify(functional(actual))!==JSON.stringify(functional(expected)))return false;
    if(result.kind==='wishlist'&&(!value.endsWith('&recommended_by')||actual.searchParams.getAll('recommended_by').length!==1))return false;
