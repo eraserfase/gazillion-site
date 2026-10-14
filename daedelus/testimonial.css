@@ -1,0 +1,7 @@
+.tm-daedelus{width:min(100%,480px);margin:0 auto 28px;padding:0 0 28px;border-bottom:1px solid var(--line)}
+.tm-daedelus video{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:contain;background:#000}
+.tm-daedelus figcaption{margin:14px auto 0;font:400 13px/1.6 Arial,sans-serif;color:#55575a;text-align:center;text-wrap:balance}
+.tm-daedelus figcaption a{color:var(--ink);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
+.tm-daedelus .instrument-name{font-family:"Archivo Black", "Arial Black",sans-serif;font-weight:400;font-synthesis:none}
+.tm-daedelus .daedelus-media-error{font:400 13px/1.5 Arial,sans-serif;text-align:center}
+@media(max-width:700px){.tm-daedelus{max-width:430px;margin-bottom:24px;padding-bottom:24px}}
