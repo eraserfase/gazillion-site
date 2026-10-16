@@ -40,7 +40,10 @@
   try {
    const expected=new URL(result.url),actual=new URL(value);
    if(actual.origin!==expected.origin||actual.pathname!==expected.pathname||actual.username||actual.password||actual.hash)return false;
-   const attribution=/^(utm_(source|medium|campaign|content|term|id)|gz_(journey|first_days|first_source|first_medium|first_campaign)|ad_id|adset_id|campaign_id|fbclid|gclid|gbraid|wbraid|referrer)$/;
+   // _gl/_ga/_gid are written by Google Analytics' cross-domain linker ON THE CLICK, after
+   // this link was built, and carry no checkout meaning. Treating them as tampering blocked
+   // every cart checkout for anyone the linker decorated (16 Oct 2026).
+   const attribution=/^(utm_(source|medium|campaign|content|term|id)|gz_(journey|first_days|first_source|first_medium|first_campaign)|ad_id|adset_id|campaign_id|fbclid|gclid|gbraid|wbraid|referrer|_gl|_ga|_gid|_gac_[A-Za-z0-9_-]+)$/;
    const functional=url=>[...url.searchParams].filter(([key])=>!attribution.test(key)).sort((a,b)=>a[0].localeCompare(b[0])||a[1].localeCompare(b[1]));
    if(JSON.stringify(functional(actual))!==JSON.stringify(functional(expected)))return false;
    if(result.kind==='wishlist'&&(!value.endsWith('&recommended_by')||actual.searchParams.getAll('recommended_by').length!==1))return false;
