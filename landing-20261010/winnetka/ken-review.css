@@ -1,0 +1,20 @@
+
+/* DRAFT: attributed review, before the existing proof-card carousel. */
+.ken-review{display:grid;grid-template-columns:minmax(0,400px) minmax(0,1fr);align-items:center;gap:48px;margin:0 0 28px;padding-bottom:28px;border-bottom:1px solid var(--line)}
+.ken-review-player{width:100%;aspect-ratio:4/5;background:#111}.ken-review video{display:block;width:100%;height:100%;object-fit:contain}
+.ken-review figcaption{font:400 16px/1.6 Arial,sans-serif;color:var(--ink)}
+
+.ken-review figcaption p{margin:0 0 16px}.ken-review .ken-credit{font-size:20px;line-height:1.5}.ken-review .ken-credit strong{font-weight:400}
+@media(max-width:700px){.ken-review{grid-template-columns:1fr;gap:20px;max-width:430px;margin:0 auto 26px;padding-bottom:26px}.ken-review figcaption{text-align:left}.ken-review .ken-credit{font-size:18px}}
+
+.ken-review .ken-credit a{color:inherit;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
+
+/* Tony's correction: reuse the approved DTM card's Archivo Black quote role. */
+.ken-review figcaption{max-width:520px}
+.ken-article-quotes{display:flex;flex-direction:column;gap:24px;margin-bottom:24px}
+.ken-article-quotes blockquote{margin:0;padding:0;border:0}
+.ken-review .ken-article-quotes p{margin:0;font:400 32px/1.04 'Archivo Black','Arial Black',sans-serif;letter-spacing:0;text-transform:none;font-synthesis:none}
+.ken-review .ken-credit{font:400 15px/1.45 'Archivo Black','Arial Black',sans-serif;text-transform:uppercase;font-synthesis:none}
+.ken-review figcaption>p:last-child{font:400 12px/1.5 Arial,sans-serif;color:var(--muted)}
+@media(max-width:700px){.ken-review .ken-article-quotes p{font-size:25px}.ken-article-quotes{gap:22px;margin-bottom:22px}.ken-review .ken-credit{font-size:13px}}
+@media(max-width:359px){.ken-review .ken-article-quotes p{font-size:21px}}
