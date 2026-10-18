@@ -100,8 +100,13 @@
     next.attempts++;
     Promise.resolve().then(function(){return fetch(ENDPOINT,{method:'POST',body:next.body,headers:{'Content-Type':'text/plain'},
       credentials:'omit',mode:'cors',keepalive:true,signal:controller.signal});})
-      .then(function(r){if (!r.ok) throw new Error('Observation not saved'); return r.json();})
-      .then(function(r){if (!r || !r.persisted) throw new Error('Observation not acknowledged'); var i=queue.indexOf(next);if(i>=0)queue.splice(i,1);})
+      .then(function(r){
+        // A 4xx is the collector's verdict on these exact bytes: sending them again
+        // gets the same answer, so the item ends unsaved. Only no verdict is retried
+        // (network failure, 408, 429, 5xx).
+        if (r.status >= 400 && r.status < 500 && r.status !== 408 && r.status !== 429) return 'refused';
+        if (!r.ok) throw new Error('Observation not saved'); return r.json();})
+      .then(function(r){if (r !== 'refused' && (!r || !r.persisted)) throw new Error('Observation not acknowledged'); var i=queue.indexOf(next);if(i>=0)queue.splice(i,1);})
       .catch(function(){
         // Exact IDs and payloads survive retries; no optimistic persisted flag.
         if(!retryTimer)retryTimer = setTimeout(function(){retryTimer=null;flush();},Math.min(30000,1000*Math.pow(2,Math.min(next.attempts,5))));
