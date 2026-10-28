@@ -45,3 +45,27 @@ User-agent: Bingbot
 Allow: /
 
 Sitemap: https://gazillionindustries.com/sitemap.xml
+
+# 28 Oct 2026: Meta's crawlers were fetching ~1M requests a day (meta-externalads
+# rendering every guide page with all its scripts, fonts and images, plus
+# meta-externalagent). Meta documents robots.txt as the only control. They may
+# read the storefront and the pages ads actually land on, nothing else.
+User-agent: meta-externalads
+User-agent: meta-externalagent
+Disallow: /
+Allow: /$
+Allow: /beefy.html
+Allow: /winnetka/
+Allow: /journeyman.html
+Allow: /tripleog.html
+Allow: /skruu.html
+Allow: /f12.html
+Allow: /drugs.html
+Allow: /landing-20261010/
+Allow: /storefront-20261008/
+Allow: /assets/
+Allow: /beefy/
+Allow: /traffic.js
+Allow: /landing-url.js
+Allow: /home-button.js
+Allow: /presence.js
