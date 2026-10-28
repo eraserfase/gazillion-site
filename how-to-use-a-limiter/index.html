@@ -49,124 +49,147 @@ fbq('track', 'PageView');
 }
 </script>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"TechArticle","@id":"https://gazillionindustries.com/how-to-use-a-limiter/#article","headline":"How to use a limiter","description":"How to set a limiter: where it goes, what ceiling to use, how much gain reduction is normal, and why doing the work upstream is what keeps it from pumping.","image":"https://gazillionindustries.com/beefy/cover.png","inLanguage":"en","datePublished":"2026-09-20","dateModified":"2026-09-24","url":"https://gazillionindustries.com/how-to-use-a-limiter/","mainEntityOfPage":"https://gazillionindustries.com/how-to-use-a-limiter/","author":{"@id":"https://gazillionindustries.com/#gazillion"},"publisher":{"@id":"https://gazillionindustries.com/#gazillion"},"about":{"@type":"SoftwareApplication","name":"BEEFY","url":"https://gazillionindustries.com/beefy.html"},"isPartOf":{"@id":"https://gazillionindustries.com/reading-material/#page"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Gazillion Industries","item":"https://gazillionindustries.com/"},{"@type":"ListItem","position":2,"name":"Reading material","item":"https://gazillionindustries.com/reading-material/"},{"@type":"ListItem","position":3,"name":"How to use a limiter","item":"https://gazillionindustries.com/how-to-use-a-limiter/"}]},{"@type":"Organization","@id":"https://gazillionindustries.com/#gazillion","name":"Gazillion Industries LLC","alternateName":"Gazillion Industries","url":"https://gazillionindustries.com/"},{"@type":"FAQPage","@id":"https://gazillionindustries.com/how-to-use-a-limiter/#faq","mainEntity":[{"@type":"Question","name":"What does a limiter actually do?","acceptedAnswer":{"@type":"Answer","text":"It prevents a signal exceeding a set ceiling, by reducing gain very quickly whenever the signal would cross it. Used with make-up gain, that lets the whole track sit louder under the same ceiling."}},{"@type":"Question","name":"How much gain reduction should a limiter do?","acceptedAnswer":{"@type":"Answer","text":"One to three decibels on the loudest peaks for most material. If the meter is showing six or more on average, move that work upstream to a clipper, a compressor or the mix itself."}},{"@type":"Question","name":"Should I use a limiter before mastering?","acceptedAnswer":{"@type":"Answer","text":"Take it off the mix bus before you bounce for mastering. Leave headroom instead. If you are mastering it yourself, the limiter belongs at the end of the mastering chain, not on the mix you are feeding into it."}},{"@type":"Question","name":"When should I use a limiter on vocals?","acceptedAnswer":{"@type":"Answer","text":"As a safety catch after compression, taking a decibel or two off the few loudest words, not as the main dynamics control. Compression shapes the performance; the limiter just stops the occasional spike from running away."}},{"@type":"Question","name":"What ceiling should I set my limiter to?","acceptedAnswer":{"@type":"Answer","text":"&minus;1&nbsp;dBTP for anything that will be encoded or streamed, which puts your loudest instant at 0.8913 of full scale. Only go tighter, to &minus;0.3 or &minus;0.5&nbsp;dBTP, for a file that will be played back exactly as bounced."}},{"@type":"Question","name":"What attack and release should a limiter use?","acceptedAnswer":{"@type":"Answer","text":"Set release no shorter than one cycle of the lowest note in the track: 25&nbsp;ms at 40&nbsp;Hz, 20&nbsp;ms at 50&nbsp;Hz, 12.5&nbsp;ms at 80&nbsp;Hz. On a lookahead limiter the attack chooses how much transient survives rather than whether the peak is caught, so set it by listening to the snare."}},{"@type":"Question","name":"How do I stop my limiter from pumping?","acceptedAnswer":{"@type":"Answer","text":"Lengthen the release until the track stops swelling back up between hits, then reduce how much you are asking for. Pumping is depth plus duty, so cutting the amount of reduction fixes it even when the release is already right."}},{"@type":"Question","name":"Is 6 dB of gain reduction too much?","acceptedAnswer":{"@type":"Answer","text":"It depends entirely on how often, and that is the part nobody measures. Six decibels on two per cent of the program costs 0.07&nbsp;dB of average level and is inaudible. Six decibels held for eighty per cent of it costs 3.97&nbsp;dB and sounds exactly as squashed as that number suggests."}},{"@type":"Question","name":"Should the limiter go before or after EQ?","acceptedAnswer":{"@type":"Answer","text":"After. EQ changes peak levels, so any EQ move after the limiter puts the signal back over the ceiling you set. The limiter is the last processor in the chain, with only dither allowed after it."}},{"@type":"Question","name":"Can I use a clipper instead of a limiter?","acceptedAnswer":{"@type":"Answer","text":"For the loudness, largely yes; for the guarantee, no. A clipper lowers peaks by bending the waveform and adds harmonics instead of moving gain over time, which is why it is the more efficient loudness tool. Most people end up using both, with the clipper doing the decibels and the limiter catching what slips past. What is clipping has the shapes."}},{"@type":"Question","name":"What is the difference between a limiter and a maximizer?","acceptedAnswer":{"@type":"Answer","text":"A maximizer is a limiter with the input gain and the ceiling linked, so one knob pushes the signal up and holds the ceiling down at the same time. The processing is the same; the control layout hides one of the two decisions from you."}},{"@type":"Question","name":"Does a limiter add latency?","acceptedAnswer":{"@type":"Answer","text":"Any limiter with lookahead does, because the delay line is the lookahead. A 1.5&nbsp;ms window is 66 samples at 44.1&nbsp;kHz and 72 at 48&nbsp;kHz. Your DAW compensates on playback, but you will feel it while monitoring a live input through the same chain, so bypass it while tracking."}},{"@type":"Question","name":"Why does my track still distort with a limiter on it?","acceptedAnswer":{"@type":"Answer","text":"Two usual causes. Either something sits after the limiter &mdash; a gain utility or a master fader above 0 &mdash; or the limiter is set to sample peak and the intersample peaks are going over anyway, which can be up to 3.01&nbsp;dB higher than the meter shows. Turn on true-peak detection and check the chain below the limiter."}},{"@type":"Question","name":"Do I need a limiter on every track?","acceptedAnswer":{"@type":"Answer","text":"No. One at the end of the master is the job. A limiter on an individual channel is a safety catch for a source that genuinely spikes, and a limiter on every channel means every channel is quietly removing transients before the mix bus ever hears them."}},{"@type":"Question","name":"Why does my mix get quieter after I upload it?","acceptedAnswer":{"@type":"Answer","text":"Playback normalization, not the limiter. The service turns loud masters down to its own target, so the decibels you fought the limiter for get taken straight back off while the dynamics you traded away stay gone. How loud should my master be has the argument in full."}},{"@type":"Question","name":"What does lookahead do on a limiter?","acceptedAnswer":{"@type":"Answer","text":"It delays the audio by a few milliseconds so the detector sees a peak before the audio does, and starts reducing gain on the way in rather than after the fact. That delay is the plugin's reported latency: 1.5&nbsp;ms is 66 samples at 44.1&nbsp;kHz, 72 at 48&nbsp;kHz and 144 at 96&nbsp;kHz."}},{"@type":"Question","name":"Should I turn on oversampling on my limiter?","acceptedAnswer":{"@type":"Answer","text":"If you are chasing a true-peak ceiling, yes, because the intersample peaks live between the samples and a detector running at the session rate cannot see them. The cost is CPU and a little more latency. Oversampling explains what it is doing."}},{"@type":"Question","name":"How many limiters should I use on a master?","acceptedAnswer":{"@type":"Answer","text":"One, unless you have a reason for two. Two works when each has a different release time and a moderate amount to do. Two identical limiters stacked because one was not enough just doubles the depth and the duty, and doubles the damage with it."}},{"@type":"Question","name":"Why is my limiter not making my track louder?","acceptedAnswer":{"@type":"Answer","text":"Because the duty has run away. Once the reduction is more or less constant, the limiter is pulling back everything you push in, which is a volume knob with extra distortion. Bounce two versions and measure the integrated loudness of each: if 3&nbsp;dB more drive bought less than a decibel, stop and go upstream."}},{"@type":"Question","name":"Should I limit before or after saturation?","acceptedAnswer":{"@type":"Answer","text":"After. Saturation reshapes peaks, so anything you saturate after the limiter puts the signal back over the ceiling. The useful order is saturate, clip, then limit, so each stage hands the next one a smaller job. How to use saturation has that stage on its own."}},{"@type":"Question","name":"How do I know if my limiter is working too hard?","acceptedAnswer":{"@type":"Answer","text":"Watch where the needle rests rather than how far it swings. A meter that returns to zero between events is doing peak work; a meter that never quite gets home is doing level work, and level work is what flattens a record. Then null-test it against the bypassed bounce: hearing the bass line in the difference is the answer."}},{"@type":"Question","name":"What is the difference between a limiter and a brickwall limiter?","acceptedAnswer":{"@type":"Answer","text":"A brickwall limiter guarantees the ceiling absolutely, usually with lookahead, and nothing passes it. Anything else called a limiter is a very high ratio compressor that will let a fast enough transient through. For a master you want the guarantee; for tone you might not. Limiter vs compressor has the line between them."}},{"@type":"Question","name":"Should a stereo limiter be linked or unlinked?","acceptedAnswer":{"@type":"Answer","text":"Linked on a master. An unlinked detector reduces one channel without the other, and a level difference between channels is what a pan control produces, so a hard-panned hit drags the image every time it lands. Unlinked has uses on wide stereo sources; a master is not one."}},{"@type":"Question","name":"Can a limiter fix a bad mix?","acceptedAnswer":{"@type":"Answer","text":"No, and it will tell you which part is bad. Whatever is loudest and least controlled is what drives the gain reduction, so if the meter slams on every kick, the kick is the mix problem. The limiter is a very expensive diagnostic in that mode. Why is my mix muddy is the usual next stop."}},{"@type":"Question","name":"What LUFS should I set my limiter to?","acceptedAnswer":{"@type":"Answer","text":"A limiter does not set loudness, it sets a ceiling; the loudness comes from how hard you drive it. Set the ceiling at &minus;1&nbsp;dBTP, then drive until the integrated reading hits your target and check the gain reduction is still in range. How loud should my master be takes the target apart."}},{"@type":"Question","name":"Why does my limiter sound worse on headphones than on speakers?","acceptedAnswer":{"@type":"Answer","text":"Headphones hand you the bottom two octaves and the stereo picture in full, so both of the things a limiter damages first are audible. Reduction inside a bass cycle and an image that wanders on a hard-panned hit are nearly invisible on small speakers and obvious in a pair of cans. Check both, and a phone, before you call it."}},{"@type":"Question","name":"Why does my kick disappear when I turn the limiter up?","acceptedAnswer":{"@type":"Answer","text":"Because the kick is what is triggering the reduction, and a broadband detector turns the whole record down every time the kick arrives &mdash; including the kick. High-pass the detector, use a multiband split, or take the peak off the kick upstream with a clipper. How to make drums hit harder covers the upstream version."}}]}]}</script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&display=swap">
+<link rel="preload" href="/storefront-20261008/assets/archivo.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/storefront-20261008/assets/archivo-black.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/storefront-20261008/light/style.css?v=8b00e4b47d">
+<link rel="stylesheet" href="/storefront-20261008/theme.css?v=9ee28e6c34">
+<link rel="stylesheet" href="/storefront-20261008/purchase-snow.css?v=b5da793120">
 <style>
-/* House article layout (same measure, rhythm and furniture as
-   drum-bus-compressor-settings) in BEEFY's own colorway: paper ground, ink,
-   the red and the teal from beefy.html. The cartoon face is kept to the
-   headline and the button; long reading stays in Archivo. */
-@font-face{font-family:BeefyCartoon;src:url('/beefy/BalsamiqSans-Bold.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}
-:root{
-  --paper:#fff8e8; --ink:#211715; --ink-soft:rgba(33,23,21,.78); --ink-faint:rgba(33,23,21,.55);
-  --red:#de302b; --deep:#9d1c1c; --teal:#9bcac6; --line:rgba(33,23,21,.16);
-}
-*{box-sizing:border-box}
-body{margin:0; background:var(--paper); color:var(--ink);
-  font-family:Archivo,-apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif;
-  -webkit-font-smoothing:antialiased; min-height:100vh; border-top:10px solid var(--teal)}
-main{max-width:36em; margin:0 auto; padding:56px 24px 96px}
+/* Guide pages wear the storefront (Tony, 28 Oct 2026: "the store is the style
+   direction"). The page links the live store's own stylesheets first -
+   /storefront-20261008/light/style.css and /storefront-20261008/theme.css - so
+   the masthead lockup, the posture mark, the delivery strip, the product card,
+   the .cta family and the footer are the store's exact rules, not a copy of
+   them. This file adds only the reading surface: measure, prose roles, the
+   spec cards, figures and audio. Tokens come from the store: --field --surface
+   --ink --muted --line --product-outline. Light only, as the store is.
 
-.crumb{font-size:11px; letter-spacing:.2em; text-transform:uppercase; margin:0 0 34px}
-.crumb a{color:var(--ink-faint); text-decoration:none}
-.crumb a:hover{color:var(--ink)}
+   Type roles (BRAND-TYPOGRAPHY.md: intentional roles, consistent family):
+     authored lockups   the only display type (masthead CSS lockup, normalized-art)
+     h1 / h2 / h3       Archivo 700, sentence case as authored - ordinary headings
+     prose              Archivo 400, 16.5px, measure 36em (~68ch)
+     supporting info    Arial 400 12-13px muted (crumb, byline, captions, formats)
+     controls           the store's .cta family: Arial 700 12px, 44px, 1px border */
 
-h1{font-family:BeefyCartoon,"Comic Sans MS",sans-serif; font-weight:700;
-   font-size:clamp(34px,7vw,52px); line-height:1.02; letter-spacing:-.01em;
-   margin:0 0 14px; color:var(--ink); text-wrap:balance}
-.standfirst{margin:0 0 18px; font-size:17px; line-height:1.65; color:var(--ink-soft)}
+main.guide{max-width:38em;margin:0 auto;padding:40px 24px 72px;
+  font-family:Archivo,sans-serif;color:var(--ink);-webkit-font-smoothing:antialiased}
+main.guide p{margin:0 0 16px;font-size:16.5px;line-height:1.7}
+main.guide strong{font-weight:700}
+main.guide ul,main.guide ol{margin:0 0 16px;padding-left:1.25em}
+main.guide li{font-size:16.5px;line-height:1.65;margin:0 0 6px}
+main.guide code{font:13px/1.2 ui-monospace,Menlo,monospace;background:var(--surface);padding:1px 5px;border-radius:3px}
 
-h2{margin:52px 0 16px; font-size:12px; font-weight:600; letter-spacing:.2em;
-   text-transform:uppercase; color:var(--deep)}
-p{margin:0 0 16px; font-size:16.5px; line-height:1.72; color:var(--ink-soft)}
-strong{color:var(--ink); font-weight:600}
-em{color:var(--ink)}
-ul,ol{margin:0 0 16px; padding-left:1.2em}
-li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
+.guide .crumb{font:400 12px/1.4 Arial,sans-serif;color:var(--muted);margin:0 0 28px}
+.guide .crumb a{color:var(--muted)}
+.guide .crumb a:hover{color:var(--ink);text-decoration:underline}
+.guide .crumb span{margin:0 .5em}
 
-.card{border:1.5px solid var(--line); border-radius:14px; padding:22px 24px; margin:0 0 8px;
-      background:rgba(155,202,198,.18)}
-.card dl{margin:0; display:grid; grid-template-columns:auto 1fr; gap:10px 18px}
-.card dt{font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--deep);
-         font-weight:600; white-space:nowrap; align-self:baseline}
-.card dd{margin:0; font-size:16px; line-height:1.5; color:var(--ink)}
-@media (max-width:460px){
-  .card dl{grid-template-columns:1fr; gap:2px 0}
-  .card dd{margin:0 0 12px}
-}
+.guide h1{font-family:Archivo,sans-serif;font-weight:700;font-size:clamp(28px,4.6vw,36px);line-height:1.12;letter-spacing:-.02em;
+  margin:0 0 12px;text-wrap:balance}
+.guide .byline{font:400 12px/1.4 Arial,sans-serif;color:var(--muted);margin:0 0 28px}
+.guide .standfirst{font-size:18px;line-height:1.55;margin:0 0 20px}
+.guide h2{font:700 22px/1.25 Archivo,sans-serif;letter-spacing:-.01em;margin:44px 0 12px}
+.guide h3{font:700 17px/1.35 Archivo,sans-serif;margin:26px 0 8px}
 
-a.inline{color:var(--ink); text-decoration:underline;
-         text-underline-offset:3px; text-decoration-thickness:1px;
-         text-decoration-color:var(--ink-faint)}
-a.inline:hover{text-decoration-color:var(--red)}
+.guide a.inline,.guide .aside a,.guide .listen figcaption a,.guide .pquote a{
+  color:var(--ink);text-decoration:underline;text-underline-offset:3px;
+  text-decoration-thickness:1px;text-decoration-color:var(--muted)}
+.guide a.inline:hover,.guide .aside a:hover,.guide .listen figcaption a:hover,.guide .pquote a:hover{text-decoration-color:var(--ink)}
 
-.aside{margin:34px 0; padding:18px 0 0; border-top:1.5px solid var(--line);
-       font-size:15px; line-height:1.6; color:var(--ink-faint)}
-.aside a{color:var(--ink-soft); text-decoration:underline;
-         text-underline-offset:3px; text-decoration-color:var(--ink-faint)}
-.aside a:hover{color:var(--ink)}
+/* Spec cards: the store's product outline, square corners, no fill. */
+.guide .card{border:1px solid var(--product-outline);border-radius:4px;padding:18px 20px;margin:0 0 10px}
+.guide .card dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:9px 18px}
+.guide .card dt{font:400 12px/1.5 Arial,sans-serif;color:var(--muted);white-space:nowrap;align-self:baseline}
+.guide .card dd{margin:0;font-size:16px;line-height:1.5}
+@media(max-width:460px){.guide .card dl{grid-template-columns:1fr;gap:2px 0}.guide .card dd{margin:0 0 10px}}
 
-.end{margin:64px 0 0; padding:28px 24px; border:1.5px solid var(--line); border-radius:14px;
-     text-align:center; background:rgba(155,202,198,.18)}
-.end p{margin:0 0 18px; color:var(--ink-soft)}
-.cta{font-family:BeefyCartoon,"Comic Sans MS",sans-serif; font-weight:700; font-size:19px; letter-spacing:.01em;
-     text-decoration:none; color:var(--paper); background:var(--red);
-     border:2.5px solid var(--ink); border-radius:999px; padding:13px 30px; display:inline-block;
-     transition:transform .18s ease}
-.cta:hover{transform:translateY(-2px)}
-.cta:focus-visible{outline:3px solid var(--ink); outline-offset:4px}
-.foot{margin:88px 0 0; font-size:11px; letter-spacing:.22em; text-transform:uppercase;
-      color:var(--ink-faint); text-align:center}
-.foot a{color:var(--ink-faint)}
+/* Figures: product shots and audio examples. Every picture is a way to the product. */
+.guide figure{margin:24px 0}
+.guide .imglink{display:block}
+.guide .imglink img{transition:transform .18s ease}
+.guide .imglink:hover img{transform:translateY(-2px)}
+.guide .shot img{width:100%;height:auto;border-radius:4px}
+.guide figcaption{font:400 13px/1.5 Arial,sans-serif;color:var(--muted);margin:8px 0 0}
+.guide figcaption b{color:var(--ink);font-weight:700}
+.guide .listen figure{margin:0 0 16px}
+.guide .listen figure:last-child{margin-bottom:0}
+.guide .listen figcaption{margin:0 0 8px}
+.guide .listen audio{width:100%;height:36px;display:block}
+.guide .listen .src{font:400 13px/1.5 Arial,sans-serif;color:var(--muted);margin:12px 0 0}
+.guide .listen .demo video{display:block;width:100%;max-width:300px;height:auto;margin:0 auto 10px;border-radius:4px;background:#000}
+.guide .listen .demo figcaption{text-align:center;margin-top:8px}
 
-/* Added for the guide set: byline, question subheads, two-step crumb. */
-.crumb span{color:var(--ink-faint); margin:0 .5em}
-.byline{font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:var(--ink-faint); margin:0 0 26px}
-h3{margin:28px 0 8px; font-size:17px; font-weight:600; line-height:1.4; color:var(--ink)}
+.guide .aside{margin:30px 0;padding:14px 0 0;border-top:1px solid var(--line);font-size:15px;line-height:1.6;color:var(--muted)}
+.guide .buyline{margin:28px 0 0;text-align:center}
 
-/* ---- demo video in a listen block (guide-system audit, 28 Oct 2026) ------ */
-.listen .demo video{display:block; width:100%; max-width:300px; height:auto; margin:0 auto 10px;
-                    border-radius:10px; background:#000}
-.listen .demo figcaption{text-align:center; margin-top:8px}
-.listen figcaption a{color:var(--ink); font-weight:600; letter-spacing:.06em;
-                     text-decoration:underline; text-underline-offset:3px}
+/* Buttons inside the prose keep the store's .cta face (Arial 700 12px, 44px,
+   1px ink border) as the outlined information route. Labels are authored
+   copy, so the store's lowercase transform does not apply here. */
+.guide a.cta{display:inline-flex;text-transform:none}
+/* A bare .cta in the prose is the information route: the store's .product-page look (purchase-snow.css). */
+.guide a.cta:not(.product-page):not(.add-to-cart){background:#fff;color:#202225;border-color:var(--ink);box-shadow:none;padding-inline:16px}
+.guide a.cta:not(.product-page):not(.add-to-cart):hover{background:#f5f5f5;color:#202225}
+.guide .product-actions .cta{display:flex}
 
-.pframe{display:flex; flex-direction:column; align-items:center; gap:14px;
-        margin:0 auto 30px; max-width:420px; text-align:center;
-        padding:22px 20px; border:1px solid var(--pill-line); border-radius:14px;
-        background:rgba(242,233,235,.03)}
-.pframe img{width:132px; height:206px; object-fit:cover; object-position:top;
-            border-radius:8px; display:block}
-/* Every picture on a guide is a picture of the product, so every picture is a
-   way to the product. Tony, 24 Sep 2026. */
-.imglink{display:block; text-decoration:none; border:0}
-.imglink img{transition:transform .18s ease, filter .18s ease}
-.imglink:hover img{transform:translateY(-2px); filter:brightness(1.06)}
-.imglink:focus-visible{outline:3px solid var(--chalk); outline-offset:3px; border-radius:10px}
-.pframe-t{min-width:0; display:flex; flex-direction:column; align-items:center}
-.pframe-n{font-family:"Archivo Black","Arial Black",sans-serif; font-size:19px;
-          margin:0 0 4px; letter-spacing:.01em}
-.pframe-d{margin:0 0 14px; font-size:14px; line-height:1.5; color:var(--ink-soft)}
-.pframe .cta{font-size:14px; padding:11px 24px}
-@media (max-width:560px){
-  .pframe{max-width:none; padding:20px 16px}
-  .pframe img{width:120px; height:188px}
-}
+/* The product frame is a storefront card dropped into the article: the store's
+   .product/.stage/.legend/.ask markup, so outline, lockup size (--lockup-size),
+   formats, price and button geometry are the store's own. No demo row, so the
+   stage is shorter than the catalogue's. */
+.guide .pframe{width:min(100%,289px);margin:0 auto 40px;padding:0}  /* 289px = a catalogue card at 1280 */
+.guide .pframe .stage{height:264px;padding:0}
+.guide .pframe .media-window{inset:8px 12px 8px}
+.guide .pframe .panel-link{width:100%;height:100%}
+.guide .pframe .panel-link img{width:100%;height:100%;object-fit:contain;object-position:center bottom}
+.guide .pframe .legend{padding-top:0}
+.guide .pframe .name-link{text-align:center}
+.guide .pframe-d{font:400 13px/1.45 Arial,sans-serif;color:var(--muted);text-align:center;margin:6px 10px 0}
+.guide .pframe .ask{margin-top:10px}
+.guide .pframe .formats{color:var(--muted)}
+.guide .pframe.house .stage{height:190px}
+.guide .pframe.house .product-actions{grid-template-columns:1fr}
+@media(max-width:660px){.guide .pframe .stage{height:240px}}
+
+/* End card: the same ask, in the flow. */
+.guide .end{margin:56px 0 0;padding:24px 20px 20px;border:1px solid var(--product-outline);border-radius:4px;text-align:center}
+.guide .end p{margin:0 0 18px;font-size:16px;line-height:1.6}
+.guide .end .product-actions{max-width:300px;margin:0 auto}
+.guide .end .action-group,.guide .pframe.house .action-group{grid-template-rows:44px}
+.guide .end .formats,.guide .end .money{display:none}
+
+.guide .pquote{margin:48px 0 0;padding:0 0 0 18px;border-left:1px solid var(--line)}
+.guide .pquote blockquote{margin:0 0 8px;font-size:18px;line-height:1.5}
+.guide .pquote figcaption{margin:0}
+
+/* Keep reading and the questions: quiet lists, no boxes. */
+.guide h2+ul{list-style:none;padding:0;margin:0}
+.guide h2+ul li{font-size:15.5px;line-height:1.55;margin:0 0 10px;padding:0 0 10px;border-bottom:1px solid var(--line)}
+.guide h2+ul li:last-child{border-bottom:0}
+
+/* Store footer: GAZILLION INDUSTRIES LLC over a hairline, the reading-material link beneath. */
+.guide-foot{text-transform:uppercase}
+.guide-foot a.reading-material{text-transform:none}
+/* Collection hook for beefy guides. The house stylesheet is articles/guide.css
+   (storefront chrome and reading surface, 28 Oct 2026); the store's own
+   stylesheets load before it. Put per-collection overrides here, nothing else.
+   The previous colourway is in page.css.bak-2026-10-28-restyle. */
 </style>
+<script defer src="/storefront-20261008/light/brand.js?v=bf250f1fbd"></script>
+<script defer src="/storefront-20261008/purchase-snow.js?v=7e57c334b8"></script>
 
-<main>
+<header class="masthead"><div class="mast-inner"><a class="brand" href="/" aria-label="Gazillion Industries home"><span class="lock" aria-hidden="true"><span class="lock-a">GAZILLION</span><span class="lock-b">INDUSTRIES</span></span></a><div class="mast-actions"><p class="posture"><img src="/storefront-20261008/light/header-art/posture-dark-ink.svg?v=45319c6aa9" width="165" height="27" alt="ABSOLUTELY NOT F#&amp;KING AROUND"></p></div></div></header>
+<div class="wrap"><div class="catalog-toolbar"><p class="delivery"><strong>arrives by email</strong> - order now on your <strong>phone</strong>, install any time.</p></div></div>
+
+<main class="guide">
   <p class="crumb"><a href="/">&larr; Gazillion Industries</a><span>/</span><a href="/reading-material/">Reading material</a></p>
 
   <h1>How to use a limiter</h1>
   <p class="byline">Gazillion Industries &middot; <time datetime="2026-09-20">September 20, 2026</time> &middot; updated <time datetime="2026-09-24">September 24, 2026</time></p>
 
-  <aside class="pframe">
-    <a href="/beefy.html" data-umami-event="guide_uselimiter_to_beefy" data-umami-event-spot="frameimg" class="imglink"><img src="/beefy/cover.png" alt="BEEFY plug-in panel" loading="eager"></a>
-    <div class="pframe-t">
-      <p class="pframe-n">BEEFY</p>
+  <aside class="pframe product" data-product="beefy" aria-label="BEEFY">
+    <div class="stage"><div class="media-window"><a href="/beefy.html" data-umami-event="guide_uselimiter_to_beefy" data-umami-event-spot="frameimg" class="panel-link imglink"><img src="/storefront-20261008/assets/catalog-motion/beefy-light-poster.webp?v=20261008-v8c" alt="BEEFY plug-in panel" loading="eager"></a></div></div>
+    <div class="legend"><div class="name-block"><a class="name-link" href="/beefy.html" data-umami-event="guide_uselimiter_to_beefy" data-umami-event-spot="framename"><img class="lockup-art" src="/storefront-20261008/light/normalized-art/beefy.svg?v=ee978b5e14" width="192" height="64" alt="BEEFY. THE MAKE GOODER KNOB. MORE FATTERRER. MORE BETTERRER."></a></div>
       <p class="pframe-d">Saturation and loudness for Mac and Windows. AU, VST3 and standalone.</p>
-      <a class="cta" href="/beefy.html" data-umami-event="guide_uselimiter_to_beefy" data-umami-event-spot="frame">Hear it</a>
+      <div class="ask"><div class="product-actions"><div class="action-group"><span class="formats">AU · VST3<br>Mac · Win</span><a class="cta product-page" href="/beefy.html" data-umami-event="guide_uselimiter_to_beefy" data-umami-event-spot="frame" aria-label="More info about BEEFY"><span>more info</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></a></div><div class="action-group"><span class="money">$39</span><a class="cta add-to-cart" href="https://gazillionindustries.gumroad.com/l/beefy?wanted=true&amp;utm_source=gazillionindustries.com&amp;utm_medium=cta&amp;utm_content=guide_frame" data-umami-event="guide_uselimiter_to_beefy" data-umami-event-spot="framebuy" aria-label="Get BEEFY"><span>get BEEFY</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></a></div></div></div>
     </div>
   </aside>
 
@@ -820,7 +843,7 @@ h3{margin:28px 0 8px; font-size:17px; font-weight:600; line-height:1.4; color:va
   <div class="end">
     <p>BEEFY &mdash; saturation and loudness plugin for Mac and Windows. There is
     a 28-second demo with three without/with comparisons on the page.</p>
-    <a class="cta" href="/beefy.html" data-umami-event="guide_uselimiter_to_beefy" data-umami-event-spot="end">Hear it</a>
+    <div class="product-actions"><div class="action-group"><span class="formats">AU · VST3<br>Mac · Win</span><a class="cta product-page" href="/beefy.html" data-umami-event="guide_uselimiter_to_beefy" data-umami-event-spot="end" aria-label="More info about BEEFY"><span>more info</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></a></div><div class="action-group"><span class="money">$39</span><a class="cta add-to-cart" href="https://gazillionindustries.gumroad.com/l/beefy?wanted=true&amp;utm_source=gazillionindustries.com&amp;utm_medium=cta&amp;utm_content=guide_end" data-umami-event="guide_uselimiter_to_beefy" data-umami-event-spot="endbuy" aria-label="Get BEEFY"><span>get BEEFY</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></a></div></div>
   </div>
 
   <h2>Keep reading</h2>
@@ -830,7 +853,6 @@ h3{margin:28px 0 8px; font-size:17px; font-weight:600; line-height:1.4; color:va
     <li><a class="inline" href="/true-peak/">True peak</a> &mdash; Why a file can read zero and still clip, and what ceiling to use.</li>
   </ul>
 
-
-  <p class="foot"><a href="/">Gazillion Industries LLC</a> &middot; <a href="/reading-material/">reading material</a></p>
 </main>
+<footer class="foot wrap guide-foot"><p><a href="/">Gazillion Industries LLC</a><br><br><a class="reading-material" href="/reading-material/">reading material</a></p></footer>
 </html>

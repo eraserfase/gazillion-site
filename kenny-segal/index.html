@@ -49,129 +49,147 @@ fbq('track', 'PageView');
 }
 </script>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"TechArticle","@id":"https://gazillionindustries.com/kenny-segal/#article","headline":"Kenny Segal","description":"How Kenny Segal makes records: live players over samples, the SP-404 used as an effects box, drums edited hit by hit, and sampling the spaces between the notes.","image":"https://gazillionindustries.com/og-home-20260910.jpg","inLanguage":"en","datePublished":"2026-09-20","dateModified":"2026-09-24","url":"https://gazillionindustries.com/kenny-segal/","mainEntityOfPage":"https://gazillionindustries.com/kenny-segal/","author":{"@id":"https://gazillionindustries.com/#gazillion"},"publisher":{"@id":"https://gazillionindustries.com/#gazillion"},"isPartOf":{"@id":"https://gazillionindustries.com/reading-material/#page"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Gazillion Industries","item":"https://gazillionindustries.com/"},{"@type":"ListItem","position":2,"name":"Reading material","item":"https://gazillionindustries.com/reading-material/"},{"@type":"ListItem","position":3,"name":"Kenny Segal","item":"https://gazillionindustries.com/kenny-segal/"}]},{"@type":"Organization","@id":"https://gazillionindustries.com/#gazillion","name":"Gazillion Industries LLC","alternateName":"Gazillion Industries","url":"https://gazillionindustries.com/"},{"@type":"FAQPage","@id":"https://gazillionindustries.com/kenny-segal/#faq","mainEntity":[{"@type":"Question","name":"What does Kenny Segal use?","acceptedAnswer":{"@type":"Answer","text":"A home studio in Los Angeles with a reported cache of SP-404s, a Rhodes, a Casio CZ-101, a polyphonic Moog, pedals, and a good microphone and preamp collection. He plays Omnichord and a Bastl MicroGranny on record."}},{"@type":"Question","name":"How does he use the SP-404?","acceptedAnswer":{"@type":"Answer","text":"Mostly as an effects processor on material played live, rather than as the sequencer. His own sample pack documents live drums run through the machine's effects."}},{"@type":"Question","name":"What is his production process?","acceptedAnswer":{"@type":"Answer","text":"In his words: start with the sample, get a vibe, then bring musicians in to play over it. The drums are then edited at the level of individual hits, each on its own track."}},{"@type":"Question","name":"What records should I start with?","acceptedAnswer":{"@type":"Answer","text":"Hiding Places with billy woods (2019) and Maps (2023). Then the work with R.A.P. Ferreira, Armand Hammer and Open Mike Eagle. The drum bus end of it, in one control. We make DRUGS . The drum bus end of it, in one control."}}]}]}</script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Archivo+Black&display=swap">
+<link rel="preload" href="/storefront-20261008/assets/archivo.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/storefront-20261008/assets/archivo-black.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/storefront-20261008/light/style.css?v=8b00e4b47d">
+<link rel="stylesheet" href="/storefront-20261008/theme.css?v=9ee28e6c34">
+<link rel="stylesheet" href="/storefront-20261008/purchase-snow.css?v=b5da793120">
 <style>
-/* Same tokens as the landing page, so the two read as one site. The display
-   stack is Archivo Black falling back to Arial Black and nothing else: the
-   usual third option is condensed where Arial Black is wide, and a fallback
-   that changes the shape of the brand is worse than no fallback at all. */
-:root{
-  --field:#2b2225; --field-lit:#3d3134; --field-deep:#1b1517;
-  --chalk:#f2e9eb;
-  --ink:#f2e9eb; --ink-soft:rgba(242,233,235,0.66); --ink-faint:rgba(242,233,235,0.34);
-  --pill-line:rgba(242,233,235,0.2); --accent:#e0919f;
-}
-*{box-sizing:border-box}
-body{margin:0; background:var(--field); color:var(--ink);
-  font-family:Archivo,-apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif;
-  -webkit-font-smoothing:antialiased;
-  background-image:linear-gradient(180deg,var(--field-lit) 0%,var(--field) 38%,var(--field-deep) 100%);
-  background-attachment:fixed; min-height:100vh}
-body::before{content:""; position:fixed; inset:0; pointer-events:none; z-index:0; opacity:.5;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='.055'/%3E%3C/svg%3E")}
-main{position:relative; z-index:1; max-width:36em; margin:0 auto; padding:56px 24px 96px}
+/* Guide pages wear the storefront (Tony, 28 Oct 2026: "the store is the style
+   direction"). The page links the live store's own stylesheets first -
+   /storefront-20261008/light/style.css and /storefront-20261008/theme.css - so
+   the masthead lockup, the posture mark, the delivery strip, the product card,
+   the .cta family and the footer are the store's exact rules, not a copy of
+   them. This file adds only the reading surface: measure, prose roles, the
+   spec cards, figures and audio. Tokens come from the store: --field --surface
+   --ink --muted --line --product-outline. Light only, as the store is.
 
-.crumb{font-size:11px; letter-spacing:.2em; text-transform:uppercase; margin:0 0 40px}
-.crumb a{color:var(--ink-faint); text-decoration:none}
-.crumb a:hover{color:var(--ink-soft)}
+   Type roles (BRAND-TYPOGRAPHY.md: intentional roles, consistent family):
+     authored lockups   the only display type (masthead CSS lockup, normalized-art)
+     h1 / h2 / h3       Archivo 700, sentence case as authored - ordinary headings
+     prose              Archivo 400, 16.5px, measure 36em (~68ch)
+     supporting info    Arial 400 12-13px muted (crumb, byline, captions, formats)
+     controls           the store's .cta family: Arial 700 12px, 44px, 1px border */
 
-h1{font-family:"Archivo Black","Arial Black",sans-serif;
-   font-size:clamp(30px,6.4vw,46px); line-height:1.05; letter-spacing:-.02em;
-   margin:0 0 14px; color:var(--chalk); text-wrap:balance}
-.standfirst{margin:0 0 18px; font-size:17px; line-height:1.65; color:var(--ink-soft)}
+main.guide{max-width:38em;margin:0 auto;padding:40px 24px 72px;
+  font-family:Archivo,sans-serif;color:var(--ink);-webkit-font-smoothing:antialiased}
+main.guide p{margin:0 0 16px;font-size:16.5px;line-height:1.7}
+main.guide strong{font-weight:700}
+main.guide ul,main.guide ol{margin:0 0 16px;padding-left:1.25em}
+main.guide li{font-size:16.5px;line-height:1.65;margin:0 0 6px}
+main.guide code{font:13px/1.2 ui-monospace,Menlo,monospace;background:var(--surface);padding:1px 5px;border-radius:3px}
 
-h2{margin:52px 0 16px; font-size:12px; font-weight:600; letter-spacing:.2em;
-   text-transform:uppercase; color:var(--chalk)}
-p{margin:0 0 16px; font-size:16.5px; line-height:1.72; color:var(--ink-soft)}
-strong{color:var(--ink); font-weight:600}
-em{color:var(--ink)}
+.guide .crumb{font:400 12px/1.4 Arial,sans-serif;color:var(--muted);margin:0 0 28px}
+.guide .crumb a{color:var(--muted)}
+.guide .crumb a:hover{color:var(--ink);text-decoration:underline}
+.guide .crumb span{margin:0 .5em}
 
-.card{border:1px solid var(--pill-line); border-radius:14px; padding:22px 24px; margin:0 0 8px;
-      background:rgba(242,233,235,.03)}
-.card dl{margin:0; display:grid; grid-template-columns:auto 1fr; gap:10px 18px}
-.card dt{font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-faint);
-         white-space:nowrap; align-self:baseline}
-.card dd{margin:0; font-size:16px; line-height:1.5; color:var(--ink)}
-@media (max-width:460px){
-  .card dl{grid-template-columns:1fr; gap:2px 0}
-  .card dd{margin:0 0 12px}
-}
+.guide h1{font-family:Archivo,sans-serif;font-weight:700;font-size:clamp(28px,4.6vw,36px);line-height:1.12;letter-spacing:-.02em;
+  margin:0 0 12px;text-wrap:balance}
+.guide .byline{font:400 12px/1.4 Arial,sans-serif;color:var(--muted);margin:0 0 28px}
+.guide .standfirst{font-size:18px;line-height:1.55;margin:0 0 20px}
+.guide h2{font:700 22px/1.25 Archivo,sans-serif;letter-spacing:-.01em;margin:44px 0 12px}
+.guide h3{font:700 17px/1.35 Archivo,sans-serif;margin:26px 0 8px}
 
-/* Inline links inside body copy. Underlined rather than coloured, because a
-   coloured link in a dark editorial page reads as an advert and this one is
-   meant to read as a sentence. */
-a.inline{color:var(--ink); text-decoration:underline;
-         text-underline-offset:3px; text-decoration-thickness:1px;
-         text-decoration-color:var(--ink-faint); transition:text-decoration-color .18s ease}
-a.inline:hover{text-decoration-color:var(--chalk)}
+.guide a.inline,.guide .aside a,.guide .listen figcaption a,.guide .pquote a{
+  color:var(--ink);text-decoration:underline;text-underline-offset:3px;
+  text-decoration-thickness:1px;text-decoration-color:var(--muted)}
+.guide a.inline:hover,.guide .aside a:hover,.guide .listen figcaption a:hover,.guide .pquote a:hover{text-decoration-color:var(--ink)}
 
-/* The mid-article aside. A rule and a line of small type - deliberately not a
-   card, not a button and not a box, because an interstitial in the middle of a
-   teaching page is an advert no matter what it says. */
-.aside{margin:34px 0; padding:18px 0 0; border-top:1px solid var(--pill-line);
-       font-size:15px; line-height:1.6; color:var(--ink-faint)}
-.aside a{color:var(--ink-soft); text-decoration:underline;
-         text-underline-offset:3px; text-decoration-color:var(--ink-faint)}
-.aside a:hover{color:var(--chalk)}
+/* Spec cards: the store's product outline, square corners, no fill. */
+.guide .card{border:1px solid var(--product-outline);border-radius:4px;padding:18px 20px;margin:0 0 10px}
+.guide .card dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:9px 18px}
+.guide .card dt{font:400 12px/1.5 Arial,sans-serif;color:var(--muted);white-space:nowrap;align-self:baseline}
+.guide .card dd{margin:0;font-size:16px;line-height:1.5}
+@media(max-width:460px){.guide .card dl{grid-template-columns:1fr;gap:2px 0}.guide .card dd{margin:0 0 10px}}
 
-.end{margin:64px 0 0; padding:28px 24px; border:1px solid var(--pill-line); border-radius:14px;
-     text-align:center; background:rgba(242,233,235,.03)}
-.end p{margin:0 0 18px; color:var(--ink-soft)}
-.cta{font-family:"Archivo Black","Arial Black",sans-serif; font-size:16px; letter-spacing:.02em;
-     text-decoration:none; color:var(--field-deep); background:var(--chalk);
-     border-radius:999px; padding:15px 30px; display:inline-block;
-     transition:transform .18s ease}
-.cta:hover{transform:translateY(-2px)}
-.cta:focus-visible{outline:3px solid var(--chalk); outline-offset:4px}
-.foot{margin:88px 0 0; font-size:11px; letter-spacing:.22em; text-transform:uppercase;
-      color:var(--ink-faint); text-align:center}
-.foot a{color:var(--ink-faint)}
+/* Figures: product shots and audio examples. Every picture is a way to the product. */
+.guide figure{margin:24px 0}
+.guide .imglink{display:block}
+.guide .imglink img{transition:transform .18s ease}
+.guide .imglink:hover img{transform:translateY(-2px)}
+.guide .shot img{width:100%;height:auto;border-radius:4px}
+.guide figcaption{font:400 13px/1.5 Arial,sans-serif;color:var(--muted);margin:8px 0 0}
+.guide figcaption b{color:var(--ink);font-weight:700}
+.guide .listen figure{margin:0 0 16px}
+.guide .listen figure:last-child{margin-bottom:0}
+.guide .listen figcaption{margin:0 0 8px}
+.guide .listen audio{width:100%;height:36px;display:block}
+.guide .listen .src{font:400 13px/1.5 Arial,sans-serif;color:var(--muted);margin:12px 0 0}
+.guide .listen .demo video{display:block;width:100%;max-width:300px;height:auto;margin:0 auto 10px;border-radius:4px;background:#000}
+.guide .listen .demo figcaption{text-align:center;margin-top:8px}
 
-/* Added for the guide sets. */
-.crumb span{color:var(--ink-faint); margin:0 .5em}
-.byline{font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:var(--ink-faint); margin:0 0 26px}
-h3{margin:28px 0 8px; font-size:17px; font-weight:600; line-height:1.4; color:var(--ink)}
-ul,ol{margin:0 0 16px; padding-left:1.2em}
-li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
-.cta{background:var(--accent); color:var(--field-deep)}
+.guide .aside{margin:30px 0;padding:14px 0 0;border-top:1px solid var(--line);font-size:15px;line-height:1.6;color:var(--muted)}
+.guide .buyline{margin:28px 0 0;text-align:center}
 
-.pframe{display:flex; flex-direction:column; align-items:center; gap:14px;
-        margin:0 auto 30px; max-width:420px; text-align:center;
-        padding:22px 20px; border:1px solid var(--pill-line); border-radius:14px;
-        background:rgba(242,233,235,.03)}
-.pframe img{width:132px; height:206px; object-fit:cover; object-position:top;
-            border-radius:8px; display:block}
-/* Every picture on a guide is a picture of the product, so every picture is a
-   way to the product. Tony, 24 Sep 2026. */
-.imglink{display:block; text-decoration:none; border:0}
-.imglink img{transition:transform .18s ease, filter .18s ease}
-.imglink:hover img{transform:translateY(-2px); filter:brightness(1.06)}
-.imglink:focus-visible{outline:3px solid var(--chalk); outline-offset:3px; border-radius:10px}
-.pframe-t{min-width:0; display:flex; flex-direction:column; align-items:center}
-.pframe-n{font-family:"Archivo Black","Arial Black",sans-serif; font-size:19px;
-          margin:0 0 4px; letter-spacing:.01em}
-.pframe-d{margin:0 0 14px; font-size:14px; line-height:1.5; color:var(--ink-soft)}
-.pframe .cta{font-size:14px; padding:11px 24px}
-@media (max-width:560px){
-  .pframe{max-width:none; padding:20px 16px}
-  .pframe img{width:120px; height:188px}
-}
+/* Buttons inside the prose keep the store's .cta face (Arial 700 12px, 44px,
+   1px ink border) as the outlined information route. Labels are authored
+   copy, so the store's lowercase transform does not apply here. */
+.guide a.cta{display:inline-flex;text-transform:none}
+/* A bare .cta in the prose is the information route: the store's .product-page look (purchase-snow.css). */
+.guide a.cta:not(.product-page):not(.add-to-cart){background:#fff;color:#202225;border-color:var(--ink);box-shadow:none;padding-inline:16px}
+.guide a.cta:not(.product-page):not(.add-to-cart):hover{background:#f5f5f5;color:#202225}
+.guide .product-actions .cta{display:flex}
+
+/* The product frame is a storefront card dropped into the article: the store's
+   .product/.stage/.legend/.ask markup, so outline, lockup size (--lockup-size),
+   formats, price and button geometry are the store's own. No demo row, so the
+   stage is shorter than the catalogue's. */
+.guide .pframe{width:min(100%,289px);margin:0 auto 40px;padding:0}  /* 289px = a catalogue card at 1280 */
+.guide .pframe .stage{height:264px;padding:0}
+.guide .pframe .media-window{inset:8px 12px 8px}
+.guide .pframe .panel-link{width:100%;height:100%}
+.guide .pframe .panel-link img{width:100%;height:100%;object-fit:contain;object-position:center bottom}
+.guide .pframe .legend{padding-top:0}
+.guide .pframe .name-link{text-align:center}
+.guide .pframe-d{font:400 13px/1.45 Arial,sans-serif;color:var(--muted);text-align:center;margin:6px 10px 0}
+.guide .pframe .ask{margin-top:10px}
+.guide .pframe .formats{color:var(--muted)}
+.guide .pframe.house .stage{height:190px}
+.guide .pframe.house .product-actions{grid-template-columns:1fr}
+@media(max-width:660px){.guide .pframe .stage{height:240px}}
+
+/* End card: the same ask, in the flow. */
+.guide .end{margin:56px 0 0;padding:24px 20px 20px;border:1px solid var(--product-outline);border-radius:4px;text-align:center}
+.guide .end p{margin:0 0 18px;font-size:16px;line-height:1.6}
+.guide .end .product-actions{max-width:300px;margin:0 auto}
+.guide .end .action-group,.guide .pframe.house .action-group{grid-template-rows:44px}
+.guide .end .formats,.guide .end .money{display:none}
+
+.guide .pquote{margin:48px 0 0;padding:0 0 0 18px;border-left:1px solid var(--line)}
+.guide .pquote blockquote{margin:0 0 8px;font-size:18px;line-height:1.5}
+.guide .pquote figcaption{margin:0}
+
+/* Keep reading and the questions: quiet lists, no boxes. */
+.guide h2+ul{list-style:none;padding:0;margin:0}
+.guide h2+ul li{font-size:15.5px;line-height:1.55;margin:0 0 10px;padding:0 0 10px;border-bottom:1px solid var(--line)}
+.guide h2+ul li:last-child{border-bottom:0}
+
+/* Store footer: GAZILLION INDUSTRIES LLC over a hairline, the reading-material link beneath. */
+.guide-foot{text-transform:uppercase}
+.guide-foot a.reading-material{text-transform:none}
+/* Collection hook for house guides. The house stylesheet is articles/guide.css
+   (storefront chrome and reading surface, 28 Oct 2026); the store's own
+   stylesheets load before it. Put per-collection overrides here, nothing else.
+   The previous colourway is in page.css.bak-2026-10-28-restyle. */
 </style>
+<script defer src="/storefront-20261008/light/brand.js?v=bf250f1fbd"></script>
+<script defer src="/storefront-20261008/purchase-snow.js?v=7e57c334b8"></script>
 
-<main>
+<header class="masthead"><div class="mast-inner"><a class="brand" href="/" aria-label="Gazillion Industries home"><span class="lock" aria-hidden="true"><span class="lock-a">GAZILLION</span><span class="lock-b">INDUSTRIES</span></span></a><div class="mast-actions"><p class="posture"><img src="/storefront-20261008/light/header-art/posture-dark-ink.svg?v=45319c6aa9" width="165" height="27" alt="ABSOLUTELY NOT F#&amp;KING AROUND"></p></div></div></header>
+<div class="wrap"><div class="catalog-toolbar"><p class="delivery"><strong>arrives by email</strong> - order now on your <strong>phone</strong>, install any time.</p></div></div>
+
+<main class="guide">
   <p class="crumb"><a href="/">&larr; Gazillion Industries</a><span>/</span><a href="/reading-material/">Reading material</a></p>
 
   <h1>Kenny Segal</h1>
   <p class="byline">Gazillion Industries &middot; <time datetime="2026-09-20">September 20, 2026</time> &middot; updated <time datetime="2026-09-24">September 24, 2026</time></p>
 
-  <aside class="pframe">
-    <a href="/" data-umami-event="guide_segal_to_gazillion" data-umami-event-spot="frameimg" class="imglink"><img src="/og-home-20260910.jpg" alt="Gazillion Industries plug-in panel" loading="eager"></a>
-    <div class="pframe-t">
-      <p class="pframe-n">Gazillion Industries</p>
+  <aside class="pframe product house" aria-label="Gazillion Industries">
+    <div class="stage"><div class="media-window"><a href="/" data-umami-event="guide_segal_to_gazillion" data-umami-event-spot="frameimg" class="panel-link imglink"><img src="/og-home-20260910.jpg" alt="Gazillion Industries plug-in panel" loading="eager"></a></div></div>
+    <div class="legend">
       <p class="pframe-d">Plug-ins for people who make beats.</p>
-      <a class="cta" href="/" data-umami-event="guide_segal_to_gazillion" data-umami-event-spot="frame">See the plugins</a>
+      <div class="ask"><div class="product-actions"><div class="action-group"><a class="cta product-page" href="/" data-umami-event="guide_segal_to_gazillion" data-umami-event-spot="frame"><span>See the plugins</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></a></div></div></div>
     </div>
   </aside>
 
@@ -283,7 +301,7 @@ li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
   <div class="end">
     <p>Gazillion Industries makes plugins tuned by ear: DRUGS, F(ilter)12, SKRUU,
     TRIPLE OG and BEEFY.</p>
-    <a class="cta" href="/" data-umami-event="guide_segal_to_gazillion" data-umami-event-spot="end">See the plugins</a>
+    <div class="product-actions"><div class="action-group"><a class="cta product-page" href="/" data-umami-event="guide_segal_to_gazillion" data-umami-event-spot="end"><span>See the plugins</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></a></div></div>
   </div>
 
   <h2>Keep reading</h2>
@@ -293,7 +311,6 @@ li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
     <li><a class="inline" href="/j-dilla/">J Dilla</a> &mdash; The life, the machines, how the drums really work, and the claims that do not hold up.</li>
   </ul>
 
-
-  <p class="foot"><a href="/">Gazillion Industries LLC</a> &middot; <a href="/reading-material/">reading material</a></p>
 </main>
+<footer class="foot wrap guide-foot"><p><a href="/">Gazillion Industries LLC</a><br><br><a class="reading-material" href="/reading-material/">reading material</a></p></footer>
 </html>

@@ -49,124 +49,147 @@ fbq('track', 'PageView');
 }
 </script>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"TechArticle","@id":"https://gazillionindustries.com/dithering/#article","headline":"Dithering","description":"What dither actually does, why rounding errors are worse than noise, which type to use, and the three rules that cover every case you will meet in practice.","image":"https://gazillionindustries.com/beefy/cover.png","inLanguage":"en","datePublished":"2026-09-20","dateModified":"2026-09-24","url":"https://gazillionindustries.com/dithering/","mainEntityOfPage":"https://gazillionindustries.com/dithering/","author":{"@id":"https://gazillionindustries.com/#gazillion"},"publisher":{"@id":"https://gazillionindustries.com/#gazillion"},"about":{"@type":"SoftwareApplication","name":"BEEFY","url":"https://gazillionindustries.com/beefy.html"},"isPartOf":{"@id":"https://gazillionindustries.com/reading-material/#page"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Gazillion Industries","item":"https://gazillionindustries.com/"},{"@type":"ListItem","position":2,"name":"Reading material","item":"https://gazillionindustries.com/reading-material/"},{"@type":"ListItem","position":3,"name":"Dithering","item":"https://gazillionindustries.com/dithering/"}]},{"@type":"Organization","@id":"https://gazillionindustries.com/#gazillion","name":"Gazillion Industries LLC","alternateName":"Gazillion Industries","url":"https://gazillionindustries.com/"},{"@type":"FAQPage","@id":"https://gazillionindustries.com/dithering/#faq","mainEntity":[{"@type":"Question","name":"Should dithering be on or off?","acceptedAnswer":{"@type":"Answer","text":"On, if the export is reducing bit depth, usually to 16-bit. Off if you are exporting at the same bit depth you worked at, or handing a 24-bit file to someone who will process it further."}},{"@type":"Question","name":"Does dither lower quality?","acceptedAnswer":{"@type":"Answer","text":"It raises the noise floor very slightly and removes a distortion that would otherwise appear on quiet material. By any measure that matters musically, it improves the result."}},{"@type":"Question","name":"Should I add dither to my master?","acceptedAnswer":{"@type":"Answer","text":"If the master is being delivered as a 16-bit file, yes, on the final export only. If you are delivering 24-bit, no."}},{"@type":"Question","name":"What does dithering mean in music?","acceptedAnswer":{"@type":"Answer","text":"Adding low-level noise before a bit-depth reduction so that the rounding errors become random noise rather than signal-dependent distortion."}},{"@type":"Question","name":"Should I dither when exporting 24-bit?","acceptedAnswer":{"@type":"Answer","text":"No. A 24-bit step is &minus;138.47 dBFS and the undithered error floor lands at &minus;149.27 dBFS, which is 52.94 dB below the floor of a dithered 16-bit file. There is no audible distortion down there to convert into anything."}},{"@type":"Question","name":"What bit depth should I export at?","acceptedAnswer":{"@type":"Answer","text":"24-bit for masters going to a distributor, a mastering engineer or an archive, with no dither. 16-bit with dither when something specifically calls for 16-bit. 32-bit float for anything that is coming back into a session."}},{"@type":"Question","name":"Do I need dither for streaming?","acceptedAnswer":{"@type":"Answer","text":"No. Upload the deepest file the service accepts, normally 24-bit, and let their encoder work from that. Dither belongs on a 16-bit delivery."}},{"@type":"Question","name":"Does dither change LUFS or loudness?","acceptedAnswer":{"@type":"Answer","text":"Not measurably. Triangular dither puts 4.77 dB onto a floor sitting near &minus;96 dBFS, which is more than 80 dB under any integrated loudness figure you are likely to deliver. It changes nothing about how loud the record sounds."}},{"@type":"Question","name":"Is dither audible?","acceptedAnswer":{"@type":"Answer","text":"On a loud master at normal listening levels, no. Raise the file by 60 dB and it is obvious. The people who hear it unaided are working on material with genuine silence in it &mdash; solo piano, classical, spoken word &mdash; where the tail of a note runs down into the last few bits."}},{"@type":"Question","name":"What is TPDF dither?","acceptedAnswer":{"@type":"Answer","text":"Triangular probability density function: noise two steps wide whose values cluster around zero and taper toward the edges. That shape is what fully decorrelates the rounding error. It is the default in most hosts and the right answer whenever you do not want to think about it."}},{"@type":"Question","name":"What is the difference between dither and noise shaping?","acceptedAnswer":{"@type":"Answer","text":"Dither decides whether the error comes out as noise or as distortion. Noise shaping decides where in the spectrum that noise sits. You can have dither with no shaping, and shaping with no dither is a poor idea, because it tilts a correlated error rather than a random one."}},{"@type":"Question","name":"Should dither go before or after the limiter?","acceptedAnswer":{"@type":"Answer","text":"After. A limiter changes sample values, and anything that changes sample values after dither re-quantizes and undoes it. Dither is the last plugin in the chain, or the export dialog's own checkbox, with nothing following it."}},{"@type":"Question","name":"Dither before or after sample rate conversion?","acceptedAnswer":{"@type":"Answer","text":"After. Conversion calculates new samples from old ones, which is a fresh quantization, so dither applied before it gets discarded and replaced by exactly the error you were avoiding."}},{"@type":"Question","name":"Does 32-bit float need dither?","acceptedAnswer":{"@type":"Answer","text":"No. A float sample's rounding error stays around 144.5 dB below that sample's own value at every level, because the exponent tracks the signal. There is no fixed floor to raise and no grain to appear on a fade."}},{"@type":"Question","name":"What happens if I dither twice?","acceptedAnswer":{"@type":"Answer","text":"The two noise floors add in power and the total goes up 3.01 dB. Once, that is inaudible. It accumulates, though, so a workflow that bounces through three or four stages with dither left on each time gives away 4.77 to 6.02 dB of floor for nothing."}},{"@type":"Question","name":"Which dither should I use for beats?","acceptedAnswer":{"@type":"Answer","text":"Triangular, and only on a 16-bit delivery. A loud rap or electronic master never approaches the bottom of the 16-bit range, so noise shaping has nothing to buy you there, and its ultrasonic peak is a liability if anything downstream is nonlinear."}},{"@type":"Question","name":"Why is the dither option dimmed in my DAW?","acceptedAnswer":{"@type":"Answer","text":"Because the export is not reducing bit depth. Set bit depth to 16 and the control becomes available. If it stays dimmed at 16-bit, you are looking at the wrong dialog."}},{"@type":"Question","name":"Can I dither a stem or a bounce I will use again?","acceptedAnswer":{"@type":"Answer","text":"No. Export stems at the session depth or higher with no dither. Every later stage re-quantizes anyway, and dithering each stem separately stacks noise floors that all end up summed together in the same mix."}},{"@type":"Question","name":"Does dither fix clipping?","acceptedAnswer":{"@type":"Answer","text":"No, and the two are unrelated. Clipping happens at the top of the range and dither works at the bottom of it. For the top, see what is clipping and how to use a limiter . For the room you leave above the mix, headroom in mixing ."}},{"@type":"Question","name":"What does dither sound like?","acceptedAnswer":{"@type":"Answer","text":"Steady, featureless hiss that holds still while the music moves. That constancy is the whole point. The ear discounts a background that stays put and fastens onto anything that tracks the note."}},{"@type":"Question","name":"Do I need to dither if I export at 44.1 kHz?","acceptedAnswer":{"@type":"Answer","text":"Sample rate has nothing to do with it. Dither answers a question about bit depth. A 24-bit 44.1 kHz export needs none, and a 16-bit 96 kHz export needs it. Look at the depth field, not the rate field."}},{"@type":"Question","name":"What is the difference between RPDF and TPDF dither?","acceptedAnswer":{"@type":"Answer","text":"Width. Rectangular is one step wide and lands its floor at &minus;98.09 dBFS. Triangular is two steps wide and lands at &minus;96.33 dBFS, 1.76 dB higher. The extra 1.76 dB buys a floor that holds still: measured over a fade this session, the rectangular error level moved across a 1.76 dB range, while the triangular one moved across 0.17 dB. That the measured range and the cost come to the same figure is a coincidence, and a memorable one."}},{"@type":"Question","name":"Does dither remove noise?","acceptedAnswer":{"@type":"Answer","text":"The opposite. It adds a small amount of noise in order to remove a distortion. Anything sold as dither that reduces your noise floor is doing something else."}},{"@type":"Question","name":"Does dither add latency?","acceptedAnswer":{"@type":"Answer","text":"No. Dither is one addition per sample, and even a noise shaper only looks at errors it has already made, so neither needs to see into the future. Nothing about it delays your export or shifts your file in time."}},{"@type":"Question","name":"Should I dither going from 32-bit float to 24-bit?","acceptedAnswer":{"@type":"Answer","text":"Only if the material genuinely lives down near the bottom of 24 bits, which almost nothing does. A 24-bit step is &minus;138.47 dBFS. The rounding distortion you would be treating is already 52.94 dB below the floor of a dithered 16-bit file. In practice, export 24-bit with dither off."}},{"@type":"Question","name":"Does dither affect true peak?","acceptedAnswer":{"@type":"Answer","text":"By an amount no meter will show you. Dither adds noise peaking around one step, &minus;90.31 dBFS, to a signal peaking near 0 dBFS. It cannot push a compliant master over a ceiling. For what does, see true peak ."}},{"@type":"Question","name":"What dither should I use for a CD master?","acceptedAnswer":{"@type":"Answer","text":"Triangular, once, on the 16-bit 44.1 kHz render, with nothing after it. CD is the one delivery format that forces the decision, since its depth is fixed at 16 bits. Noise shaping is legitimate here if the record has real quiet in it, and unnecessary on anything loud."}},{"@type":"Question","name":"Does my DAW dither automatically?","acceptedAnswer":{"@type":"Answer","text":"Some do on a 16-bit export and some do not, and the ones that do are not always loud about it. Set bit depth to 16 in your export dialog and watch which control becomes available. If a dither menu wakes up, the host is waiting for you to choose. If nothing wakes up, check the manual before assuming either way."}},{"@type":"Question","name":"Is truncation the same as no dither?","acceptedAnswer":{"@type":"Answer","text":"Close enough to make no practical difference and not quite identical. Truncation throws away the low bits and always errs in one direction, which adds a tiny DC offset of half a step on top of the distortion. Rounding to nearest, which is what most hosts do, errs both ways. Both are signal-dependent and both are what dither exists to fix."}},{"@type":"Question","name":"Can there be too much dither?","acceptedAnswer":{"@type":"Answer","text":"Yes, and stacking is how it happens. Two passes add 3.01 dB, four add 6.02 dB. Widening the dither beyond two steps also raises the floor with no further benefit, because two steps already fully decorrelates the error. Two steps, once."}},{"@type":"Question","name":"Should I dither a sample pack?","acceptedAnswer":{"@type":"Answer","text":"Not at 24-bit, which is how packs should ship. If a spec forces 16-bit, dither each file once on the conversion from your 24-bit masters, and never by re-converting files that were already converted."}},{"@type":"Question","name":"Does dither matter for vinyl?","acceptedAnswer":{"@type":"Answer","text":"Not at your end. Send the cutting engineer 24-bit and let them handle the transfer. A record lathe is fed an analog signal, so there is no 16-bit step anywhere in the chain for dither to be treating."}},{"@type":"Question","name":"Why does my 16-bit export sound thinner than the 24-bit one?","acceptedAnswer":{"@type":"Answer","text":"Almost certainly not the depth. A properly dithered 16-bit file measures a noise floor at &minus;96.33 dBFS and is otherwise sample-for-sample the same record. Look instead at sample rate conversion, a normalization step you forgot, or a limiter still engaged on one export and not the other. See why does my beat sound digital ."}},{"@type":"Question","name":"Does dither help a podcast or a voiceover?","acceptedAnswer":{"@type":"Answer","text":"More than it helps a loud record, and still not much. Spoken word has real gaps in it, so the quantization grain has somewhere to show, but speech is almost always delivered as a lossy file where an encoder discards a &minus;96 dBFS floor immediately. Deliver the deepest file the platform takes and skip the checkbox."}},{"@type":"Question","name":"How loud is dither in decibels?","acceptedAnswer":{"@type":"Answer","text":"Triangular dither at 16 bits produces a floor of &minus;96.33 dBFS, which is half of one 16-bit step. Undithered rounding sits at &minus;101.10 dBFS. The difference between those two numbers, 4.77 dB, is the entire cost of the technique."}}]}]}</script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&display=swap">
+<link rel="preload" href="/storefront-20261008/assets/archivo.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/storefront-20261008/assets/archivo-black.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/storefront-20261008/light/style.css?v=8b00e4b47d">
+<link rel="stylesheet" href="/storefront-20261008/theme.css?v=9ee28e6c34">
+<link rel="stylesheet" href="/storefront-20261008/purchase-snow.css?v=b5da793120">
 <style>
-/* House article layout (same measure, rhythm and furniture as
-   drum-bus-compressor-settings) in BEEFY's own colorway: paper ground, ink,
-   the red and the teal from beefy.html. The cartoon face is kept to the
-   headline and the button; long reading stays in Archivo. */
-@font-face{font-family:BeefyCartoon;src:url('/beefy/BalsamiqSans-Bold.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}
-:root{
-  --paper:#fff8e8; --ink:#211715; --ink-soft:rgba(33,23,21,.78); --ink-faint:rgba(33,23,21,.55);
-  --red:#de302b; --deep:#9d1c1c; --teal:#9bcac6; --line:rgba(33,23,21,.16);
-}
-*{box-sizing:border-box}
-body{margin:0; background:var(--paper); color:var(--ink);
-  font-family:Archivo,-apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif;
-  -webkit-font-smoothing:antialiased; min-height:100vh; border-top:10px solid var(--teal)}
-main{max-width:36em; margin:0 auto; padding:56px 24px 96px}
+/* Guide pages wear the storefront (Tony, 28 Oct 2026: "the store is the style
+   direction"). The page links the live store's own stylesheets first -
+   /storefront-20261008/light/style.css and /storefront-20261008/theme.css - so
+   the masthead lockup, the posture mark, the delivery strip, the product card,
+   the .cta family and the footer are the store's exact rules, not a copy of
+   them. This file adds only the reading surface: measure, prose roles, the
+   spec cards, figures and audio. Tokens come from the store: --field --surface
+   --ink --muted --line --product-outline. Light only, as the store is.
 
-.crumb{font-size:11px; letter-spacing:.2em; text-transform:uppercase; margin:0 0 34px}
-.crumb a{color:var(--ink-faint); text-decoration:none}
-.crumb a:hover{color:var(--ink)}
+   Type roles (BRAND-TYPOGRAPHY.md: intentional roles, consistent family):
+     authored lockups   the only display type (masthead CSS lockup, normalized-art)
+     h1 / h2 / h3       Archivo 700, sentence case as authored - ordinary headings
+     prose              Archivo 400, 16.5px, measure 36em (~68ch)
+     supporting info    Arial 400 12-13px muted (crumb, byline, captions, formats)
+     controls           the store's .cta family: Arial 700 12px, 44px, 1px border */
 
-h1{font-family:BeefyCartoon,"Comic Sans MS",sans-serif; font-weight:700;
-   font-size:clamp(34px,7vw,52px); line-height:1.02; letter-spacing:-.01em;
-   margin:0 0 14px; color:var(--ink); text-wrap:balance}
-.standfirst{margin:0 0 18px; font-size:17px; line-height:1.65; color:var(--ink-soft)}
+main.guide{max-width:38em;margin:0 auto;padding:40px 24px 72px;
+  font-family:Archivo,sans-serif;color:var(--ink);-webkit-font-smoothing:antialiased}
+main.guide p{margin:0 0 16px;font-size:16.5px;line-height:1.7}
+main.guide strong{font-weight:700}
+main.guide ul,main.guide ol{margin:0 0 16px;padding-left:1.25em}
+main.guide li{font-size:16.5px;line-height:1.65;margin:0 0 6px}
+main.guide code{font:13px/1.2 ui-monospace,Menlo,monospace;background:var(--surface);padding:1px 5px;border-radius:3px}
 
-h2{margin:52px 0 16px; font-size:12px; font-weight:600; letter-spacing:.2em;
-   text-transform:uppercase; color:var(--deep)}
-p{margin:0 0 16px; font-size:16.5px; line-height:1.72; color:var(--ink-soft)}
-strong{color:var(--ink); font-weight:600}
-em{color:var(--ink)}
-ul,ol{margin:0 0 16px; padding-left:1.2em}
-li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
+.guide .crumb{font:400 12px/1.4 Arial,sans-serif;color:var(--muted);margin:0 0 28px}
+.guide .crumb a{color:var(--muted)}
+.guide .crumb a:hover{color:var(--ink);text-decoration:underline}
+.guide .crumb span{margin:0 .5em}
 
-.card{border:1.5px solid var(--line); border-radius:14px; padding:22px 24px; margin:0 0 8px;
-      background:rgba(155,202,198,.18)}
-.card dl{margin:0; display:grid; grid-template-columns:auto 1fr; gap:10px 18px}
-.card dt{font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--deep);
-         font-weight:600; white-space:nowrap; align-self:baseline}
-.card dd{margin:0; font-size:16px; line-height:1.5; color:var(--ink)}
-@media (max-width:460px){
-  .card dl{grid-template-columns:1fr; gap:2px 0}
-  .card dd{margin:0 0 12px}
-}
+.guide h1{font-family:Archivo,sans-serif;font-weight:700;font-size:clamp(28px,4.6vw,36px);line-height:1.12;letter-spacing:-.02em;
+  margin:0 0 12px;text-wrap:balance}
+.guide .byline{font:400 12px/1.4 Arial,sans-serif;color:var(--muted);margin:0 0 28px}
+.guide .standfirst{font-size:18px;line-height:1.55;margin:0 0 20px}
+.guide h2{font:700 22px/1.25 Archivo,sans-serif;letter-spacing:-.01em;margin:44px 0 12px}
+.guide h3{font:700 17px/1.35 Archivo,sans-serif;margin:26px 0 8px}
 
-a.inline{color:var(--ink); text-decoration:underline;
-         text-underline-offset:3px; text-decoration-thickness:1px;
-         text-decoration-color:var(--ink-faint)}
-a.inline:hover{text-decoration-color:var(--red)}
+.guide a.inline,.guide .aside a,.guide .listen figcaption a,.guide .pquote a{
+  color:var(--ink);text-decoration:underline;text-underline-offset:3px;
+  text-decoration-thickness:1px;text-decoration-color:var(--muted)}
+.guide a.inline:hover,.guide .aside a:hover,.guide .listen figcaption a:hover,.guide .pquote a:hover{text-decoration-color:var(--ink)}
 
-.aside{margin:34px 0; padding:18px 0 0; border-top:1.5px solid var(--line);
-       font-size:15px; line-height:1.6; color:var(--ink-faint)}
-.aside a{color:var(--ink-soft); text-decoration:underline;
-         text-underline-offset:3px; text-decoration-color:var(--ink-faint)}
-.aside a:hover{color:var(--ink)}
+/* Spec cards: the store's product outline, square corners, no fill. */
+.guide .card{border:1px solid var(--product-outline);border-radius:4px;padding:18px 20px;margin:0 0 10px}
+.guide .card dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:9px 18px}
+.guide .card dt{font:400 12px/1.5 Arial,sans-serif;color:var(--muted);white-space:nowrap;align-self:baseline}
+.guide .card dd{margin:0;font-size:16px;line-height:1.5}
+@media(max-width:460px){.guide .card dl{grid-template-columns:1fr;gap:2px 0}.guide .card dd{margin:0 0 10px}}
 
-.end{margin:64px 0 0; padding:28px 24px; border:1.5px solid var(--line); border-radius:14px;
-     text-align:center; background:rgba(155,202,198,.18)}
-.end p{margin:0 0 18px; color:var(--ink-soft)}
-.cta{font-family:BeefyCartoon,"Comic Sans MS",sans-serif; font-weight:700; font-size:19px; letter-spacing:.01em;
-     text-decoration:none; color:var(--paper); background:var(--red);
-     border:2.5px solid var(--ink); border-radius:999px; padding:13px 30px; display:inline-block;
-     transition:transform .18s ease}
-.cta:hover{transform:translateY(-2px)}
-.cta:focus-visible{outline:3px solid var(--ink); outline-offset:4px}
-.foot{margin:88px 0 0; font-size:11px; letter-spacing:.22em; text-transform:uppercase;
-      color:var(--ink-faint); text-align:center}
-.foot a{color:var(--ink-faint)}
+/* Figures: product shots and audio examples. Every picture is a way to the product. */
+.guide figure{margin:24px 0}
+.guide .imglink{display:block}
+.guide .imglink img{transition:transform .18s ease}
+.guide .imglink:hover img{transform:translateY(-2px)}
+.guide .shot img{width:100%;height:auto;border-radius:4px}
+.guide figcaption{font:400 13px/1.5 Arial,sans-serif;color:var(--muted);margin:8px 0 0}
+.guide figcaption b{color:var(--ink);font-weight:700}
+.guide .listen figure{margin:0 0 16px}
+.guide .listen figure:last-child{margin-bottom:0}
+.guide .listen figcaption{margin:0 0 8px}
+.guide .listen audio{width:100%;height:36px;display:block}
+.guide .listen .src{font:400 13px/1.5 Arial,sans-serif;color:var(--muted);margin:12px 0 0}
+.guide .listen .demo video{display:block;width:100%;max-width:300px;height:auto;margin:0 auto 10px;border-radius:4px;background:#000}
+.guide .listen .demo figcaption{text-align:center;margin-top:8px}
 
-/* Added for the guide set: byline, question subheads, two-step crumb. */
-.crumb span{color:var(--ink-faint); margin:0 .5em}
-.byline{font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:var(--ink-faint); margin:0 0 26px}
-h3{margin:28px 0 8px; font-size:17px; font-weight:600; line-height:1.4; color:var(--ink)}
+.guide .aside{margin:30px 0;padding:14px 0 0;border-top:1px solid var(--line);font-size:15px;line-height:1.6;color:var(--muted)}
+.guide .buyline{margin:28px 0 0;text-align:center}
 
-/* ---- demo video in a listen block (guide-system audit, 28 Oct 2026) ------ */
-.listen .demo video{display:block; width:100%; max-width:300px; height:auto; margin:0 auto 10px;
-                    border-radius:10px; background:#000}
-.listen .demo figcaption{text-align:center; margin-top:8px}
-.listen figcaption a{color:var(--ink); font-weight:600; letter-spacing:.06em;
-                     text-decoration:underline; text-underline-offset:3px}
+/* Buttons inside the prose keep the store's .cta face (Arial 700 12px, 44px,
+   1px ink border) as the outlined information route. Labels are authored
+   copy, so the store's lowercase transform does not apply here. */
+.guide a.cta{display:inline-flex;text-transform:none}
+/* A bare .cta in the prose is the information route: the store's .product-page look (purchase-snow.css). */
+.guide a.cta:not(.product-page):not(.add-to-cart){background:#fff;color:#202225;border-color:var(--ink);box-shadow:none;padding-inline:16px}
+.guide a.cta:not(.product-page):not(.add-to-cart):hover{background:#f5f5f5;color:#202225}
+.guide .product-actions .cta{display:flex}
 
-.pframe{display:flex; flex-direction:column; align-items:center; gap:14px;
-        margin:0 auto 30px; max-width:420px; text-align:center;
-        padding:22px 20px; border:1px solid var(--pill-line); border-radius:14px;
-        background:rgba(242,233,235,.03)}
-.pframe img{width:132px; height:206px; object-fit:cover; object-position:top;
-            border-radius:8px; display:block}
-/* Every picture on a guide is a picture of the product, so every picture is a
-   way to the product. Tony, 24 Sep 2026. */
-.imglink{display:block; text-decoration:none; border:0}
-.imglink img{transition:transform .18s ease, filter .18s ease}
-.imglink:hover img{transform:translateY(-2px); filter:brightness(1.06)}
-.imglink:focus-visible{outline:3px solid var(--chalk); outline-offset:3px; border-radius:10px}
-.pframe-t{min-width:0; display:flex; flex-direction:column; align-items:center}
-.pframe-n{font-family:"Archivo Black","Arial Black",sans-serif; font-size:19px;
-          margin:0 0 4px; letter-spacing:.01em}
-.pframe-d{margin:0 0 14px; font-size:14px; line-height:1.5; color:var(--ink-soft)}
-.pframe .cta{font-size:14px; padding:11px 24px}
-@media (max-width:560px){
-  .pframe{max-width:none; padding:20px 16px}
-  .pframe img{width:120px; height:188px}
-}
+/* The product frame is a storefront card dropped into the article: the store's
+   .product/.stage/.legend/.ask markup, so outline, lockup size (--lockup-size),
+   formats, price and button geometry are the store's own. No demo row, so the
+   stage is shorter than the catalogue's. */
+.guide .pframe{width:min(100%,289px);margin:0 auto 40px;padding:0}  /* 289px = a catalogue card at 1280 */
+.guide .pframe .stage{height:264px;padding:0}
+.guide .pframe .media-window{inset:8px 12px 8px}
+.guide .pframe .panel-link{width:100%;height:100%}
+.guide .pframe .panel-link img{width:100%;height:100%;object-fit:contain;object-position:center bottom}
+.guide .pframe .legend{padding-top:0}
+.guide .pframe .name-link{text-align:center}
+.guide .pframe-d{font:400 13px/1.45 Arial,sans-serif;color:var(--muted);text-align:center;margin:6px 10px 0}
+.guide .pframe .ask{margin-top:10px}
+.guide .pframe .formats{color:var(--muted)}
+.guide .pframe.house .stage{height:190px}
+.guide .pframe.house .product-actions{grid-template-columns:1fr}
+@media(max-width:660px){.guide .pframe .stage{height:240px}}
+
+/* End card: the same ask, in the flow. */
+.guide .end{margin:56px 0 0;padding:24px 20px 20px;border:1px solid var(--product-outline);border-radius:4px;text-align:center}
+.guide .end p{margin:0 0 18px;font-size:16px;line-height:1.6}
+.guide .end .product-actions{max-width:300px;margin:0 auto}
+.guide .end .action-group,.guide .pframe.house .action-group{grid-template-rows:44px}
+.guide .end .formats,.guide .end .money{display:none}
+
+.guide .pquote{margin:48px 0 0;padding:0 0 0 18px;border-left:1px solid var(--line)}
+.guide .pquote blockquote{margin:0 0 8px;font-size:18px;line-height:1.5}
+.guide .pquote figcaption{margin:0}
+
+/* Keep reading and the questions: quiet lists, no boxes. */
+.guide h2+ul{list-style:none;padding:0;margin:0}
+.guide h2+ul li{font-size:15.5px;line-height:1.55;margin:0 0 10px;padding:0 0 10px;border-bottom:1px solid var(--line)}
+.guide h2+ul li:last-child{border-bottom:0}
+
+/* Store footer: GAZILLION INDUSTRIES LLC over a hairline, the reading-material link beneath. */
+.guide-foot{text-transform:uppercase}
+.guide-foot a.reading-material{text-transform:none}
+/* Collection hook for beefy guides. The house stylesheet is articles/guide.css
+   (storefront chrome and reading surface, 28 Oct 2026); the store's own
+   stylesheets load before it. Put per-collection overrides here, nothing else.
+   The previous colourway is in page.css.bak-2026-10-28-restyle. */
 </style>
+<script defer src="/storefront-20261008/light/brand.js?v=bf250f1fbd"></script>
+<script defer src="/storefront-20261008/purchase-snow.js?v=7e57c334b8"></script>
 
-<main>
+<header class="masthead"><div class="mast-inner"><a class="brand" href="/" aria-label="Gazillion Industries home"><span class="lock" aria-hidden="true"><span class="lock-a">GAZILLION</span><span class="lock-b">INDUSTRIES</span></span></a><div class="mast-actions"><p class="posture"><img src="/storefront-20261008/light/header-art/posture-dark-ink.svg?v=45319c6aa9" width="165" height="27" alt="ABSOLUTELY NOT F#&amp;KING AROUND"></p></div></div></header>
+<div class="wrap"><div class="catalog-toolbar"><p class="delivery"><strong>arrives by email</strong> - order now on your <strong>phone</strong>, install any time.</p></div></div>
+
+<main class="guide">
   <p class="crumb"><a href="/">&larr; Gazillion Industries</a><span>/</span><a href="/reading-material/">Reading material</a></p>
 
   <h1>Dithering</h1>
   <p class="byline">Gazillion Industries &middot; <time datetime="2026-09-20">September 20, 2026</time> &middot; updated <time datetime="2026-09-24">September 24, 2026</time></p>
 
-  <aside class="pframe">
-    <a href="/beefy.html" data-umami-event="guide_dither_to_beefy" data-umami-event-spot="frameimg" class="imglink"><img src="/beefy/cover.png" alt="BEEFY plug-in panel" loading="eager"></a>
-    <div class="pframe-t">
-      <p class="pframe-n">BEEFY</p>
+  <aside class="pframe product" data-product="beefy" aria-label="BEEFY">
+    <div class="stage"><div class="media-window"><a href="/beefy.html" data-umami-event="guide_dither_to_beefy" data-umami-event-spot="frameimg" class="panel-link imglink"><img src="/storefront-20261008/assets/catalog-motion/beefy-light-poster.webp?v=20261008-v8c" alt="BEEFY plug-in panel" loading="eager"></a></div></div>
+    <div class="legend"><div class="name-block"><a class="name-link" href="/beefy.html" data-umami-event="guide_dither_to_beefy" data-umami-event-spot="framename"><img class="lockup-art" src="/storefront-20261008/light/normalized-art/beefy.svg?v=ee978b5e14" width="192" height="64" alt="BEEFY. THE MAKE GOODER KNOB. MORE FATTERRER. MORE BETTERRER."></a></div>
       <p class="pframe-d">Saturation and loudness for Mac and Windows. AU, VST3 and standalone.</p>
-      <a class="cta" href="/beefy.html" data-umami-event="guide_dither_to_beefy" data-umami-event-spot="frame">Hear it</a>
+      <div class="ask"><div class="product-actions"><div class="action-group"><span class="formats">AU · VST3<br>Mac · Win</span><a class="cta product-page" href="/beefy.html" data-umami-event="guide_dither_to_beefy" data-umami-event-spot="frame" aria-label="More info about BEEFY"><span>more info</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></a></div><div class="action-group"><span class="money">$39</span><a class="cta add-to-cart" href="https://gazillionindustries.gumroad.com/l/beefy?wanted=true&amp;utm_source=gazillionindustries.com&amp;utm_medium=cta&amp;utm_content=guide_frame" data-umami-event="guide_dither_to_beefy" data-umami-event-spot="framebuy" aria-label="Get BEEFY"><span>get BEEFY</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></a></div></div></div>
     </div>
   </aside>
 
@@ -833,7 +856,7 @@ h3{margin:28px 0 8px; font-size:17px; font-weight:600; line-height:1.4; color:va
   <div class="end">
     <p>BEEFY &mdash; saturation and loudness plugin for Mac and Windows. There is
     a 28-second demo with three without/with comparisons on the page.</p>
-    <a class="cta" href="/beefy.html" data-umami-event="guide_dither_to_beefy" data-umami-event-spot="end">Hear it</a>
+    <div class="product-actions"><div class="action-group"><span class="formats">AU · VST3<br>Mac · Win</span><a class="cta product-page" href="/beefy.html" data-umami-event="guide_dither_to_beefy" data-umami-event-spot="end" aria-label="More info about BEEFY"><span>more info</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></a></div><div class="action-group"><span class="money">$39</span><a class="cta add-to-cart" href="https://gazillionindustries.gumroad.com/l/beefy?wanted=true&amp;utm_source=gazillionindustries.com&amp;utm_medium=cta&amp;utm_content=guide_end" data-umami-event="guide_dither_to_beefy" data-umami-event-spot="endbuy" aria-label="Get BEEFY"><span>get BEEFY</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></a></div></div>
   </div>
 
   <h2>Keep reading</h2>
@@ -843,7 +866,6 @@ h3{margin:28px 0 8px; font-size:17px; font-weight:600; line-height:1.4; color:va
     <li><a class="inline" href="/how-to-master-a-beat/">How to master a beat</a> &mdash; Headroom, a plain chain, clipping before the limiter, and the checks.</li>
   </ul>
 
-
-  <p class="foot"><a href="/">Gazillion Industries LLC</a> &middot; <a href="/reading-material/">reading material</a></p>
 </main>
+<footer class="foot wrap guide-foot"><p><a href="/">Gazillion Industries LLC</a><br><br><a class="reading-material" href="/reading-material/">reading material</a></p></footer>
 </html>

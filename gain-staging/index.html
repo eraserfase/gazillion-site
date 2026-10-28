@@ -49,124 +49,147 @@ fbq('track', 'PageView');
 }
 </script>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"TechArticle","@id":"https://gazillionindustries.com/gain-staging/#article","headline":"Gain staging for beatmakers","description":"What gain staging is, why it still matters in a DAW, and how to gain stage a beat: channel levels, plugin input, buses, the master, and the mistakes to avoid.","image":"https://gazillionindustries.com/beefy/cover.png","inLanguage":"en","datePublished":"2026-09-13","dateModified":"2026-09-24","url":"https://gazillionindustries.com/gain-staging/","mainEntityOfPage":"https://gazillionindustries.com/gain-staging/","author":{"@id":"https://gazillionindustries.com/#gazillion"},"publisher":{"@id":"https://gazillionindustries.com/#gazillion"},"about":{"@type":"SoftwareApplication","name":"BEEFY","url":"https://gazillionindustries.com/beefy.html"},"isPartOf":{"@id":"https://gazillionindustries.com/reading-material/#page"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Gazillion Industries","item":"https://gazillionindustries.com/"},{"@type":"ListItem","position":2,"name":"Reading material","item":"https://gazillionindustries.com/reading-material/"},{"@type":"ListItem","position":3,"name":"Gain staging for beatmakers","item":"https://gazillionindustries.com/gain-staging/"}]},{"@type":"Organization","@id":"https://gazillionindustries.com/#gazillion","name":"Gazillion Industries LLC","alternateName":"Gazillion Industries","url":"https://gazillionindustries.com/"},{"@type":"FAQPage","@id":"https://gazillionindustries.com/gain-staging/#faq","mainEntity":[{"@type":"Question","name":"What are common gain staging mistakes?","acceptedAnswer":{"@type":"Answer","text":"Mixing from samples normalized to 0&nbsp;dBFS, keeping a limiter on the master while mixing, fixing level with faders instead of input trims, and reading a peak meter as if it measured loudness. Each one either overdrives plugins or hides problems until the end."}},{"@type":"Question","name":"Should gain be low or high?","acceptedAnswer":{"@type":"Answer","text":"Moderate. Trim channels to peak around -12 to -6&nbsp;dBFS and feed hardware-style plugins an average near -18&nbsp;dBFS. Too high slams every plugin and leaves no headroom; too low buries the signal in the plugin's noise and makes compressors and saturators do nothing."}},{"@type":"Question","name":"Is there a gain staging cheat sheet?","acceptedAnswer":{"@type":"Answer","text":"The short version box at the top of this page is one: channels peaking around -12 to -6&nbsp;dBFS, about -18&nbsp;dBFS average into hardware-style plugins, trims before faders, master peaks below 0&nbsp;dBFS before the limiter, loudness last."}},{"@type":"Question","name":"Does gain staging matter in a DAW?","acceptedAnswer":{"@type":"Answer","text":"Yes, for different reasons than on tape. Floating-point mixing forgives most internal overs, but plugins still change their sound with input level, and a session with sensible levels is easier to mix and master."}},{"@type":"Question","name":"What is gain staging in simple terms?","acceptedAnswer":{"@type":"Answer","text":"Setting the volume at every point a signal passes through, so each one gets a level it works well at. The sample, the channel, each plugin, the bus, the master. Too hot and things distort or over-process; too quiet and the plugins do nothing and you drag noise up later."}},{"@type":"Question","name":"Does gain staging still matter with 32-bit float?","acceptedAnswer":{"@type":"Answer","text":"Yes, for a narrower reason. Float gives you roughly 770&nbsp;dB of range above full scale and a fixed 144.49&nbsp;dB of signal-to-error at any level, so nothing breaks inside the mix. It breaks at the converter, at a fixed-point export, and inside any plugin whose response depends on where the input sits, which is every compressor, saturator and clipper you own."}},{"@type":"Question","name":"Should I gain stage before or after EQ?","acceptedAnswer":{"@type":"Answer","text":"Before. The trim goes in the first insert slot so everything downstream sees a known level. Then remember that the EQ itself is a gain stage: a +6&nbsp;dB boost is +6&nbsp;dB into whatever follows it, and if you set a saturator and then add that boost in front of it, go back and reset the saturator."}},{"@type":"Question","name":"What level should my kick be?","acceptedAnswer":{"@type":"Answer","text":"Peaking around -6&nbsp;dBFS on its own channel is a sensible starting point, with the rest of the kit below it. There is no correct number, because it depends on the crest factor of the sample and how much else is playing. What matters is that the kick and the 808 together do not eat the whole ceiling on the same sixteenth &mdash; see how to mix kick and 808 ."}},{"@type":"Question","name":"Is -18 dBFS or -12 dBFS correct?","acceptedAnswer":{"@type":"Answer","text":"Both, for different meters. -18&nbsp;dBFS is an average and -12&nbsp;dBFS is a peak, so they describe the same signal if its crest factor is 6&nbsp;dB. Drums run wider than that: a -18&nbsp;dBFS average with a 12&nbsp;dB crest factor peaks at -6&nbsp;dBFS. Check which one your meter is reading before you trust either number."}},{"@type":"Question","name":"Is normalizing samples bad?","acceptedAnswer":{"@type":"Answer","text":"Normalizing is only a gain change, so it costs nothing in quality. What it costs is the relative balance a pack was built with: normalize everything to 0&nbsp;dBFS and you have forty channels that all need trimming and a kit where the ride is as loud as the kick. Normalize to a target well below the ceiling, or trim on import instead."}},{"@type":"Question","name":"What is the difference between gain and volume?","acceptedAnswer":{"@type":"Answer","text":"Position. Gain sets the level going into the processing; volume, meaning the fader, sets the level coming out of it. Insert slots sit before the fader in every major DAW, so the fader cannot change what a plugin hears. That is the whole reason a trim exists."}},{"@type":"Question","name":"Do I need to gain stage every plugin?","acceptedAnswer":{"@type":"Answer","text":"No. Set the level once at the top of the channel and then only correct where a plugin changes it: after an EQ boost, after anything with a makeup or output control, and at each bus. Level-match each plugin's bypass so you are comparing processing rather than loudness."}},{"@type":"Question","name":"How much headroom should I leave for mastering?","acceptedAnswer":{"@type":"Answer","text":"Peaks around -6&nbsp;dBFS with no limiter or clipper on the master is the standard hand-off, and it gives whoever masters it room to work. If you are mastering it yourself, the same number is a good place to be before you start. How loud should my master be covers what happens after that."}},{"@type":"Question","name":"Why did my mix get quieter after gain staging?","acceptedAnswer":{"@type":"Answer","text":"Because the old level came from clipping the master, and clipping the master raises average level. Pulling the channels back to a sane level removes the overs and takes the apparent volume with them. Make the loudness back up at the end, deliberately, on the master, which is the point of doing it in this order."}},{"@type":"Question","name":"Should the master fader ever move?","acceptedAnswer":{"@type":"Answer","text":"Leave it at 0&nbsp;dB. It sits after every insert on the master, so moving it changes the output level without changing what your limiter or clipper is being fed, which makes the meter lie about the work being done upstream. Fix the level on the channels or with a trim at the top of the master chain."}},{"@type":"Question","name":"How do I gain stage in FL Studio?","acceptedAnswer":{"@type":"Answer","text":"Use the Channel Rack volume knob, which sits ahead of the mixer insert slots, or drop Fruity Balance in the first slot of the mixer track. The mixer fader is behind the inserts and will not change what they receive. Trim on the loudest section, then balance with the mixer faders."}},{"@type":"Question","name":"How do I gain stage in Ableton Live?","acceptedAnswer":{"@type":"Answer","text":"Set clip Gain in the Sample box for audio clips, or put Utility first in the device chain and use its Gain. Both sit ahead of the rest of the chain. The track fader is last, so use it for balance only. Saturation plugins for Ableton Live covers what goes after it."}},{"@type":"Question","name":"Does gain staging make your mix louder?","acceptedAnswer":{"@type":"Answer","text":"No, and often the opposite in the short term. It makes the mix predictable, so the loudness you add at the end is added on purpose and holds together. The loudness itself comes from reducing crest factor with clipping, saturation, compression and limiting &mdash; see the cheapest way to make beats louder ."}}]}]}</script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&display=swap">
+<link rel="preload" href="/storefront-20261008/assets/archivo.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/storefront-20261008/assets/archivo-black.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/storefront-20261008/light/style.css?v=8b00e4b47d">
+<link rel="stylesheet" href="/storefront-20261008/theme.css?v=9ee28e6c34">
+<link rel="stylesheet" href="/storefront-20261008/purchase-snow.css?v=b5da793120">
 <style>
-/* House article layout (same measure, rhythm and furniture as
-   drum-bus-compressor-settings) in BEEFY's own colorway: paper ground, ink,
-   the red and the teal from beefy.html. The cartoon face is kept to the
-   headline and the button; long reading stays in Archivo. */
-@font-face{font-family:BeefyCartoon;src:url('/beefy/BalsamiqSans-Bold.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}
-:root{
-  --paper:#fff8e8; --ink:#211715; --ink-soft:rgba(33,23,21,.78); --ink-faint:rgba(33,23,21,.55);
-  --red:#de302b; --deep:#9d1c1c; --teal:#9bcac6; --line:rgba(33,23,21,.16);
-}
-*{box-sizing:border-box}
-body{margin:0; background:var(--paper); color:var(--ink);
-  font-family:Archivo,-apple-system,BlinkMacSystemFont,"Helvetica Neue",sans-serif;
-  -webkit-font-smoothing:antialiased; min-height:100vh; border-top:10px solid var(--teal)}
-main{max-width:36em; margin:0 auto; padding:56px 24px 96px}
+/* Guide pages wear the storefront (Tony, 28 Oct 2026: "the store is the style
+   direction"). The page links the live store's own stylesheets first -
+   /storefront-20261008/light/style.css and /storefront-20261008/theme.css - so
+   the masthead lockup, the posture mark, the delivery strip, the product card,
+   the .cta family and the footer are the store's exact rules, not a copy of
+   them. This file adds only the reading surface: measure, prose roles, the
+   spec cards, figures and audio. Tokens come from the store: --field --surface
+   --ink --muted --line --product-outline. Light only, as the store is.
 
-.crumb{font-size:11px; letter-spacing:.2em; text-transform:uppercase; margin:0 0 34px}
-.crumb a{color:var(--ink-faint); text-decoration:none}
-.crumb a:hover{color:var(--ink)}
+   Type roles (BRAND-TYPOGRAPHY.md: intentional roles, consistent family):
+     authored lockups   the only display type (masthead CSS lockup, normalized-art)
+     h1 / h2 / h3       Archivo 700, sentence case as authored - ordinary headings
+     prose              Archivo 400, 16.5px, measure 36em (~68ch)
+     supporting info    Arial 400 12-13px muted (crumb, byline, captions, formats)
+     controls           the store's .cta family: Arial 700 12px, 44px, 1px border */
 
-h1{font-family:BeefyCartoon,"Comic Sans MS",sans-serif; font-weight:700;
-   font-size:clamp(34px,7vw,52px); line-height:1.02; letter-spacing:-.01em;
-   margin:0 0 14px; color:var(--ink); text-wrap:balance}
-.standfirst{margin:0 0 18px; font-size:17px; line-height:1.65; color:var(--ink-soft)}
+main.guide{max-width:38em;margin:0 auto;padding:40px 24px 72px;
+  font-family:Archivo,sans-serif;color:var(--ink);-webkit-font-smoothing:antialiased}
+main.guide p{margin:0 0 16px;font-size:16.5px;line-height:1.7}
+main.guide strong{font-weight:700}
+main.guide ul,main.guide ol{margin:0 0 16px;padding-left:1.25em}
+main.guide li{font-size:16.5px;line-height:1.65;margin:0 0 6px}
+main.guide code{font:13px/1.2 ui-monospace,Menlo,monospace;background:var(--surface);padding:1px 5px;border-radius:3px}
 
-h2{margin:52px 0 16px; font-size:12px; font-weight:600; letter-spacing:.2em;
-   text-transform:uppercase; color:var(--deep)}
-p{margin:0 0 16px; font-size:16.5px; line-height:1.72; color:var(--ink-soft)}
-strong{color:var(--ink); font-weight:600}
-em{color:var(--ink)}
-ul,ol{margin:0 0 16px; padding-left:1.2em}
-li{font-size:16.5px; line-height:1.65; color:var(--ink-soft); margin:0 0 6px}
+.guide .crumb{font:400 12px/1.4 Arial,sans-serif;color:var(--muted);margin:0 0 28px}
+.guide .crumb a{color:var(--muted)}
+.guide .crumb a:hover{color:var(--ink);text-decoration:underline}
+.guide .crumb span{margin:0 .5em}
 
-.card{border:1.5px solid var(--line); border-radius:14px; padding:22px 24px; margin:0 0 8px;
-      background:rgba(155,202,198,.18)}
-.card dl{margin:0; display:grid; grid-template-columns:auto 1fr; gap:10px 18px}
-.card dt{font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--deep);
-         font-weight:600; white-space:nowrap; align-self:baseline}
-.card dd{margin:0; font-size:16px; line-height:1.5; color:var(--ink)}
-@media (max-width:460px){
-  .card dl{grid-template-columns:1fr; gap:2px 0}
-  .card dd{margin:0 0 12px}
-}
+.guide h1{font-family:Archivo,sans-serif;font-weight:700;font-size:clamp(28px,4.6vw,36px);line-height:1.12;letter-spacing:-.02em;
+  margin:0 0 12px;text-wrap:balance}
+.guide .byline{font:400 12px/1.4 Arial,sans-serif;color:var(--muted);margin:0 0 28px}
+.guide .standfirst{font-size:18px;line-height:1.55;margin:0 0 20px}
+.guide h2{font:700 22px/1.25 Archivo,sans-serif;letter-spacing:-.01em;margin:44px 0 12px}
+.guide h3{font:700 17px/1.35 Archivo,sans-serif;margin:26px 0 8px}
 
-a.inline{color:var(--ink); text-decoration:underline;
-         text-underline-offset:3px; text-decoration-thickness:1px;
-         text-decoration-color:var(--ink-faint)}
-a.inline:hover{text-decoration-color:var(--red)}
+.guide a.inline,.guide .aside a,.guide .listen figcaption a,.guide .pquote a{
+  color:var(--ink);text-decoration:underline;text-underline-offset:3px;
+  text-decoration-thickness:1px;text-decoration-color:var(--muted)}
+.guide a.inline:hover,.guide .aside a:hover,.guide .listen figcaption a:hover,.guide .pquote a:hover{text-decoration-color:var(--ink)}
 
-.aside{margin:34px 0; padding:18px 0 0; border-top:1.5px solid var(--line);
-       font-size:15px; line-height:1.6; color:var(--ink-faint)}
-.aside a{color:var(--ink-soft); text-decoration:underline;
-         text-underline-offset:3px; text-decoration-color:var(--ink-faint)}
-.aside a:hover{color:var(--ink)}
+/* Spec cards: the store's product outline, square corners, no fill. */
+.guide .card{border:1px solid var(--product-outline);border-radius:4px;padding:18px 20px;margin:0 0 10px}
+.guide .card dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:9px 18px}
+.guide .card dt{font:400 12px/1.5 Arial,sans-serif;color:var(--muted);white-space:nowrap;align-self:baseline}
+.guide .card dd{margin:0;font-size:16px;line-height:1.5}
+@media(max-width:460px){.guide .card dl{grid-template-columns:1fr;gap:2px 0}.guide .card dd{margin:0 0 10px}}
 
-.end{margin:64px 0 0; padding:28px 24px; border:1.5px solid var(--line); border-radius:14px;
-     text-align:center; background:rgba(155,202,198,.18)}
-.end p{margin:0 0 18px; color:var(--ink-soft)}
-.cta{font-family:BeefyCartoon,"Comic Sans MS",sans-serif; font-weight:700; font-size:19px; letter-spacing:.01em;
-     text-decoration:none; color:var(--paper); background:var(--red);
-     border:2.5px solid var(--ink); border-radius:999px; padding:13px 30px; display:inline-block;
-     transition:transform .18s ease}
-.cta:hover{transform:translateY(-2px)}
-.cta:focus-visible{outline:3px solid var(--ink); outline-offset:4px}
-.foot{margin:88px 0 0; font-size:11px; letter-spacing:.22em; text-transform:uppercase;
-      color:var(--ink-faint); text-align:center}
-.foot a{color:var(--ink-faint)}
+/* Figures: product shots and audio examples. Every picture is a way to the product. */
+.guide figure{margin:24px 0}
+.guide .imglink{display:block}
+.guide .imglink img{transition:transform .18s ease}
+.guide .imglink:hover img{transform:translateY(-2px)}
+.guide .shot img{width:100%;height:auto;border-radius:4px}
+.guide figcaption{font:400 13px/1.5 Arial,sans-serif;color:var(--muted);margin:8px 0 0}
+.guide figcaption b{color:var(--ink);font-weight:700}
+.guide .listen figure{margin:0 0 16px}
+.guide .listen figure:last-child{margin-bottom:0}
+.guide .listen figcaption{margin:0 0 8px}
+.guide .listen audio{width:100%;height:36px;display:block}
+.guide .listen .src{font:400 13px/1.5 Arial,sans-serif;color:var(--muted);margin:12px 0 0}
+.guide .listen .demo video{display:block;width:100%;max-width:300px;height:auto;margin:0 auto 10px;border-radius:4px;background:#000}
+.guide .listen .demo figcaption{text-align:center;margin-top:8px}
 
-/* Added for the guide set: byline, question subheads, two-step crumb. */
-.crumb span{color:var(--ink-faint); margin:0 .5em}
-.byline{font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:var(--ink-faint); margin:0 0 26px}
-h3{margin:28px 0 8px; font-size:17px; font-weight:600; line-height:1.4; color:var(--ink)}
+.guide .aside{margin:30px 0;padding:14px 0 0;border-top:1px solid var(--line);font-size:15px;line-height:1.6;color:var(--muted)}
+.guide .buyline{margin:28px 0 0;text-align:center}
 
-/* ---- demo video in a listen block (guide-system audit, 28 Oct 2026) ------ */
-.listen .demo video{display:block; width:100%; max-width:300px; height:auto; margin:0 auto 10px;
-                    border-radius:10px; background:#000}
-.listen .demo figcaption{text-align:center; margin-top:8px}
-.listen figcaption a{color:var(--ink); font-weight:600; letter-spacing:.06em;
-                     text-decoration:underline; text-underline-offset:3px}
+/* Buttons inside the prose keep the store's .cta face (Arial 700 12px, 44px,
+   1px ink border) as the outlined information route. Labels are authored
+   copy, so the store's lowercase transform does not apply here. */
+.guide a.cta{display:inline-flex;text-transform:none}
+/* A bare .cta in the prose is the information route: the store's .product-page look (purchase-snow.css). */
+.guide a.cta:not(.product-page):not(.add-to-cart){background:#fff;color:#202225;border-color:var(--ink);box-shadow:none;padding-inline:16px}
+.guide a.cta:not(.product-page):not(.add-to-cart):hover{background:#f5f5f5;color:#202225}
+.guide .product-actions .cta{display:flex}
 
-.pframe{display:flex; flex-direction:column; align-items:center; gap:14px;
-        margin:0 auto 30px; max-width:420px; text-align:center;
-        padding:22px 20px; border:1px solid var(--pill-line); border-radius:14px;
-        background:rgba(242,233,235,.03)}
-.pframe img{width:132px; height:206px; object-fit:cover; object-position:top;
-            border-radius:8px; display:block}
-/* Every picture on a guide is a picture of the product, so every picture is a
-   way to the product. Tony, 24 Sep 2026. */
-.imglink{display:block; text-decoration:none; border:0}
-.imglink img{transition:transform .18s ease, filter .18s ease}
-.imglink:hover img{transform:translateY(-2px); filter:brightness(1.06)}
-.imglink:focus-visible{outline:3px solid var(--chalk); outline-offset:3px; border-radius:10px}
-.pframe-t{min-width:0; display:flex; flex-direction:column; align-items:center}
-.pframe-n{font-family:"Archivo Black","Arial Black",sans-serif; font-size:19px;
-          margin:0 0 4px; letter-spacing:.01em}
-.pframe-d{margin:0 0 14px; font-size:14px; line-height:1.5; color:var(--ink-soft)}
-.pframe .cta{font-size:14px; padding:11px 24px}
-@media (max-width:560px){
-  .pframe{max-width:none; padding:20px 16px}
-  .pframe img{width:120px; height:188px}
-}
+/* The product frame is a storefront card dropped into the article: the store's
+   .product/.stage/.legend/.ask markup, so outline, lockup size (--lockup-size),
+   formats, price and button geometry are the store's own. No demo row, so the
+   stage is shorter than the catalogue's. */
+.guide .pframe{width:min(100%,289px);margin:0 auto 40px;padding:0}  /* 289px = a catalogue card at 1280 */
+.guide .pframe .stage{height:264px;padding:0}
+.guide .pframe .media-window{inset:8px 12px 8px}
+.guide .pframe .panel-link{width:100%;height:100%}
+.guide .pframe .panel-link img{width:100%;height:100%;object-fit:contain;object-position:center bottom}
+.guide .pframe .legend{padding-top:0}
+.guide .pframe .name-link{text-align:center}
+.guide .pframe-d{font:400 13px/1.45 Arial,sans-serif;color:var(--muted);text-align:center;margin:6px 10px 0}
+.guide .pframe .ask{margin-top:10px}
+.guide .pframe .formats{color:var(--muted)}
+.guide .pframe.house .stage{height:190px}
+.guide .pframe.house .product-actions{grid-template-columns:1fr}
+@media(max-width:660px){.guide .pframe .stage{height:240px}}
+
+/* End card: the same ask, in the flow. */
+.guide .end{margin:56px 0 0;padding:24px 20px 20px;border:1px solid var(--product-outline);border-radius:4px;text-align:center}
+.guide .end p{margin:0 0 18px;font-size:16px;line-height:1.6}
+.guide .end .product-actions{max-width:300px;margin:0 auto}
+.guide .end .action-group,.guide .pframe.house .action-group{grid-template-rows:44px}
+.guide .end .formats,.guide .end .money{display:none}
+
+.guide .pquote{margin:48px 0 0;padding:0 0 0 18px;border-left:1px solid var(--line)}
+.guide .pquote blockquote{margin:0 0 8px;font-size:18px;line-height:1.5}
+.guide .pquote figcaption{margin:0}
+
+/* Keep reading and the questions: quiet lists, no boxes. */
+.guide h2+ul{list-style:none;padding:0;margin:0}
+.guide h2+ul li{font-size:15.5px;line-height:1.55;margin:0 0 10px;padding:0 0 10px;border-bottom:1px solid var(--line)}
+.guide h2+ul li:last-child{border-bottom:0}
+
+/* Store footer: GAZILLION INDUSTRIES LLC over a hairline, the reading-material link beneath. */
+.guide-foot{text-transform:uppercase}
+.guide-foot a.reading-material{text-transform:none}
+/* Collection hook for beefy guides. The house stylesheet is articles/guide.css
+   (storefront chrome and reading surface, 28 Oct 2026); the store's own
+   stylesheets load before it. Put per-collection overrides here, nothing else.
+   The previous colourway is in page.css.bak-2026-10-28-restyle. */
 </style>
+<script defer src="/storefront-20261008/light/brand.js?v=bf250f1fbd"></script>
+<script defer src="/storefront-20261008/purchase-snow.js?v=7e57c334b8"></script>
 
-<main>
+<header class="masthead"><div class="mast-inner"><a class="brand" href="/" aria-label="Gazillion Industries home"><span class="lock" aria-hidden="true"><span class="lock-a">GAZILLION</span><span class="lock-b">INDUSTRIES</span></span></a><div class="mast-actions"><p class="posture"><img src="/storefront-20261008/light/header-art/posture-dark-ink.svg?v=45319c6aa9" width="165" height="27" alt="ABSOLUTELY NOT F#&amp;KING AROUND"></p></div></div></header>
+<div class="wrap"><div class="catalog-toolbar"><p class="delivery"><strong>arrives by email</strong> - order now on your <strong>phone</strong>, install any time.</p></div></div>
+
+<main class="guide">
   <p class="crumb"><a href="/">&larr; Gazillion Industries</a><span>/</span><a href="/reading-material/">Reading material</a></p>
 
   <h1>Gain staging for beatmakers</h1>
   <p class="byline">Gazillion Industries &middot; <time datetime="2026-09-13">September 13, 2026</time> &middot; updated <time datetime="2026-09-24">September 24, 2026</time></p>
 
-  <aside class="pframe">
-    <a href="/beefy.html" data-umami-event="guide_gainstage_to_beefy" data-umami-event-spot="frameimg" class="imglink"><img src="/beefy/cover.png" alt="BEEFY plug-in panel" loading="eager"></a>
-    <div class="pframe-t">
-      <p class="pframe-n">BEEFY</p>
+  <aside class="pframe product" data-product="beefy" aria-label="BEEFY">
+    <div class="stage"><div class="media-window"><a href="/beefy.html" data-umami-event="guide_gainstage_to_beefy" data-umami-event-spot="frameimg" class="panel-link imglink"><img src="/storefront-20261008/assets/catalog-motion/beefy-light-poster.webp?v=20261008-v8c" alt="BEEFY plug-in panel" loading="eager"></a></div></div>
+    <div class="legend"><div class="name-block"><a class="name-link" href="/beefy.html" data-umami-event="guide_gainstage_to_beefy" data-umami-event-spot="framename"><img class="lockup-art" src="/storefront-20261008/light/normalized-art/beefy.svg?v=ee978b5e14" width="192" height="64" alt="BEEFY. THE MAKE GOODER KNOB. MORE FATTERRER. MORE BETTERRER."></a></div>
       <p class="pframe-d">Saturation and loudness for Mac and Windows. AU, VST3 and standalone.</p>
-      <a class="cta" href="/beefy.html" data-umami-event="guide_gainstage_to_beefy" data-umami-event-spot="frame">Hear it</a>
+      <div class="ask"><div class="product-actions"><div class="action-group"><span class="formats">AU · VST3<br>Mac · Win</span><a class="cta product-page" href="/beefy.html" data-umami-event="guide_gainstage_to_beefy" data-umami-event-spot="frame" aria-label="More info about BEEFY"><span>more info</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></a></div><div class="action-group"><span class="money">$39</span><a class="cta add-to-cart" href="https://gazillionindustries.gumroad.com/l/beefy?wanted=true&amp;utm_source=gazillionindustries.com&amp;utm_medium=cta&amp;utm_content=guide_frame" data-umami-event="guide_gainstage_to_beefy" data-umami-event-spot="framebuy" aria-label="Get BEEFY"><span>get BEEFY</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></a></div></div></div>
     </div>
   </aside>
 
@@ -621,7 +644,7 @@ h3{margin:28px 0 8px; font-size:17px; font-weight:600; line-height:1.4; color:va
   <div class="end">
     <p>BEEFY &mdash; saturation and loudness plugin for Mac and Windows. There is
     a 28-second demo with three without/with comparisons on the page.</p>
-    <a class="cta" href="/beefy.html" data-umami-event="guide_gainstage_to_beefy" data-umami-event-spot="end">Hear it</a>
+    <div class="product-actions"><div class="action-group"><span class="formats">AU · VST3<br>Mac · Win</span><a class="cta product-page" href="/beefy.html" data-umami-event="guide_gainstage_to_beefy" data-umami-event-spot="end" aria-label="More info about BEEFY"><span>more info</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></a></div><div class="action-group"><span class="money">$39</span><a class="cta add-to-cart" href="https://gazillionindustries.gumroad.com/l/beefy?wanted=true&amp;utm_source=gazillionindustries.com&amp;utm_medium=cta&amp;utm_content=guide_end" data-umami-event="guide_gainstage_to_beefy" data-umami-event-spot="endbuy" aria-label="Get BEEFY"><span>get BEEFY</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></a></div></div>
   </div>
 
   <h2>Keep reading</h2>
@@ -636,7 +659,6 @@ h3{margin:28px 0 8px; font-size:17px; font-weight:600; line-height:1.4; color:va
     <li><a class="inline" href="/what-is-a-drum-bus/">What is a drum bus, and why put things on it?</a> &mdash; One channel for the whole kit: how to build it, what to put on it, and why the sum behaves differently.</li>
   </ul>
 
-
-  <p class="foot"><a href="/">Gazillion Industries LLC</a> &middot; <a href="/reading-material/">reading material</a></p>
 </main>
+<footer class="foot wrap guide-foot"><p><a href="/">Gazillion Industries LLC</a><br><br><a class="reading-material" href="/reading-material/">reading material</a></p></footer>
 </html>
