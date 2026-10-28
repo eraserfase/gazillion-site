@@ -28,7 +28,9 @@ linking.
 - [Free boom bap plugins: chop, swing, dust and squash](https://gazillionindustries.com/free-boom-bap-plugins.md): The free plugin chain behind boom bap drums.
 - [Free drum bus compressor and drum compressor plugins](https://gazillionindustries.com/free-drum-bus-compressor.md): The free compressor for the drum bus, and how to set it up.
 - [Free glue compressor plugins, and the one we would use](https://gazillionindustries.com/free-glue-compressor.md): The free plugins that do glue, and how to set one.
+- [Free vinyl sim plugins, and the one we make](https://gazillionindustries.com/free-vinyl-sim-plugin.md): The free plugin for the noise, the free one for the squash, and the order.
 - [Glue compression](https://gazillionindustries.com/glue-compression.md): What a bus compressor does to a group, and where to start.
+- [Glue compressor in FL Studio: Fruity Limiter, Maximus, and the free one](https://gazillionindustries.com/glue-compressor-in-fl-studio.md): Build the drum bus, then glue it with Fruity Limiter or ours.
 - [How to chop a drum break](https://gazillionindustries.com/how-to-chop-a-drum-break.md): Finding a break, slicing it, keeping the swing, making it sit.
 - [How to chop samples](https://gazillionindustries.com/how-to-chop-samples.md): Tempo, where to slice, killing clicks, and playing a new arrangement.
 - [How to compress drums](https://gazillionindustries.com/how-to-compress-drums.md): Attack, release and how much gain reduction, on single drums and on the bus.
@@ -38,6 +40,7 @@ linking.
 - [Multiband compression](https://gazillionindustries.com/multiband-compression.md): What it is for, how to set it, and why most problems need one band.
 - [Parallel compression](https://gazillionindustries.com/parallel-compression.md): Blending a crushed copy under the dry track, and the alignment trap.
 - [Sidechain compression](https://gazillionindustries.com/sidechain-compression.md): Ducking one track with another: routing, settings, and when not to.
+- [The SP-202 and the start of the SP line](https://gazillionindustries.com/sp-202.md): The 1998 Dr. Sample that started the SP line, and what carried into the 303 and 404.
 - [The SP-303 vinyl sim: the sound, the compressor, and a free way in](https://gazillionindustries.com/sp-303.md): What the 2001 sampler was, what its Vinyl Simulator does, and who used it.
 - [Vinyl sim, and what a vinyl sim plugin does](https://gazillionindustries.com/vinyl-sim-plugin.md): The effect taken apart: bandwidth, noise, the squash and the wear.
 - [Compression explained](https://gazillionindustries.com/what-is-a-compressor.md): Threshold, ratio, attack, release, and settings that are a fair place to start.

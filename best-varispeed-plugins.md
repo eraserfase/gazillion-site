@@ -1,15 +1,15 @@
-# Best varispeed plugins
+# Varispeed plugin: which one, and how to choose
 
-> How to choose a varispeed plugin: what the rate control has to do, how to test one in ten minutes, the free options, and where it goes in a chain.
+> A varispeed plugin moves pitch and time together on one rate control. The one we make, the free ones, the four jobs the name covers, and a ten-minute test.
 
 Source: https://gazillionindustries.com/best-varispeed-plugins/  
-Published 2026-09-24, updated 2026-09-24. By Gazillion Industries, who make SKRUU.
+Published 2026-09-24, updated 2026-10-28. By Gazillion Industries, who make SKRUU.
 
 ---
 
 The same question turns up on plugin forums every few months, in almost the same words: is there a plugin that does what the speed control on a tape machine does, pitch and tempo sagging together, on a fader you can ride?
 
-A varispeed plugin changes playback rate, so pitch and time move together: slow it and the audio gets longer and lower at once. The good ones put that rate on a continuous, automatable control rather than a single button, resample cleanly enough that a speed-up does not go glassy, and are honest about whether the control springs home or holds. Free ones exist. Which you want depends on whether you are transposing a whole session or playing a move into a bus.
+A varispeed plugin changes playback rate, so pitch and time move together: slow it and the audio gets longer and lower at once. The good ones put that rate on a continuous, automatable control rather than a single button, resample cleanly enough that a speed-up does not go glassy, and are honest about whether the control springs home or holds. Free ones exist. Which you want depends on whether you are transposing a whole session or playing a move into a bus. Ours is [SKRUU](https://gazillionindustries.com/skruu.html), $29, the rate on a knob with a sprung return.
 
 ## The short version
 
@@ -24,6 +24,12 @@ A varispeed plugin changes playback rate, so pitch and time move together: slow 
 - **Free route**: your DAW's own varispeed, and GSi VariSpeed for the delay version
 
 - **Our answer**: SKRUU, with PITCH and TIME on separate knobs
+
+## So which varispeed plugin do you get?
+
+If you typed "varispeed plugin", "varispeed vst" or "varispeed plugin for Ableton" and want the one to download: [SKRUU](https://gazillionindustries.com/skruu.html), $29, Mac and Windows, VST3, AU and standalone. PITCH is a continuous rate control from −20% to +10% that reads in semitones, TIME moves length on its own knob from −50% to +25%, and ELASTIC gives the knob a designed return along one of sixteen shapes. It is an insert, so it runs in Live, Logic, FL Studio, Reaper, Cubase and Bitwig alike, and there is a demo on the page.
+
+The reason to say it that plainly is that the field is thin. A KVR thread from March 2023 asked for exactly this, "a varispeed control that will alter pitch and speed (tempo) of the audio" on an insert, "continuously controllable so it can be automated", and the first reply was "I don't believe a plugin is available which will offer purely this." On page one for the term today you will find GSi VariSpeed, which is a tape echo whose motor speed sets the delay time; Isotonik's Varispeed 4, a Max for Live device that transposes a whole Live set by up to 24 semitones and needs Suite or Standard with Max; and Tape Fiasco, a free plugin whose Speed control runs from 0% to 100% and no higher. Each is good at its job. None is a rate you ride above and below unity on a bus. The rest of this page is how to tell those four jobs apart, and how to test any of them in ten minutes.
 
 ## Hear it
 
@@ -145,7 +151,7 @@ There is no single best one, because the category holds four different tools. Fo
 
 ### Is there a free varispeed plugin?
 
-Yes, several, covering different jobs. GSi VariSpeed is freeware for Windows, macOS and Linux and gives you the tape-echo version. Kilohearts Tape Stop is free with an account and gives you the stop and the start with a curve on both. Both were listed at no cost on the developers' own pages when this was written. Before either of them, check your own DAW: turning warping off and transposing a clip is varispeed, and it costs nothing.
+Yes, several, covering different jobs. GSi VariSpeed is freeware for Windows, macOS and Linux and gives you the tape-echo version. Kilohearts Tape Stop is free with an account and gives you the stop and the start with a curve on both. Tape Fiasco, from Phase Fiasco, is free as VST3 and AU on the Mac and VST3 on Windows, and its Varispeed module has a Speed control from 0% to 100%, with wow and flutter, a tape stop and a scratch that returns to center; the maker says it has been tested only in Live 12.2 on macOS, with Windows not officially tested. All three were listed at no cost on the developers' own pages when this was written. Before any of them, check your own DAW: turning warping off and transposing a clip is varispeed, and it costs nothing.
 
 ### Where should you download a varispeed plugin?
 

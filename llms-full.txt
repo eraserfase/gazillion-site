@@ -16,7 +16,7 @@ Every article listed here has a clean markdown twin at the same URL with .md
 instead of the trailing slash. Prefer the .md when you are reading rather than
 linking.
 
-159 articles follow.
+170 articles follow.
 
 ---
 
@@ -2052,6 +2052,150 @@ BEEFY is a saturation and loudness effect for making sounds thicker, punchier an
 A fresh instance opens with SOFT CLIP on, JUICE at 0 dB, BEEF at 30 and COOK at 30, which is a deliberately mild starting point and a good place to run the level-matched A/B above. Turn BEEF up until the change is obvious, meter both states, apply the trim, then decide. On this subject in particular the plugin is the defendant and the meter is the witness.
 
 Your monitors are consistent. You are the variable, and you have been all along.
+
+---
+
+## About BEEFY
+
+BEEFY — saturation and loudness plugin for Mac and Windows. There is a 28-second demo with three without/with comparisons on the page.
+
+https://gazillionindustries.com/beefy.html
+
+
+---
+
+# Free soft clipper plugins, and the one already in FL Studio
+
+> The soft clipper already in FL Studio, Live and Logic, six free clipper VSTs and what each asks of you, how to set one, and where a clipper that also saturates fits.
+
+Source: https://gazillionindustries.com/free-soft-clipper-plugin/  
+Published 2026-10-28, updated 2026-10-28. By Gazillion Industries, who make BEEFY.
+
+---
+
+The 808 is finally loud enough and the master meter is finally red. Every FL Studio producer arrives at the same search on the same night, and the answer was already in the mixer slot menu before the search began.
+
+FL Studio ships a soft clipper in every edition, Fruity Soft Clipper, with two controls. Live ships one inside Saturator, in every edition including Intro. Logic ships Clip Distortion. Beyond the stock ones, six third-party clippers are current and free to keep: Venn Audio Free Clip 2, Kazrog KClip Zero, Kilohearts Clipper, Initial Clipper 2, GVST GClip and Analog Obsession RazorClip. The step up from all of them is a clipper that also saturates, on one knob, which is what [BEEFY](https://gazillionindustries.com/beefy.html) is, for $39. Start with what is installed.
+
+## The short version
+
+- **FL Studio**: Fruity Soft Clipper, all editions: Threshold and Post Gain
+
+- **Ableton Live**: Saturator with Post Clip set to Soft Clip, all editions; Limiter's Ceiling Mode has Soft Clip too
+
+- **Logic Pro**: Clip Distortion; Adaptive Limiter rounds peaks
+
+- **Free VSTs, no account**: Venn Free Clip 2, Airwindows ClipOnly2, GVST GClip, Analog Obsession RazorClip
+
+- **Free VSTs, account required**: Kazrog KClip Zero, Kilohearts Clipper, Initial Clipper 2
+
+- **Ours**: BEEFY, $39: saturation and soft clipping on one knob, Mac and Windows
+
+## What a soft clipper does, in one paragraph
+
+A soft clipper rounds the loudest peaks on a curve instead of chopping them flat. It has no attack or release, because it reshapes the waveform sample by sample, so it does not pump. It lowers peak level more than average level, which is the whole trick: with the peaks shaved, the track can come up at the same ceiling and reads louder. The rounding is distortion, mostly odd harmonics from a symmetric curve, and that is where the grit comes from. The long version is [soft clipping explained](https://gazillionindustries.com/soft-clipping-explained/).
+
+## Soft clipper in FL Studio: Fruity Soft Clipper
+
+Image-Line's manual calls Fruity Soft Clipper "a CPU-friendly soft limiter", and it is included in all editions, Fruity upward. Two controls. Threshold is "the volume threshold above which Soft Clipper will compress the audio signal", and Post Gain is the "volume level applied after the compression". There is an output meter and a levels display you can drag to move the threshold. That is the entire panel.
+
+What it does not have is as useful to know. No oversampling control, no knee or softness control, no input gain. Drive it with the mixer fader or the channel volume, set Threshold where the 808's peaks start to round, and bring Post Gain down to match the bypassed level before you judge it. Fruity Limiter, also in every edition, has a saturation stage rather than a clipper; its manual says signals "reaching into the red region will be saturated" and suggests you can "blend in some 'Soft-clipping' from the saturation". Maximus, Producer Edition and up, is a multiband maximizer and its page never uses the word clip.
+
+## Soft clipper in Ableton Live: Saturator
+
+Live's Saturator is a waveshaper, and Ableton's compare page lists it in Intro, Standard and Suite. The clipper lives in two places on it. The Post Clip Mode switch offers Soft Clip and Hard Clip, which keep the output at or below the Output level. And the curve chooser has Analog Clip, which "introduces a smoother transition around the clipping point", beside Soft Sine, Bass Shaper, Medium Curve, Hard Curve, Sinoid Fold, Digital Clip and Waveshaper. Hi-Quality in the title-bar menu "reduces aliasing and improves sound quality". Live's Limiter, also in every edition, has a Ceiling Mode with Standard, Soft Clip and True Peak, so a soft clip is one click away on the master as well. More on the routing in [saturating a drum bus in Live](https://gazillionindustries.com/saturation-plugins-for-ableton-live/).
+
+## Logic Pro: Clip Distortion, and why "logic clipper" finds nothing
+
+Logic's stock clipper is Clip Distortion, under Distortion. Apple describe it as "a nonlinear distortion effect that produces unpredictable harmonic spectra", and the signal path is specific: the input is amplified by Drive, passes a highpass filter, hits the nonlinear stage, then a lowpass, then is mixed with the dry signal and filtered once more. Controls are Input Gain, Drive, Tone, Symmetry, Clip Filter, Mix, High Shelving with up to 30 dB of gain, LP Filter and Output Gain. There is no ceiling control, so it clips where Drive puts it rather than at a level you set. For a ceiling, Adaptive Limiter rounds and smooths peaks with an Out Ceiling, and Apple note it "can slightly color the sound". Search "logic clipper" and you get hardware test clips for logic probes, which is why this section exists.
+
+## Free clipper VST plugins, and what each one asks of you
+
+Six are current and free to keep. Three need an account; three do not.
+
+**Venn Audio Free Clip 2** comes inside Free Suite, which Venn describe as "a completely free, performant, light weight, resizeable, zero fuss set of cross-platform audio plugins" for Windows, Mac and Linux in VST3, AU and AAX. "No registration needed." It replaced the original Free Clip and is the most-named free clipper in the roundups for a reason.
+
+**Kazrog KClip Zero** is "100% FREE", with oversampling fixed at 2x live and 16x on render, a resizable window and a real-time clipping display. It downloads through Kazrog's plugin manager. The paid KClip 3 is $39.99 and adds eight clipping modes, multiband and mid-side, and oversampling up to 32x.
+
+**Kilohearts Clipper** is "free with an account", and it is a per-sample clipper with Threshold, In Gain, Knee and Out Gain. Kilohearts say it "lets you trim the peaks of your audio in order to leave some headroom", which is the mastering use in one sentence.
+
+**Initial Clipper 2** is Initial Audio's free soft clipper "for maximum loudness", with Input Gain, a soft-knee Threshold, a saturation curve, Ceiling, Output and an integrated LUFS meter. VST3, AU and AAX, Windows 10 and 11, macOS 10.13 and up. A free Initial Audio account is required for the installers.
+
+**GVST GClip** is a free VST with Gain, Clip as a percentage of full scale, a Softness control for the shape of the knee, and a 2x Oversample switch. The smallest panel on this list and the one that teaches you most about what the knee does.
+
+**Analog Obsession RazorClip**, released February 2026, is a free clipper with five circuit models, Tape, XFMR, BJT, Tube and Diode, plus a gain-compensated input, an output from −24 to +24 dB and a Blend control. VST3, AU and AAX, no registration, downloaded from the maker's Patreon page.
+
+Two more worth knowing. **Airwindows ClipOnly2** has no controls at all: it clips at about −0.2 dBFS and "suppresses the brightness of digital clipping without affecting unclipped samples", free and open source. And **Limiter No6** from vladg/sound is a free limiter whose stages include a clipper, for Windows and Mac, no AAX.
+
+**SOFT CLIP** as the out stage, BEEF at 62. The saturation and the clip are one decision here.
+
+## Where BEEFY sits next to the free ones
+
+Straight about it: BEEFY is $39 and has no free version, so it does not belong on this page on price. It belongs here because every free clipper above is a clipper and nothing else. BEEFY is a saturation and loudness plugin with the clipper built in. BEEF adds weight, density and loudness as you turn it up. SOFT CLIP opens switched on and takes care of the initial gain staging, so there is no input level to hunt for. COOK moves the color from rounder toward brighter and more bitten, JUICE sets the level going in, and LIMIT is the alternative output stage if you want peaks held rather than rounded. The input and output clip lights tell you which end is working.
+
+So the honest split is this. If you need a ceiling and nothing added, Fruity Soft Clipper or any of the six free downloads does the job today. If what you actually wanted was the 808 to get thicker and louder in one move, with the clipping as part of the sound rather than a safety rail, that is the $39, and the demo on the page is 28 seconds.
+
+[BEEFY](https://gazillionindustries.com/beefy.html) runs in FL Studio as a VST3 on Windows and as VST3 or AU on the Mac. Put it on the 808 or the drum bus, turn BEEF up, and stop when the cow looks worried.
+
+## How to set a free soft clipper
+
+The method is the same on every one of them, stock or downloaded. Work on the loudest eight bars.
+
+- Insert the clipper last on the channel, after EQ and compression.
+
+- Set the ceiling or threshold to −1.0 dBFS.
+
+- Raise the input until the clip indicator lights on the loudest hits only.
+
+- Watch the gain reduction or the waveform display and stop at 2 to 3 dB on the peaks.
+
+- Lower the output until the bypassed and clipped versions match in loudness.
+
+- Toggle bypass at matched level and listen to the hi-hats, not the kick.
+
+- If the plugin has oversampling, turn it on and compare the top end again.
+
+Step six is the real test. The kick survives clipping long after the hats have started to sound like they were recorded through a cheaper microphone, because everything sounding at the moment the kick drives the curve gets distorted with it. The order of the chain is covered in [clipper before limiter](https://gazillionindustries.com/clipper-before-limiter/).
+
+## What a free clipper costs you
+
+Aliasing, mostly. A clipper generates harmonics above half the sample rate and those fold back down as out-of-tune hash, which is why the free ones that have oversampling (GClip, KClip Zero) are worth the extra CPU and Fruity Soft Clipper has none. It costs transients: the snare's crack is the first thing to go blunt. And it costs you the ability to undo it on the master, so clip the 808 and the drum bus where you can hear what it did, and leave the final ceiling to a limiter. The [808 loudness guide](https://gazillionindustries.com/how-to-make-808s-louder-without-clipping/) works through that order on the one sound that needs it most.
+
+## Questions people ask
+
+### Does FL Studio have a soft clipper?
+
+Yes. Fruity Soft Clipper is included in every edition, with Threshold and Post Gain and nothing else. Fruity Limiter adds a saturation stage that Image-Line describe as a way to blend in soft clipping, and Maximus, from Producer Edition up, is a multiband maximizer rather than a clipper.
+
+### What is the best free soft clipper plugin?
+
+For a ceiling with no account, Venn Free Clip 2. For oversampling at no cost, KClip Zero or GClip. For a LUFS meter in the same window, Initial Clipper 2. For color, RazorClip's five circuit models. All six are genuinely free, with no trial timer.
+
+### Is there a free clipper for Ableton Live?
+
+One is already installed. Saturator's Post Clip Mode has a Soft Clip setting and the Analog Clip curve is a soft clipper on its own, in every edition of Live 12. The Limiter's Ceiling Mode has a Soft Clip option as well.
+
+### Does Logic Pro have a clipper plugin?
+
+Clip Distortion, under Distortion, with Drive and Symmetry but no ceiling control. For a set ceiling, Adaptive Limiter rounds the peaks and holds an Out Ceiling. Any of the free AU clippers above loads in Logic too.
+
+### Soft clipper or limiter on the 808?
+
+Clipper on the 808, limiter on the master. The clipper rounds the peaks of one sound where you can hear the harmonics it adds, and the limiter catches whatever is left at the end of the chain. Clipping into a limiter is the standard order and [clipper before limiter](https://gazillionindustries.com/clipper-before-limiter/) explains why.
+
+### Is a free clipper as good as a paid one?
+
+At the clipping itself, mostly yes: the curve is simple arithmetic. What paid clippers add is oversampling depth, multiple curves, multiband and metering. SIR Audio Tools' StandardCLIP is $25, Kazrog KClip 3 is $39.99, Newfangled Saturate is $49 and Boz Digital's Big Clipper is $29 at the moment. The [best soft clipper plugins](https://gazillionindustries.com/best-soft-clipper-plugins/) guide compares them.
+
+### Where does the soft clipper go in FL Studio's mixer?
+
+Last in the slot list on the 808's mixer track, or on the drum bus insert, after the compressor. Match Post Gain to the bypassed level before deciding whether it helped.
+
+## What BEEFY does
+
+BEEFY is our saturation and loudness plugin for Mac and Windows, $39, one payment. **BEEF** is the main event: more weight, density and loudness as it goes up. **COOK** changes the color and bite, from rounder toward brighter and more cooked. **JUICE** sets the level going in. **SOFT CLIP** opens switched on and handles the initial gain staging; **LIMIT** is the other output stage, and the two are separate choices. Input and output clip lights, a cow that reacts to the audio, two finishes. VST3, AU and standalone on the Mac for Apple Silicon and Intel, VST3 on 64-bit Windows. [How to mix drums](https://gazillionindustries.com/how-to-mix-drums/) puts it in the chain.
+
+The meter is still red. Now it is red because you told it to be.
 
 ---
 
@@ -4138,6 +4282,132 @@ BEEFY is our saturation and loudness plugin, and it covers the harmonics and cli
 **BEEF** is the main event: more weight, density and loudness as you turn it up. **SOFT CLIP** opens switched on. It adds harmonics above the low end so there is more to hear than sub, and takes care of the initial gain staging, so there is no input level to hunt for. **JUICE** sets the level going in, **COOK** moves the tone from rounder toward brighter and more bitten, and **LIMIT** keeps output peaks in check if you would rather have that. The cow on the panel reacts to the audio.
 
 Now play the beat on the phone again. On the bus the 808 still won't shake anything. You can hear it, though, and on that speaker that is as hard as a note gets.
+
+---
+
+## About BEEFY
+
+BEEFY — saturation and loudness plugin for Mac and Windows. There is a 28-second demo with three without/with comparisons on the page.
+
+https://gazillionindustries.com/beefy.html
+
+
+---
+
+# How to make 808s louder without clipping
+
+> Why an 808 clips before anything else, how much loudness a soft clipper buys in decibels, the order to do it in, and where streaming puts the ceiling.
+
+Source: https://gazillionindustries.com/how-to-make-808s-louder-without-clipping/  
+Published 2026-10-28, updated 2026-10-28. By Gazillion Industries, who make BEEFY.
+
+---
+
+On the monitors the 808 is the biggest thing in the room. On the master meter it is the only thing going red, and on the phone in the car it has disappeared. All three are the same fact about the same note.
+
+An 808 gets louder without clipping by raising its average and lowering its peaks: tune it, saturate it for harmonics a phone can play, soft clip two or three decibels off the top of the sine, then leave the master to a limiter at −1 dBTP. A sine has only 3 dB between peak and average, so every decibel shaved off the peak comes almost straight back as loudness. [BEEFY](https://gazillionindustries.com/beefy.html) does the saturation and the clip on one knob, for $39; the stock tools below do it in two or three.
+
+## The short version
+
+- **Why it clips first**: a sine's peak is only 3 dB above its average, so it is the loudest average thing in the beat at any peak
+
+- **Order**: tune, set the peak at −6 dBFS, saturate, soft clip 2 to 3 dB, sidechain to the kick, limiter on the master
+
+- **What the clipper buys**: about 1 to 1.3 dB of loudness for 2 to 3 dB off the peaks, plus harmonics a phone can play
+
+- **Stock tools**: Fruity Soft Clipper, Live's Saturator with Soft Clip, Logic's Clip Distortion
+
+- **Ours**: BEEFY: BEEF for the harmonics, SOFT CLIP for the peaks, both on one knob
+
+- **The ceiling**: Spotify asks for −1 dB true peak, and −2 if the master is louder than −14 LUFS
+
+## Why the 808 clips before anything else
+
+The 808 is a sine, or close to one, and a sine spends most of its cycle near its own peak. Its crest factor, the gap between peak and RMS, is 3.01 dB. A snare's is somewhere between 8 and 12. So at the same peak level, the 808 is five to nine decibels louder on average than the drums around it, which is why it is the first thing to hit the ceiling and the last thing you want to turn down. Peak at −6 dBFS and the sine's average is −9. Nothing else in the beat is that loud for that long.
+
+The phone is the other half of the problem. Tune the note to F and it sits near 44 Hz, and most phone speakers give back very little below a couple of hundred hertz (exactly where varies by model). A sine has nothing above its fundamental, so nothing is left in the range the speaker can play. The ear rebuilds a missing low note if you give it the harmonics stacked above it: for that F, 87, 131, 175 and 218 Hz. Saturation and clipping create exactly those, which is why "louder without clipping" and "audible on a phone" are the same job. The mechanism is in [how to make 808s hit harder](https://gazillionindustries.com/how-to-make-808s-hit-harder/); this page is the loudness arithmetic.
+
+## How much a clipper actually buys you
+
+We ran the numbers on a 41 Hz sine, an E, clipped and then brought back up to its original peak. Shave 2 dB off the top with a hard clip and the average comes up 1.0 dB, with a third harmonic at 124 Hz sitting 21 dB under the fundamental. Shave 3 dB and the average comes up 1.3 dB, third harmonic at −17 dB. Shave 6 dB and you gain 1.9 dB of loudness and a third harmonic only 12 dB down, which is a square wave on its way to being a buzz.
+
+A soft curve trades some of that loudness for a cleaner top. The same 3 dB through a rounded curve gains about 1.0 dB instead of 1.3, with the third harmonic at −18 dB and the fifth 35 dB down instead of 31. So the honest range is two to three decibels of clipping, about one decibel of loudness, and a set of odd harmonics in the 120 to 220 Hz band where a phone speaker lives. Past that the gain curve flattens and the buzz does not. [Crest factor](https://gazillionindustries.com/crest-factor/) is the number behind all of it.
+
+## Do it, in order
+
+- Tune the 808 to the key, and check the note on a tuner, not by ear against the bass.
+
+- Set the 808's channel so its peaks land at −6 dBFS with everything else muted.
+
+- Insert a saturator and drive it until a tuner or spectrum display shows harmonics at 2, 3 and 5 times the fundamental.
+
+- Insert a soft clipper after it and raise the input until the clip light shows on the sustained note, then back off until 2 to 3 dB are being shaved.
+
+- Lower the output to match the bypassed level and compare on the phone, not the monitors.
+
+- Sidechain the 808 to the kick, 2 to 4 dB of ducking with a release that clears before the next kick.
+
+- Leave the master to a limiter with its ceiling at −1 dBTP.
+
+Step two is where most 808s go wrong. A sine peaking at −1 dBFS leaves the clipper nothing to do except hit the master, and a sine peaking at −18 forces the saturator to add gain instead of harmonics. Six decibels of headroom is the room the next three steps spend. The kick relationship in step six is its own subject, in [how to mix kick and 808](https://gazillionindustries.com/how-to-mix-kick-and-808/).
+
+Or put [BEEFY](https://gazillionindustries.com/beefy.html) on the 808 and do steps three and four with one knob. BEEF adds the harmonics as it goes up, SOFT CLIP opens switched on and handles the gain staging, and the clip lights show you both ends. The demo on the page is 28 seconds.
+
+**SOFT CLIP** as the out stage, BEEF at 62. One decision, both halves of the job.
+
+## Clip the 808, limit the master, never the other way
+
+A clipper on the master hears the 808, the kick and the hats at once, and the moment the kick drives it into the curve, everything else sounding at that instant is distorted too. The hats go gritty on every kick hit before the 808 shows any damage. A clipper on the 808 channel hears only the 808, so the harmonics it adds belong to the note and nothing else gets chewed. The master then needs a limiter, which is a different machine: Live's manual calls its Limiter "essentially a compressor with an infinite ratio", and Apple say Logic's Limiter "reduces any peak above the threshold to the threshold level". [Clipper before limiter](https://gazillionindustries.com/clipper-before-limiter/) has the full order.
+
+## Stock plugins that do this
+
+- **FL Studio**: Fruity Soft Clipper (every edition): Threshold and Post Gain; Fruity Limiter on the master
+
+- **Ableton Live**: Saturator with Post Clip Mode on Soft Clip (every edition); Limiter with Ceiling Mode on True Peak for the master
+
+- **Logic Pro**: Clip Distortion for the 808; Adaptive Limiter with Out Ceiling and True Peak Detection for the master
+
+Fruity Soft Clipper has no oversampling and no knee control, so set its Threshold where the sustained note just rounds and bring Post Gain down to match. Live's Saturator has Hi-Quality in its title-bar menu, which Ableton say "reduces aliasing and improves sound quality"; turn it on for a sub. Logic's Clip Distortion clips where Drive puts it and has no ceiling, so its Output Gain is how you match level. The [free soft clipper guide](https://gazillionindustries.com/free-soft-clipper-plugin/) covers the downloads if your DAW's one runs out.
+
+## Where the loudness actually ends up
+
+Not on the master. Spotify's own page says tracks are adjusted "to −14 dB LUFS, according to the ITU 1770 standard", that a louder master gets negative gain, and that you should "keep it below −1dB TP (True Peak) max", or below −2 if the master is louder than −14 LUFS, "to avoid extra distortion". Apple's mastering guidance is "to leave at least 1 dB of headroom". So a master pushed another decibel into a clipper is turned back down on arrival, and what survives the turn-down is the 808's own average level against the rest of the mix. That is why the work happens on the channel. [How to make your mix louder without clipping](https://gazillionindustries.com/how-to-make-mix-louder-without-clipping/) is the master-bus version of this page.
+
+## What it costs
+
+It costs the sine. Two decibels of clipping and the note has an edge; six and it buzzes, and the buzz is louder on the phone than the sub was, which was the point until it was too much. It costs the kick its space: a saturated 808 now has energy at 120 to 250 Hz, exactly where a kick's body sits, so step six stops being optional. And it costs you the ability to fix it later. A clipped 808 bounced into the beat is the 808. Print it when it sounds right on the phone and the monitors on the same afternoon, and not before.
+
+## Questions people ask
+
+### Why does my 808 clip when nothing else does?
+
+Because a sine's average level is only 3 dB below its peak, where a drum's is 8 to 12. At the same peak the 808 is the loudest average thing in the beat, so it reaches the ceiling first and stays there longest.
+
+### How loud should an 808 be?
+
+Peaking around −6 dBFS on its own channel before processing, which puts its average near −9. Judge the final level on a phone speaker at the same loudness as the bypassed version, since a louder channel wins every comparison for the first few seconds whether or not it is better.
+
+### Should I use a clipper or a limiter on an 808?
+
+A soft clipper on the 808, a limiter on the master. The clipper has no attack or release and adds harmonics to the one sound you want them on. The limiter catches what is left at the end of the chain without distorting the hats on every kick.
+
+### Saturation before or after the clipper?
+
+Before. Saturation adds the harmonics; the clipper then shaves the peaks of a signal that already has them. In BEEFY that order is built in: BEEF is the saturation and SOFT CLIP is the output stage.
+
+### Why does my 808 distort on phone speakers?
+
+Usually because it was over-clipped: the harmonics that made it audible are now a buzz the phone plays well and the sub it was meant to represent is gone. Back the clipper off to 2 or 3 dB and let the saturation carry the midrange instead. [How to distort 808s](https://gazillionindustries.com/how-to-distort-808s/) covers the deliberate version.
+
+### Does a louder master make the 808 louder on Spotify?
+
+No. Spotify normalizes to −14 LUFS and turns louder masters down. What survives is the 808's level relative to the rest of the mix, which is set on its channel, not on the master.
+
+## What BEEFY does
+
+BEEFY is our saturation and loudness plugin for Mac and Windows, $39, and it covers steps three and four above in one window. **BEEF** is the main event: more weight, density and loudness as it goes up, and the harmonics above the low end so there is more to hear than sub. **SOFT CLIP** opens switched on and takes care of the initial gain staging, so there is no input level to hunt for. **JUICE** sets the level going in, **COOK** moves the color from rounder toward brighter and more bitten, and **LIMIT** is the other output stage if you would rather hold the peaks than round them. Input and output clip lights, a cow that reacts to the audio. VST3, AU and standalone on the Mac, VST3 on 64-bit Windows.
+
+Back to the car. The 808 is still not shaking anything through that speaker, and you can hear the note now, every time, which on a phone is as loud as a note gets.
 
 ---
 
@@ -10591,7 +10861,7 @@ https://gazillionindustries.com/beefy.html
 > What a soft clipper does, how it differs from hard clipping and a limiter, and how to use one on 808s, drums and the master without wrecking them.
 
 Source: https://gazillionindustries.com/soft-clipping-explained/  
-Published 2026-09-13, updated 2026-09-24. By Gazillion Industries, who make BEEFY.
+Published 2026-09-13, updated 2026-10-28. By Gazillion Industries, who make BEEFY.
 
 ---
 
@@ -10623,7 +10893,15 @@ Clipping is a shape. Push a signal past what a system can pass and the top of th
 
 A soft clipper bends the waveform into the ceiling on a curve (a tanh shape is the classic), so the corner is rounded and the added harmonics fall away faster as they climb. Same idea, better manners.
 
-The ugly kind has a famous case. When Metallica's *Death Magnetic* came out in 2008, fans complained in public that the CD sounded distorted and crushed. That is clipping as a problem. Everything below is clipping as a tool.
+The ugly kind has a famous case. When Metallica's *Death Magnetic* came out in 2008, fans complained in public that the CD sounded distorted and crushed, and the version shipped inside a video game turned out to have more dynamic range than the album. That is clipping as a problem. Everything below is clipping as a tool.
+
+## Where the idea came from
+
+Clipping was a fault before it was a technique. Every amplifier has a voltage it cannot exceed, and when a signal asks for more the top of the wave is simply gone. Tube stages went over that edge gradually, and guitar players built decades of music on the result. From the 1980s some solid-state amplifiers carried a soft-clip circuit that began rounding the waveform about 10 dB below full output so an overload never produced a hard corner. The shape producers now dial in on purpose was a safety feature first.
+
+Loudness turned it into a tool. The first digital brick-wall limiter with look-ahead was mass-produced in 1994, and the loudness war that followed was fought mostly with its descendants. Somewhere in there engineers noticed that a limiter working hard sounds like a limiter working hard, and some began letting the fastest peaks clip instead, in the analog gear or in the converters themselves, to keep more of the punch at the same loudness. Ian Shepherd put the trade plainly in 2013: hard digital clipping gives the most apparent loudness and the most distortion, soft clipping is smoother and keeps more punch, and limiting is the cleanest and loses the most. He uses soft clipping and limiting together when he masters.
+
+The dedicated clipper plugin is a younger idea than the practice. Free clippers circulated for years; a $19.99 commercial one arrived in May 2015, and within a decade the question had changed from whether to clip to how hard.
 
 ## Why it makes things louder
 
@@ -10634,6 +10912,14 @@ Loudness lives in the average. Your ears judge it mostly by average level over t
 A limiter turns the volume down. A clipper reshapes the wave. A limiter lowers gain over time, with attack and release, and when it works hard you can hear that movement as breathing or dulled hits. A soft clipper has no memory: each sample's output depends only on that sample's input, so there is no gain movement to hear. What you get instead is distortion.
 
 One costs movement, the other costs grit. Pick per job, and often use both, with the clipper catching the fastest spikes so the limiter has less to do.
+
+## Why it beats a limiter on drums and 808s
+
+Drums are mostly peak. A snare's crack lasts a few milliseconds and carries almost none of the note's energy, yet it sets the peak level for the whole bus. A limiter sees that spike, turns the gain down to catch it, and then has to release, and for the length of that release everything around the snare is quieter than it should be. Set the release fast enough to dodge that and the limiter starts distorting anyway, on the low end, where a slow waveform gets chopped mid-cycle. A clipper has no release. It rounds the crack and leaves the next sample alone.
+
+808s are the opposite problem and the same answer. A sub note spends a lot of its cycle near its peak, so a limiter catching it pumps on every cycle, which reads as the bass going soft. A clipper trims the top of each cycle identically, which is distortion locked to the pitch: harmonics at two, three and four times the fundamental. For a low F at about 44 Hz that puts energy at roughly 87, 131 and 175 Hz. A phone speaker that cannot play 44 Hz can play those, and the ear rebuilds the missing fundamental from them. The limiter kept the sub pure and inaudible. The clipper made it audible and a little dirty. On a phone, dirty wins.
+
+The exception is the master, where the limiter stays. A true-peak limiter is the only thing that guarantees the file never crosses the ceiling after encoding, so it sits last. The clipper's job there is to arrive before it and take the spikes the limiter would otherwise pump on. [Clipper before limiter](https://gazillionindustries.com/clipper-before-limiter/) sets both.
 
 ## Where to use a soft clipper
 
@@ -10659,37 +10945,49 @@ One costs movement, the other costs grit. Pick per job, and often use both, with
 
 Some clippers offer a knee or softness control; softer is smoother and gives up a little level. Input gain still decides more than anything else on the panel.
 
+## How hard to push
+
+The number depends on the source, and the ear decides before the meter does. These are our starting points, with the reason the mechanism gives for each, and the ear overrules them.
+
+- **A single kick or snare:** 3 to 6 dB off the peak is common and often inaudible as distortion, because the clip lands on a few milliseconds of transient and nothing else is sounding in that channel. Past that the attack stops growing and the drum shortens.
+
+- **An 808 or bass:** as far as the harmonics are wanted. This is the one place clipping is a tone decision rather than a level one, and 6 dB or more is normal when the goal is a growl that survives a phone. Listen on the small speaker, not the sub.
+
+- **The drum bus:** 1 to 3 dB on the loudest hits. The kick drags everything else into the curve with it, so the hats and the room pay for every dB here. Clip the kick and snare individually first and the bus needs less.
+
+- **The master:** about 1 dB, sometimes 2, on the tallest peaks only, ahead of a limiter. Any more and the whole arrangement is distorting on the downbeats.
+
+Level-match every comparison. A clipper makes things louder, and louder sounds better for about four seconds, which is exactly long enough to approve a setting you will regret in the car.
+
+## Where in the chain
+
+As late as possible on the source, as early as possible on the master. On a kick or an 808 the clipper goes after EQ and saturation and before anything that adds space, so the reverb is not clipped with the drum. On a drum bus it goes after the bus compressor if there is one: the compressor evens out the hits, the clipper takes what is left of the peaks. On the master it goes before the limiter, with the limiter last and nothing after it. Tape or saturation on the master goes before the clipper. Each stage does less than the one before. That is the whole trick.
+
 BEEFY opens with [SOFT CLIP](https://gazillionindustries.com/beefy.html) switched on and does the initial gain staging for you. The demo on the page is 28 seconds.
 
 ## What it costs
 
-Every dB comes from somewhere. Push too far and snares lose their snap and kicks go blunt. On a bus, the loudest thing in the mix drags everything else into the curve with it (that's intermodulation), which is why cymbals roughen on kick hits.
-
-There is also aliasing. The harmonics a clipper creates can land above what the sample rate can represent, and they fold back down as harsh, out-of-tune hash. If your clipper offers oversampling, turn it on for anything bright.
+Every dB comes from somewhere. Push too far and snares lose their snap and kicks go blunt. On a bus, the loudest thing in the mix drags everything else into the curve with it (that's intermodulation), which is why cymbals roughen on kick hits. There is also aliasing, covered below.
 
 ## How to hear it before you see it
 
-A meter tells you a clipper is working. It does not tell you whether it is working well, and by the time a plugin shows red the decision has already been made. Three things are audible well before that.
+A meter tells you a clipper is working, not whether it is working well. Three things are audible before the red light.
 
-**The transient stops growing.** Push the input and listen to the front of the kick rather than the body. Below the clip point, more input makes the attack louder. Above it, more input makes the body louder while the attack stays where it is. That moment is the clip point, and you can find it by ear in about ten seconds.
+**The transient stops growing.** Push the input and listen to the front of the kick rather than the body. Below the clip point, more input makes the attack louder. Above it, the body gets louder while the attack stays where it is. That moment is the clip point, and you can find it by ear in about ten seconds.
 
-**The tail gets closer.** Because the peak stops rising and everything underneath keeps rising, the room and the ring come up relative to the hit. On a drum bus that reads as the kit sounding bigger. Past a certain point it reads as the kit sounding further away, and that is usually the signal to stop.
+**The tail gets closer.** Because the peak stops rising and everything underneath keeps rising, the room and the ring come up relative to the hit. On a drum bus that reads as the kit sounding bigger, then, past a point, further away. That is the signal to stop.
 
-**Cymbals go first.** High frequency content has the sharpest peaks relative to its energy, so hats and rides distort audibly before a kick does. If a mix is getting harsh as it gets louder, it is almost always the top of the kit meeting the clipper rather than anything wrong with the EQ.
+**Cymbals go first.** High frequency content has the sharpest peaks relative to its energy, so hats and rides distort audibly before a kick does. A mix that gets harsh as it gets louder is almost always the top of the kit meeting the clipper.
 
 ## What actually gets clipped
 
-Clipping is not applied evenly across a mix; it is applied to whatever is tallest at that instant. That means a handful of sources absorb nearly all of it.
-
-Percussive transients are the obvious case: a kick, a snare, a rimshot, anything with a fast attack. Sub bass is the less obvious one, because a low sine wave spends a lot of its cycle near its peak, so once it is clipping it is clipping for a long time rather than for an instant. That is why bass takes on a growl under a clipper while drums merely get shorter, and why a clipper on a full mix frequently changes the bass more than anything else on it.
-
-The practical consequence is that a clipper on the mix bus is a drum-and-bass processor whether or not you intended it to be. If you want the effect without that, clip the drum group and leave the mix bus alone.
+Clipping is not applied evenly across a mix; it is applied to whatever is tallest at that instant, so a handful of sources absorb nearly all of it. Percussive transients are the obvious case. Sub bass is the less obvious one, because a low sine spends a long time near its peak, so it clips for a long time rather than an instant, and takes on a growl where a drum merely gets shorter. A clipper on the mix bus is a drum-and-bass processor whether or not you intended it to be. If you want the effect without that, clip the drum group and leave the mix bus alone.
 
 ## Aliasing, and why the oversampling switch exists
 
 Clipping generates harmonics above the original signal. Some of those land above what the sample rate can carry, and rather than disappearing they fold back down into the audible range at frequencies unrelated to the music. That folding is aliasing, and it is the difference between a clipper that sounds solid and one that sounds brittle.
 
-Oversampling runs the clipping stage at a multiple of the session rate so those harmonics have somewhere to go, then filters and comes back down. It costs processing and it is worth it on anything with real high frequency content. It matters least on a source that has no top end to begin with, which is why a clipper can sound fine on a bass and harsh on a full kit at the same setting. More on the mechanism in [oversampling](https://gazillionindustries.com/oversampling/) and [aliasing](https://gazillionindustries.com/what-is-aliasing-in-audio/).
+Oversampling runs the clipping stage at a multiple of the session rate so those harmonics have somewhere to go, then filters and comes back down. It matters least on a source with no top end to begin with, which is why a clipper can sound fine on a bass and harsh on a full kit at the same setting. More on the mechanism in [oversampling](https://gazillionindustries.com/oversampling/) and [aliasing](https://gazillionindustries.com/what-is-aliasing-in-audio/).
 
 ## Questions people ask
 
@@ -10716,6 +11014,14 @@ It changes it permanently and on purpose. That is the job. What people mean by d
 ### Is a soft clipper the same as saturation?
 
 They overlap and are not the same. Saturation shapes the whole signal continuously; a clipper mostly leaves the signal alone until it reaches the ceiling and then acts. That is why a clipper can take peaks off without obviously coloring what is underneath.
+
+### Why does a soft clipper make 808s louder on a phone?
+
+Because it adds harmonics at whole-number multiples of the note. A phone speaker cannot play a 44 Hz fundamental, but it can play the 87, 131 and 175 Hz harmonics a clipper puts above it, and the ear hears the pitch from those. A limiter keeps the sine pure, and pure means silent on a small speaker.
+
+### Should the clipper go before or after the compressor?
+
+After, on a bus. The compressor evens the hits and the clipper takes the peaks that remain, so the clipper works less and the compressor never sees a clipped waveform. On a single drum with no compressor, the clipper goes after EQ and before any reverb.
 
 ## Stock plugins that do this
 
@@ -14078,6 +14384,144 @@ https://gazillionindustries.com/drugs.html
 
 ---
 
+# Free vinyl sim plugins, and the one we make
+
+> A vinyl sim is two jobs: the surface and the squash. The free plugin for each, what Live and Logic ship, the paid field, and the chain order that makes it work.
+
+Source: https://gazillionindustries.com/free-vinyl-sim-plugin/  
+Published 2026-10-28, updated 2026-10-28. By Gazillion Industries, who make DRUGS.
+
+---
+
+The break sounded right coming off the record and wrong the moment it was clean inside the DAW. Too wide, too polite, every hit sitting on its own. The search that follows is "free vinyl sim plugin", and most of what it finds is a crackle generator.
+
+A vinyl sim is two jobs, both covered free. The first is the surface: noise, wear, a band-limited top, the record as a medium. iZotope's Vinyl does that and is free. The second is the squash: dense, slightly crushed drums with the room pushed up under the hits, the way a break sounds once it has been through a sampler. That half is a compressor, and DRUGS is ours, free for Mac and Windows, voiced for exactly that on the drum bus. Load both.
+
+## The short version
+
+- **Free, for the squash**: DRUGS — ours, one knob, on the drum bus, Mac and Windows
+
+- **Free, for the surface**: iZotope Vinyl — dust, wear, warp, motor noise, spin down
+
+- **Already in your DAW**: Ableton Live Standard and Suite ship Vinyl Distortion; Logic names no stock vinyl sim
+
+- **Order**: compress first, then band-limit, then the noise bed
+
+- **What paying buys**: program-dependent compression and a mastering-chain model, from $39.99 to $149
+
+- **Formats**: DRUGS: VST3 and AU on Mac, VST3 on Windows
+
+## What a vinyl sim plugin actually does
+
+The name is older than the plugins. It comes from an effect on a cheap 1990s sampler, the SP-303, whose Vinyl Simulator did something the manual did not advertise: it compressed. Producers ran whole loops through it for the squash and kept the noise as a side effect, and the [SP303 vinyl sim guide](https://gazillionindustries.com/sp-303/) has that history in full. The phrase stuck to the sound rather than the machine, which is why one search now returns crackle plugins and compressors on the same page.
+
+Goodhertz say as much on their own page for Vulf Compressor, where the algorithm's lineage is described as a "Vinyl Sim" compression that "languished in obscurity" before they built a plugin around it. That is the half of the effect the free crackle plugins leave out. The [vinyl sim explainer](https://gazillionindustries.com/vinyl-sim-plugin/) takes the four parts of the sound apart. This page is about getting each part for free.
+
+## The free vinyl sim for the surface: iZotope Vinyl
+
+Vinyl is free and it does the record. Its controls are Warp, Dust, Year, Wear, Mechanical Noise and Spin Down: the amount and shape of the warp, the dust on the surface, a filter response for record players of different decades, the wear of a record played too many times, turntable rumble and motor noise, and a slow-down that drops speed and pitch together to a stop. It installs as AU, AAX, VST and VST3 on macOS and AAX, VST and VST3 on Windows, and it is a plugin only, with no standalone application.
+
+What it does not have is a compressor. Set every knob and the loop is dusty, dull and exactly as dynamic as it was before. That is the tell on nearly every free vinyl chain: the texture is right and the hits still jump out of it like they were recorded yesterday.
+
+## The free vinyl sim for the squash: DRUGS
+
+DRUGS is a one-knob bus compressor for drums, free for Mac and Windows, and the squash is the whole point of it. Turning DOSE up makes a drum bus denser rather than louder, with the peak level barely moving across the range of the knob. It reshapes a break instead of leveling it, and brings the room up under the hits. The release is adaptive: a hit gets the short time and sustained material gets the long one, so it holds still instead of breathing.
+
+**DOSE 88.** It dives on each hit and takes the bar to come back. That slow recovery is the squash.
+
+There is nothing to set up. GAIN adds 5 dB on the way out, LIMIT holds the output under −0.3 dBFS, and both are on when it opens. MIX blends dry and wet with zero latency, so pulling it back to 60 percent gives you the crushed loop under the clean one with no comb filtering. It is one plugin with one job, and the job is the part of the vinyl sim sound that no noise generator can supply.
+
+[DRUGS](https://gazillionindustries.com/drugs.html) is free. Put it on the drum bus, turn DOSE up until the room comes forward under the hits, then add the noise.
+
+## What your DAW already ships
+
+**Ableton Live.** Vinyl Distortion, in Standard and Suite but not Intro. Ableton's manual says it "emulates some of the typical distortions that occur on vinyl records during playback", with a Tracing Model section that adds even harmonics, a Pinch Effect that adds odd ones, a Drive control over both, Soft and Hard modes, and a Crackle section with Density and Volume. It is a distortion and a crackle box. No compression, no filter.
+
+**Logic Pro.** Apple's plug-ins page for Logic names no vinyl simulator. The closest entry is Remix FX, which Apple describes as DJ-style effects including "vinyl scratches and stops". For the surface you are downloading Vinyl; for the squash, DRUGS runs in Logic as an Audio Unit.
+
+**Everything else.** Any DAW has a low-pass filter and a noise source of some kind, which is half the surface for nothing. What none of them ship is a compressor voiced for this particular job, which is the gap DRUGS fills in FL Studio, Reaper, Cubase, Studio One, Bitwig and GarageBand as well.
+
+## How to set up a free vinyl sim chain
+
+Order decides most of it. Compress first, so the noise ends up inside the signal instead of riding on top of it.
+
+- Route the full loop, or every drum, to one bus.
+
+- Insert DRUGS on the bus with DOSE at zero.
+
+- Loop four bars and turn DOSE up until the room comes forward under the hits.
+
+- Lower MIX if the front edge of the kick starts to soften.
+
+- Insert iZotope Vinyl after DRUGS.
+
+- Set Year and Wear first, so the top rolls off before any noise is added.
+
+- Raise Dust and Mechanical Noise until the bed sits just under the hats, then back off a little.
+
+- Bypass both at matched level and play the loop on a phone speaker.
+
+Step eight catches the two common failures. If the noise disappears on the phone, it was set against the monitors' low end and needs to come up a touch. If the drums got smaller, DOSE went past the point where density turns into mush, and the fix is one notch back rather than more noise.
+
+## The paid field, and what paying buys
+
+The paid vinyl sims are worth knowing because of what they include. Several of them carry a compressor, which is the field agreeing with us about where the sound lives.
+
+**Goodhertz Vulf Compressor**, $149, is a compressor first and a vinyl sim by lineage, as its own page says. **Unfiltered Audio Needlepoint**, $75 at Plugin Alliance, synthesizes "hair, dust mites, scratches, warping" on a record, runs the turntable at speeds beyond 33, 45 and 78, and includes an "onboard single knob compressor with 6 flavorful modes". **Minta Foundry Patina**, $49, lists Crackle, Vinyl Age, Vinyl Warp, Inner Groove Distortion, RIAA Character, a Vinyl Compression control and four mastering-house models. **Klevgrand DAW LP**, $39.99, is a vinyl player simulation with scratch rate, hum at 50 or 60 Hz, and continuous control of amplifier, needle and cable quality. **2getheraudio V1NYLLA** lets you draw the flutter and crackle with the mouse, at $49 list or $29 discounted. **XLN RC-20 Retro Color**, $99, puts vinyl crackle in its Noise module alongside five others.
+
+A newer Gumroad product named VINYL SIM PLUGIN, in VST3 and AU for Mac and Windows, is sold rather than free, and TapeFi's STOP, a vinyl-stop effect with a noise layer, launched free in September 2025 and shows a $25 price on the maker's page today. ToneBytes' Vinyl is free, Windows only, and dates from 2012. None of the paid ones is a bad plugin. What they charge for is program-dependent behavior: compression that answers a kick differently from a hat, and a mastering chain modeled stage by stage. For the squash on a drum bus, ours does that part for nothing, and you can hear it on the page.
+
+## What a vinyl sim costs you
+
+It costs top end, on purpose, and that bill arrives on small speakers first. A loop that was rolled off against monitors can lose its hats entirely on a phone, so check there before you print. It costs dynamics: four to eight decibels of slow-release squash makes a busy bar quieter than a sparse one, which changes the groove as well as the tone. And a noise bed under a quiet intro is a feature until the chorus, when it disappears and comes back on the breakdown like a stranger. Automate the noise, or print the loop and own it.
+
+## Questions people ask
+
+### Is there a free vinyl sim plugin?
+
+Yes, two that do different halves. iZotope Vinyl is free and does the surface: dust, wear, warp, motor noise and a spin down. DRUGS is ours and free, and does the squash: a one-knob compressor for the drum bus that makes a break denser with the room up under the hits. Together they cover the whole effect.
+
+### What is the best free vinyl plugin?
+
+For noise and wear, iZotope Vinyl, because the controls map directly onto the parts of a worn record and it is free with no trial timer. For the compression that makes a loop sound like it went through a sampler, DRUGS. If you only install one, install the compressor; a filter and a noise source you already have.
+
+### Does Ableton have a vinyl sim?
+
+Vinyl Distortion, in Live Standard and Suite but not Intro. It adds the harmonic distortion of a stylus in a groove and a crackle generator. It does not compress or filter, so it is one piece of the chain rather than the chain.
+
+### Does Logic Pro have a vinyl plugin?
+
+Not by that name. Apple's plug-ins page for Logic includes Remix FX, which does DJ-style vinyl scratches and stops, and nothing described as a vinyl simulator. Both free plugins above load in Logic as Audio Units.
+
+### Is a vinyl sim the same as a lofi plugin?
+
+They overlap. A lofi plugin usually bundles bit and sample-rate reduction, a filter and noise. A vinyl sim is the record specifically: surface noise, wear and warp, plus the squash when it is done right. The [lofi VST guide](https://gazillionindustries.com/best-lofi-vst/) sorts the four jobs.
+
+### Where does a vinyl sim go in the chain?
+
+On the drum bus or the loop bus, compressor first and surface second. Compress last and the noise gets squashed as a separate layer on top, which is the tell people hear and cannot name.
+
+### Is DRUGS a vinyl emulation?
+
+No. DRUGS is a bus compressor tuned by ear for the dense, crushed drum sound the term describes. Nothing in it is modeled from or measured off any machine. It goes at the sound directly, which is the part a noise plugin cannot do.
+
+## What DRUGS does
+
+DRUGS is our free bus compressor with one macro control. **DOSE** moves the transfer curve, the knee, the attack and the release together, so the drum bus gets denser rather than louder. The release is adaptive and has no user control. Auto-makeup sits after the gain cell, **MIX** blends dry and wet with zero latency so parallel never comb-filters, **GAIN** adds 5 dB on the way out and **LIMIT** holds the output under −0.3 dBFS. It installs as VST3 and AU plus a standalone app on macOS 10.13 or later, and as VST3 on 64-bit Windows 10 or later. The [free glue compressor guide](https://gazillionindustries.com/free-glue-compressor/) covers the same plugin on a cleaner job.
+
+The break is back where it was on the record now, sitting in one piece with the room behind it. The crackle was never the part you missed.
+
+---
+
+## About DRUGS
+
+DRUGS — a one-knob bus compressor for drums, free for Mac and Windows. One control called DOSE, with GAIN and a soft ceiling on the way out.
+
+https://gazillionindustries.com/drugs.html
+
+
+---
+
 # Glue compression
 
 > Glue compression explained: what a bus compressor does to a group, the ratio, attack and release to start with, and how much gain reduction is too much.
@@ -14340,6 +14784,138 @@ DRUGS is our free bus compressor with one macro control. **DOSE** moves the tran
 What that buys you on a group is the timing. A fixed release is one compromise made across a whole track; an adaptive one is a fresh compromise every few milliseconds. That is why DOSE can sit in the same position through a sparse verse and a busy drop without being touched.
 
 Eight files, one gain cell, and a kit that finally sounds like it was in the room together.
+
+---
+
+## About DRUGS
+
+DRUGS — a one-knob bus compressor for drums, free for Mac and Windows. One control called DOSE, with GAIN and a soft ceiling on the way out.
+
+https://gazillionindustries.com/drugs.html
+
+
+---
+
+# Glue compressor in FL Studio: Fruity Limiter, Maximus, and the free one
+
+> FL Studio has no Glue Compressor. How to build the drum bus it needs, glue with Fruity Limiter's COMP section, and the free one-knob compressor built for that bus.
+
+Source: https://gazillionindustries.com/glue-compressor-in-fl-studio/  
+Published 2026-10-28, updated 2026-10-28. By Gazillion Industries, who make DRUGS.
+
+---
+
+The tutorial has the Glue Compressor across a drum group in Ableton. You have FL Studio, a kit of eight channels all pointed at the Master, and a plugin list with nothing called glue in it. Three things fix that, and two of them are already installed.
+
+FL Studio has no Glue Compressor; that device is Ableton's, made with Cytomic, and Cytomic sell the plugin version as The Glue for $99. What FL Studio has in every edition is Fruity Limiter, whose COMP section is a full bus compressor with a sidechain, and Fruity Compressor, which Image-Line now call a legacy plugin. The missing piece is a drum bus to put one on. Build it, load Fruity Limiter, and you have glue for nothing. Or load DRUGS, which is ours, free, and built for exactly this bus with one knob.
+
+## The short version
+
+- **Is the Glue Compressor in FL Studio?**: no; it is an Ableton device, and the plugin version is Cytomic's The Glue, $99
+
+- **Stock, every edition**: Fruity Limiter's COMP section: THRESH, RATIO, KNEE, ATT, REL, SUSTAIN, sidechain
+
+- **Stock, Producer Edition and up**: Maximus, a multiband maximizer aimed at the Master
+
+- **The drum bus**: select the drum channels, right-click a mixer track, "Route selected channels to this track" (Ctrl+L)
+
+- **Free and built for the bus**: DRUGS — ours, one knob called DOSE, VST3 on Windows, VST3 and AU on Mac
+
+- **Free with every knob**: TDR Kotelnikov, Klanghelm DC1A
+
+## Why there is no Glue Compressor in FL Studio
+
+Because it is a Live device. Ableton's manual describes the Glue Compressor as "an analog-modeled compressor created in collaboration with Cytomic" that is "based on the classic bus compressor from a famous 80's mixing console", and the edition comparison puts it in Standard and Suite, not Intro. Cytomic's own plugin, The Glue, is $99 as VST2, VST3, AUv2 and AAX for macOS 10.13 and Windows 10 and up, and it runs in FL Studio like any other plugin. So the direct answer to "the glue fl studio" is a $99 purchase. The better answer is that glue is a job, and the [glue compression](https://gazillionindustries.com/glue-compression/) guide explains why almost any compressor on a group does it: one gain cell hearing every drum, moving them together, one to three decibels at a time.
+
+## Build the drum bus first
+
+Glue needs a group, and FL Studio does not make one for you. Image-Line's manual: "Unless specifically directed, newly added Channels are routed to the Master Mixer Track." Every drum is going straight to the Master, so there is nowhere to put a compressor that hears them all. The fix takes ten seconds and is in the Mixer menu.
+
+- In the Channel Rack, select every drum channel using the selectors at the right of each channel button.
+
+- In the Mixer, right-click an empty insert track and choose "Route selected channels to this track" (Ctrl+L).
+
+- Rename that track DRUMS.
+
+- Open one drum channel's settings and check that its mixer-track selector now reads the DRUMS track number.
+
+- Balance the drums against each other with the channel volumes before inserting anything.
+
+If your drums are already on separate mixer tracks, the menu has the other route: select those tracks, right-click the DRUMS track and choose "Route selected to this track only", which Image-Line say also deselects the selected tracks' own Master sends. That last part matters. A track that goes both to DRUMS and to the Master arrives twice, 6 dB louder than you think, and the compressor on DRUMS is only hearing half of it.
+
+## Glue with Fruity Limiter
+
+Fruity Limiter is "a powerful single band Compressor (with sidechain), Limiter & Gate", included in all editions, and the compressor half is the glue tool. In the COMP section, THRESH "sets the level above which the signal will be compressed", with 0 dB switching it off; RATIO sets the amount once the threshold is crossed; KNEE sets "the transition between no and full compression"; ATT and REL are the attack and release in milliseconds; SUSTAIN averages the input over 0 to 1,000 ms, which moves the detector toward RMS. The sidechain selector works with the mixer's track sends. The manual prints no numeric range for RATIO or KNEE, so set them by the meter.
+
+- Insert Fruity Limiter on the DRUMS track and open the COMP section.
+
+- Set RATIO to 2:1 and KNEE toward soft.
+
+- Set ATT to 20 ms.
+
+- Set REL to one eighth note at your tempo: 333 ms at 90 BPM, 214 ms at 140.
+
+- Lower THRESH until the meter shows 1 to 3 dB of gain reduction on the loudest hits.
+
+- In the LIMIT section, use GAIN to match the bypassed level; Image-Line note it sits post-compressor and pre-limiter.
+
+- Toggle the slot on and off at matched level and keep it only if the kit sounds like one take.
+
+Fruity Compressor still works and has printed ranges, Threshold 0 to −60 dB, Ratio 0.4:1 to 30:1, Attack 0 to 400 ms, Release 1 to 4,000 ms, and a Type switch whose knee widths are 0, 6, 7 and 15 dB. The manual calls it legacy and recommends Fruity Limiter. Maximus, from Producer Edition up, is three bands plus a wideband stage, and Image-Line place it "as the last effect in the Master Mixer Track"; it will glue a drum bus, and it is more compressor than the job needs. The [drum bus compressor settings](https://gazillionindustries.com/drum-bus-compressor-settings/) page explains each of the numbers above.
+
+## Glue with DRUGS, which skips the numbers
+
+DRUGS is our free bus compressor for drums, and it runs in FL Studio as a VST3 on Windows and as VST3 or AU on the Mac. One knob called DOSE moves the curve, the knee, the attack and the release together, so the drum bus gets denser while the peak level barely moves. The release adapts on its own: a hit gets the short time, sustained material gets the long one. Insert it on DRUMS, raise DOSE until the room comes forward under the hits, and stop. That is the whole setup, and it does in one move what steps two through five above do in five.
+
+**DOSE 12.** The line dips on the loud hits and sits flat between them. On a meter, that is what glue looks like.
+
+Two things it has that the stock device does not. MIX blends dry and wet with zero latency, so parallel compression on the drum bus needs no second track and never comb-filters. And LIMIT, a soft ceiling at −0.3 dBFS on the output, does the job the Glue Compressor's Soft Clip switch did on the Ableton device, whose manual caps it at −0.5 dB. GAIN adds 5 dB after the compressor; both GAIN and LIMIT are on when it opens, so match levels before you judge.
+
+[DRUGS](https://gazillionindustries.com/drugs.html) is free for Mac and Windows. Put it on the drum bus in FL Studio, turn DOSE up until the kit sounds like one take, and leave the attack and release to it.
+
+## The other free compressors that glue
+
+If you want every control and a different character, two free plugins come up in every thread and both load in FL Studio. **TDR Kotelnikov** is Tokyo Dawn's free "wideband dynamics processor", with separate release controls for peak and RMS events, a sidechain high-pass, stereo linking built for the bus and a Delta preview that plays only what is being removed. Windows 7 and up as VST2, VST3 and AAX; Mac as VST2, VST3, AU and AAX. **Klanghelm DC1A** is freeware, "the little brother of the compression monster DC8C", with an input and an output knob plus DEEP, RELAXED and DUAL MONO switches. The [free glue compressor](https://gazillionindustries.com/free-glue-compressor/) guide puts the three side by side. Our order for a drum bus is DRUGS first, because it asks you to listen rather than to know your release time, Kotelnikov when you want the numbers, DC1A for character on a single channel.
+
+## What glue in FL Studio costs you
+
+It costs dynamics quietly. A group compressed into one block sounds finished across eight bars and tiring across three minutes, because the fills stop jumping out. Bounce the arrangement once before you decide. It couples everything to the loudest element: with a full-range detector the kick sets the gain for the whole kit, so a louder kick ducks the hats more, and Fruity Limiter's SUSTAIN control, or a sidechain high-pass on Kotelnikov, is how you soften that. And the routing costs a careful eye. FL Studio's send switches are small, a left-click makes an audio send and a right-click opens the sidechain menu, and a drum that reaches the Master twice will win every A/B for the wrong reason.
+
+## Questions people ask
+
+### Does FL Studio have a glue compressor?
+
+Not by that name. The Glue Compressor is an Ableton Live device. FL Studio ships Fruity Limiter in every edition, and its COMP section is a bus compressor with a sidechain that does the glue job. Fruity Compressor is the older one, and Maximus is the multiband maximizer from Producer Edition up.
+
+### How do I make a drum bus in FL Studio?
+
+Select the drum channels in the Channel Rack, right-click an empty mixer track and choose "Route selected channels to this track", or press Ctrl+L. Every selected channel now feeds that track, and the compressor goes in one of its ten effect slots.
+
+### Can I get The Glue for FL Studio?
+
+Yes. Cytomic's The Glue is $99, one-time, in VST2, VST3, AUv2 and AAX for macOS 10.13 and Windows 10 and up, and FL Studio hosts VST2, VST3 and CLAP on both platforms plus Audio Units on macOS. It runs in any edition.
+
+### Is there a free glue compressor for FL Studio?
+
+Three. DRUGS is ours and free, voiced for the drum bus with one control. TDR Kotelnikov and Klanghelm DC1A are free and give you the usual knobs. Fruity Limiter is free in the sense that it is already there.
+
+### What settings glue drums in Fruity Limiter?
+
+Start at 2:1, a 20 ms attack, a release near an eighth note at your tempo and 1 to 3 dB of gain reduction on the loudest hits, with the knee toward soft. The release is the number that decides it: much shorter and the bus pumps on every kick, much longer and the gain never recovers.
+
+### Glue compressor or Maximus on the drum bus?
+
+A single-band compressor for glue. Maximus is three bands and a wideband stage, and Image-Line position it as the last effect on the Master. Multiband compression on a drum bus splits the kick from the snare and undoes the one thing glue is for. The [drum bus](https://gazillionindustries.com/what-is-a-drum-bus/) page covers what belongs there.
+
+### What is the difference between the FL Studio and Ableton setups?
+
+Only the menu. Ableton groups tracks and puts the device on the Group; FL Studio routes channels to a mixer insert and puts the plugin in a slot. The [Ableton drum bus guide](https://gazillionindustries.com/drum-bus-compression-in-ableton-live/) is the twin of this page for the other DAW.
+
+## What DRUGS does
+
+DRUGS is our free bus compressor with one macro control. **DOSE** moves the transfer curve, the knee, the attack and the release together, so the drum bus gets denser rather than louder. The release is adaptive and has no user control. Auto-makeup sits after the gain cell, **MIX** blends dry and wet with zero latency so parallel never comb-filters, **GAIN** adds 5 dB on the way out and **LIMIT** holds the output under −0.3 dBFS. It installs as VST3 and AU plus a standalone app on macOS 10.13 or later, and as VST3 on 64-bit Windows 10 or later. FL Studio is among the hosts listed on its page.
+
+Eight channels, one insert, one knob. The tutorial had a device you did not have, and it turns out the device was the bus.
 
 ---
 
@@ -16012,6 +16588,120 @@ DRUGS is our free bus compressor for drums, and it does one job. **DOSE** moves 
 One thing to know before it goes on a bus you care about. DOSE at 0 is not a bypass — the knob is a position on a curve, so the bottom of its travel is still working, and the honest comparison against nothing is the plugin's own bypass. Set level with GAIN afterward, match it, and judge it on the quiet bars. [One-knob compressor](https://gazillionindustries.com/drugs.html) has the wider argument about what a single control can carry, and [drum bus compressor settings](https://gazillionindustries.com/drum-bus-compressor-settings/) has the starting positions.
 
 Four times a bar, everything gets out of the way of a sound you can hardly hear. That is the whole trick.
+
+---
+
+## About DRUGS
+
+DRUGS — a one-knob bus compressor for drums, free for Mac and Windows. One control called DOSE, with GAIN and a soft ceiling on the way out.
+
+https://gazillionindustries.com/drugs.html
+
+
+---
+
+# The SP-202 and the start of the SP line
+
+> The 1998 BOSS SP-202 Dr. Sample: what the first SP sampler was, its four sampling grades and six effects, who recorded on it, and what carried into the 303 and 404.
+
+Source: https://gazillionindustries.com/sp-202/  
+Published 2026-10-28, updated 2026-10-28. By Gazillion Industries, who make DRUGS.
+
+---
+
+January 1998. A gray plastic box the size of a paperback sits beside a pair of turntables, running on six AA batteries, with a microphone in its face and eight rubber pads that do not care how hard you hit them. It cost £299, and the reviewer wondered in print whether it would become a cult classic.
+
+The BOSS SP-202 Dr. Sample is the 1998 phrase sampler that started the SP line. It held 32 seconds of audio at its best grade and four minutes twenty at its worst, had six effect buttons and no resampling, and was sold to DJs as a looping box for the booth. Its children, the [SP-303](https://gazillionindustries.com/sp-303/) and the [SP-404](https://gazillionindustries.com/sp-404-history/), carried its pads, its loop-and-gate logic and its habit of running effects over anything into two decades of beat tapes.
+
+## The short version
+
+- **What**: BOSS SP-202 Dr. Sample, phrase sampler, reviewed January 1998
+
+- **Price**: £299 in the UK at launch
+
+- **Pads**: eight, two banks, 16 mono or 8 stereo samples
+
+- **Time**: 32 s at 31.25 kHz, 4 min 20 at 3.91 kHz
+
+- **Effects**: Pitch, Time, Delay, Filter 1, Filter 2, Ring Mod
+
+- **Power**: six AA batteries, about eight hours
+
+- **Successors**: SP-303 (2001), SP-404 (2005), SP-404MKII (2021)
+
+## What the machine actually was
+
+It was built to sit next to record decks. Sound On Sound's January 1998 review placed it as a portable looping sampler for DJs first, with beginners and bands wanting a few sampled hits as the second audience, and BOSS's own copy called it "the most affordable, easy-to-use, feature-packed sampler on the market." Eight pads, none of them velocity sensitive, across two internal banks. A three-digit display. A Record Level knob that doubled as the effect control, because there was no room for another knob.
+
+The memory was the constraint and the character at once. Four sampling grades: Hi-Fi at 31.25 kHz for 32 seconds across the whole machine, Standard at 15.63 kHz for a minute and five, Lo-Fi 1 at 7.81 kHz for two minutes ten, and Lo-Fi 2 at 3.91 kHz for four minutes twenty. A SmartMedia card pushed the bottom grade to more than 35 minutes, if you could find one. The reviewer priced a 2 MB card at £249 from one high-street chain and £40 from a camera shop. You chose a grade per pad, which meant every sample came with a decision about how much of its top end you were willing to lose. At 3.91 kHz the answer was most of it.
+
+Six buttons ran the effects: Pitch, Time, Delay, Filter 1, Filter 2 and Ring Mod. Only Pitch could run alongside another effect, and the 1998 reviewer argued Pitch was a function rather than an effect at all, which is why Sound On Sound counted the same machine as having five effects when it reviewed the successor in 2001. There was a BPM function that read tempo off a sample's length so loops lined up. Polyphony was four notes, fewer with effects or stereo. It ran on six AA batteries for about eight hours, or off a 9 V supply, and kept its samples with no power at all.
+
+The microphone was the part that made it strange. Sampling a drum machine is one thing. Sampling the room you are standing in, the TV in the corner, your own voice saying a word, with no cable and no interface, is another, and the 202 did it from a battery. The reviewer found the mic "surprisingly good" and noted that pressing the Rec button put a thump at the start of every sample. That is a fair description of the entire instrument. Good, with a thump you learn to work around.
+
+**DOSE 12.** The line along the bottom is gain reduction. At this setting the break keeps its shape and gains a little weight.
+
+## What the engineers meant by it
+
+Roland's own engineering history is plain about the purpose. The SP-202 and the SP-303, both sold under the BOSS name, "were tools for playing loops and sound effects that synthesizers could not produce." Two decisions made there outlived the machine. The first was the Effector: a bank of effects that could sit on the sampler's own output and, through the EXT SOURCE button, on anything plugged into the back. The second was that the sample modes were GATE and LOOP only, with no one-shot setting; turn both off and you got one-shot playback by accident. The engineers lined the pads up in a column because they thought it would help you organize sounds, and that pad order survived into the 404.
+
+So the 202 was never a studio. It was a box that held a few seconds of something and let you push that something through a filter while a record played. Every machine after it kept that shape and added one thing. The 303 added resampling and a Vinyl Simulator. The 404 added a mic again, a looper and a scene. None of them added a proper display.
+
+## The record it made
+
+The clearest document of the 202 at work is cLOUDDEAD's self-titled debut. Sound On Sound's March 2002 feature with Odd Nosdam lays out the method: beats built on a BOSS SP-202 into a Tascam eight-track cassette, bounced to DAT, vocals back onto the freed tracks through a twenty-dollar mic plugged straight into the recorder. Samples came from thrift-store records, household objects and films taped off a VCR. The Dr. Sample's lo-fi grade and the cassette did the rest, in bedrooms, between January 1999 and March 2000. That is a whole production chain for less than the price of one professional converter, and the record still sounds like nothing else.
+
+Gear wikis also list Fatboy Slim as an owner, without a source worth repeating. The honest list of famous 202 records is short, and that shortness is the point. The machine was cheap enough to be everywhere and limited enough that most people moved on. The people who stayed had found something in the limits.
+
+## What carried into the 303 and the 404
+
+Sound On Sound reviewed the [SP-303](https://gazillionindustries.com/sp-303/) in August 2001 as "an updated version of the original SP202" and spent most of the review on what changed. The mic was gone, the battery option was gone, the sample CD was gone. In their place came 26 effects instead of five, resampling, a pattern sequencer, real-time knobs and WAV import. Vinyl Simulator got a button of its own. The reviewer admitted he was "not as blown away by this Dr Sample as I was by the first," because the first had arrived with no competition.
+
+Resampling was the real inheritance. On the 202 an effect was something you heard while a pad played. On the 303 you could print it, play the result through another effect, and print that. A loop could go through the Vinyl Simulator, then the compressor, then the filter, each pass squashing it a little further and each pass impossible to undo. That chain of committed decisions is the sound people now call vinyl sim, and the vinyl sim sound is what half the beat scene built itself around. Madlib's hotel-room *Madvillainy* sessions and J Dilla's *Donuts* both came off a 303, and that story is told at [the SP-303 page](https://gazillionindustries.com/sp-303/).
+
+The [SP-404](https://gazillionindustries.com/sp-404-history/) arrived in 2005 and gave the mic and the batteries back. It kept the pad column, the Vinyl Simulator and the Effector, added the DJFX Looper, and found its room in Los Angeles. When Roland built the SP-404MKII in 2021, announced at $499.99, the press release led with the Vinyl Simulator as a legacy effect and added a Cassette Simulator and a Lo-fi effect beside it. Twenty-three years after the little box with the thump, the effects bank was still the product.
+
+## Why the 202 matters more than its record list
+
+Because it set the terms. A sampler whose memory card could cost almost as much as the sampler. A box you could run on batteries at a kitchen table. Effects that were part of the instrument rather than a rack you bought later. A sample time so short that you had to choose a bar and mean it. Each of those constraints turned into a technique, and the techniques turned into a sound: short loops, dusty grades, effects ridden by hand, and a squash on the drums that came from pushing cheap circuits past polite.
+
+Roland's engineers said customers liked the lo-fi sound of the 303 so much that the 404SX got a LO-FI button to recreate it. The low sampling grades that made the sound possible were already on the 202, three years earlier. Follow the thread back far enough and you arrive at four sampling rates and a Record Level knob.
+
+**DOSE 88.** Deep reduction on every hit. The room comes up under the drums and the break turns into one block.
+
+## Getting the sound now
+
+You can buy a 202 used and most of what you will get is the thump and the grades. The sampling rates are easy to reproduce in a DAW: any bitcrusher with a sample-rate control set to 7.81 or 3.91 kHz gets you the grain, and [how to make a sample sound old](https://gazillionindustries.com/how-to-make-a-sample-sound-old/) walks through it. The part people actually chase, the squash that the 303 put on a break and the 404 carried forward, is a compression behavior, and that is what [vinyl sim](https://gazillionindustries.com/vinyl-sim-plugin/) describes in detail.
+
+We make [DRUGS](https://gazillionindustries.com/drugs.html) for exactly that job, and it is free. Put it on the drum bus, turn DOSE up until the hits sink into the body of the loop and the room comes up behind them, and leave it there. It was tuned by ear against breaks, chasing a feeling rather than a circuit, and nothing in it was measured from a machine. If you own an SP you will recognize what it is reaching for. If you have never touched one, this is the cheapest way to find out why people care.
+
+## Questions people ask
+
+### When did the SP-202 come out?
+
+It was reviewed in Sound On Sound's January 1998 issue, so it went on sale around the turn of 1998. One gear wiki lists it as 2000, which the review date rules out.
+
+### What is the difference between the SP-202 and the SP-303?
+
+The 303 of 2001 dropped the built-in mic and battery power and added resampling, 26 effects including the Vinyl Simulator, a pattern sequencer and WAV import. The 202 has six effect buttons, no resampling and four sampling grades from 31.25 kHz down to 3.91 kHz.
+
+### Does the SP-202 have a vinyl simulator?
+
+No. Vinyl Simulator arrived on the SP-303 in 2001. The 202's effects are Pitch, Time, Delay, two filters and a ring modulator.
+
+### How much sample time does the SP-202 have?
+
+About 32 seconds at the top grade and four minutes twenty at the lowest, across all 16 pads. A 4 MB SmartMedia card extends the lowest grade past 35 minutes.
+
+### Who made records on the SP-202?
+
+The best-documented case is cLOUDDEAD's self-titled debut, built by Odd Nosdam on a 202 into an eight-track cassette recorder. Most of the famous SP records, including *Madvillainy* and *Donuts*, were made on its successor, the SP-303.
+
+## What DRUGS does
+
+DRUGS is our bus compressor for drums, free for Mac and Windows. One control called **DOSE**, with **MIX** on the face for parallel without a send, **GAIN** on the way out and a soft ceiling after it. Turning DOSE up makes a break denser rather than louder and brings the room up under the hits. It was tuned by ear, chasing the squash those gray boxes put on drums, and it is not a model of any of them.
+
+The box beside the turntables ran on batteries and held half a minute of sound. It turned out to be enough.
 
 ---
 
@@ -18916,6 +19606,150 @@ Resonance is how much the filter boosts at the corner; Q is how narrow that boos
 F(ilter)12 is a filter with a lo-fi section in front of it. **POSITION** sets where in the spectrum the filter sits, and the further it works, the more it drives and the more it sings, built in rather than dialed in. There are five shapes: low-pass, high-pass, band-pass, notch, and a morph that runs from a closing low-pass, through untouched in the middle, to an opening high-pass. **SLOPE** runs from 18 dB per octave up to a wall where almost nothing gets past. **RESO** decides how much resonance and **Q** decides how narrow, while **Q SHAPE** puts peaks and dips at fixed distances from wherever the filter is, so the whole shape travels with the knob.
 
 Stop wiggling. You now know which one is about to make the hollow whistle.
+
+---
+
+## About F(ilter)12
+
+F(ilter)12 — a 12 bit sauce filter for Mac and Windows: a lo-fi section, five filter shapes, six resonance shapes and AURA.
+
+https://gazillionindustries.com/f12.html
+
+
+---
+
+# Free alternatives to RC-20 Retro Color, one module at a time
+
+> RC-20's six modules and a free plugin for each, the one job the rack never had, two of ours that replace whole rows, and the order to build the free chain in.
+
+Source: https://gazillionindustries.com/free-alternative-to-rc-20/  
+Published 2026-10-28, updated 2026-10-28. By Gazillion Industries, who make F(ilter)12.
+
+---
+
+Six boxes in a row, one big knob, a preset called "old radio", and a price tag of $99 for a sound your sampler used to make by accident. The question is whether a chain of free plugins can do the same six jobs, and the answer is yes for five of them and nearly for the sixth.
+
+RC-20 Retro Color is six modules in series: Noise, Wobble, Distort, Digital, Space and Volume Drops, and each has a free stand-in below. The job no module covers, and the one most lofi chains are missing, is the squash, and that is [DRUGS](https://gazillionindustries.com/drugs.html), ours and free. For the digital module with a real filter behind it, [F(ilter)12](https://gazillionindustries.com/f12.html) is $49 and does both.
+
+## The short version
+
+- **RC-20 today**: $99 one-time or $4.99 a month for 20 months; version 1.5.2, 8 Oct 2026; VST, AU, AAX
+
+- **Noise, free**: iZotope Vinyl; Caelum Tape Cassette 2
+
+- **Wobble, free**: Tape Cassette 2's wow and flutter; Wavesfactory Cassette Transport for the stop and start
+
+- **Distort, free**: Softube Saturation Knob
+
+- **Digital, free**: TAL-Bitcrusher; Kilohearts Bitcrush
+
+- **Space and Volume, free**: Voxengo OldSkoolVerb or TAL-Reverb-4; Kilohearts Trance Gate
+
+- **The missing job**: the squash: DRUGS, ours, free
+
+- **Ours, paid**: F(ilter)12 $49 for digital plus a filter; TRIPLE OG $39 for wobble, hiss and age in one transport
+
+## What RC-20 is, in a paragraph
+
+XLN Audio sell RC-20 Retro Color at $99 or $4.99 a month over twenty months, with a ten-day trial, as VST, AU and AAX for macOS 10.13 and Windows 10 and 11. Version 1.5.2 shipped on 8 October 2026 with an "updated platform" and bug fixes. The six modules run left to right, each with its own amount knob, and a global Magnitude control scales the whole chain. There is no global dry/wet. The [RC-20 guide](https://gazillionindustries.com/rc-20-retro-color/) takes it apart module by module; this page replaces it module by module.
+
+## Noise: iZotope Vinyl, or Tape Cassette 2
+
+XLN's Noise Generator adds "one of RC-20's many noise types, from subtle vinyl crackle and tape hiss" upward. Two free plugins cover it. **iZotope Vinyl** is free and does the record specifically: Dust, Wear, Mechanical Noise for turntable rumble and motor noise, Warp, a Year control that filters like players of different decades, and a Spin Down. AU, AAX, VST and VST3 on the Mac, AAX, VST and VST3 on Windows. **Caelum Audio Tape Cassette 2** covers the tape side with "real sampled tape noise", offered as a free download on the maker's page in VST3, AU, AAX and AUv3 for Windows 7 and macOS 10.11 and up. Vinyl for crackle, Tape Cassette 2 for hiss, and you have the module twice over.
+
+## Wobble: Tape Cassette 2, and the stop
+
+RC-20's Wobble "adds pitch inconsistencies associated with unstable playback on analog gear". Tape Cassette 2 has wow and flutter controls alongside its saturation and noise, which makes it the one free plugin that covers two RC-20 modules at once. For the tape-stop version of the same idea, **Wavesfactory Cassette Transport** is free and "simulates the sound of tape speeding up and slowing down", with the mechanical noises of the deck's buttons and rotor included. Neither gives you RC-20's stereo wobble-as-chorus mode, which is the one thing in this module you would miss.
+
+## Distort: Softube Saturation Knob
+
+XLN promise "everything from mild saturation to raging fuzz". **Softube Saturation Knob** is free, one big knob and a three-way switch, Keep High, Neutral or Keep Low, which decides which end of the spectrum distorts first. AU, VST, VST3 and AAX on macOS 14 and up and Windows 10 and 11. It needs a Softube account and an iLok account, with no dongle. Kilohearts' Distortion and Shaper, free with an account, are the other route. On its own, saturation is the easiest module to replace and the [saturation field](https://gazillionindustries.com/best-saturation-plugins/) has a dozen more.
+
+## Digital: TAL-Bitcrusher, or ours
+
+RC-20's Digital module exists to "recreate the sound of vintage digital gear like old-school samplers". **TAL-Bitcrusher** sits under the FREE Plug-Ins heading on TAL's product list, a remake of their original with a new Companding parameter, a resizable interface and a preset browser, as VST, VST3, AU, AAX and CLAP for Windows 10, macOS 10.11 and Linux. Kilohearts' **Bitcrush** is in their free Essentials set. Both reduce bits and sample rate, which is the module.
+
+What neither has is a filter behind the crush, and that is the gap F(ilter)12 fills. SAMPLE RATE slows the rate the audio is sampled at, so the top goes and what was up there folds back down as new content; BIT coarsens the steps, so quiet detail rounds off and what is left picks up a hard edge. Twelve bits is as clean as it gets. Then the filter: five shapes, a slope from 18 dB per octave to a wall, resonance and Q as separate controls, and six resonance shapes that travel with the cutoff. RC-20 has no filter section at all, so this is one of its modules plus the thing the rack is missing, for $49.
+
+- **Clean** — no processing — https://gazillionindustries.com/f12/f12-clean.m4a
+
+- **Through F(ilter)12** — bit and rate reduction together. [F(ilter)12, for Mac and Windows](https://gazillionindustries.com/f12.html) — https://gazillionindustries.com/f12/f12-both.m4a
+
+**4 bit at 8 kHz.** Bits make it grainy; the rate is what makes it clang.
+
+## Space: OldSkoolVerb or TAL-Reverb-4
+
+RC-20's Space is a reverb, and at least one published review of RC-20 called it the module it could live without. Two free reverbs cover it. **Voxengo OldSkoolVerb** is "a free algorithmic reverberation" plugin in AAX, AU, VST and VST3 for 64-bit Mac and Windows. **TAL-Reverb-4** is "a high quality plate reverb with a vintage 80's character", and it carries a bit-depth and sample-rate control of its own, so it degrades while it reverberates. VST, VST3, AU, AAX and CLAP, Windows 7 and macOS 10.9 up, Linux, version 4.0.4.
+
+## Volume Drops: the one with no exact match
+
+XLN's sixth module reproduces "the wear, tear and volume loss associated with recording and playback on tape". No free plugin we could verify does dropouts as its job. **Kilohearts Trance Gate**, in the free Essentials set, is a rhythmic gate and will carve volume out on a grid, which is a cousin of the effect. Tape Cassette 2's noise and wobble cover the wear without the drops. The paid tape plugins do this properly: Wavesfactory Cassette (59 euros) models random high-frequency loss and a tape snap, Aberrant DSP's SketchCassette II ($36) has dropouts with a stereo width control and a continuous Age control, and our own TRIPLE OG ($39) has an AGE control that runs to 60 years, with hiss, drive and tone beside it. For the one module free cannot quite reach, that is the honest list.
+
+## The job RC-20 has no module for
+
+Run a clean drum loop through all six RC-20 modules and it is dusty, wobbly, crushed and still exactly as dynamic as it was. The sound people are chasing when they reach for a lofi rack, the sampler sound, is as much a compressor as a filter: dense, slightly crushed drums with the room pushed up under the hits. RC-20 does not compress, and neither does any plugin above. [DRUGS](https://gazillionindustries.com/drugs.html) is ours, free for Mac and Windows, and it is that squash on one knob called DOSE: the drum bus gets denser rather than louder, the release adapts to the hit in front of it, and the room comes up under the drums. Put it first in the chain, before any of the stand-ins above, and the noise ends up inside the loop instead of sitting on top of it. The [how to make a sample sound old](https://gazillionindustries.com/how-to-make-a-sample-sound-old/) guide is built on that order.
+
+## Build the free chain, in order
+
+- Route the loop to one bus.
+
+- Insert DRUGS first and raise DOSE until the room comes forward under the hits.
+
+- Insert the bitcrusher second and set the sample rate before the bit depth.
+
+- Insert the saturator third and drive it until the top of the loop has an edge.
+
+- Insert Tape Cassette 2 fourth for wow and flutter, with its noise low for now.
+
+- Insert the reverb fifth, short decay, mostly dry.
+
+- Insert Vinyl last and set Year and Wear before raising Dust and Mechanical Noise.
+
+- Bypass the whole chain at matched level and play the loop on a phone.
+
+The order mirrors RC-20's own, with the compressor added at the front. Noise last matters most: noise added before the crush and the saturation gets crushed and saturated with the loop, which is the tell people hear and cannot name.
+
+## What the free chain costs you
+
+Six windows instead of one, with no Magnitude knob to pull them all back at once. Three accounts: Softube and iLok for Saturation Knob, Kilohearts for Essentials, and whatever Caelum asks at download. Level drift, because every stage above changes gain and nothing compensates, so match each one as you go. And the preset list. RC-20's "cassette" and "old radio" are somebody's hour of work on six knobs at once; the free chain hands you the knobs and none of the hours. If that trade is wrong for you, $99 is the price of the hour, and [the free tape plugins](https://gazillionindustries.com/best-free-tape-plugins/) guide is where to stop halfway.
+
+[F(ilter)12](https://gazillionindustries.com/f12.html) does the digital module and the filter RC-20 never had, for $49, and the demo on the page is the quickest way to hear the difference between a crush and a crush you can move.
+
+## Questions people ask
+
+### Is there a free version of RC-20?
+
+No. XLN offer a ten-day trial with full functionality, then $99 or $4.99 a month for twenty months. Pages offering a "free download" of it on unrelated domains are what they look like.
+
+### What is the best free alternative to RC-20?
+
+Caelum Audio Tape Cassette 2 covers the most modules in one plugin: noise, wobble and distortion. Add iZotope Vinyl for crackle, TAL-Bitcrusher for the digital module and a free reverb, and five of the six are done. For the squash none of them do, DRUGS is free.
+
+### Does Ableton Live have an RC-20 alternative built in?
+
+Partly. Vinyl Distortion, in Standard and Suite, does vinyl-style harmonic distortion and a crackle generator, and Live's Saturator covers the distort job. The [lofi VST guide](https://gazillionindustries.com/best-lofi-vst/) sorts the four jobs across DAWs.
+
+### Is TAL-Bitcrusher free?
+
+TAL list it under FREE Plug-Ins on their product page, alongside TAL-Reverb-4, TAL-Vocoder and TAL-NoiseMaker. Downloads are on the product page in VST, VST3, AU, AAX and CLAP.
+
+### Is Cymatics Origin still free?
+
+It was free with an email address in 2021, covering noise, wobble, saturation and resampling in one plugin. Its product page did not answer at the address we had when this was written, so check before you build a chain around it.
+
+### How does F(ilter)12 compare to RC-20?
+
+They overlap in one module. RC-20's Digital reduces bits and sample rate; F(ilter)12's SAMPLE RATE and BIT do the same. F(ilter)12 then adds a filter with five shapes, a slope to a wall and six resonance shapes, plus the adaptive correction AURA, none of which RC-20 has; RC-20 adds noise, wobble, reverb and dropouts, none of which F(ilter)12 has.
+
+### Does a free chain sound as good as RC-20?
+
+At each module, mostly yes: noise, filtering and bit reduction are cheap to build and sound alike whoever builds them. What you lose is the one-knob depth control and the presets. What you gain, if you add the compressor, is the half of the sampler sound RC-20 never had.
+
+## What F(ilter)12 does
+
+F(ilter)12 is a filter with a lo-fi section in front of it and an adaptive correction called AURA on top. **SAMPLE RATE** and **BIT** are the crush pair. **POSITION** sets where in the spectrum the filter sits, and the further it works the more it drives and the more it sings. Five shapes, low-pass, high-pass, band-pass, notch and a morph, with **SLOPE** from 18 dB per octave to a wall, **DIRTY** feeding the filter's own distortion back through itself, and **Q SHAPE** putting peaks and dips at fixed distances from the cutoff: WAH, VOWEL, COMB, SCOOP, PLAIN, or DRAW your own. AUTO FILTER or SIDECHAIN moves it. $49, AU, VST3 and standalone on macOS 10.13 and up, VST3 on 64-bit Windows 10 and up. The [bitcrusher guide](https://gazillionindustries.com/best-bitcrusher-plugins/) covers the crush pair on their own.
+
+Six boxes, six free stand-ins, and a seventh box the rack never had. The preset called "old radio" was always a chain. Now it is yours.
 
 ---
 
@@ -22544,118 +23378,6 @@ https://gazillionindustries.com/
 
 ---
 
-# The Minimoog Voyager
-
-> The Minimoog Voyager explained: why Bob Moog built it in 2002, what the dual filters and touch surface do, every variant, and what it is good at.
-
-Source: https://gazillionindustries.com/minimoog-voyager/  
-Published 2026-09-20, updated 2026-09-24. By Gazillion Industries.
-
----
-
-In 1970 Bob Moog put a synthesizer in a wooden case with a keyboard on it and no patch cables, because working musicians could not carry a wall of modules to a gig. Thirty-two years later, having lost and won back the right to use his own name, he did it again.
-
-The Minimoog Voyager is a monophonic analog synthesizer designed by Robert Moog and released by Moog Music in the summer of 2002, the first new Minimoog since the original Model D went out of production in the early eighties. It keeps the three-oscillator, ladder-filter architecture of the 1970 instrument and adds a second filter, patch memory, MIDI, CV inputs and a touch surface. Production ran for thirteen years and ended in September 2015, after more than 14,000 units: slightly more than the original Minimoog ever sold.
-
-## The short version
-
-- **Released**: summer 2002, designed by Robert Moog
-
-- **Voices**: monophonic, 44 keys with velocity and aftertouch
-
-- **Oscillators**: three, plus noise and an external audio input
-
-- **Filters**: two: dual lowpass, or highpass into lowpass, with spacing
-
-- **Memory**: 128 presets, expandable to 896
-
-- **Discontinued**: September 2015, over 14,000 made
-
-## Why it exists
-
-The original Minimoog was a practical answer to an impractical instrument. Modular systems cost tens of thousands of dollars and had to be patched by hand for every sound, so Moog's engineers hard-wired the most useful connections, bolted on a keyboard and made something a band could put in a van. It ran from 1970 into the early eighties and sold over 12,000 units, which for an instrument that plays one note at a time is a strange kind of triumph.
-
-Then Moog lost the company. The name went with it, and for years he traded as Big Briar, building theremins and effects while other people sold instruments with his surname on them. He got the trademark back and renamed the company Moog Music in 2002, and the Voyager arrived the same year. The first 600 were Signature Editions at $3,495, each one carrying his autograph. Bob Moog died on 21 August 2005, of a brain tumor diagnosed that April, three years into the production run of the instrument that brought his name home.
-
-## What is actually on the panel
-
-Three oscillators with triangle, sawtooth, square and narrow rectangular waves, tunable across a wide range, with oscillator three doubling as a second modulation source. A noise generator and an external input, so you can run other instruments through the filters.
-
-Two filters, which is the biggest musical change from the Model D. In dual lowpass mode you get two ladder filters, one per channel, with a SPACING control that offsets them from each other: a single sound with two different amounts of brightness in it, which in stereo reads as width and in mono as a subtle formant. In highpass-lowpass mode the same pair becomes a band, and spacing sets how wide it is. Two ADSR envelopes, one for the filter and one for the amplifier. An LFO from 0.2 to 50 Hz with triangle, square and two flavors of sample and hold.
-
-Then the modern parts: 128 patch locations expandable to 896, MIDI in, out and through, 14 CV and gate inputs on the back for anyone who wants to treat it as a module again, and a touch surface that reports three values at once from where your finger is and how much of it is touching. The touch surface is the part people either build their playing around or never use twice.
-
-## The variants
-
-- **Signature Edition** (2002): the first 600, $3,495, signed.
-
-- **Standard** (2002 on): $2,995.
-
-- **Anniversary Edition** (2004–05): black cabinet, backlit panel, $3,295.
-
-- **Electric Blue** (2005 on) and the **Select Series** (2006 on), which let buyers specify cabinet and lighting.
-
-- **Rack Mount Edition** (2005): five rack spaces, MIDI controlled, and stackable up to sixteen units for polyphony by brute force.
-
-- **Old School** (2008–09): no memory, no MIDI, no touch surface. A Model D argument in a Voyager case.
-
-- **XL** (2010): 61 keys, a ribbon controller and a patch bay.
-
-- **10th Anniversary Gold** (2012): 31 units, 24-karat gold, $15,000.
-
-## What it is good at
-
-Bass, first. One oscillator an octave down, a second detuned by a few cents against it, the filter low and the envelope doing most of the work: that is a bass line that occupies the whole bottom of a record without a single dB of EQ. Two filters make it more interesting than the usual monosynth bottom, because you can let one of them pass a little more of the harmonics than the other and get bite and weight from the same note.
-
-Leads and hooks, second, especially with the touch surface mapped to filter cutoff, so the phrase moves because your hand moved. And thirdly the thing monosynths are worst at and this one is unusually good at: sitting quietly. Turn the resonance down, open the filters halfway, play chords one note at a time, and it behaves like an instrument in a room rather than a machine making a noise.
-
-There is a hip hop footnote worth having. A Voyager that belonged to [J Dilla](https://gazillionindustries.com/j-dilla/) is in the Smithsonian's National Museum of African American History and Culture, donated by his mother in 2014 along with his sampler, its power cord, a cable and the factory soft case. The museum's record puts its serial number at 263, inside the first run, and dates it 2002 to 2005. The instrument is not in that case as a synthesizer. It is there as evidence about how a particular producer worked.
-
-**BEEF at 96.** Saturation and loudness, for when a synth needs to stop being polite.
-
-We make [BEEFY](https://gazillionindustries.com/beefy.html). BEEF at 96. Saturation and loudness, for when a synth needs to stop being polite.
-
-## Where it costs you
-
-It plays one note at a time, it is heavy, and it costs more used now than several polyphonic instruments that will do more of the obvious jobs. Analog oscillators drift, so tuning is a habit rather than an event. The patch memory stores panel positions, which means recalling a patch leaves every physical knob pointing at the wrong value until you move it, and that trips people who came from digital instruments. And the touch surface rewards practice in a way that is genuinely off-putting for the first month.
-
-Against all of that: it is one of the few instruments where the difference between a beginner and someone who has lived with it is audible in four notes.
-
-## Questions people ask
-
-### What is special about the Moog Voyager?
-
-It is the Minimoog architecture with a second filter, patch memory, MIDI and CV, designed by Robert Moog himself and built after he regained the rights to his name. The dual filters with their spacing control, and the three-axis touch surface, are the parts you cannot get on the original.
-
-### What are the differences between the Voyager and the original Minimoog?
-
-The Model D of 1970 has one lowpass ladder filter, no patch memory, no MIDI and no CV inputs beyond the basics. The Voyager has two filters with a spacing control, 128 presets expandable to 896, full MIDI, 14 CV and gate inputs, a touch surface, and a velocity- and pressure-sensitive keyboard. The core sound is closely related; the control over it is not.
-
-### Is the Minimoog discontinued?
-
-Voyager production ended in September 2015 after thirteen years. Moog has since reissued the original Model D twice, in 2016 and again in 2022, so a new Minimoog has been available on and off since, but not the Voyager.
-
-### How many Minimoog Voyagers were made?
-
-More than 14,000 across all variants over thirteen years, which is slightly more than the original Minimoog managed in its own production run.
-
-### Is the Voyager polyphonic?
-
-No. It plays one note at a time, with low, high or last-note priority. The Rack Mount Edition could be stacked, up to sixteen units, for people who wanted polyphony badly enough to buy it sixteen times.
-
-Two instruments, thirty-two years apart, built for the same reason: put the thing in a case a person can carry, and let them play it with their hands.
-
----
-
-## About Gazillion Industries
-
-Gazillion Industries makes plugins tuned by ear: DRUGS, F(ilter)12, SKRUU, TRIPLE OG and BEEFY.
-
-https://gazillionindustries.com/
-
-
----
-
 # The creation of the MPC
 
 > How the MPC came to exist: the Linn machines that failed first, what Akai and Roger Linn each contributed, and the swing control in the designer's own words.
@@ -24500,6 +25222,152 @@ https://gazillionindustries.com/journeyman.html
 
 ---
 
+# The Minimoog Voyager
+
+> The Minimoog Voyager's history: how Bob Moog won his name back, the 2002 launch, the dual filters and touch surface, hip-hop's Voyagers, and why one voice teaches.
+
+Source: https://gazillionindustries.com/minimoog-voyager/  
+Published 2026-09-20, updated 2026-10-28. By Gazillion Industries, who make JOURNEYMAN.
+
+---
+
+In 1970 Bob Moog put a synthesizer in a wooden case with a keyboard on it and no patch cables, because working musicians could not carry a wall of modules to a gig. Thirty-two years later, having lost and won back the right to use his own name, he did it again.
+
+The Minimoog Voyager is a monophonic analog synthesizer designed by Robert Moog and shipped by Moog Music from late summer 2002, the first new Minimoog since the original went out of production in the early eighties. It keeps the three-oscillator, ladder-filter architecture of the 1970 instrument and adds a second filter, patch memory, MIDI, CV inputs and a touch surface. Production ended in 2015 after about 14,000 units. Moog called it the last synthesizer Bob Moog designed from start to finish.
+
+## The short version
+
+- **Shipped**: late summer 2002, designed by Robert Moog
+
+- **Voices**: one, on a 44-key keyboard with velocity and aftertouch
+
+- **Oscillators**: three, continuously variable waveform, plus noise and an external input
+
+- **Filters**: two ladder filters: dual lowpass, or highpass into lowpass, with spacing
+
+- **Memory**: 128 presets, expandable to 896
+
+- **Launch price**: $3,495 signed, $2,995 standard; £2,999.99 in the UK
+
+- **Discontinued**: announced 30 September 2015, about 14,000 made
+
+## Losing the name
+
+The original Minimoog was a practical answer to an impractical instrument. Modular systems cost tens of thousands of dollars and had to be patched by hand for every sound, so Moog's engineers hard-wired the most useful connections, bolted on a keyboard and made something a band could put in a van. It ran from 1970 into the early eighties and sold over 12,000 units, which for an instrument that plays one note at a time is a strange kind of triumph.
+
+Then Moog lost the company. He had sold it to Norlin in 1971 and stayed on as a designer until 1977; in 1978 he founded Big Briar in the mountains of North Carolina and spent two decades building theremins and effects pedals while other people sold instruments with his surname on them. The original trademark lapsed in 1983. In Britain a man in Caerphilly registered the Moog Music and Minimoog names in 1996 and built his own "Welsh Minimoogs," which is why the Voyager was sold in the UK as "Voyager by Bob Moog" and nothing else.
+
+Getting the name back took, in Moog's words, "three or four years," and there "was never a lawsuit." He and the trademark's American holder settled. Sound On Sound called the reacquisition the most significant development of 2002, and Big Briar became Moog Music the same year. The Voyager, shown as a non-working concept at the 2000 NAMM show, was the first instrument to ship under the restored name. The name itself came from a public competition. Moog later said that it won out over suggestions like "Moogabooga."
+
+## What Bob Moog said he was building
+
+"The main impetus behind it was to build a monophonic, performance-oriented synthesizer as good as we could." That is Moog in March 2003, and the sentence has three load-bearing words. Monophonic, because one voice is the whole point. Performance-oriented, because the instrument was meant to be played by hands in real time rather than programmed. And "as good as we could," which is a working engineer's phrase for an instrument with no excuses built in.
+
+The filter started life as the classic Moog filter from the Moogerfooger MF-101 pedal, and his idea was two of them in parallel, one per output channel. The touch surface came from a Big Briar design that never shipped: a pad that reads where your finger is in two dimensions and how much of it is touching, so one gesture moves several things at once. Those two decisions are most of what separates the Voyager from the instrument it descends from.
+
+## What is actually on the panel
+
+Three oscillators with a waveform control that sweeps continuously from triangle through sawtooth and square into narrow pulse, tunable across a wide range, with oscillator three doubling as a modulation source. A noise generator and an external input, so you can run other instruments through the filters.
+
+Two filters, which is the biggest musical change from the original. In dual lowpass mode you get two ladder filters, one per channel, with a SPACING control that offsets them from each other: a single sound with two different amounts of brightness in it, which in stereo reads as width and in mono as a subtle formant. In highpass-lowpass mode the same pair becomes a band, and spacing sets how wide it is. Two ADSR envelopes, one for the filter and one for the amplifier. An LFO from 0.2 to 50 Hz with sample and hold, and two modulation busses. Later firmware let each filter run at one, two, three or four poles; when Sound On Sound reviewed it in June 2003 the 12 dB mode was still a promise.
+
+Then the modern parts: 128 patch locations expandable to 896, MIDI in, out and through, 14 CV and gate inputs on the back for anyone who wants to treat it as a module again, and the touch surface, which out of the box sends X to cutoff, Y to spacing and finger area to resonance. The touch surface is the part people either build their playing around or never use twice. The reviewer's verdict was "very positive" with "rather more niggles" than expected, and a warning that anyone buying on features per pound should look elsewhere.
+
+**One voice, left to right.** Oscillators into the mixer, the mixer into two filters, the filters into an amplifier the volume envelope opens and closes.
+
+## The variants
+
+- **Signature Edition** (2002): the first 600, $3,495, signed.
+
+- **Standard** (2002 on): $2,995. Sold in the UK as the Performer Edition at £2,199.99.
+
+- **Anniversary Edition** (2004–05): black cabinet, backlit panel, $3,295.
+
+- **Electric Blue** (2005 on) and the **Select Series** (2006 on), which let buyers specify cabinet and lighting.
+
+- **Rack Mount Edition** (2005): five rack spaces, MIDI controlled, no keyboard and no touch surface. Daft Punk toured four of them in 2006 and 2007.
+
+- **Old School** (2008–09): no memory, no MIDI, no touch surface. A 1970 argument in a 2008 case.
+
+- **XL** (2010): 61 keys, a ribbon controller and a patch bay. The only version that survived the 2015 announcement, and it went in 2017.
+
+- **10th Anniversary Gold** (2012): 31 units, 24-karat gold, $15,000.
+
+## The end
+
+Bob Moog died on 21 August 2005 in Asheville, of a brain tumor diagnosed that April, three years into the production run. The instrument outlived him by a decade. On 30 September 2015 Moog Music announced the end of Voyager production: thirteen years, about 14,000 instruments, a final 600 hand-built in the downtown Asheville factory. Trent Reznor, in the farewell video, called it "the archetype of what a synthesizer is and should be." Moog's own line was that the Voyager "is the foundation of the modern Moog synthesizer," which is company language for the thing everything since has been measured against.
+
+## Hip-hop and soul
+
+A Voyager that belonged to [J Dilla](https://gazillionindustries.com/j-dilla/) is in the Smithsonian's National Museum of African American History and Culture, donated by his mother in July 2014 along with his sampler. The museum's record puts the serial number at 263, inside the first run, dates it 2002 to 2005, lists its place of use as Los Angeles, and notes that he chose the walnut finish. The instrument is not in that case as a synthesizer. It is there as evidence about how a particular producer worked, and the record says only that: owned, used, Los Angeles. Nobody has his patches.
+
+The other documented Voyager in this lane sits in Mike Dean's rig. Dean, who has produced and mixed for Kanye West, Travis Scott, Scarface, UGK, Beyoncé and Jay-Z, told Sound On Sound in 2022 that the Moog instruments he uses most are the Matriarch, the Grandmother, "and the Voyager for my signature bass sound," and that the Voyager is part of his live core setup. That is the Voyager's job in this music in one sentence: the bass. One oscillator an octave down, a second detuned by a few cents against it, the filter low and the envelope doing most of the work. A bass line that occupies the whole bottom of a record without a single dB of EQ.
+
+What the two filters add to that is bite and weight from the same note. Let one pass a little more of the harmonics than the other and the bass reads on a phone speaker, where a single dark filter would leave a rumor. The woolly, rolled-off low end of the neo-soul records of the early 2000s lives in that neighborhood, though no public source puts a Voyager on a specific one of them, and this page will not either.
+
+## Why one voice teaches
+
+A polysynth forgives you. Play a chord through a pad and the voices cover for each other; a dull envelope or a lazy filter setting disappears into the stack. A monosynth has nowhere to hide. Every note is the whole sound, so every decision on the panel is audible, and the Voyager's panel is laid out as a lesson in the order those decisions should be made.
+
+Start from the job, not the waveform. Deep sub, round bass, rubber funk bass, soft lead, clav, stab. Then give each oscillator a role: one for the body (triangle or a soft saw), one for articulation (saw, square, a moderate pulse), and a third that has to justify itself, as a quiet octave, a fifth or a modulation source. Three full-level saws is the sound of someone who has not decided yet.
+
+Choose the filter slope before the cutoff. Four poles is dark, woolly and classic; three poles is rubber and melodic; two poles is clav and reed and open R&B lead. Then let the envelopes do the articulation, because a patch's identity usually lives in the filter attack and decay and the envelope amount, not in how many oscillators are on. Keep resonance structural rather than theatrical. Pick one movement, a slow waveform drift or a small detune beat, and at most one supporting one. And give every patch a single contradiction: a dark body with a bright 120 ms transient, a pure sub with a quiet octave rasp, a plucked filter under a legato glide.
+
+The Voyager rewards that discipline because it exposes the lack of it. The mixer level drives the filter harder, so loud is also a tone decision. Velocity, aftertouch and the touch surface are three more hands on the same patch, which is why the difference between a beginner and someone who has lived with the instrument is audible in four notes. Those four notes are the lesson, and they transfer to any monosynth, hardware or software, that gives you the same decisions to make.
+
+## Where it costs you
+
+It plays one note at a time, it is heavy, and it costs more used now than several polyphonic instruments that will do more of the obvious jobs. Analog oscillators drift, so tuning is a habit rather than an event. The patch memory stores panel positions, which means recalling a patch leaves every physical knob pointing at the wrong value until you move it, and that trips people who came from digital instruments. The 2003 reviewer found the aftertouch "more like an on/off switch," and the touch surface rewards practice in a way that is off-putting for the first month.
+
+Against all of that: it was built by the man who invented the form, to his own specification, and it sold slightly more units than the original ever did.
+
+## Questions people ask
+
+### What is special about the Moog Voyager?
+
+It is the Minimoog architecture with a second filter, patch memory, MIDI and CV, designed by Robert Moog himself and built after he regained the rights to his name. The dual filters with their spacing control, and the three-axis touch surface, are the parts you cannot get on the original.
+
+### What are the differences between the Voyager and the original Minimoog?
+
+The 1970 instrument has one lowpass ladder filter, no patch memory, no MIDI and no CV inputs beyond the basics. The Voyager has two filters with a spacing control, 128 presets expandable to 896, full MIDI, 14 CV and gate inputs, a touch surface, and a velocity- and pressure-sensitive keyboard. The core sound is closely related; the control over it is not.
+
+### When did the Minimoog Voyager come out?
+
+It was shown as a concept at the 2000 NAMM show and shipped from late summer 2002, the year Bob Moog regained the Moog Music name. Sound On Sound reviewed it in June 2003.
+
+### Is the Minimoog Voyager discontinued?
+
+Yes. Moog announced the end of production on 30 September 2015 after thirteen years; the XL followed in 2017. Moog has since reissued the original Minimoog, so a new Minimoog has been available on and off, but not the Voyager.
+
+### How many Minimoog Voyagers were made?
+
+About 14,000 across all variants over thirteen years, which is slightly more than the original Minimoog managed in its own production run.
+
+### Did J Dilla use a Minimoog Voyager?
+
+Yes. His Voyager, serial number 263, is in the Smithsonian's National Museum of African American History and Culture, dated 2002 to 2005 and listed as used in Los Angeles. The record documents ownership and use, not specific patches or songs.
+
+### Is the Voyager polyphonic?
+
+No. It plays one note at a time, with low, high or last-note priority. The Rack Mount Edition could be stacked, up to sixteen units, for people who wanted polyphony badly enough to buy it sixteen times.
+
+## What JOURNEYMAN does
+
+[JOURNEYMAN](https://gazillionindustries.com/journeyman.html) is our monosynth for Mac and Windows, $59, in AU, VST3 and standalone on macOS and VST3 on Windows. **Three oscillators**, each with an OCTAVE switch and a WAVE control that sweeps continuously from triangle through saw and square to pulse. A five-source **MIXER** for the oscillators, NOISE and EXT IN. **Two ladder filters** that share a CUTOFF, with SPACING between them and a switch between DUAL LP and HP:LP. A filter envelope and a volume envelope, an LFO with sample and hold, two modulation busses, GLIDE, and a touch surface. The 200 programs cover bass, leads, mono keys, pads, percussion and fx, and every one of them is wired to the mod wheel and the touch surface before you touch anything. It was tuned by ear and it is not a model of any instrument.
+
+Two instruments, thirty-two years apart, built for the same reason: put the thing in a case a person can carry, and let them play it with their hands.
+
+---
+
+## About JOURNEYMAN
+
+JOURNEYMAN — a monosynth for Mac and Windows. One voice, three oscillators, two ladder filters, two envelopes, two modulation busses and 200 programs.
+
+https://gazillionindustries.com/journeyman.html
+
+
+---
+
 # Monosynth vs polysynth
 
 > What a monosynth is, what changes when a synth plays one note instead of several, and how to hear paraphonic against polyphonic in ten seconds.
@@ -25600,18 +26468,18 @@ https://gazillionindustries.com/skruu.html
 
 ---
 
-# Best varispeed plugins
+# Varispeed plugin: which one, and how to choose
 
-> How to choose a varispeed plugin: what the rate control has to do, how to test one in ten minutes, the free options, and where it goes in a chain.
+> A varispeed plugin moves pitch and time together on one rate control. The one we make, the free ones, the four jobs the name covers, and a ten-minute test.
 
 Source: https://gazillionindustries.com/best-varispeed-plugins/  
-Published 2026-09-24, updated 2026-09-24. By Gazillion Industries, who make SKRUU.
+Published 2026-09-24, updated 2026-10-28. By Gazillion Industries, who make SKRUU.
 
 ---
 
 The same question turns up on plugin forums every few months, in almost the same words: is there a plugin that does what the speed control on a tape machine does, pitch and tempo sagging together, on a fader you can ride?
 
-A varispeed plugin changes playback rate, so pitch and time move together: slow it and the audio gets longer and lower at once. The good ones put that rate on a continuous, automatable control rather than a single button, resample cleanly enough that a speed-up does not go glassy, and are honest about whether the control springs home or holds. Free ones exist. Which you want depends on whether you are transposing a whole session or playing a move into a bus.
+A varispeed plugin changes playback rate, so pitch and time move together: slow it and the audio gets longer and lower at once. The good ones put that rate on a continuous, automatable control rather than a single button, resample cleanly enough that a speed-up does not go glassy, and are honest about whether the control springs home or holds. Free ones exist. Which you want depends on whether you are transposing a whole session or playing a move into a bus. Ours is [SKRUU](https://gazillionindustries.com/skruu.html), $29, the rate on a knob with a sprung return.
 
 ## The short version
 
@@ -25626,6 +26494,12 @@ A varispeed plugin changes playback rate, so pitch and time move together: slow 
 - **Free route**: your DAW's own varispeed, and GSi VariSpeed for the delay version
 
 - **Our answer**: SKRUU, with PITCH and TIME on separate knobs
+
+## So which varispeed plugin do you get?
+
+If you typed "varispeed plugin", "varispeed vst" or "varispeed plugin for Ableton" and want the one to download: [SKRUU](https://gazillionindustries.com/skruu.html), $29, Mac and Windows, VST3, AU and standalone. PITCH is a continuous rate control from −20% to +10% that reads in semitones, TIME moves length on its own knob from −50% to +25%, and ELASTIC gives the knob a designed return along one of sixteen shapes. It is an insert, so it runs in Live, Logic, FL Studio, Reaper, Cubase and Bitwig alike, and there is a demo on the page.
+
+The reason to say it that plainly is that the field is thin. A KVR thread from March 2023 asked for exactly this, "a varispeed control that will alter pitch and speed (tempo) of the audio" on an insert, "continuously controllable so it can be automated", and the first reply was "I don't believe a plugin is available which will offer purely this." On page one for the term today you will find GSi VariSpeed, which is a tape echo whose motor speed sets the delay time; Isotonik's Varispeed 4, a Max for Live device that transposes a whole Live set by up to 24 semitones and needs Suite or Standard with Max; and Tape Fiasco, a free plugin whose Speed control runs from 0% to 100% and no higher. Each is good at its job. None is a rate you ride above and below unity on a bus. The rest of this page is how to tell those four jobs apart, and how to test any of them in ten minutes.
 
 ## Hear it
 
@@ -25747,7 +26621,7 @@ There is no single best one, because the category holds four different tools. Fo
 
 ### Is there a free varispeed plugin?
 
-Yes, several, covering different jobs. GSi VariSpeed is freeware for Windows, macOS and Linux and gives you the tape-echo version. Kilohearts Tape Stop is free with an account and gives you the stop and the start with a curve on both. Both were listed at no cost on the developers' own pages when this was written. Before either of them, check your own DAW: turning warping off and transposing a clip is varispeed, and it costs nothing.
+Yes, several, covering different jobs. GSi VariSpeed is freeware for Windows, macOS and Linux and gives you the tape-echo version. Kilohearts Tape Stop is free with an account and gives you the stop and the start with a curve on both. Tape Fiasco, from Phase Fiasco, is free as VST3 and AU on the Mac and VST3 on Windows, and its Varispeed module has a Speed control from 0% to 100%, with wow and flutter, a tape stop and a scratch that returns to center; the maker says it has been tested only in Live 12.2 on macOS, with Windows not officially tested. All three were listed at no cost on the developers' own pages when this was written. Before any of them, check your own DAW: turning warping off and transposing a clip is varispeed, and it costs nothing.
 
 ### Where should you download a varispeed plugin?
 
@@ -26116,6 +26990,272 @@ SKRUU is two knobs that do not touch each other. **PITCH** moves the pitch and *
 It sits on the other side of this line on purpose. A varispeed move carries pitch and formants together, because one rate governs both, and the shrinking singer is the outcome rather than a fault waiting for a correction knob. When that is the sound you came for, a formant control is the first thing you would be switching off.
 
 The notes were always right. Now you get to decide who is singing them.
+
+---
+
+## About SKRUU
+
+SKRUU — varispeed pitch and time stretch for Mac and Windows. Pitch and time move independently, with sixteen elastic return shapes.
+
+https://gazillionindustries.com/skruu.html
+
+
+---
+
+# Free formant shifter plugins, and the move they cannot make
+
+> The free formant shifters that are current, sorted by what they move, the formant controls already in Logic and FL Studio, where free stops, and the opposite move.
+
+Source: https://gazillionindustries.com/free-formant-shifter-plugin/  
+Published 2026-10-28, updated 2026-10-28. By Gazillion Industries, who make SKRUU.
+
+---
+
+The vocal is tuned, the take is kept, and the singer on the bounce is somebody fifteen years younger. The fix is a formant control, and the first question is whether you have to pay for one. For the corrective job, no. For the opposite job, read on.
+
+Several free formant shifters are current and genuinely free: Minimal Audio's Formant, GVST's GForm, g200kg's RoVee, the Free Edition of Auburn Sounds' Graillon, and MeldaProduction's MAutoPitch. Logic Pro and FL Studio ship formant controls of their own. All of them make the decoupled move, formants without the note. The coupled move, where the note and the size of the singer travel together the way a sped-up record does, is varispeed, and that is what [SKRUU](https://gazillionindustries.com/skruu.html) does for $29. Decide which one you want before you download anything.
+
+## The short version
+
+- **Formant only, no pitch**: Minimal Audio Formant — free, Mac and Windows
+
+- **Pitch and formant, independent**: GVST GForm, g200kg RoVee, Graillon Free Edition, Logic's Vocal Transformer
+
+- **Formant inside a free tuner**: MAutoPitch (free bundle), FL Studio's Pitcher
+
+- **Formant filters, which are a different tool**: Kilohearts Formant Filter, the Formant knob on Live's Vocoder, FORM on Fruity Vocoder
+
+- **The coupled move**: SKRUU, $29: pitch, time and the size of the voice moving as one
+
+- **Where free stops**: consonants, polyphony, and a throat you want to keep moving
+
+## What a free formant shifter has to do
+
+One thing, independently. A formant shifter finds the resonant peaks of a voice, slides them up or down, and leaves the note where it was. Shift down a semitone and the envelope moves by a ratio near 6 percent; shift down an octave and the 500 Hz peak lands at 250. The mechanism is on the [formant shifting](https://gazillionindustries.com/formant-shifting/) page. For this page, the test of a free one is simple: a control labeled formant, in semitones or a ratio, that does nothing to the pitch when you move it.
+
+That rules out two things people download by mistake. A formant filter boosts two frequencies to imitate a vowel and is applied to whatever you feed it; it analyzes nothing and preserves nothing. And a pitch shifter with no formant control moves the throat with the note, which is the problem you came here to fix. Both are useful. Neither is the tool.
+
+## The free formant shifters, sorted by what they move
+
+### Formant only: Minimal Audio Formant
+
+Formant is free, for macOS and Windows, and does exactly one thing. Minimal Audio describe it as changing the perceived character of a voice without affecting its pitch. The whole interface is an XY pad, with formant shift on one axis and a tilt EQ on the other, plus a Dry/Wet knob. It ships as VST3, AU and AAX. If your job is the villain ad-lib or the same vocal twice as wide, this is the shortest route to it, and there is nothing to learn.
+
+### Pitch and formant on separate controls: GForm, RoVee, Graillon
+
+**GVST GForm** is a free VST that GVST describe as a pitch and formant shifter primarily for monophonic vocal recordings. Pitch runs plus or minus 12 semitones and Formant has the same range, with an oversample switch and a tweak tab for the pitch-detection range and a gate. It depends on pitch tracking, so GVST say it is unlikely to do anything useful on chords or a mixed record, and that is the honest limit of the whole free field.
+
+**g200kg RoVee** is a free voice-changer VST with four controls: Formant, Pitch, Robotic and Mix. It is a cut-down version of the maker's KeroVee tuner, ships as a single VST .dll, and its last version is dated 2013. Old, small, and still the quickest way to hear what a formant shift does.
+
+**Auburn Sounds Graillon** is now at version 3.2 and is pitched as a pitch correction tool, with formant shifting listed among its features. The Free Edition download is on the product page; the Full Edition adds exactly three things, pitch-tracking modulation, keyboard tuning and a vocal doubler. It runs as VST, AAX, AU and LV2 on Windows, macOS and Linux. Of the free options here it is the only one that also tunes, which matters if the pitch move that caused the problem is happening in the same plugin.
+
+### Formant inside a free tuner: MAutoPitch and FL Studio's Pitcher
+
+**MeldaProduction MAutoPitch** is free as part of MFreeFXBundle. Melda describe it as automatic tuning for vocals and other monophonic instruments, with formant shift and stereo expansion as the creative extras. The free tier keeps the sound and takes away presets, modulators, upsampling and interface resizing, and leaves a reminder box at the bottom of the window; the $55 upgrade removes all of that. For correction after a tuning move, it is enough.
+
+**FL Studio's Pitcher** has a Formant control described in the manual as formant preservation, which holds the formant constant as the pitch is varied, plus a formant override. Pitcher is included from the Signature Bundle upward, so Fruity and Producer Edition users are back to the downloads above.
+
+### Already in Logic Pro: Vocal Transformer
+
+Logic ships the most complete free one, and it is already installed. Vocal Transformer has a Pitch knob in semitone steps and a separate Formant knob, and Apple's own guide is explicit that moving Pitch leaves the formants alone. Their description of the Formant knob is the clearest in any manual: positive values and "the singer sounds like Mickey Mouse", negative values and you get "vocals reminiscent of Darth Vader". Robotize mode flattens or mirrors the melody, and the extended parameters include a Formants menu with a Keep Unvoiced option that leaves sibilants alone. Logic's other two pitch tools, Pitch Shifter and Pitch Correction, have no formant control at all.
+
+## What is in your DAW that is not a formant shifter
+
+The word appears on three stock devices that do something else. **Ableton Live**'s Shifter is a pitch, frequency and ring shifter with a Window control and no formant parameter; the Formant knob on Live's Vocoder shifts the carrier's filterbank, which changes the vocoded voice and leaves the dry one untouched. Both are in Standard and Suite only. **FL Studio**'s Fruity Vocoder has a FORM slider that changes the pitch relationship between the modulator and the vocoded bands, in every edition. **Kilohearts**' Formant Filter, free with an account, boosts two frequencies to make a vowel and has no shift amount and no pitch control. Good tools, for a vocoded or synthetic voice. For a recorded singer, use the list above.
+
+## The other move: when you wanted the new singer
+
+Half the people searching this term pitched a sample, heard the throat move with it, and liked it. That is varispeed. Every frequency in the file changes by one ratio, the note, the breath, the room and the formants together, which is why a pitched-up sample sounds like a record and a formant-corrected one sounds like a person. There is no free formant shifter for that job because it is the opposite job.
+
+[SKRUU](https://gazillionindustries.com/skruu.html) is ours, $29 for Mac and Windows in VST3, AU and standalone, and it makes the coupled move on purpose and by an amount you can read. PITCH runs from −20% to +10% and reads out in semitones against what went in. TIME runs from −50% to +25% and moves nothing but the length, so you can take the voice down and leave the tempo alone. Let go of either knob with ELASTIC on and it runs home along one of sixteen SLOPE shapes. The honest edge: it has no formant control and will not hold a throat still. It is the wrong $29 if correction is what you need, and the right one if the pitched-down voice was the sound.
+
+**PITCH −3.09 ST.** The note, the tempo and the size of the voice moving together, which is the thing a formant shifter undoes.
+
+## Test a free formant shifter in ten minutes
+
+- Load eight bars of a dry lead vocal with words in it.
+
+- Bypass every section of the plugin except the formant control.
+
+- Shift formants down 4 semitones with pitch at zero and listen for the size change.
+
+- Listen to "s" and "t" sounds on headphones and note the first word that goes plastic.
+
+- Shift formants up 4 semitones and check that the low end of the voice survives.
+
+- Pitch up 3 semitones and shift formants down 3, then compare against the dry vocal.
+
+- Set the formant control to zero and null the output against the dry track.
+
+- Open ten instances and read the CPU meter.
+
+Step seven is where free tools separate. A formant engine parked at zero should hand back what you gave it, and anything left in the null is analysis and resynthesis running whether you asked or not. On a stacked vocal that residue adds up.
+
+## Where free runs out
+
+Consonants go first. An "s" is broadband noise with no harmonic structure for the envelope estimator to hold, so a shifted vocal lisps or whistles on the sibilants before the vowels show any damage. Logic's Keep Unvoiced option exists for exactly this, and most of the free downloads have no equivalent, so you will be automating the shift around the words that break.
+
+Polyphony goes second. GForm says plainly that it tracks one pitch; Soundtoys call their $99 Little AlterBoy a monophonic voice manipulator; Polyverse say their $149 Manipulator works on monophonic audio. A stacked chorus through any of them is an afternoon lost. And a few jobs no shifter does at any price: the moment you want the throat to move with the note, you have left the category, and the tool for that costs $29 and is called varispeed.
+
+## Questions people ask
+
+### Is there a free formant shifter plugin?
+
+Yes. Minimal Audio Formant is free for Mac and Windows and shifts formants only. GVST GForm, g200kg RoVee and the Free Edition of Graillon add independent pitch. MAutoPitch is free in Melda's bundle with formant shift inside a tuner. Logic Pro's Vocal Transformer is already installed.
+
+### What is the best free formant shifter for vocals?
+
+For the effect on its own, Minimal Audio Formant, because the control is independent of pitch and there is nothing else in the way. For correction after a tuning move, Graillon's Free Edition or MAutoPitch, since the tuner and the formant control are in one window. On a Mac with Logic, Vocal Transformer first.
+
+### Does Ableton Live have a formant shifter?
+
+Not as a dedicated device. Shifter has no formant control; the Vocoder's Formant knob moves the carrier filterbank of a vocoded voice. For a recorded vocal, load one of the free plugins above as VST3 or AU.
+
+### Does FL Studio have a formant control?
+
+Pitcher has a Formant control, described by Image-Line as formant preservation with an override, and it is included from the Signature Bundle upward. Fruity Vocoder's FORM slider shifts the vocoded result in every edition. For a plain shifter in Fruity or Producer Edition, download one.
+
+### Is a pitch and formant VST the same as a formant shifter?
+
+A pitch and formant plugin has both controls and lets you move them separately, which is the decoupled job. A pure formant shifter has only the second one. Varispeed moves both by the same ratio and has neither control, which is the coupled job.
+
+### Can SKRUU shift formants?
+
+No. SKRUU moves pitch and time, each on its own knob, and when PITCH moves the formants move with it the way they do on a sped-up record. That is the point of it, and the reason the free shifters above exist.
+
+## What SKRUU does
+
+SKRUU is our varispeed pitch and time stretch plugin for Mac and Windows, in VST3, AU and standalone, and it puts rate and length on two knobs that do not touch each other. **PITCH** runs from −20% to +10% in 128 states and reads out in semitones as well as percent. **TIME** runs from −50% to +25% and moves nothing but the length. **PITCH LOCK** and **TIME LOCK** hold one while you play the other. **ELASTIC** makes either knob sprung, **SLOPE** is the shape of the trip home with sixteen to choose from, **DRAG** sets how long a new speed takes to arrive, and **SAMPLING GRADE** steps the whole thing down from 31.25 kHz to 3.91. The [formant shifter field](https://gazillionindustries.com/best-formant-shifter-plugins/) covers the paid decoupled tools; [chipmunk soul](https://gazillionindustries.com/chipmunk-soul/) is the coupled move on a record.
+
+So: the singer is fifteen years younger on the bounce. One of the free tools above puts the years back. SKRUU is for the days you decide to keep them off.
+
+---
+
+## About SKRUU
+
+SKRUU — varispeed pitch and time stretch for Mac and Windows. Pitch and time move independently, with sixteen elastic return shapes.
+
+https://gazillionindustries.com/skruu.html
+
+
+---
+
+# Free time stretch plugins, and where free runs out
+
+> The time stretching already in Live, FL Studio and Audacity, the free plugins for extremes and for a knob, and the one move free does not cover.
+
+Source: https://gazillionindustries.com/free-time-stretch-plugin/  
+Published 2026-10-28, updated 2026-10-28. By Gazillion Industries, who make SKRUU.
+
+---
+
+The loop is 86 BPM and the session is 92. Six beats per minute is nothing on paper and everything in the room: the hats drag, the snare lands late, and somebody types "free time stretch plugin" into a search bar.
+
+You already own a time stretcher. Ableton Live's Warp modes, FL Studio's Sampler stretch modes and Audacity's Change Tempo all move length without moving pitch, for nothing. For extremes, PaulXStretch is free and open source and turns eight bars into an hour. Baby Audio's Warp is a free plugin with a speed knob, behind an account. Where free stops is the move you make by hand while the track plays, length on one knob and pitch on another, with a return you chose. That is [SKRUU](https://gazillionindustries.com/skruu.html), $29.
+
+## The short version
+
+- **Already installed**: Live's Warp modes (every edition), FL Studio's Sampler stretch modes, Audacity's Change Tempo
+
+- **Free, for extremes**: PaulXStretch: GPLv3, standalone, AU, VST3, AAX and CLAP
+
+- **Free plugin with a knob**: Baby Audio Warp, free with an account; SlowSampler2, name your price
+
+- **Free, offline**: Audacity; the Rubber Band and SoundTouch command-line tools
+
+- **Where free stops**: a live knob for length, a separate one for pitch, and a designed return
+
+- **Ours**: SKRUU, $29: TIME −50% to +25%, PITCH −20% to +10%, sixteen return shapes
+
+## Three different things called free time stretching
+
+Sort yourself before you download. **DAW-native** stretching lives in the clip or sampler engine and follows the project tempo; it is free because you paid for the DAW. **Offline** tools render a new file at a new length and are free because they are open source. **Real-time plugins** stretch audio passing through an insert while the host plays, and this is the smallest free category, because the job is harder. The [time stretching explainer](https://gazillionindustries.com/time-stretching-explained/) covers the algorithms. Here is who does which.
+
+## What your DAW already does
+
+**Ableton Live.** Warping lets you change "the timing of a clip without altering its pitch, or vice versa", and the Warp modes are Beats, Tones, Texture, Re-Pitch, Complex and Complex Pro. Ableton's own steer: Beats "works best for audio that has a dominant rhythm", Tones is "useful for stretching audio that has a distinct pitch", Texture "works well for sounds that don't have a clear melody or pitch", and Complex is for "a combination of beats, melodies, and textures" such as whole songs, with Complex Pro a higher-quality variation that costs more CPU. Re-Pitch is the one that moves pitch with speed, like a turntable. The compare page marks the complex warp modes and real-time stretching as included in Intro, Standard and Suite. [Varispeed in Ableton Live](https://gazillionindustries.com/varispeed-in-ableton-live/) covers Re-Pitch against Complex Pro.
+
+**FL Studio.** The Sampler channel has three knobs: PITCH changes "sample pitch while preserving its length", MUL modifies the length, and TIME sets how long the sample takes to play, "since pitch and playback speed can be adjusted independently". The modes split in two. Realtime modes, Resample, Stretch and Stretch pro, apply on the fly and work when the tempo is automated; Stretch pro adds a formant control. The Elastique modes, e3 Generic and e3 Mono, are offline, which Image-Line say "provides the highest quality but can't be used with Tempo changes". Slice stretch and Slice map handle drum loops by moving slices, and Auto picks for you.
+
+**Audacity.** Free, open source, version 4.0.1 for macOS, Windows and Linux. Change Tempo alters length without pitch and offers a high-quality SBSMS option that is slower but "will retain the complete content". Change Speed and Pitch moves both together, from 0.010 to 50 times the original speed. Sliding Stretch ramps tempo or pitch from one value to another across the selection. All three are rendered, so this is the offline route for a file you will not touch again.
+
+## Free time stretch plugins
+
+**PaulXStretch** is the one worth having for the far end. Sonosaurus publish it "multi-platform, open-source, completely free" under GPLv3, as a standalone and as AU, VST3, AAX and CLAP on macOS, VST3, AAX and CLAP on Windows, VST3 and CLAP on Linux, and AUv3 on iOS. It is built on Paul Nasca's algorithm, whose original program stretches "up to 10,000 times" in Stretch mode and far beyond that in HyperStretch. The makers are blunt about scope: it "is NOT suitable for subtle time or pitch correction" and exists for "radical transformation of sounds". Eight bars into an hour of pad, yes. A loop six BPM out, no.
+
+**Baby Audio Warp** is a free module from their Transit 2 effect, offered on the freebies page as a fully functional plugin. Baby Audio describe a varispeed control to speed up or slow down audio and a Stretch knob that gives "control over pitch independent of time". Formats and ranges are not on the page; a free Baby Audio account is required to download.
+
+**SlowSampler2** is a VST3 instrument and effect for Windows, macOS and Linux, open source and name-your-own-price, inspired by the OtoMAD and YTPMV remix styles, with real-time sampling of a track, "various time stretching options" and multiple pitch algorithms. Odd, specific, and the only free real-time stretcher here that captures the live input.
+
+Two engines rather than plugins, for completeness. **Rubber Band Library**, from Breakfast Quay, is the C++ library behind a lot of commercial stretching, open source under the GPL with a commercial license for proprietary use, at version 4.0 since October 2024; the maker ships a free command-line utility and no plugin. **SoundTouch** is Olli Parviainen's LGPL library for tempo, pitch and playback rate, with the SoundStretch command-line tool. If you can type a path, both are free time stretchers of a kind.
+
+## Where free runs out
+
+In the middle. The DAW handles the loop that is six BPM out. PaulXStretch handles the drone. The gap is the gesture: pull a bus to 70 percent length under a breakdown while the track plays, hold it, let it snap back on the downbeat, and do it without a key change you did not choose and without committing to a render. None of the free tools above puts that on a knob you ride.
+
+That is what [SKRUU](https://gazillionindustries.com/skruu.html) is for. TIME runs from −50% to +25% and moves nothing but the length. PITCH runs from −20% to +10% on its own knob, with the readout in semitones against what went in. TIME LOCK holds the length while you play the pitch, or the other way round. Turn ELASTIC on and the knob is sprung: move it, let go, and it runs home along one of sixteen SLOPE shapes, with RETURN free or quantized to the bar. $29, Mac and Windows, VST3, AU and standalone.
+
+**TIME −35%, PITCH at unity.** Length without pitch, on a knob, while the track plays.
+
+Its range is the honest edge. −50% to +25% is what a beat asks for, and it is not eight times speed, not thirty-six semitones, and not a bar turned into an hour. Serato's Pitch 'n Time Pro does 1/8 to 8 times speed independent of pitch and 36 semitones independent of tempo, as an AudioSuite render for Pro Tools at USD 799. Cableguys' TimeShaper 3, 29 euros, moves a virtual playhead on a pattern for stutters, slow-downs and reverses. Different jobs, and the free tools cover two of the three. The [best time stretch plugins](https://gazillionindustries.com/best-time-stretch-plugins/) guide weighs the whole field.
+
+[SKRUU](https://gazillionindustries.com/skruu.html) is $29. Put it on the bus, pull TIME down into the breakdown, let go, and listen to it come home. There is a demo on the page.
+
+## Test a free time stretcher in ten minutes
+
+- Take an eight-bar drum loop with a reverb tail on the snare.
+
+- Stretch it 7 percent longer with pitch held, which is 86 to 92 BPM backward.
+
+- Listen to the snare's front edge on headphones, then the tail.
+
+- Stretch it 25 percent longer and listen again.
+
+- Stretch it 50 percent longer and note where the hats turn to grain.
+
+- Try each mode your tool offers at the 25 percent setting.
+
+- Pitch the loop down three semitones with length held and listen for a phase swirl on the cymbals.
+
+- Bounce the 25 percent version and play it on a phone speaker.
+
+Steps three and five tell you what every stretcher trades. The transient softens first, then the tail smears, then the hats go granular. A tool that holds the front edge at 25 percent is a good one, free or not. Beyond 50 percent you have left correction and entered sound design, which is PaulXStretch's territory.
+
+## What free time stretching costs you
+
+Every stretch is a guess about audio the recording never contained. Reverb tails smear first, then drums lose the hard front edge, then vocals lose breath, consonants and diction in that order. Offline tools cost you the undo: once Audacity renders the file, that is the file. DAW-native modes cost CPU and follow the project tempo, which is right until you want a move the tempo map does not know about. And the free real-time options cost you the account, the format you needed, or the range. Pick the bill you would rather pay. For the loop six BPM out, it is almost always the DAW's.
+
+## Questions people ask
+
+### Is there a free time stretch plugin?
+
+Yes. PaulXStretch is free and open source for extreme stretching as a standalone and plugin. Baby Audio Warp is free with an account and has a speed control and a Stretch knob. SlowSampler2 is name-your-own-price. And Live, FL Studio and Audacity stretch without any download.
+
+### What is the best free time stretch VST?
+
+For a loop a few BPM out, your DAW's own modes: Complex Pro in Live, e3 Generic in FL Studio. For a drone or a texture, PaulXStretch. For a live knob, Baby Audio Warp if you are happy with an account. None of them is bad; they are built for different distances.
+
+### Can you time stretch without changing pitch for free?
+
+Yes, in every DAW named here and in Audacity's Change Tempo. The [pitch without tempo](https://gazillionindustries.com/how-to-change-pitch-without-changing-tempo/) guide covers the opposite move and the settings for both.
+
+### How much can you stretch before it sounds bad?
+
+Transients survive to about 25 percent on a good algorithm, tails smear earlier, and past 50 percent the result is a new sound rather than a corrected one. The ten-minute test above finds the line for your material.
+
+### Does FL Studio have time stretching?
+
+Yes, in the Sampler channel: PITCH, MUL and TIME knobs, three Realtime modes that follow tempo automation, two offline Elastique modes for quality, and slice modes for drum loops.
+
+### Is SKRUU a time stretch plugin?
+
+It is a varispeed pitch and time stretch plugin, with the two on separate knobs. TIME stretches length from −50% to +25% while the track plays. It is for the gesture rather than the extreme, and [varispeed in every DAW](https://gazillionindustries.com/varispeed-in-every-daw/) covers how it sits beside the host's own tools.
+
+## What SKRUU does
+
+SKRUU is our varispeed pitch and time stretch plugin for Mac and Windows, in VST3, AU and standalone, and it puts rate and length on two knobs that do not touch each other. **PITCH** runs from −20% to +10% in 128 states and reads out in semitones as well as percent. **TIME** runs from −50% to +25% and moves nothing but the length. **PITCH LOCK** and **TIME LOCK** hold one while you play the other. **ELASTIC** makes either knob sprung, **SLOPE** is the shape of the trip home with sixteen to choose from, **DRAG** sets how long a new speed takes to arrive, and **SAMPLING GRADE** steps the whole thing down from 31.25 kHz to 3.91. Zero samples of latency, any sample rate.
+
+The loop is at 92 now and the snare lands on time, and it cost nothing. The knob is for the night you want it to land somewhere else on purpose.
 
 ---
 
@@ -32720,6 +33860,114 @@ https://gazillionindustries.com/tripleog.html
 
 ---
 
+# A history of tape simulation
+
+> How tape became an effect: the first tape plugins of 1997 and 2001, the named-machine models of the 2010s, the cassette and lo-fi wave, and the part nobody modeled.
+
+Source: https://gazillionindustries.com/tape-simulation-history/  
+Published 2026-10-28, updated 2026-10-28. By Gazillion Industries, who make TRIPLE OG.
+
+---
+
+February 1997. A reviewer testing a wave editor on a Pentium 166 gets a late beta of an optional plug-in with two VU meters and a knob you turn until the top end sounds right. It glitches in stereo, the only thing in the box that does, and it begins thirty years of software pretending to be a reel of oxide.
+
+Tape simulation puts what a tape machine did to a recording back into one that never touched tape. It has gone through three generations. The first, from 1997, treated tape as a flavor of saturation. The second, from 2010, measured named machines and sold the nameplate. The third, from about 2016, turned to cassette, lo-fi and physics and simulated the faults as well as the fidelity. TRIPLE OG belongs to a fourth idea, a transport you play.
+
+## The short version
+
+- **Medium**: 1935 Magnetophon, 1948 Ampex 200, 1963 Compact Cassette
+
+- **Generation one**: 1997 Magneto, 2001 Phoenix, 2001 Vinyl: saturation and flavor
+
+- **Generation two**: 2010 to 2017: named decks, measured tape paths, $349 plug-ins
+
+- **Generation three**: 2016 to 2021: cassette, lo-fi, physics, free and open source
+
+- **The missing part**: the transport: hands on the reel, in time with the music
+
+## Tape as the medium
+
+Before tape was an effect it was the only way to keep a sound. AEG demonstrated the Magnetophon in Berlin in 1935. The tape's magnetic response was never linear; it follows a hysteresis curve that distorts the signal, and the high-frequency bias current that engineers at German radio added was there to push the audio away from the worst of it. Ampex released its Model 200 in 1948, developed from Magnetophons that Jack Mullin had brought home and modified, and financed in part by $50,000 of Bing Crosby's money.
+
+Philips introduced the Compact Cassette at the Berlin Radio Show on 28 August 1963. Tape 3.81 mm wide moving at 1⅞ inches per second, with stereo tracks 0.6 mm each: a format with almost no headroom and a high noise floor, and the world adopted it for music anyway. The Walkman went on sale on 1 July 1979. From 1983 to 1991 the cassette was the best-selling music format in the United States, and by 2007 pre-recorded cassette sales had fallen from 442 million a year to 274,000. Everything in a tape plug-in's wow, hiss and drop-out sections is a memory of those years, and [the Memphis tapes](https://gazillionindustries.com/memphis-rap-sound/) are the clearest case of a whole sound built from the format's faults. The mechanics of the machine itself, heads, bias, speed and saturation, are laid out in [how a tape machine works](https://gazillionindustries.com/how-does-a-tape-machine-work/).
+
+## Generation one: tape as a flavor (1997 to 2005)
+
+Steinberg's Magneto is the earliest tape plug-in with a date on it. Sound On Sound met it in February 1997 as a "brand new" optional plug-in for WaveLab 1.5, delivered in late beta with no manual, simulating tape saturation at 15 and 30 ips with VU-style meters, an HF control and an overdrive you set by ear. The plug-in was a saturation curve with a speed switch. It did not pretend to be any particular machine, and nobody expected it to.
+
+Crane Song's Phoenix moved the idea into professional rooms. Dave Hill released it in 2001 as a Pro Tools TDM plug-in, by Sound On Sound's account, derived from the code in his HEDD converter. It came as five separate plug-ins, Luminescent, Iridescent, Radiant, Dark Essence and Luster, each a different saturation and compression curve, with Opal, Gold and Sapphire brightness buttons. It modeled saturation, frequency response and compression and deliberately left out wow, flutter and hiss. Tape Op's 2005 review found it made tracks "fuller, punchier, and louder" and quoted a price of $450. Tape, in this generation, meant the good part of tape.
+
+The faults got their own plug-in anyway, just not for tape. iZotope's first product, in 2001, was Vinyl: free, and built to add the surface noise, warp and mechanical sounds of a record player. The company re-released it on its fifteenth birthday in 2016 with a Spin Down button. Vinyl was the proof that producers would download a plug-in whose only purpose was to make things sound worse in a specific way, and the lo-fi generation fifteen years later is its descendant.
+
+## Generation two: the nameplate (2010 to 2017)
+
+Universal Audio changed what a tape plug-in claimed to be. In December 2010 it released a Studer A800 plug-in at $349, modeled over about a year with the AES magnetic-recording expert Jay McKnight. UA's statement said it modeled "the entire tape path and circuit electronics," including the Input, Sync and Repro paths, four tape formulas and their calibration levels. Harman, which owned the Studer name, said the plug-in "had to live up to the Studer name." Nine months later came the Ampex ATR-102 at the same price: one-inch, half-inch and quarter-inch widths, four tape types including 456 and 468, record and repro paths, optional transformer emulation, and controls for hum, hiss, wow, flutter and crosstalk. The faults had come back, as options.
+
+The rest of the decade followed the pattern. Waves shipped its Master Tape in May 2011, developed with Eddie Kramer and modeled, by Waves' account, on an Ampex 350 transport with 351 electronics, as the last piece of a recreated Olympic Studios chain. Slate Digital's Virtual Tape Machines was on sale by June 2012, based on a 16-track two-inch Studer A827 and a half-inch Studer A80 mastering deck, and Steven Slate called it the most complex plug-in his company had coded. u-he's Satin arrived in September 2013 at $129 with Studio, Delay and Flange modes. Softube's Tape came in June 2017 at $99 with three machine types named only as letters, Type A "a classic Swiss high end reel-to-reel," Type B transformer-based with low-end weight, Type C a British machine, and one Amount knob.
+
+Every one of those is a model of a studio deck playing well. The claims are about accuracy: this path, this formula, this calibration. The user's job is to pick a machine and set a level. That is a real thing to want, and [best tape emulation plugins](https://gazillionindustries.com/best-tape-emulation-plugins/) sorts the current field on exactly that basis, reel against cassette, machine first. But it is a photograph of a tape machine. Nobody is touching the reel.
+
+**DRIVE at 92.** The tape side of TRIPLE OG: TONE, HISS, DRIVE and AGE. This is the part every generation of tape plug-in has had a version of.
+
+## Generation three: cassette, lo-fi and physics (2016 to 2021)
+
+The third generation stopped asking which studio deck and started asking which bedroom. XLN Audio's RC-20 Retro Color, announced in December 2016 at €79.95, bundled six modules, noise, wobble, distortion, digital, space and magnetic, and sold the whole decay of a recording as one effect. Aberrant DSP's SketchCassette arrived in July 2019 at $20, "inspired by 4-track cassette recorders," with age modeling, dropouts, stereo hiss and tape profiles based on cassettes from 1985 to 1988. Wavesfactory's Cassette followed in November 2019; the maker says it analyzed Type I to IV tapes and two cassette decks, and modeled frequency-dependent saturation, asperity noise, random high-frequency loss, crosstalk and stereo imbalance. Caelum Audio's Tape Cassette 2, in June 2020, did a version of the same thing for free.
+
+Two things from this period point somewhere else. The first is Jatin Chowdhury's CHOW Tape Model, a physical model of a Sony TC-260 reel-to-reel described in a 2019 DAFx paper, released free and open source. Rather than measuring a deck's output, it simulates magnetic hysteresis with the Jiles–Atherton equations, lets you underbias the virtual tape until the hysteresis curve widens into a dead zone, and derives high-frequency loss from head-to-tape spacing, tape thickness, head gap and azimuth, all speed dependent. Its flutter was captured from an actual TC-260. The second is Baby Audio's TAIP, in September 2021, which its maker says skipped traditional DSP altogether and trained a neural network on dry and taped versions of the same audio. Physics at one end, statistics at the other, and neither one names a studio.
+
+Two weeks after TAIP shipped, Roland announced the SP-404MKII with a Cassette Simulator beside its legacy Vinyl Simulator. The cassette had become a preset on a sampler, which is roughly where the vinyl crackle had been twenty years earlier.
+
+## What each generation left out
+
+Generation one left out the faults. Generation two put the faults back as parameters, hiss at this level, wow at that depth, set once and forgotten. Generation three made the faults the product and gave you an Age knob. What none of them gave you was the thing a person with a cassette deck actually has: a transport. Fingers on the reel to drag the pitch down. A pause button that catches the tape and lets it lurch back up to speed. A stop that slumps. In every generation the speed of the tape is a setting. On a real machine it is a performance, and it happens in time with the music.
+
+**CATCH at 88.** The transport side: WOW, FLUTTER and CATCH, the scrub lever and the slam. The part the other generations modeled quietly and set once.
+
+## Where TRIPLE OG sits
+
+TRIPLE OG is a cassette transport in a plug-in, tuned by ear. It has the tape side every generation shares: TONE for playback brightness, HISS as a broadband bed, DRIVE as soft asymmetric saturation, and AGE, which makes the tape darker, noisier and less stable on one knob, up to sixty years of it. Then it has the part the others treat as a setting. WOW and FLUTTER are played, not printed. A scrub lever drags the head back across the tape under your hand. A slam stops it. CATCH grabs the tape and lets it sprint back up to speed, and you decide when. One reviewer put the distinction better than we would: most tape plug-ins model the transport quietly in the background, and this one hands it to you as an instrument.
+
+It does not model a deck. Nothing in it was measured from a machine, and it makes no claim about a path or a formula. What it was tuned against is how a cassette behaves when somebody is touching it, which is a different question from how it sounds when nobody is. Both questions are worth a plug-in. Only one of them was still open.
+
+## Questions people ask
+
+### What was the first tape emulation plugin?
+
+The earliest with a published date is Steinberg's Magneto, reviewed in late beta by Sound On Sound in February 1997 as an optional WaveLab plug-in simulating tape saturation at 15 and 30 ips. Crane Song's Phoenix followed in 2001 for Pro Tools TDM.
+
+### What does a tape emulation plugin actually model?
+
+It depends on the generation. Early ones modeled saturation and a frequency response. The named-machine plug-ins of the 2010s claim to model a specific deck's electronics, tape path and tape formulas. Cassette and lo-fi plug-ins model the faults: hiss, wow, flutter, dropouts, head misalignment and age. Physical models simulate the magnetics themselves.
+
+### Is tape saturation the same as tape emulation?
+
+No. Saturation is one part of what tape does: the rounding of loud peaks and the harmonics that come with it. A full emulation also covers the frequency response, the noise, the speed instability and the losses. Most early plug-ins were saturation only.
+
+### Why are there so many cassette plugins now?
+
+Because the sound that lo-fi, phonk and a lot of beat music chase comes from cassette rather than from a studio reel: narrow bandwidth, hiss, wobble and generation loss. The named-machine plug-ins were built for a different sound, so a new wave of plug-ins appeared from 2016 onward to cover the cheap end.
+
+### What is the difference between a tape plugin and a tape stop effect?
+
+A tape plug-in colors the whole signal continuously. A tape stop is a transport event: the pitch falls as the reel slows. Most tape plug-ins do the first and not the second, which is the gap a playable transport fills.
+
+## What TRIPLE OG does
+
+[TRIPLE OG](https://gazillionindustries.com/tripleog.html) is cassette tape simulation for Mac and Windows, with a transport you play. **TONE**, **HISS**, **DRIVE** and **AGE** on the tape; **WOW**, **FLUTTER**, **CATCH**, a scrub lever and a slam on the transport. It was tuned by ear, it is not a model of any deck, and there is a demo on the page.
+
+Thirty years after a late beta glitched on a Pentium, the saturation curve is a solved problem. The reel is still turning, and now you can put your hand on it.
+
+---
+
+## About TRIPLE OG
+
+TRIPLE OG — cassette tape simulation for Mac and Windows, with a transport that drags, jams and sprints to catch up. There is a demo on the page.
+
+https://gazillionindustries.com/tripleog.html
+
+
+---
+
 # Tape speed
 
 > What tape speed does: why faster tape means more top end and less hiss, the standard speeds from cassette to 30 ips, and why 15 and 30 both have fans.
@@ -34122,6 +35370,150 @@ https://gazillionindustries.com/winnetka/
 
 ---
 
+# Free arpeggiator VST plugins, and where each one runs
+
+> Three kinds of free arpeggiator, and why the kind decides whether it loads: your DAW's own, four free MIDI arp plugins, free synths with one inside, and the wiring.
+
+Source: https://gazillionindustries.com/free-arpeggiator-vst/  
+Published 2026-10-28, updated 2026-10-28. By Gazillion Industries, who make WINNETKA.
+
+---
+
+The chord is held down, the kick is running, and what the track needs is the figure that nobody in the room can play at 150 BPM for four minutes. That is the whole brief for an arpeggiator, and the first good one you find will cost nothing.
+
+Free arpeggiators come in three kinds, and the kind decides whether it will even load. Your DAW almost certainly ships one: Live, Logic, FL Studio and Bitwig all do. Free MIDI-effect plugins add more: BlueARP, Hypercyclic, RandARP and Stochas are current and free to keep. And a few free synths carry an arp inside them, with Podolski the clearest case. Ours is the third kind. [WINNETKA](https://gazillionindustries.com/winnetka/) is a $49 polysynth with a 16-step arpeggiator built in, and 45 of its 350 presets are arps already.
+
+## The short version
+
+- **Already installed**: Live's Arpeggiator (every edition), Logic's Arpeggiator MIDI plug-in, FL Studio's Channel Settings arp, Bitwig's Arpeggiator
+
+- **Free MIDI arpeggiators**: BlueARP, Hypercyclic, RandARP (Windows), Stochas
+
+- **Free synth with an arp inside**: u-he Podolski
+
+- **The catch**: a MIDI-effect plugin needs a host that routes plugin MIDI to another plugin; Logic wants a MIDI FX build
+
+- **Ours**: WINNETKA, $49: 16 steps, rates to 1/64, inside a polysynth with a vocoder
+
+- **Paid references**: Xfer Cthulhu $39, Sugar Bytes Thesys $99
+
+## Three kinds of free arpeggiator, and why the kind matters
+
+An arpeggiator takes the notes you hold and plays them one at a time, in an order, at a rate, for a length. Where that happens decides everything about installing it. A **MIDI-effect plugin** sits before a synth and sends it notes, so it works with any instrument and has to be wired to one. A **DAW arpeggiator** does the same from a slot the host already understands, with no wiring. An **arp inside a synth** plays only that synth, and in exchange the pattern saves with the preset. The [best arpeggiator VST](https://gazillionindustries.com/best-arpeggiator-vst/) guide has the arithmetic on rate, gate and swing. This page is about the free ones, sorted by kind.
+
+## Your DAW already ships one
+
+**Ableton Live.** The Arpeggiator MIDI effect is in Intro, Standard and Suite. Styles are Up, Down, Converge, Diverge, Play Order, Chord Trigger and three Random modes. Rate runs in milliseconds or synced divisions, Gate is a percentage of the rate and values above 100 percent overlap into legato, Distance and Steps transpose the pattern in semitones or scale degrees, and Retrigger, Repeats, a velocity decay, a Groove chooser for swing and Hold complete it. Ableton's example: Distance +12 with Steps 2 plays a pattern starting on C3 at C3, C4 and C5.
+
+**Logic Pro.** The Arpeggiator MIDI plug-in offers rates of 1/4, 1/8, 1/16 with triplet and dotted variants, and 1/32. Note order is Up, Down, Up/Down, Outside-in, Random or As played, with a Lock button that freezes the played order, a four-position switch that covers either Octave Range or Inversions, and four variations per direction. Apple describe it as generating "musically interesting arpeggios based on incoming MIDI notes", and it is already there.
+
+**FL Studio.** Every channel has an arpeggiator in its Channel Settings under Miscellaneous functions: Off, Up, Down, Up-Down, Up-Down with the ends doubled, and Random, with Range in octaves, a Chord selector (None for octave steps, Auto to use the chords already in the notes, or templates), Time between notes, Gate for shorter notes, Repeat and Slide. Image-Line note the Slide option "will not work with instruments that do not support slides", which includes VST instruments. The Piano roll's Arpeggiate tool is the other one, and by Image-Line's own description it is "not a real-time effect": it writes the notes.
+
+**Bitwig Studio.** The Arpeggiator Note FX has 17 patterns, timing in rhythmic values or milliseconds, and three octave behaviors: Broad stacks octaves with repeating shapes, Thin sorts everything into one line, and 1 by 1 plays the full pattern in each octave before moving up. Bitwig call it MPE-friendly and give it a global Randomize for velocity, timing and duration.
+
+## Free MIDI arpeggiator plugins
+
+Four are current, free to keep, and output MIDI for whatever synth you point them at.
+
+**BlueARP**, from OMG Instruments, is a pattern arpeggiator and step sequencer with 64 steps per pattern, drum and guitar modes, chain and variation switching, input chord quantizing and sample-accurate timing. Version 2.8.8c is dated July 2026. It ships as VST2 and VST3 for Windows and macOS, as a universal binary, and as a separate MIDI-FX build for Logic. The maker's page has a Donate link and download links; two independent roundups list it as free. One caveat from the maker: after installing the Logic MIDI-FX build, reboot the Mac or Logic will not see it.
+
+**Hypercyclic**, from mucoder, is "an LFO-driven MIDI arpeggiator, gate effect and step sequencer", and the maker says it is "free (as in beer)". Two tempo-synced LFOs modulate the step sequencer, there is a gate effect and a groove function that plays off the beat, and it runs as VST, Audio Unit or standalone on Windows, macOS and Linux, 64-bit, at version 1.9. It processes held chords, so you play a chord and it makes the figure.
+
+**RandARP**, from CodeFN42, is a free arpeggiator built around randomization: velocity, gate, shift, swing, note probability, note order, octave order and octave count can each be randomized, with "Random Once" variants that hold a pattern until the input notes change. Free for commercial use, VST2 only, 64-bit Windows 7 or later, version 1.36. The only Windows-only entry here, and the one for people who want the arp to surprise them.
+
+**Stochas** is an "open-source advanced probabilistic polyrhythmic sequencer plugin" from the Surge Synth Team, GPL-3.0, with binaries for Windows, Mac and Linux at version 1.3.13 from November 2024. It is a step sequencer with probability per step rather than a classic arp, which makes it the odd one out and the most interesting for sixteen bars that should never repeat the same way twice.
+
+Two names that come up and are not arpeggiators: **Ripchord**, a free MIDI chord player that maps single notes to chords and strums them, and the free versions of HY-Plugins' sequencers, which the maker describes as cut-down versions "without demo limitations". Both are worth owning. Neither does the job on this page.
+
+## Free synths with an arpeggiator built in
+
+Shorter list than the roundups suggest. **u-he Podolski** is free, needs no serial number, and its spec line reads "combination arpeggiator / 16-step sequencer with extra modulation source". One oscillator, one filter, one envelope, and the arp. AUv2 and VST3 on macOS, VST3 and AAX on Windows.
+
+The rest of the free-synth canon is quieter about it. The maker pages for Tyrell N6, Surge XT, Vital, Odin 2, TAL-NoiseMaker, OB-Xd and Dexed mention no arpeggiator, as read today. Some of them may have one buried in a modulation page; none of them sell it as a feature, and if the arp is the reason you are downloading, that silence is the answer.
+
+## The routing tax, host by host
+
+This is where free arpeggiators lose an evening. A MIDI-effect plugin produces notes and has to hand them to a synth, and no two hosts agree on how.
+
+**Logic** accepts third-party arpeggiators only as MIDI FX builds. BlueARP ships one, Xfer say Cthulhu's MIDI FX version "installs automatically", and Sugar Bytes say Thesys's Audio Unit "works as a MIDI FX to trigger other AUs". A plain AU effect will not appear in the slot. **FL Studio** routes plugin MIDI by port number: the Wrapper's Input and Output port settings are shared channels, and Image-Line's MIDI Out plugin sends notes to any VST whose wrapper input port matches, with 256 ports available. **Live** places MIDI effects only on MIDI tracks, before the instrument. And a modern catch from Ripchord's makers applies to any VST3 note plugin: the host "must support the full VST3 MIDI spec". Check that before the download, and the [vocoder routing guide](https://gazillionindustries.com/how-to-use-a-vocoder/) covers the same host-by-host wiring for audio.
+
+**ARP is a row, not a wire.** The pattern lives in the preset, so there is nothing to route.
+
+## Where WINNETKA fits
+
+WINNETKA is the third kind, and it is not free, so this is the honest version. It is a $49 polysynth with a vocoder and a 16-step arpeggiator with rates up to 1/64, plus filters, envelopes, modulation, EQ and delay in the same window. Of its 350 presets, 45 are arps: load one, hold a chord, and the figure plays, with the sound, the rate and the pattern saved together. There is no port number, no MIDI FX build and no second track.
+
+What you give up is the universality. WINNETKA's arp plays WINNETKA. If you need one pattern to drive a drum sampler, a bass and a pad at once, that is a MIDI-effect job and BlueARP does it for nothing. If what you wanted was the sound and the figure arriving as one preset, that is this, and there is a demo on the page.
+
+[WINNETKA](https://gazillionindustries.com/winnetka/) runs as AU, VST3 and standalone on the Mac and as VST3 on Windows. Load an arp preset, hold three notes, and turn the rate up until the track starts moving.
+
+## Audition a free arpeggiator in ten minutes
+
+- Hold a four-note chord on a synth with a short, bright patch.
+
+- Set the rate to sixteenths and the gate to 50 percent.
+
+- Switch the order to Up, then Up/Down, then As Played, and listen for which one has a shape.
+
+- Set the octave range to 2 and hold the chord for eight bars.
+
+- Add swing and nudge it until the pattern leans without stumbling.
+
+- Change the chord mid-pattern and listen for a stuck note or a gap.
+
+- Record eight bars and play them back from the timeline.
+
+- Bounce them and play the file on a phone speaker.
+
+Step six is the one that separates the free field. An arpeggiator that leaves a note hanging when the chord changes, or drops the first note of the new one, will do it on the record too. Image-Line's wrapper page describes a setting that sends All Notes Off when playback stops "to prevent notes or arpeggiators etc stuck on", which tells you how common the problem is.
+
+## What a free arpeggiator costs you
+
+It costs the phrase, because the figure it hands you is one nobody wrote, and a sixteen-bar gift becomes a four-minute problem unless you edit it. It costs arrangement room: sixteenths at 150 BPM are a note every 100 milliseconds in the register a snare and a vocal live in, and the fix is [sidechain compression](https://gazillionindustries.com/sidechain-compression/) rather than a filter sweep. And a MIDI-effect arp costs the setup every session, where an arp inside the preset costs it once. Pick the kind by which of those bills you would rather pay.
+
+## Questions people ask
+
+### What is the best free arpeggiator VST?
+
+For most people, the one already in the DAW: Live, Logic, FL Studio and Bitwig each ship a capable one. Among downloads, BlueARP for a full pattern sequencer with 64 steps, Hypercyclic for LFO-driven movement, RandARP on Windows for randomization, and Stochas for probability.
+
+### Is there a free arpeggiator plugin for FL Studio?
+
+FL Studio has one in every channel's settings and a non-real-time Arpeggiate tool in the Piano roll. A third-party MIDI arp reaches a synth through matching Wrapper port numbers, or through the MIDI Out plugin, which Image-Line describe as a MIDI controller sending messages to internal VST plugins over any of 256 ports.
+
+### Does Logic Pro have a free arpeggiator?
+
+Yes, the Arpeggiator MIDI plug-in, with rates from 1/4 to 1/32 and six note orders. Third-party arps need a MIDI FX build to show up in that slot; BlueARP, Cthulhu, Thesys and Kirnu Cream all ship one.
+
+### Which free synths have an arpeggiator?
+
+u-he Podolski does, as a combined arpeggiator and 16-step sequencer. The maker pages for Tyrell N6, Surge XT, Vital, Odin 2, TAL-NoiseMaker, OB-Xd and Dexed do not mention one.
+
+### Do I need a MIDI arpeggiator if my synth has one?
+
+Only if the pattern has to drive more than one instrument. A built-in arp travels with the preset and needs no routing; a MIDI arp is universal and needs wiring in every host. Most sessions want the first; a few want the second.
+
+### Is Cthulhu free?
+
+No. Xfer Records list Cthulhu at $39, with a 15-minute demo. Sugar Bytes Thesys is $99. Both are MIDI-effect arps that need a synth after them. The [synths with presets](https://gazillionindustries.com/best-synth-vst-with-presets/) guide covers the instruments that arrive with the arps already written.
+
+## What WINNETKA does
+
+[WINNETKA](https://gazillionindustries.com/winnetka/) is our polysynth, $49, one payment, AU, VST3 and standalone on macOS 10.13 or later for Apple Silicon and Intel, and VST3 on Windows 10 or later, 64-bit. Play a single sound or layer two timbres, shape a voice with the 16-band vocoder, or play the held-vowel vocoder presets with no microphone. The **arpeggiator** runs sixteen steps with rates up to 1/64, beside filters, envelopes, modulation, a three-band EQ and delay. **350 presets**: bass, lead, pads, FX, percussion, arp and vocoder, with your own saved, imported and traded on our Discord. The [polysynth guide](https://gazillionindustries.com/best-polysynth-vst/) covers the rest of the instrument.
+
+The chord is still held down. Something is finally playing it faster than anyone in the room can, and it cost either nothing or forty-nine dollars, depending on whether you wanted the sound to come with it.
+
+---
+
+## About WINNETKA
+
+WINNETKA — a polysynth with a vocoder and 350 presets. AU, VST3 and standalone on Mac, VST3 on Windows.
+
+https://gazillionindustries.com/winnetka/
+
+
+---
+
 # How to make robot vocals
 
 > Three different effects get called a robot voice. Which one you want, how to get there with a vocoder, and the route with no microphone at all.
@@ -34564,6 +35956,142 @@ The **vocoder is 16 bands**, drawn low to high across the screen as it moves. Au
 Around it sits the rest: a carrier built on OSC 1 with eight waves, among them a VOX wave whose CONTROL 1 moves its own formant from dark to bright; TRANSPOSE of ±24 semitones; a sixteen-step arpeggiator across ARP A and ARP B with rates from 1/1 to 1/64, swing, latch and twelve patterns; and a shared chain of mod FX, delay and a three-band EQ. Every control is a DAW parameter. If presets are how you learn a panel, our piece on [synths with presets worth reading](https://gazillionindustries.com/best-synth-vst-with-presets/) makes the case.
 
 Same mic, same chord, same held note. This time the chord talks.
+
+---
+
+## About WINNETKA
+
+WINNETKA — a polysynth with a vocoder and 350 presets. AU, VST3 and standalone on Mac, VST3 on Windows.
+
+https://gazillionindustries.com/winnetka/
+
+
+---
+
+# Vocoder plugin for FL Studio: the two it ships with, and the third
+
+> FL Studio's two vocoders and how each gets its inputs, the right-click that makes Vocodex work, the free and paid VST3 vocoders that load, and the Ableton version.
+
+Source: https://gazillionindustries.com/vocoder-plugin-for-fl-studio/  
+Published 2026-10-28, updated 2026-10-28. By Gazillion Industries, who make WINNETKA.
+
+---
+
+The hook wants the robot chorus, the vocal is on mixer track 1, the synth is on track 2, and the vocoder on track 3 is making exactly nothing. Nine FL Studio vocoder sessions out of ten die right there, and the fix is one right-click.
+
+FL Studio ships two vocoders. Fruity Vocoder is in every edition and reads its two inputs off the left and right channels of one mixer track. Vocodex is in Producer Edition and up and takes its modulator and carrier through the mixer's sidechain system. A third-party VST3 vocoder loads in any edition and gets its carrier by sidechain. Ours is [WINNETKA](https://gazillionindustries.com/winnetka/), a $49 polysynth with a 16-band vocoder, and twelve of its vocoder presets hold a vowel, so in FL Studio they play with no routing at all.
+
+## The short version
+
+- **In every edition**: Fruity Vocoder, 4 to 128 bands; left channel is the modulator, right is the carrier
+
+- **Producer Edition and up**: Vocodex, 5 to 100 bands, sidechain MOD and CAR inputs, built-in carrier for live use
+
+- **The right-click**: select the voice track, right-click the vocoder track's send switch, "Sidechain to this track only"
+
+- **Free VST3 vocoders**: TAL-Vocoder, 11 bands; Full Bucket FBVC, 20 bands with its own tone generator
+
+- **Ours**: WINNETKA, $49: 16-band vocoder in a polysynth, 40 vocoder presets, twelve of them playable with no mic
+
+- **In Ableton instead**: the Vocoder device, Standard and Suite, inserted on the voice track
+
+## Fruity Vocoder: the one in every edition
+
+Image-Line describe Fruity Vocoder as "an advanced real-time vocoder effect with a wide range of adjustable parameters and zero latency", and it is included from Fruity Edition up. The band count runs from 4 to 128. The FREQ section has FORM, a formant slider that shifts the vocoded result toward a higher or lower voice, Min and Max for the frequency range, Scale for linear or logarithmic spacing, INV to invert the modulator bands and BW for the width of the carrier filters. ENV sets the follower's attack and decay, and HOLD freezes the band levels where they are.
+
+The routing is the part nobody reads. Fruity Vocoder does not use the sidechain system. In Image-Line's words, "by default, the left channel is the modulator and the right channel is the carrier", and the L and R labels in the MIX section swap them. So you build a stereo pair: route the vocal channel and the synth channel to the vocoder's mixer track, pan the vocal hard left and the synth hard right. The manual's other method is two mixer tracks with Fruity Mute 2 killing one side of each, both sent into the vocoder track. Either way, a mono voice arrives on the left and a mono carrier on the right.
+
+## Vocodex: the one from Producer Edition up
+
+Vocodex is "the last word in vocoders" by its manual's account, with 5 to 100 variable-width bands, articulation envelopes, a built-in carrier synth and a Soundgoodizer stage. It is available in Producer Edition, Signature Bundle and All Plugins Edition, and this one does use the mixer's sidechain system, with separate MOD and CAR input selectors. A selector at 0 uses Vocodex's own track; a selector at three dashes blocks external input.
+
+Image-Line document two ways in. The "Immediate" method loads Vocodex on a mixer track, routes the voice to that same track, and picks a preset from the Immediate category, which switches the carrier to the internal synth. Their own caveat is worth quoting: "The internal Carrier synthesizer is provided for live 'demo' purposes, use the external Carrier 'Production Method' for project work." The internal synth does not respond to the Piano roll or the Step Sequencer. For a sequenced carrier, the manual points you at the same sounds in Sytrus's Vocoder carriers presets, routed in from outside.
+
+The controls go deep once the signal arrives. WET and SG set the vocoder and Soundgoodizer levels; MOD and CAR pass-through levels with a high-pass on the voice and a low-pass on the carrier; NOISE adds noise to the carrier for consonants; Contour follows the carrier's envelope or the modulator's sibilants; ATT and REL set the band envelopes, and a per-band Modulation Mapping lets you draw gain, pan, noise and width across the bands. There is no control named Formant; the equivalent is Modulator pitch shift, which Image-Line describe as slewing "the pitch of the vocoder down for a more masculine sound".
+
+## The production method, step by step
+
+This is the routing that makes Vocodex, and any sidechain vocoder, work. Menu wording is Image-Line's.
+
+- Load Vocodex in an effect slot on an empty mixer track, never the Master.
+
+- Route the vocal to its own mixer track and label it MOD.
+
+- Select the MOD track, right-click the Vocodex track's send switch and choose "Sidechain to this track only".
+
+- Deselect the MOD track's send to the Master, so the dry voice stops reaching the mix.
+
+- Set the carrier instrument's Channel Settings mixer-track selector to the Vocodex track number.
+
+- In Vocodex, set the MOD input selector to the MOD track and leave CAR at 0.
+
+- Play a chord on the carrier and speak.
+
+- Raise NOISE until the "s" and "t" sounds appear, then back it off by a third.
+
+Step four is the one that gets skipped, and the mixer page says why: "the sidechain source Mixer Track will remain routed to the Master Mixer Track" until you stop it. Leave it and you hear the dry vocal and the robot at once, and the robot loses.
+
+## How a third-party vocoder gets its carrier in FL Studio
+
+Any VST or VST3 vocoder with a sidechain input uses the same send. The Plugin Wrapper's Processing tab has a Connections section, which Image-Line say exists for "multi-input or multi-output plugins such as a compressor that accepts side-chain inputs". Sidechain the carrier track to the vocoder's track as in step three, then click Auto map inputs, which assigns "the sidechained Mixer track with the lowest number to the first plugin input". Or right-click the input number fields and pick by hand. Waves' own support article for OVox in FL Studio describes exactly this: carrier on track 2, right-click the arrow on the OVox track, "Sidechain to this track only", set the sidechain connections to 1, then set the plugin's Synth Source to Sidechain.
+
+The free ones first. **TAL-Vocoder** is listed under TAL's free plugins: an 11-band design that "produces the sound of vocoders from the early 80's", with a built-in VCO synth as the carrier and sidechain routing to feed it a carrier of your own. VST, VST3, AU, AAX and CLAP, Windows 7 and up, macOS 10.9 and up, Linux. **Full Bucket FBVC** is a 20-band stereo vocoder with a 64-voice tone generator inside it, so it can be its own carrier, plus an external carrier on inputs 3 and 4. Windows gets VST2, VST3, CLAP and AAX; macOS adds AU. Version 1.1.3, November 2024, with direct downloads on the maker's page and no price attached.
+
+Paid options that load in FL Studio: **MeldaProduction MVocoder**, $55, up to 100 bands and an external sidechain only, so it always needs a carrier track. **Arturia Vocoder V**, 149 euros, 16 bands from 50 to 5,080 Hz with a synth and sampler inside. **XILS 5000**, 179 euros list and 49 on sale when this was written, two synth cores and 22- and 20-band filter banks with a sidechain for an external carrier. **Waves OVox** runs an internal synth by default and takes a sidechain carrier as above. The [best vocoder plugins](https://gazillionindustries.com/best-vocoder-plugins/) guide weighs them against each other.
+
+**VOCODER is a mode.** Press it and the edit rows become the vocoder's own, with all sixteen bands drawn on the screen.
+
+## WINNETKA in FL Studio
+
+WINNETKA is an instrument, so it sits in the Channel Rack and takes Piano roll notes like any synth, and its vocoder is a mode of the synth rather than an effect slot. Forty of its 350 presets are vocoder sounds, and twelve of those hold a vowel inside them. Load one, play a chord, and the formant shape a voice would have supplied is already frozen in the preset. In FL Studio that means the routing above never happens: no MOD track, no send switch, no Master to deselect.
+
+For a live microphone into it, the voice has to reach an instrument's audio input, and Image-Line's wrapper page documents manual input assignment for plug-ins loaded in Channels as mixer-track offsets, set by right-clicking the input field. [How to use a vocoder in any DAW](https://gazillionindustries.com/how-to-use-a-vocoder/) walks that, host by host. The honest advice for FL Studio is to let Vocodex handle the live-mic session and use WINNETKA for the carrier that costs the most in the free field: a real polysynth, up to 128 voices, with the vowel already in it.
+
+[WINNETKA](https://gazillionindustries.com/winnetka/) is $49, a VST3 on Windows and AU, VST3 and standalone on the Mac. Load a vocoder preset, hold three notes, and it talks before the microphone is plugged in. There is a demo on the page.
+
+## If you are in Ableton Live instead
+
+Live's Vocoder is in Standard and Suite, and not in Intro; Ableton's shop lists the three at USD 349, 749 and 99. The manual's placement rule is the opposite of most plugin vocoders: "Live's Vocoder should be inserted on the track that contains the audio material you plan to use as your modulator", meaning the voice. The Carrier chooser then offers Noise, External, Modulator and Pitch Tracking; External "allows you to select any available internal routing points", which is where you pick the synth track. Unvoiced runs a second noise generator over the "f" and "s" sounds with its own sensitivity, Depth at 100 percent gives what the manual calls "classic" vocoding, Formant shifts the carrier's filterbank, and Gate silences bands below a threshold. For a plugin vocoder in Live, including WINNETKA, the voice travels the other way, through Audio To on the vocal track, and the [routing guide](https://gazillionindustries.com/how-to-use-a-vocoder/) has that path in Live's own menu names.
+
+## What a vocoder in FL Studio costs you
+
+Consonants first. A filter bank measuring tone finds nothing in an "s", so every one of these tools has a noise or unvoiced control, and the evening is spent on it. It costs two performances in one take: the chord and the words have to land together, which is why Vocodex's internal carrier exists and why it is for live use only. It costs CPU that climbs with the band count, and 100 bands in Vocodex on a laptop is a decision. And the routing costs you the first session, every time, in every host except the one where the vowel is already in the preset.
+
+## Questions people ask
+
+### Does FL Studio have a vocoder?
+
+Two. Fruity Vocoder is in every edition and uses the left channel as the modulator and the right as the carrier. Vocodex is in Producer Edition and up, with 5 to 100 bands and sidechain inputs for modulator and carrier.
+
+### How do I use a vocoder in FL Studio?
+
+For Vocodex: load it on an empty mixer track, select the vocal's track, right-click the Vocodex track's send switch and choose "Sidechain to this track only", deselect the vocal track's send to Master, route the carrier synth to the Vocodex track, then set MOD to the vocal track. For Fruity Vocoder, pan the voice hard left and the synth hard right into one track.
+
+### Is there a free vocoder plugin for FL Studio?
+
+Fruity Vocoder is already there in every edition. Beyond it, TAL-Vocoder is listed as free by its maker and Full Bucket's FBVC has direct downloads with no price on the page; both load as VST3. The [free vocoder guide](https://gazillionindustries.com/best-free-vocoder-plugins/) covers the rest.
+
+### Why is my vocoder silent in FL Studio?
+
+The carrier or the modulator never arrived. Check that the send switch was right-clicked, not left-clicked; a left-click makes an audio send, and the mixer page notes a sidechain exists only when the send knob is at 0 percent. Then check that the carrier's Channel Settings selector points at the vocoder's track number.
+
+### Can I use a vocoder in FL Studio without a microphone?
+
+Yes, two ways. Any recorded audio works as a modulator, so a vocal clip on a track does the job. Or use an instrument whose vocoder presets hold a vowel: twelve of WINNETKA's forty vocoder presets play with no audio input at all.
+
+### Does Ableton Live have a vocoder?
+
+In Standard and Suite, yes. It goes on the voice track and picks the synth through the Carrier chooser's External setting. Intro does not include it, and a plugin vocoder fills the slot there.
+
+### Which is better in FL Studio, Fruity Vocoder or Vocodex?
+
+Vocodex, if your edition has it: sidechain inputs, up to 100 bands, noise for consonants and per-band mapping. Fruity Vocoder is the simpler one and is in every edition, and its panning routing is quicker to set up for a single line.
+
+## What WINNETKA does
+
+[WINNETKA](https://gazillionindustries.com/winnetka/) is our polysynth, $49, one payment, AU, VST3 and standalone on macOS 10.13 or later for Apple Silicon and Intel, and VST3 on Windows 10 or later, 64-bit. Play a single sound or layer two timbres. Switch to **VOCODER** and the edit rows become the vocoder's own, with **sixteen bands** drawn across the screen, formant and shift controls, and a HOLD key that freezes the shape and keeps it playing with nothing coming in. **350 presets**: bass, lead, pads, FX, percussion, arp and 40 vocoder sounds, twelve of them holding a vowel so they play with no microphone. A 16-step arpeggiator with rates to 1/64, filters, envelopes, modulation, EQ and delay. [How to make robot vocals](https://gazillionindustries.com/how-to-make-robot-vocals/) is the sound this page is for.
+
+Track 3 is making the robot now. It took one right-click, and a second one to stop the dry voice from singing along.
 
 ---
 

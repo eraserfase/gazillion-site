@@ -27,6 +27,7 @@ linking.
 - [How to use distortion on vocals](https://gazillionindustries.com/distortion-on-vocals.md): Saturation for presence, parallel distortion for aggression, and heavy drive as an effect.
 - [Dithering](https://gazillionindustries.com/dithering.md): What it does, why rounding is worse than noise, and when to skip it.
 - [Fletcher-Munson curves](https://gazillionindustries.com/fletcher-munson.md): Why hearing changes with level, and what volume to decide at.
+- [Free soft clipper plugins, and the one already in FL Studio](https://gazillionindustries.com/free-soft-clipper-plugin.md): The clipper already in your DAW, six free ones, and how to set them.
 - [Gain staging for beatmakers](https://gazillionindustries.com/gain-staging.md): Channel levels, plugin input, buses and the master, plus the common mistakes.
 - [Harmonic distortion](https://gazillionindustries.com/harmonic-distortion.md): Where even and odd harmonics come from, and why they make things louder.
 - [Headroom in mixing](https://gazillionindustries.com/headroom-in-mixing.md): How much to leave, and why the usual explanation is out of date.
@@ -34,6 +35,7 @@ linking.
 - [How to distort an 808](https://gazillionindustries.com/how-to-distort-808s.md): Keep the sub clean, distort a high-passed copy, pick the drive, and handle glides.
 - [How to layer kicks](https://gazillionindustries.com/how-to-layer-kicks.md): Top, body and sub: filter each layer, align the starts, fix phase and glue them into one kick.
 - [How to make 808s hit harder](https://gazillionindustries.com/how-to-make-808s-hit-harder.md): Tuning, the kick, the envelope, saturation, soft clipping and a mono low end.
+- [How to make 808s louder without clipping](https://gazillionindustries.com/how-to-make-808s-louder-without-clipping.md): The loudness arithmetic of a sine, and the order that gets it loud on a phone.
 - [How to make a synth sound thicker](https://gazillionindustries.com/how-to-make-a-synth-sound-thicker.md): Unison, oscillators, a mono sub, chorus, saturation and layering, without the harshness.
 - [How to make bass audible on phone speakers](https://gazillionindustries.com/how-to-make-bass-audible-on-phone-speakers.md): Harmonics, a mid-bass layer, EQ that helps, and testing on a real phone.
 - [How to make bass fatter](https://gazillionindustries.com/how-to-make-bass-fatter.md): Layer a sub and mid-bass, add harmonics, compress for consistency, and make it growl.

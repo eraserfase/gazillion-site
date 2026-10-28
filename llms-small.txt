@@ -17,5 +17,5 @@ Last updated: 2026-10-28
 
 ## Fuller versions
 
-- [Index of everything](https://gazillionindustries.com/llms.txt): products plus all 159 articles
+- [Index of everything](https://gazillionindustries.com/llms.txt): products plus all 170 articles
 - [Complete text](https://gazillionindustries.com/llms-full.txt): every article in one file

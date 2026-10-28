@@ -40,5 +40,6 @@ linking.
 - [Tape plugins for Ableton Live](https://gazillionindustries.com/tape-plugins-for-ableton-live.md): Live covers saturation. Speed, noise and transport need TRIPLE OG.
 - [Tape plugins for FL Studio](https://gazillionindustries.com/tape-plugins-for-fl-studio.md): Distructor covers the distortion. Speed, noise and transport need TRIPLE OG.
 - [Tape plugins for Logic Pro](https://gazillionindustries.com/tape-plugins-for-logic-pro.md): ChromaGlow covers saturation. Speed, noise and transport need TRIPLE OG.
+- [A history of tape simulation](https://gazillionindustries.com/tape-simulation-history.md): From the first tape plugins to the cassette sims, and the transport nobody modeled.
 - [Tape speed](https://gazillionindustries.com/tape-speed.md): Why faster tape is cleaner, and what each standard speed sounds like.
 - [Wow and flutter](https://gazillionindustries.com/wow-and-flutter.md): What causes them, what they sound like, and how to add them on purpose.

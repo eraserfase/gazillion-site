@@ -24,9 +24,11 @@ linking.
 - [Best formant shifter plugins](https://gazillionindustries.com/best-formant-shifter-plugins.md): What formant shift moves, how to test one, and the free plugins worth installing.
 - [Best pitch shifter plugins](https://gazillionindustries.com/best-pitch-shifter-plugins.md): Which family to use, what formant control buys, and the free options worth having.
 - [Best time stretch plugins](https://gazillionindustries.com/best-time-stretch-plugins.md): Which algorithm for which material, how to test one in ten minutes, and the free routes.
-- [Best varispeed plugins](https://gazillionindustries.com/best-varispeed-plugins.md): What the rate control has to do, how to test one, and the free options worth downloading.
+- [Varispeed plugin: which one, and how to choose](https://gazillionindustries.com/best-varispeed-plugins.md): What the rate control has to do, how to test one, and the free options worth downloading.
 - [Chipmunk soul](https://gazillionindustries.com/chipmunk-soul.md): Choosing the vocal, how far to pitch it up, and the drums that go under it.
 - [Formant shifting](https://gazillionindustries.com/formant-shifting.md): What formants are, and why a pitched-up voice sounds like a smaller person.
+- [Free formant shifter plugins, and the move they cannot make](https://gazillionindustries.com/free-formant-shifter-plugin.md): Five free formant shifters, sorted by what they actually move.
+- [Free time stretch plugins, and where free runs out](https://gazillionindustries.com/free-time-stretch-plugin.md): What stretches for free, how far, and the one move that costs $29.
 - [How to change pitch without changing tempo](https://gazillionindustries.com/how-to-change-pitch-without-changing-tempo.md): How pitch shifting and time stretching work, which mode to use, and how to avoid artifacts.
 - [How to chop and screw a song](https://gazillionindustries.com/how-to-chop-and-screw.md): Where DJ Screw's Houston sound comes from, and how to screw and chop a song in a DAW.
 - [How to make slowed and reverb](https://gazillionindustries.com/how-to-make-slowed-and-reverb.md): Slow it with varispeed, add a long dark reverb, and make sped-up versions too.

@@ -470,8 +470,6 @@ the people who make the plugins.
   — Four tracks on one cassette, bouncing, and what each generation costs.
 - [The Space Echo](https://gazillionindustries.com/space-echo.md)
   — The tape loop, the five heads, and what the twelve modes actually select.
-- [The Minimoog Voyager](https://gazillionindustries.com/minimoog-voyager.md)
-  — Bob Moog's 2002 Minimoog: the dual filters, the touch surface, and the variants.
 - [J Dilla](https://gazillionindustries.com/j-dilla.md)
   — The life, the machines, how the drums really work, and the claims that do not hold up.
 - [The creation of the MPC](https://gazillionindustries.com/mpc-creation.md)
@@ -488,6 +486,8 @@ the people who make the plugins.
   — The ASR-10 years, swing at 62 percent, and the drumless question.
 - [The Capitol echo chambers](https://gazillionindustries.com/capitol-echo-chambers.md)
   — Eight concrete rooms under a car park, and why they still sound like that.
+- [The Minimoog Voyager](https://gazillionindustries.com/minimoog-voyager.md)
+  — Bob Moog's return, the 2002 launch, the dual filters, hip-hop's Voyagers, and why one voice teaches.
 - [Tape plugins for Ableton Live](https://gazillionindustries.com/tape-plugins-for-ableton-live.md)
   — Live covers saturation. Speed, noise and transport need TRIPLE OG.
 - [Tape plugins for Logic Pro](https://gazillionindustries.com/tape-plugins-for-logic-pro.md)
@@ -558,7 +558,7 @@ the people who make the plugins.
   — Which family to use, what formant control buys, and the free options worth having.
 - [Best time stretch plugins](https://gazillionindustries.com/best-time-stretch-plugins.md)
   — Which algorithm for which material, how to test one in ten minutes, and the free routes.
-- [Best varispeed plugins](https://gazillionindustries.com/best-varispeed-plugins.md)
+- [Varispeed plugin: which one, and how to choose](https://gazillionindustries.com/best-varispeed-plugins.md)
   — What the rate control has to do, how to test one, and the free options worth downloading.
 - [Best detune plugins](https://gazillionindustries.com/best-detune-plugins.md)
   — Cents, beating and mono: how to pick a detune plugin, free or paid.
@@ -622,6 +622,28 @@ the people who make the plugins.
   — The free compressor for the drum bus, and how to set it up.
 - [Free boom bap plugins: chop, swing, dust and squash](https://gazillionindustries.com/free-boom-bap-plugins.md)
   — The free plugin chain behind boom bap drums.
+- [Free soft clipper plugins, and the one already in FL Studio](https://gazillionindustries.com/free-soft-clipper-plugin.md)
+  — The clipper already in your DAW, six free ones, and how to set them.
+- [How to make 808s louder without clipping](https://gazillionindustries.com/how-to-make-808s-louder-without-clipping.md)
+  — The loudness arithmetic of a sine, and the order that gets it loud on a phone.
+- [The SP-202 and the start of the SP line](https://gazillionindustries.com/sp-202.md)
+  — The 1998 Dr. Sample that started the SP line, and what carried into the 303 and 404.
+- [Free vinyl sim plugins, and the one we make](https://gazillionindustries.com/free-vinyl-sim-plugin.md)
+  — The free plugin for the noise, the free one for the squash, and the order.
+- [Glue compressor in FL Studio: Fruity Limiter, Maximus, and the free one](https://gazillionindustries.com/glue-compressor-in-fl-studio.md)
+  — Build the drum bus, then glue it with Fruity Limiter or ours.
+- [Free alternatives to RC-20 Retro Color, one module at a time](https://gazillionindustries.com/free-alternative-to-rc-20.md)
+  — A free plugin for each RC-20 module, and the job none of them does.
+- [Free formant shifter plugins, and the move they cannot make](https://gazillionindustries.com/free-formant-shifter-plugin.md)
+  — Five free formant shifters, sorted by what they actually move.
+- [Free time stretch plugins, and where free runs out](https://gazillionindustries.com/free-time-stretch-plugin.md)
+  — What stretches for free, how far, and the one move that costs $29.
+- [A history of tape simulation](https://gazillionindustries.com/tape-simulation-history.md)
+  — From the first tape plugins to the cassette sims, and the transport nobody modeled.
+- [Free arpeggiator VST plugins, and where each one runs](https://gazillionindustries.com/free-arpeggiator-vst.md)
+  — Three kinds of free arpeggiator, and the wiring each one needs.
+- [Vocoder plugin for FL Studio: the two it ships with, and the third](https://gazillionindustries.com/vocoder-plugin-for-fl-studio.md)
+  — Fruity Vocoder, Vocodex, the sidechain right-click, and the third option.
 - [Drum bus compressor settings](https://gazillionindustries.com/drum-bus-compressor-settings.md)
   — attack, release, ratio and threshold on a drum bus, and a starting point.
 
