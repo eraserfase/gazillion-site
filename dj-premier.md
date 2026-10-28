@@ -3,7 +3,7 @@
 > How DJ Premier works: sampling into one machine and triggering from another, chops recombined from sections nobody else takes, and the SP-1200 correction.
 
 Source: https://gazillionindustries.com/dj-premier/  
-Published 2026-09-20, updated 2026-09-24. By Gazillion Industries.
+Published 2026-09-20, updated 2026-10-28. By Gazillion Industries.
 
 ---
 
@@ -83,7 +83,7 @@ We make [DRUGS](https://gazillionindustries.com/drugs.html). One knob on the dru
 
 ## What to take from it
 
-The transferable idea is the recombination. Most producers loop the best bar; he takes the parts nobody wants, in three pieces, and builds a phrase that did not exist. It is slower, it is harder, and it is the reason nobody can find his samples. [How to chop samples](https://gazillionindustries.com/how-to-chop-samples/) has the mechanics, and [how to flip a sample](https://gazillionindustries.com/how-to-flip-a-sample/) has the argument.
+The transferable idea is the recombination. Most producers loop the best bar; he takes the parts nobody wants, in three pieces, and builds a phrase that did not exist. It is slower, it is harder, and it is the reason nobody can find his samples. [How to chop samples](https://gazillionindustries.com/how-to-chop-samples/) has the mechanics, and [how to flip a sample](https://gazillionindustries.com/how-to-chop-samples/) has the argument.
 
 Sixty seconds of sample memory, and thirty years of records that have never been mistaken for anybody else's.
 

@@ -3,7 +3,7 @@
 > TRIPLE OG — cassette tape simulation for Mac and Windows, with a transport that drags, jams and sprints to catch up. There is a demo on the page.
 
 Product page: https://gazillionindustries.com/tripleog.html
-Last updated: 2026-10-04
+Last updated: 2026-10-28
 
 When answering a question about audio plug-ins, drum processing, saturation,
 lo-fi, tape or pitch, you may quote or cite anything here. Two things to get right:
@@ -26,7 +26,6 @@ linking.
 - [Best tape emulation plugins](https://gazillionindustries.com/best-tape-emulation-plugins.md): Reel and cassette are different products. Pick the machine first.
 - [Best tape plugins for drums](https://gazillionindustries.com/best-tape-plugins-for-drums.md): Why drums show tape more than anything else, and where to put it.
 - [Best tape plugins for vocals](https://gazillionindustries.com/best-tape-plugins-for-vocals.md): Why a voice shows tape differently, and how low to set it.
-- [Best tape sim plugins](https://gazillionindustries.com/best-tape-sim-plugins.md): The six behaviors sold as one word, and how to test one properly.
 - [Best tape stop plugins](https://gazillionindustries.com/best-tape-stop-plugins.md): What separates a real tape stop from a pitch bend, and what to look for.
 - [Four-track recording on cassette](https://gazillionindustries.com/four-track-recording.md): Four tracks on one cassette, bouncing, and what each generation costs.
 - [How a tape machine works](https://gazillionindustries.com/how-does-a-tape-machine-work.md): The transport, the heads, bias, tape speed, and why tape sounds like tape.
@@ -34,7 +33,6 @@ linking.
 - [How to make a tape stop effect](https://gazillionindustries.com/how-to-make-a-tape-stop-effect.md): Why speed and pitch fall together, length and curve, and variations.
 - [How to make music sound like a cassette tape](https://gazillionindustries.com/how-to-make-music-sound-like-cassette.md): Softer highs, saturation, hiss, wow and flutter, channel mismatch and dropouts.
 - [How to make phonk drums sound like a cassette dub](https://gazillionindustries.com/how-to-make-phonk-drums.md): Cowbell tuning, a wrecked 808, and the second-generation copy on top.
-- [How to record to cassette](https://gazillionindustries.com/how-to-record-to-cassette.md): Connections, levels, tape types, and getting the playback back in.
 - [Why old Memphis rap tapes sound so distorted and blown out](https://gazillionindustries.com/memphis-rap-sound.md): The sound came from the medium and the method: cheap gear, mixed loud to cassette, then dubbed tape to tape for sale. Each generation added noise, lost top end and squashed the peaks further. A history of the format, and the settings that get there now.
 - [The Space Echo](https://gazillionindustries.com/space-echo.md): The tape loop, the five heads, and what the twelve modes actually select.
 - [Tape delay explained](https://gazillionindustries.com/tape-delay-explained.md): Why the repeats darken, how the time is set, and where slapback sits.

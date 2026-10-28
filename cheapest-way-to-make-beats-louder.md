@@ -3,7 +3,7 @@
 > The cheapest way to get a beat louder is already in your DAW: gain staging, a stock clipper on the drums, the limiter last. Loudness is mostly crest factor.
 
 Source: https://gazillionindustries.com/cheapest-way-to-make-beats-louder/  
-Published 2026-09-24, updated 2026-09-24. By Gazillion Industries, who make BEEFY.
+Published 2026-09-24, updated 2026-10-28. By Gazillion Industries, who make BEEFY.
 
 ---
 

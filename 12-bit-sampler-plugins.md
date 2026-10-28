@@ -3,7 +3,7 @@
 > How to choose a 12 bit sampler plugin: what bit depth and sample rate reduction really do, how to test one, where it sits, and the free options.
 
 Source: https://gazillionindustries.com/12-bit-sampler-plugins/  
-Published 2026-09-24, updated 2026-09-24. By Gazillion Industries, who make F(ilter)12.
+Published 2026-09-24, updated 2026-10-28. By Gazillion Industries, who make F(ilter)12.
 
 ---
 
@@ -183,11 +183,11 @@ A fair way to spend nothing and still learn something: install two free crushers
 
 These are starting points, not recipes, and the source matters more than the numbers. Set them, then move them until your loop sounds right rather than until the readout matches a guide.
 
-**Drum break, subtle.** Bit depth 12, sample rate reduced by a quarter, low-pass after the crush somewhere between 8 and 12 kHz, dry/wet at 100 per cent. This is the setting that sounds like almost nothing until you bypass it. It is also the one that survives a mix. Pair it with the treatment in [how to make drums sound dusty](https://gazillionindustries.com/how-to-make-drums-sound-dusty/).
+**Drum break, subtle.** Bit depth 12, sample rate reduced by a quarter, low-pass after the crush somewhere between 8 and 12 kHz, dry/wet at 100 per cent. This is the setting that sounds like almost nothing until you bypass it. It is also the one that survives a mix. Pair it with the treatment in [how to make drums sound dusty](https://gazillionindustries.com/how-to-make-a-sample-sound-old/).
 
 **Drum break, obvious.** Bit depth 8 to 10, sample rate down by half, low-pass at 6 to 8 kHz, and a little drive before the crusher. Expect to lose some snare weight and plan to get it back with parallel compression rather than by backing the crusher off.
 
-**Melodic loop or chop.** Bit depth 12, rate reduction light, and put the low-pass before the crusher instead of after. Folded content lands on top of held notes and reads as out-of-tune much faster than it does on drums, so give the crusher less to fold. [Flipping a sample](https://gazillionindustries.com/how-to-flip-a-sample/) covers the rest of the treatment.
+**Melodic loop or chop.** Bit depth 12, rate reduction light, and put the low-pass before the crusher instead of after. Folded content lands on top of held notes and reads as out-of-tune much faster than it does on drums, so give the crusher less to fold. [Flipping a sample](https://gazillionindustries.com/how-to-chop-samples/) covers the rest of the treatment.
 
 **Vocal.** On a send, not an insert, at 8 bits with heavy rate reduction, blended at 15 to 30 per cent under the dry vocal. Full-band crushing on a lead vocal turns consonants into spray. Automate the send up on the last word of a line instead.
 

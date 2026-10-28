@@ -3,7 +3,7 @@
 > Reel and cassette simulations are different products. Pick the machine first, then the behaviors, then what you are putting it on.
 
 Source: https://gazillionindustries.com/best-tape-emulation-plugins/  
-Published 2026-09-22, updated 2026-09-24. By Gazillion Industries, who make TRIPLE OG.
+Published 2026-09-22, updated 2026-10-28. By Gazillion Industries, who make TRIPLE OG.
 
 ---
 
@@ -37,7 +37,7 @@ So a faithful reel plugin is a fairly clean-sounding thing, and a faithful casse
 
 ## Step two: which behaviors you need
 
-Tape emulation bundles six separate things: saturation, compression, high-frequency loss, noise, speed instability and transport movement. Every plugin picks a subset, and the subsets are what people are really arguing about when they argue about which is best. Each one, and how to test for it, is in [tape sim plugins](https://gazillionindustries.com/best-tape-sim-plugins/).
+Tape emulation bundles six separate things: saturation, compression, high-frequency loss, noise, speed instability and transport movement. Every plugin picks a subset, and the subsets are what people are really arguing about when they argue about which is best. Each one, and how to test for it, is in tape sim plugins.
 
 The short guidance: saturation is available from dozens of plugins you already own and is the weakest reason to pick one. Speed instability is available from almost nothing else, and a playable transport from less still. Weight your decision toward the things that are hard to get elsewhere.
 
@@ -122,6 +122,16 @@ On a real machine, tape speed was the master control that moved everything else,
 Faster tape means more material passing the head each second, so the top end extends, the noise drops relative to the signal and the low end tightens. Slower tape reverses all three at once: darker, noisier, and softer at the bottom. This is why a studio machine at high speed and a cassette sound so different despite being the same technology, and it is why turning the treble down on a reel emulation does not get you to cassette. Only one of those changes the noise floor and the low end along with the top.
 
 If a plugin gives you a speed control, set that before anything else and treat the rest as trim. If it does not, you are working with somebody's fixed choice of machine and speed, and the honest question to ask is which one they chose.
+
+## The behavior almost nobody simulates
+
+Run through any list of tape sims and you will find the same six behaviors: saturation, bandwidth, noise, compression, speed error and sometimes crosstalk. All six describe the tape. None of them describes the machine.
+
+A tape machine had a transport, and the transport made sounds that had nothing to do with magnetic particles. It dragged to a halt when you stopped it. It took a moment to come back up to speed. You could put a hand on the reel and hear the pitch sag. Those are performances rather than settings, they happen in time, and they cannot be approximated by automating a pitch control afterwards because the recovery behavior is the part that sells it.
+
+This is the one axis where the field is genuinely thin, and it is worth deciding whether you want it before comparing anything else, because it is the only item on the list you cannot add later.
+
+Stereo VU against a 0 VU reference, with a peak lamp. Tape level is read here, not on a bar graph.
 
 ## Hear it
 

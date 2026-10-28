@@ -3,7 +3,7 @@
 > How to choose a filter plugin: the three things that separate good from bad, a ten-minute test, where it goes in the chain, and what to pay.
 
 Source: https://gazillionindustries.com/best-filter-plugins/  
-Published 2026-09-24, updated 2026-09-24. By Gazillion Industries, who make F(ilter)12.
+Published 2026-09-24, updated 2026-10-28. By Gazillion Industries, who make F(ilter)12.
 
 ---
 
@@ -213,7 +213,7 @@ Two honest caveats, one general and one ours. The general one: grade three costs
 
 The category advice above is general. What you put it on narrows it further.
 
-**Drums.** A low-pass with a shallow slope and no resonance is the fastest way to push a loop behind the vocal without losing the hit, because the transient survives a shallow slope better than it survives a steep one. Steep filters on drums remove the attack along with the air, and the loop goes soft in a way no amount of compression brings back. On F(ilter)12 that is SLOPE at the bottom of its range with RESO at zero, and then a little BIT if you want the loop dusty rather than only distant; the rest of that job is in [making drums sound dusty](https://gazillionindustries.com/how-to-make-drums-sound-dusty/).
+**Drums.** A low-pass with a shallow slope and no resonance is the fastest way to push a loop behind the vocal without losing the hit, because the transient survives a shallow slope better than it survives a steep one. Steep filters on drums remove the attack along with the air, and the loop goes soft in a way no amount of compression brings back. On F(ilter)12 that is SLOPE at the bottom of its range with RESO at zero, and then a little BIT if you want the loop dusty rather than only distant; the rest of that job is in [making drums sound dusty](https://gazillionindustries.com/how-to-make-a-sample-sound-old/).
 
 **Bass.** High-pass with care and low-pass with confidence. A high-pass sweeping up through the fundamental rotates phase around the note, and on layered bass the layers stop agreeing with each other before you hear anything obviously wrong. Check in mono. A low-pass on the top of a bass part, on the other hand, is free: it removes the fizz that was fighting the hi-hats and nothing in the low end notices. The slope choices for both are in [low-pass and high-pass plugins](https://gazillionindustries.com/best-lowpass-highpass-filter-plugins/).
 

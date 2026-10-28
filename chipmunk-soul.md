@@ -3,7 +3,7 @@
 > How to make a chipmunk soul beat: choosing the vocal, how far to pitch it up, why repitching beats pitch shifting, and the drums that go under it.
 
 Source: https://gazillionindustries.com/chipmunk-soul/  
-Published 2026-09-20, updated 2026-09-24. By Gazillion Industries, who make SKRUU.
+Published 2026-09-20, updated 2026-10-28. By Gazillion Industries, who make SKRUU.
 
 ---
 
@@ -63,7 +63,7 @@ Two practical notes. Pitching up shortens the sample, so a four-bar phrase at +5
 
 ## Where it costs you
 
-It is a recognizable sound with a date on it, and a whole beat in that style announces the era it belongs to. It is also unkind to sibilance: past about five semitones, S sounds turn into small explosions, and a de-esser before the pitching saves an afternoon. Clearance is the real cost, though. A pitched-up soul vocal is still someone's recording and someone's song, and speed does not disguise anything from the people whose job it is to notice. See [how to flip a sample](https://gazillionindustries.com/how-to-flip-a-sample/) for the ways round that which do not involve a lawyer.
+It is a recognizable sound with a date on it, and a whole beat in that style announces the era it belongs to. It is also unkind to sibilance: past about five semitones, S sounds turn into small explosions, and a de-esser before the pitching saves an afternoon. Clearance is the real cost, though. A pitched-up soul vocal is still someone's recording and someone's song, and speed does not disguise anything from the people whose job it is to notice. See [how to flip a sample](https://gazillionindustries.com/how-to-chop-samples/) for the ways round that which do not involve a lawyer.
 
 ## Questions people ask
 

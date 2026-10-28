@@ -3,7 +3,7 @@
 > How to make a tape loop: splicing tape into a circle, working out the loop length from the tape speed, keeping tension, and the version you can do in a DAW.
 
 Source: https://gazillionindustries.com/how-to-make-a-tape-loop/  
-Published 2026-09-20, updated 2026-09-20. By Gazillion Industries, who make TRIPLE OG.
+Published 2026-09-20, updated 2026-10-28. By Gazillion Industries, who make TRIPLE OG.
 
 ---
 
@@ -157,7 +157,7 @@ A loop is a source, so nearly everything goes after it. The order that matters i
 
 Put the varispeed ahead of the tape tone and the drift moves the music. Put it after and it moves the hiss too, which announces a plugin rather than a machine. Keep the noise bed at the end of the tape chain so nothing downstream is reacting to a floor that was never in the recording, and check what a limiter does to that floor before you commit: a hiss bed that is inaudible on its own becomes a breathing pad once something is pulling 6 dB out of the master.
 
-After the tape stage it is an ordinary source with an unusual history. It takes the same [chain order](https://gazillionindustries.com/drum-bus-chain-order/) and the same [gain staging](https://gazillionindustries.com/gain-staging/) as anything else you record. If you are chopping the loop into a beat rather than letting it run, [how to flip a sample](https://gazillionindustries.com/how-to-flip-a-sample/) picks it up from there, and [varispeed](https://gazillionindustries.com/what-is-varispeed/) covers the pitch-and-speed relationship in full.
+After the tape stage it is an ordinary source with an unusual history. It takes the same [chain order](https://gazillionindustries.com/drum-bus-chain-order/) and the same [gain staging](https://gazillionindustries.com/gain-staging/) as anything else you record. If you are chopping the loop into a beat rather than letting it run, [how to flip a sample](https://gazillionindustries.com/how-to-chop-samples/) picks it up from there, and [varispeed](https://gazillionindustries.com/what-is-varispeed/) covers the pitch-and-speed relationship in full.
 
 ## Failure modes and what each one sounds like
 

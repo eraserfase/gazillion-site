@@ -3,7 +3,7 @@
 > Sidechain compression explained: how to duck the bass under the kick, the settings to use, when a volume envelope is better, and what it hides rather than fixes.
 
 Source: https://gazillionindustries.com/sidechain-compression/  
-Published 2026-09-20, updated 2026-09-25. By Gazillion Industries, who make DRUGS.
+Published 2026-09-20, updated 2026-10-28. By Gazillion Industries, who make DRUGS.
 
 ---
 
@@ -295,7 +295,7 @@ Your DAW's stock compressor, in almost every case. The routing is already built,
 
 DRUGS is our free bus compressor for drums, and it does one job. **DOSE** moves the transfer curve, the knee, the attack and the release together, making a drum bus denser rather than louder, with the room brought up underneath the hits. There is no sidechain input and no trigger routing: it listens to what you feed it and nothing else. Put your ducking compressor on the bass, and put this on the drums that are doing the ducking.
 
-One thing to know before it goes on a bus you care about. DOSE at 0 is not a bypass — the knob is a position on a curve, so the bottom of its travel is still working, and the honest comparison against nothing is the plugin's own bypass. Set level with GAIN afterward, match it, and judge it on the quiet bars. [One-knob compressor](https://gazillionindustries.com/one-knob-compressor/) has the wider argument about what a single control can carry, and [drum bus compressor settings](https://gazillionindustries.com/drum-bus-compressor-settings/) has the starting positions.
+One thing to know before it goes on a bus you care about. DOSE at 0 is not a bypass — the knob is a position on a curve, so the bottom of its travel is still working, and the honest comparison against nothing is the plugin's own bypass. Set level with GAIN afterward, match it, and judge it on the quiet bars. [One-knob compressor](https://gazillionindustries.com/drugs.html) has the wider argument about what a single control can carry, and [drum bus compressor settings](https://gazillionindustries.com/drum-bus-compressor-settings/) has the starting positions.
 
 Four times a bar, everything gets out of the way of a sound you can hardly hear. That is the whole trick.
 

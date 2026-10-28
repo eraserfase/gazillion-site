@@ -3,7 +3,7 @@
 > How to mix vocals in order: rides before compression, the chain that works, how to make a voice fit rather than sit on top, and the checks that catch a bad balance.
 
 Source: https://gazillionindustries.com/how-to-mix-vocals/  
-Published 2026-09-20, updated 2026-09-24. By Gazillion Industries, who make BEEFY.
+Published 2026-09-20, updated 2026-10-28. By Gazillion Industries, who make BEEFY.
 
 ---
 

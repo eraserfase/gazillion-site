@@ -3,7 +3,7 @@
 > How to choose a bitcrusher plugin: what bit depth and sample rate reduction really do, how to audition one, and the free and paid options.
 
 Source: https://gazillionindustries.com/best-bitcrusher-plugins/  
-Published 2026-09-24, updated 2026-09-26. By Gazillion Industries, who make F(ilter)12.
+Published 2026-09-24, updated 2026-10-28. By Gazillion Industries, who make F(ilter)12.
 
 ---
 
@@ -133,7 +133,7 @@ Before the filter, after the compressor, on a parallel path if you can afford th
 
 **Before the filter,** because the filter is how you choose which artifacts survive. Crushing first and filtering second gives you a crush whose brightness you control. Filtering first and crushing second gives you a crush that generates new brightness after your filter has stopped being able to do anything about it. Both are usable. Only one of them is steerable, and that one is the reason [F(ilter)12](https://gazillionindustries.com/f12.html) has the crush pair and the filter in a single box in that order rather than as two plug-ins you have to remember to keep in line. Cutoff and resonance behavior is covered in [filter cutoff and resonance](https://gazillionindustries.com/filter-cutoff-and-resonance/).
 
-**After the compressor,** because quantization error is level-dependent and a compressor changes levels. Crush before the compressor and the grain rises and falls with gain reduction in ways you did not ask for; crush after it and the grain sits still. If that compressor is sitting on a drum bus, ours is free: [DRUGS](https://gazillionindustries.com/drugs.html) is a one-knob drum bus compressor for Mac and Windows, DOSE and GAIN and a soft ceiling out, and it costs nothing — see [the one-knob compressor](https://gazillionindustries.com/one-knob-compressor/) and [how to compress drums](https://gazillionindustries.com/how-to-compress-drums/). There is a creative use for the reversed arrangement, and it is a creative use rather than a default.
+**After the compressor,** because quantization error is level-dependent and a compressor changes levels. Crush before the compressor and the grain rises and falls with gain reduction in ways you did not ask for; crush after it and the grain sits still. If that compressor is sitting on a drum bus, ours is free: [DRUGS](https://gazillionindustries.com/drugs.html) is a one-knob drum bus compressor for Mac and Windows, DOSE and GAIN and a soft ceiling out, and it costs nothing — see [the one-knob compressor](https://gazillionindustries.com/drugs.html) and [how to compress drums](https://gazillionindustries.com/how-to-compress-drums/). There is a creative use for the reversed arrangement, and it is a creative use rather than a default.
 
 **On a parallel path,** because the one thing this effect does not do well is full-strength across a whole mix. A parallel crush lets you keep transient definition from the dry path and take grain from the wet one. Parallel technique transfers directly from [parallel saturation](https://gazillionindustries.com/parallel-saturation/).
 
@@ -201,7 +201,7 @@ And the non-cost worth naming: bit reduction does not make anything louder. If l
 
 Starting points, not destinations, written against F(ilter)12's controls. Every one of them wants checking against the arrangement rather than in solo.
 
-**Drums.** The most forgiving source and the reason most people buy one. Grain sits on the transient and the tail, and the grid hides pitched aliasing. Start at 12 BIT and a SAMPLE RATE around a quarter of session rate, then pull POSITION down until the hats stop spitting. Full method in [how to make lofi drums](https://gazillionindustries.com/how-to-make-lofi-drums/) and [how to make drums sound dusty](https://gazillionindustries.com/how-to-make-drums-sound-dusty/).
+**Drums.** The most forgiving source and the reason most people buy one. Grain sits on the transient and the tail, and the grid hides pitched aliasing. Start at 12 BIT and a SAMPLE RATE around a quarter of session rate, then pull POSITION down until the hats stop spitting. Full method in [how to make lofi drums](https://gazillionindustries.com/how-to-make-lofi-drums/) and [how to make drums sound dusty](https://gazillionindustries.com/how-to-make-a-sample-sound-old/).
 
 **Sampled loops and chords.** This is where 12-bit earns its reputation. A loop at 12 bits with the rate barely touched picks up a worn quality without announcing that a plugin was used, which is the whole trick of [making a sample sound old](https://gazillionindustries.com/how-to-make-a-sample-sound-old/) and the shortest route to [an old sampler sound](https://gazillionindustries.com/how-to-get-an-old-sampler-sound/).
 

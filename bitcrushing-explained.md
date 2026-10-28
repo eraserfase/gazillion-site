@@ -1,9 +1,9 @@
 # Bitcrushing explained
 
-> What a bitcrusher does: bit depth, quantization noise, sample rate reduction and aliasing, what 16, 12 and 8 bits sound like, and how to use it on drums and samples.
+> Hear what 16, 12 and 8 bits do to a drum loop, what sample-rate reduction adds, and how to use a bitcrusher on drums without turning them to fizz.
 
 Source: https://gazillionindustries.com/bitcrushing-explained/  
-Published 2026-09-14, updated 2026-09-24. By Gazillion Industries, who make F(ilter)12.
+Published 2026-09-14, updated 2026-10-28. By Gazillion Industries, who make F(ilter)12.
 
 ---
 
@@ -28,6 +28,18 @@ Bitcrushing reduces the bit depth of audio, so each sample is stored with fewer 
 - **Level matters**: a quiet signal into a crusher is crushed harder
 
 - **Use**: drums, samples, vocals, lofi textures; blend to taste
+
+The same one-second source four times: clean, bit reduction alone, rate reduction alone, then both. Play them on whatever you are reading this on, then again on monitors, because the two halves do not survive small speakers equally.
+
+- **Clean** — no processing — https://gazillionindustries.com/f12/f12-clean.m4a
+
+- **Bit reduction only** — rate untouched — https://gazillionindustries.com/f12/f12-bitcrush.m4a
+
+- **Rate reduction only** — bits untouched — https://gazillionindustries.com/f12/f12-rate25.m4a
+
+- **Both** — the pair together — https://gazillionindustries.com/f12/f12-both.m4a
+
+We measured these four files rather than describing them from memory. Peaks fall between −2.3 and −2.9 dBFS, a spread of 0.6 dB, so nothing below is louder-sounds-better. Over the last fifth of the file, where the source has already decayed, the bit-reduced render measures 9.8 dB hotter than the clean one; the rate-reduced render measures within 0.2 dB of it. Run the same measurement the other way and it flips: the frequency below which 99 per cent of the energy sits climbs from 869 Hz clean to 3,348 Hz on the rate-reduced render. One process fills the gaps, the other moves the spectrum. Rendered through [F(ilter)12](https://gazillionindustries.com/f12.html).
 
 **12 bit, full rate.** The quantisation is there but the top end is intact.
 
@@ -64,20 +76,6 @@ The sample rate sets the highest frequency audio can hold: half the sample rate.
 In the time domain the same process is a staircase in width rather than height. Each sample is held until the next one arrives, so at 44.1 kHz a value stands for 22.7 microseconds, at 11.025 kHz for 90.7 microseconds, and at 8 kHz for a flat 125 microseconds. Hold a value that long and you have drawn a small square wave, which is where the extra harmonics come from before any folding happens.
 
 That hold also costs you top end on its own. A held staircase rolls off toward the new ceiling and arrives about 3.9 dB down at it, so the last octave before the fold line is already dulled before aliasing adds anything back. This is why a rate-reduced loop can sound simultaneously duller and harsher: the real high end is sagging while folded content piles into the mids.
-
-## Hear the two halves apart
-
-The same one-second source four times: clean, bit reduction alone, rate reduction alone, then both. Play them on whatever you are reading this on, then again on monitors, because the two halves do not survive small speakers equally.
-
-- **Clean** — no processing — https://gazillionindustries.com/f12/f12-clean.m4a
-
-- **Bit reduction only** — rate untouched — https://gazillionindustries.com/f12/f12-bitcrush.m4a
-
-- **Rate reduction only** — bits untouched — https://gazillionindustries.com/f12/f12-rate25.m4a
-
-- **Both** — the pair together — https://gazillionindustries.com/f12/f12-both.m4a
-
-We measured these four files rather than describing them from memory. Peaks fall between −2.3 and −2.9 dBFS, a spread of 0.6 dB, so nothing below is louder-sounds-better. Over the last fifth of the file, where the source has already decayed, the bit-reduced render measures 9.8 dB hotter than the clean one; the rate-reduced render measures within 0.2 dB of it. Run the same measurement the other way and it flips: the frequency below which 99 per cent of the energy sits climbs from 869 Hz clean to 3,348 Hz on the rate-reduced render. One process fills the gaps, the other moves the spectrum. Rendered through [F(ilter)12](https://gazillionindustries.com/f12.html).
 
 ## Bitcrushing vs distortion
 

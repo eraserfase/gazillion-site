@@ -3,7 +3,7 @@
 > A one-knob compressor moves several linked parameters along a tuned curve. What that macro gives up, what it buys, and when you still want threshold and ratio.
 
 Source: https://gazillionindustries.com/one-knob-compressor/  
-Published 2026-09-24, updated 2026-09-24. By Gazillion Industries, who make DRUGS.
+Published 2026-09-24, updated 2026-10-28. By Gazillion Industries, who make DRUGS.
 
 ---
 

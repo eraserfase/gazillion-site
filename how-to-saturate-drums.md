@@ -1,9 +1,9 @@
 # How to saturate drums
 
-> How to use saturation on drums: what it does to kicks, snares and the drum bus, where to put it, how much to use, and how to keep cymbals from turning harsh.
+> Where saturation goes on drums, how much, and the one number that moves (crest factor). Kick, snare, bus and parallel, with audio.
 
 Source: https://gazillionindustries.com/how-to-saturate-drums/  
-Published 2026-09-13, updated 2026-09-24. By Gazillion Industries, who make BEEFY.
+Published 2026-09-13, updated 2026-10-28. By Gazillion Industries, who make BEEFY.
 
 ---
 
@@ -26,6 +26,8 @@ Saturating drums means driving them into gentle distortion so they pick up harmo
 - **Amount**: until you hear it, then back off
 
 - **Check**: at matched loudness, on a phone too
+
+**The BEEFY demo** — drums before and after, with sound. [BEEFY, for Mac and Windows](https://gazillionindustries.com/beefy.html)
 
 **BEEF at 8.** Barely doing anything — useful as the reference you A/B against.
 

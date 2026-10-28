@@ -3,7 +3,7 @@
 > How four-track cassette recording works: four mono tracks in one direction, bouncing to free tracks, what each generation costs, and why Nebraska sounds like that.
 
 Source: https://gazillionindustries.com/four-track-recording/  
-Published 2026-09-20, updated 2026-09-20. By Gazillion Industries, who make TRIPLE OG.
+Published 2026-09-20, updated 2026-10-28. By Gazillion Industries, who make TRIPLE OG.
 
 ---
 
@@ -135,7 +135,7 @@ The other thing a track can hold is not audio. Record a sync tone to track four,
 
 ## Doing it now
 
-You can impose the same discipline in a DAW, and it is a better exercise than it sounds: limit yourself to four tracks, and every time you want a fifth, bounce three to one and commit. You get decisions instead of options, and arrangements that breathe because there was no room for the extra part. Run each bounce through tape processing if you want the generational loss as well as the constraint. See [how to record to cassette](https://gazillionindustries.com/how-to-record-to-cassette/) for the real version.
+You can impose the same discipline in a DAW, and it is a better exercise than it sounds: limit yourself to four tracks, and every time you want a fifth, bounce three to one and commit. You get decisions instead of options, and arrangements that breathe because there was no room for the extra part. Run each bounce through tape processing if you want the generational loss as well as the constraint. See how to record to cassette for the real version.
 
 ## How the bounce works in each DAW
 
@@ -150,6 +150,12 @@ The constraint is the point, so the method matters less than the fact that it co
 - **Reaper.** Apply track FX to items, or glue a selection into one item. Take lanes let you keep the pre-bounce version without keeping the ability to change the balance, which is cheating slightly, and nobody is going to know.
 
 One thing no DAW gives you for free is the level decision. Digital summing will not saturate and will not hiss, so a bounce there costs nothing and teaches nothing. If the exercise is going to mean anything, print the bounce through something that reacts to level, and set that level before you press record rather than after.
+
+## Levels, tape type and Dolby
+
+Cassette decks are calibrated in VU, which reads an average rather than a peak, so the meter sitting at 0 with occasional excursions above is normal and is where the saturation you came for happens. Recording timidly gets you hiss with none of the benefit.
+
+Type I tape is ferric and darker. Type II is chrome or cobalt and extends further up, and a deck with a tape selector needs to be told which one is in it, because the bias and equalization differ. Dolby B cuts hiss by around 10 dB and Dolby C by around 20, by boosting quiet high frequencies on the way in and cutting them on the way out. Play a Dolby-encoded tape with the decoder off and it comes back brighter and thinner than it went on, which is a legitimate effect as long as you know that is what you did.
 
 ## Where it costs you
 

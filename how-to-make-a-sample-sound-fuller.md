@@ -3,7 +3,7 @@
 > Why chopped and filtered samples sound thin, and how to make them fuller: clean first, add harmonics, compress for sustain, add a bass layer, width and room.
 
 Source: https://gazillionindustries.com/how-to-make-a-sample-sound-fuller/  
-Published 2026-09-13, updated 2026-09-24. By Gazillion Industries, who make BEEFY.
+Published 2026-09-13, updated 2026-10-28. By Gazillion Industries, who make BEEFY.
 
 ---
 
@@ -287,7 +287,7 @@ Start at 3:1, threshold set for 6 to 8 dB of gain reduction on the loudest hits,
 
 ### Should I make the sample fuller or layer another sample?
 
-Process first, because a second sample brings a second key, a second room and a second noise floor with it. If the first one still will not carry the section after EQ, saturation, compression and a support layer, the problem is the source, and another chop of the same record in the same key will usually beat any amount of processing on the wrong one. [How to flip a sample](https://gazillionindustries.com/how-to-flip-a-sample/) covers picking better.
+Process first, because a second sample brings a second key, a second room and a second noise floor with it. If the first one still will not carry the section after EQ, saturation, compression and a support layer, the problem is the source, and another chop of the same record in the same key will usually beat any amount of processing on the wrong one. [How to flip a sample](https://gazillionindustries.com/how-to-chop-samples/) covers picking better.
 
 ### Why does my sample sound harsh after saturating it?
 

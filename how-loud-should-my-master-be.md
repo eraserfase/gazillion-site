@@ -1,9 +1,9 @@
 # How loud should a master be
 
-> How loud to master a beat or rap song: what LUFS and true peak measure, what Spotify does to loud masters, and how to pick a level with reference tracks.
+> The LUFS and true-peak numbers for Spotify, Apple and SoundCloud, what streaming does to a loud master, and how to pick a level with references.
 
 Source: https://gazillionindustries.com/how-loud-should-my-master-be/  
-Published 2026-09-13, updated 2026-09-25. By Gazillion Industries, who make BEEFY.
+Published 2026-09-13, updated 2026-10-28. By Gazillion Industries, who make BEEFY.
 
 ---
 
@@ -26,6 +26,8 @@ There is no single right number. Streaming services normalize playback; Spotify 
 - **The math**: a -7 LUFS master gets turned down 7 dB at Normal, 4 dB at Loud
 
 - **Free meter**: ffmpeg -i master.wav -af ebur128=peak=true -f null -
+
+**The BEEFY demo** — drums before and after, with sound. [BEEFY, for Mac and Windows](https://gazillionindustries.com/beefy.html)
 
 **SOFT CLIP** as the out stage, BEEF at 62.
 

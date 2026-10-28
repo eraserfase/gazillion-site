@@ -1,9 +1,9 @@
 # Parallel saturation
 
-> How to set up parallel saturation on a return track, how hard to drive it, how to filter the saturated copy, and how it compares with parallel compression.
+> How to set up parallel saturation on a return, how hard to drive it, how to filter the copy, and how it compares with parallel compression. With audio.
 
 Source: https://gazillionindustries.com/parallel-saturation/  
-Published 2026-09-13, updated 2026-09-24. By Gazillion Industries, who make BEEFY.
+Published 2026-09-13, updated 2026-10-28. By Gazillion Industries, who make BEEFY.
 
 ---
 
@@ -24,6 +24,8 @@ Parallel saturation means blending a heavily saturated copy of a sound under the
 - **Latency**: make sure delay compensation is on
 
 - **Best on**: drums, bass, vocals, full buses
+
+**The BEEFY demo** — drums before and after, with sound. [BEEFY, for Mac and Windows](https://gazillionindustries.com/beefy.html)
 
 **BEEF at 8.** The reference you A/B against.
 

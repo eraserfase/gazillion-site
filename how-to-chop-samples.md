@@ -1,9 +1,9 @@
 # How to chop samples
 
-> How to chop samples: find the tempo and key, slice at transients or chord changes, kill the clicks, map the pieces to pads and play a new arrangement.
+> Find the tempo and key, cut at transients, kill the clicks, map to pads and play a new arrangement. Exact slice lengths, and the compressor that glues the chops.
 
 Source: https://gazillionindustries.com/how-to-chop-samples/  
-Published 2026-09-20, updated 2026-09-24. By Gazillion Industries, who make DRUGS.
+Published 2026-09-20, updated 2026-10-28. By Gazillion Industries, who make DRUGS.
 
 ---
 
@@ -28,6 +28,8 @@ To chop a sample, set your session to the sample's tempo, cut it at musical poin
 - **Length**: a sixteenth at 90 BPM is 166.67 ms — 7,350 samples at 44.1 kHz
 
 - **Check**: invert your rebuild against the source loop; silence means you looped it
+
+**The DRUGS demo** — with sound. [FREE DRUGS](https://gazillionindustries.com/drugs.html)
 
 **DOSE 95, MIX 45.** Parallel without a send.
 
@@ -108,6 +110,18 @@ If every edit ticks no matter where you put it, check the file for DC offset. A 
 Chopped pieces from one record share a room, a tape and a mastering chain, so they already belong together. What breaks the illusion is dynamics: one chop lands 4 dB louder than its neighbor because that is where the horn player leaned in. Ride the levels by hand, then put the whole chop bus through one compressor so they move together, which is the same trick as [glue compression](https://gazillionindustries.com/glue-compression/) on a drum group.
 
 If the chops sound too clean next to your drums, take them the other way: a filter, some crush, a little noise. [How to make a sample sound old](https://gazillionindustries.com/how-to-make-a-sample-sound-old/) has the settings.
+
+## Five ways to flip a sample
+
+**Pitch it until it becomes someone else.** A soul vocal up five semitones stops being a man in 1972 and becomes an instrument you have never heard. Down four and the same phrase turns into a threat. Pitching also moves the formants, which is why extreme moves sound like a different singer rather than the same one transposed; [formant shifting](https://gazillionindustries.com/formant-shifting/) is the control that separates those two things.
+
+**Chop it and change the order.** Take the four bars apart and play them back in a sequence the band never played, so the chord you liked lands where the drums hit rather than where the arranger put it. How to chop samples covers the mechanics.
+
+**Strip it to one element.** Low-pass until only the bass line survives, or high-pass until you have nothing but the ride and the room, then build the rest yourself. What you keep is a groove and a texture, and nobody can name the record from a filtered ride cymbal.
+
+**Replay it.** Learn the four notes and play them on whatever is in the room. You keep the idea, lose the clearance problem, and get to change the voicing while you are there. Sample your own replay and treat that as the source.
+
+**Change the context.** A ballad at 72 bpm becomes a different animal under drums at 144, because the ear hears the same phrase at half time. Slow it, swing it, or put a break under it that argues with the original feel.
 
 ## Chopping in each DAW
 

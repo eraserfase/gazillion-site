@@ -3,7 +3,7 @@
 > How to mix drums in order: balance by fader first, then EQ, compression, saturation and one bus compressor, with the checks that catch a mix that will not travel.
 
 Source: https://gazillionindustries.com/how-to-mix-drums/  
-Published 2026-09-20, updated 2026-09-24. By Gazillion Industries, who make BEEFY.
+Published 2026-09-20, updated 2026-10-28. By Gazillion Industries, who make BEEFY.
 
 ---
 
@@ -239,7 +239,7 @@ Saturation for weight, a peak catcher for safety, and in that order. Saturation 
 
 ### Can I mix drums with one plugin?
 
-For a bus, close to it. A single compressor doing 2 dB, or a saturator doing the weight, will get a balanced kit most of the way. It will not rescue an unbalanced one, and no plugin count ever has. See [one-knob compressors](https://gazillionindustries.com/one-knob-compressor/) for the argument in full.
+For a bus, close to it. A single compressor doing 2 dB, or a saturator doing the weight, will get a balanced kit most of the way. It will not rescue an unbalanced one, and no plugin count ever has. See [one-knob compressors](https://gazillionindustries.com/drugs.html) for the argument in full.
 
 ### Why do my drums sound good in solo and weak in the mix?
 

@@ -3,7 +3,7 @@
 > The difference between a limiter and a compressor, where the line sits, which order they go in, and how much of each is too much on a mix or a master.
 
 Source: https://gazillionindustries.com/limiter-vs-compressor/  
-Published 2026-09-20, updated 2026-09-24. By Gazillion Industries, who make DRUGS.
+Published 2026-09-20, updated 2026-10-28. By Gazillion Industries, who make DRUGS.
 
 ---
 
@@ -373,7 +373,7 @@ No. It makes room for you to make it louder. The limiter removes the peaks that 
 
 DRUGS is our free bus compressor for drums, and it carries both halves of this article. **DOSE** is the compression: it moves the transfer curve, the knee, the attack and the release together, making a drum bus denser rather than louder. **GAIN** adds 5 dB after the compressor and before the ceiling. **LIMIT** is a zero-latency soft ceiling at −0.3 dBFS on the output, with a clip indicator; it attenuates only, and it is transparent below about −0.9 dBFS. Both are on when it opens.
 
-In the order this page describes, it is the early stage. Put it on the drum bus, turn DOSE up until the room comes up under the hits, and set your own true-peak ceiling at the end of the chain, where the decision belongs. The soft ceiling on its own output is there to keep the bus itself in bounds on the way to the mix, which is a smaller job than the last plug-in on a master. [One-knob compressors](https://gazillionindustries.com/one-knob-compressor/) covers what a single macro gives up in exchange for that speed.
+In the order this page describes, it is the early stage. Put it on the drum bus, turn DOSE up until the room comes up under the hits, and set your own true-peak ceiling at the end of the chain, where the decision belongs. The soft ceiling on its own output is there to keep the bus itself in bounds on the way to the mix, which is a smaller job than the last plug-in on a master. [One-knob compressors](https://gazillionindustries.com/drugs.html) covers what a single macro gives up in exchange for that speed.
 
 Three details from that panel matter for this page. MIX is dry/wet with zero latency anywhere in the path, so the dry copy stays sample-aligned with the wet one and a parallel blend does not comb-filter at any setting. Release is adaptive with no user control: a transient gets the shorter time, so gain recovers inside the gap where pump would be audible, and sustained material gets the longer one. Auto-makeup is applied after the gain cell, so setting level cannot disturb the dynamics.
 

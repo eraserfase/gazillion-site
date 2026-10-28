@@ -3,7 +3,7 @@
 > The four-step free plugin chain behind boom bap drums: a sampler, swing, a filter and a drum bus compressor, in order, with settings for each.
 
 Source: https://gazillionindustries.com/free-boom-bap-plugins/  
-Published 2026-10-12, updated 2026-10-12. By Gazillion Industries, who make DRUGS.
+Published 2026-10-12, updated 2026-10-28. By Gazillion Industries, who make DRUGS.
 
 ---
 
@@ -43,7 +43,7 @@ Swing delays every second sixteenth note. Start around 55 to 60 percent on the h
 
 ### 3. A filter for the dust
 
-A stock EQ does it. Roll the lows off below roughly 60 Hz and the highs off above 8 to 10 kHz, and the drums move back toward the sound of a sample. The [dusty drums guide](https://gazillionindustries.com/how-to-make-drums-sound-dusty/) goes further.
+A stock EQ does it. Roll the lows off below roughly 60 Hz and the highs off above 8 to 10 kHz, and the drums move back toward the sound of a sample. The [dusty drums guide](https://gazillionindustries.com/how-to-make-a-sample-sound-old/) goes further.
 
 ### 4. A drum bus compressor for the squash
 
@@ -91,7 +91,7 @@ From the people who make them. DRUGS downloads from its page here. Avoid sites o
 
 ### What are the best free boom bap drum kits?
 
-We make plugins, not kits, so we will not rank them. The route that sounds most like the records is chopping your own breaks, and the [Amen break](https://gazillionindustries.com/amen-break/) is the most famous starting point there is.
+We make plugins, not kits, so we will not rank them. The route that sounds most like the records is chopping your own breaks, and the [Amen break](https://gazillionindustries.com/how-to-chop-a-drum-break/) is the most famous starting point there is.
 
 ### Do I need a compressor for boom bap drums?
 

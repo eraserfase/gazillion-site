@@ -1,9 +1,9 @@
 # What is a drum bus, and why put things on it?
 
-> A drum bus is one channel every drum track is routed into. How to build one in any DAW, what belongs on it, what does not, and why glue happens there.
+> A drum bus is one channel every drum track is routed into. How to build one in FL Studio, Ableton and Logic, what belongs on it, and why glue happens there.
 
 Source: https://gazillionindustries.com/what-is-a-drum-bus/  
-Published 2026-09-24, updated 2026-09-24. By Gazillion Industries, who make DRUGS.
+Published 2026-09-24, updated 2026-10-28. By Gazillion Industries, who make DRUGS.
 
 ---
 
@@ -26,6 +26,8 @@ A drum bus is a single channel that every drum is routed into before it reaches 
 - **Order**: balance the drums, then route, then process
 
 - **Test**: match the level and bypass the bus: louder is not the same as better
+
+**The DRUGS demo** — with sound. [FREE DRUGS](https://gazillionindustries.com/drugs.html)
 
 ## What a bus actually is
 

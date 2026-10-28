@@ -3,7 +3,7 @@
 > How to pitch a sample: find its key, choose between repitching and pitch shifting, transpose and fine-tune, pitch individual chops, and automate pitch for movement.
 
 Source: https://gazillionindustries.com/how-to-pitch-a-sample/  
-Published 2026-09-14, updated 2026-09-24. By Gazillion Industries, who make SKRUU.
+Published 2026-09-14, updated 2026-10-28. By Gazillion Industries, who make SKRUU.
 
 ---
 
@@ -131,7 +131,7 @@ One source loop, rendered offline through the same engine the plug-in runs, no o
 
 Chopped samples don't have to stay in their original key. Pitch each chop to fit the chord under it and a single phrase becomes a melody. Keep an eye on the tone: chops pitched far up get thin and chipmunky, and chops pitched far down get muddy and slow. If a chop thins out, see [how to make a sample sound fuller](https://gazillionindustries.com/how-to-make-a-sample-sound-fuller/).
 
-The intervals do the arranging for you once you think in them. Move a chop up 3 semitones and a minor triad becomes its relative major; move it down 5 and you have the same chord a fourth below, which is the oldest turnaround in the book. Two chops a semitone apart, played back to back, read as tension and release even when the source played neither. You are writing with somebody else's chord, and the transpose field is the pen. More on the cutting in [how to chop samples](https://gazillionindustries.com/how-to-chop-samples/) and [how to flip a sample](https://gazillionindustries.com/how-to-flip-a-sample/).
+The intervals do the arranging for you once you think in them. Move a chop up 3 semitones and a minor triad becomes its relative major; move it down 5 and you have the same chord a fourth below, which is the oldest turnaround in the book. Two chops a semitone apart, played back to back, read as tension and release even when the source played neither. You are writing with somebody else's chord, and the transpose field is the pen. More on the cutting in [how to chop samples](https://gazillionindustries.com/how-to-chop-samples/) and [how to flip a sample](https://gazillionindustries.com/how-to-chop-samples/).
 
 Two cautions, both physical. Pitching up moves the low end up with everything else, so a bass note at 100 Hz sits at 133 Hz five semitones later — still audible, no longer a bass note, and now in the way of the kick. And pitching up on a speed change multiplies every frequency in the file, which pushes high content toward the ceiling of the sample rate; on a badly written shifter that shows up as a metallic fizz that was never recorded. Background in [what is aliasing in audio](https://gazillionindustries.com/what-is-aliasing-in-audio/).
 

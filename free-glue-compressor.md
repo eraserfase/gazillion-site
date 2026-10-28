@@ -3,7 +3,7 @@
 > What makes a compressor glue, why the Glue Compressor is missing from FL Studio and Live Intro, the free plugins that fill the slot, and how to set one.
 
 Source: https://gazillionindustries.com/free-glue-compressor/  
-Published 2026-10-12, updated 2026-10-12. By Gazillion Industries, who make DRUGS.
+Published 2026-10-12, updated 2026-10-28. By Gazillion Industries, who make DRUGS.
 
 ---
 
@@ -88,6 +88,14 @@ With DRUGS, steps two through seven are one knob. Insert it on the group, raise 
 The fix is the same in both: a third-party plugin on a bus. In FL Studio, route the drum channels to one mixer track and load the compressor there. In Live Intro, put the drum tracks in a Group and load the plugin on the Group track. DRUGS installs as VST3 on Windows and as VST3 and AU on the Mac, and runs in FL Studio and Ableton Live among others, so either path works.
 
 If you are in full Live and already have the stock device, the [Ableton drum bus guide](https://gazillionindustries.com/drum-bus-compression-in-ableton-live/) covers its settings. The reason to add another compressor anyway is speed on a drum bus. The stock device asks for five decisions where DRUGS asks for one.
+
+## On the mix bus
+
+On the mix bus the job changes from shaping drums to holding a whole record together without anyone noticing. That calls for a compressor that adds little of its own sound at low gain reduction, an attack slow enough to let transients through, and a release that follows the song.
+
+Tokyo Dawn's free Kotelnikov is built for that seat. Its maker describes stereo linking options optimized for the stereo bus, separate release controls for peak and RMS content, and a sidechain high-pass. It does not try to emulate any device. Klanghelm's free DC1A, which its maker calls an "effortless character comp," is the option if you want the mix bus to sound like something.
+
+DRUGS is voiced for drums, and that is what we sell it for. Some people put it on the master anyway; one review on its page reads "need this in my ableton master chain." Try it there if you like what it does to the drums, but do the drum bus first.
 
 ## What glue costs
 

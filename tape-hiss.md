@@ -3,7 +3,7 @@
 > What tape hiss is and where it comes from, how to reduce it without artifacts, why cassettes make static noise, and how to add hiss on purpose.
 
 Source: https://gazillionindustries.com/tape-hiss/  
-Published 2026-09-14, updated 2026-09-14. By Gazillion Industries, who make TRIPLE OG.
+Published 2026-09-14, updated 2026-10-28. By Gazillion Industries, who make TRIPLE OG.
 
 ---
 
@@ -167,7 +167,7 @@ The same loop with the noise alone, then with the noise as one symptom among sev
 
 The same eleven seconds each time, rendered offline through [TRIPLE OG](https://gazillionindustries.com/tripleog.html) at the settings shown. No other processing, no master bus, no edits.
 
-The hiss figure in the second file is *lower* than in the first, and the second still sounds older. Hiss carries the idea of age, and it stops being convincing the moment it is doing all the work. [Making a sample sound old](https://gazillionindustries.com/how-to-make-a-sample-sound-old/) and [dusty drums](https://gazillionindustries.com/how-to-make-drums-sound-dusty/) work the same way.
+The hiss figure in the second file is *lower* than in the first, and the second still sounds older. Hiss carries the idea of age, and it stops being convincing the moment it is doing all the work. [Making a sample sound old](https://gazillionindustries.com/how-to-make-a-sample-sound-old/) and [dusty drums](https://gazillionindustries.com/how-to-make-a-sample-sound-old/) work the same way.
 
 ## What a hiss bed costs
 

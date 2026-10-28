@@ -3,7 +3,7 @@
 > How to make boom bap drums: tempo, sounds, a starting drum pattern, swing, processing the kit as one on a drum bus, and how to structure a boom bap beat.
 
 Source: https://gazillionindustries.com/how-to-make-boom-bap-drums/  
-Published 2026-09-13, updated 2026-09-24. By Gazillion Industries, who make BEEFY.
+Published 2026-09-13, updated 2026-10-28. By Gazillion Industries, who make BEEFY.
 
 ---
 
@@ -199,7 +199,7 @@ Two passes of the same eleven seconds, so you can hear noise and drift working s
 
 - **Age 35, hiss 45, drive 30, wow 40** — a worn deck — speed 0.951 to 1.059 — https://gazillionindustries.com/tripleog/tog-aged.m4a
 
-Keep the noise floor honest. Hiss that reads at −45 dBFS under a kit peaking at −1 dBFS is 44 dB down and sits underneath everything; the same hiss after a bus compressor pulling 9 dB on the hits comes up with the rest of the floor and can end up nearer −36. Add texture after the compressor if you want to keep control of it. [How to make drums sound dusty](https://gazillionindustries.com/how-to-make-drums-sound-dusty/), [tape hiss](https://gazillionindustries.com/tape-hiss/) and [wow and flutter](https://gazillionindustries.com/wow-and-flutter/) take each strand separately.
+Keep the noise floor honest. Hiss that reads at −45 dBFS under a kit peaking at −1 dBFS is 44 dB down and sits underneath everything; the same hiss after a bus compressor pulling 9 dB on the hits comes up with the rest of the floor and can end up nearer −36. Add texture after the compressor if you want to keep control of it. [How to make drums sound dusty](https://gazillionindustries.com/how-to-make-a-sample-sound-old/), [tape hiss](https://gazillionindustries.com/tape-hiss/) and [wow and flutter](https://gazillionindustries.com/wow-and-flutter/) take each strand separately.
 
 [TRIPLE OG](https://gazillionindustries.com/tripleog.html) is our cassette tape simulation, $39, with TONE, DRIVE, AGE from 0 to 60 years, HISS and WOW FLUT, plus a transport of SLAM, SCRUB and CATCH.
 
@@ -263,7 +263,7 @@ Quantize the kick and the backbeat so the spine holds, then leave the hats, ghos
 
 ### Do I need to sample vinyl to make boom bap?
 
-No. The record supplies bandwidth limiting, a noise floor and slight speed drift, and all three can be added to a clean sample deliberately, with more control than a turntable gives you. What a record also supplies is a performance played by people in a room, and that part is worth going looking for. [How to flip a sample](https://gazillionindustries.com/how-to-flip-a-sample/) and [how to chop a drum break](https://gazillionindustries.com/how-to-chop-a-drum-break/) cover the sampling side.
+No. The record supplies bandwidth limiting, a noise floor and slight speed drift, and all three can be added to a clean sample deliberately, with more control than a turntable gives you. What a record also supplies is a performance played by people in a room, and that part is worth going looking for. [How to flip a sample](https://gazillionindustries.com/how-to-chop-samples/) and [how to chop a drum break](https://gazillionindustries.com/how-to-chop-a-drum-break/) cover the sampling side.
 
 ### Why do my boom bap drums sound weak?
 

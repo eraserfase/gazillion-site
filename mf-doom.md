@@ -3,7 +3,7 @@
 > Who MF DOOM was and how he actually made beats: the birth date everyone had wrong, the loop-drums-808 method in his own words, the machines, and the imposter shows.
 
 Source: https://gazillionindustries.com/mf-doom/  
-Published 2026-09-20, updated 2026-09-24. By Gazillion Industries.
+Published 2026-09-20, updated 2026-10-28. By Gazillion Industries.
 
 ---
 
@@ -43,7 +43,7 @@ The clearest statement he gave about his production method came at a Red Bull Mu
 
 That is a complete production philosophy in four sentences, and it is the opposite of the chop-everything-into-fragments approach of his most famous collaborator. DOOM found a loop that already worked and stayed out of its way.
 
-Operation: Doomsday itself was made on borrowed equipment. The DJ Stretch Armstrong has described it being cut in about three weeks in his apartment, on his sampler, off his records. Later he worked on an MPC-2000XL and a Roland VS hardware multitracker, and he came to the SP-303 the same way a lot of people did in the early 2000s: through Madlib and J Dilla.
+Operation: Doomsday itself was made on borrowed equipment. The DJ Stretch Armstrong has described it being cut in about three weeks in his apartment, on his sampler, off his records. Later he worked on an MPC-2000XL and a Roland VS hardware multitracker, and he came to the [SP-303](https://gazillionindustries.com/sp-303/) the same way a lot of people did in the early 2000s: through Madlib and J Dilla.
 
 [Gazillion Industries](https://gazillionindustries.com/) makes plugins for people working this way: a loop, some drums, and one decision about how much to interfere.
 
@@ -91,7 +91,7 @@ We make [DRUGS](https://gazillionindustries.com/drugs.html). DOSE 95 at MIX 45 â
 
 ## What to take from it
 
-Two things, and neither requires a mask. Find loops that are already finished and resist improving them, which is harder than it sounds and is the whole discipline of his beats. And treat arrangement as a separate craft from writing: he wrote lines in isolation and assembled them later, by feel, for maximum hits per bar. Our guide to [flipping a sample](https://gazillionindustries.com/how-to-flip-a-sample/) is mostly about the opposite instinct, which is exactly why it is worth reading against this.
+Two things, and neither requires a mask. Find loops that are already finished and resist improving them, which is harder than it sounds and is the whole discipline of his beats. And treat arrangement as a separate craft from writing: he wrote lines in isolation and assembled them later, by feel, for maximum hits per bar. Our guide to [flipping a sample](https://gazillionindustries.com/how-to-chop-samples/) is mostly about the opposite instinct, which is exactly why it is worth reading against this.
 
 A group dropped, a brother gone, a decade unaccounted for, and then a catalog built mostly out of records other people had already thrown away.
 

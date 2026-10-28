@@ -84,13 +84,15 @@ become a gazillionaire
 
 free · or name your own price
 
+## The vinyl sim sound
+
+Vinyl sim is shorthand for a particular kind of squash — dense, slightly crushed drums with the room pushed up under the hits, the way a break sounds once it has been through a sampler. DRUGS goes at that sound directly, on the drum bus, with one knob and no setup. If you are searching for a vinyl sim plugin for drums, this is the free one.
+
+[what the vinyl sim sound is](https://gazillionindustries.com/vinyl-sim-plugin/)
+
 ## What DRUGS is
 
 DRUGS is a bus compressor with one macro control, called DOSE. Turning DOSE up makes a drum bus denser rather than louder — peak level barely moves across the whole range of the knob. It reshapes a break instead of levelling it, and brings the room up underneath the hits.
-
-## The vinyl sim sound
-
-Vinyl sim is shorthand for a particular kind of squash — dense, slightly crushed drums with the room pushed up under the hits, the way a break sounds once it has been through a sampler. DRUGS goes at that sound directly, on the drum bus, with one knob and no setup.
 
 ## How it works
 

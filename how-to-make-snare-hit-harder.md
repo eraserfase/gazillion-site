@@ -3,7 +3,7 @@
 > How to make a snare hit harder: pick and tune the sample, layer for snap, protect the transient, saturate it, soft clip the peaks, and give it a short room.
 
 Source: https://gazillionindustries.com/how-to-make-snare-hit-harder/  
-Published 2026-09-13, updated 2026-09-24. By Gazillion Industries, who make BEEFY.
+Published 2026-09-13, updated 2026-10-28. By Gazillion Industries, who make BEEFY.
 
 ---
 

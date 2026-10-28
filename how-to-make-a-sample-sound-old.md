@@ -3,7 +3,7 @@
 > How to make a sample sound old: narrow its frequency range, add warmth and grain, slow pitch wobble, a quiet noise bed, narrower stereo and a small dark room.
 
 Source: https://gazillionindustries.com/how-to-make-a-sample-sound-old/  
-Published 2026-09-14, updated 2026-09-24. By Gazillion Industries, who make F(ilter)12.
+Published 2026-09-14, updated 2026-10-28. By Gazillion Industries, who make F(ilter)12.
 
 ---
 
@@ -187,9 +187,15 @@ The cheapest check is last. Mute the aged version, play the clean one against th
 
 Mud is the common one and the hardest to hear on your own record, because it arrives gradually and sounds warm on the way in. The test is the mix rather than the sample: if everything else has to get out of the way for the aged loop to be audible, the loop has spread rather than sat down. [Why is my mix muddy](https://gazillionindustries.com/why-is-my-mix-muddy/) has the frequency map.
 
-Transient loss is the other one. Aging a full loop ages the drums in it, and a hit that has been low-passed, saturated and crushed has a soft front edge — vintage on its own, absent under a modern kick and snare. Either age the melodic parts and leave the drums alone, or age everything and accept that the kit now needs replacing rather than reinforcing. [How to make drums sound dusty](https://gazillionindustries.com/how-to-make-drums-sound-dusty/) takes the second road on purpose, and [what is a transient](https://gazillionindustries.com/what-is-a-transient/) explains what you spent.
+Transient loss is the other one. Aging a full loop ages the drums in it, and a hit that has been low-passed, saturated and crushed has a soft front edge — vintage on its own, absent under a modern kick and snare. Either age the melodic parts and leave the drums alone, or age everything and accept that the kit now needs replacing rather than reinforcing. How to make drums sound dusty takes the second road on purpose, and [what is a transient](https://gazillionindustries.com/what-is-a-transient/) explains what you spent.
 
 One more only shows up after you deliver. A quiet noise bed is the part of a file most likely to change when it is encoded for streaming or a messaging app, so encode a bounce at a low bitrate and listen to that before deciding the bed is doing its job.
+
+## Timing is half of it
+
+Grid-perfect drums announce themselves faster than any amount of top end. A human drummer varies by tens of milliseconds, and the variation is not random: hats rush slightly, snares sit back, kicks land early when the player is pushing. Move a few hits and vary the velocities by 10 to 15 percent and the kit starts to sound like it has a person behind it.
+
+The same applies to a sampled break, where the swing was already there and got quantized out of it. If you chopped it yourself, see [how to chop a drum break](https://gazillionindustries.com/how-to-chop-a-drum-break/) for keeping the feel through the slicing.
 
 ## What it costs
 

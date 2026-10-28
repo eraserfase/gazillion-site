@@ -3,7 +3,7 @@
 > What a bus compressor does, which free one suits the drum bus, the mix bus and the master, and the attack and release settings for each.
 
 Source: https://gazillionindustries.com/free-bus-compressor/  
-Published 2026-10-12, updated 2026-10-12. By Gazillion Industries, who make DRUGS.
+Published 2026-10-12, updated 2026-10-28. By Gazillion Industries, who make DRUGS.
 
 ---
 

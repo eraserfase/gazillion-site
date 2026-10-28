@@ -3,7 +3,7 @@
 > What a transient is, why the ear identifies instruments by their attack, what every dynamics processor does to them, and how to hear what you are doing.
 
 Source: https://gazillionindustries.com/what-is-a-transient/  
-Published 2026-09-20, updated 2026-09-24. By Gazillion Industries, who make BEEFY.
+Published 2026-09-20, updated 2026-10-28. By Gazillion Industries, who make BEEFY.
 
 ---
 

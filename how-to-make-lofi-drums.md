@@ -3,7 +3,7 @@
 > How to make lofi drums that sound dusty and played: soft hits, heavy swing, a low-pass, a little bit crush, saturation, bus compression and a dark room.
 
 Source: https://gazillionindustries.com/how-to-make-lofi-drums/  
-Published 2026-09-14, updated 2026-09-24. By Gazillion Industries, who make F(ilter)12.
+Published 2026-09-14, updated 2026-10-28. By Gazillion Industries, who make F(ilter)12.
 
 ---
 
@@ -41,7 +41,7 @@ Lofi drums are quiet drums. Pick a kick with a soft, round thump instead of a cl
 
 Soft has a measurable side, and it saves you an hour of filtering. A hat that reads as sizzle carries most of its energy above about 6 kHz and rings for 150 ms or more. A hat that reads as shuffle carries its energy between roughly 2 and 6 kHz and is gone inside 40 ms. A clicky kick has a spike somewhere around 2 to 4 kHz sitting on top of the 50 to 100 Hz body; a thumpy kick has the body and almost nothing on top. Audition five kicks and keep the one that already lacks the spike. Filter a clicky kick and what you get is a dull click.
 
-This is why a loop off a record beats a folder of one-shots for the first pass. The loop arrives with the room, the bleed between mics and the tape already printed into it, and those three are the slow part to fake. You are buying a finished decision about how the kit sat in a space. Chop it, keep what you need, and treat the whole bar as one sound rather than four instruments — there is a longer walk through that in [how to chop a drum break](https://gazillionindustries.com/how-to-chop-a-drum-break/), and a famous worked case in [the amen break](https://gazillionindustries.com/amen-break/).
+This is why a loop off a record beats a folder of one-shots for the first pass. The loop arrives with the room, the bleed between mics and the tape already printed into it, and those three are the slow part to fake. You are buying a finished decision about how the kit sat in a space. Chop it, keep what you need, and treat the whole bar as one sound rather than four instruments — there is a longer walk through that in [how to chop a drum break](https://gazillionindustries.com/how-to-chop-a-drum-break/), and a famous worked case in [the amen break](https://gazillionindustries.com/how-to-chop-a-drum-break/).
 
 ## Swing it and loosen it
 

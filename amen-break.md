@@ -3,7 +3,7 @@
 > Where the Amen break came from, why this break and not another, the 1986 compilation that pitched it down, and the fact that nobody in the band was ever paid.
 
 Source: https://gazillionindustries.com/amen-break/  
-Published 2026-09-20, updated 2026-09-24. By Gazillion Industries, who make DRUGS.
+Published 2026-09-20, updated 2026-10-28. By Gazillion Industries, who make DRUGS.
 
 ---
 
@@ -71,7 +71,7 @@ A speed change moving pitch, tempo and length together, so the paragraph above h
 
 In hip hop it was mostly looped and slowed. In jungle and drum and bass it was taken apart: sliced into individual hits, re-sequenced into patterns Coleman never played, time-stretched to tempos the recording was never near, and layered against itself. That second treatment is the reason the break outlived its own genre twice. A loop is a borrowing; a chopped break is an instrument.
 
-If you want to work that way, [how to chop a drum break](https://gazillionindustries.com/how-to-chop-a-drum-break/) covers the method and [how to make drums sound dusty](https://gazillionindustries.com/how-to-make-drums-sound-dusty/) covers getting a modern recording into the same territory.
+If you want to work that way, [how to chop a drum break](https://gazillionindustries.com/how-to-chop-a-drum-break/) covers the method and [how to make drums sound dusty](https://gazillionindustries.com/how-to-make-a-sample-sound-old/) covers getting a modern recording into the same territory.
 
 **DOSE 12.** The line along the bottom is gain reduction.
 

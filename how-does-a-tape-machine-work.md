@@ -3,7 +3,7 @@
 > How a tape machine works: the transport, erase, record and playback heads, bias, tape speed, and why saturation, head bump, hiss and wobble give tape its sound.
 
 Source: https://gazillionindustries.com/how-does-a-tape-machine-work/  
-Published 2026-09-14, updated 2026-09-14. By Gazillion Industries, who make TRIPLE OG.
+Published 2026-09-14, updated 2026-10-28. By Gazillion Industries, who make TRIPLE OG.
 
 ---
 
@@ -157,7 +157,7 @@ You can hear every mechanism above inside an hour, without a machine, using what
 
 - Replace that with a steady 440 Hz tone and listen for the pitch to move.
 
-Every major DAW ships the tools for this. Live has Spectrum; Logic Pro has an analyzer built into Channel EQ; FL Studio shows one in Fruity Parametric EQ 2. Any tuner will make step eight visual instead of a judgment call. If you want the per-DAW setup written out, see [tape plugins for Ableton Live](https://gazillionindustries.com/tape-plugins-for-ableton-live/), [for Logic Pro](https://gazillionindustries.com/tape-plugins-for-logic-pro/) and [for FL Studio](https://gazillionindustries.com/tape-plugins-for-fl-studio/). For the real version with a real deck, [how to record to cassette](https://gazillionindustries.com/how-to-record-to-cassette/) is the procedure.
+Every major DAW ships the tools for this. Live has Spectrum; Logic Pro has an analyzer built into Channel EQ; FL Studio shows one in Fruity Parametric EQ 2. Any tuner will make step eight visual instead of a judgment call. If you want the per-DAW setup written out, see [tape plugins for Ableton Live](https://gazillionindustries.com/tape-plugins-for-ableton-live/), [for Logic Pro](https://gazillionindustries.com/tape-plugins-for-logic-pro/) and [for FL Studio](https://gazillionindustries.com/tape-plugins-for-fl-studio/). For the real version with a real deck, [how to record to cassette](https://gazillionindustries.com/four-track-recording/) is the procedure.
 
 ## Where it costs you
 

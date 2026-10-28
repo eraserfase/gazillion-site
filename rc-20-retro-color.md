@@ -1,9 +1,9 @@
 # RC-20 Retro Color
 
-> What RC-20 Retro Color actually does: the six modules in order, why it is a series chain, what Magnitude controls, and what reviewers say it is not built for.
+> The six RC-20 modules in order, what Magnitude controls, what reviewers say it is not built for, and the free and cheap plugins that do each job on its own.
 
 Source: https://gazillionindustries.com/rc-20-retro-color/  
-Published 2026-09-20, updated 2026-09-24. By Gazillion Industries, who make F(ilter)12.
+Published 2026-09-20, updated 2026-10-28. By Gazillion Industries, who make F(ilter)12.
 
 ---
 
@@ -24,6 +24,10 @@ RC-20 Retro Color is a character effect by XLN Audio, announced in December 2016
 - **Mix**: per module, in WOBBLE, DISTORT and DIGITAL
 
 - **Price**: $99, with documented sales around half that
+
+- **Clean** — no processing — https://gazillionindustries.com/f12/f12-clean.m4a
+
+- **Through F(ilter)12** — bit and rate reduction together. [F(ilter)12, for Mac and Windows](https://gazillionindustries.com/f12.html) — https://gazillionindustries.com/f12/f12-both.m4a
 
 **12 bit, full rate.** Quantisation without losing the top.
 

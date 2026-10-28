@@ -3,7 +3,7 @@
 > Why mixes turn muddy, where the problem lives in the spectrum, how to clear it with high-passing and wide cuts, and the causes that are not EQ problems at all.
 
 Source: https://gazillionindustries.com/why-is-my-mix-muddy/  
-Published 2026-09-20, updated 2026-09-24. By Gazillion Industries, who make BEEFY.
+Published 2026-09-20, updated 2026-10-28. By Gazillion Industries, who make BEEFY.
 
 ---
 

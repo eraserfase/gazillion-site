@@ -3,7 +3,7 @@
 > How to flip a sample instead of looping it: five moves that change what a record means, from extreme pitching to replaying the part yourself.
 
 Source: https://gazillionindustries.com/how-to-flip-a-sample/  
-Published 2026-09-20, updated 2026-09-24. By Gazillion Industries, who make DRUGS.
+Published 2026-09-20, updated 2026-10-28. By Gazillion Industries, who make DRUGS.
 
 ---
 

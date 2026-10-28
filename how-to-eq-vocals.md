@@ -3,7 +3,7 @@
 > How to EQ a vocal: the frequency map, how to sweep for resonances, why cuts are narrow and boosts are wide, and when to use a dynamic EQ instead.
 
 Source: https://gazillionindustries.com/how-to-eq-vocals/  
-Published 2026-09-20, updated 2026-09-24. By Gazillion Industries, who make BEEFY.
+Published 2026-09-20, updated 2026-10-28. By Gazillion Industries, who make BEEFY.
 
 ---
 

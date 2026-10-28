@@ -3,7 +3,7 @@
 > How to make drill 808s: set up glide, write sliding lines that stay in key, keep the 808 mono, distort it without losing the sub, and make room for the kick.
 
 Source: https://gazillionindustries.com/how-to-make-drill-808s/  
-Published 2026-09-13, updated 2026-09-24. By Gazillion Industries, who make BEEFY.
+Published 2026-09-13, updated 2026-10-28. By Gazillion Industries, who make BEEFY.
 
 ---
 

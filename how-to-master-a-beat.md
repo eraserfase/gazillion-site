@@ -3,7 +3,7 @@
 > How to master a beat: leave headroom, use gentle EQ and compression, clip the transients before the limiter, set the ceiling, and check it against a reference.
 
 Source: https://gazillionindustries.com/how-to-master-a-beat/  
-Published 2026-09-20, updated 2026-09-24. By Gazillion Industries, who make BEEFY.
+Published 2026-09-20, updated 2026-10-28. By Gazillion Industries, who make BEEFY.
 
 ---
 

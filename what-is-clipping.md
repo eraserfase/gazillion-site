@@ -3,7 +3,7 @@
 > What clipping is, the difference between hard and soft clipping, why it is the most efficient loudness tool on transients, and where it starts to do damage.
 
 Source: https://gazillionindustries.com/what-is-clipping/  
-Published 2026-09-20, updated 2026-09-25. By Gazillion Industries, who make BEEFY.
+Published 2026-09-20, updated 2026-10-28. By Gazillion Industries, who make BEEFY.
 
 ---
 

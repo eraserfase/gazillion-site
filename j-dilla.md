@@ -3,7 +3,7 @@
 > Who J Dilla was and what he actually did: Conant Gardens, the sampler settings behind Dilla time, the records, Donuts, and what the sources do not support.
 
 Source: https://gazillionindustries.com/j-dilla/  
-Published 2026-09-20, updated 2026-09-24. By Gazillion Industries.
+Published 2026-09-20, updated 2026-10-28. By Gazillion Industries.
 
 ---
 
@@ -81,7 +81,7 @@ House Shoes watched him make A Tribe Called Quest's "Get a Hold" in a pre-produc
 
 The speed came out of the listening, not the machine. He started early and spent something like the first two hours of the day playing records end to end rather than needle-dropping for breaks, which is how a producer ends up sampling Stan Getz, Herbie Hancock, Philip Glass and Hall & Oates in the same career. What arrived at the end of those twelve minutes was usually an arrangement rather than a loop.
 
-The chopping itself got a name after he died: micro-chopping, cutting a sample into fragments small enough that the original phrase disappears and re-sequencing them across the pads. He also pulled individual kicks and snares out of breaks, layered them and programmed a new pattern rather than letting a break run. If you want the method rather than the mythology, we have a guide to [chopping a drum break](https://gazillionindustries.com/how-to-chop-a-drum-break/) and one on [flipping a sample](https://gazillionindustries.com/how-to-flip-a-sample/).
+The chopping itself got a name after he died: micro-chopping, cutting a sample into fragments small enough that the original phrase disappears and re-sequencing them across the pads. He also pulled individual kicks and snares out of breaks, layered them and programmed a new pattern rather than letting a break run. If you want the method rather than the mythology, we have a guide to [chopping a drum break](https://gazillionindustries.com/how-to-chop-a-drum-break/) and one on [flipping a sample](https://gazillionindustries.com/how-to-chop-samples/).
 
 ## The mixes
 

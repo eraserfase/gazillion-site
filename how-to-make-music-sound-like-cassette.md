@@ -3,7 +3,7 @@
 > Why cassettes sound the way they do and how to recreate it: softer highs, saturation, hiss, wow and flutter, channel mismatch and dropouts, or a real deck.
 
 Source: https://gazillionindustries.com/how-to-make-music-sound-like-cassette/  
-Published 2026-09-14, updated 2026-09-14. By Gazillion Industries, who make TRIPLE OG.
+Published 2026-09-14, updated 2026-10-28. By Gazillion Industries, who make TRIPLE OG.
 
 ---
 
@@ -229,7 +229,7 @@ There is no single number. It depends on the tape, the deck and how hard the rec
 
 ### How do I make a beat sound like a cassette without plugins?
 
-Record it to a deck and back, which does every part of it in one pass. [How to record to cassette](https://gazillionindustries.com/how-to-record-to-cassette/) has the connections and the levels.
+Record it to a deck and back, which does every part of it in one pass. [How to record to cassette](https://gazillionindustries.com/four-track-recording/) has the connections and the levels.
 
 ### What is the difference between cassette and vinyl sound?
 

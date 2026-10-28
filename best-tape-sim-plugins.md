@@ -3,7 +3,7 @@
 > The six separate behaviors sold as one word, how to test a tape simulator properly, and why reel and cassette simulations are different products.
 
 Source: https://gazillionindustries.com/best-tape-sim-plugins/  
-Published 2026-09-22, updated 2026-09-24. By Gazillion Industries, who make TRIPLE OG.
+Published 2026-09-22, updated 2026-10-28. By Gazillion Industries, who make TRIPLE OG.
 
 ---
 

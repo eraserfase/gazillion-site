@@ -3,7 +3,7 @@
 > How to chop a drum break: finding an exposed break, matching tempo, slicing at transients, keeping the swing, and making the chopped kit sit in a beat.
 
 Source: https://gazillionindustries.com/how-to-chop-a-drum-break/  
-Published 2026-09-20, updated 2026-09-24. By Gazillion Industries, who make DRUGS.
+Published 2026-09-20, updated 2026-10-28. By Gazillion Industries, who make DRUGS.
 
 ---
 
@@ -32,6 +32,24 @@ To chop a drum break, isolate a section where the drums play alone, set your pro
 A break is the part of a record where the band drops out and the drummer keeps going. The canonical ones are canonical because they are clean, short and swung: the four bars from The Winstons' "Amen, Brother" in 1969, Clyde Stubblefield's bars on James Brown's "Funky Drummer" in 1970, the opening of The Honey Drippers' "Impeach the President" in 1973. What they have in common is exposure. No horns, no vocal, no bass, so the hits arrive with only the room behind them.
 
 You will not always get that. When the break has bleed from the rest of the arrangement, you have two choices: filter around it, or use the bleed as texture and build the beat so the tail of a horn stab sounds deliberate. The second one usually sounds better than the first.
+
+## Why the Amen break and not another one
+
+There are thousands of drum breaks on soul records and only one of them ended up underneath three genres. The reasons are musical and they are worth knowing if you are looking for your own.
+
+Coleman rides a ride cymbal rather than a hi-hat, which fills the space differently: a continuous wash instead of a tight pulse, so a producer can put anything on top without fighting for room. The snare has a distinctly pitched tone, so it reads as a note as well as a hit. The recording itself has a crunch to it, the sound of a small room and a hot signal path. And the four bars are not identical, so a loop of the whole thing has internal variation built in rather than repeating one bar four times.
+
+Who actually devised it is contested. Richard Lewis Spencer, the bandleader who held the copyright, said he directed it. Phil Tolotta, the other surviving member, said the solo was "pure GC". That disagreement has never been settled and probably cannot be.
+
+## What tempo the Amen break runs at
+
+Sixteen beats, and the whole thing is over in about seven seconds. That gives you the tempo without looking anything up: sixteen beats divided by the length in seconds, times sixty. Or the same sum the short way, 960 divided by the seconds.
+
+Seven seconds flat gives 960 ÷ 7.0 = 137.1 BPM. Seven and a twentieth gives 136.2. Six point nine gives 139.1, and 6.8 gives 141.2. A tenth of a second at the edge of your selection moves the answer by two BPM, which is the whole reason no two sources agree on a figure. They are not arguing about the record. They are arguing about where the four bars start and stop.
+
+Measure your own copy rather than taking anybody’s number, including that one. Drop the file in, put the loop brace on the first hit of bar one and the first hit of the bar after, read the length in seconds, divide 960 by it. What comes back is the tempo of your transfer, and your transfer is the only one your session has to agree with.
+
+Then accept that the figure is an average. Coleman is a man, not a clock, and the four bars drift inside themselves. If bar four runs 1% slow against an average of 137 BPM, that bar is 17.5 ms longer than the grid says: 1,750 ms stretched to 1,767. Seventeen milliseconds at the end of a phrase does not read as an error. It reads as a lean, it is most of why the loop breathes, and it is the first thing you destroy by warping every bar flat onto the grid.
 
 ## How to chop a drum break
 
@@ -65,7 +83,7 @@ If the break's tempo is not your tempo, decide whether you want the pitch to mov
 
 A chopped break usually arrives with too much information: hi-hat wash, a room, and whatever else bled in. Take the top down before you take the low end out, add weight with [compression](https://gazillionindustries.com/how-to-compress-drums/), and layer a modern kick under the sampled one if you need the bottom to reach a phone. Layering also lets you keep the sampled kick's attack while borrowing somebody else's sub; see [how to layer kicks](https://gazillionindustries.com/how-to-layer-kicks/).
 
-If you want it dirtier rather than bigger, [how to make drums sound dusty](https://gazillionindustries.com/how-to-make-drums-sound-dusty/) is the other direction from here.
+If you want it dirtier rather than bigger, [how to make drums sound dusty](https://gazillionindustries.com/how-to-make-a-sample-sound-old/) is the other direction from here.
 
 ## Where it costs you
 

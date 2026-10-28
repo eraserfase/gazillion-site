@@ -3,7 +3,7 @@
 > Tune the cowbell, distort the 808 until it survives a phone, clip the drum bus past clean, then band-limit, add hiss and let the speed drift.
 
 Source: https://gazillionindustries.com/how-to-make-phonk-drums/  
-Published 2026-09-24, updated 2026-09-24. By Gazillion Industries, who make TRIPLE OG.
+Published 2026-09-24, updated 2026-10-28. By Gazillion Industries, who make TRIPLE OG.
 
 ---
 
@@ -53,7 +53,7 @@ Set the drive by how much you feed the clipper rather than by an output knob. Th
 
 Kick, snare and hats go through the same treatment. Clip the drum bus until the peaks stop moving and the loop refuses to get any louder, then keep going a little. What you are listening for is the moment the hits stop reading as separate events and start reading as one flattened slab, because that is the sound of a drum take that has been copied too many times and played too loud.
 
-Much of this overlaps with [making drums sound dusty](https://gazillionindustries.com/how-to-make-drums-sound-dusty/) — band-limiting, light saturation, a raised noise floor. Phonk takes the same list and stops being polite about it. Dusty is a texture you notice on the second listen. Phonk is the first thing you hear.
+Much of this overlaps with [making drums sound dusty](https://gazillionindustries.com/how-to-make-a-sample-sound-old/) — band-limiting, light saturation, a raised noise floor. Phonk takes the same list and stops being polite about it. Dusty is a texture you notice on the second listen. Phonk is the first thing you hear.
 
 ## How to make phonk drums sound like a cassette dub
 

@@ -1,9 +1,9 @@
 # How to mix the kick and the 808
 
-> How to mix a kick and an 808 so they stop fighting: who owns the sub, tuning, sidechaining the 808 to the kick, phase, and using the 808 as the kick.
+> Who owns the sub, tuning them together, sidechaining the 808 to the kick, phase, and when to use the 808 as the kick.
 
 Source: https://gazillionindustries.com/how-to-mix-kick-and-808/  
-Published 2026-09-13, updated 2026-09-24. By Gazillion Industries, who make BEEFY.
+Published 2026-09-13, updated 2026-10-28. By Gazillion Industries, who make BEEFY.
 
 ---
 
@@ -28,6 +28,8 @@ To mix a kick and an 808, give each one its own job and its own moment. Tune the
 - **Headroom**: two equal hits in phase sum to +6.02 dB
 
 - **Order**: tune, duck, saturate, then judge on the bus
+
+**The BEEFY demo** — drums before and after, with sound. [BEEFY, for Mac and Windows](https://gazillionindustries.com/beefy.html)
 
 **LIMIT** instead, everything else identical.
 

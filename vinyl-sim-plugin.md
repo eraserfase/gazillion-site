@@ -3,13 +3,13 @@
 > What the vinyl simulator effect actually is, why it works on drums, the four parts of the sound, and what separates a convincing one from a thin one.
 
 Source: https://gazillionindustries.com/vinyl-sim-plugin/  
-Published 2026-09-24, updated 2026-09-24. By Gazillion Industries, who make DRUGS.
+Published 2026-09-24, updated 2026-10-28. By Gazillion Industries, who make DRUGS.
 
 ---
 
-Every plugin in this category claims the same thing and they do not all do the same work. Pulled apart, the effect is four separate behaviors happening at once, and which of them a given plugin actually implements is what decides whether the result sounds like a record or like a filter with noise on it.
+Every plugin in this category claims the same thing and they do not all do the same work. Pulled apart, the effect is four separate behaviors happening at once, and which of them a plugin implements decides whether the result sounds like a record or like a filter with noise on it.
 
-A vinyl sim is a plugin that adds the warmth, noise floor, and subtle pitch instability associated with analog disc playback to a digital audio signal. It typically layers a crackle or [hiss](https://gazillionindustries.com/tape-hiss/) bed, applies gentle high-frequency roll-off, and introduces slow wow and flutter so the track reads as though it were cut to a physical disc and played back through a turntable rather than rendered purely in the box.
+A vinyl sim is a plugin that adds the warmth, noise floor and pitch instability of disc playback to a digital signal. DRUGS, our free one for Mac and Windows, does the squash: the part most plugins leave out. It typically layers a crackle or [hiss](https://gazillionindustries.com/tape-hiss/) bed, applies gentle high-frequency roll-off, and introduces slow wow and flutter so the track reads as though it were cut to disc and played on a turntable. The squash was first heard on [the sampler that made the effect famous](https://gazillionindustries.com/sp-303/).
 
 ## The short version
 
@@ -123,7 +123,7 @@ The cost is setup time and up to four slots per bus, and an evening lost to the 
 
 **DOSE 12.** Under a noise bed and a filter, the useful setting is lower than it looks.
 
-The wider lo-fi shelf, and the order to put it in, is in [best lofi plugins](https://gazillionindustries.com/best-lofi-plugins/). For the drums specifically, [how to make drums sound dusty](https://gazillionindustries.com/how-to-make-drums-sound-dusty/).
+The wider lo-fi shelf, and the order to put it in, is in [best lofi plugins](https://gazillionindustries.com/best-lofi-plugins/). For the drums specifically, [how to make drums sound dusty](https://gazillionindustries.com/how-to-make-a-sample-sound-old/).
 
 ## Questions people ask
 

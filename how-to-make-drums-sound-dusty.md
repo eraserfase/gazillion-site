@@ -3,7 +3,7 @@
 > How to make drums sound dusty: limit the top end, drop the resolution, saturate, compress until the room comes up, add noise, and get off the grid.
 
 Source: https://gazillionindustries.com/how-to-make-drums-sound-dusty/  
-Published 2026-09-20, updated 2026-09-24. By Gazillion Industries, who make DRUGS.
+Published 2026-09-20, updated 2026-10-28. By Gazillion Industries, who make DRUGS.
 
 ---
 

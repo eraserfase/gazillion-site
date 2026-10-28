@@ -1,9 +1,9 @@
 # How to make 808s hit harder
 
-> Why 808s vanish on phones and laptops, and what makes them hit harder: tuning, the kick, the envelope, saturation, soft clipping and a mono low end.
+> Why 808s vanish on phones, and the fix in order: tune, shape the envelope, saturate, soft clip, keep it mono. With before and after audio.
 
 Source: https://gazillionindustries.com/how-to-make-808s-hit-harder/  
-Published 2026-09-13, updated 2026-09-24. By Gazillion Industries, who make BEEFY.
+Published 2026-09-13, updated 2026-10-28. By Gazillion Industries, who make BEEFY.
 
 ---
 
@@ -24,6 +24,8 @@ An 808 hits harder when small speakers get something to play and the low end sto
 - **Low end**: mono, with rumble cleared underneath
 
 - **A/B**: at matched loudness
+
+**The BEEFY demo** — drums before and after, with sound. [BEEFY, for Mac and Windows](https://gazillionindustries.com/beefy.html)
 
 **BEEF at 96.** Where the plug-in stops being polite. Most settings that sound right in solo are about half this.
 

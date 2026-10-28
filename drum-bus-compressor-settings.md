@@ -1,9 +1,9 @@
 # Drum bus compressor settings
 
-> Every control on a drum bus compressor, what it actually changes, and a starting point that works on most material without copying somebody else's numbers.
+> Attack, release and ratio for a drum bus, the starting point that works on breaks, and the free compressor with none of those knobs.
 
 Source: https://gazillionindustries.com/drum-bus-compressor-settings/  
-Published 2026-09-19, updated 2026-09-24. By Gazillion Industries, who make DRUGS.
+Published 2026-09-19, updated 2026-10-28. By Gazillion Industries, who make DRUGS.
 
 ---
 
@@ -22,6 +22,8 @@ Every control on a drum bus compressor, what it actually changes, and a starting
 - **Knee**: soft
 
 - **Make-up**: matched, so bypass and engaged are the same loudness
+
+**The DRUGS demo** — with sound. [FREE DRUGS](https://gazillionindustries.com/drugs.html)
 
 That will glue a drum bus without hurting it. Everything below is why, and when to leave it.
 

@@ -3,7 +3,7 @@
 > How to record your music to cassette: connections, setting level to 0 VU, tape types, Dolby on or off, and getting the playback back into your session.
 
 Source: https://gazillionindustries.com/how-to-record-to-cassette/  
-Published 2026-09-20, updated 2026-09-20. By Gazillion Industries, who make TRIPLE OG.
+Published 2026-09-20, updated 2026-10-28. By Gazillion Industries, who make TRIPLE OG.
 
 ---
 

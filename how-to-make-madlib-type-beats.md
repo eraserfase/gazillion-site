@@ -3,7 +3,7 @@
 > Digging, leaving the loop alone, where the drums sit under a sample, and how little processing the approach actually needs.
 
 Source: https://gazillionindustries.com/how-to-make-madlib-type-beats/  
-Published 2026-09-24, updated 2026-09-24. By Gazillion Industries, who make DRUGS.
+Published 2026-09-24, updated 2026-10-28. By Gazillion Industries, who make DRUGS.
 
 ---
 
@@ -89,7 +89,7 @@ The dust is part of the character. You do not want to scrub it all away. What yo
 
 ### How long should the loop be?
 
-Keep loops short and tight. A few bars of a chopped sample, repeated with slight variation, gives the beat its hypnotic pull. Longer loops tend to lose the raw, [dusty](https://gazillionindustries.com/how-to-make-drums-sound-dusty/) feel that defines this style. The shorter the phrase, the more space you leave for drums and atmosphere to breathe around it.
+Keep loops short and tight. A few bars of a chopped sample, repeated with slight variation, gives the beat its hypnotic pull. Longer loops tend to lose the raw, [dusty](https://gazillionindustries.com/how-to-make-a-sample-sound-old/) feel that defines this style. The shorter the phrase, the more space you leave for drums and atmosphere to breathe around it.
 
 ## What DRUGS does
 

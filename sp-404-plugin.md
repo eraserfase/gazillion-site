@@ -3,7 +3,7 @@
 > The sound comes apart into five things you can rebuild with plugins you have: rate reduction, the filter, the compressor, vinyl sim, and committing on the way in.
 
 Source: https://gazillionindustries.com/sp-404-plugin/  
-Published 2026-09-24, updated 2026-09-24. By Gazillion Industries, who make F(ilter)12.
+Published 2026-09-24, updated 2026-10-28. By Gazillion Industries, who make F(ilter)12.
 
 ---
 
@@ -65,7 +65,7 @@ A fast attack is part of it. Flattening the front of a transient removes the cue
 
 ## What is vinyl sim, in parts?
 
-From the outside it behaves like four processes at once. Top and bottom roll off so the loop sits in a narrower band. A continuous surface noise appears underneath. Pitch drifts slowly. And the whole thing thickens the way compression thickens. Build each one separately and you find out which one you actually wanted.
+From the outside it behaves like four processes at once. Top and bottom roll off so the loop sits in a narrower band. A continuous surface noise appears underneath. Pitch drifts slowly. And the whole thing thickens the way compression thickens. Build each one separately and you find out which one you actually wanted. The name came from an earlier machine in the same line, and [the original vinyl sim](https://gazillionindustries.com/sp-303/) covers where the squash came from.
 
 The noise is the part people skip, and it does more than it should. Quantization grit exists only while there is signal, because the rounding produces it. Surface noise sits there whether the music plays or not. Stack the two and the quiet parts get a floor that is half constant and half reactive, which is most of what reads as density. A noise loop at roughly −40 dBFS is enough: inaudible alone, obvious when you mute it.
 
