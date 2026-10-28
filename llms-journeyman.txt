@@ -28,3 +28,4 @@ linking.
 - [Ladder filter explained](https://gazillionindustries.com/ladder-filter-explained.md): What a ladder filter is, and the low end resonance takes away.
 - [The Minimoog Voyager](https://gazillionindustries.com/minimoog-voyager.md): Bob Moog's return, the 2002 launch, the dual filters, hip-hop's Voyagers, and why one voice teaches.
 - [Monosynth vs polysynth](https://gazillionindustries.com/monosynth-vs-polysynth.md): What one voice buys you, and how to hear paraphonic against polyphonic.
+- [The Novation Bass Station](https://gazillionindustries.com/novation-bass-station.md): Huggett's Wasp filter, the Rack and the Super, Bass Station II, and AFX Mode with Aphex Twin.

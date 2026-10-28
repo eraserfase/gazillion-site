@@ -27,6 +27,7 @@ linking.
 - [Best filter plugins](https://gazillionindustries.com/best-filter-plugins.md): Three things separate good filters from bad, and a ten-minute test that settles it.
 - [Best low pass and high pass filter plugins](https://gazillionindustries.com/best-lowpass-highpass-filter-plugins.md): Slope, resonance, drive and sync: what separates filter plugins, plus free picks.
 - [Bitcrushing explained](https://gazillionindustries.com/bitcrushing-explained.md): Bit depth, quantization noise, sample rate reduction and what 12-bit and 8-bit sound like.
+- [The Casio SK-1](https://gazillionindustries.com/casio-sk-1.md): 8-bit at 9.38 kHz for 1.4 seconds, who looped on it, and why circuit benders loved it.
 - [Filter cutoff and resonance explained](https://gazillionindustries.com/filter-cutoff-and-resonance.md): The corner frequency, the slope, the resonant peak, and what each costs.
 - [Free alternatives to RC-20 Retro Color, one module at a time](https://gazillionindustries.com/free-alternative-to-rc-20.md): A free plugin for each RC-20 module, and the job none of them does.
 - [How to get the sound of an old sampler without buying one](https://gazillionindustries.com/how-to-get-an-old-sampler-sound.md): The old sampler sound is a stack of specific limitations, and you can apply each one on purpose.

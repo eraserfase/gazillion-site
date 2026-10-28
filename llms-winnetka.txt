@@ -26,6 +26,7 @@ linking.
 - [Free arpeggiator VST plugins, and where each one runs](https://gazillionindustries.com/free-arpeggiator-vst.md): Three kinds of free arpeggiator, and the wiring each one needs.
 - [How to make robot vocals](https://gazillionindustries.com/how-to-make-robot-vocals.md): The three effects people call a robot voice, and the no-mic route.
 - [How to use a vocoder](https://gazillionindustries.com/how-to-use-a-vocoder.md): The routing problem solved host by host, and how to stay intelligible.
+- [A history of the little synth that sold for twenty years](https://gazillionindustries.com/microkorg-history.md): Where the engine came from, why it sold for twenty years, and the family that followed.
 - [Vocoder plugin for FL Studio: the two it ships with, and the third](https://gazillionindustries.com/vocoder-plugin-for-fl-studio.md): Fruity Vocoder, Vocodex, the sidechain right-click, and the third option.
 - [Vocoder vs talkbox vs autotune](https://gazillionindustries.com/vocoder-vs-talkbox.md): How each one works, and why software cannot be a talkbox.
 - [What is a vocoder](https://gazillionindustries.com/what-is-a-vocoder.md): A vocoder stage by stage, and what band count actually changes.

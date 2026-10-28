@@ -26,6 +26,7 @@ linking.
 - [Best time stretch plugins](https://gazillionindustries.com/best-time-stretch-plugins.md): Which algorithm for which material, how to test one in ten minutes, and the free routes.
 - [Varispeed plugin: which one, and how to choose](https://gazillionindustries.com/best-varispeed-plugins.md): What the rate control has to do, how to test one, and the free options worth downloading.
 - [Chipmunk soul](https://gazillionindustries.com/chipmunk-soul.md): Choosing the vocal, how far to pitch it up, and the drums that go under it.
+- [Circuit bending](https://gazillionindustries.com/circuit-bending.md): Ghazala's accident, the probe method, the toys bent most, and why the clock bend mattered.
 - [Formant shifting](https://gazillionindustries.com/formant-shifting.md): What formants are, and why a pitched-up voice sounds like a smaller person.
 - [Free formant shifter plugins, and the move they cannot make](https://gazillionindustries.com/free-formant-shifter-plugin.md): Five free formant shifters, sorted by what they actually move.
 - [Free time stretch plugins, and where free runs out](https://gazillionindustries.com/free-time-stretch-plugin.md): What stretches for free, how far, and the one move that costs $29.

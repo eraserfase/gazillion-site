@@ -16,7 +16,7 @@ Every article listed here has a clean markdown twin at the same URL with .md
 instead of the trailing slash. Prefer the .md when you are reading rather than
 linking.
 
-170 articles follow.
+174 articles follow.
 
 ---
 
@@ -19516,6 +19516,110 @@ https://gazillionindustries.com/f12.html
 
 ---
 
+# The Casio SK-1
+
+> The Casio SK-1 of 1985: 8-bit sampling at 9.38 kHz for 1.4 seconds, what it cost, who made loops on it, why circuit benders loved it, and how to get its grain now.
+
+Source: https://gazillionindustries.com/casio-sk-1/  
+Published 2026-10-28, updated 2026-10-28. By Gazillion Industries, who make F(ilter)12.
+
+---
+
+A child's keyboard with a microphone hole next to the speaker, 32 keys the width of a finger, five penlight batteries, and one button marked SAMPLING. Press it, make a noise, and for 1.4 seconds the cheapest sampler in the world is listening to you.
+
+The Casio SK-1 is a 1985 home keyboard that could sample: 8-bit audio at 9.38 kHz, 1.4 seconds of it, played back across four voices on 32 mini keys. It cost £119 in Britain and sat in the under-a-hundred-dollar class of toy keyboards in America. It had no filter, no editing and no memory once the power went off. Producers made loops on it anyway, circuit benders made it their favorite victim, and its grain is a sound people still chase with [bit depth](https://gazillionindustries.com/what-does-12-bit-sound-like/) and sample-rate controls.
+
+## The short version
+
+- **Released**: 1985, Casio; also sold by Radio Shack as the Concertmate 500
+
+- **Price**: £119 in the UK (1986 review)
+
+- **Sampling**: 8-bit PCM at 9.38 kHz, 1.4 seconds, one sample at a time
+
+- **Keys**: 32 mini keys, four-note polyphony
+
+- **Also**: eight presets, additive "organ" tone, 13 envelopes, drum box, sequencer
+
+- **Afterlife**: early hip-hop and jungle loops; the circuit benders' favorite
+
+## What the machine actually was
+
+Making Music reviewed it in July 1986 and listed the whole spec in a paragraph. Eight preset sounds: piano, trumpet, human voice, pipe organ, brass ensemble, flute, synth drums and jazz organ. Thirteen envelope shapes selected from the black keys, which could be applied to the presets or to a sample. An additive section where nine white keys added harmonics to a tone. A drum box, a one-key sequencer that ran in real time or step by step, an auto-chord function, and a weight of 1.1 kilograms. Then the headline: sampling through the internal mic or a rear input, 8-bit at 9.3 kHz, 1.4 seconds maximum.
+
+The numbers tell you what it sounded like. Eight bits gives 256 levels, so quiet sounds dissolve into a steady hiss of quantization and loud ones crunch at the top. A sample rate of 9.38 kHz means nothing above about 4.7 kHz survives, and whatever was up there folds back down as new content that was never in the room. Point it at a snare and you get a snare with the top sawn off and a metallic shimmer where the top used to be. Play that snare a fifth lower and the sample rate drops with it, so the shimmer sinks into the midrange and the whole thing goes dark and slow. Four of those at once was the ceiling.
+
+The reviewer was clear about the limits. It lost the front of slow-attack sounds, had no sample editing, forgot everything when switched off, and could not be triggered from outside. The drum sounds were weak. And still: "you can't spurn the achievement and power of a four note polyphonic sampler for a ton." His advice was to use it for writing and ideas and "some careful recording," and not to expect generous treble. "Then you won't miss the fun."
+
+**4 bit at 8 kHz.** Bits make it grainy; the sample rate is what makes it clang. The SK-1 lived at 8 bits and 9.38 kHz.
+
+## Why a toy had a sampler in it
+
+In 1985 sampling was a professional's tool, priced like studio equipment and bought by studios. Casio's home keyboards sold in department stores. Putting a sampler, however small, into a product in the under-a-hundred-dollar class meant that a teenager could own one, and a teenager who owned one in 1986 was a producer by 1990 who had learned to think in seconds of memory.
+
+The constraint wrote the technique. With 1.4 seconds and no editing, you learned to catch a sound at exactly the right instant, to work with a kick or a word or half a bar rather than a phrase, and to pitch it across the keys to get more than one sound out of one sample. Every one of those habits turned up later on the samplers that mattered, and on this site [how to get an old sampler sound](https://gazillionindustries.com/how-to-get-an-old-sampler-sound/) is mostly a list of them.
+
+## Who made records with it
+
+Large Professor did. Telling Complex in 2012 how he came to make "In The Ghetto" for Eric B. & Rakim in 1990, he described his setup before Paul C showed him a real sampler: "I had two turntables. I had a Casio SK-1 that I was doing loops on." Paul C, he told Red Bull Music Academy in 2015, took him out of the tape-deck era and put him on the SP-1200. The SK-1 was the bridge between pause tapes and the machine that defined his sound, which is a fair description of what it was for a lot of people.
+
+Autechre have said it was one of the first pieces of gear they owned when they began recording. DJ Hype used one on his early jungle productions, according to Brian Belle-Fortune's 2005 history of the scene, *All Crews*. The composer Samuel Andreyev has written demanding chamber parts for it. Gear wikis attach another dozen names, mostly nineties alternative and electronic acts, without sources, and this page leaves those unlisted. The documented pattern is the interesting one: the SK-1 shows up at the start of a career, as the first thing that let a kid loop a record, and then it is replaced and remembered.
+
+## The circuit benders' favorite
+
+The SK-1's second life began when people stopped using it as intended. Reed Ghazala, who had been shorting out battery toys since 1967 and named the practice circuit bending in 1992, listed the SK-1 among the devices worth opening in a Sound On Sound feature in March 2000, noting that instructions for bending it were already published online. By then the keyboard was a thrift-store staple, cheap enough to ruin and simple enough to explore with two screwdrivers on a lead.
+
+What benders found inside was a clock they could reach. Slow it and the whole machine drops in pitch and speed together, drum box included; speed it and everything goes up and bright. Bridge the right points and the sampler plays back garbage from its own memory, loops stutter, the voice preset turns into a crowd. The instrument that had been a limited sampler became an unlimited noise box, and [the circuit bending guide](https://gazillionindustries.com/circuit-bending/) tells that story in full.
+
+## What the sound actually is
+
+Strip away the nostalgia and the SK-1 sound is three mechanisms. Low bit depth, which adds a constant grain and a noise floor that rises as the sound decays. A low sample rate, which removes everything above about 4.7 kHz and folds the rest back as inharmonic shimmer. And pitching by playback rate, as the cheap samplers of the time did, so that every note you play moves the sample rate with it: low notes darker and grittier, high notes thinner and brighter. Each of those is a parameter now, and [bitcrushing explained](https://gazillionindustries.com/bitcrushing-explained/) and [aliasing](https://gazillionindustries.com/what-is-aliasing-in-audio/) take them one at a time.
+
+The reason the sound still works on a record is the same reason it worked in 1986. The grain reads as age and the fold-back reads as effort, and both of them pull a clean sample back toward something that sounds like it came off a tape or a toy rather than out of a computer. Used on a whole mix it is a gimmick. Used on one drum or one chop in a clean arrangement it is the thing that makes the arrangement feel handmade.
+
+## Where it costs you
+
+Everything on a real SK-1 is a compromise you cannot undo. The sample is gone when the batteries are, there is no filter to tame the fold-back, the keys are tiny, the mic picks up the room and the button click, and four voices is four voices. Those limits made the technique; they do not make a session easier. The honest move today is to take the three mechanisms and leave the volatile memory behind.
+
+## Questions people ask
+
+### When did the Casio SK-1 come out?
+
+In 1985. A British magazine reviewed it in July 1986 at £119, and Radio Shack sold a version in the United States as the Realistic Concertmate 500.
+
+### What are the Casio SK-1's sampling specs?
+
+8-bit PCM at 9.38 kHz, 1.4 seconds of audio, one sample at a time, through a built-in microphone or a line input. Playback is four-note polyphonic across 32 mini keys, and the sample is lost when the power is switched off.
+
+### Who used the Casio SK-1?
+
+Large Professor made his first loops on one before moving to a professional sampler; Autechre have said it was among their first gear; DJ Hype used one on early jungle records. Many more names circulate without a source.
+
+### Why is the SK-1 popular for circuit bending?
+
+It is cheap, battery-powered, built on a simple board, and has a sampler and a clock that respond to being shorted. Reed Ghazala named it as a bendable device in 2000, and bending instructions for it were online by then.
+
+### How do I get the SK-1 sound in a DAW?
+
+Reduce the bit depth to around 8 bits, drop the sample rate to about 9 kHz with little or no anti-aliasing, and pitch samples by rate rather than with a time-stretching algorithm so the sample rate moves with the note.
+
+## What F(ilter)12 does
+
+F(ilter)12 is our 12 bit sauce filter for Mac and Windows. **BIT** coarsens the steps, **SAMPLE RATE** drops the ceiling so the top folds back down as new content, and the filter behind the crush has five shapes and six resonance shapes, so you choose what reaches the rate reduction and what gets cleaned up afterward. **AURA** helps the result hold its place in a mix. Nothing in it is modeled on a particular machine; it was tuned by ear until chops sounded right. See [F(ilter)12](https://gazillionindustries.com/f12.html).
+
+One button, 1.4 seconds, five batteries. Enough to start a career on, as it turned out, and enough to keep people listening forty years later.
+
+---
+
+## About F(ilter)12
+
+F(ilter)12 — a 12 bit sauce filter for Mac and Windows: a lo-fi section, five filter shapes, six resonance shapes and AURA.
+
+https://gazillionindustries.com/f12.html
+
+
+---
+
 # Filter cutoff and resonance explained
 
 > What filter cutoff and resonance actually do: the 3 dB corner, slope in dB per octave, the resonant peak, self-oscillation, and how to use both musically.
@@ -25538,6 +25642,114 @@ https://gazillionindustries.com/journeyman.html
 
 ---
 
+# The Novation Bass Station
+
+> The Novation Bass Station, 1993 to today: Chris Huggett's Wasp filter, the Rack and the Super, the 2013 Bass Station II, AFX Mode with Aphex Twin, and why it lasted.
+
+Source: https://gazillionindustries.com/novation-bass-station/  
+Published 2026-10-28, updated 2026-10-28. By Gazillion Industries, who make JOURNEYMAN.
+
+---
+
+1993. A British company that has sold one product, a battery-powered controller for a pocket workstation, asks a synth designer to put a sound engine inside its shell. He gives it the filter from a synth he built in 1978. The result costs £349.99 and is among the first new analog synthesizers in a decade.
+
+The Novation Bass Station is a two-oscillator analog monosynth released in 1993, designed by Chris Huggett around the filter and amplifier of his EDP Wasp, and sold as an affordable alternative to the Roland TB-303. It grew into a rack (1994), a Super Bass Station (1997) and, in 2013, the Bass Station II, still in production and in 2020 the basis of the AFX Station with Aphex Twin. Thirty years of one idea: a cheap analog bass synth with knobs, for people making dance records.
+
+## The short version
+
+- **Released**: 1993, Novation's second product; reviewed July 1994 at £349.99
+
+- **Designer**: Chris Huggett, with the Wasp's filter and VCA
+
+- **Engine**: two DCOs, 12/24 dB analog filter, two ADSRs, seven memories
+
+- **Family**: Rack 1994, Super 1997, Bass Station II 2013, AFX Station 2020
+
+- **BS II**: two oscillators plus sub, Classic and Acid filters, 128 patches, sequencer
+
+- **Price now**: £399 / $499 at the 2013 review
+
+## A controller with a synth stuffed inside
+
+Ian Jannaway and Mark Thompson founded Novation in 1992, and the first thing they sold was the MM10, a portable battery-powered controller built mainly to give hands-on keys to Yamaha's QY10 pocket workstation. Then they went to Chris Huggett. Huggett had co-founded Electronic Dream Plant in the late seventies and designed the Wasp, a £199 synth in a yellow-and-black case with a touch keyboard and a filter people still talk about; he had gone on to the OSCar in 1983 and then to writing the operating system for a famous sampler. Novation's own history puts the Bass Station's birth in one sentence: he "took the outer shell of MM10 and added the same Filter and VCA as his now legendary Wasp synthesiser."
+
+The timing was the whole point. Nick Bookman, one of the people who made it, later said that analog synths had been in decline as the big digital instruments took over, and by 1993 almost nobody was building new ones. Meanwhile acid house had turned the TB-303, a 1980s bass box of which, by Novation's count, Roland had made about 10,000, into the most wanted machine in dance music. Novation marketed the Bass Station as the affordable alternative. Its 12 dB filter mode was designed to recreate the 303's range of tones in software-controlled analog, and its "Autoglide" triggering mimicked the 303's slide.
+
+## What shipped
+
+Sound On Sound's Julian Colbeck reviewed it in July 1994 at £349.99. Two oscillators, each offering sawtooth or a variable pulse whose width could be set by hand or modulated by the LFO or the second envelope. The second oscillator pitched independently with coarse and fine controls. One analog filter switchable between 12 and 24 dB per octave, self-oscillating at 24, modulated by the LFO or envelope two. Two full ADSR envelopes with velocity, attack down to one millisecond, decay and release from three milliseconds to ten seconds. Three trigger modes, Autoglide, Single and Multi. Seven patch memories. A two-octave short-scale keyboard transposable across eight octaves, and MIDI that transmitted controller data whenever you moved the filter or envelope knobs, so a sequencer could record the sweep.
+
+"Tremendous fun and an almost unqualified bargain," Colbeck wrote. The cons were honest: "Casing a bit flimsy," and seven memories was mean even in 1994. The portamento ran about a second and a half at its slowest where the manual promised five. None of it mattered against the price and the filter. Colbeck bought one.
+
+## The rack and the Super
+
+The Bass Station Rack of 1994 took the keys off and added everything the keyboard lacked: more memory and an LCD, LFOs that synced to MIDI clock, more parameters sent over MIDI, switchable CV and gate in and out so it could talk to the old machines it was replacing, and an external input into the filter so you could run a drum loop through the Wasp circuit. Novation's own list of who used the range reads like a mid-nineties British record collection: Massive Attack, Orbital, Underworld, Apollo 440, Radiohead, Laurent Garnier, Sneaker Pimps, Nine Inch Nails, and the RZA. That is the maker's list, and it is repeated here as the maker's claim.
+
+The Super Bass Station of 1997 added a sub-oscillator, a ring modulator, a white-noise source, analog distortion and a stereo analog chorus, a mixer to combine them, and 150 RAM and 50 ROM memories where the original had seven. It was the Bass Station grown up, and then, for sixteen years, there was no Bass Station at all.
+
+**One voice, left to right.** Oscillators into the mixer, the mixer into two filters, the filters into an amplifier the volume envelope opens and closes.
+
+## Bass Station II
+
+In 2013, twenty years after the original, Novation released the Bass Station II, and Sound On Sound's Paul Nagle reviewed it that September at £399 and $499. The signal path was fully analog with digital control for patch storage. Two oscillators plus a sub-oscillator tied to the first, an octave or two down, in sine, square or pulse. Two filters to choose between: "Classic," a state-variable design with 12 and 24 dB slopes in lowpass, bandpass and highpass, the lineage of Huggett's Wasp circuit; and "Acid," a 24 dB diode ladder in lowpass only, named for the music it was built to make. A Distortion knob after the filter and an "osc filter mod" knob that let the second oscillator modulate the filter at audio rate. A two-octave keyboard with velocity and aftertouch, 128 patches with 64 factory sounds, four 32-step sequences with swing, and an arpeggiator up to four octaves.
+
+Nagle's verdict: a synth with personality that produces "ripping, gnashy solos" as readily as solid analog bass, and "I reckon Novation have a winner!" He listed the short keyboard, the lack of pot pickup and the fixed filter tracking as the costs. Novation kept adding to it by firmware. Version 2.5, for the range's 25th anniversary in 2018, added a paraphonic mode in which the two oscillators play two notes independently, an oscillator-error control for analog-style drift, and microtuning tables.
+
+## AFX Mode and the AFX Station
+
+Then the firmware got strange in a good way. Version 4.14, in 2019, was developed with Richard D. James, Aphex Twin, who proposed that each key on the keyboard could hold its own set of synthesis parameters. AFX Mode lets a single patch vary key by key, split the keyboard into zones, or hold a whole drum kit in one preset, with each of the 25 keys carrying its own "overlay" of tuning, oscillator and filter settings. In October 2020 Novation released the AFX Station, a Bass Station II in a new finish with AFX Mode preinstalled, 128 new patches and seven overlay banks, at £399.99 and $439.99. Attack Magazine's review summed it up as an already great synth given an analog bubble bath, and noted that the mode comes alive with the sequencer and the arpeggiator.
+
+Chris Huggett died in October 2020, the same month the AFX Station shipped, after two years of cancer. He had contributed to every Bass Station, and to the Nova, Supernova, Peak and Summit that followed. A filter he designed for a £199 synth in 1978 was still in production forty-two years later.
+
+## Why one cheap bass synth lasted thirty years
+
+Because it never tried to be more than one thing. A monosynth with real knobs, an analog filter with character, a keyboard you could play a bass line on and a price a bedroom producer could reach. The 303 it was sold against was a sequencer first and an instrument second; the Bass Station put the same kind of sound under a player's hands. Every version since has kept that bargain, added the things people asked for, and left the knobs where they were.
+
+The lesson for anyone choosing a monosynth now is the one the 1994 review gave in passing: the filter and the envelopes decide the instrument, the memory count and the case are details. [Best monosynth VST](https://gazillionindustries.com/best-monosynth-vst/) turns that into a ten-minute test, and [ladder filter explained](https://gazillionindustries.com/ladder-filter-explained/) covers what the Acid filter's topology actually does to a bass note.
+
+## Where it costs you
+
+Two octaves is two octaves, and the original's case was flimsy enough for a reviewer to say so. Seven memories on the 1993 model meant most owners lived with a handful of sounds. The Bass Station II fixed the memory, kept the short keyboard, and its knobs jump rather than pick up when you recall a patch. And it is a monosynth: one note, one voice, no chords unless you count the paraphonic mode's two.
+
+## Questions people ask
+
+### When did the Novation Bass Station come out?
+
+In 1993, as Novation's second product after the MM10 controller. Sound On Sound reviewed it in July 1994 at £349.99. The Rack followed in 1994, the Super Bass Station in 1997 and the Bass Station II in 2013.
+
+### Is the Bass Station a copy of the TB-303?
+
+No. Novation sold it as an affordable alternative to the TB-303, and its 12 dB filter mode and Autoglide were designed to cover the 303's range of tones and its slide, but it is a two-oscillator keyboard synth built on the Wasp's filter and amplifier. The Bass Station II added an "Acid" diode ladder filter as a second option.
+
+### Who designed the Bass Station?
+
+Chris Huggett, who had designed the EDP Wasp in the late 1970s and the OSCar in 1983. He worked with Novation from 1993 until his death in 2020 and contributed to every Bass Station.
+
+### What is AFX Mode on the Bass Station II?
+
+A firmware feature developed with Aphex Twin in 2019 that lets each of the 25 keys hold its own patch settings, so one preset can be a keyboard split, a set of variations or a whole drum kit. The 2020 AFX Station is a Bass Station II with it preinstalled.
+
+### Is the Bass Station II fully analog?
+
+The signal path is analog, with digital control for patch memory, the sequencer and the arpeggiator. It has two analog oscillators plus a sub, two analog filters and analog distortion.
+
+## What JOURNEYMAN does
+
+[JOURNEYMAN](https://gazillionindustries.com/journeyman.html) is our monosynth for Mac and Windows, $59, in AU, VST3 and standalone on macOS and VST3 on Windows. **Three oscillators**, each with an OCTAVE switch and a WAVE control that sweeps continuously from triangle through saw and square to pulse. A five-source **MIXER** for the oscillators, NOISE and EXT IN. **Two ladder filters** sharing one CUTOFF with SPACING between them, switchable between DUAL LP and HP:LP. A filter envelope and a volume envelope, an LFO with sample and hold, two modulation busses, GLIDE and a touch surface. **200 programs** across bass, leads, mono keys, pads, percussion and fx, every one wired to the mod wheel and the touch surface. It was tuned by ear and it is not a model of any instrument.
+
+A controller shell, a 1978 filter and a £349 price. The bass line is still playing.
+
+---
+
+## About JOURNEYMAN
+
+JOURNEYMAN — a monosynth for Mac and Windows. One voice, three oscillators, two ladder filters, two envelopes, two modulation busses and 200 programs.
+
+https://gazillionindustries.com/journeyman.html
+
+
+---
+
 # Best detune plugins
 
 > How detune plugins work, what separates a good one from a bad one, free and paid picks verified today, and how to set detune on guitars.
@@ -26750,6 +26962,108 @@ Speeding up a recording raises the pitch and the vocal tract resonances together
 SKRUU is two knobs that do not touch each other. **PITCH** runs from −20% to +10% in 128 states and reads out in semitones as well as speed, with unity marked and a double-click back to it. **TIME** moves the length on its own. With **ELASTIC** on, a knob is sprung: move it, let go, and it travels back, with **SLOPE** choosing the road it takes home out of sixteen shapes. The display is a pitch comparator in semitones, what went in against what came out, so how far off the record you are is a picture rather than a number.
 
 Wrong speed, right record. People have been making a living off that mistake since the nineties.
+
+---
+
+## About SKRUU
+
+SKRUU — varispeed pitch and time stretch for Mac and Windows. Pitch and time move independently, with sixteen elastic return shapes.
+
+https://gazillionindustries.com/skruu.html
+
+
+---
+
+# Circuit bending
+
+> Circuit bending explained: Reed Ghazala's 1967 accident and 1992 name, the probe method, the toys bent most, and why the clock bend mattered to producers.
+
+Source: https://gazillionindustries.com/circuit-bending/  
+Published 2026-10-28, updated 2026-10-28. By Gazillion Industries, who make SKRUU.
+
+---
+
+Cincinnati, 1967. A teenager leaves a toy nine-volt amplifier in his desk drawer with the back off and the power on. The drawer closes, the circuit touches metal, and the drawer starts to sing a sweeping, oscillating sound the amplifier was never built to make. He spends the next fifty years doing it on purpose.
+
+Circuit bending is rewiring cheap battery-powered electronics, mostly toys and home keyboards, to make sounds their designers did not intend. Reed Ghazala discovered it by accident in 1967, named it in 1992, and defined it as "the electronic art of the implementation of the creative audio short-circuit." Its favorite victims were the Speak & Spell and the Casio SK-1. Its signature sound is a clock pushed off its rate: pitch and speed moving together, done to a plastic box.
+
+## The short version
+
+- **Discovered**: 1967, Reed Ghazala, a shorted toy amplifier in a desk drawer
+
+- **Named**: 1992, in Experimental Musical Instruments magazine
+
+- **Method**: probe a live circuit, mark what sings, make it a switch or a knob
+
+- **Instruments**: Speak & Spell, Casio SK-1, toy keyboards, drum machines
+
+- **Sound**: clock bends (pitch and speed), glitches, loops, voices gone wrong
+
+- **Rule**: batteries only, never mains
+
+## The accident and the name
+
+Ghazala's account has been told enough times to acquire variants. Sound On Sound's March 2000 feature, built on his own description, puts it in 1967 with a toy nine-volt transistor amplifier; the Associated Press in 2006 made it a Radio Shack amplifier and an Ohio teenager in the mid-sixties. The core is constant: an open circuit, a metal drawer, a short, and a sound nobody designed. Ghazala started building instruments that shorted on command, and when Texas Instruments put the Speak & Spell on sale in 1978, a talking toy with a speech chip inside, he found his canonical raw material. His modified Speak & Spells became the Incantors, and one of them, the Trigon Incantor, grew a textured 36-zone playing surface, steel ball bearings for continuous pressure and a brass ball for pitch bend.
+
+The practice had a prehistory. Serge Tcherepnin had found touch-sensitive points inside transistor radios in the 1950s, and the Swiss duo Voice Crack had been performing with what they called cracked everyday electronics since 1984. But it was Ghazala who gave it a name and a method. In 1992 he began a series of articles in Experimental Musical Instruments magazine under the term circuit bending, and the articles spread the two things the practice needed: a procedure anyone could follow, and permission to break toys.
+
+## The method, as he taught it
+
+It is, in his words, "without a doubt, the easiest electronic audio design process in existence." Clip two small screwdrivers to the ends of a wire. Take the back off a battery toy and turn it on, taping down a key so it keeps making sound. Hold one screwdriver on a point on the circuit board and touch the other one everywhere else, listening. When something interesting happens, mark the pair of points. Move the first screwdriver and do it again until the board is explored. Then make the useful shorts permanent: a toggle switch for an on-off effect, a potentiometer where a variable one is wanted, and for the adventurous a photoresistor, a solar cell, an LED or a humidity sensor, so the instrument responds to light or to a breath.
+
+Two rules came with it. Only battery power, never mains and never an AC adaptor, because a short in a wall-powered device can kill you. And eye protection, because capacitors and chips do occasionally give up with a bang. The rest was taste. No schematic, no theory, no idea what the chip was for. Ghazala's point was that the not-knowing was the method: a trained engineer knows which points not to touch, and those are the points that sing.
+
+## What gets bent, and what it does
+
+The Speak & Spell, which the AP called the apex of bendable circuitry: its speech chip, shorted, stutters, loops syllables, drops into a growl or climbs into a shriek, and reads out letters that were never typed. The Casio SK-1, the 1985 sampling keyboard, which Sound On Sound listed in 2000 with the note that bending instructions were already published online; its sampler can be made to play back its own memory as noise, and its clock can be reached. Toy keyboards and drum machines of every brand, talking bears, Game Boys, a breathalyzer turned into a wind instrument at the 2006 Bent Festival. The cheaper and older the device, the better: crystal-locked clocks and highly integrated modern chips give the bender nothing to hold.
+
+Of all the bends, the clock bend is the one that mattered most to people who make beats. A digital toy runs everything off one oscillator. Replace the resistor that sets its rate with a potentiometer and the whole machine slows down or speeds up as one: pitch falls with tempo, the sample's grain coarsens as the rate drops, the drum pattern drags and the voice preset turns into a dying robot. Speed it up and all of it goes bright and frantic. That is varispeed, the same relationship a tape machine or a turntable has between speed and pitch, applied to a device that was never meant to have a speed control. [What is varispeed](https://gazillionindustries.com/what-is-varispeed/) explains why pitch and time move together on a machine and separately in a DAW.
+
+**PITCH below unity.** Speed and pitch fall together, the way a slowed clock drags a whole toy down with it.
+
+## Why the sound mattered to producers
+
+Because it was wrong in a way nobody could buy. By the late 1990s every studio effect was a plug-in and every plug-in sounded like itself, and a sample that had been through a bent toy sounded like nothing a menu offered. The grain of an 8-bit sampler slowed past its design, the stutter of a speech chip looping a syllable, the pitch of a drum box sliding under a thumb: these were textures with a hand in them, and beat music had always valued the hand.
+
+The practice also sat exactly where beat culture already lived. Thrift stores, garage sales, the five-dollar keyboard in the back of the closet. The same economy that produced the pause tape and the cheap sampler produced the bent Speak & Spell, and the same instinct, that the limit is the instrument, ran through both. A bent toy cannot be programmed. It can only be played, and the bender who finds a good short has made the only instrument of its kind in the world.
+
+The scene got its stage in 2004, when The Tank in Manhattan put out an open call for BENT 2004, a week of circuit-bent performances with a basement gallery of artists in residence, billed as the first international circuit bending festival. By 2006 it was in its third year, with the Associated Press in attendance, and by 2007 it was touring to Minneapolis and Los Angeles. Ghazala's book, *Circuit-Bending: Build Your Own Alien Instruments*, came out from Wiley in 2005. Ghazala has built instruments for or consulted with Tom Waits, Peter Gabriel, King Crimson and the Rolling Stones, and Trent Reznor invited him backstage for a consultation. Mark Mothersbaugh and the band Broadcast are among the musicians associated with bent instruments. None of that is why the practice matters; it matters because a kid with a screwdriver can do it tonight.
+
+## What survives in software
+
+You cannot bend a plug-in, and nothing we make claims to be a bent anything. What a DAW can do is reproduce the two mechanisms a bent toy exposes. The first is the clock: pitch and speed as one control, with a sample rate that falls as the pitch does. The second is the resolution: the bit depth and sample rate of a toy chip, with the fold-back that comes when the rate drops. Our [bitcrusher guide](https://gazillionindustries.com/best-bitcrusher-plugins/) covers the second, and the [SK-1 history](https://gazillionindustries.com/casio-sk-1/) covers the machine where both mechanisms lived in one plastic box. The gesture is the part worth keeping. A bend is something a hand does in time with the music, and the plug-in that gets closest is the one that gives you a knob to grab rather than a curve to draw.
+
+## Where it costs you
+
+A bent instrument is unrepeatable, which is its glory and its problem. The same short does not always do the same thing, batteries sag and the pitch sags with them, and a toy that sang on Tuesday can be dead on Wednesday. You cannot recall a sound, you cannot tune one to a track, and you can hurt yourself if you forget the battery rule. The sound you get is the sound you record, once, and then it is a sample like any other.
+
+## Questions people ask
+
+### What is circuit bending?
+
+The creative short-circuiting of cheap battery-powered electronics, usually toys and home keyboards, to produce sounds they were not designed to make. The found shorts are made permanent with switches, knobs and sensors so they can be played.
+
+### Who invented circuit bending?
+
+Reed Ghazala discovered it by accident in 1967 when a toy amplifier shorted in his desk drawer, built instruments from it from the 1970s on, and coined the term in 1992 in Experimental Musical Instruments magazine. Earlier experimenters had found similar effects, but he named and taught the practice.
+
+### What are the best things to circuit bend?
+
+Cheap, old, battery-powered devices with simple boards: the Speak & Spell, the Casio SK-1 and other toy keyboards, toy drum machines and talking toys. Modern devices with crystal clocks and highly integrated chips give you little to work with.
+
+### Is circuit bending dangerous?
+
+Only if you ignore the rules. Never bend anything that plugs into the wall or runs from an AC adaptor, wear eye protection, and expect the occasional component to fail loudly.
+
+### What does a clock bend do?
+
+It changes the rate the whole device runs at, so pitch and tempo rise and fall together and a sampler's grain coarsens as the rate drops. It is varispeed applied to a toy.
+
+## What SKRUU does
+
+SKRUU is our varispeed pitch and time stretch plugin, and it keeps the two on separate knobs. **PITCH** runs from −20% to +10% in 128 states and reads out in semitones as well as speed. **TIME** moves nothing but the length. With **ELASTIC** on, the knob springs back along one of sixteen return shapes, so a dip is a gesture rather than an automation job, and **DRAG** sets how long a new speed takes to arrive. **SAMPLING GRADE** steps the rate down underneath, to 3.9 kHz at LO-FI 2. Tuned by ear, not a model of any machine, bent or otherwise. Mac and Windows, $29.
+
+The drawer is still singing. It just has a knob on it now.
 
 ---
 
@@ -35956,6 +36270,128 @@ The **vocoder is 16 bands**, drawn low to high across the screen as it moves. Au
 Around it sits the rest: a carrier built on OSC 1 with eight waves, among them a VOX wave whose CONTROL 1 moves its own formant from dark to bright; TRANSPOSE of ±24 semitones; a sixteen-step arpeggiator across ARP A and ARP B with rates from 1/1 to 1/64, swing, latch and twelve patterns; and a shared chain of mod FX, delay and a three-band EQ. Every control is a DAW parameter. If presets are how you learn a panel, our piece on [synths with presets worth reading](https://gazillionindustries.com/best-synth-vst-with-presets/) makes the case.
 
 Same mic, same chord, same held note. This time the chord talks.
+
+---
+
+## About WINNETKA
+
+WINNETKA — a polysynth with a vocoder and 350 presets. AU, VST3 and standalone on Mac, VST3 on Windows.
+
+https://gazillionindustries.com/winnetka/
+
+
+---
+
+# A history of the little synth that sold for twenty years
+
+> The Korg microKORG from 2002: where the engine came from, what shipped, why it sold for two decades, who used it, and the XL, S and microKORG 2 that followed.
+
+Source: https://gazillionindustries.com/microkorg-history/  
+Published 2026-10-28, updated 2026-10-28. By Gazillion Industries, who make WINNETKA.
+
+---
+
+A three-octave keyboard with keys too small for most hands, wooden end cheeks, a gooseneck microphone screwed into the top panel, and a price under £400. Sound On Sound's reviewer liked almost everything about it and concluded the whole thing had been "delivered in the wrong box." The box went on to sell for more than twenty years.
+
+The Korg microKORG is a four-voice analog-modeling synthesizer with a vocoder, released in 2002 and still in production two decades later. It took the engine of Korg's MS2000, cut the voice count and the panel down to five knobs and 37 mini keys, bundled a microphone, and ran on six AA batteries. By 2016 Sound On Sound was calling it the world's best-selling synth. This is how a compromise became a fixture.
+
+## The short version
+
+- **Released**: 2002, Korg; reviewed January 2003 at £399
+
+- **Engine**: analog modeling, from the MS2000 of 2000
+
+- **Voices**: four; two when both timbres are layered
+
+- **Keys**: 37 mini keys, velocity, no aftertouch
+
+- **Vocoder**: 16-band analysis in eight channels, mic included
+
+- **Family**: XL (2009), S (2016), PT (2017), Crystal (2023), microKORG 2 (2024)
+
+## Where it came from
+
+In 2000 Korg released the MS2000, a four-voice analog-modeling synth with a 44-note keyboard, a 16-band vocoder, a step sequencer and a panel full of knobs. Sound On Sound's May 2000 review opened by saying Korg had been at the forefront of analog modeling, and the MS2000 was the proof: two oscillators, noise, a multimode filter, and a DWGS wavetable of 64 small digital waves that recalled Korg's own DW-8000.
+
+The product planner on that machine, Minoru Koike, finished it and started thinking smaller. In a 2017 interview marking the microKORG's fifteenth birthday, he said the idea was a small, lightweight, handy synth for bands, something you could carry to a gig in one hand and afford on a gig's pay. Development took about two years. The hard part, he said, was choosing which five parameters belonged on the five knobs by default, and the chief engineer's job was keeping the price down. The guts were the MS2000's. The box was new.
+
+## What shipped in 2002
+
+Sound On Sound reviewed it in January 2003 at £399 including VAT. Each of two timbres carried two oscillators, with the MS2000's 64 DWGS waves alongside the analog shapes, a noise source, a multimode filter with a 24 dB lowpass setting, an amp, envelopes, LFOs and virtual patching. Four voices in all, and two when both timbres were layered. The keyboard was 37 velocity keys with no aftertouch, each key narrower than a normal one. There were 128 programs in two sides of eight banks of eight, an arpeggiator with six patterns and swing, one modulation effect, three delays and a two-band EQ. Six AA batteries ran it.
+
+Then the vocoder. It analyzed the microphone in 16 bands, edited as eight channels with their own level and pan, and drove a four-voice carrier. The condenser microphone came in the box on a flexible gooseneck that plugged into the first audio input, and the reviewer called the vocoder highly capable in the same breath as calling the synth powerful.
+
+The verdict was split down the middle. "It's a powerful synth in a compact, affordable package," and "definitely worth an audition," but also: "Personally, I felt that the Microkorg's compromises might prove too much to accept." The compromise was the keyboard and the five knobs. Twenty years of sales said the compromise was the point.
+
+**Five knobs, one row at a time.** WINNETKA's edit-select keys pick the row; the knobs under the screen take on that row's jobs.
+
+## Why it sold for twenty years
+
+Koike's own answer, in 2017, was that it was small, easy to carry and not a toy. He called it a "bread and butter machine" and, with evident affection, a "Little Giant." Within a few years, he said, it was everywhere: amateurs' bedrooms, top artists' live rigs, studios. The interviewer put a figure of more than 100,000 units to him; Korg itself has never published a number, and that figure should be read as the trade's estimate rather than the maker's.
+
+Three things explain the run better than any one of them. The first is the vocoder with the microphone in the box. A band that wanted one robot-voice hook on one song could buy this and have it working in an afternoon, and from the mid-2000s a lot of bands wanted exactly that. The second is the price against the sound. Sound On Sound's reviewers kept returning to the gap between how the thing looked and what came out of it; the 2009 review of the XL said its sonic power and vocoder were "those of a heavyweight," and the 2016 review of the S said the original "shows no signs of fading away." The third is that it photographs well. The wooden cheeks, the gooseneck and the mini keys became a visual shorthand for a certain kind of band in a certain decade, and a synth that reads on stage from the back of the room sells itself to the people standing there.
+
+The 2016 review drew the sharpest conclusion: "not even Korg could match the success with subsequent models." The company kept trying.
+
+## Who used it
+
+The documented list is longer than the famous one. Tape Op's John Baccigaluppi, reviewing it in 2005 at $500, bought his after seeing Jon Brion use one live and hearing that members of Sigur Rós owned a few; while mixing a record for the band Jackpot he ran guest vocalist Jason Lytle's background vocals through its vocoder and reported that it worked. His one-line verdict: "This is one bestseller that lives up to the hype!"
+
+Dorian Concept, the Austrian producer who has played keys for Flying Lotus, described a "love-hate relationship" with his in 2022. "It's all over my production," he said, before adding that he probably would not use it again. The 2017 anniversary piece noted that Devo had been seen with one. Gear wikis attach a dozen more names to it without a source, and this page leaves those where they are. What the sourced accounts share is a pattern: a musician buys it for the vocoder or the price, uses it on everything for a decade, and then either keeps it as a fixture or outgrows it with a pang.
+
+## The family
+
+- **microKORG XL** (announced 2008, shipped early 2009; £436 / $750): a different engine, Korg's MMT from the Radias and R3, eight voices, a 16-band vocoder with an XLR mic, an amber display where the original had panel text. Sound On Sound: "it's definitely more of a synth than it appears."
+
+- **microKORG S** (2016; £502.80 / $499): the original engine with a built-in speaker, 256 patch slots and eight favorite buttons. "Nearly perfect already," the review said of the original design.
+
+- **microKORG PT** (2017): a platinum fifteenth-anniversary finish, otherwise standard, sold in limited numbers and discontinued.
+
+- **microKORG Crystal** (2023): a twentieth-anniversary edition in a semi-translucent case with aluminum sides, announced at Superbooth at $529.99.
+
+- **microKORG 2** (unveiled January 2024; £519 / $549.99): eight voices, three oscillators per timbre, a 2.8-inch color screen, and a vocal section with a vocoder, hard tune and a harmonizer. Sound On Sound in 2025: "A worthy successor to one of the world's most popular electronic instruments."
+
+## What the instrument taught
+
+That a synthesizer is a set of decisions before it is a set of circuits. The MS2000 and the original microKORG share an engine, and one of them is a footnote while the other is a generation's first synth. The difference was the size, the price, the five knobs and the microphone, which is to say the difference was who could own it and how fast they could get a sound out of it. Every small synth with a vocoder since has had to answer the same question: can a person who has never programmed a filter make a usable sound in the first ten minutes? The 2002 answer set the bar.
+
+It also taught the trade something about vocoders. For most of the instrument's history a vocoder was a studio rack unit or a feature on an expensive workstation. Putting one, with a mic, into a £399 keyboard moved the robot voice from a specialist effect to a thing bands did on the second single. The guides on [what a vocoder is](https://gazillionindustries.com/what-is-a-vocoder/) and [how to use one](https://gazillionindustries.com/how-to-use-a-vocoder/) start from that assumption: the effect is ordinary now, and the question is how to make it sit in a mix.
+
+## Where it costs you
+
+The keys are small, and players with large hands do not get used to them. Four voices is four voices: a layered patch is a duophonic patch. There is no aftertouch, and five knobs mean most of the engine lives behind a matrix of edit-select buttons, so deep editing is a menu dive dressed up as knob-twisting. The 2003 review's complaint about the box has never been answered, because the box is the product.
+
+## Questions people ask
+
+### When did the microKORG come out?
+
+Korg released it in 2002, and Sound On Sound reviewed it in January 2003 at £399. Korg marked its fifteenth anniversary in 2017 and its twentieth in 2023.
+
+### Is the microKORG a real analog synth?
+
+No. It is an analog-modeling synthesizer: a digital engine designed to behave like a subtractive analog one, taken from Korg's MS2000. The XL of 2009 used a different modeling engine, and the microKORG 2 of 2024 uses a new one.
+
+### How many voices does the microKORG have?
+
+Four. Layering its two timbres halves that to two notes. The XL and the microKORG 2 have eight, dropping to four when the vocoder or both timbres are in use.
+
+### Is the microKORG the best-selling synth ever?
+
+Sound On Sound called it "the world's best-selling synth" in 2016 and MusicRadar "one of the world's best-selling synthesizers" in 2024, but Korg has not published a figure. A trade estimate of more than 100,000 units was already circulating by 2009.
+
+### Does the microKORG have a good vocoder?
+
+It analyzes the mic in 16 bands, edited as eight channels, with a four-voice carrier, and the microphone comes in the box. Reviewers in 2003 and 2005 rated it highly for the price; the XL's 16-band vocoder with an XLR mic was rated higher still.
+
+### What is the difference between the microKORG and the microKORG XL?
+
+The XL uses Korg's MMT engine rather than the MS2000-derived one, has eight voices instead of four, a 16-band vocoder with an XLR microphone, and a display. The original keeps the engine, the sound and the look that made it famous.
+
+## What WINNETKA does
+
+[WINNETKA](https://gazillionindustries.com/winnetka/) is our polysynth with a vocoder in it, $49, for Mac and Windows. Three modes: **SINGLE** plays one timbre, **LAYER** plays two on every key, and **VOCODER** turns the panel's rows into the vocoder's own, with sixteen bands drawn on the screen, formant shift, and a carrier you build from the oscillator, the right input and noise. Around it: a four-type filter, two envelopes, two LFOs, four patch cords, a three-band EQ, mod effects, delay and a sixteen-step arpeggiator. **350 presets**, every one tuned by ear. It is not a model of any instrument. AU, VST3 and standalone on Mac, VST3 on Windows.
+
+The wrong box, it turned out, was the right size.
 
 ---
 
