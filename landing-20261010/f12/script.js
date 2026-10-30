@@ -37,8 +37,9 @@
   // Geometric matte from the original F12 camera recipe. This clips only the
   // exterior canvas: panel colors and the original MP4/AAC are untouched.
   // The keys are embedded at build time, so no fetch can expose an unmasked film.
-  const panelCameraKeys = [[0.0,[2.1333333333333333,177.33333333333331,0.0],0,"WHOLE"],[5.274725274725275,[2.1333333333333333,177.33333333333331,0.0],0,"WHOLE"],[21.0989010989011,[3.5999999999999996,-71.99999999999989,0.0],1.2,"TOP"],[23.736263736263737,[4.32,-43.200000000000045,-216.0],2.5,"CRUSH"],[29.01098901098901,[4.909090909090909,-490.909090909091,-294.5454545454545],0.8,"POS"],[30.263736263736263,[3.8028169014084505,-106.47887323943655,-1502.112676056338],0.8,"VIS"],[33.23076923076923,[4.695652173913043,-258.26086956521726,-2066.086956521739],3.0,"VISZ"],[36.92307692307692,[3.8028169014084505,-106.47887323943655,-1502.112676056338],1.0,"VIS"],[40.21978021978022,[4.695652173913043,-258.26086956521726,-2066.086956521739],3.0,"VISZ"],[44.83516483516483,[3.5999999999999996,-71.99999999999989,-1067.4],1.2,"MID"],[47.8021978021978,[3.8028169014084505,-106.47887323943655,-1502.112676056338],2.5,"VIS"],[50.10989010989011,[3.5999999999999996,-71.99999999999989,0.0],1.2,"TOP"],[52.35164835164835,[2.1333333333333333,177.33333333333331,0.0],2.5,"WHOLE"]];
-  const previewStart = 5.4;
+  // v5 (30 Oct) is a full-frame cut with its own in-panel zooms, so no matte.
+  const panelCameraKeys = [];
+  const previewStart = 14.3;
   let maskFrame = null, maskAnimation = null;
   function panelRect(sourceTime) {
     const value = panelCameraKeys[0][1].map(number => Number(number.toFixed(4)));
@@ -57,6 +58,7 @@
     return [Math.max(0, x), Math.max(0, y), Math.min(1080, x + width), Math.min(1920, y + height)];
   }
   function applyPanelMask(mediaTime = video.currentTime) {
+    if (!panelCameraKeys.length) { video.style.clipPath = 'none'; return; }
     const [left, top, right, bottom] = panelRect(mediaTime + (mode === 'preview' ? previewStart : 0));
     video.style.clipPath = `inset(${top / 1920 * 100}% ${(1080 - right) / 1080 * 100}% ${(1920 - bottom) / 1920 * 100}% ${left / 1080 * 100}%)`;
   }
@@ -402,7 +404,7 @@
 
   // Exact authored F12 caption cues from the incumbent page; only audible film uses them.
   const capBox = document.querySelector('#demo-captions');
-  const cues = [[0,1.92,"This is F(ilter)12,"],[1.95,5.26,"a 12 bit filter by GAZILLION INDUSTRIES."],[5.29,13.5,"It has AURA, an advanced adaptive EQ."],[13.53,21.08,"MAX AURA."],[21.11,31.63,"Twelve bits is as clean as it gets."],[31.66,36.91,"An AUTO FILTER."],[36.94,52.67,"And a SIDECHAIN, the drums move the filter."],[52.7,56.7,"F(ilter)12 by GAZILLION INDUSTRIES."]];
+  const cues = [];   // v5 runs without captions (Tony, 29 Oct)
   function captions(){const cue = mode === 'demo' && cues.find(c => video.currentTime >= c[0] && video.currentTime < c[1]);capBox.textContent = cue ? cue[2] : '';}
   ['timeupdate','play','pause','emptied','ended'].forEach(type => video.addEventListener(type,captions));
 
