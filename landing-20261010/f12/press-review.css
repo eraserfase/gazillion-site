@@ -7,3 +7,6 @@
 .press-review .press-credit strong{font-weight:400}
 .press-review .press-credit a{color:inherit;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
 @media(max-width:700px){.press-review{grid-template-columns:1fr;gap:20px;max-width:430px;margin:0 auto 26px;padding-bottom:26px}.press-review-player{width:min(100%,260px);margin:0 auto}.press-review figcaption{text-align:left}.press-review .press-credit{font-size:13px}}
+/* 16:9 screen-capture demos (Carl Booth Music, 31 Oct). */
+.press-review--wide{grid-template-columns:minmax(0,560px) minmax(0,1fr)}.press-review--wide .press-review-player{aspect-ratio:16/9}
+@media(max-width:700px){.press-review--wide{grid-template-columns:1fr}.press-review--wide .press-review-player{width:100%}}
