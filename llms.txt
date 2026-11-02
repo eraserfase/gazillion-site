@@ -75,8 +75,8 @@ Last updated: 2026-10-28
 
 ## BENDO
 
-A circuit bending emulation plugin for macOS and Windows. BENDO can take any sound source, bend it,
-and even break it, similar to how circuit bending works on a hardware instrument. Every knob bends the same
+A circuit bending emulation plugin for macOS and Windows. Add BENDO to any sound source to bend it,
+stretch it, or even break it. Every knob bends the same
 virtual toy: its clock, its battery, its memory and its chips, so the bends set each other off.
 
 - Knobs: CLOCK, BATTERY, ADDRESS, DATA, LOOP, FEEDBACK, LOGIC, MIX, ECHO, RHYTHM, SPEECH, MOD ALL
