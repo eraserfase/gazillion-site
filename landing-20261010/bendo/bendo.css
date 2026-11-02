@@ -95,3 +95,4 @@ body{font-family:Arial,sans-serif}
 /* lockups on the clock: each line Arial bold, fitted to the clock's width, hugging it (Tony, 2 Nov) */
 .cd-fit,body[data-landing-family] .countdown .cd-fit{display:table;margin:0 auto;white-space:nowrap;font:700 20px/1.08 Arial,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#000}
 .cd-keep,body[data-landing-family] .countdown .cd-keep{margin:0;padding:0 0 6px;font-size:inherit;white-space:normal}
+.cd-fit .cd-ab{font:400 1em/1 "Archivo Black","Arial Black",sans-serif}   /* BENDO / bend, stretch, break in Archivo Black, the rest Arial bold (Tony, 2 Nov) */
