@@ -62,4 +62,15 @@ function fit(){document.querySelectorAll('.countdown').forEach(function(c){
 });}
 window.addEventListener('resize',fit);if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fit);setTimeout(fit,600);fit();})();
 </script>
-<script>(function(){function fit(){document.querySelectorAll(".cd-fit").forEach(function(l){var t=l.parentNode.clientWidth;l.style.fontSize="100px";var w=l.getBoundingClientRect().width-10;if(w>0&&t>0)l.style.fontSize=(100*t/w).toFixed(2)+"px"})}fit();addEventListener("resize",fit);if(document.fonts)document.fonts.ready.then(fit)})();</script></body></html>
+<script>(function(){var G=10,cv=document.createElement("canvas").getContext("2d");
+function ink(el){var cs=getComputedStyle(el),f=parseFloat(cs.fontSize);cv.font=cs.fontWeight+" "+f+"px "+cs.fontFamily;var m=cv.measureText(el.textContent.toUpperCase());if(!m.fontBoundingBoxAscent)return null;
+var lh=parseFloat(cs.lineHeight)||f*1.2,top=el.getBoundingClientRect().top,base=top+(lh-m.fontBoundingBoxAscent-m.fontBoundingBoxDescent)/2+m.fontBoundingBoxAscent;return{cap:base-m.actualBoundingBoxAscent,base:base}}
+function px(el,prop,delta){el.style[prop]=(parseFloat(getComputedStyle(el)[prop])||0)+delta+"px"}
+function fit(){document.querySelectorAll(".cd-fit").forEach(function(l){var t=l.parentNode.clientWidth;l.style.fontSize="100px";var w=l.getBoundingClientRect().width-10;if(w>0&&t>0)l.style.fontSize=(100*t/w).toFixed(2)+"px"});
+/* equal ink gaps around the clock: keep line -> clock, clock -> lines, lines -> what follows (Tony, 2 Nov) */
+document.querySelectorAll(".countdown").forEach(function(c){var k=c.querySelector(".cd-keep .cd-fit"),lab=c.querySelector(".cd-label"),th=c.querySelector(".cd-then"),pl=c.querySelectorAll(".cd-pitch .cd-fit");
+if(k&&lab){var a=ink(k);if(a)px(k.parentNode,"paddingBottom",G-(lab.getBoundingClientRect().top-a.base))}
+if(pl.length&&th){var b=ink(pl[0]);if(b)px(pl[0].parentNode,"paddingTop",G-(b.cap-th.getBoundingClientRect().bottom));
+var z=ink(pl[pl.length-1]),cb=c.getBoundingClientRect(),nx=null;[].forEach.call(c.parentNode.children,function(e){var r=e.getBoundingClientRect();if(e!==c&&r.height&&r.top>=cb.bottom-1&&r.top-cb.bottom<80&&r.left<cb.right&&r.right>cb.left&&(!nx||r.top<nx.getBoundingClientRect().top))nx=e});
+var pm=pl[0].parentNode;pm.style.marginBottom="0px";if(z&&nx)pm.style.marginBottom=G-(nx.getBoundingClientRect().top-z.base)+"px"}})}
+fit();addEventListener("resize",fit);if(document.fonts)document.fonts.ready.then(fit)})();</script></body></html>
