@@ -70,7 +70,7 @@ function openDemo(video){
  window.GZProductType?.(demoDialog.querySelector('h2'),demoProduct.dataset.product,demoProduct.getAttribute('aria-label'));
  const info=demoProduct.querySelector('.product-page')||demoProduct.querySelector('.cta');demoDialog.querySelector('.product-page').href=info.href;
  demoDialog.querySelector('.formats').innerHTML=demoProduct.querySelector('.formats').innerHTML;
- demoDialog.querySelector('.money').textContent=demoProduct.querySelector('.money').textContent;
+ demoDialog.querySelector('.money').textContent=demoProduct.querySelector('.money').textContent;demoDialog.querySelector('.money').className=demoProduct.querySelector('.money').className;
  const isApp=demoProduct.dataset.product==='chordea';
  demoDialog.querySelector('.demo-actions').hidden=isApp;demoAppActions.hidden=!isApp;demoChoices.hidden=!isApp;
  if(isApp){demoAppActions.replaceChildren(demoProduct.querySelector('.app-details').cloneNode(true),demoProduct.querySelector('.cta').cloneNode(true));demoChoices.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.source===video.dataset.source)));}
