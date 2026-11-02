@@ -6,6 +6,10 @@ const freeze=value=>{if(value&&typeof value==='object'){Object.values(value).for
 root.GazillionCheckoutRegistry=freeze({
   "version": 1,
   "products": {
+    "bendo": {
+      "price": 0,
+      "checkoutUrl": "https://gazillionindustries.gumroad.com/l/bendo?wanted=true&utm_source=gazillionindustries.com&utm_medium=cta&utm_content=hero_mid"
+    },
     "winnetka": {
       "price": 4900,
       "checkoutUrl": "https://gazillionindustries.gumroad.com/l/winnetka?wanted=true&utm_source=gazillionindustries.com&utm_medium=cta&utm_content=hero_mid"
