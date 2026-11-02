@@ -152,5 +152,5 @@ body{font-family:var(--type-ui)}
 /* Fixed product names use original Arial Black outlines across operating systems. */
 .cart-item h3,.demo-head h2{display:flex;align-items:center;min-height:1.3em}
 .cart-item h3 .gz-type-art,.demo-head h2 .gz-type-art{display:block;max-width:100%;margin:0;fill:currentColor;stroke:none;flex:none;overflow:visible}
-/* free products: lowercase with a period, in the black face (Tony, 2 Nov 2026) */
-.money.money-free{font-family:'Archivo Black','Arial Black',sans-serif;font-weight:400;font-synthesis:none}
+/* free: lowercase with a period, in the black face, on the cards, the demo dialog and the cart (Tony, 2 Nov 2026) */
+.money-free,.cart-subtotal strong.money-free{font-family:'Archivo Black','Arial Black',sans-serif;font-weight:400;font-synthesis:none}

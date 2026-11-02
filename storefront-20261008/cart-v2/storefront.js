@@ -246,7 +246,7 @@ function createCartSelectionStore(ids,key,getStorage=()=>localStorage){
 }
 const cartSelection=createCartSelectionStore(purchasable.keys(),cartStorageKey);
 let selectedProducts=cartSelection.read();
-const money=cents=>cents===0?'Free':new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:cents%100?2:0}).format(cents/100);
+const money=cents=>cents===0?'free.':new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:cents%100?2:0}).format(cents/100);
 function refreshCart(){
  const next=cartSelection.read();
  if(next.size===selectedProducts.size&&[...next].every(id=>selectedProducts.has(id)))return false;
@@ -264,8 +264,8 @@ function drawCart(){
  const total=items.reduce((sum,p)=>sum+p.price,0);
  document.querySelectorAll('.cart-count').forEach(el=>el.textContent=String(items.length));
  document.querySelector('.cart-toggle').setAttribute('aria-label',`Cart, ${items.length} ${items.length===1?'product':'products'}`);
- document.querySelector('.dock-total').textContent=money(total);
- document.querySelector('#cart-total').textContent=money(total);
+ document.querySelector('.dock-total').textContent=money(total);document.querySelector('.dock-total').classList.toggle('money-free',total===0);
+ document.querySelector('#cart-total').textContent=money(total);document.querySelector('#cart-total').classList.toggle('money-free',total===0);
  document.querySelector('.cart-dock').hidden=items.length===0;
  cart.querySelector('.cart-empty').hidden=items.length>0;
  cart.querySelector('.cart-bottom').hidden=items.length===0;
@@ -288,7 +288,7 @@ function drawCart(){
    selectedProducts=cartSelection.set(p.id,false);drawCart();if(wasSelected&&!selectedProducts.has(p.id)){storeTrack('storefront_remove_from_cart',{product:p.id,position:'storefront_cart'});storeCommerce('remove_from_cart',[p]);}cartStatus.textContent=`${p.name} removed from cart.`;
    const remaining=cartItems.querySelectorAll('.cart-remove');(remaining[Math.min(index,remaining.length-1)]||cart.querySelector('.continue-shopping')).focus();
   });
-  const price=document.createElement('span');price.className='cart-item-price';price.textContent=money(p.price);
+  const price=document.createElement('span');price.className='cart-item-price'+(p.price===0?' money-free':'');price.textContent=money(p.price);
   details.append(name,remove);row.append(image,details,price);return row;
  }));
  cart.querySelector('.checkout-preview').hidden=true;
