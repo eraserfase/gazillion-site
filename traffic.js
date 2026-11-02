@@ -9,8 +9,8 @@
   try { if (localStorage.getItem('umami.disabled')) return; } catch (_) {}
   var ENDPOINT = 'https://board.gazillionindustries.com/presence/collect';
   var WEBSITE = 'ed71399d-1069-4354-abbf-73dc311e5bc3', GA = 'G-2ZY2T73BLK';
-  var productByListing = {spcjdr:'drugs',kzfirr:'f12',iyhfta:'f12',bfxzea:'skruu',aslssg:'tripleog',xelfo:'beefy',journeyman:'journeyman',azusy:'journeyman',winnetka:'winnetka',xhovtp:'winnetka'};
-  var productBySlug = {drugs:'drugs',spcjdr:'drugs',f12:'f12','f12-plugin-only':'f12',kzfirr:'f12',iyhfta:'f12',skruu:'skruu',bfxzea:'skruu',tripleog:'tripleog',aslssg:'tripleog',beefy:'beefy',xelfo:'beefy',journeyman:'journeyman',azusy:'journeyman',winnetka:'winnetka',xhovtp:'winnetka'};
+  var productByListing = {spcjdr:'drugs',kzfirr:'f12',iyhfta:'f12',bfxzea:'skruu',aslssg:'tripleog',xelfo:'beefy',journeyman:'journeyman',azusy:'journeyman',winnetka:'winnetka',xhovtp:'winnetka',bendo:'bendo',fvufr:'bendo'};
+  var productBySlug = {drugs:'drugs',spcjdr:'drugs',f12:'f12','f12-plugin-only':'f12',kzfirr:'f12',iyhfta:'f12',skruu:'skruu',bfxzea:'skruu',tripleog:'tripleog',aslssg:'tripleog',beefy:'beefy',xelfo:'beefy',journeyman:'journeyman',azusy:'journeyman',winnetka:'winnetka',xhovtp:'winnetka',bendo:'bendo',fvufr:'bendo'};
   var pageId = nonce(), gaClient = '', lastBridge = '', started = false;
   var queue = [], busy = 0, retryTimer = null, nativeSession = null, cloudPageviewSent = false;
   var keys = new Set(['journey','product','tracking_version','video','asset','audible_seconds','duration',
@@ -22,8 +22,11 @@
   }
   function product() {
     if (frame) return productByListing[location.pathname.replace(/^\//,'').replace(/\/$/,'')] || '';
-    var m = location.pathname.match(/^\/(drugs|f12|skruu|tripleog|beefy|journeyman|winnetka)(?:\.html|\/)?$/);
-    return m ? m[1] : 'store';
+    var m = location.pathname.match(/^\/(drugs|f12|skruu|tripleog|beefy|journeyman|winnetka|bendo)(?:\.html|\/)?$/);
+    // Any other page sends no product and the collector names it from serve.py
+    // PRODUCTS. Sending 'store' for a page it knows gets every observation refused:
+    // BENDO's page went dark that way on its launch day, 2 Nov 2026.
+    return m ? m[1] : '';
   }
   function props(value) {
     var out = {};
@@ -122,7 +125,7 @@
   // Managed carts call this only after the remaining selection and outbound
   // destination have passed validation. It records a click, never an order.
   function checkoutClick(target) {
-    if (!site || !/^(drugs|f12|skruu|tripleog|beefy|journeyman|winnetka)$/.test(target || '')) return Promise.resolve();
+    if (!site || !/^(drugs|f12|skruu|tripleog|beefy|journeyman|winnetka|bendo)$/.test(target || '')) return Promise.resolve();
     var b=base('click');b.action='buy';b.target=target;
     return enqueue(b);
   }

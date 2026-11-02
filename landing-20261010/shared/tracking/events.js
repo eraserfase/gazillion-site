@@ -10,7 +10,9 @@
     f12: {name:'F(ilter)12', slug:'f12-plugin-only', price:49},
     skruu: {name:'SKRUU', slug:'skruu', price:29},
     drugs: {name:'DRUGS', slug:'drugs', price:0},
-    winnetka: {name:'WINNETKA', slug:'winnetka', price:49}
+    winnetka: {name:'WINNETKA', slug:'winnetka', price:49},
+    // Free until the page clock and the Pi switch both turn it to $19 (2026-11-16T07:48:35Z).
+    bendo: {name:'BENDO', slug:'bendo', price:Date.now() < Date.parse('2026-11-16T07:48:35Z') ? 0 : 19}
   };
   var item = products[product];
   if (!item) return;

@@ -4,7 +4,7 @@
 (function () {
   "use strict";
   if (!/^(www\.)?gazillionindustries\.com$/i.test(location.hostname)) return;
-  var product = (location.pathname.match(/^\/(drugs|f12|skruu|tripleog|beefy|journeyman|winnetka)(?:\.html|\/)?$/) || [])[1];
+  var product = (location.pathname.match(/^\/(drugs|f12|skruu|tripleog|beefy|journeyman|winnetka|bendo)(?:\.html|\/)?$/) || [])[1];
   if (!product) return;
   var attr = window.GZ_ATTR;
   if (!attr) return;
