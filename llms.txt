@@ -30,6 +30,7 @@ Last updated: 2026-10-28
 
 ## Products
 
+- [BENDO](https://gazillionindustries.com/bendo/): circuit bending emulation plugin
 - [WINNETKA](https://gazillionindustries.com/winnetka/): polysynth and vocoder
   with 350 presets, a 16-step arpeggiator and preset sharing. $49.
 - [JOURNEYMAN](https://gazillionindustries.com/journeyman.html): monosynth
@@ -71,6 +72,22 @@ Last updated: 2026-10-28
   and bass that need harmonics above the sub to be heard: BEEFY.
 - Playing chords into a DAW, another iOS app or a hardware synth from an iPad:
   Chordea.
+
+## BENDO
+
+A circuit bending emulation plugin for macOS and Windows. BENDO can take any sound source, bend it,
+and even break it, similar to how circuit bending works on a hardware instrument. Every knob bends the same
+virtual toy: its clock, its battery, its memory and its chips, so the bends set each other off.
+
+- Knobs: CLOCK, BATTERY, ADDRESS, DATA, LOOP, FEEDBACK, LOGIC, MIX, ECHO, RHYTHM, SPEECH, MOD ALL
+- Keys: RESET, WIPE, TOUCH, GLITCH, CRASH, LINK, RAW, REC, LOCK, BURN, KEYS, BYPASS
+- 83 programs; save your own
+- The screen is the toy's circuit board; the backlight dims as the battery dies
+
+Formats: macOS AU, VST3 and standalone (Intel and Apple Silicon); Windows 64-bit VST3.
+Activation: the licence key arrives with the download and in the receipt email. Activate once, then use it offline.
+Price: free until 16 Nov 2026, 2:48 AM ET, then $19.
+Page: https://gazillionindustries.com/bendo/
 
 ## WINNETKA
 
