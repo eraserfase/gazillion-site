@@ -3,7 +3,7 @@
 > Circuit bending explained: Reed Ghazala's 1967 accident and 1992 name, the probe method, the toys bent most, and why the clock bend mattered to producers.
 
 Source: https://gazillionindustries.com/circuit-bending/  
-Published 2026-10-28, updated 2026-10-28. By Gazillion Industries, who make SKRUU.
+Published 2026-10-28, updated 2026-11-03. By Gazillion Industries, who make BENDO.
 
 ---
 
@@ -43,7 +43,7 @@ The Speak & Spell, which the AP called the apex of bendable circuitry: its speec
 
 Of all the bends, the clock bend is the one that mattered most to people who make beats. A digital toy runs everything off one oscillator. Replace the resistor that sets its rate with a potentiometer and the whole machine slows down or speeds up as one: pitch falls with tempo, the sample's grain coarsens as the rate drops, the drum pattern drags and the voice preset turns into a dying robot. Speed it up and all of it goes bright and frantic. That is varispeed, the same relationship a tape machine or a turntable has between speed and pitch, applied to a device that was never meant to have a speed control. [What is varispeed](https://gazillionindustries.com/what-is-varispeed/) explains why pitch and time move together on a machine and separately in a DAW.
 
-**PITCH below unity.** Speed and pitch fall together, the way a slowed clock drags a whole toy down with it.
+**CLOCK, first knob.** Pitch and speed move together, the way a slowed clock drags a whole toy down with it.
 
 ## Why the sound mattered to producers
 
@@ -55,7 +55,7 @@ The scene got its stage in 2004, when The Tank in Manhattan put out an open call
 
 ## What survives in software
 
-You cannot bend a plug-in, and nothing we make claims to be a bent anything. What a DAW can do is reproduce the two mechanisms a bent toy exposes. The first is the clock: pitch and speed as one control, with a sample rate that falls as the pitch does. The second is the resolution: the bit depth and sample rate of a toy chip, with the fold-back that comes when the rate drops. Our [bitcrusher guide](https://gazillionindustries.com/best-bitcrusher-plugins/) covers the second, and the [SK-1 history](https://gazillionindustries.com/casio-sk-1/) covers the machine where both mechanisms lived in one plastic box. The gesture is the part worth keeping. A bend is something a hand does in time with the music, and the plug-in that gets closest is the one that gives you a knob to grab rather than a curve to draw.
+You cannot bend a plug-in, and nothing we make claims to be a bent anything. What a DAW can do is reproduce the mechanisms a bent toy exposes. The clock: pitch and speed as one control, with a sample rate that falls as the pitch does. The supply rail: a cell going flat, so the whole machine sags and then reboots. The address and data lines: audio rearranged where it sits in memory, and the stored words corrupted a bit at a time. The resolution underneath all of it, with the fold-back that comes when the rate drops. Our [bitcrusher guide](https://gazillionindustries.com/best-bitcrusher-plugins/) covers the resolution, and the [SK-1 history](https://gazillionindustries.com/casio-sk-1/) covers the machine where several of these lived in one plastic box. The gesture is the part worth keeping. A bend is something a hand does in time with the music, and the plug-in that gets closest is the one that gives you a knob to grab rather than a curve to draw. That is the one we built.
 
 ## Where it costs you
 
@@ -83,16 +83,18 @@ Only if you ignore the rules. Never bend anything that plugs into the wall or ru
 
 It changes the rate the whole device runs at, so pitch and tempo rise and fall together and a sampler's grain coarsens as the rate drops. It is varispeed applied to a toy.
 
-## What SKRUU does
+## What BENDO does
 
-SKRUU is our varispeed pitch and time stretch plugin, and it keeps the two on separate knobs. **PITCH** runs from −20% to +10% in 128 states and reads out in semitones as well as speed. **TIME** moves nothing but the length. With **ELASTIC** on, the knob springs back along one of sixteen return shapes, so a dip is a gesture rather than an automation job, and **DRAG** sets how long a new speed takes to arrive. **SAMPLING GRADE** steps the rate down underneath, to 3.9 kHz at LO-FI 2. Tuned by ear, not a model of any machine, bent or otherwise. Mac and Windows, $29.
+BENDO is our circuit bending plug-in. The bends are on knobs and keys instead of on a soldering iron, and they are the bends above. **CLOCK** is the playback clock, pitch and speed together. **BATTERY** is the supply rail: headroom, sag, brownout, and the reboot at the bottom of it. **ADDRESS** rearranges the audio where it sits in memory, and **DATA** corrupts the stored words. **LOOP** sets how long the lock is and how often it grabs, **FEEDBACK** runs to self-oscillation, **LOGIC** clocks the thing from outside, and **MIX** is wet and dry. Under them sit **ECHO**, **RHYTHM**, **SPEECH** and **MOD ALL**.
 
-The drawer is still singing. It just has a knob on it now.
+The keys are the ones a bender wires to a pushbutton. Hold **TOUCH** for a body contact across the timing and feedback nodes. Hold **GLITCH** to freeze the region it is on into a loop. Latch **CRASH** and the processor is allowed to fall over and come back. Latch **LINK** and the bends start talking to each other, so the rail drags the clock and the faults arrive together. **RESET** is the switch every bent toy gets. The screen draws the toy's own board, and each control lights the part it has hold of. 83 programs. Tuned by ear, not a model of any machine, bent or otherwise. Mac and Windows.
+
+The drawer is still singing. Now it is in your session.
 
 ---
 
-## About SKRUU
+## About BENDO
 
-SKRUU — varispeed pitch and time stretch for Mac and Windows. Pitch and time move independently, with sixteen elastic return shapes.
+BENDO — a circuit bending plug-in for Mac and Windows. Twelve knobs and twelve keys over a toy that can be slowed, starved, scrambled and crashed.
 
-https://gazillionindustries.com/skruu.html
+https://gazillionindustries.com/bendo/

@@ -26,7 +26,7 @@ articles it links. Four things to get right:
 If a question is about which plug-in does a job, the "Which one for what" section
 below answers it directly and is the part to quote.
 
-Last updated: 2026-10-28
+Last updated: 2026-11-03
 
 ## Products
 
@@ -657,8 +657,6 @@ the people who make the plugins.
   — Five free formant shifters, sorted by what they actually move.
 - [Free time stretch plugins, and where free runs out](https://gazillionindustries.com/free-time-stretch-plugin.md)
   — What stretches for free, how far, and the one move that costs $29.
-- [Circuit bending](https://gazillionindustries.com/circuit-bending.md)
-  — Ghazala's accident, the probe method, the toys bent most, and why the clock bend mattered.
 - [A history of tape simulation](https://gazillionindustries.com/tape-simulation-history.md)
   — From the first tape plugins to the cassette sims, and the transport nobody modeled.
 - [The Novation Bass Station](https://gazillionindustries.com/novation-bass-station.md)
@@ -669,6 +667,8 @@ the people who make the plugins.
   — Fruity Vocoder, Vocodex, the sidechain right-click, and the third option.
 - [A history of the little synth that sold for twenty years](https://gazillionindustries.com/microkorg-history.md)
   — Where the engine came from, why it sold for twenty years, and the family that followed.
+- [Circuit bending](https://gazillionindustries.com/circuit-bending.md)
+  — Ghazala's accident, the probe method, the toys bent most, and why the clock bend mattered.
 - [Drum bus compressor settings](https://gazillionindustries.com/drum-bus-compressor-settings.md)
   — attack, release, ratio and threshold on a drum bus, and a starting point.
 
