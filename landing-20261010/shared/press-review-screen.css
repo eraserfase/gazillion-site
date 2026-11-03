@@ -1,0 +1,12 @@
+/* Wide screen-capture demo in the testimonials, credited and linked to the creator's post (jayorient, 3 Nov 2026).
+   Self-contained, so it also works on pages without a press-review.css. */
+/* social-proof.css hides a section with no text testimonials (0,4,0); JOURNEYMAN's holds only this video and has no id, so :not(#_) lifts this past it. */
+.social-proof:has(.press-review--screen):not(#_){display:block}
+.press-review.press-review--screen{display:grid;grid-template-columns:minmax(0,560px) minmax(0,1fr);align-items:center;gap:48px;margin:0 0 28px;padding-bottom:28px;border-bottom:1px solid var(--line)}
+.press-review--screen .press-review-player{width:100%;aspect-ratio:1660/1078;background:#000}.press-review--screen video{display:block;width:100%;height:100%;object-fit:contain}
+.press-review--screen figcaption{max-width:520px;font:400 16px/1.6 Arial,sans-serif;color:var(--ink)}
+.press-review--screen figcaption p{margin:0 0 16px}
+.press-review--screen .press-credit{font:400 15px/1.45 'Archivo Black','Arial Black',sans-serif;text-transform:uppercase;font-synthesis:none}
+.press-review--screen .press-credit strong{font-weight:400}
+.press-review--screen .press-credit a{color:inherit;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
+@media(max-width:700px){.press-review.press-review--screen{grid-template-columns:1fr;gap:20px;max-width:430px;margin:0 auto 26px;padding-bottom:26px}.press-review--screen .press-review-player{width:100%;margin:0}.press-review--screen figcaption{text-align:left}.press-review--screen .press-credit{font-size:13px}}
