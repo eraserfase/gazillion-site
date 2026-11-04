@@ -8,4 +8,4 @@
 .press-review .press-credit{font:400 15px/1.45 'Archivo Black','Arial Black',sans-serif;text-transform:uppercase;font-synthesis:none}
 .press-review .press-credit strong{font-weight:400}
 .press-review .press-credit a{color:inherit;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
-@media(max-width:700px){.press-review{grid-template-columns:1fr;gap:20px;max-width:430px;margin:0 auto 26px;padding-bottom:26px}.press-review-player{width:min(100%,260px);margin:0 auto}.press-review figcaption{text-align:left}.press-review .press-credit{font-size:13px}}
+@media(max-width:700px){.press-review{grid-template-columns:1fr;gap:20px;max-width:430px;margin:0 auto 26px;padding-bottom:26px}.press-review-player{width:min(100%,260px);margin:0 auto}.press-review figcaption{text-align:center}.press-review .press-credit{font-size:13px}}

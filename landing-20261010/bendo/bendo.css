@@ -57,6 +57,12 @@ body{font-family:Arial,sans-serif}
 .story-row{padding-block:28px;gap:24px}.story-copy h2:not(.statement),.purchase-end h2{font-size:28px}
 .story-row .detail-group{order:1;max-width:430px;margin:auto}.story-row .story-copy{order:0}
 .requirements-row{gap:28px}.section-purchase{padding-bottom:24px}
+/* The single-column grids default to an auto minimum, so .cd-then ("then the price goes up
+   to $19", white-space:nowrap, 433px min-content) pinned the column at 430px inside a 343px
+   wrap and pushed the page to 447px on every phone. Everything in the column then sat 16px
+   from the left and 1px from the right, which is what read as "not centered" (Tony, 4 Nov).
+   minmax(0,1fr) lets the track shrink to the wrap; the countdown fitter then sizes to it. */
+.requirements-row,.story-row{grid-template-columns:minmax(0,1fr)}
 }
 @media(max-width:359px){.hero-lockup{max-width:280px}.buy .price{font-size:24px;min-width:64px;padding-inline:10px}.compatibility,.footer a{font-size:11px}.entry-reassurance{font-size:11px}.paymarks{margin-bottom:8px}}
 
