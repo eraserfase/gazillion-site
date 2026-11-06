@@ -122,3 +122,18 @@ body{font-family:Arial,sans-serif}
 @media(max-width:700px){.purchase .cd-pitch{display:none}.cd-pitch-m{display:block;margin:2px auto 24px}   /* (24 collapses with .demo-purchase's 12) equal ink gaps: share BENDO -> lockup -> GET BENDO, measured at 360 and 390 */.cd-pitch-m[hidden]{display:none}}
 /* a quote left alone on its row of two is centred across the row, not parked in the left column (Tony, 6 Nov) */
 #testimonials .testimonial .tm:not(:first-child):last-child:nth-child(even){grid-column:1/-1;justify-self:center;max-width:820px}
+/* the keys: heading, the strip of keys, then the twelve in two columns, one centred block (6 Nov: beside a
+   690px list the 76px strip left most of its column empty) */
+#keys{grid-template-columns:minmax(0,1fr)}
+#keys .story-copy{max-width:960px}
+#keys .detail-group{margin:6px 0 4px}
+#keys .detail-photo{max-width:none}
+@media(min-width:701px){
+ #keys .controls{grid-template-columns:max-content minmax(0,1fr) max-content minmax(0,1fr);column-gap:18px}
+ #keys .controls dd:nth-of-type(odd){margin-right:22px}
+ /* a row with copy and no picture spans the row, centred */
+ #possibilities .story-copy{grid-column:1/-1;max-width:none;text-align:center}
+}
+/* a credit too long for a phone breaks at its last separator, which then goes: never a line that starts with a dot (6 Nov) */
+.tm-who .tm-nb{white-space:nowrap}
+@media(max-width:480px){.tm-who .tm-sep{display:none}.tm-who .tm-nb{display:block}}
