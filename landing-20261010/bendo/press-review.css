@@ -1,9 +1,10 @@
 /* social-proof.css hides a section with no text testimonials; this one holds only the video. */
 #testimonials.social-proof:has(.press-review){display:block}
 /* Attributed video review at the top of the testimonials (same layout as F12's press-review.css). */
-.press-review{display:grid;grid-template-columns:minmax(0,300px) minmax(0,1fr);align-items:center;gap:48px;margin:0 0 28px;padding-bottom:28px;border-bottom:1px solid var(--line)}
+/* centred, the credit under the video, at every width (Tony, 6 Nov: side by side it left dead space on desktop) */
+.press-review{display:grid;grid-template-columns:minmax(0,300px);justify-content:center;align-items:center;gap:20px;margin:0 0 28px;padding-bottom:28px;border-bottom:1px solid var(--line)}
 .press-review-player{width:100%;aspect-ratio:9/16;background:#000}.press-review video{display:block;width:100%;height:100%;object-fit:contain}
-.press-review figcaption{max-width:520px;font:400 16px/1.6 Arial,sans-serif;color:var(--ink)}
+.press-review figcaption{max-width:520px;text-align:center;font:400 16px/1.6 Arial,sans-serif;color:var(--ink)}
 .press-review figcaption p{margin:0 0 16px}
 .press-review .press-credit{font:400 15px/1.45 'Archivo Black','Arial Black',sans-serif;text-transform:uppercase;font-synthesis:none}
 .press-review .press-credit strong{font-weight:400}
