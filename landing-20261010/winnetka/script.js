@@ -381,3 +381,30 @@
   state();
   syncDock();
 })();
+// 9 Nov 2026: both buy buttons on screen at first paint (house rule, BEEFY's fitOpening). Where the second button sits
+// under the demo (the stacked phone layout), the demo panel narrows until that button's bottom clears the viewport.
+(() => {
+  const view = document.querySelector('.hero .instrument-view');
+  const mid = document.querySelector('.hero .demo-purchase .buy');
+  if (!view || !mid) return;
+  let frame = 0;
+  function fit() {
+    frame = 0;
+    view.style.maxWidth = '';
+    if (!mid.offsetParent) return;                       // no second button in this layout
+    const vh = Math.min(innerHeight, window.visualViewport ? visualViewport.height : innerHeight);
+    const top = view.getBoundingClientRect().top + scrollY;
+    const below = mid.getBoundingClientRect().bottom + scrollY - (top + view.offsetHeight);
+    const room = vh - top - below - 12;
+    const width = view.offsetWidth, height = view.offsetHeight;
+    if (height <= room) return;
+    view.style.maxWidth = Math.max(80, room * width / height) + 'px';
+  }
+  const queue = () => { if (!frame) frame = requestAnimationFrame(fit); };
+  addEventListener('resize', queue);
+  if (window.visualViewport) visualViewport.addEventListener('resize', queue);
+  if (document.fonts) document.fonts.ready.then(queue);
+  addEventListener('load', queue);
+  if (window.ResizeObserver) { const ro = new ResizeObserver(queue); ro.observe(document.querySelector('.hero-content') || document.body); }
+  queue();
+})();

@@ -16,9 +16,6 @@ body{font-family:Arial,sans-serif}
 .buy .price,.sticky-buy .price{display:flex;align-items:center;align-self:stretch;justify-content:center;flex:none;min-width:84px;padding-inline:18px;margin:0;font:400 28px/1 Arial,sans-serif;background:transparent;color:inherit;border-left:1px solid #00000026}
 .buy:hover,.sticky-buy:hover{background:var(--purchase-hover);color:var(--purchase-ink);border-color:#414141}
 .sticky-buy{width:390px;padding:0 0 0 16px}.sticky-buy .price{font-size:25px;min-width:74px;padding-inline:14px}
-.hero-thesis{grid-column:2;grid-row:2;align-self:start;text-align:center;max-width:480px;width:100%;margin:auto;font:400 16px/1.4 Arial,sans-serif}
-.thesis-label{font:700 17px/1.25 Arial,sans-serif;margin-bottom:10px}
-.thesis-lines{font:400 25px/1.22 Arial,sans-serif;margin-bottom:10px}
 .hero-reviews .gr-reviews{margin-top:8px}.hero-reviews .gr-quote{gap:5px}.hero-reviews .gr-rating{margin:0}
 #testimonials .testimonial-artwork{display:grid;grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:calc((100% - 56px)/3);gap:28px;overflow-x:auto;scroll-snap-type:x mandatory;overscroll-behavior-x:contain;padding-bottom:14px;scrollbar-width:thin}
 #testimonials .testimonial-artwork .tm{grid-column:auto;max-width:none;width:100%;padding:0;border:0;scroll-snap-align:start}
@@ -37,14 +34,14 @@ body{font-family:Arial,sans-serif}
 .purchase-end{text-align:center;width:100%;max-width:480px;margin:auto}
 .purchase-end h2{margin-bottom:8px}.purchase-end>p{margin-bottom:18px}
 .purchase-end .buy{margin-top:0}.footer a{font-size:11px}
-@media(max-width:1000px) and (min-width:701px){.hero{column-gap:36px}.hero-content{gap:16px}.hero-thesis .thesis-lines{font-size:23px}.buy>span:first-child{font-size:24px}.buy .price{font-size:25px;min-width:73px;padding-inline:12px}}
+@media(max-width:1000px) and (min-width:701px){.hero{column-gap:36px}.hero-content{gap:16px}.buy>span:first-child{font-size:24px}.buy .price{font-size:25px;min-width:73px;padding-inline:12px}}
 @media(max-width:700px){
 .hero{padding-top:20px;gap:0;display:flex;flex-direction:column}
 .hero-lockup{max-width:340px;margin:0 auto 14px}.purchase{margin:0 auto}
 .purchase .paymarks{margin-bottom:2px}.purchase .buy{order:1}.purchase .compatibility{order:2;margin:10px 0 0}.purchase-term{order:3}
 .hero-reviews:has(.gr-rating,.gr-reviews){display:contents}.hero-reviews .gr-rating{order:1;margin:12px auto 0}.hero-reviews .gr-reviews{order:3;margin:20px auto 0}
 .instrument{margin-top:16px;width:100%}.instrument-view.is-playing{width:min(100%,430px);aspect-ratio:720/928}
-.demo-purchase{margin-top:12px}.hero-thesis{order:4;margin:22px auto 0}.thesis-lines{font-size:23px}
+.demo-purchase{margin-top:12px}
 .buy .price{font-size:26px;min-width:72px;padding-inline:13px}.buy>span:first-child,.sticky-buy>span:first-child{font-size:clamp(17px,6.1cqi,28px)}
 #testimonials .testimonial-artwork{grid-template-columns:none;grid-auto-columns:82%;gap:16px;max-width:none;margin:0}
 #testimonials .testimonial-artwork .tm{max-width:none;justify-self:stretch}
@@ -55,3 +52,60 @@ body{font-family:Arial,sans-serif}
 @media(max-width:359px){.hero-lockup{max-width:280px}.buy .price{font-size:24px;min-width:64px;padding-inline:10px}.compatibility,.footer a{font-size:11px}.entry-reassurance{font-size:11px}.paymarks{margin-bottom:8px}}
 
 .tm-vid.is-playing .play-badge{left:auto;right:8px;top:8px;transform:none}
+
+/* 9 Nov 2026, Tony: the thesis is its own section and a lockup; stars above the button, reviews under the
+   formats; the DTM and jayorient videos in one block; the cards an obvious carousel that moves by itself;
+   the plug-in's name always Archivo Black. */
+.gz-name{font-family:'Archivo Black','Arial Black',sans-serif;font-weight:400;font-synthesis:none}
+.hero-content{grid-row:1/3;align-self:center}
+.hero-rating:empty{display:none}.hero-rating .gr-rating{margin:0 auto 12px;justify-content:center}
+.thesis{display:flex;justify-content:center;border-top:1px solid var(--line);padding-block:56px}
+.thesis-lockup{margin:0;width:min(100%,520px)}.thesis-lockup img{display:block;width:100%;height:auto}
+.card-controls{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:18px}
+.card-controls[hidden]{display:none}
+.card-nav{width:44px;height:44px;display:grid;place-items:center;padding:0 0 3px;border:1px solid var(--ink);background:transparent;color:var(--ink);font:400 28px/1 Arial,sans-serif;cursor:pointer}
+.card-nav:hover{background:var(--ink);color:#fff}
+.card-dots{display:flex;gap:8px}
+.card-dot{width:24px;height:4px;padding:0;border:0;background:#c9c9c6;cursor:pointer;position:relative;overflow:hidden}
+.card-dot[aria-current="true"]{background:#c9c9c6}
+.card-dot[aria-current="true"]::after{content:"";position:absolute;inset:0;background:var(--ink);transform-origin:left;animation:card-fill var(--card-ms,4000ms) linear forwards}
+.testimonial-artwork.is-paused~.card-controls .card-dot::after,.card-controls.is-paused .card-dot::after{animation-play-state:paused}
+@keyframes card-fill{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@media(prefers-reduced-motion:reduce){.card-dot[aria-current="true"]::after{animation:none}}
+@media(min-width:701px){
+ #testimonials .testimonial-artwork{grid-auto-columns:calc((100% - 56px)/3);scrollbar-width:none}
+ #testimonials .testimonial-artwork::-webkit-scrollbar{display:none}
+ .video-pair{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);grid-template-rows:auto 1fr;grid-template-areas:"kv kq" "kv jay";column-gap:48px;row-gap:32px;align-items:start;margin:0 0 28px;padding-bottom:28px;border-bottom:1px solid var(--line)}
+ .video-pair .ken-review{display:contents}
+ .video-pair .ken-review-player{grid-area:kv}
+ .video-pair .ken-review figcaption{grid-area:kq}
+ .video-pair .ken-review .ken-article-quotes{margin-bottom:16px;gap:16px}
+ .video-pair .ken-review .ken-article-quotes p{font-size:22px;line-height:1.08}
+ .video-pair .press-review.press-review--screen{grid-area:jay;display:block;margin:0;padding:0;border:0}
+ .video-pair .press-review--screen figcaption{margin-top:12px}
+ .video-pair .press-review--screen .press-credit{margin:0}
+}
+@media(max-width:700px){.thesis{padding-block:36px}.thesis-lockup{width:min(100%,430px)}}
+/* 9 Nov 2026: 2.0 + preset packs, readable in the first seconds (Tony). Release note = BENDO's 2.0 box. */
+.release-note{width:100%;max-width:430px;margin:12px auto 0;box-sizing:border-box;background:#000;color:#fff;padding:9px 12px;font:400 12px/1.4 Arial,sans-serif;text-transform:uppercase;text-align:center;letter-spacing:.02em;text-wrap:balance}
+.release-note u{white-space:nowrap}
+.release-note strong{font-weight:700}
+.release-note a{color:inherit;text-decoration:none}
+.release-note u{text-decoration:underline;text-underline-offset:2px}
+.release-note a:focus-visible{outline:2px solid #fff;outline-offset:2px}
+.packs{border-top:1px solid var(--line);padding-block:44px 48px}
+.packs>.section-heading{text-align:center;margin:0 0 32px}
+.pack-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:64px;max-width:1040px;margin:0 auto}
+.pack{display:flex;flex-direction:column;align-items:center;text-align:center;min-width:0}
+.pack-screen,.pack-desc{margin:0;width:min(100%,440px)}.pack-screen img,.pack-desc img{display:block;width:100%;height:auto}
+.pack-desc{margin-top:16px}
+.pack-demos{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(0,1fr);gap:8px;margin:auto 0 20px;padding-top:20px;width:min(100%,440px)}
+.pack-demos .preset-preview{min-width:0;justify-content:center;padding-inline:4px}
+.pack .buy{width:min(100%,440px);margin:0}
+.pack-note{margin:8px 0 0;font:400 12px/1.4 Arial,sans-serif;color:var(--muted)}
+@media(max-width:700px){
+.release-note{order:0;margin:0 auto 12px}
+.packs{padding-block:32px 36px}.packs>.section-heading{margin-bottom:24px}
+.pack-grid{grid-template-columns:1fr;gap:40px}
+.pack+.pack{border-top:1px solid var(--line);padding-top:36px}
+}
