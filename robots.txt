@@ -51,7 +51,6 @@ Sitemap: https://gazillionindustries.com/sitemap.xml
 # meta-externalagent). Meta documents robots.txt as the only control. They may
 # read the storefront and the pages ads actually land on, nothing else.
 User-agent: meta-externalads
-User-agent: meta-externalagent
 Disallow: /
 Allow: /$
 Allow: /beefy.html
@@ -69,3 +68,9 @@ Allow: /traffic.js
 Allow: /landing-url.js
 Allow: /home-button.js
 Allow: /presence.js
+
+# 10 Nov 2026 (Tony: "turn off the meta crawler"): meta-externalagent is Meta's
+# AI-training / indexing crawler, not ads (meta-externalads, above), link previews
+# (facebookexternalhit) or Meta AI search (meta-webindexer). It gets nothing.
+User-agent: meta-externalagent
+Disallow: /
