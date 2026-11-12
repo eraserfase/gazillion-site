@@ -164,3 +164,5 @@ body[data-landing-family] .gz-name i{font-family:Archivo,sans-serif;font-weight:
 .hero-thesis .section-heading{margin:0 0 10px}
 /* "free." beside the last purchase button: Arial Black (Tony, 11 Nov 2026). */
 body[data-landing-family] .requirements-row .purchase-end>p{font-family:'Arial Black',Arial,sans-serif;font-weight:900;font-synthesis:none}
+
+.story-copy .copy-link{color:inherit;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
