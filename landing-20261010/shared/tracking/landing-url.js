@@ -175,7 +175,7 @@ window.GZ_ATTR = (function(){
   result.mark = function(stage, product){
     touch();
     if(!token || !(window.GZTraffic || window.umami) || typeof (window.GZTraffic || window.umami).track !== "function") return;
-    if(stage !== "store" && (!/^(product|buy)$/.test(stage) || !/^(drugs|f12|skruu|tripleog|beefy|journeyman|winnetka|bendo)$/.test(product || ""))) return;
+    if(stage !== "store" && (!/^(product|buy)$/.test(stage) || !/^(drugs|f12|skruu|tripleog|beefy|journeyman|winnetka|bendo|smplutility)$/.test(product || ""))) return;
     var name = "gz_"+stage+"_"+(stage === "store" ? "" : product+"_")+token;
     if(sent[name]) return;
     var code = sourceCode();

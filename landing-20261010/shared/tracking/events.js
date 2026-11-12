@@ -12,7 +12,8 @@
     drugs: {name:'DRUGS', slug:'drugs', price:0},
     winnetka: {name:'WINNETKA', slug:'winnetka', price:49},
     // Free until the page clock and the Pi switch both turn it to $19 (2026-11-16T07:48:35Z).
-    bendo: {name:'BENDO', slug:'bendo', price:Date.now() < Date.parse('2026-11-16T07:48:35Z') ? 0 : 19}
+    bendo: {name:'BENDO', slug:'bendo', price:Date.now() < Date.parse('2026-11-16T07:48:35Z') ? 0 : 19},
+    smplutility: {name:'SMPLUTILITY', slug:'smplutility', price:0}
   };
   var item = products[product];
   if (!item) return;
