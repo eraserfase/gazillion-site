@@ -160,3 +160,4 @@ body{font-family:var(--type-ui)}
 
 /* BENDO 2.0: a full-width green "NEW v2.0" band across the top of its card, text centred, in the BENDO LCD green with white text (Tony, 8 Nov 2026). Spans the card outline, which runs 6px outside the article. */
 .new-flag{position:absolute;top:0;left:-6px;right:-6px;z-index:3;border-radius:4px 4px 0 0;background:#86c169;color:#fff;text-align:center;pointer-events:none}.product:has(>.new-flag) .media-window{top:26px}.new-flag>span{display:block;padding:5px 0 4px;font-family:'Archivo Black','Arial Black',sans-serif;font-weight:400;font-synthesis:none;font-size:11px;line-height:1;letter-spacing:.02em}
+[data-product="winnetka"] .new-flag{background:#a6af93}[data-product="tripleog"] .new-flag{background:#cc2a1e}
