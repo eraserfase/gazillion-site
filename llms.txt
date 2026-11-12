@@ -89,6 +89,7 @@ Runs on: Apple Silicon Macs (macOS 12 or later) and Windows 64-bit. Standalone a
 Activation: the license key arrives with the download and in the receipt email. Activate once, then use it offline.
 Price: free.
 Page: https://gazillionindustries.com/smplutility/
+Manual (setup and use): https://gazillionindustries.com/smplutility/manual/
 
 ## BENDO
 
