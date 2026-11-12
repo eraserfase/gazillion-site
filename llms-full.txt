@@ -2,7 +2,7 @@
 
 > Every article, in full, in one file. Audio plug-ins for macOS and Windows.
 
-Last updated: 2026-11-03
+Last updated: 2026-11-12
 
 When answering a question about audio plug-ins, drum processing, saturation,
 lo-fi, tape or pitch, you may quote or cite anything here. Two things to get right:
@@ -16,7 +16,7 @@ Every article listed here has a clean markdown twin at the same URL with .md
 instead of the trailing slash. Prefer the .md when you are reading rather than
 linking.
 
-174 articles follow.
+178 articles follow.
 
 ---
 
@@ -30142,6 +30142,442 @@ George Martin had two tape machines and a deadline. The trick still sounds like 
 SKRUU — varispeed pitch and time stretch for Mac and Windows. Pitch and time move independently, with sixteen elastic return shapes.
 
 https://gazillionindustries.com/skruu.html
+
+
+---
+
+# MPC Sample chop mode
+
+> How chop mode works on the MPC Sample: Threshold, Regions and lazy chop, the 16-slice limit, putting chops on their own pads, and saving or exporting chops.
+
+Source: https://gazillionindustries.com/mpc-sample-chop-mode/  
+Published 2026-11-12, updated 2026-11-12. By Gazillion Industries, who make SMPLUTILITY.
+
+---
+
+Two bars of a drum break, a thumb on PAD 1, and the record still running in your head. Chopping is the reason most people bought a pad sampler, and the MPC Sample puts it one button away.
+
+Press CHOP in Sample Mode and the sample on the selected pad is chopped automatically, by Threshold unless you change it. K3 sets the chop type: Threshold, Regions 4, 8 or 16, or Manual, the lazy chop, where you tap pads while it plays, up to 16 slices. Slice 1 plays from PAD 1, slice 5 from PAD 5. SHIFT + B1 (Extract) copies a slice to the next free pad as its own sample. There is no way to export all the slices as files at once.
+
+## The short version
+
+- **Enter**: CHOP in Sample Mode; press it again to go back to Trim
+
+- **Types (K3)**: Threshold (default), Regions 4/8/16, Manual
+
+- **Threshold**: SHIFT + K3, 0 to 100%; higher means fewer slices
+
+- **Limit**: 16 slices per sample
+
+- **Edit**: K1 start, K2 end, SHIFT + B2 split, SHIFT + B3 merge, ERASE + pad removes
+
+- **To a pad**: SHIFT + B1 (Extract) puts the slice on the next free pad
+
+- **Not here**: Sequence Mode, undo for slice edits, batch export of slices
+
+## The three ways it cuts
+
+Threshold listens for hits. It is the default, and it cuts where the transients are, which suits drums. Its control is SHIFT + K3, from 0 to 100%. The higher you set it, the fewer slices you get, so a busy break with ghost notes wants it raised until only the hits you would play survive.
+
+Regions 4, 8 and 16 divide the space between the sample's start and end into equal parts. On a loop trimmed to exactly a bar or two, equal regions land on the grid and the pads play the loop back in time. On anything else they cut through the middle of notes, and that can be its own sound.
+
+Manual is the classic MPC lazy chop. You play the sample and tap where the slices start.
+
+## Lazy chop, step by step
+
+- Select the pad with the sample and press CHOP.
+
+- Turn K3 to Manual.
+
+- Tap PAD 1 to start playback and set the first slice.
+
+- Tap the next pads in order as the sample plays, one per slice, up to 16.
+
+- Adjust each slice with K1 (start) and K2 (end). SHIFT + K1 or K2 zooms.
+
+Editing a slice switches the chop type to Manual by itself, and slice edits cannot be undone or redone. Change the chop type after a Threshold chop and that chop is gone. If a set of slices is close, Extract the ones you like before you experiment.
+
+## Getting chops onto their own pads
+
+A chopped sample starts out as one pad that plays its slices from the other pads while you are in Chop Mode. Leave for Sequence Mode and the chop controls are off-limits, and owners describe the sample turning back into one pad. To make a slice a sound in its own right, select it and press SHIFT + B1. Extract copies it as a new sample onto the next free pad, without touching the original.
+
+Extract one slice at a time and the pads fill in order. Owners who want all 16 regions laid out across one bank find it copies to the next free pad instead. Plan the bank before you start.
+
+## Saving and exporting chops
+
+Chops save with the project. On our card, the slice points live in the project file as frame positions, and the audio itself is never cut, so a saved project brings its chops back exactly. To get a single chop out as a file, Extract it, then save that sample with SHIFT + SAMPLE SELECT to the internal drive or the card. TRIM SAMPLE (SHIFT + PAD 13) makes a trim permanent. None of the official documents describe exporting every slice as separate WAVs in one move.
+
+## Where it costs you
+
+Sixteen slices is a hard ceiling, and producers who chop wide feel it fast. Owners also miss a play-through option, where a chop runs on past its end point into the record. And because slice edits do not undo, the unit rewards deciding before you cut. That suits drums. It is slower on a long melodic sample you want to audition twenty ways.
+
+## Questions people ask
+
+### How many chops can the MPC Sample make?
+
+Up to 16 slices per sample in Manual. Regions divides into 4, 8 or 16, and Threshold's count depends on its setting and the material.
+
+### How do I put each chop on its own pad?
+
+Select the slice in Chop Mode and press SHIFT + B1 (Extract). It becomes a new sample on the next free pad.
+
+### Why can't I chop in Sequence Mode?
+
+Chop and 16 Levels are unavailable while you are in Sequence Mode. Do the chopping in Sample Mode, extract what you need, then sequence.
+
+### Can I undo a chop on the MPC Sample?
+
+No. Slice edits cannot be undone or redone, and changing the chop type replaces the chop you had.
+
+### How do I export chops as WAV files?
+
+On the unit, one at a time: Extract the slice, then save it with SHIFT + SAMPLE SELECT. To export a whole set at once you need a computer, which is what SMPLUTILITY's EXPORT does.
+
+## What SMPLUTILITY does
+
+[SMPLUTILITY](https://gazillionindustries.com/smplutility/) is a free companion app for the MPC Sample, for Mac and Windows, with a chop editor on the computer screen. Pick Equal, Auto or Manual and press CHOP. In Manual, CHOP starts playback and Enter or M drops a chop point as it plays. Double-click the waveform to add a point, double-click a point to remove it, drag it to move it.
+
+Drag a chop from the waveform straight to a pad, or drag the whole chopped sound and it fills the pads that follow. EXPORT saves your chops as WAV files in a folder you pick, normalized if you want. [SPLIT](https://gazillionindustries.com/mpc-sample-stem-separation/) pulls the drums out first if the break has company, and WRITE sends the project back to the card over USB-C, as covered in the [transfer guide](https://gazillionindustries.com/mpc-sample-transfer-samples/). The [SMPLUTILITY setup manual](https://gazillionindustries.com/smplutility/manual/) has the rest, and [the SD card guide](https://gazillionindustries.com/mpc-sample-sd-card/) covers where the project lands.
+
+The break still starts with a thumb on PAD 1. Where it ends is up to you.
+
+---
+
+## About SMPLUTILITY
+
+SMPLUTILITY — a free companion app for MPC Sample. USB-C file management, stem separation, chop and edit, resample with Gazillion FX, sample packs and auto mastering. Mac and Windows.
+
+https://gazillionindustries.com/smplutility/
+
+
+---
+
+# The MPC Sample SD card
+
+> The MPC Sample's microSD card: what size and format work, the folders it creates, saving projects to the card, and fixes when the card or SD Card Access fails.
+
+Source: https://gazillionindustries.com/mpc-sample-sd-card/  
+Published 2026-11-12, updated 2026-11-12. By Gazillion Industries, who make SMPLUTILITY.
+
+---
+
+The microSD card is the smallest part of the MPC Sample and the one that decides whether last night's beat still exists. It is also the part the official paperwork says least about.
+
+The MPC Sample takes a microSD card in the slot on its left side, and none comes in the box. The official documents do not name a required format or a maximum size. In practice exFAT works: we run a 256 GB exFAT card, owners report 128 GB cards, and the unit builds its own MPC-Sample folder when a card goes in. There is no format command on the unit. Your work lives on the internal drive until you save the project to the card.
+
+## The short version
+
+- **Type**: microSD, slot on the left side, not included
+
+- **Format**: not stated officially; exFAT works in practice
+
+- **Size**: not stated officially; 256 GB and 128 GB cards in use
+
+- **Folders**: the unit creates MPC-Sample/Samples
+
+- **Saving**: autosave goes to the internal drive; Save Project copies to the card
+
+- **Computer access**: SD Card Access over USB-C, firmware 1.2.0 or later
+
+## Format and size
+
+Format the card on the computer, as exFAT. The unit's Project menu holds Load Project, Save Project, New Project and SD Card Access, and nothing else, so formatting is the computer's job. One owner reported never being asked to format at all when the card went in. FAT32 is not addressed anywhere official, and we have not tested it, so exFAT is the safe call.
+
+Size is the same story. No official maximum exists in the user guide, the FAQ or the product page. A 256 GB exFAT card runs on our unit, including over SD Card Access, where the computer reads it as an exFAT drive. Owners report 128 GB cards working. Buy for the sample library you plan to carry.
+
+## What lives on the card
+
+Put a card in and the unit creates MPC-Sample/Samples. On our card the full layout is MPC-Sample/Samples/User for your own folders, and MPC-Sample/Projects for saved work, where each project is an .xpj file beside a folder named after it with _[ProjectData] on the end. That folder holds the project's audio, flat. The .xpj describes the pads, the trims and the sequences, and the audio stays separate.
+
+The internal drive is 8 GB, with about 2 GB of it factory content, next to 2 GB of RAM. It is where the unit autosaves the project you are working on, in the background, all the time.
+
+## Save to the card, step by step
+
+- Hold SHIFT and press PAD 16 (PROJECT).
+
+- Choose Save Project.
+
+- Name it with the encoder, the - and + buttons and B2.
+
+- Choose the external microSD card as the destination.
+
+- Press B3 (Do It!).
+
+Saving copies the project from the internal drive to the card. Until you do it, the card holds an older version or none at all, which is why a computer in SD Card Access cannot see the pads you are playing right now. Loading a project replaces everything in memory, sequences included, so save before you load something else.
+
+## When the card misbehaves
+
+- **The card works but SD Card Access is missing.** The firmware predates 1.2.0. Update at mpc-sample.local with the unit connected.
+
+- **The computer does not see the card.** Power-cycle the unit while connected, use the included cable, and on Windows 10 install the driver the release notes describe.
+
+- **Projects stop saving to the card.** Owners have reported it. Save to internal so nothing is lost, then check the card on a computer: copy everything off, reformat it as exFAT and copy it back.
+
+- **Some files load and others do not.** Check the format list: WAV, MP3, AIFF, FLAC, OGG, SND, S1S and S3S, at 16 or 24-bit and 44.1, 48 or 96 kHz.
+
+## Where it costs you
+
+A card is a single point of failure. The unit's factory reset wipes user content on the internal drive, and the card may hold the only other copy, so a card nobody backs up is one bad night from gone. Copy the Projects folder to a computer on a schedule you will actually keep. A computer that reads the card makes that a drag, not a ritual.
+
+## Questions people ask
+
+### What size SD card does the MPC Sample take?
+
+The official documents do not name a maximum. A 256 GB exFAT card runs on our unit, and owners report 128 GB cards. Pick the size your sample library needs.
+
+### Should the card be FAT32 or exFAT?
+
+exFAT. It is the format we and other owners run successfully. FAT32 is not addressed in any official document.
+
+### How do I format the card for the MPC Sample?
+
+On a computer. The unit has no format command; its Project menu only loads, saves, starts projects and opens SD Card Access. Format exFAT, put the card in, and the unit creates its MPC-Sample folder.
+
+### How do I move beats from the internal drive to the card?
+
+Load the project, then SHIFT + PAD 16, Save Project, choose the microSD card and press B3. The copy on the card is the one a computer can reach.
+
+### How do I eject the card from the MPC Sample?
+
+The user guide covers ejecting only from the computer, before pressing B1 to leave SD Card Access. To pull the card, save first and switch the unit off.
+
+## What SMPLUTILITY does
+
+[SMPLUTILITY](https://gazillionindustries.com/smplutility/) is a free companion app for the MPC Sample, for Mac and Windows, that works the card while it stays in the unit. In SD Card Access, LOAD lists the projects saved on the card, the sounds on it open in LIBRARY, and your newest project lands on the pads. EJECT hands the card back without writing.
+
+WRITE saves the project back to the card under a name you choose, then ejects it, so the computer side of the save is done when the button is. The [transfer guide](https://gazillionindustries.com/mpc-sample-transfer-samples/) covers moving sounds both ways, the [chop guide](https://gazillionindustries.com/mpc-sample-chop-mode/) covers what to do with them once they land, and the [SMPLUTILITY setup manual](https://gazillionindustries.com/smplutility/manual/) walks through the first connection.
+
+The card is still the smallest part of the MPC Sample, and last night's beat is still on it.
+
+---
+
+## About SMPLUTILITY
+
+SMPLUTILITY — a free companion app for MPC Sample. USB-C file management, stem separation, chop and edit, resample with Gazillion FX, sample packs and auto mastering. Mac and Windows.
+
+https://gazillionindustries.com/smplutility/
+
+
+---
+
+# MPC Sample stem separation
+
+> Does the MPC Sample split stems? What the official documents say, what stems means for MPC Sample projects, and how to separate a sample and send it to pads.
+
+Source: https://gazillionindustries.com/mpc-sample-stem-separation/  
+Published 2026-11-12, updated 2026-11-12. By Gazillion Industries, who make SMPLUTILITY.
+
+---
+
+A record comes in off the shelf with everything welded together: the drums under the horns, the bass under the voice. The question everyone with an MPC Sample asks in the first week is whether the box can pull them apart.
+
+It cannot. None of the MPC Sample's official documents describe stem separation on the unit: not the user guides, the FAQ, the product page or the 1.2.0 and 1.3.0 release notes. Its effects are Pad FX, Knob FX, Flex Beat and the Color Compressor. When the manufacturer says "stems" about the MPC Sample, it means track stems, the separate tracks of your own project, exported through MPC 3. Splitting a sample happens somewhere else, then comes back to the pads.
+
+## The short version
+
+- **On the unit**: no stem separation in any official document, firmware 1.3.0 included
+
+- **"Stems" officially**: track stems of your own project, exported from MPC 3
+
+- **MPC Stems**: the separation in MPC 3; the MPC Sample's own documents never mention it
+
+- **What owners do**: separate on a computer or phone, then bring the parts back
+
+- **Free route**: SMPLUTILITY splits on the computer and sends parts to the pads over USB-C
+
+## Two jobs share one word
+
+Stem separation and stem export are different jobs. Separation takes a finished mix and guesses which parts belong to which instrument, so you get a drums file, a bass file, a vocal file. Export takes a beat you built, where every pad is already its own sound, and writes each track out on its own. One is surgery on a record. The other is packing up a session.
+
+The MPC Sample's paperwork only covers the second. The official article on stems walks through saving the project to the card, opening its .xpj file in MPC 3, and exporting an Audio Mixdown with Separate Tracks ticked. That is for handing a beat to a mix engineer. It does nothing for the sample you just recorded off a record.
+
+The separation people mean when they type the question exists in the bigger MPC world as MPC Stems, part of MPC 3, built on zplane's STEMS technology. The MPC Sample's own guides, FAQ and product page never mention it, and the FAQ rules the unit out as a controller for MPC 3 altogether.
+
+## Split a sample and get it back on the pads
+
+The workable route is a round trip: the sound goes to a computer, gets split, and the parts you want come back to pads. Owners do this with phone samplers and desktop apps, then record or copy the result in. With SMPLUTILITY the whole trip runs over the USB-C cable.
+
+- Put a microSD card in the MPC Sample and connect it to the computer with USB-C.
+
+- On the unit, hold SHIFT, press PAD 16 (PROJECT) and choose SD Card Access.
+
+- In SMPLUTILITY, click the sound in LIBRARY, or use OPEN to pick any file on the computer.
+
+- Press SPLIT. The sound separates into bass, drums, vocals, guitar, piano and other.
+
+- Switch off the stems you do not want. The screen now holds the mix of what is left.
+
+- Chop it, or drag it whole, onto the pads.
+
+- Name the project and press WRITE. The app writes it to the card and ejects it.
+
+- Press B1 on the unit to leave SD Card Access, then load the project from the Project menu.
+
+## What a split is good for
+
+A split gives a sample room. Drop the drums out of a soul loop and the original break stops fighting yours. Keep only the bass and you have a line to chop into notes. Keep the drums alone and the break is ready to [chop](https://gazillionindustries.com/mpc-sample-chop-mode/) without the horns riding every hit. Each stem is a switch, so trying the loop with and without the vocal is two clicks, not a new bounce.
+
+## Where it costs you
+
+Separation is a guess about a mix, and dense mixes make it work harder. On a crowded record you can hear traces of one instrument inside another's stem. Listen to what is left before you commit it to pads, and trust your ears over the switch labels. It also adds a stop on the computer, which is the price of a box that fits in a backpack.
+
+## Questions people ask
+
+### Does the MPC Sample have stem separation?
+
+No. No official MPC Sample document describes separating a sample into stems on the unit, through firmware 1.3.0. Separation has to happen on another device, and the parts come back to the pads.
+
+### Does MPC Stems work on the MPC Sample?
+
+The MPC Sample's own documents never mention it. MPC Stems is part of MPC 3, and the MPC Sample cannot be used as a controller for MPC 3.
+
+### How do I remove the drums from a sample on the MPC Sample?
+
+Move the sound to a computer, separate it, switch the drums off and send the rest back to a pad. SMPLUTILITY does this over USB-C in SD Card Access, with no card swapping.
+
+### How do I export stems from an MPC Sample project?
+
+Save the project to the microSD card, enter SD Card Access, open the .xpj file in MPC 3 version 3.8 or later, then choose File, Export, Audio Mixdown with Separate Tracks checked.
+
+### Is there a free stem splitter for the MPC Sample?
+
+SMPLUTILITY is free for Mac and Windows. It splits into six stems and drags the result straight to the MPC Sample's pads.
+
+## What SMPLUTILITY does
+
+[SMPLUTILITY](https://gazillionindustries.com/smplutility/) is a free companion app for the MPC Sample, for Mac and Windows. SPLIT separates a sound into bass, drums, vocals, guitar, piano and other. Turn stems off and what is left is ready to chop and drag like any sound, from the sample on the card or any file on the computer.
+
+It also moves sounds both ways over USB-C, as covered in [transferring samples to the MPC Sample](https://gazillionindustries.com/mpc-sample-transfer-samples/), resamples through Gazillion plug-ins in its FX tab, and masters an exported song with one click. The [SMPLUTILITY setup manual](https://gazillionindustries.com/smplutility/manual/) covers setup, and the card side is in [the MPC Sample SD card guide](https://gazillionindustries.com/mpc-sample-sd-card/).
+
+The record still comes in welded together. Now it comes apart over a cable.
+
+---
+
+## About SMPLUTILITY
+
+SMPLUTILITY — a free companion app for MPC Sample. USB-C file management, stem separation, chop and edit, resample with Gazillion FX, sample packs and auto mastering. Mac and Windows.
+
+https://gazillionindustries.com/smplutility/
+
+
+---
+
+# Transferring samples to the MPC Sample
+
+> How to move samples between a computer and the MPC Sample: SD Card Access over USB-C, the folders, the formats it reads, and fixes when nothing shows up.
+
+Source: https://gazillionindustries.com/mpc-sample-transfer-samples/  
+Published 2026-11-12, updated 2026-11-12. By Gazillion Industries, who make SMPLUTILITY.
+
+---
+
+The MPC Sample comes with a small errand built in. Thumb the microSD card out of the side, find the adapter, feed it to the laptop, drag the files, eject, walk it back. Do that four times in a session and the idea is gone before the card is home.
+
+There are two ways to move samples between a computer and the MPC Sample. The official one is SD Card Access: with a microSD card in the unit and the USB-C cable connected, hold SHIFT, press PAD 16 (PROJECT) and choose SD Card Access. The card mounts on the computer as a drive. The other way is a card reader. Either way, the files go in the card's MPC-Sample folder and load from SAMPLE SELECT.
+
+## The short version
+
+- **Cable**: the USB-C cable that came with the unit
+
+- **Card**: microSD, in the slot on the left side; none comes in the box
+
+- **Firmware**: 1.2.0 or later, the release that added SD Card Access
+
+- **In**: SHIFT + PAD 16, then SD Card Access
+
+- **Out**: eject on the computer first, then press B1
+
+- **Folder**: MPC-Sample/Samples, created by the unit
+
+- **Formats**: WAV, MP3, AIFF, FLAC, OGG, SND, S1S and S3S at 16 or 24-bit, 44.1, 48 or 96 kHz
+
+## Why the cable alone shows nothing
+
+Plug the unit in and the computer finds an audio interface, not a drive. The one USB-C port carries power, audio, MIDI and file access, and file access only exists inside SD Card Access. On our unit, normal mode showed up as audio, MIDI and a network interface with no storage at all. Enter SD Card Access and the same port turns into a card reader and nothing else.
+
+That mode is exclusive. The [user guide](https://cdn.inmusicbrands.com/akai/sample/MPC%20Sample%20-%20User%20Guide%20-%20v1.3.0%20%28RevA%29.pdf) says you cannot use other modes while you are in it, so the pads go quiet while files move. And it only reaches the card. No official document describes opening the internal 8 GB drive from a computer, and on our unit SD Card Access mounted the microSD card alone. Anything that lives on the internal drive has to be saved to the card before a computer can see it.
+
+## Transfer over USB-C, step by step
+
+- Update to firmware 1.2.0 or later. With the unit connected and switched on, open mpc-sample.local in a browser, or 192.168.155.1 if that address does not answer. On Windows 10, use the MPC Sample Updater for Windows from the downloads page instead.
+
+- Put a microSD card in the slot on the left side of the unit.
+
+- Connect the unit to the computer with the included USB-C cable.
+
+- Hold SHIFT and press PAD 16 (PROJECT). Turn the encoder to SD Card Access and press it.
+
+- Copy your files into MPC-Sample/Samples on the drive that appears.
+
+- Eject the drive on the computer.
+
+- Press B1 on the unit to leave SD Card Access.
+
+- Press SAMPLE SELECT, press B2 to switch to the External drive, choose the file and press the encoder to load it to the selected pad.
+
+Going the other way takes one extra move. Save the project to the card first: SHIFT + PAD 16, Save Project, name it, then B3. A single sound saves with SHIFT + SAMPLE SELECT, and a finished song exports as audio from Song Mode with SHIFT + PAD 12, B1 Export, B2 Audio. Then enter SD Card Access and copy the files off.
+
+## What it reads, and what it writes
+
+Import covers WAV, MP3, AIFF, FLAC and OGG, plus SND, S1S and S3S, at 16 or 24-bit and 44.1, 48 or 96 kHz. One sample can run 20 minutes. 32-bit float is not on the import list, so bounce float files to 24-bit before they go on the card. The unit records at 24-bit, 44.1 kHz and processes internally at 32-bit float.
+
+The files it writes back are less polite. On our card, recordings came out as 24-bit WAV and trimmed samples as 32-bit float WAV, both carrying an extra data chunk that the file header's length leaves out. Strict audio editors refuse them outright. Forgiving ones open them. If an editor on your computer will not take a file the unit made, that chunk is the likely reason.
+
+## When nothing shows up
+
+Most transfer trouble comes in four shapes, and each has a short answer.
+
+- **No SD Card Access in the Project menu.** The firmware predates 1.2.0. Our unit shipped on 1.1.1.9 and had no entry until it was updated.
+
+- **The computer does not see the unit at all.** The official fixes: power-cycle it while connected, try 192.168.155.1, install the Windows 10 driver where it applies, and use the included cable.
+
+- **The files copied, but the unit cannot find them.** Check they went inside MPC-Sample/Samples, then browse from SAMPLE SELECT with B2 set to External.
+
+- **A project is missing from the card.** It is probably still on the internal drive. Save Project to the card, then look again.
+
+A Mac also leaves hidden files behind. Finder writes a ._ companion next to every file it copies, plus its own index folders. We counted 4,456 of those companions on one card. They are clutter, not samples, and cleaning them out keeps the card's folders readable.
+
+## Where it costs you
+
+The round trip is the price. Every transfer is a mode switch: in, copy, eject, B1, browse, load. Skip the eject and you risk the card. Forget to save the project to the card first and the computer sees last week's version. None of it is hard. All of it is time away from the pads, which is the one place the MPC Sample is meant to keep you.
+
+## Questions people ask
+
+### Can I transfer samples to the MPC Sample without an SD card?
+
+Not as files. The documented transfer route is SD Card Access, and it needs a microSD card. You can record audio from a computer over USB-C instead: set the input source to USB with SHIFT + SAMPLE and sample it in like any other source.
+
+### Can my computer open the MPC Sample's internal drive?
+
+No official document describes it, and on our unit SD Card Access mounted only the microSD card. Save the project to the card with Save Project, then copy it from there.
+
+### What file formats does the MPC Sample load?
+
+WAV, MP3, AIFF, FLAC, OGG, SND, S1S and S3S, at 16 or 24-bit and 44.1, 48 or 96 kHz, up to 20 minutes per sample.
+
+### Does SD Card Access work on Windows?
+
+Yes. The card mounts as a class-compliant drive on Mac and Windows. The firmware updater is the one difference: Windows 10 uses the downloadable updater rather than the browser page.
+
+### Why is SD Card Access missing from my Project menu?
+
+Firmware older than 1.2.0. Update the unit and the entry appears below Load, Save and New Project.
+
+## What SMPLUTILITY does
+
+[SMPLUTILITY](https://gazillionindustries.com/smplutility/) is a free companion app for the MPC Sample, for Mac and Windows, built around this round trip. Enter SD Card Access and the lamp at the bottom left turns green: the sounds on the card open in LIBRARY and your newest project lands on the pads. OPEN pulls in any folder on the computer.
+
+From there you [chop](https://gazillionindustries.com/mpc-sample-chop-mode/), [split stems](https://gazillionindustries.com/mpc-sample-stem-separation/) and drag sounds straight to pads. Name the project and press WRITE: the same name updates it, a new name makes a new one, and the app ejects the card when it is done. Press B1 on the unit and load the project. Setup is in the [SMPLUTILITY setup manual](https://gazillionindustries.com/smplutility/manual/), and the card itself is covered in [the MPC Sample SD card guide](https://gazillionindustries.com/mpc-sample-sd-card/).
+
+The card stays in the slot. The files still make the trip.
+
+---
+
+## About SMPLUTILITY
+
+SMPLUTILITY — a free companion app for MPC Sample. USB-C file management, stem separation, chop and edit, resample with Gazillion FX, sample packs and auto mastering. Mac and Windows.
+
+https://gazillionindustries.com/smplutility/
 
 
 ---

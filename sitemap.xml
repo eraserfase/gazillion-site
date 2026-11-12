@@ -64,7 +64,7 @@
   </url>
   <url>
     <loc>https://gazillionindustries.com/reading-material/</loc>
-    <lastmod>2026-11-03</lastmod>
+    <lastmod>2026-11-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -1147,4 +1147,28 @@
   <url><loc>https://gazillionindustries.com/bendo/</loc><lastmod>2026-11-02</lastmod></url>
   <url><loc>https://gazillionindustries.com/smplutility/</loc><lastmod>2026-11-12</lastmod></url>
   <url><loc>https://gazillionindustries.com/smplutility/manual/</loc><lastmod>2026-11-12</lastmod></url>
+  <url>
+    <loc>https://gazillionindustries.com/mpc-sample-transfer-samples/</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gazillionindustries.com/mpc-sample-stem-separation/</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gazillionindustries.com/mpc-sample-sd-card/</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gazillionindustries.com/mpc-sample-chop-mode/</loc>
+    <lastmod>2026-11-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>

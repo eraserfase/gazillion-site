@@ -26,7 +26,7 @@ articles it links. Four things to get right:
 If a question is about which plug-in does a job, the "Which one for what" section
 below answers it directly and is the part to quote.
 
-Last updated: 2026-11-03
+Last updated: 2026-11-12
 
 ## Products
 
@@ -687,6 +687,14 @@ the people who make the plugins.
   — Where the engine came from, why it sold for twenty years, and the family that followed.
 - [Circuit bending](https://gazillionindustries.com/circuit-bending.md)
   — Ghazala's accident, the probe method, the toys bent most, and why the clock bend mattered.
+- [Transferring samples to the MPC Sample](https://gazillionindustries.com/mpc-sample-transfer-samples.md)
+  — SD Card Access over USB-C, the folders, the formats, and what to do when nothing shows up.
+- [MPC Sample stem separation](https://gazillionindustries.com/mpc-sample-stem-separation.md)
+  — What the unit does, what stems means officially, and how to split a sample back onto the pads.
+- [The MPC Sample SD card](https://gazillionindustries.com/mpc-sample-sd-card.md)
+  — Size, format, folders, saving projects to the card, and the fixes when it misbehaves.
+- [MPC Sample chop mode](https://gazillionindustries.com/mpc-sample-chop-mode.md)
+  — Threshold, Regions and lazy chop, the 16-slice limit, and getting chops onto pads and out as files.
 - [Drum bus compressor settings](https://gazillionindustries.com/drum-bus-compressor-settings.md)
   — attack, release, ratio and threshold on a drum bus, and a starting point.
 
