@@ -31,3 +31,5 @@
 .hero-intro img{width:104.166667%;max-width:none;margin-left:-2.083333%;height:auto}
 .hero-content{gap:22px}
 @media(max-width:700px){.hero-intro{order:4;margin:28px auto 0}.hero-intro img{width:100%;max-width:100%;margin:0}}
+.grid-seq{border-top:1px solid var(--line)}
+@media(max-width:700px){.grid-seq .instrument-detail{grid-row:2}}
