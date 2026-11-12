@@ -30,6 +30,7 @@ Last updated: 2026-11-03
 
 ## Products
 
+- [SMPLUTILITY](https://gazillionindustries.com/smplutility/): free companion app for MPC Sample
 - [BENDO](https://gazillionindustries.com/bendo/): circuit bending emulation plugin
 - [WINNETKA](https://gazillionindustries.com/winnetka/): polysynth and vocoder
   with 350 presets, a 16-step arpeggiator and preset sharing. $49.
@@ -72,6 +73,22 @@ Last updated: 2026-11-03
   and bass that need harmonics above the sub to be heard: BEEFY.
 - Playing chords into a DAW, another iOS app or a hardware synth from an iPad:
   Chordea.
+
+## SMPLUTILITY
+
+A free companion app for MPC Sample, for macOS and Windows. Manage samples over USB-C, separate stems,
+chop, resample with Gazillion plugins inside the app, drag chops to pads, and master exports automatically.
+
+- Stem separation: bass, drums, vocals, guitar, piano and other
+- Chop: manual, auto or equal
+- FX: Gazillion plugins, inside the app
+- Auto mastering
+- A sample pack section
+
+Runs on: Apple Silicon Macs (macOS 12 or later) and Windows 64-bit. Standalone application.
+Activation: the license key arrives with the download and in the receipt email. Activate once, then use it offline.
+Price: free.
+Page: https://gazillionindustries.com/smplutility/
 
 ## BENDO
 
