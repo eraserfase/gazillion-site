@@ -14,6 +14,7 @@ Last updated: 2026-11-03
 - [TRIPLE OG](https://gazillionindustries.com/tripleog.html): Cassette transport for Mac and Windows. AU, VST3 and standalone.
 - [JOURNEYMAN](https://gazillionindustries.com/journeyman.html): A monosynth for Mac and Windows. AU, VST3 and standalone.
 - [WINNETKA](https://gazillionindustries.com/winnetka/): A polysynth with a vocoder. Mac and Windows.
+- [SMPLUTILITY](https://gazillionindustries.com/smplutility/): A free companion app for MPC Sample, for Mac and Windows.
 - [BENDO](https://gazillionindustries.com/bendo/): A circuit bending plug-in for Mac and Windows.
 
 ## Fuller versions
