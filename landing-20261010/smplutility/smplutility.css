@@ -141,8 +141,8 @@ body{font-family:Arial,sans-serif}
 /* SMPLUTILITY: the family sheet above (BENDO's product sheet), with this product's palette
    and hero proportions. The page ground, ink and rules are the family's; only the purchase
    button takes the product's colour (the unit's charcoal key). */
-/* The purchase button is the app's pad grey (Tony, 11 Nov 2026: lighter grey). */
-:root{--purchase-fill:#aeb4b6;--purchase-hover:#b9bfc1;--purchase-ink:#fff}
+/* The purchase button is the app's pad grey (Tony, 11 Nov 2026: lighter grey), black type (Tony, 12 Nov 2026). */
+:root{--purchase-fill:#aeb4b6;--purchase-hover:#b9bfc1;--purchase-ink:#000}
 .buy,.sticky-buy{border-color:#2c3133;box-shadow:inset 0 0 0 1px #ffffff2e,4px 4px 0 #222}
 .buy:hover,.sticky-buy:hover{border-color:#2c3133}
 .buy .price,.sticky-buy .price{border-left-color:#ffffff40}
