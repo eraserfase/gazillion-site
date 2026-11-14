@@ -166,3 +166,6 @@ body[data-landing-family] .gz-name i{font-family:Archivo,sans-serif;font-weight:
 body[data-landing-family] .requirements-row .purchase-end>p{font-family:'Arial Black',Arial,sans-serif;font-weight:900;font-synthesis:none}
 
 .story-copy .copy-link{color:inherit;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
+
+/* System requirements under the top button (Tony, 13 Nov 2026: "it needs to be near the cta"). */
+.purchase .compatibility.requirements-cta{order:2;margin-top:4px}
