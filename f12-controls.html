@@ -228,7 +228,7 @@ footer a:focus-visible{outline:2px solid var(--chalk); outline-offset:3px}
 
     <div class="ctl">
       <div class="ctl-head"><h3>Max Aura</h3><p class="spec">Switch &middot; <b>off</b> &middot; hidden while AURA is off</p></div>
-      <p class="lead">The same, turned all the way up. More of everything AURA already does to whatever it touches.</p>
+      <p class="lead">More air, more lift, more of the butter.</p>
       <p>You will know within a bar whether a track wants it.</p>
       <div class="plates">
         <figure>
@@ -337,7 +337,7 @@ footer a:focus-visible{outline:2px solid var(--chalk); outline-offset:3px}
     <div class="ctl">
       <div class="ctl-head"><h3>Dirty</h3><p class="spec">Switch &middot; <b>on</b></p></div>
       <p class="lead">Feeds the filter's own distortion back through itself. Off, the same filter runs clean.</p>
-      <p>SLOPE, DIRTY and Q SHAPE are separate controls, so a steep dirty filter can also be a wah. It opens dirty. There is no neutral starting point here on purpose.</p>
+      <p>SLOPE, DIRTY and Q SHAPE are separate controls. It opens dirty. There is no neutral starting point here on purpose.</p>
     </div>
 
     <div class="ctl">
@@ -350,7 +350,7 @@ footer a:focus-visible{outline:2px solid var(--chalk); outline-offset:3px}
       <ul class="opts">
         <li><b>Plain</b> no nodes. The filter's own resonance and nothing added.</li>
         <li><b>Draw</b> your own, drawn on the display. It has its own entry below.</li>
-        <li><b>Wah</b> one strong peak right at the cutoff, with a shallow dip just over an octave above it. The body underneath stays &mdash; a boost, so the lows do not leave when you sweep it.</li>
+        <li><b>Wah</b> one peak that moves with POSITION, sharp at the bottom of its travel and broader at the top, with the lows and highs falling away either side. It takes the filter's place while it is on, so CUTOFF SHAPE, SLOPE, DIRTY, RESO and Q leave it alone.</li>
         <li><b>Vowel</b> four peaks spaced the way a formant table spaces them.</li>
         <li><b>Comb</b> peaks and nulls alternating on even spacing, seven of them across the range.</li>
         <li><b>Scoop</b> a smile. Both ends lifted and the cutoff itself pulled down between them.</li>
@@ -361,34 +361,35 @@ footer a:focus-visible{outline:2px solid var(--chalk); outline-offset:3px}
     </div>
 
     <div class="ctl">
-      <div class="ctl-head"><h3>Draw</h3><p class="spec">Q SHAPE &middot; up to 7 points</p></div>
+      <div class="ctl-head"><h3>Draw</h3><p class="spec">Q SHAPE &middot; up to 12 points</p></div>
       <p class="lead">Your own Q shape. Pick DRAW and the display is where you draw it, starting from the shape you were on.</p>
       <figure class="wide">
         <img src="/f12/manual/grp-draw.jpg" width="600" height="462" alt="The display in DRAW: the filter line bent by four points - a boost low down, a notch cut to the floor, a tall peak with its width handles out either side, and a dip on the falling slope." loading="lazy" decoding="async">
         <figcaption>Four points, one selected with its handles out</figcaption>
       </figure>
       <ul class="opts">
-        <li><b>Click</b> empty space to add a point, and drag it anywhere. All the way down takes that frequency out; all the way up is +24&thinsp;dB.</li>
+        <li><b>Click</b> empty space to add a point, and drag it anywhere. All the way down takes that frequency out; all the way up takes it to the top of the display.</li>
         <li><b>Handles</b> click a point and pull the handles either side of it for its width. Scrolling over a point does the same: up narrows, down widens.</li>
-        <li><b>Right-click</b> a point for bell, notch, low shelf, high shelf, low cut or high cut, or to delete it. Double-click deletes it too.</li>
+        <li><b>Right-click</b> a point for bell, notch, low shelf, high shelf, low cut, high cut, band or tilt, to pin it, or to delete it. Double-click deletes it too.</li>
       </ul>
       <p>The points sit at ratios of the cutoff like every other shape, so they ride POSITION, the auto filter and the sidechain. It works the same on the panel and in the pop-out.</p>
+      <p>A pinned point stays at its frequency while the line moves past it. Drag the line itself, in any Q SHAPE, to move the whole curve up or down: that is OUTPUT TRIM, &plusmn;36&thinsp;dB.</p>
     </div>
 
     <div class="ctl">
       <div class="ctl-head"><h3>Drive, Reso, Q, Mix</h3><p class="spec">The four small dials</p></div>
       <figure class="wide">
-        <img src="/f12/manual/grp-fknobs.jpg" width="560" height="132" alt="The four filter dials: DRIVE at 0, RESO at 25, Q at 35 and MIX at 100." loading="lazy" decoding="async">
+        <img src="/f12/manual/grp-fknobs.jpg" width="560" height="132" alt="The four filter dials: DRIVE at 0, RESO at 0, Q at 0 and MIX at 100." loading="lazy" decoding="async">
         <figcaption>Drive &middot; reso &middot; q &middot; mix</figcaption>
       </figure>
       <ul class="opts">
         <li><b>Drive</b> how hard the signal is pushed into the filter's own saturation. The gain comes back off afterwards, so driving it is character rather than volume. It works wherever the filter is running, and does nothing with FILTER off. 0 to 18&thinsp;dB, opens at 0.</li>
-        <li><b>Reso</b> how hard it sings. 0 to 100&thinsp;%, opens at 25.</li>
-        <li><b>Q</b> how narrow that singing is, and how tight the Q SHAPE nodes sit with it. It drives a peaking section right at the corner, so it is audible on every shape including PLAIN. 0 to 100&thinsp;%, opens at 35.</li>
+        <li><b>Reso</b> how hard it sings. 0 to 100&thinsp;%, opens at 0.</li>
+        <li><b>Q</b> how narrow that singing is, and how tight the Q SHAPE nodes sit with it. It drives a peaking section right at the corner, so it is audible on every shape including PLAIN. 0 to 100&thinsp;%, opens at 0.</li>
         <li><b>Mix</b> how much of the whole thing you keep against what went in untouched. 0 to 100&thinsp;%, opens at 100.</li>
       </ul>
       <p>DRIVE belongs to the filter, not the crush. It pushes the filter's own saturation, so the crush pair stays just SAMPLE RATE and BIT.</p>
-      <p>RESO and Q are the pair to learn together. A wah at low Q is a broad sweep; the same wah at high Q is a point.</p>
+      <p>RESO and Q are the pair to learn together.</p>
       <p>RESO scales the filter's whole resonance behavior rather than setting one fixed value, so the character holds across the sweep instead of drifting as POSITION moves.</p>
     </div>
   </section>
@@ -411,7 +412,7 @@ footer a:focus-visible{outline:2px solid var(--chalk); outline-offset:3px}
       <p>Locked to the arrangement rather than free-running: it moves only while the transport moves, it stops and returns to the start when you stop, and the sweep lands in the same place in the bar wherever you drop the playhead. On every shape but RANDOM, bar 9 looks like bar 1 and the same eight bars bounce the same way twice.</p>
       <p>RANDOM is the exception, and worth knowing before you print. It draws a fresh value every time the cycle turns over, and that draw does not reset with the transport &mdash; so it does not repeat from take to take. Commit it to audio when you get one you like.</p>
       <figure class="wide">
-        <img src="/f12/manual/grp-auto.jpg" width="600" height="494" alt="The movement group with AUTO FILTER engaged: the seven shape tiles, then RATE, GRID, STEPS and DIR, then the drawn sweep with a dot on it, then the ATTACK, RELEASE, SWING, PHASE, MORPH and AMOUNT dials." loading="lazy" decoding="async">
+        <img src="/f12/manual/grp-auto.jpg" width="600" height="494" alt="The movement group with AUTO FILTER engaged: the seven shape tiles, then RATE, GRID and STEPS, then the drawn sweep with a dot on it, then the ATTACK, RELEASE, SWING, PHASE, MORPH and AMOUNT dials." loading="lazy" decoding="async">
         <figcaption>Auto filter, open</figcaption>
       </figure>
     </div>
@@ -485,12 +486,6 @@ footer a:focus-visible{outline:2px solid var(--chalk); outline-offset:3px}
       <div class="ctl-head"><h3>The sweep</h3><p class="spec">Drawn &middot; under the boxes</p></div>
       <p class="lead">A picture of the move all of these make together, and a dot where the song is.</p>
       <p>It shows one bar, or one whole cycle when a cycle runs longer than a bar, with the beats marked faintly so SWING and PHASE can be read against them. Nothing on it is a control.</p>
-    </div>
-
-    <div class="ctl">
-      <div class="ctl-head"><h3>Dir</h3><p class="spec">Both, up, down &middot; <b>both</b></p></div>
-      <p class="lead">Sends the sweep up from the filter, down from it, or both ways.</p>
-      <p>POSITION is the origin. On UP the knob is the floor of the sweep, on DOWN the ceiling, on BOTH the center &mdash; so switching this moves where the same setting sits without you touching the big dial.</p>
     </div>
 
     <div class="ctl">
@@ -635,8 +630,8 @@ footer a:focus-visible{outline:2px solid var(--chalk); outline-offset:3px}
           <tr><td>Dirty</td><td>switch</td><td>On</td><td>Filter</td></tr>
           <tr><td>Q Shape</td><td>6 tiles</td><td>Plain</td><td>Filter</td></tr>
           <tr><td>Drive</td><td>0 &ndash; 18 dB</td><td>0</td><td>Filter</td></tr>
-          <tr><td>Reso</td><td>0 &ndash; 100 %</td><td>25</td><td>Filter</td></tr>
-          <tr><td>Q</td><td>0 &ndash; 100 %</td><td>35</td><td>Filter</td></tr>
+          <tr><td>Reso</td><td>0 &ndash; 100 %</td><td>0</td><td>Filter</td></tr>
+          <tr><td>Q</td><td>0 &ndash; 100 %</td><td>0</td><td>Filter</td></tr>
           <tr><td>Mix</td><td>0 &ndash; 100 %</td><td>100</td><td>Filter</td></tr>
           <tr><td>Auto Filter</td><td>switch</td><td>Off</td><td>Movement</td></tr>
           <tr><td>Sidechain</td><td>switch</td><td>Off</td><td>Movement</td></tr>
@@ -649,7 +644,6 @@ footer a:focus-visible{outline:2px solid var(--chalk); outline-offset:3px}
           <tr><td>Grid</td><td>16th, 8th, quint</td><td>16th</td><td>Auto filter only</td></tr>
           <tr><td>Swing</td><td>50 &ndash; 75 %</td><td>50</td><td>Auto filter only</td></tr>
           <tr><td>Phase</td><td>0 &ndash; 360&deg;</td><td>0</td><td>Auto filter only</td></tr>
-          <tr><td>Dir</td><td>Both, up, down</td><td>Both</td><td>Auto filter only</td></tr>
           <tr><td>Amount</td><td>0 &ndash; 4 octaves</td><td>1.5</td><td>Auto filter only</td></tr>
           <tr><td>Source</td><td>Input, sidechain</td><td>Input</td><td>Sidechain only</td></tr>
           <tr><td>Listen</td><td>Full, lows, mids, highs</td><td>Full</td><td>Sidechain only</td></tr>
