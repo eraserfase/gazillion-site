@@ -7,7 +7,7 @@ root.GazillionCheckoutRegistry=freeze({
   "version": 1,
   "products": {
     "bendo": {
-      "price": 0,
+      "price": 1900,
       "checkoutUrl": "https://gazillionindustries.gumroad.com/l/bendo?wanted=true&utm_source=gazillionindustries.com&utm_medium=cta&utm_content=hero_mid"
     },
     "winnetka": {
@@ -1330,7 +1330,7 @@ root.GazillionCheckoutRegistry=freeze({
         "bendo",
         "drugs"
       ],
-      "subtotal": 0,
+      "subtotal": 1900,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=_4vtXakfzCH4Ee2fj6gijA%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -1339,7 +1339,7 @@ root.GazillionCheckoutRegistry=freeze({
         "beefy",
         "bendo"
       ],
-      "subtotal": 3900,
+      "subtotal": 5800,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=hX_9yXdVX1eXu1E_cKW_Cw%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -1348,7 +1348,7 @@ root.GazillionCheckoutRegistry=freeze({
         "bendo",
         "f12"
       ],
-      "subtotal": 4900,
+      "subtotal": 6800,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=5do1jFZxcfPXGZsOt2pHPg%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -1357,7 +1357,7 @@ root.GazillionCheckoutRegistry=freeze({
         "bendo",
         "journeyman"
       ],
-      "subtotal": 5900,
+      "subtotal": 7800,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=9Tv67cwu9GkYicc-iy7Zbw%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -1366,7 +1366,7 @@ root.GazillionCheckoutRegistry=freeze({
         "bendo",
         "skruu"
       ],
-      "subtotal": 2900,
+      "subtotal": 4800,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=5GMP-1Y92Ab4nkpjCsnaRg%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -1375,7 +1375,7 @@ root.GazillionCheckoutRegistry=freeze({
         "bendo",
         "tripleog"
       ],
-      "subtotal": 3900,
+      "subtotal": 5800,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=EL_1F5yt8-G4xQ9v-ypgiA%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -1384,7 +1384,7 @@ root.GazillionCheckoutRegistry=freeze({
         "bendo",
         "winnetka"
       ],
-      "subtotal": 4900,
+      "subtotal": 6800,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=RhQRo36I-IXhwkGgPLXI-g%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -1394,7 +1394,7 @@ root.GazillionCheckoutRegistry=freeze({
         "bendo",
         "drugs"
       ],
-      "subtotal": 3900,
+      "subtotal": 5800,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=hZN3ay7x9GEJW7U7XkS6ag%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -1404,7 +1404,7 @@ root.GazillionCheckoutRegistry=freeze({
         "bendo",
         "f12"
       ],
-      "subtotal": 8800,
+      "subtotal": 10700,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=C2dA81sXKKqBA9x6vuiRVA%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -1414,7 +1414,7 @@ root.GazillionCheckoutRegistry=freeze({
         "bendo",
         "journeyman"
       ],
-      "subtotal": 9800,
+      "subtotal": 11700,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=OFjwImBMteUfTyj7-ilZOA%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -1424,7 +1424,7 @@ root.GazillionCheckoutRegistry=freeze({
         "bendo",
         "skruu"
       ],
-      "subtotal": 6800,
+      "subtotal": 8700,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=87cpiyzeTixDAzIvEm_Mfw%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -1434,7 +1434,7 @@ root.GazillionCheckoutRegistry=freeze({
         "bendo",
         "tripleog"
       ],
-      "subtotal": 7800,
+      "subtotal": 9700,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=AHaxoiyjqvDU8Dn1iGGHdA%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -1444,7 +1444,7 @@ root.GazillionCheckoutRegistry=freeze({
         "bendo",
         "winnetka"
       ],
-      "subtotal": 8800,
+      "subtotal": 10700,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=toFQ-Mtz_qWHmOm86mdz4Q%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -1454,7 +1454,7 @@ root.GazillionCheckoutRegistry=freeze({
         "drugs",
         "f12"
       ],
-      "subtotal": 4900,
+      "subtotal": 6800,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=i9IM8qeF-e5_yMd_-2zDaA%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -1464,7 +1464,7 @@ root.GazillionCheckoutRegistry=freeze({
         "drugs",
         "journeyman"
       ],
-      "subtotal": 5900,
+      "subtotal": 7800,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=Dw5MOyU_1XDu1we41NV6ug%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -1474,7 +1474,7 @@ root.GazillionCheckoutRegistry=freeze({
         "drugs",
         "skruu"
       ],
-      "subtotal": 2900,
+      "subtotal": 4800,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=GhfXbkTBkSC0AXhYvc_H5Q%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -1484,7 +1484,7 @@ root.GazillionCheckoutRegistry=freeze({
         "drugs",
         "tripleog"
       ],
-      "subtotal": 3900,
+      "subtotal": 5800,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=tOnln_dRb5rWnkSbJGv4jg%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -1494,7 +1494,7 @@ root.GazillionCheckoutRegistry=freeze({
         "drugs",
         "winnetka"
       ],
-      "subtotal": 4900,
+      "subtotal": 6800,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=xHWh42EIycxoTE5mDEslLw%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -1504,7 +1504,7 @@ root.GazillionCheckoutRegistry=freeze({
         "f12",
         "journeyman"
       ],
-      "subtotal": 10800,
+      "subtotal": 12700,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=-DQUFglrPrElW7zCACXojQ%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -1514,7 +1514,7 @@ root.GazillionCheckoutRegistry=freeze({
         "f12",
         "skruu"
       ],
-      "subtotal": 7800,
+      "subtotal": 9700,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=RcrpDJvj90W8noCmwdzV3g%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -1524,7 +1524,7 @@ root.GazillionCheckoutRegistry=freeze({
         "f12",
         "tripleog"
       ],
-      "subtotal": 8800,
+      "subtotal": 10700,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=N7UIF3jeUktaeGJk8bAagw%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -1534,7 +1534,7 @@ root.GazillionCheckoutRegistry=freeze({
         "f12",
         "winnetka"
       ],
-      "subtotal": 9800,
+      "subtotal": 11700,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=QAwVSf6DYxrxZi7BDRwNyw%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -1544,7 +1544,7 @@ root.GazillionCheckoutRegistry=freeze({
         "journeyman",
         "skruu"
       ],
-      "subtotal": 8800,
+      "subtotal": 10700,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=jyUq5ZaJue0WiUn1LFUcdA%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -1554,7 +1554,7 @@ root.GazillionCheckoutRegistry=freeze({
         "journeyman",
         "tripleog"
       ],
-      "subtotal": 9800,
+      "subtotal": 11700,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=evVv3KD1bD0JLpmaImFtQw%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -1564,7 +1564,7 @@ root.GazillionCheckoutRegistry=freeze({
         "journeyman",
         "winnetka"
       ],
-      "subtotal": 10800,
+      "subtotal": 12700,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=W0AxD-OlmSTZ_wCV5ViFlg%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -1574,7 +1574,7 @@ root.GazillionCheckoutRegistry=freeze({
         "skruu",
         "tripleog"
       ],
-      "subtotal": 6800,
+      "subtotal": 8700,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=6q-eP7uAUfxPU8prUOytTw%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -1584,7 +1584,7 @@ root.GazillionCheckoutRegistry=freeze({
         "skruu",
         "winnetka"
       ],
-      "subtotal": 7800,
+      "subtotal": 9700,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=ASHbZGdgEWlRCy_VnTeXwg%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -1594,7 +1594,7 @@ root.GazillionCheckoutRegistry=freeze({
         "tripleog",
         "winnetka"
       ],
-      "subtotal": 8800,
+      "subtotal": 10700,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=oQYdt78ge1uPYVPG6nm9Wg%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -1605,7 +1605,7 @@ root.GazillionCheckoutRegistry=freeze({
         "drugs",
         "f12"
       ],
-      "subtotal": 8800,
+      "subtotal": 10700,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=wbTBXWOjSkcmGKg_HUWTYw%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -1616,7 +1616,7 @@ root.GazillionCheckoutRegistry=freeze({
         "drugs",
         "journeyman"
       ],
-      "subtotal": 9800,
+      "subtotal": 11700,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=jGG5SswtUVDSQc7UQtKrjQ%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -1627,7 +1627,7 @@ root.GazillionCheckoutRegistry=freeze({
         "drugs",
         "skruu"
       ],
-      "subtotal": 6800,
+      "subtotal": 8700,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=fQnu3b5NOQSyi9JbCaei0A%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -1638,7 +1638,7 @@ root.GazillionCheckoutRegistry=freeze({
         "drugs",
         "tripleog"
       ],
-      "subtotal": 7800,
+      "subtotal": 9700,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=iR5tXIPYsVX7Gjcyly9MFg%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -1649,7 +1649,7 @@ root.GazillionCheckoutRegistry=freeze({
         "drugs",
         "winnetka"
       ],
-      "subtotal": 8800,
+      "subtotal": 10700,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=zTnQ6HnYY2jJ7fCw2Tvk-Q%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -1660,7 +1660,7 @@ root.GazillionCheckoutRegistry=freeze({
         "f12",
         "journeyman"
       ],
-      "subtotal": 14700,
+      "subtotal": 16600,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=Lb7hycJlousDdVcSq32S_Q%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -1671,7 +1671,7 @@ root.GazillionCheckoutRegistry=freeze({
         "f12",
         "skruu"
       ],
-      "subtotal": 11700,
+      "subtotal": 13600,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=ZJHQfESsIvEzmZkKx9Ao9w%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -1682,7 +1682,7 @@ root.GazillionCheckoutRegistry=freeze({
         "f12",
         "tripleog"
       ],
-      "subtotal": 12700,
+      "subtotal": 14600,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=Ht-t7mZsGpfL5MQFAIuBbQ%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -1693,7 +1693,7 @@ root.GazillionCheckoutRegistry=freeze({
         "f12",
         "winnetka"
       ],
-      "subtotal": 13700,
+      "subtotal": 15600,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=VovCdIkhscmrkLqxck1Qfg%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -1704,7 +1704,7 @@ root.GazillionCheckoutRegistry=freeze({
         "journeyman",
         "skruu"
       ],
-      "subtotal": 12700,
+      "subtotal": 14600,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=Bn64d8PG5FSnOT33e2bhQA%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -1715,7 +1715,7 @@ root.GazillionCheckoutRegistry=freeze({
         "journeyman",
         "tripleog"
       ],
-      "subtotal": 13700,
+      "subtotal": 15600,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=8guVjGof0nEz_mdV0CCTuQ%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -1726,7 +1726,7 @@ root.GazillionCheckoutRegistry=freeze({
         "journeyman",
         "winnetka"
       ],
-      "subtotal": 14700,
+      "subtotal": 16600,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=ayhJGN7ctrCSRPT-6v-JNw%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -1737,7 +1737,7 @@ root.GazillionCheckoutRegistry=freeze({
         "skruu",
         "tripleog"
       ],
-      "subtotal": 10700,
+      "subtotal": 12600,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=S_Auz7MZ-frEmHu9OQvyIg%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -1748,7 +1748,7 @@ root.GazillionCheckoutRegistry=freeze({
         "skruu",
         "winnetka"
       ],
-      "subtotal": 11700,
+      "subtotal": 13600,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=9U3bshNlARgSQSIQknmvuQ%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -1759,7 +1759,7 @@ root.GazillionCheckoutRegistry=freeze({
         "tripleog",
         "winnetka"
       ],
-      "subtotal": 12700,
+      "subtotal": 14600,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=OhcG11kPmeQph5eA-_6T2g%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -1770,7 +1770,7 @@ root.GazillionCheckoutRegistry=freeze({
         "f12",
         "journeyman"
       ],
-      "subtotal": 10800,
+      "subtotal": 12700,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=dGtwz-f1p2rp74ivyUdKNA%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -1781,7 +1781,7 @@ root.GazillionCheckoutRegistry=freeze({
         "f12",
         "skruu"
       ],
-      "subtotal": 7800,
+      "subtotal": 9700,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=WLZhR8qB3taHfOg0cwqmBQ%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -1792,7 +1792,7 @@ root.GazillionCheckoutRegistry=freeze({
         "f12",
         "tripleog"
       ],
-      "subtotal": 8800,
+      "subtotal": 10700,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=anek3koBLGhOWe25NWE_VA%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -1803,7 +1803,7 @@ root.GazillionCheckoutRegistry=freeze({
         "f12",
         "winnetka"
       ],
-      "subtotal": 9800,
+      "subtotal": 11700,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=v5ClxEL0Of3fWVxI6VY8wg%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -1814,7 +1814,7 @@ root.GazillionCheckoutRegistry=freeze({
         "journeyman",
         "skruu"
       ],
-      "subtotal": 8800,
+      "subtotal": 10700,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=wx1W84yWFQZUG5YIk4Frsg%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -1825,7 +1825,7 @@ root.GazillionCheckoutRegistry=freeze({
         "journeyman",
         "tripleog"
       ],
-      "subtotal": 9800,
+      "subtotal": 11700,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=LeY4NPRadQWE-hoL4MyAQQ%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -1836,7 +1836,7 @@ root.GazillionCheckoutRegistry=freeze({
         "journeyman",
         "winnetka"
       ],
-      "subtotal": 10800,
+      "subtotal": 12700,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=tBpKHHiqskPA911Mcu37sg%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -1847,7 +1847,7 @@ root.GazillionCheckoutRegistry=freeze({
         "skruu",
         "tripleog"
       ],
-      "subtotal": 6800,
+      "subtotal": 8700,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=64S5Y1bbSCeFWVhMH8TK7Q%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -1858,7 +1858,7 @@ root.GazillionCheckoutRegistry=freeze({
         "skruu",
         "winnetka"
       ],
-      "subtotal": 7800,
+      "subtotal": 9700,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=m2S5BUZLu2vvQw52TDP0ig%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -1869,7 +1869,7 @@ root.GazillionCheckoutRegistry=freeze({
         "tripleog",
         "winnetka"
       ],
-      "subtotal": 8800,
+      "subtotal": 10700,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=rxsyO3fxgPLyFWT-7VfoWA%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -1880,7 +1880,7 @@ root.GazillionCheckoutRegistry=freeze({
         "journeyman",
         "skruu"
       ],
-      "subtotal": 13700,
+      "subtotal": 15600,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=KcaVdECcLbEP0VaUQTbogQ%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -1891,7 +1891,7 @@ root.GazillionCheckoutRegistry=freeze({
         "journeyman",
         "tripleog"
       ],
-      "subtotal": 14700,
+      "subtotal": 16600,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=dOpSbrihSpktrNhcjjk9OQ%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -1902,7 +1902,7 @@ root.GazillionCheckoutRegistry=freeze({
         "journeyman",
         "winnetka"
       ],
-      "subtotal": 15700,
+      "subtotal": 17600,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=z42512ZPuod3haBA9Y1r0w%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -1913,7 +1913,7 @@ root.GazillionCheckoutRegistry=freeze({
         "skruu",
         "tripleog"
       ],
-      "subtotal": 11700,
+      "subtotal": 13600,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=IDUXYuWFrLsJNcTKC7tM6Q%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -1924,7 +1924,7 @@ root.GazillionCheckoutRegistry=freeze({
         "skruu",
         "winnetka"
       ],
-      "subtotal": 12700,
+      "subtotal": 14600,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=gjCBbNMA3a3eZCGrMMEFEA%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -1935,7 +1935,7 @@ root.GazillionCheckoutRegistry=freeze({
         "tripleog",
         "winnetka"
       ],
-      "subtotal": 13700,
+      "subtotal": 15600,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=cdvSZsfotPNNphuxJOEjBQ%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -1946,7 +1946,7 @@ root.GazillionCheckoutRegistry=freeze({
         "skruu",
         "tripleog"
       ],
-      "subtotal": 12700,
+      "subtotal": 14600,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=ZrG2ZqpGkeYWQuTpddvFjA%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -1957,7 +1957,7 @@ root.GazillionCheckoutRegistry=freeze({
         "skruu",
         "winnetka"
       ],
-      "subtotal": 13700,
+      "subtotal": 15600,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=sAiEN_ufPiBZXk6KNzkgqA%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -1968,7 +1968,7 @@ root.GazillionCheckoutRegistry=freeze({
         "tripleog",
         "winnetka"
       ],
-      "subtotal": 14700,
+      "subtotal": 16600,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=K5aZqoj4eD9slpxfl9CP8A%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -1979,7 +1979,7 @@ root.GazillionCheckoutRegistry=freeze({
         "tripleog",
         "winnetka"
       ],
-      "subtotal": 11700,
+      "subtotal": 13600,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=Sgt0msNuaBXf87F0ApZb7Q%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -1991,7 +1991,7 @@ root.GazillionCheckoutRegistry=freeze({
         "f12",
         "journeyman"
       ],
-      "subtotal": 14700,
+      "subtotal": 16600,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=mIAyhbS1fwLfqCEGmwhy0Q%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -2003,7 +2003,7 @@ root.GazillionCheckoutRegistry=freeze({
         "f12",
         "skruu"
       ],
-      "subtotal": 11700,
+      "subtotal": 13600,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=_AWl8vqH8GKJGwEyUn7EyQ%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -2015,7 +2015,7 @@ root.GazillionCheckoutRegistry=freeze({
         "f12",
         "tripleog"
       ],
-      "subtotal": 12700,
+      "subtotal": 14600,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=Jh-uom9Q0y1ul027TNDilA%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -2027,7 +2027,7 @@ root.GazillionCheckoutRegistry=freeze({
         "f12",
         "winnetka"
       ],
-      "subtotal": 13700,
+      "subtotal": 15600,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=9VfFvxaXPkmP-LxZ3-utYA%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -2039,7 +2039,7 @@ root.GazillionCheckoutRegistry=freeze({
         "journeyman",
         "skruu"
       ],
-      "subtotal": 12700,
+      "subtotal": 14600,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=XlbVqKJ9j2SFCYr3jIug-Q%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -2051,7 +2051,7 @@ root.GazillionCheckoutRegistry=freeze({
         "journeyman",
         "tripleog"
       ],
-      "subtotal": 13700,
+      "subtotal": 15600,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=20LGtMfxd0rPEo-ADPa03g%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -2063,7 +2063,7 @@ root.GazillionCheckoutRegistry=freeze({
         "journeyman",
         "winnetka"
       ],
-      "subtotal": 14700,
+      "subtotal": 16600,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=J8w6ixpEwNCzSfwLDsGrUg%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -2075,7 +2075,7 @@ root.GazillionCheckoutRegistry=freeze({
         "skruu",
         "tripleog"
       ],
-      "subtotal": 10700,
+      "subtotal": 12600,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=p15zwlF9y3xiH0ZJaaIUKw%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -2087,7 +2087,7 @@ root.GazillionCheckoutRegistry=freeze({
         "skruu",
         "winnetka"
       ],
-      "subtotal": 11700,
+      "subtotal": 13600,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=1F3naVtBuEuIqn_65oIbeQ%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -2099,7 +2099,7 @@ root.GazillionCheckoutRegistry=freeze({
         "tripleog",
         "winnetka"
       ],
-      "subtotal": 12700,
+      "subtotal": 14600,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=UYSfC0No93FI6wM_6R03kw%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -2111,7 +2111,7 @@ root.GazillionCheckoutRegistry=freeze({
         "journeyman",
         "skruu"
       ],
-      "subtotal": 17600,
+      "subtotal": 19500,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=HB7hb3SPe5xY-HNuk545sQ%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -2123,7 +2123,7 @@ root.GazillionCheckoutRegistry=freeze({
         "journeyman",
         "tripleog"
       ],
-      "subtotal": 18600,
+      "subtotal": 20500,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=MWv6aFph3b8PyvWwa7s3mw%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -2135,7 +2135,7 @@ root.GazillionCheckoutRegistry=freeze({
         "journeyman",
         "winnetka"
       ],
-      "subtotal": 19600,
+      "subtotal": 21500,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=OZrIr5GRFTUcrS9q8B_a3g%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -2147,7 +2147,7 @@ root.GazillionCheckoutRegistry=freeze({
         "skruu",
         "tripleog"
       ],
-      "subtotal": 15600,
+      "subtotal": 17500,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=ysN7ZeuPGG4pIxz70uj4cg%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -2159,7 +2159,7 @@ root.GazillionCheckoutRegistry=freeze({
         "skruu",
         "winnetka"
       ],
-      "subtotal": 16600,
+      "subtotal": 18500,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=qCa2Y5sspEXKBdu4hZ5RWA%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -2171,7 +2171,7 @@ root.GazillionCheckoutRegistry=freeze({
         "tripleog",
         "winnetka"
       ],
-      "subtotal": 17600,
+      "subtotal": 19500,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=56RYcnFIAKFnZvpKhtze2w%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -2183,7 +2183,7 @@ root.GazillionCheckoutRegistry=freeze({
         "skruu",
         "tripleog"
       ],
-      "subtotal": 16600,
+      "subtotal": 18500,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=sjJWk8XfazEyCH779y5ccQ%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -2195,7 +2195,7 @@ root.GazillionCheckoutRegistry=freeze({
         "skruu",
         "winnetka"
       ],
-      "subtotal": 17600,
+      "subtotal": 19500,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=K94vOkHnemuzyhtZNoWz_g%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -2207,7 +2207,7 @@ root.GazillionCheckoutRegistry=freeze({
         "tripleog",
         "winnetka"
       ],
-      "subtotal": 18600,
+      "subtotal": 20500,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=JTwW3VgW18UjrlRsGzwKrw%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -2219,7 +2219,7 @@ root.GazillionCheckoutRegistry=freeze({
         "tripleog",
         "winnetka"
       ],
-      "subtotal": 15600,
+      "subtotal": 17500,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=mPLVwIpEPs2voFJBShjqNw%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -2231,7 +2231,7 @@ root.GazillionCheckoutRegistry=freeze({
         "journeyman",
         "skruu"
       ],
-      "subtotal": 13700,
+      "subtotal": 15600,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=7P65bgFrPQT7BemNaW4DiA%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -2243,7 +2243,7 @@ root.GazillionCheckoutRegistry=freeze({
         "journeyman",
         "tripleog"
       ],
-      "subtotal": 14700,
+      "subtotal": 16600,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=PnxWjznyTlOAVUZRFnuiEg%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -2255,7 +2255,7 @@ root.GazillionCheckoutRegistry=freeze({
         "journeyman",
         "winnetka"
       ],
-      "subtotal": 15700,
+      "subtotal": 17600,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=WkYHlqp264z3iLJO1U4juA%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -2267,7 +2267,7 @@ root.GazillionCheckoutRegistry=freeze({
         "skruu",
         "tripleog"
       ],
-      "subtotal": 11700,
+      "subtotal": 13600,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=Zscq1ZZX7LTRYaSS6KZ0ww%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -2279,7 +2279,7 @@ root.GazillionCheckoutRegistry=freeze({
         "skruu",
         "winnetka"
       ],
-      "subtotal": 12700,
+      "subtotal": 14600,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=MQhl6Sy54moYLT3DGP_x_A%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -2291,7 +2291,7 @@ root.GazillionCheckoutRegistry=freeze({
         "tripleog",
         "winnetka"
       ],
-      "subtotal": 13700,
+      "subtotal": 15600,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=0wM5nUKeJ_iBjtkeioF8PQ%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -2303,7 +2303,7 @@ root.GazillionCheckoutRegistry=freeze({
         "skruu",
         "tripleog"
       ],
-      "subtotal": 12700,
+      "subtotal": 14600,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=bC1NDBJJBMqhXmcNEatXEA%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -2315,7 +2315,7 @@ root.GazillionCheckoutRegistry=freeze({
         "skruu",
         "winnetka"
       ],
-      "subtotal": 13700,
+      "subtotal": 15600,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=Czorsp9kmNqatN4NjSgsqg%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -2327,7 +2327,7 @@ root.GazillionCheckoutRegistry=freeze({
         "tripleog",
         "winnetka"
       ],
-      "subtotal": 14700,
+      "subtotal": 16600,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=W2uXHCDZ2l9XeBnDFoZsTg%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -2339,7 +2339,7 @@ root.GazillionCheckoutRegistry=freeze({
         "tripleog",
         "winnetka"
       ],
-      "subtotal": 11700,
+      "subtotal": 13600,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=DcVbSE0ILCaPKpxECYQSZw%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -2351,7 +2351,7 @@ root.GazillionCheckoutRegistry=freeze({
         "skruu",
         "tripleog"
       ],
-      "subtotal": 17600,
+      "subtotal": 19500,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=2SqYCGv5xeXm6uX-ujvUKQ%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -2363,7 +2363,7 @@ root.GazillionCheckoutRegistry=freeze({
         "skruu",
         "winnetka"
       ],
-      "subtotal": 18600,
+      "subtotal": 20500,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=gkKWFnnrpkTtUzAMe9bg1A%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -2375,7 +2375,7 @@ root.GazillionCheckoutRegistry=freeze({
         "tripleog",
         "winnetka"
       ],
-      "subtotal": 19600,
+      "subtotal": 21500,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=qg_uqDW7lBZjT8rCaokWbg%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -2387,7 +2387,7 @@ root.GazillionCheckoutRegistry=freeze({
         "tripleog",
         "winnetka"
       ],
-      "subtotal": 16600,
+      "subtotal": 18500,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=giaNXVOIB-jTB9zWcD6_9w%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -2399,7 +2399,7 @@ root.GazillionCheckoutRegistry=freeze({
         "tripleog",
         "winnetka"
       ],
-      "subtotal": 17600,
+      "subtotal": 19500,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=yz-ACzY2gKiGLXpvAbjP9A%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -2412,7 +2412,7 @@ root.GazillionCheckoutRegistry=freeze({
         "journeyman",
         "skruu"
       ],
-      "subtotal": 17600,
+      "subtotal": 19500,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=8HnUH17OhoT1e-gMCMgjTw%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -2425,7 +2425,7 @@ root.GazillionCheckoutRegistry=freeze({
         "journeyman",
         "tripleog"
       ],
-      "subtotal": 18600,
+      "subtotal": 20500,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=d6NU8Lan4FjeowA-NWajAQ%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -2438,7 +2438,7 @@ root.GazillionCheckoutRegistry=freeze({
         "journeyman",
         "winnetka"
       ],
-      "subtotal": 19600,
+      "subtotal": 21500,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=BF8XK6Fw8GpDCMJkMgyMSQ%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -2451,7 +2451,7 @@ root.GazillionCheckoutRegistry=freeze({
         "skruu",
         "tripleog"
       ],
-      "subtotal": 15600,
+      "subtotal": 17500,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=Ve9gtF6krVmq5-yPXESpzQ%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -2464,7 +2464,7 @@ root.GazillionCheckoutRegistry=freeze({
         "skruu",
         "winnetka"
       ],
-      "subtotal": 16600,
+      "subtotal": 18500,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=dV7zY7_r22PayvfNITIYZw%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -2477,7 +2477,7 @@ root.GazillionCheckoutRegistry=freeze({
         "tripleog",
         "winnetka"
       ],
-      "subtotal": 17600,
+      "subtotal": 19500,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=4ry8ZYgyNWfJp6JqhR5OmQ%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -2490,7 +2490,7 @@ root.GazillionCheckoutRegistry=freeze({
         "skruu",
         "tripleog"
       ],
-      "subtotal": 16600,
+      "subtotal": 18500,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=Ij3Qcr66ajjTBcl07t_kSg%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -2503,7 +2503,7 @@ root.GazillionCheckoutRegistry=freeze({
         "skruu",
         "winnetka"
       ],
-      "subtotal": 17600,
+      "subtotal": 19500,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=i_LKwMOnjjqNazNogvy8kw%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -2516,7 +2516,7 @@ root.GazillionCheckoutRegistry=freeze({
         "tripleog",
         "winnetka"
       ],
-      "subtotal": 18600,
+      "subtotal": 20500,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=ANZZUp_WtPW0zk0edgXuoA%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -2529,7 +2529,7 @@ root.GazillionCheckoutRegistry=freeze({
         "tripleog",
         "winnetka"
       ],
-      "subtotal": 15600,
+      "subtotal": 17500,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=hmQRiFRQD63fzCqQh-XPuA%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -2542,7 +2542,7 @@ root.GazillionCheckoutRegistry=freeze({
         "skruu",
         "tripleog"
       ],
-      "subtotal": 21500,
+      "subtotal": 23400,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=Ry8pWb3ensPtkB94CVKfLA%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -2555,7 +2555,7 @@ root.GazillionCheckoutRegistry=freeze({
         "skruu",
         "winnetka"
       ],
-      "subtotal": 22500,
+      "subtotal": 24400,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=_GXUkwIZevAIXlfkyrLokA%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -2568,7 +2568,7 @@ root.GazillionCheckoutRegistry=freeze({
         "tripleog",
         "winnetka"
       ],
-      "subtotal": 23500,
+      "subtotal": 25400,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=I836ZI3_v492zP5Cf3efWA%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -2581,7 +2581,7 @@ root.GazillionCheckoutRegistry=freeze({
         "tripleog",
         "winnetka"
       ],
-      "subtotal": 20500,
+      "subtotal": 22400,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=3Jr4-8X0roE_nbCiYh_sbQ%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -2594,7 +2594,7 @@ root.GazillionCheckoutRegistry=freeze({
         "tripleog",
         "winnetka"
       ],
-      "subtotal": 21500,
+      "subtotal": 23400,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=vI3fumCafjdkOoXwjKAVSg%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -2607,7 +2607,7 @@ root.GazillionCheckoutRegistry=freeze({
         "skruu",
         "tripleog"
       ],
-      "subtotal": 17600,
+      "subtotal": 19500,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=i3PJHtADVmtuhh5qZvvYyw%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -2620,7 +2620,7 @@ root.GazillionCheckoutRegistry=freeze({
         "skruu",
         "winnetka"
       ],
-      "subtotal": 18600,
+      "subtotal": 20500,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=LKzL_FImDuiF2iI6oKq8Kw%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -2633,7 +2633,7 @@ root.GazillionCheckoutRegistry=freeze({
         "tripleog",
         "winnetka"
       ],
-      "subtotal": 19600,
+      "subtotal": 21500,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=Ky0E2LBzXFdYiLOl9ENmwg%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -2646,7 +2646,7 @@ root.GazillionCheckoutRegistry=freeze({
         "tripleog",
         "winnetka"
       ],
-      "subtotal": 16600,
+      "subtotal": 18500,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=4I80AJkKWio3z-a0yeehrQ%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -2659,7 +2659,7 @@ root.GazillionCheckoutRegistry=freeze({
         "tripleog",
         "winnetka"
       ],
-      "subtotal": 17600,
+      "subtotal": 19500,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=rTVZh7UclwzZF64a6mDGxA%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -2672,7 +2672,7 @@ root.GazillionCheckoutRegistry=freeze({
         "tripleog",
         "winnetka"
       ],
-      "subtotal": 22500,
+      "subtotal": 24400,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=vf4PGubjDm9mYAZrjzg1gw%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -2686,7 +2686,7 @@ root.GazillionCheckoutRegistry=freeze({
         "skruu",
         "tripleog"
       ],
-      "subtotal": 21500,
+      "subtotal": 23400,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=5d4CbPjoztoQNz15oAIoXw%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -2700,7 +2700,7 @@ root.GazillionCheckoutRegistry=freeze({
         "skruu",
         "winnetka"
       ],
-      "subtotal": 22500,
+      "subtotal": 24400,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=K3e7SPPqn-0ftL6ienlaag%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -2714,7 +2714,7 @@ root.GazillionCheckoutRegistry=freeze({
         "tripleog",
         "winnetka"
       ],
-      "subtotal": 23500,
+      "subtotal": 25400,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=bRSvBCtQfAt9_PlMR2DmOQ%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -2728,7 +2728,7 @@ root.GazillionCheckoutRegistry=freeze({
         "tripleog",
         "winnetka"
       ],
-      "subtotal": 20500,
+      "subtotal": 22400,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=V6PwOGk3RO769lzxoj63gA%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -2742,7 +2742,7 @@ root.GazillionCheckoutRegistry=freeze({
         "tripleog",
         "winnetka"
       ],
-      "subtotal": 21500,
+      "subtotal": 23400,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=8UG3B4E3QkPwNgH9AgmZYg%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -2756,7 +2756,7 @@ root.GazillionCheckoutRegistry=freeze({
         "tripleog",
         "winnetka"
       ],
-      "subtotal": 26400,
+      "subtotal": 28300,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=MHhuBjzmVwqQ7h_vGOS16w%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -2770,7 +2770,7 @@ root.GazillionCheckoutRegistry=freeze({
         "tripleog",
         "winnetka"
       ],
-      "subtotal": 22500,
+      "subtotal": 24400,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=b0yHjEa3JW8Ta4Voge_SzQ%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -2785,7 +2785,7 @@ root.GazillionCheckoutRegistry=freeze({
         "tripleog",
         "winnetka"
       ],
-      "subtotal": 26400,
+      "subtotal": 28300,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=Qu3PTvioKrzkYK_gIgM18w%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-02"
     },
@@ -2803,7 +2803,7 @@ root.GazillionCheckoutRegistry=freeze({
         "bendo",
         "smplutility"
       ],
-      "subtotal": 0,
+      "subtotal": 1900,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=D3-oKqhmEjhfiRiAUJPe0A%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -2822,7 +2822,7 @@ root.GazillionCheckoutRegistry=freeze({
         "smplutility",
         "winnetka"
       ],
-      "subtotal": 4900,
+      "subtotal": 6800,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=VaVRriNYYI9xMplZHogfBA%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -2841,7 +2841,7 @@ root.GazillionCheckoutRegistry=freeze({
         "journeyman",
         "smplutility"
       ],
-      "subtotal": 5900,
+      "subtotal": 7800,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=tWx4ch2QK-WJoa27nSSioA%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -2862,7 +2862,7 @@ root.GazillionCheckoutRegistry=freeze({
         "smplutility",
         "winnetka"
       ],
-      "subtotal": 10800,
+      "subtotal": 12700,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=G0KzNFc4CpDOrLALBHDL-A%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -2881,7 +2881,7 @@ root.GazillionCheckoutRegistry=freeze({
         "bendo",
         "smplutility"
       ],
-      "subtotal": 3900,
+      "subtotal": 5800,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=NBmFX5fjsgZPi_Swh1v_CA%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -2902,7 +2902,7 @@ root.GazillionCheckoutRegistry=freeze({
         "smplutility",
         "winnetka"
       ],
-      "subtotal": 8800,
+      "subtotal": 10700,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=eeElzizQJucgvlMv2fI8kA%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -2923,7 +2923,7 @@ root.GazillionCheckoutRegistry=freeze({
         "journeyman",
         "smplutility"
       ],
-      "subtotal": 9800,
+      "subtotal": 11700,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=pgwhBOUDwFVlNyf-Hkb1Qw%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -2946,7 +2946,7 @@ root.GazillionCheckoutRegistry=freeze({
         "smplutility",
         "winnetka"
       ],
-      "subtotal": 14700,
+      "subtotal": 16600,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=h4veKoCNf_lCLXvA78B92A%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -2965,7 +2965,7 @@ root.GazillionCheckoutRegistry=freeze({
         "smplutility",
         "tripleog"
       ],
-      "subtotal": 3900,
+      "subtotal": 5800,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=H8wWp2y3rQF9k4lqyB-2GA%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -2986,7 +2986,7 @@ root.GazillionCheckoutRegistry=freeze({
         "tripleog",
         "winnetka"
       ],
-      "subtotal": 8800,
+      "subtotal": 10700,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=mrcGs3LKsWe_JYb1npguSA%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -3007,7 +3007,7 @@ root.GazillionCheckoutRegistry=freeze({
         "smplutility",
         "tripleog"
       ],
-      "subtotal": 9800,
+      "subtotal": 11700,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=Af9h_7llHljVmjp8CiSwmA%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -3030,7 +3030,7 @@ root.GazillionCheckoutRegistry=freeze({
         "tripleog",
         "winnetka"
       ],
-      "subtotal": 14700,
+      "subtotal": 16600,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=5FzTJZhqM-W9LbUbu9Viuw%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -3051,7 +3051,7 @@ root.GazillionCheckoutRegistry=freeze({
         "smplutility",
         "tripleog"
       ],
-      "subtotal": 7800,
+      "subtotal": 9700,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=R5nju1zF7c138Ilmh-uldQ%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -3074,7 +3074,7 @@ root.GazillionCheckoutRegistry=freeze({
         "tripleog",
         "winnetka"
       ],
-      "subtotal": 12700,
+      "subtotal": 14600,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=_8hA9nxCAjxLereUcQXpcg%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -3097,7 +3097,7 @@ root.GazillionCheckoutRegistry=freeze({
         "smplutility",
         "tripleog"
       ],
-      "subtotal": 13700,
+      "subtotal": 15600,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=4u_xfM_TBl_RC0I22hdPQA%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -3122,7 +3122,7 @@ root.GazillionCheckoutRegistry=freeze({
         "tripleog",
         "winnetka"
       ],
-      "subtotal": 18600,
+      "subtotal": 20500,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=Wx9mdaT71OLvl-Fpgd1VsA%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -3141,7 +3141,7 @@ root.GazillionCheckoutRegistry=freeze({
         "skruu",
         "smplutility"
       ],
-      "subtotal": 2900,
+      "subtotal": 4800,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=qnJNzcemBHrnOZ3HSCIKrw%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -3162,7 +3162,7 @@ root.GazillionCheckoutRegistry=freeze({
         "smplutility",
         "winnetka"
       ],
-      "subtotal": 7800,
+      "subtotal": 9700,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=-3PS61y1_R3ACOPawgoLeg%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -3183,7 +3183,7 @@ root.GazillionCheckoutRegistry=freeze({
         "skruu",
         "smplutility"
       ],
-      "subtotal": 8800,
+      "subtotal": 10700,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=DEZfZOv3b6oKzJV3mbXE1g%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -3206,7 +3206,7 @@ root.GazillionCheckoutRegistry=freeze({
         "smplutility",
         "winnetka"
       ],
-      "subtotal": 13700,
+      "subtotal": 15600,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=3p9w3ZlNVQ2mzw7Ju-WQcg%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -3227,7 +3227,7 @@ root.GazillionCheckoutRegistry=freeze({
         "skruu",
         "smplutility"
       ],
-      "subtotal": 6800,
+      "subtotal": 8700,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=ogPcbRTf6IKYrk79x-I_lw%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -3250,7 +3250,7 @@ root.GazillionCheckoutRegistry=freeze({
         "smplutility",
         "winnetka"
       ],
-      "subtotal": 11700,
+      "subtotal": 13600,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=PTzTmtqYgS5Wr1taXxbMcg%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -3273,7 +3273,7 @@ root.GazillionCheckoutRegistry=freeze({
         "skruu",
         "smplutility"
       ],
-      "subtotal": 12700,
+      "subtotal": 14600,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=2-XDWrnXcFNI1MGIVPNjNg%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -3298,7 +3298,7 @@ root.GazillionCheckoutRegistry=freeze({
         "smplutility",
         "winnetka"
       ],
-      "subtotal": 17600,
+      "subtotal": 19500,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=i1YzwthJ7uEfjyr0MiuxTA%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -3319,7 +3319,7 @@ root.GazillionCheckoutRegistry=freeze({
         "smplutility",
         "tripleog"
       ],
-      "subtotal": 6800,
+      "subtotal": 8700,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=ZL_RyDPx1DTQTrYsPIMlJA%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -3342,7 +3342,7 @@ root.GazillionCheckoutRegistry=freeze({
         "tripleog",
         "winnetka"
       ],
-      "subtotal": 11700,
+      "subtotal": 13600,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=zjl2as3DwH-mEHNKXB5qKQ%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -3365,7 +3365,7 @@ root.GazillionCheckoutRegistry=freeze({
         "smplutility",
         "tripleog"
       ],
-      "subtotal": 12700,
+      "subtotal": 14600,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=YSlTlRttpYQzIRlMNeEmVw%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -3390,7 +3390,7 @@ root.GazillionCheckoutRegistry=freeze({
         "tripleog",
         "winnetka"
       ],
-      "subtotal": 17600,
+      "subtotal": 19500,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=BOVN9uMoOELv2LmVj4nvWw%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -3413,7 +3413,7 @@ root.GazillionCheckoutRegistry=freeze({
         "smplutility",
         "tripleog"
       ],
-      "subtotal": 10700,
+      "subtotal": 12600,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=ZIZcsy2W3VMLNzGLUHNGGg%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -3438,7 +3438,7 @@ root.GazillionCheckoutRegistry=freeze({
         "tripleog",
         "winnetka"
       ],
-      "subtotal": 15600,
+      "subtotal": 17500,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=MIvpaUm-Jt9n1cTvr_amwg%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -3463,7 +3463,7 @@ root.GazillionCheckoutRegistry=freeze({
         "smplutility",
         "tripleog"
       ],
-      "subtotal": 16600,
+      "subtotal": 18500,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=XQdzovhd28Y-Y_2a4XPHCg%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -3490,7 +3490,7 @@ root.GazillionCheckoutRegistry=freeze({
         "tripleog",
         "winnetka"
       ],
-      "subtotal": 21500,
+      "subtotal": 23400,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=wTMcHpPCmtGN7PAPFFtX4A%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -3509,7 +3509,7 @@ root.GazillionCheckoutRegistry=freeze({
         "f12",
         "smplutility"
       ],
-      "subtotal": 4900,
+      "subtotal": 6800,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=7YSVky8TvSd818Pqwha6Kw%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -3530,7 +3530,7 @@ root.GazillionCheckoutRegistry=freeze({
         "smplutility",
         "winnetka"
       ],
-      "subtotal": 9800,
+      "subtotal": 11700,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=RM5cVsi2gjrWfoiT_b6Efw%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -3551,7 +3551,7 @@ root.GazillionCheckoutRegistry=freeze({
         "journeyman",
         "smplutility"
       ],
-      "subtotal": 10800,
+      "subtotal": 12700,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=l-AhWrWhjLmDTQLkrkisZQ%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -3574,7 +3574,7 @@ root.GazillionCheckoutRegistry=freeze({
         "smplutility",
         "winnetka"
       ],
-      "subtotal": 15700,
+      "subtotal": 17600,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=cfl9nSxQVldjDfLqITyRQg%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -3595,7 +3595,7 @@ root.GazillionCheckoutRegistry=freeze({
         "f12",
         "smplutility"
       ],
-      "subtotal": 8800,
+      "subtotal": 10700,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=sDwwGwDza6REfN1t8tnqyg%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -3618,7 +3618,7 @@ root.GazillionCheckoutRegistry=freeze({
         "smplutility",
         "winnetka"
       ],
-      "subtotal": 13700,
+      "subtotal": 15600,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=ANDbK4O_KjAsgl6Z_1-aMQ%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -3641,7 +3641,7 @@ root.GazillionCheckoutRegistry=freeze({
         "journeyman",
         "smplutility"
       ],
-      "subtotal": 14700,
+      "subtotal": 16600,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=rJQPw1RyGi0jnm7NKOFPhA%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -3666,7 +3666,7 @@ root.GazillionCheckoutRegistry=freeze({
         "smplutility",
         "winnetka"
       ],
-      "subtotal": 19600,
+      "subtotal": 21500,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=1RhmqQ5zpLT5aSuAsjdsIA%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -3687,7 +3687,7 @@ root.GazillionCheckoutRegistry=freeze({
         "smplutility",
         "tripleog"
       ],
-      "subtotal": 8800,
+      "subtotal": 10700,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=J4ehxA6b3EnSxZo0lMrsYw%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -3710,7 +3710,7 @@ root.GazillionCheckoutRegistry=freeze({
         "tripleog",
         "winnetka"
       ],
-      "subtotal": 13700,
+      "subtotal": 15600,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=geaqiVMaTVXNkBHQTVhB3Q%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -3733,7 +3733,7 @@ root.GazillionCheckoutRegistry=freeze({
         "smplutility",
         "tripleog"
       ],
-      "subtotal": 14700,
+      "subtotal": 16600,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=Akiwh9eHf0vre2GobrjYXg%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -3758,7 +3758,7 @@ root.GazillionCheckoutRegistry=freeze({
         "tripleog",
         "winnetka"
       ],
-      "subtotal": 19600,
+      "subtotal": 21500,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=_X4Jbzz4yXR1AXHVYMRsBw%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -3781,7 +3781,7 @@ root.GazillionCheckoutRegistry=freeze({
         "smplutility",
         "tripleog"
       ],
-      "subtotal": 12700,
+      "subtotal": 14600,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=DdHAqsICe1dPxIQZL-zeYg%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -3806,7 +3806,7 @@ root.GazillionCheckoutRegistry=freeze({
         "tripleog",
         "winnetka"
       ],
-      "subtotal": 17600,
+      "subtotal": 19500,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=ClOvX9kMA83xATryyWBCxA%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -3831,7 +3831,7 @@ root.GazillionCheckoutRegistry=freeze({
         "smplutility",
         "tripleog"
       ],
-      "subtotal": 18600,
+      "subtotal": 20500,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=oSOnvkT_ZxKvzYJviynByg%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -3858,7 +3858,7 @@ root.GazillionCheckoutRegistry=freeze({
         "tripleog",
         "winnetka"
       ],
-      "subtotal": 23500,
+      "subtotal": 25400,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=g1a43uJZS1Wd-0F9XWkXxw%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -3879,7 +3879,7 @@ root.GazillionCheckoutRegistry=freeze({
         "skruu",
         "smplutility"
       ],
-      "subtotal": 7800,
+      "subtotal": 9700,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=HOPZlGsQEwpgIlc5E0rNRQ%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -3902,7 +3902,7 @@ root.GazillionCheckoutRegistry=freeze({
         "smplutility",
         "winnetka"
       ],
-      "subtotal": 12700,
+      "subtotal": 14600,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=SGVTTPz12DC5uadRMFfNJA%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -3925,7 +3925,7 @@ root.GazillionCheckoutRegistry=freeze({
         "skruu",
         "smplutility"
       ],
-      "subtotal": 13700,
+      "subtotal": 15600,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=zY4OTD1EMd8eGkF68r_uew%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -3950,7 +3950,7 @@ root.GazillionCheckoutRegistry=freeze({
         "smplutility",
         "winnetka"
       ],
-      "subtotal": 18600,
+      "subtotal": 20500,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=q-i5ss9JuafD6bgF-fyYpA%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -3973,7 +3973,7 @@ root.GazillionCheckoutRegistry=freeze({
         "skruu",
         "smplutility"
       ],
-      "subtotal": 11700,
+      "subtotal": 13600,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=hjEATK85-hg9xU30AXUPmA%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -3998,7 +3998,7 @@ root.GazillionCheckoutRegistry=freeze({
         "smplutility",
         "winnetka"
       ],
-      "subtotal": 16600,
+      "subtotal": 18500,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=uxaEJjv7ttr7jF5EuuuBrg%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -4023,7 +4023,7 @@ root.GazillionCheckoutRegistry=freeze({
         "skruu",
         "smplutility"
       ],
-      "subtotal": 17600,
+      "subtotal": 19500,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=LAZwgeQCPxvZCpQgKQIxTA%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -4050,7 +4050,7 @@ root.GazillionCheckoutRegistry=freeze({
         "smplutility",
         "winnetka"
       ],
-      "subtotal": 22500,
+      "subtotal": 24400,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=4Zqt0747GdTNGzEG80r06w%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -4073,7 +4073,7 @@ root.GazillionCheckoutRegistry=freeze({
         "smplutility",
         "tripleog"
       ],
-      "subtotal": 11700,
+      "subtotal": 13600,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=_JRswA-a82uB5Cm7t1tQVA%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -4098,7 +4098,7 @@ root.GazillionCheckoutRegistry=freeze({
         "tripleog",
         "winnetka"
       ],
-      "subtotal": 16600,
+      "subtotal": 18500,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=WxC7qKl9OQilyyW4jQPEcg%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -4123,7 +4123,7 @@ root.GazillionCheckoutRegistry=freeze({
         "smplutility",
         "tripleog"
       ],
-      "subtotal": 17600,
+      "subtotal": 19500,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=1qT1Z-SCPx4X4VWJEbN64A%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -4150,7 +4150,7 @@ root.GazillionCheckoutRegistry=freeze({
         "tripleog",
         "winnetka"
       ],
-      "subtotal": 22500,
+      "subtotal": 24400,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=Gpp35SfeJrdCQXD3Si68FQ%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -4175,7 +4175,7 @@ root.GazillionCheckoutRegistry=freeze({
         "smplutility",
         "tripleog"
       ],
-      "subtotal": 15600,
+      "subtotal": 17500,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=FAx30UimGgzvlu3UEAdADA%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -4202,7 +4202,7 @@ root.GazillionCheckoutRegistry=freeze({
         "tripleog",
         "winnetka"
       ],
-      "subtotal": 20500,
+      "subtotal": 22400,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=IDz4T92f0gxFlXPxMIPPCg%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -4229,7 +4229,7 @@ root.GazillionCheckoutRegistry=freeze({
         "smplutility",
         "tripleog"
       ],
-      "subtotal": 21500,
+      "subtotal": 23400,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=WBsqP_a91MVFLKy2rrcRCQ%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -4258,7 +4258,7 @@ root.GazillionCheckoutRegistry=freeze({
         "tripleog",
         "winnetka"
       ],
-      "subtotal": 26400,
+      "subtotal": 28300,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=J_lS2vyu8sHKdFjd2DK2QA%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -4268,7 +4268,7 @@ root.GazillionCheckoutRegistry=freeze({
         "drugs",
         "smplutility"
       ],
-      "subtotal": 0,
+      "subtotal": 1900,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=kQzdtoCOQjKQ62JIT2TmAA%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -4289,7 +4289,7 @@ root.GazillionCheckoutRegistry=freeze({
         "smplutility",
         "winnetka"
       ],
-      "subtotal": 4900,
+      "subtotal": 6800,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=QXQDOPpX_FS-TlW648JVjA%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -4310,7 +4310,7 @@ root.GazillionCheckoutRegistry=freeze({
         "journeyman",
         "smplutility"
       ],
-      "subtotal": 5900,
+      "subtotal": 7800,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=wbr5NB94HTUcJhTSdb7zWg%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -4333,7 +4333,7 @@ root.GazillionCheckoutRegistry=freeze({
         "smplutility",
         "winnetka"
       ],
-      "subtotal": 10800,
+      "subtotal": 12700,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=mzhz8G6pylZacgbl5Nn3ww%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -4354,7 +4354,7 @@ root.GazillionCheckoutRegistry=freeze({
         "drugs",
         "smplutility"
       ],
-      "subtotal": 3900,
+      "subtotal": 5800,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=80PnSKQZMhsJ01vs8L4urw%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -4377,7 +4377,7 @@ root.GazillionCheckoutRegistry=freeze({
         "smplutility",
         "winnetka"
       ],
-      "subtotal": 8800,
+      "subtotal": 10700,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=f_09d_amvxrIP-WQ9XzEug%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -4400,7 +4400,7 @@ root.GazillionCheckoutRegistry=freeze({
         "journeyman",
         "smplutility"
       ],
-      "subtotal": 9800,
+      "subtotal": 11700,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=NFl3RUqSxQSaQk3cad5GhQ%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -4425,7 +4425,7 @@ root.GazillionCheckoutRegistry=freeze({
         "smplutility",
         "winnetka"
       ],
-      "subtotal": 14700,
+      "subtotal": 16600,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=ipe-pM8hk6tTpYbYN_SZhQ%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -4446,7 +4446,7 @@ root.GazillionCheckoutRegistry=freeze({
         "smplutility",
         "tripleog"
       ],
-      "subtotal": 3900,
+      "subtotal": 5800,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=EZStMnHzTTv9aVKzpA1T5A%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -4469,7 +4469,7 @@ root.GazillionCheckoutRegistry=freeze({
         "tripleog",
         "winnetka"
       ],
-      "subtotal": 8800,
+      "subtotal": 10700,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=lYssqiHuozoJXhteU6HAFQ%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -4492,7 +4492,7 @@ root.GazillionCheckoutRegistry=freeze({
         "smplutility",
         "tripleog"
       ],
-      "subtotal": 9800,
+      "subtotal": 11700,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=cd0PIELnYxF3my9__EIzjQ%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -4517,7 +4517,7 @@ root.GazillionCheckoutRegistry=freeze({
         "tripleog",
         "winnetka"
       ],
-      "subtotal": 14700,
+      "subtotal": 16600,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=-nQkDlYB1gsm2MteSQU0LA%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -4540,7 +4540,7 @@ root.GazillionCheckoutRegistry=freeze({
         "smplutility",
         "tripleog"
       ],
-      "subtotal": 7800,
+      "subtotal": 9700,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=08vTqspuFguMjhufAqitTg%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -4565,7 +4565,7 @@ root.GazillionCheckoutRegistry=freeze({
         "tripleog",
         "winnetka"
       ],
-      "subtotal": 12700,
+      "subtotal": 14600,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=jsPR5E-ODhpIxqYyLa6Rdg%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -4590,7 +4590,7 @@ root.GazillionCheckoutRegistry=freeze({
         "smplutility",
         "tripleog"
       ],
-      "subtotal": 13700,
+      "subtotal": 15600,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=Zrkc55-I-nlHOYHOiNvF8Q%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -4617,7 +4617,7 @@ root.GazillionCheckoutRegistry=freeze({
         "tripleog",
         "winnetka"
       ],
-      "subtotal": 18600,
+      "subtotal": 20500,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=Q5prImITj-0b3XJa_bqmmw%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -4638,7 +4638,7 @@ root.GazillionCheckoutRegistry=freeze({
         "skruu",
         "smplutility"
       ],
-      "subtotal": 2900,
+      "subtotal": 4800,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=65YhFEpaX3bkN4GBYiMPiQ%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -4661,7 +4661,7 @@ root.GazillionCheckoutRegistry=freeze({
         "smplutility",
         "winnetka"
       ],
-      "subtotal": 7800,
+      "subtotal": 9700,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=xQSf5Eq52ySurhe3LmKx1A%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -4684,7 +4684,7 @@ root.GazillionCheckoutRegistry=freeze({
         "skruu",
         "smplutility"
       ],
-      "subtotal": 8800,
+      "subtotal": 10700,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=vxyLT3qCT5UMRVug0ujfaw%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -4709,7 +4709,7 @@ root.GazillionCheckoutRegistry=freeze({
         "smplutility",
         "winnetka"
       ],
-      "subtotal": 13700,
+      "subtotal": 15600,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=9MQuyK6K1aBU54F3qdFM8w%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -4732,7 +4732,7 @@ root.GazillionCheckoutRegistry=freeze({
         "skruu",
         "smplutility"
       ],
-      "subtotal": 6800,
+      "subtotal": 8700,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=WcrAqWm--jeaESbj5a-bFw%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -4757,7 +4757,7 @@ root.GazillionCheckoutRegistry=freeze({
         "smplutility",
         "winnetka"
       ],
-      "subtotal": 11700,
+      "subtotal": 13600,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=3L4lcL71RvwyzGae4QSijQ%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -4782,7 +4782,7 @@ root.GazillionCheckoutRegistry=freeze({
         "skruu",
         "smplutility"
       ],
-      "subtotal": 12700,
+      "subtotal": 14600,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=zUCVrdN2GQHhfkJX-_mwmg%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -4809,7 +4809,7 @@ root.GazillionCheckoutRegistry=freeze({
         "smplutility",
         "winnetka"
       ],
-      "subtotal": 17600,
+      "subtotal": 19500,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=t4J4XeK_dIurRp0hjdPTvw%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -4832,7 +4832,7 @@ root.GazillionCheckoutRegistry=freeze({
         "smplutility",
         "tripleog"
       ],
-      "subtotal": 6800,
+      "subtotal": 8700,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=LN_dtptQ9K8qhEcyMm0T_g%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -4857,7 +4857,7 @@ root.GazillionCheckoutRegistry=freeze({
         "tripleog",
         "winnetka"
       ],
-      "subtotal": 11700,
+      "subtotal": 13600,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=PbdveWRw1Yhl4rghULAzog%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -4882,7 +4882,7 @@ root.GazillionCheckoutRegistry=freeze({
         "smplutility",
         "tripleog"
       ],
-      "subtotal": 12700,
+      "subtotal": 14600,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=XPWVTPAadT1XZZGN93vNpQ%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -4909,7 +4909,7 @@ root.GazillionCheckoutRegistry=freeze({
         "tripleog",
         "winnetka"
       ],
-      "subtotal": 17600,
+      "subtotal": 19500,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=H2-Veq3HtRfaVqpgNjcNsA%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -4934,7 +4934,7 @@ root.GazillionCheckoutRegistry=freeze({
         "smplutility",
         "tripleog"
       ],
-      "subtotal": 10700,
+      "subtotal": 12600,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=syxIccF-OzaL3JO3uJDK0w%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -4961,7 +4961,7 @@ root.GazillionCheckoutRegistry=freeze({
         "tripleog",
         "winnetka"
       ],
-      "subtotal": 15600,
+      "subtotal": 17500,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=K7GqCDAmSNMwO43dV4R31Q%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -4988,7 +4988,7 @@ root.GazillionCheckoutRegistry=freeze({
         "smplutility",
         "tripleog"
       ],
-      "subtotal": 16600,
+      "subtotal": 18500,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=wlEZ1CR-5zZVYm-x02EnEA%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -5017,7 +5017,7 @@ root.GazillionCheckoutRegistry=freeze({
         "tripleog",
         "winnetka"
       ],
-      "subtotal": 21500,
+      "subtotal": 23400,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=nRQ7j_aMkAAoLIs2ipJpQg%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -5038,7 +5038,7 @@ root.GazillionCheckoutRegistry=freeze({
         "f12",
         "smplutility"
       ],
-      "subtotal": 4900,
+      "subtotal": 6800,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=3yMcBtZ5OjFe6aB9DybA6Q%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -5061,7 +5061,7 @@ root.GazillionCheckoutRegistry=freeze({
         "smplutility",
         "winnetka"
       ],
-      "subtotal": 9800,
+      "subtotal": 11700,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=29Jpd16xOPDPeaUwwL9kmQ%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -5084,7 +5084,7 @@ root.GazillionCheckoutRegistry=freeze({
         "journeyman",
         "smplutility"
       ],
-      "subtotal": 10800,
+      "subtotal": 12700,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=tZC4p4CtbBL8MJDikbKrLQ%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -5109,7 +5109,7 @@ root.GazillionCheckoutRegistry=freeze({
         "smplutility",
         "winnetka"
       ],
-      "subtotal": 15700,
+      "subtotal": 17600,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=0zPVOATIyCl4OCGwT8B8Hw%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -5132,7 +5132,7 @@ root.GazillionCheckoutRegistry=freeze({
         "f12",
         "smplutility"
       ],
-      "subtotal": 8800,
+      "subtotal": 10700,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=PJjbliltGUFsxi811k2dTw%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -5157,7 +5157,7 @@ root.GazillionCheckoutRegistry=freeze({
         "smplutility",
         "winnetka"
       ],
-      "subtotal": 13700,
+      "subtotal": 15600,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=7lXPoIWJIGhWeWbMZGF6Uw%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -5182,7 +5182,7 @@ root.GazillionCheckoutRegistry=freeze({
         "journeyman",
         "smplutility"
       ],
-      "subtotal": 14700,
+      "subtotal": 16600,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=IeqF7qarBF2tCbaw8G0Asg%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -5209,7 +5209,7 @@ root.GazillionCheckoutRegistry=freeze({
         "smplutility",
         "winnetka"
       ],
-      "subtotal": 19600,
+      "subtotal": 21500,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=VWyQSVmLWsoGHbGfqab_Cw%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -5232,7 +5232,7 @@ root.GazillionCheckoutRegistry=freeze({
         "smplutility",
         "tripleog"
       ],
-      "subtotal": 8800,
+      "subtotal": 10700,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=ODUY4jpfvaslMylBFL4DfA%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -5257,7 +5257,7 @@ root.GazillionCheckoutRegistry=freeze({
         "tripleog",
         "winnetka"
       ],
-      "subtotal": 13700,
+      "subtotal": 15600,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=m559tOvviJ0oy-Lvtx5u4Q%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -5282,7 +5282,7 @@ root.GazillionCheckoutRegistry=freeze({
         "smplutility",
         "tripleog"
       ],
-      "subtotal": 14700,
+      "subtotal": 16600,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=KfAKm5fCKMOqoArTp-GSbg%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -5309,7 +5309,7 @@ root.GazillionCheckoutRegistry=freeze({
         "tripleog",
         "winnetka"
       ],
-      "subtotal": 19600,
+      "subtotal": 21500,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=N1bBm0Hy_V0OPKD6EV7T8g%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -5334,7 +5334,7 @@ root.GazillionCheckoutRegistry=freeze({
         "smplutility",
         "tripleog"
       ],
-      "subtotal": 12700,
+      "subtotal": 14600,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=S1czm3GTOHyCqqtK1DPrnA%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -5361,7 +5361,7 @@ root.GazillionCheckoutRegistry=freeze({
         "tripleog",
         "winnetka"
       ],
-      "subtotal": 17600,
+      "subtotal": 19500,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=9uOVKVw-gXkOUIxSJLuOow%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -5388,7 +5388,7 @@ root.GazillionCheckoutRegistry=freeze({
         "smplutility",
         "tripleog"
       ],
-      "subtotal": 18600,
+      "subtotal": 20500,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=aoUpCYJCQAyiRXKYoVSEXw%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -5417,7 +5417,7 @@ root.GazillionCheckoutRegistry=freeze({
         "tripleog",
         "winnetka"
       ],
-      "subtotal": 23500,
+      "subtotal": 25400,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=D8VXkDOf71Sb5GHWCMGOPA%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -5440,7 +5440,7 @@ root.GazillionCheckoutRegistry=freeze({
         "skruu",
         "smplutility"
       ],
-      "subtotal": 7800,
+      "subtotal": 9700,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=KTAMbad2eOD84MJ6mytSvA%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -5465,7 +5465,7 @@ root.GazillionCheckoutRegistry=freeze({
         "smplutility",
         "winnetka"
       ],
-      "subtotal": 12700,
+      "subtotal": 14600,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=1OSmAcaqxnrgqeuxhbnKOQ%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -5490,7 +5490,7 @@ root.GazillionCheckoutRegistry=freeze({
         "skruu",
         "smplutility"
       ],
-      "subtotal": 13700,
+      "subtotal": 15600,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=MO5a6XzMiIaGtANax3c3uQ%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -5517,7 +5517,7 @@ root.GazillionCheckoutRegistry=freeze({
         "smplutility",
         "winnetka"
       ],
-      "subtotal": 18600,
+      "subtotal": 20500,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=B8k2NhPgXAx9alk493UAJQ%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -5542,7 +5542,7 @@ root.GazillionCheckoutRegistry=freeze({
         "skruu",
         "smplutility"
       ],
-      "subtotal": 11700,
+      "subtotal": 13600,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=xiGuCyz0azAFRt5NnXHV6g%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -5569,7 +5569,7 @@ root.GazillionCheckoutRegistry=freeze({
         "smplutility",
         "winnetka"
       ],
-      "subtotal": 16600,
+      "subtotal": 18500,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=yQ2RNKBqT7rBjzL5Gvht3w%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -5596,7 +5596,7 @@ root.GazillionCheckoutRegistry=freeze({
         "skruu",
         "smplutility"
       ],
-      "subtotal": 17600,
+      "subtotal": 19500,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=nTn3FtGZ3TGVe0pRIy1IhQ%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -5625,7 +5625,7 @@ root.GazillionCheckoutRegistry=freeze({
         "smplutility",
         "winnetka"
       ],
-      "subtotal": 22500,
+      "subtotal": 24400,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=UHe6UCeldVfyhrvWPsU4RA%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -5650,7 +5650,7 @@ root.GazillionCheckoutRegistry=freeze({
         "smplutility",
         "tripleog"
       ],
-      "subtotal": 11700,
+      "subtotal": 13600,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=dwujWTZhLSP8-8lVQGvlVg%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -5677,7 +5677,7 @@ root.GazillionCheckoutRegistry=freeze({
         "tripleog",
         "winnetka"
       ],
-      "subtotal": 16600,
+      "subtotal": 18500,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=Vt-GYU1dxykJbSClNP19Ig%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -5704,7 +5704,7 @@ root.GazillionCheckoutRegistry=freeze({
         "smplutility",
         "tripleog"
       ],
-      "subtotal": 17600,
+      "subtotal": 19500,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=KtP4naVUil7e1Sc5d6mclw%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -5733,7 +5733,7 @@ root.GazillionCheckoutRegistry=freeze({
         "tripleog",
         "winnetka"
       ],
-      "subtotal": 22500,
+      "subtotal": 24400,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=0CyFvPzOwBf2u-LraWy2PQ%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -5760,7 +5760,7 @@ root.GazillionCheckoutRegistry=freeze({
         "smplutility",
         "tripleog"
       ],
-      "subtotal": 15600,
+      "subtotal": 17500,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=4-hH6qFUqDsBVaQLy5AR_w%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -5789,7 +5789,7 @@ root.GazillionCheckoutRegistry=freeze({
         "tripleog",
         "winnetka"
       ],
-      "subtotal": 20500,
+      "subtotal": 22400,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=Dn_tpVSd5AS3FpkZoe3ozw%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -5818,7 +5818,7 @@ root.GazillionCheckoutRegistry=freeze({
         "smplutility",
         "tripleog"
       ],
-      "subtotal": 21500,
+      "subtotal": 23400,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=MZDqYHv81K5qj88hjHMCww%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     },
@@ -5849,7 +5849,7 @@ root.GazillionCheckoutRegistry=freeze({
         "tripleog",
         "winnetka"
       ],
-      "subtotal": 26400,
+      "subtotal": 28300,
       "checkoutUrl": "https://gumroad.com/checkout?wishlist=GUNX1SneS2sBYJTx8o8TJQ%3D%3D&affiliate_id=0&referrer=https%3A%2F%2Fgazillionindustries.com%2F&recommended_by",
       "verifiedOn": "2026-11-12"
     }
