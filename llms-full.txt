@@ -23773,10 +23773,6 @@ In October 2021 Roland announced the SP-404MKII at $499.99, and this time it cam
 
 We make [F(ilter)12](https://gazillionindustries.com/f12.html). 4 bit at 8 kHz. Bits make it grainy; the sample rate is what makes it clang.
 
-## Why a plugin company cares
-
-Because every Gazillion plugin started with a sound from these boxes and a set of ears raised on it. None of them are copies, and nothing in them was measured from hardware; they're tuned by ear, chasing a feeling. DRUGS chases the squash that Vinyl Simulator put on a break. F(ilter)12 chases what the 404's lo-fi does to a sample. TRIPLE OG chases the cassette sim on the newest machine. SKRUU chases the pitch knob on the little Dr. Sample where the whole line began. If you've never used an SP, they're a way in. If you have, you'll know what we were listening for.
-
 ## SP404 or SP-404, and the effect people are looking for
 
 It gets written both ways, and a search for one misses much of what exists about the other. Worth knowing if you are reading around the subject rather than just reading this.
