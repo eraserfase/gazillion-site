@@ -43,3 +43,11 @@
 .demo-purchase{margin-top:18px}.detail-photo{max-width:430px}
 .story-copy ul{font-size:15px}.social-proof .tm:nth-child(6){padding-block:24px}.social-proof .tm-vid{max-width:360px}
 }
+
+/* Tony's Gumroad reply under a review in the carousel (16 Nov 2026). */
+.gr-reply{margin:8px 0 0;font:400 12px/1.4 Arial,sans-serif;color:#55575a}.gr-reply b{font-weight:700;color:var(--ink)}
+/* The reply makes one card taller; cards keep their natural height and the track follows the
+   card you are on (gr-card-fit in the page, ported from BENDO). */
+.hero-reviews .gr-carousel{align-items:flex-start;transition:height .22s ease}
+.hero-reviews .gr-quote{justify-content:flex-start}
+@media(prefers-reduced-motion:reduce){.hero-reviews .gr-carousel{transition:none}}
