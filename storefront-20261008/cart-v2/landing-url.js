@@ -135,6 +135,24 @@ window.GZ_ATTR = (function(){
     if(f.medium) out.gz_first_medium = f.medium;
     return out;
   }
+  /* A discount code that arrived in the address (?code= or ?offer_code=, e.g.
+     the survey's "use your code now") rides into every Gumroad checkout link as
+     ?code=, which Gumroad applies on product and cart checkout alike. Kept 24 h
+     in this browser so a product page opened from the storefront keeps it.
+     Gumroad decides whether the code is valid; this only carries it. */
+  var CODE_KEY = "gz_code_v1", CODE_TTL = 86400000, CODE_RE = /^[A-Za-z0-9_-]{1,64}$/;
+  var discount = (function(){
+    var now = Date.now(), v = inbound.get("code") || inbound.get("offer_code") || "";
+    if(CODE_RE.test(v)){
+      try { localStorage.setItem(CODE_KEY, JSON.stringify({code:v, at:now})); } catch(e){}
+      return v;
+    }
+    try {
+      var have = JSON.parse(localStorage.getItem(CODE_KEY) || "null");
+      if(have && typeof have.at === "number" && now >= have.at && now-have.at < CODE_TTL && CODE_RE.test(have.code || "")) return have.code;
+    } catch(e){}
+    return "";
+  })();
   /* Carry the pixel's browser/click identifiers through Gumroad's referrer
      override, preserving the existing cookie and fbclid fallback behavior. */
   function cookie(name){
@@ -197,6 +215,7 @@ window.GZ_ATTR = (function(){
       var first = firstTags();
       if(first) Object.keys(first).forEach(function(k){ u.searchParams.set(k,first[k]); });
       if(token) u.searchParams.set("gz_journey",token);
+      if(checkout && discount && !u.searchParams.has("code")) u.searchParams.set("code",discount);
       if(checkout){
         // Gumroad's documented referrer override preserves the actual first
         // external URL. UTM-only/direct arrivals use this real site URL.
