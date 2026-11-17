@@ -1,0 +1,379 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>quick survey | Gazillion Industries</title>
+<meta name="robots" content="noindex">
+<link rel="preload" href="/landing-20261010/tripleog/fonts/archivo-black.woff2?v=4eca2abdbbc1" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/landing-20261010/tripleog/style.css?v=ce93bdda2849">
+<link rel="stylesheet" href="/landing-20261010/shared/landing-family.css?v=6323a375a763">
+<link rel="stylesheet" href="/survey/survey.css">
+<!-- Pageview only: the same provider tag and owned pageview the product pages load.
+     Both gate themselves to gazillionindustries.com, so local previews send nothing. -->
+<script src="/landing-20261010/shared/tracking/providers.js?v=9cb9dd3a9e30"></script>
+<script defer src="/landing-20261010/shared/tracking/traffic.js?v=1506ae9d0f37"></script>
+</head><body data-landing-family="gazillion">
+<div class="progress" aria-hidden="true"><span id="bar"></span></div>
+<header class="masthead">
+  <div class="mast-inner">
+    <a class="brand" href="https://gazillionindustries.com/" aria-label="Gazillion Industries storefront"><span class="lock" aria-hidden="true"><span class="lock-a">GAZILLION</span><span class="lock-b">INDUSTRIES</span></span></a>
+  </div>
+</header>
+<main class="quiz" id="quiz">
+  <div class="quiz-nav"><button type="button" class="text-btn" id="back" data-hidden>back</button></div>
+
+  <form id="form" novalidate autocomplete="on">
+
+    <section class="screen" data-step="genre">
+      <label class="q" for="genre" tabindex="-1">what kind of music do you make?</label>
+      <input class="text-in" type="text" id="genre" name="genre" maxlength="300">
+      <button type="button" class="act" data-next>next</button>
+      <div class="skip-row"><button type="button" class="text-btn" data-skip>skip</button></div>
+    </section>
+
+    <section class="screen" data-step="socials" hidden>
+      <fieldset>
+        <legend class="q" tabindex="-1">your social media handles</legend>
+        <div class="socials">
+        <label class="social-name" for="s_instagram">Instagram</label><input class="text-in" type="text" id="s_instagram" name="s_instagram" placeholder="@handle" maxlength="300" autocapitalize="off" autocorrect="off" spellcheck="false">
+        <label class="social-name" for="s_tiktok">TikTok</label><input class="text-in" type="text" id="s_tiktok" name="s_tiktok" placeholder="@handle" maxlength="300" autocapitalize="off" autocorrect="off" spellcheck="false">
+        <label class="social-name" for="s_youtube">YouTube</label><input class="text-in" type="text" id="s_youtube" name="s_youtube" placeholder="@handle" maxlength="300" autocapitalize="off" autocorrect="off" spellcheck="false">
+        <label class="social-name" for="s_x">X (Twitter)</label><input class="text-in" type="text" id="s_x" name="s_x" placeholder="@handle" maxlength="300" autocapitalize="off" autocorrect="off" spellcheck="false">
+        <label class="social-name" for="s_threads">Threads</label><input class="text-in" type="text" id="s_threads" name="s_threads" placeholder="@handle" maxlength="300" autocapitalize="off" autocorrect="off" spellcheck="false">
+        <label class="social-name" for="s_soundcloud">SoundCloud</label><input class="text-in" type="url" id="s_soundcloud" name="s_soundcloud" placeholder="link" maxlength="300" autocapitalize="off" autocorrect="off" spellcheck="false" inputmode="url">
+        <label class="social-name" for="s_bandcamp">Bandcamp</label><input class="text-in" type="url" id="s_bandcamp" name="s_bandcamp" placeholder="link" maxlength="300" autocapitalize="off" autocorrect="off" spellcheck="false" inputmode="url">
+        <label class="social-name" for="s_spotify">Spotify</label><input class="text-in" type="url" id="s_spotify" name="s_spotify" placeholder="link" maxlength="300" autocapitalize="off" autocorrect="off" spellcheck="false" inputmode="url">
+        <label class="social-name" for="s_twitch">Twitch</label><input class="text-in" type="text" id="s_twitch" name="s_twitch" placeholder="@handle" maxlength="300" autocapitalize="off" autocorrect="off" spellcheck="false">
+        </div>
+      </fieldset>
+      <button type="button" class="act" data-next>next</button>
+      <div class="skip-row"><button type="button" class="text-btn" data-skip>skip</button></div>
+    </section>
+
+    <section class="screen" data-step="daw" hidden>
+      <label class="q" for="daw" tabindex="-1">what DAW do you use?</label>
+      <input class="text-in" type="text" id="daw" name="daw" maxlength="300">
+      <button type="button" class="act" data-next>next</button>
+      <div class="skip-row"><button type="button" class="text-btn" data-skip>skip</button></div>
+    </section>
+
+    <section class="screen" data-step="hardware" hidden>
+      <label class="q" for="hardware" tabindex="-1">what hardware do you use? (samplers, drum machines, synths)</label>
+      <input class="text-in" type="text" id="hardware" name="hardware" maxlength="300">
+      <button type="button" class="act" data-next>next</button>
+      <div class="skip-row"><button type="button" class="text-btn" data-skip>skip</button></div>
+    </section>
+
+    <section class="screen" data-step="music_links" hidden>
+      <label class="q" for="music_links" tabindex="-1">send us links to your music</label>
+      <textarea class="text-in" id="music_links" name="music_links" maxlength="4000" autocapitalize="off" spellcheck="false"></textarea>
+      <button type="button" class="act" data-next>next</button>
+      <div class="skip-row"><button type="button" class="text-btn" data-skip>skip</button></div>
+    </section>
+
+    <section class="screen" data-step="level" hidden>
+      <fieldset>
+        <legend class="q" tabindex="-1">what level would you say youre at with your production?</legend>
+        <div class="opts" data-single>
+          <label class="chip"><input type="radio" name="level" value="beginner"><span>beginner</span></label>
+          <label class="chip"><input type="radio" name="level" value="intermediate"><span>intermediate</span></label>
+          <label class="chip"><input type="radio" name="level" value="expert"><span>expert</span></label>
+        </div>
+      </fieldset>
+      <div class="skip-row"><button type="button" class="text-btn" data-skip>skip</button></div>
+    </section>
+
+    <section class="screen" data-step="music_is" hidden>
+      <fieldset>
+        <legend class="q" tabindex="-1">music for me is a:</legend>
+        <div class="opts" data-single>
+          <label class="chip"><input type="radio" name="music_is" value="interest"><span>interest</span></label>
+          <label class="chip"><input type="radio" name="music_is" value="hobby"><span>hobby</span></label>
+          <label class="chip"><input type="radio" name="music_is" value="lifestyle"><span>lifestyle</span></label>
+          <label class="chip"><input type="radio" name="music_is" value="career"><span>career</span></label>
+        </div>
+      </fieldset>
+      <div class="skip-row"><button type="button" class="text-btn" data-skip>skip</button></div>
+    </section>
+
+    <section class="screen" data-step="age_range" hidden>
+      <fieldset>
+        <legend class="q" tabindex="-1">your age?</legend>
+        <div class="opts" data-single>
+          <label class="chip"><input type="radio" name="age_range" value="under 18"><span>under 18</span></label>
+          <label class="chip"><input type="radio" name="age_range" value="18-24"><span>18-24</span></label>
+          <label class="chip"><input type="radio" name="age_range" value="25-34"><span>25-34</span></label>
+          <label class="chip"><input type="radio" name="age_range" value="35-44"><span>35-44</span></label>
+          <label class="chip"><input type="radio" name="age_range" value="45+"><span>45+</span></label>
+        </div>
+      </fieldset>
+      <div class="skip-row"><button type="button" class="text-btn" data-skip>skip</button></div>
+    </section>
+
+    <section class="screen" data-step="credits" hidden>
+      <label class="q" for="credits" tabindex="-1">any credits or placements, please list</label>
+      <textarea class="text-in" id="credits" name="credits" maxlength="4000"></textarea>
+      <button type="button" class="act" data-next>next</button>
+      <div class="skip-row"><button type="button" class="text-btn" data-skip>skip</button></div>
+    </section>
+
+    <section class="screen" data-step="accomplishment" hidden>
+      <label class="q" for="accomplishment" tabindex="-1">what would you say your greatest accomplishment in music is to date?</label>
+      <textarea class="text-in" id="accomplishment" name="accomplishment" maxlength="4000"></textarea>
+      <button type="button" class="act" data-next>next</button>
+      <div class="skip-row"><button type="button" class="text-btn" data-skip>skip</button></div>
+    </section>
+
+    <section class="screen" data-step="difficulty" hidden>
+      <label class="q" for="difficulty" tabindex="-1">what would you say your biggest difficulty with your music is, if you have one?</label>
+      <textarea class="text-in" id="difficulty" name="difficulty" maxlength="4000"></textarea>
+      <button type="button" class="act" data-next>next</button>
+      <div class="skip-row"><button type="button" class="text-btn" data-skip>skip</button></div>
+    </section>
+
+    <section class="screen" data-step="plugin_wish" hidden>
+      <label class="q" for="plugin_wish" tabindex="-1">if there was a plugin you wish someone would create, describe it.</label>
+      <textarea class="text-in" id="plugin_wish" name="plugin_wish" maxlength="4000"></textarea>
+      <button type="button" class="act" data-next>next</button>
+      <div class="skip-row"><button type="button" class="text-btn" data-skip>skip</button></div>
+    </section>
+
+    <section class="screen" data-step="found_us" hidden>
+      <label class="q" for="found_us" tabindex="-1">how did you find out about gazillion industries?</label>
+      <input class="text-in" type="text" id="found_us" name="found_us" maxlength="300">
+      <button type="button" class="act" data-next>next</button>
+      <div class="skip-row"><button type="button" class="text-btn" data-skip>skip</button></div>
+    </section>
+
+    <section class="screen" data-step="email" hidden>
+      <label class="q" for="email" tabindex="-1">your email</label>
+      <input class="text-in" type="email" id="email" name="email" placeholder="your@email.com" required maxlength="254" autocomplete="email" autocapitalize="off" spellcheck="false" inputmode="email">
+      <div class="hp" aria-hidden="true"><label for="company">company</label><input type="text" id="company" name="company" tabindex="-1" autocomplete="off"></div>
+      <button type="submit" class="act" id="send">send</button>
+      <p class="err" id="err" role="alert" hidden></p>
+    </section>
+  </form>
+
+  <section class="screen" data-step="done" hidden>
+    <p class="q thanks" id="end-thanks" tabindex="-1"></p>
+    <div id="end-code" hidden>
+      <p class="code-line" id="end-code-label"></p>
+      <p class="code" id="end-code-text"></p>
+      <p class="code-offer" id="end-code-offer"></p>
+      <p class="code-terms" id="end-code-terms"></p>
+    </div>
+    <a class="act store" id="end-store" target="_blank" rel="noopener"></a>
+    <p class="clock-box" id="end-clock-box" hidden><span id="end-clock-label"></span> <span class="clock" id="end-clock" role="timer" aria-live="off"></span></p>
+    <a class="act discord" id="end-discord" target="_blank" rel="noopener"><svg class="discord-mark" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"/></svg><span id="end-discord-label"></span></a>
+  </section>
+</main>
+
+<script src="/landing-20261010/tripleog/brand.js?v=9ea6eb41919e"></script>
+<script>
+(function () {
+'use strict';
+
+/* Where answers go. One Worker route; see survey-worker/worker.js. */
+var ENDPOINT = "https://gz-survey.kit-relay.workers.dev/submit";
+
+/* ?from= says which free download's email sent them (tracking only; it
+   changes no text). Default drugs. */
+var FROMS = ['drugs', 'bendo', 'smplutility', 'tripleog', 'skruu', 'beefy', 'f12', 'winnetka', 'journeyman'];
+var SOCIALS = ['instagram', 'tiktok', 'youtube', 'x', 'threads', 'soundcloud', 'bandcamp', 'spotify', 'twitch'];
+/* =====================================================================
+   END SCREEN COPY. Every visible line after "send", in one place.
+   ===================================================================== */
+var END = {
+  thanks:       'got it, thanks for taking the time!',  // Tony, 16 Nov
+  codeLabel:    "here's a discount for you",            // Tony, 16 Nov (shown only when a code is given)
+  codeOffer:    '25% off everything in the store.',     // Tony, 16 Nov: big, like the code
+  codeTerms:    'single use. valid for 24 hrs.',        // Tony, 16 Nov: "25% off single use valid for 24 hrs."
+  discordLabel: 'JOIN US ON DISCORD',                   // Tony, 16 Nov, with the Discord logo
+  discordUrl:   'https://discord.gg/eyQPcVf7FZ',        // invite made only for this page (brief)
+  storeLabel:   'CLICK HERE TO USE YOUR CODE NOW',                    // Tony, 16 Nov
+  clockLabel:   'VALID FOR:',                      // Tony, 16 Nov: red box, white text, under the use-your-code button
+  // The storefront keeps ?code= for 24h and adds it to every Gumroad checkout
+  // link, product and cart (cart-v2/landing-url.js, live 16 Nov 2026).
+  storeUrl:     'https://gazillionindustries.com/'
+};
+/* Shown only if the POST fails; what they typed stays put. OPERATOR WORDING. */
+var ERROR_LINE = 'didnt send. try again.';
+
+var params = new URLSearchParams(location.search);
+var from = (params.get('from') || '').toLowerCase();
+if (FROMS.indexOf(from) < 0) from = 'drugs';
+/* ?t= is the welcome email's invite token (outreach/survey_welcome.py). It names
+   the person, so the email question is not asked. The address never rides in a URL. */
+var token = (params.get('t') || '').toLowerCase();
+if (!/^[a-z2-7]{16}$/.test(token)) token = '';
+
+var form = document.getElementById('form');
+var screens = Array.prototype.slice.call(document.querySelectorAll('.screen'));
+var bar = document.getElementById('bar');
+var backBtn = document.getElementById('back');
+var errEl = document.getElementById('err');
+var sendBtn = document.getElementById('send');
+var LAST = screens.length - 1;            // the "got it" screen
+if (token) {
+  var emailScreen = form.querySelector('[data-step="email"]');
+  emailScreen.querySelector('label[for="email"]').hidden = true;
+  form.elements.email.hidden = true;
+  form.elements.email.required = false;
+}
+var current = 0, done = false, sending = false, arrowAt = 0;
+
+function show(i) {
+  current = i;
+  screens.forEach(function (s, n) { s.hidden = n !== i; });
+  bar.style.width = Math.round(i / LAST * 100) + '%';
+  if (i === 0 || done) backBtn.setAttribute('data-hidden', ''); else backBtn.removeAttribute('data-hidden');
+  window.scrollTo(0, 0);
+  var h = screens[i].querySelector('.q, .field-label');
+  if (h && document.activeElement && document.activeElement !== document.body) {
+    try { h.focus({preventScroll: true}); } catch (_) {}
+  }
+}
+function go(i) {
+  if (done || i < 0 || i >= LAST) return;
+  try { history.pushState({s: i}, '', location.href); } catch (_) {}
+  show(i);
+}
+try { history.replaceState({s: 0}, '', location.href); } catch (_) {}
+window.addEventListener('popstate', function (e) {
+  if (done) return;
+  var s = e.state && typeof e.state.s === 'number' ? e.state.s : 0;
+  show(Math.max(0, Math.min(s, LAST - 1)));
+});
+backBtn.addEventListener('click', function () { history.back(); });
+
+form.addEventListener('click', function (e) {
+  var b = e.target.closest('[data-next],[data-skip]');
+  if (!b) return;
+  var scr = b.closest('.screen');
+  if (b.hasAttribute('data-skip')) {
+    Array.prototype.forEach.call(scr.querySelectorAll('.text-in'), function (t) { t.value = ''; });
+    Array.prototype.forEach.call(scr.querySelectorAll('input[type=radio]'), function (r) { r.checked = false; });
+  }
+  go(screens.indexOf(scr) + 1);
+});
+
+/* Single choice: a tap, click or Space picks and advances; arrow keys only
+   move the selection (Enter then advances). */
+document.addEventListener('keydown', function (e) { if (/^Arrow/.test(e.key)) arrowAt = Date.now(); }, true);
+Array.prototype.forEach.call(form.querySelectorAll('[data-single] input[type=radio]'), function (r) {
+  r.addEventListener('click', function () {
+    if (Date.now() - arrowAt < 150) return;
+    var at = current;
+    setTimeout(function () { if (current === at) go(at + 1); }, 160);
+  });
+});
+
+/* Enter moves forward from a one-line box; on the email screen it sends. */
+form.addEventListener('keydown', function (e) {
+  if (e.key !== 'Enter' || e.isComposing || e.target.tagName === 'TEXTAREA' || e.target.tagName === 'BUTTON') return;
+  e.preventDefault();
+  if (screens[current].getAttribute('data-step') === 'email') submit();
+  else go(current + 1);
+});
+form.addEventListener('submit', function (e) { e.preventDefault(); submit(); });
+
+function val(name) { var el = form.elements[name]; return el ? String(el.value || '').trim() : ''; }
+function picked(name) { var el = form.querySelector('input[name="' + name + '"]:checked'); return el ? el.value : ''; }
+
+function payload() {
+  return {
+    from: from,
+    t: token,
+    email: val('email'),
+    company: val('company'),
+    client_ts: new Date().toISOString(),
+    referrer: document.referrer || '',
+    answers: {
+      genre: val('genre'),
+      socials: SOCIALS.reduce(function (o, k) { o[k] = val('s_' + k); return o; }, {}),
+      daw: val('daw'),
+      hardware: val('hardware'),
+      music_links: val('music_links'),
+      level: picked('level'),
+      music_is: picked('music_is'),
+      age_range: picked('age_range'),
+      credits: val('credits'),
+      accomplishment: val('accomplishment'),
+      difficulty: val('difficulty'),
+      plugin_wish: val('plugin_wish'),
+      found_us: val('found_us')
+    }
+  };
+}
+
+/* The clock counts down to the Worker's expires_at (given + 24h), the moment
+   outreach/survey_codes.py sweep deletes the code on Gumroad. */
+function startClock(expiresAt) {
+  var el = document.getElementById('end-clock');
+  function pad(n) { return (n < 10 ? '0' : '') + n; }
+  function tick() {
+    var s = Math.max(0, Math.floor((expiresAt - Date.now()) / 1000));
+    el.textContent = pad(Math.floor(s / 3600)) + ':' + pad(Math.floor(s / 60) % 60) + ':' + pad(s % 60);
+    if (s === 0) clearInterval(t);
+  }
+  var t = setInterval(tick, 1000);
+  tick();
+}
+
+function finish(code, expiresAt) {
+  bar.style.width = '100%';
+  document.getElementById('end-thanks').textContent = END.thanks;
+  var nav = document.querySelector('.quiz-nav'); if (nav) nav.hidden = true;   // nothing to go back to: no empty row above the thanks
+  document.getElementById('end-discord').href = END.discordUrl;
+  document.getElementById('end-discord-label').textContent = END.discordLabel;
+  var st = document.getElementById('end-store');
+  st.textContent = END.storeLabel;
+  st.href = END.storeUrl + (code ? '?code=' + encodeURIComponent(code) : '');
+  if (code) {
+    document.getElementById('end-code-label').textContent = END.codeLabel;
+    document.getElementById('end-code-text').textContent = code;
+    document.getElementById('end-code-offer').textContent = END.codeOffer;
+    document.getElementById('end-code-terms').textContent = END.codeTerms;
+    document.getElementById('end-clock-label').textContent = END.clockLabel;
+    document.getElementById('end-clock-box').hidden = false;
+    startClock(expiresAt);
+    document.getElementById('end-code').hidden = false;
+  }
+  done = true;
+  show(LAST);
+  try { history.replaceState({s: LAST}, '', location.href); } catch (_) {}
+}
+
+function submit() {
+  if (sending || done) return;
+  var email = form.elements.email;
+  email.value = email.value.trim();
+  if (!token && (!email.value || !email.checkValidity() || !/^[^\s@]{1,64}@[^\s@]+\.[^\s@]{2,}$/.test(email.value))) {
+    email.setCustomValidity(email.value ? '' : ' ');
+    email.reportValidity(); email.setCustomValidity('');
+    return;
+  }
+  if (val('company')) { finish(); return; }          // honeypot: look done, send nothing
+  sending = true; sendBtn.disabled = true; errEl.hidden = true;
+  var ctl = 'AbortController' in window ? new AbortController() : null;
+  var timer = setTimeout(function () { if (ctl) ctl.abort(); }, 15000);
+  fetch(ENDPOINT, {method: 'POST', mode: 'cors', credentials: 'omit',
+    headers: {'Content-Type': 'text/plain;charset=UTF-8'},   // simple request: no preflight
+    body: JSON.stringify(payload()), signal: ctl ? ctl.signal : undefined})
+    .then(function (r) {
+      if (!r.ok) throw new Error(r.status);
+      return r.json().catch(function () { return {}; });
+    })
+    .then(function (j) {
+      // The Worker hands one code per email from its pool; none left = no code.
+      // No code without a live expiry: the clock is never shown for a code that has run out.
+      var code = j && typeof j.code === 'string' && /^[A-Za-z0-9_-]{1,64}$/.test(j.code) ? j.code : '';
+      var left = j && typeof j.expires_in === 'number' && isFinite(j.expires_in) ? Math.min(j.expires_in, 864e5) : 0;
+      if (!code || left <= 0) { finish(''); return; }
+      finish(code, Date.now() + left);
+    })
+    .catch(function () { errEl.textContent = ERROR_LINE; errEl.hidden = false; })
+    .then(function () { clearTimeout(timer); sending = false; sendBtn.disabled = false; });
+}
+
+show(0);
+})();
+</script>
+</body></html>
