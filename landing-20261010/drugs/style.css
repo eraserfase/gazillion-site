@@ -54,3 +54,6 @@
 /* DIBIA$E's quote card above jayorient's video (Tony, 17 Nov 2026). */
 .press-card{margin:0 auto 28px;padding-bottom:28px;border-bottom:1px solid var(--line);max-width:430px}
 .press-card img{display:block;width:100%;height:auto}
+/* Hero line trimmed to "instant gratification." as an Arial Black heading (Tony, 17 Nov 2026). */
+.hero-intro .hero-intro-head{margin:0;font:900 28px/1.15 'Arial Black','Arial',sans-serif;font-synthesis:none;color:var(--ink)}
+@media(max-width:700px){.hero-intro .hero-intro-head{font-size:24px}}
