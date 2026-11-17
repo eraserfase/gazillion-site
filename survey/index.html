@@ -203,6 +203,14 @@ if (FROMS.indexOf(from) < 0) from = 'drugs';
    the person, so the email question is not asked. The address never rides in a URL. */
 var token = (params.get('t') || '').toLowerCase();
 if (!/^[a-z2-7]{16}$/.test(token)) token = '';
+/* Count the visit from an email link (token + which email version), so the survey email can be tested for clicks. */
+if (token) {
+  try {
+    fetch(ENDPOINT.replace(/\/submit$/, '/visit'), {method: 'POST', mode: 'cors', credentials: 'omit',
+      headers: {'Content-Type': 'text/plain;charset=UTF-8'}, keepalive: true,
+      body: JSON.stringify({t: token, v: (params.get('v') || '').toLowerCase().slice(0, 24)})}).catch(function () {});
+  } catch (_) {}
+}
 
 var form = document.getElementById('form');
 var screens = Array.prototype.slice.call(document.querySelectorAll('.screen'));
