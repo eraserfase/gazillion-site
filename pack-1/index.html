@@ -351,9 +351,10 @@ const vid=document.querySelector(".video video"),big=document.querySelector(".bi
 big.onclick=()=>{vid.muted=false;vid.loop=false;vid.currentTime=0;vid.play();big.hidden=true};
 vid.addEventListener("volumechange",()=>{if(!vid.muted)big.hidden=true});
 // silent autoplay that actually starts: on load, and whenever the video comes into view, unless someone paused it themselves
-let userPaused=false;vid.addEventListener("pause",()=>{if(vid.muted&&!document.hidden&&vid.dataset.auto!=="1")userPaused=true;vid.dataset.auto=""});
+// Tony 20 Nov: phones pause a silent autoplay video themselves while it is off screen; only a pause while it is ON screen is the visitor's
+let userPaused=false,inView=false;vid.addEventListener("pause",()=>{if(vid.muted&&!document.hidden&&inView&&vid.dataset.auto!=="1")userPaused=true;vid.dataset.auto=""});
 const tryPlay=()=>{if(vid.muted&&!userPaused&&vid.paused)vid.play().catch(()=>{})};
-new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)tryPlay();else if(vid.muted&&!vid.paused){vid.dataset.auto="1";vid.pause()}}),{threshold:.25}).observe(vid);
+new IntersectionObserver(es=>es.forEach(e=>{inView=e.isIntersecting;if(e.isIntersecting)tryPlay();else if(vid.muted&&!vid.paused){vid.dataset.auto="1";vid.pause()}}),{threshold:.25}).observe(vid);
 document.addEventListener("visibilitychange",()=>{if(!document.hidden)tryPlay()});tryPlay();
 // the cover button drives the same player and mirrors its state
 const dps=document.querySelectorAll(".demo-pp");dps.forEach(b=>b.onclick=()=>box.querySelector(".pp").click());
