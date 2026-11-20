@@ -141,7 +141,7 @@ img.lock{display:block;height:auto;width:100%} /* img only: the site masthead lo
 .wq b{font-weight:700}
 .wq-who{margin:14px 0 0 21px;font:400 15px/1.2 'Archivo Black',sans-serif}
 .pack-art-box{grid-area:pa;position:relative}   /* Tony 20 Nov: a play demo button on the pack cover, it starts the tape like the tape cover's button */
-.demo-pp{all:unset;cursor:pointer;position:absolute;right:14px;top:14px;display:flex;align-items:center;gap:8px;padding:10px 16px 10px 12px;background:#fff;color:var(--ink);font:400 15px/1 'Archivo Black',sans-serif;box-shadow:0 0 0 1px #414141 inset,3px 3px 0 #222}
+.demo-pp{all:unset;cursor:pointer;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:flex;align-items:center;gap:8px;padding:10px 16px 10px 12px;background:#fff;color:var(--ink);font:400 15px/1 'Archivo Black',sans-serif;box-shadow:0 0 0 1px #414141 inset,3px 3px 0 #222}
 .demo-pp svg{width:22px;height:22px;fill:var(--purchase-fill)} .demo-pp .i-pause{display:none} .demo-pp.on .i-pause{display:inline} .demo-pp.on .i-play{display:none}
 .demo-pp:focus-visible{outline:2px solid var(--purchase-fill);outline-offset:3px}
 @media (max-width:960px){
@@ -151,7 +151,7 @@ img.lock{display:block;height:auto;width:100%} /* img only: the site masthead lo
  .player{grid-template-columns:auto minmax(0,1fr) auto;grid-template-areas:"ctl pt th" "wv wv wv" "tm tm tm" "cn cn cn";row-gap:8px;padding:10px}
  .player .pbody{display:contents} .player .ctl{grid-area:ctl} .player .phead{grid-area:pt;min-width:0} .player .pt{white-space:normal;line-height:1.25} .player .pa{white-space:normal} .player .pa>span{white-space:normal;overflow:visible}
  .player .wavewrap{grid-area:wv} .player .wave{margin:0} .player .cnow{grid-area:cn} .player .ptime{grid-area:tm} .player .pthumb{grid-area:th;width:54px;height:54px}
- .demo-pp{top:10px;right:10px;padding:7px 11px 7px 8px;gap:6px;font-size:12px;box-shadow:0 0 0 1px #414141 inset,2px 2px 0 #222} .demo-pp svg{width:16px;height:16px}
+ .demo-pp{padding:7px 11px 7px 8px;gap:6px;font-size:12px;box-shadow:0 0 0 1px #414141 inset,2px 2px 0 #222} .demo-pp svg{width:16px;height:16px}
  .cform{grid-template-columns:84px minmax(0,1fr) auto} /* Tony 19 Nov: name and comment always one line, never stacked */
  .player .pp{width:50px;height:50px} .player .pp svg{width:24px;height:24px} .player .sk{width:32px;height:32px} .cover-pp{width:64px;height:64px;right:12px;bottom:12px;box-shadow:0 0 0 1px #414141 inset,3px 3px 0 #222} .cover-pp svg{width:30px;height:30px}
  .trio .tape-art{margin-top:30px} .lock.royalty{margin-top:16px}
