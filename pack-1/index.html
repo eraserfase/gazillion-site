@@ -105,7 +105,7 @@ img.lock{display:block;height:auto;width:100%} /* img only: the site masthead lo
 .cform input{min-width:0;font:400 14px Arial,sans-serif;padding:8px 9px;border:1px solid #414141;background:#fff;color:var(--ink)}
 .cform .hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
 .cform button{all:unset;cursor:pointer;padding:0 14px;background:var(--ink);color:#fff;font:400 13px 'Archivo Black',sans-serif;display:grid;place-items:center}
-.clist{list-style:none;margin:8px 0 0;padding:0;max-height:180px;overflow:auto}
+.clist{list-style:none;margin:8px 0 0;padding:0} .clist li>span{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .clist li{display:grid;grid-template-columns:42px minmax(0,1fr);gap:8px;padding:5px 0;border-bottom:1px solid var(--line);font:400 13px/1.35 Arial,sans-serif}
 .clist .ct{all:unset;cursor:pointer;color:var(--purchase-fill);font:700 12px Arial,sans-serif} .clist b{font-family:'Archivo Black',sans-serif;font-weight:400}
 .cerr{color:var(--purchase-fill);font:700 12px Arial,sans-serif;margin-top:4px}
@@ -324,8 +324,14 @@ const esc=t=>String(t).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"
 const mine=()=>CM.filter(c=>c.track===idx+1).sort((a,b)=>a.t-b.t);
 function renderComments(){const list=mine(),d=pl.duration||0;
  cmarks.innerHTML=d?list.map(c=>`<i style="left:${Math.min(100,c.t/d*100)}%"></i>`).join(""):"";
- clist.innerHTML=list.map(c=>`<li><button class="ct" data-t="${c.t}">${fmt(c.t)}</button><span><b>${esc(c.name)}</b> ${esc(c.body)}</span></li>`).join("");
+ lk="";renderList()}
+// Tony 20 Nov: the list shows two comments max - the two most recent on the timeline (the last two the playhead has passed;
+// before the first one, the first two), so a busy track never grows the column
+let lk="";function renderList(){const all=mine(),now=pl.currentTime||0,past=all.filter(c=>c.t<=now+.05),show=past.length?past.slice(-2):all.slice(0,2);
+ const k=idx+"|"+show.map(c=>c.t+c.name+c.body).join("|");if(k===lk)return;lk=k;
+ clist.innerHTML=show.map(c=>`<li><button class="ct" data-t="${c.t}">${fmt(c.t)}</button><span><b>${esc(c.name)}</b> ${esc(c.body)}</span></li>`).join("");
  clist.querySelectorAll(".ct").forEach(b=>b.onclick=()=>{if(!pl.getAttribute("src"))pick(idx,false);const go=()=>{pl.currentTime=+b.dataset.t;pl.play()};if(pl.duration)go();else pl.addEventListener("loadedmetadata",go,{once:true})})}
+pl.addEventListener("timeupdate",renderList);
 fetch(API+"?tape="+TAPE).then(r=>r.json()).then(j=>{CM=j.comments||[];renderComments()}).catch(()=>{});
 pl.addEventListener("loadedmetadata",()=>{shown.clear();cnow.textContent="";renderComments()});
 pl.addEventListener("timeupdate",()=>{cbody.placeholder="comment at "+fmt(pl.currentTime);
