@@ -1,6 +1,6 @@
 /* Shared, independently regenerated CRT snow. Lettering remains sharp DOM text. */
 (() => {
-  const selector = '.cta.add-to-cart,.cta.checkout,.ipad-product .cta,.demo-app-actions .cta';
+  const selector = '.cta.add-to-cart,.cta.checkout,.ipad-product .cta,.demo-app-actions .cta,.samples-product .cta';
   const source = document.createElement('canvas');
   source.width = 384 * 4;
   source.height = 128;

@@ -170,3 +170,12 @@ body{font-family:var(--type-ui)}
 @media (prefers-reduced-motion:reduce){.zoom-product .panel-link img{transition:none!important;transform:none!important}}
 /* "free. / $19 (deluxe)" on a pack card: the version note is small (Tony, 20 Nov 2026) */
 .money-note{font-size:.5em;letter-spacing:0;vertical-align:baseline}
+/* Tony 20 Nov: the pack card's get-the-pack button = the add-to-cart grey with the static (purchase-snow.js draws it) */
+body .samples-product .cta.product-page{position:relative;isolation:isolate;overflow:hidden;background:#5e5e5e;color:#fff;border-color:#101112;box-shadow:2px 2px 0 #101112}
+body .samples-product .cta.product-page:hover{background:#5e5e5e;color:#fff;border-color:#101112;box-shadow:3px 3px 0 #101112;transform:translate(-1px,-1px)}
+body .samples-product .cta.product-page:active{box-shadow:1px 1px 0 #101112;transform:translate(1px,1px)}
+/* phone: the half-width card can't hold the price beside the formats; price on its own line, formats under it */
+@media(max-width:660px){.samples-product .app-details{display:flex;flex-direction:column;align-items:center;height:auto;min-height:0;gap:0}
+.samples-product .app-details .money{order:-1;font-size:18px;white-space:nowrap}
+.samples-product .app-details .formats{text-align:center;white-space:nowrap;line-height:1.2} .samples-product .formats br{display:none}}
+.samples-product .fm-sep{display:none} @media(max-width:660px){.samples-product .fm-sep{display:inline}}
