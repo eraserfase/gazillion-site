@@ -13,7 +13,10 @@
     winnetka: {name:'WINNETKA', slug:'winnetka', price:49},
     // Free until the page clock and the Pi switch both turn it to $19 (2026-11-16T07:48:35Z).
     bendo: {name:'BENDO', slug:'bendo', price:Date.now() < Date.parse('2026-11-16T07:48:35Z') ? 0 : 19},
-    smplutility: {name:'SMPLUTILITY', slug:'smplutility', price:0}
+    smplutility: {name:'SMPLUTILITY', slug:'smplutility', price:0},
+    // The WINO WILLY X GAZILLION pack series (20 Nov 2026): one key, every pack's two listings
+    // (wino-pack-N-deluxe $19, wino-pack-N-free $0) and the free Drum Breaks (wino-breaks).
+    wino: {name:'WINO WILLY X GAZILLION', slug:/^wino-[a-z0-9-]+$/, price:function(s){return /-deluxe$/.test(s) ? 19 : 0;}}
   };
   var item = products[product];
   if (!item) return;
@@ -33,13 +36,14 @@
     if (!link) return;
     try {
       var url = new URL(link.href, location.href);
-      if (url.protocol !== 'https:' || url.hostname !== 'gazillionindustries.gumroad.com' || url.pathname !== '/l/' + item.slug) return;
+      if (url.protocol !== 'https:' || url.hostname !== 'gazillionindustries.gumroad.com' || !(item.slug instanceof RegExp ? url.pathname.indexOf('/l/') === 0 && item.slug.test(url.pathname.slice(3)) : url.pathname === '/l/' + item.slug)) return;
+      var price = typeof item.price === 'function' ? item.price(url.pathname.slice(3)) : item.price;
       var position = link.dataset.pos || (link.closest('.paymarks') ? 'pay_wallet' : 'unknown');
       window.GZ_ATTR?.mark('buy', product);
       track(product === 'drugs' ? 'buy_click' : 'buy_click_' + product, {position:position});
-      if (window.fbq) window.fbq('track', 'InitiateCheckout', {content_name:item.name, content_ids:[product], content_type:'product', value:item.price, currency:'USD'});
+      if (window.fbq) window.fbq('track', 'InitiateCheckout', {content_name:item.name, content_ids:[product], content_type:'product', value:price, currency:'USD'});
       // Gumroad owns GA begin_checkout at actual checkout; this is navigation intent.
-      if (window.gtag) window.gtag('event', 'checkout_handoff', {currency:'USD', value:item.price, items:[{item_id:product,item_name:item.name,price:item.price,quantity:1}]});
+      if (window.gtag) window.gtag('event', 'checkout_handoff', {currency:'USD', value:price, items:[{item_id:product,item_name:item.name,price:price,quantity:1}]});
       // Owned click rows and live checkout transitions are already collected by
       // traffic.js and presence.js. Do not emit either a second time here.
     } catch (_) {}
