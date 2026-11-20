@@ -144,6 +144,12 @@ img.lock{display:block;height:auto;width:100%} /* img only: the site masthead lo
 .demo-pp{all:unset;cursor:pointer;width:max-content;margin:18px auto 0;display:flex;align-items:center;gap:8px;padding:10px 16px 10px 12px;background:#fff;color:var(--ink);font:400 15px/1 'Archivo Black',sans-serif;box-shadow:0 0 0 1px #414141 inset,3px 3px 0 #222}
 .demo-pp svg{width:22px;height:22px;fill:var(--purchase-fill)} .demo-pp .i-pause{display:none} .demo-pp.on .i-pause{display:inline} .demo-pp.on .i-play{display:none}
 .demo-pp:focus-visible{outline:2px solid var(--purchase-fill);outline-offset:3px}
+/* Tony 20 Nov: on desktop [all samples royalty free.] and [get the beat tape free with both packs.] share one row (each pinned to the bottom of its stretched column) */
+@media (min-width:961px){
+ .pack-info,.tape-info{align-self:stretch;position:relative}
+ .pack-info{padding-bottom:calc(4.998% + 22px)} .lock.royalty{position:absolute;bottom:0;left:18.065%;margin:0}
+ .tape-info{padding-bottom:calc(5.005% + 18px)} .lock.tapefree{position:absolute;bottom:0;left:0;margin:0}
+}
 @media (max-width:960px){
  .trio{grid-template-columns:minmax(0,1fr);grid-template-areas:"lk" "pa" "pi" "ta" "ti";column-gap:12px;row-gap:12px;padding:0 16px;margin-top:16px;max-width:560px}
  .title{margin-bottom:14px}
