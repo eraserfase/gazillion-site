@@ -235,7 +235,7 @@ img.lock{display:block;height:auto;width:100%} /* img only: the site masthead lo
 <section class="feature" id="story">
  <div class="feature-card">
   <figure class="video">
-  <video src="/pack-1/media/told-you-maat-mpc.mp4?v=70d8d429f041" poster="/pack-1/media/video-poster.jpg?v=dc58eff28032" controls playsinline muted autoplay loop preload="auto"></video>
+  <video src="/pack-1/media/told-you-maat-mpc.mp4?v=70d8d429f041" poster="/pack-1/media/video-poster.jpg?v=dc58eff28032" playsinline muted autoplay loop preload="auto"></video>
   <button class="big-pp" type="button" aria-label="play with sound"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></button>
  </figure>
   <div class="quotes">
@@ -348,7 +348,7 @@ cform.onsubmit=async e=>{e.preventDefault();cbox.querySelector(".cerr")?.remove(
  else{const m=document.createElement("div");m.className="cerr";m.textContent=j.error==="no links"?"no links":j.error==="slow down"?"slow down":"didnt post";cbox.appendChild(m)}};
 
 const vid=document.querySelector(".video video"),big=document.querySelector(".big-pp");
-big.onclick=()=>{vid.muted=false;vid.loop=false;vid.currentTime=0;vid.play();big.hidden=true};
+big.onclick=()=>{vid.controls=true;vid.muted=false;vid.loop=false;vid.currentTime=0;vid.play();big.hidden=true};   // Tony 20 Nov: native controls only after the play tap
 vid.addEventListener("volumechange",()=>{if(!vid.muted)big.hidden=true});
 // silent autoplay that actually starts: on load, and whenever the video comes into view, unless someone paused it themselves
 // Tony 20 Nov: phones pause a silent autoplay video themselves while it is off screen; only a pause while it is ON screen is the visitor's
