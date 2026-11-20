@@ -1,0 +1,23 @@
+{
+ "owned": "https://packs.gazillionindustries.com/owned",
+ "packs": [
+  {
+   "id": "wino-1-free",
+   "name": "WINO WILLY X GAZILLION SAMPLE PACK #1 (FREE)",
+   "count": 49,
+   "bytes": 157499409,
+   "price_cents": 0,
+   "cover": "packs/wino-1-free.jpg",
+   "download": "https://packs.gazillionindustries.com/dl/wino-1-free"
+  },
+  {
+   "id": "wino-1-deluxe",
+   "name": "WINO WILLY X GAZILLION SAMPLE PACK #1 (DELUXE)",
+   "count": 166,
+   "bytes": 513475324,
+   "price_cents": 1900,
+   "cover": "packs/wino-1-deluxe.jpg",
+   "checkout": "https://gazillionindustries.gumroad.com/l/wino-pack-1-deluxe"
+  }
+ ]
+}
