@@ -56,7 +56,7 @@ fbq('track', 'PageView');
 .trio{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);grid-template-areas:"lk lk" "pa ta" "pi ti";column-gap:48px;align-items:start;max-width:1240px;margin:28px auto 0;padding:0 24px}
 .pack-art{grid-area:pa} .tape-art{grid-area:ta;position:relative}
 /* Tony 19 Nov: start the tape from its cover, so phones can listen before the player below is on screen */
-.cover-pp{all:unset;cursor:pointer;position:absolute;right:14px;bottom:14px;width:72px;height:72px;border-radius:50%;background:#fff;display:grid;place-items:center;box-shadow:0 0 0 1px #414141 inset,3px 3px 0 #222}
+.cover-pp{all:unset;cursor:pointer;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:72px;height:72px;border-radius:50%;background:#fff;display:grid;place-items:center;box-shadow:0 0 0 1px #414141 inset,3px 3px 0 #222}
 .cover-pp svg{width:34px;height:34px;fill:var(--purchase-fill)} .cover-pp .i-pause{display:none} .cover-pp.on .i-pause{display:inline} .cover-pp.on .i-play{display:none}
 .cover-pp:focus-visible{outline:2px solid var(--purchase-fill);outline-offset:3px}
 /* Tony 19 Nov: Wino's video smaller, in a box with his quotes, video left quotes right, the pack boxes' style */
@@ -153,7 +153,7 @@ img.lock{display:block;height:auto;width:100%} /* img only: the site masthead lo
  .player .wavewrap{grid-area:wv} .player .wave{margin:0} .player .cnow{grid-area:cn} .player .ptime{grid-area:tm} .player .pthumb{grid-area:th;width:54px;height:54px}
  .demo-pp{padding:7px 11px 7px 8px;gap:6px;font-size:12px;box-shadow:0 0 0 1px #414141 inset,2px 2px 0 #222} .demo-pp svg{width:16px;height:16px}
  .cform{grid-template-columns:84px minmax(0,1fr) auto} /* Tony 19 Nov: name and comment always one line, never stacked */
- .player .pp{width:50px;height:50px} .player .pp svg{width:24px;height:24px} .player .sk{width:32px;height:32px} .cover-pp{width:64px;height:64px;right:12px;bottom:12px;box-shadow:0 0 0 1px #414141 inset,3px 3px 0 #222} .cover-pp svg{width:30px;height:30px}
+ .player .pp{width:50px;height:50px} .player .pp svg{width:24px;height:24px} .player .sk{width:32px;height:32px} .cover-pp{width:64px;height:64px;box-shadow:0 0 0 1px #414141 inset,3px 3px 0 #222} .cover-pp svg{width:30px;height:30px}
  .trio .tape-art{margin-top:30px} .lock.royalty{margin-top:16px}
  .feature{padding:0 12px;margin-top:44px}
  .feature-card{grid-template-columns:1fr;gap:18px;padding:12px;box-shadow:3px 3px 0 #222} .about-card{padding:14px;box-shadow:3px 3px 0 #222} .feature+.feature.about{margin-top:28px} .big-pp{width:72px;height:72px} .big-pp svg{width:34px;height:34px} .feature .video{width:min(100%,240px);justify-self:center}
