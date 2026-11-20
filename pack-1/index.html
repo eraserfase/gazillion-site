@@ -140,23 +140,6 @@ img.lock{display:block;height:auto;width:100%} /* img only: the site masthead lo
 .wq p{font:400 20px/1.45 Arial,sans-serif;margin:0}
 .wq b{font-weight:700}
 .wq-who{margin:14px 0 0 21px;font:400 15px/1.2 'Archivo Black',sans-serif}
-.c-h{margin:0 0 6px;text-align:left;font:400 15px/1.2 'Archivo Black',sans-serif;color:var(--purchase-fill)}   /* Tony 20 Nov: red heading above the comment bar */
-/* Tony 20 Nov: on desktop both buttons show on load -> the hero's columns scale to the window height; the two bracket lines share one row */
-@media (min-width:961px){
- .trio{--cw:max(280px,min(572px,calc((100vh - 477px) / 1.555)));max-width:calc(2 * var(--cw) + 96px)}
- .pack-info,.tape-info{align-self:stretch;position:relative}
- .pack-info{padding-bottom:calc(4.998% + 22px)} .lock.royalty{position:absolute;bottom:0;left:18.065%;margin:0}
- .tape-info{padding-bottom:calc(5.005% + 18px)} .lock.tapefree{position:absolute;bottom:0;left:0;margin:0}
-}
-/* a narrow hero column gets the phone player (same rules as the max-width:960px block) */
-@media (min-width:961px){.tape-info{container-type:inline-size}}
-@container (max-width:470px){
- .player{grid-template-columns:auto minmax(0,1fr) auto;grid-template-areas:"ctl pt th" "wv wv wv" "tm tm tm" "cn cn cn";row-gap:8px;padding:10px}
- .player .pbody{display:contents} .player .ctl{grid-area:ctl} .player .phead{grid-area:pt;min-width:0} .player .pt{white-space:normal;line-height:1.25} .player .pa{white-space:normal} .player .pa>span{white-space:normal;overflow:visible}
- .player .wavewrap{grid-area:wv} .player .wave{margin:0} .player .cnow{grid-area:cn} .player .ptime{grid-area:tm} .player .pthumb{grid-area:th;width:54px;height:54px}
- .cform{grid-template-columns:84px minmax(0,1fr) auto}
- .player .pp{width:50px;height:50px} .player .pp svg{width:24px;height:24px} .player .sk{width:32px;height:32px}
-}
 @media (max-width:960px){
  .trio{grid-template-columns:minmax(0,1fr);grid-template-areas:"lk" "pa" "pi" "ta" "ti";column-gap:12px;row-gap:12px;padding:0 16px;margin-top:16px;max-width:560px}
  .title{margin-bottom:14px}
@@ -225,7 +208,6 @@ img.lock{display:block;height:auto;width:100%} /* img only: the site masthead lo
    <img class="pthumb" src="/pack-1/media/tape-art-thumb.jpg?v=656686fa96b0" width="240" height="240" alt="GLORIA'S CORNER BREAKFAST PLATE cover art">
   </div>
   <div class="comments" id="comments">
-   <h3 class="c-h">COMMENT:</h3>
    <form class="cform" autocomplete="off"><input class="cname" maxlength="40" placeholder="name" aria-label="name"><input class="cbody" maxlength="280" placeholder="comment at 0:00" aria-label="comment" required><input class="hp" name="hp" tabindex="-1" aria-hidden="true"><button type="submit">POST</button></form>
    <ul class="clist"></ul>
   </div>
