@@ -68,7 +68,7 @@ fbq('track', 'PageView');
 .feature+.feature.about{margin-top:40px} .feature .quotes .wq:first-child{margin-top:0} .pack-info{grid-area:pi} .tape-info{grid-area:ti}
 .trio img.art{width:100%;height:auto;aspect-ratio:1;display:block}
 .pack-art{box-shadow:0 0 0 1px var(--line)}   /* the obi's cream is the page's field; without an edge the cover's left side dissolves */
-.lock{display:block;height:auto;width:100%}
+img.lock{display:block;height:auto;width:100%} /* img only: the site masthead logo is span.lock (pack #1 live, 20 Nov) */
 .title{grid-area:lk;margin:0 0 28px} .lock.pack{margin:0} .lock.royalty{width:63.87%;margin:22px auto 0}   /* Tony 19 Nov: same font size as the get-the-beat-tape line (both columns are the same width) */ .lock.tape{margin:18px 0 0} .lock.sounds{width:66.3%;margin:18px auto 0} .lock.free-lock{width:60.78%;margin:34px auto 0}
 .types{margin:12px 0 4px;text-align:center;font:400 15px/1.35 Arial,sans-serif}
 .sum .types{font-weight:400;margin-top:8px}
@@ -342,4 +342,5 @@ pl.addEventListener("play",()=>cpp.classList.add("on")); pl.addEventListener("pa
 box.querySelector(".prev").onclick=()=>{const was=!pl.paused;if(pl.currentTime>3){pl.currentTime=0;draw();return}if(idx>0)pick(idx-1,was)};
 box.querySelector(".next").onclick=()=>{const was=!pl.paused;if(idx<rows.length-1)pick(idx+1,was)};
 
-</script></body></html>
+</script><script src="/landing-20261010/tripleog/brand.js?v=9ea6eb41919e"></script>
+</body></html>
