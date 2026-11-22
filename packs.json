@@ -19,5 +19,9 @@
    "cover": "packs/wino-1-deluxe.jpg",
    "checkout": "https://gazillionindustries.gumroad.com/l/wino-pack-1-deluxe"
   }
- ]
+ ],
+ "announce": {
+  "cover": "pack-1/media/cover-deluxe.jpg",
+  "link": "https://gazillionindustries.com/pack-1/"
+ }
 }
