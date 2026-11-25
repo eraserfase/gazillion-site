@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>SMPLUTILITY manual: MPC Sample setup and use</title>
-<meta name="description" content="How to set up SMPLUTILITY with the MPC Sample over USB-C: install, activate, SD Card Access, then chop, split stems, load pads and write projects back.">
+<meta name="description" content="How to set up SMPLUTILITY with the MPC Sample over USB-C: install, activate, Developer Mode, then chop, split stems, load pads and write projects back.">
 <link rel="canonical" href="https://gazillionindustries.com/smplutility/manual/">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Gazillion Industries">
 <meta property="og:title" content="SMPLUTILITY manual: MPC Sample setup and use">
-<meta property="og:description" content="How to set up SMPLUTILITY with the MPC Sample over USB-C: install, activate, SD Card Access, then chop, split stems, load pads and write projects back.">
+<meta property="og:description" content="How to set up SMPLUTILITY with the MPC Sample over USB-C: install, activate, Developer Mode, then chop, split stems, load pads and write projects back.">
 <meta property="og:url" content="https://gazillionindustries.com/smplutility/manual/">
 <meta property="og:image" content="https://gazillionindustries.com/smplutility/og.jpg?v=1a0ce145ff6d">
 <meta name="twitter:card" content="summary_large_image">
@@ -76,9 +76,8 @@ h2{font-size:22px}
 <li><h3>Install</h3>Mac: open the installer and follow it. SMPLUTILITY goes in Applications. Windows: run the setup file. Apple Silicon and Intel Macs, macOS 12 or later. Stem separation needs macOS 14 or later, recording macOS 14.2 or later. Windows 64-bit.</li>
 <li><h3>Activate</h3>The first time SMPLUTILITY opens, it asks for your license key. It is on your download page and in your receipt email. Copy it, press <span class="key">PASTE</span>, then <span class="key go">ACTIVATE</span>. Activation goes online once. After that it runs offline on that computer.</li>
 <li><h3>Card and cable</h3>Put a microSD card in the MPC Sample. Connect the MPC Sample to your computer with a USB-C cable.</li>
-<li><h3>Save your project to the card</h3>On the MPC Sample, hold <span class="unit">SHIFT</span> and press <span class="unit">PAD 16 (PROJECT)</span>. Choose <span class="unit">Save Project</span> and save it to the microSD card. SMPLUTILITY shows the projects saved on the card.</li>
-<li><h3>SD Card Access</h3>In the same Project menu, choose <span class="unit">SD Card Access</span>. If your menu has no SD Card Access, update the MPC Sample first: with it connected, open <span style="white-space:nowrap">mpc-sample.local</span> in a browser.</li>
-<li><h3>Connected</h3>The lamp beside MPC SAMPLE at the bottom left turns green. The sounds on the card open in <span class="key tab">LIBRARY</span> and your newest project lands on the pads.</li>
+<li><h3>Developer Mode</h3>Needs MPC Sample firmware 1.4 or later. On the MPC Sample, hold <span class="unit">SHIFT</span> and press <span class="unit">PAD 8 (MIDI CONFIG)</span>. Turn the encoder to <span class="unit">Dev Enhancements (Beta)</span> and press <span class="unit">B3 (OK)</span>. Turn on <span class="unit">Developer Mode</span>. You do this once. On a Mac, the first time, macOS asks to let SMPLUTILITY find devices on local networks. Press Allow.</li>
+<li><h3>Connected</h3>The lamp beside MPC SAMPLE at the bottom left turns green. The sounds on the card open in <span class="key tab">LIBRARY</span> and what is on your pads shows on the pads here.</li>
 </ol>
 </section>
 <figure><img src="panel.jpg" width="900" height="1402" alt="The SMPLUTILITY window: a chopped waveform on the screen and sixteen loaded pads"></figure>
@@ -112,10 +111,10 @@ h2{font-size:22px}
 <div><h3>Out</h3>
 <p><span class="key">EXPORT</span> saves your chops as WAV files in a folder you pick. With <span class="key tab">NORMALIZE</span> on, each file is normalized.</p></div>
 <div><h3>Back to the MPC Sample</h3>
-<p>Name the project and press <span class="key rec">WRITE</span>. The same name updates that project. A new name makes a new one. SMPLUTILITY ejects the card when it is done.</p>
-<p>On the MPC Sample, press <span class="unit">B1</span> to leave SD Card Access, then load the project from the Project menu.</p></div>
+<p>Name the project and press <span class="key rec">WRITE</span>. The same name updates that project. A new name makes a new one.</p>
+<p>On the MPC Sample, load the project from the Project menu.</p></div>
 <div><h3>Project keys</h3>
-<p><span class="key">LOAD</span> lists the projects on the card. <span class="key">CLEAR</span> empties the pads. <span class="key">EJECT</span> hands the card back without writing.</p></div>
+<p><span class="key">LOAD</span> lists the projects on the card. <span class="key">CLEAR</span> empties the pads.</p></div>
 </div>
 </section>
 <footer><p class="furn"><a href="/smplutility/">gazillionindustries.com/smplutility</a></p><p class="furn"><a href="/smplutility/SMPLUTILITY-Manual.pdf">PDF</a></p></footer>
